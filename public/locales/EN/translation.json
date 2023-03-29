@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "Hello👋! I am ",
+    "description": "I am a systems engineer and Full Stack developer. I love being self-taught and I am a lover of online courses and bootcamp on programming that help me day by day in my professional growth, I strive to help others, developing and going further in each and every one of the tasks. I am excited every day to grow and acquire new skills on my programming journey.",
+    "contact": "Get in touch!",
+    "cv": "View CV"
+  },
+  "code": {
+    "welcome": "welcome",
+    "about": "about",
+    "name": "firstname",
+    "lastname": "lastname",
+    "image": "image",
+    "age": "age",
+    "country": "country",
+    "spanish": "spanish",
+    "spanishValue": "Native",
+    "english": "English",
+    "englishValue": "Medium"
+  },
+  "blog": {
+    "title": "Latest articles",
+    "view": "View all articles",
+    "read": "Read article"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "tech": "technologies",
+    "soyhenry": "Teaching Assistant",
+    "coderhouse": "Backend Tutor",
+    "nsDate": "FEB 2023 - CURRENT",
+    "chDate": "FEB 2023 - CURRENT",
+    "shDate": "DEC 2022 - JAN 2023",
+    "ch1": "• Clear students' doubts during classes",
+    "ch2": "• Correct challenges and intermediate deliverables of the final project",
+    "ch3": "• Follow up and accompany students in their learning process",
+    "sh1": "• Coordinate a group of students to achieve integration to the study group.",
+    "sh2": "• Guide students during the course of study.",
+    "sh3": "• Assist in the resolution of exercises and promote group collaboration",
+    "ns1": "• Design and create RESTful APIs for communication between services.",
+    "ns2": "• Create and maintain integrations with third party services such as online payments, email services, analytics services, among others.",
+    "ns3": "• Develop and maintain authentication and authorization systems.",
+    "ms1": "•  Integration of third party services such as online payments and analytics services.",
+    "ms2": "•  Create user interfaces for web and mobile applications.",
+    "ms3": "•  Automated chat development for customer support.",
+    "msDate": "JAN 2023 - FEB 2023"
+  },
+  "contact": {
+    "title": "Get in touch"
+  },
+  "tools": {
+    "title": "Tools"
+  },
+  "projects": {
+    "title": "Featured projects",
+    "tech": "Technologies",
+    "ec1": "• Development of local and third party authentication and authorization system.",
+    "ec2": "• Integration of online payment services.",
+    "ec3": "• Implementation of product search, filtering and saving systems.",
+    "waTitle": "Weather App",
+    "wa1": "• Design and development of a minimalist, modern and responsive interface",
+    "wa2": "• Integration with API for real-time data collection",
+    "wa3": "• Implementation of a location-based search system",
+    "trTitle": "Recipes App",
+    "tr1": "• Database configuration and relationship modeling.",
+    "tr2": "• RESTful API implementation, HTTP request handling, and data validation.",
+    "tr3": "• Development of reusable components and performance optimization through the use of hooks",
+    "coming": "Coming soon... 😉"
+  },
+  "error": {
+    "button": "Back to home",
+    "title": "Oops! There's nothing here..."
+  }
+}

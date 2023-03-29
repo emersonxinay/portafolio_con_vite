@@ -24,4 +24,4 @@ npm run dev -- -- host
 
 ## Screenshots
 
-![Portfolio Website](https://i.imgur.com/OJjBnr2.png)
+![texto alternativo de la imagen](./src/assets/portafolio.png)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaNodeJs, FaPython } from 'react-icons/fa'
-import { SiExpress, SiDjango, SiPostgresql, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3 } from 'react-icons/si'
+import { SiExpress, SiDjango, SiPostgresql, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3, SiRubyonrails, SiFlask } from 'react-icons/si'
 
 const Languages = () => {
   const iconSize = '20px'
@@ -56,6 +56,14 @@ const Languages = () => {
       <div className='flex items-center gap-2'>
         <SiPostgresql title='PostgreSQL' size={iconSize}></SiPostgresql>
         <span className='font-medium hidden md:inline'>PostgreSQL</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiRubyonrails title='Ruby on Rails' size={iconSize}></SiRubyonrails>
+        <span className='font-medium hidden md:inline'>Ruby on Rails</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiFlask title='Flask' size={iconSize}></SiFlask>
+        <span className='font-medium hidden md:inline'>Flask</span>
       </div>
     </div>
   )

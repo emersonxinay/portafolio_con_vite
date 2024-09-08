@@ -1,6 +1,9 @@
 import React from 'react'
 import Title from '../../../components/Title'
 import { FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa'
+import { BsYoutube } from 'react-icons/bs'
+import { SiX } from 'react-icons/si';
+
 import { BsTwitter } from 'react-icons/bs'
 import { GrMail } from 'react-icons/gr'
 import { ImTwitch } from 'react-icons/im'
@@ -22,9 +25,15 @@ const Contact = () => {
         <a href='https://discord.com/invite/' target={'_blank'} aria-label='Discord' className='h-full w-full bg-gradient-to-r  from-indigo-500 to-indigo-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#4f46e5]'>
           <FaDiscord size={size} className='drop-shadow-2xl'></FaDiscord>
         </a>
-        <a href='https://twitter.com/compilandocode' target={'_blank'} aria-label='Twitter' className='h-full w-full bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#0284c7]'>
-          <BsTwitter size={size} className='drop-shadow-2xl'></BsTwitter>
+        <a href='https://www.youtube.com/@compilandocode' target={'_blank'} aria-label='Youtube' className='h-full w-full bg-gradient-to-r from-red-500 to-red-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#c8102e]'>
+          <BsYoutube size={size} className='text-white-600 drop-shadow-2xl'></BsYoutube>
         </a>
+
+        
+        <a href='https://www.x.com/compilandocode' target={'_blank'} aria-label='X' className='h-full w-full bg-gradient-to-r from-black to-gray-800 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#000000]'>
+          <SiX size={size} className='text-white drop-shadow-2xl'></SiX>
+        </a>
+
         
       </div>
     </div>

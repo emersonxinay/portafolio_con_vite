@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Soy ingeniero de sistemas y desarrollador Full Stack. Me encanta ser autodidacta y soy amante de los cursos online y Bootcamp sobre programación que me ayudan día a día en mi crecimiento profesional, me esfuerzo por ayudar a los demás, desarrollando y yendo más allá en todas y cada una de las tareas. Me entusiasma día a día crecer y adquirir nuevas habilidades en mi viaje de la programación. ",
+    "description": "Soy ingeniero de sistemas y desarrollador Full Stack. Me encanta enseñar lo que aprendo y soy docente de cursos online y Bootcamp sobre programación que me ayudan día a día en mi crecimiento profesional, me esfuerzo por ayudar a los demás, desarrollando y yendo más allá en todas y cada una de las tareas. Me entusiasma día a día crecer y adquirir nuevas habilidades en mi viaje de la programación. ",
     "contact": "Contacto!",
     "cv": "Ver CV"
   },
@@ -23,13 +23,13 @@
     "view": "Ver todos los articulos",
     "read": "Leer articulo"
   },
-  "experience": {
+  "experience1": {
     "title": "Experiencia profesional",
     "tech": "Tecnologías",
     "soyhenry": "Asistente de profesor",
-    "coderhouse": "Tutor Backend",
-    "nsDate": "FEB 2023 - ACTUALIDAD",
-    "chDate": "FEB 2023 - ACTUALIDAD",
+    "desafiolatam": "Tutor Backend",
+    "nsDate": "FEB 2019 - ACTUALIDAD",
+    "chDate": "FEB 2022 - ACTUALIDAD",
     "shDate": "DEC 2022 - ENE 2023",
     "ch1": "• Despejar dudas de los estudiantes durante las clases.",
     "ch2": "• Corregir los desafíos y las entregas intermedias del proyecto final.",
@@ -44,6 +44,34 @@
     "ms2": "• Crear interfaces de usuario para aplicaciones web y móviles.",
     "ms3": "• Desarrollo de chat automatizado para la atención al cliente.",
     "msDate": "ENE 2023 - FEB 2023"
+  },
+
+  "experience": {
+    "title": "Experiencia profesional",
+    "tech": "Ruby, Ruby on Rails, Python, Flask, Django, MongoDB, Node, Express,React, MySQL, Tailwind, PostgreSQL, Docker, Git, Github",
+    "hazuki": "Desarrollador Web",
+    "compilando": "Desarrollador Fullstack",
+    "codigoFuturo": "Docente Python y Robótica",
+    "desafiolatam": "Docente Programador",
+    "techCompilando": "React, Python, Ruby, Django, PostgreSQL, Node, Express, MySQL, Tailwind, MongoDB, docker, Flask",
+    "techHazuki": "Php, MySQL, Cpanel, wordpress, html, css, bootstrap, javascript",
+    "techDesafioLatam":"Python, Ruby, javascript, Flask,  ruby on rails, PostgreSQL, MongoDB, Git, github, gitlab, html, css, Tailwind, vercel, heroku, amazon web services, APIS, Postman",
+    "techCodigoFuturo":"Python, javascript, Git, Github, gitlab, html, css, bootstrap, robotica, rasberry pi, PostgreSQL",
+    "hazukiDate": "FEB 2018 - 2021",
+    "compilandoDate": "FEB 2022 - ACTUALIDAD",
+    "codigoFuturoDate": "AGOST 2022 - ACTUALIDAD",
+    "desafioLatamDate": "NOVIEMBRE 2021 - ACTUALIDAD",
+    "hazuki1": "• Diseñar y crear API RESTful para comunicación entre servicios.",
+    "hazuki2": "• Crear y mantener integraciones con servicios de terceros como pagos en línea, servicios de correo electrónico, servicios de análisis, entre otros.",
+    "hazuki3": "• Desarrollar y mantener sistemas de autenticación y autorización.",
+    "desafioLatam1": "• Despejar dudas de los estudiantes durante las clases.",
+    "desafioLatam2": "• Corregir los desafíos y las entregas intermedias del proyecto final.",
+    "desafioLatam3": "• Realizar un seguimiento y acompañamiento de los estudiantes en su proceso de aprendizaje.",
+    "compilando1": "• Crear interfaces de usuario para aplicaciones web y móviles.",
+    "compilando2": "• Desarrollo de chat automatizado para la atención al cliente.",
+    "codigoFuturo1": "• Coordinar a un grupo de estudiantes para lograr la integración al grupo de estudio.",
+    "codigoFuturo2": "• Orientar a los estudiantes durante la cursada.",
+    "codigoFuturo3": "• Asistir en la resolución de ejercicios y promover la colaboración grupal."
   },
   "contact": {
     "title": "Contacto"

@@ -173,31 +173,31 @@ const Article = () => {
             <div className='flex gap-4 justify-center w-full'>
               <a
                 target={'_blank'}
-                href='https://github.com/bautipietra'
+                href='https://github.com/emersonxinay'
                 className='hover:text-white transition-colors'>
                 <FaGithub></FaGithub>
               </a>
               <a
                 target={'_blank'}
-                href='https://www.linkedin.com/in/emerson-espinoza/'
+                href='https://www.linkedin.com/in/emerson-espinoza-aguirre/'
                 className='hover:text-white transition-colors'>
                 <FaLinkedinIn></FaLinkedinIn>
               </a>
               <a
                 target={'_blank'}
-                href='https://discord.com/invite/AYY7ap6URa'
+                href='https://discord.com/'
                 className='hover:text-white transition-colors'>
                 <FaDiscord></FaDiscord>
               </a>
               <a
                 target={'_blank'}
-                href='https://twitter.com/pietradev'
+                href='https://twitter.com/compilandocode'
                 className='hover:text-white transition-colors'>
                 <BsTwitter></BsTwitter>
               </a>
               <a
                 target={'_blank'}
-                href='https://www.twitch.tv/pietradev'
+                href='https://www.twitch.tv/emersonxinay'
                 className='hover:text-white transition-colors'>
                 <ImTwitch></ImTwitch>
               </a>

@@ -12,6 +12,9 @@ const Experience = () => {
         transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
       ></motion.div>
       <Title title={t('experience.title')}></Title>
+      <p className="mt-2 text-sm text-zinc-400 text-center">
+            <span className='text-sky-500'> Tecnologies: </span> {t('experience.tech')}
+            </p>
       <ol
         className="border-l border-zinc-400 lg:grid grid-flow-col auto-cols-fr lg:justify-center lg:gap-16 lg:border-l-0 lg:border-t">
 
@@ -20,16 +23,16 @@ const Experience = () => {
           <div className="flex-start flex items-center pt-2 lg:block lg:pt-0">
             <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-zinc-400 lg:ml-0 lg:mr-0 lg:-mt-[5px]"></div>
             <p className="mt-2 text-sm text-zinc-400">
-              {t('experience.nsDate')}
+              {t('experience.hazukiDate')}
             </p>
           </div>
           <div className="mt-2 ml-4 pb-5 lg:ml-0">
-            <h3 className="mb-1.5 text-xl font-semibold">Next Step <span className='text-sky-400'>, Full Stack Developer</span></h3>
-            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.tech')}:</span> React, Python, Django, MongoDB</p>
+            <h3 className="mb-1.5 text-xl font-semibold">Hazuki <span className='text-sky-400'>, {t('experience.hazuki')} </span></h3>
+            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.techHazuki')}:</span> </p>
             <ul className="mb-3 text-zinc-400 grid gap-2">
-              <li>{t('experience.ns1')}</li>
-              <li>{t('experience.ns2')}</li>
-              <li>{t('experience.ns3')}</li>
+              <li>{t('experience.hazuki1')}</li>
+              <li>{t('experience.hazuki2')}</li>
+              <li>{t('experience.hazuki3')}</li>
             </ul>
           </div>
         </li>
@@ -39,16 +42,16 @@ const Experience = () => {
           <div className="flex-start flex items-center pt-2 lg:block lg:pt-0">
             <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-zinc-400 lg:ml-0 lg:mr-0 lg:-mt-[5px]"></div>
             <p className="mt-2 text-sm text-zinc-400">
-              {t('experience.chDate')}
+              {t('experience.desafioLatamDate')}
             </p>
           </div>
           <div className="mt-2 ml-4 pb-5 lg:ml-0">
-            <h3 className="mb-1.5 text-xl font-semibold">Coderhouse <span className='text-sky-400'>, {t('experience.coderhouse')}</span></h3>
-            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.tech')}:</span> Node, Express, MongoDB, MySQL</p>
+            <h3 className="mb-1.5 text-xl font-semibold">Desafío Latam <span className='text-sky-400'>, {t('experience.desafiolatam')}</span></h3>
+            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.techDesafioLatam')}:</span> </p>
             <ul className="mb-3 text-zinc-400 grid gap-2">
-              <li>{t('experience.ch1')}</li>
-              <li>{t('experience.ch2')}</li>
-              <li>{t('experience.ch3')}</li>
+              <li>{t('experience.desafioLatam1')}</li>
+              <li>{t('experience.desafioLatam2')}</li>
+              <li>{t('experience.desafioLatam3')}</li>
             </ul>
           </div>
         </li>
@@ -58,16 +61,15 @@ const Experience = () => {
           <div className="flex-start flex items-center pt-2 lg:block lg:pt-0">
             <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-zinc-400 lg:ml-0 lg:mr-0 lg:-mt-[5px]"></div>
             <p className="mt-2 text-sm text-zinc-400">
-              {t('experience.msDate')}
+              {t('experience.compilandoDate')}
             </p>
           </div>
           <div className="mt-2 ml-4 pb-5 lg:ml-0">
-            <h3 className="mb-1.5 text-xl font-semibold">Mercado Solidario <span className='text-sky-400'>, Frontend Developer</span></h3>
-            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.tech')}:</span> React, Next, Tailwind</p>
+            <h3 className="mb-1.5 text-xl font-semibold">CompilandoCode <span className='text-sky-400'> {t('experience.compilando')}</span></h3>
+            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.techCompilando')}:</span> </p>
             <ul className="mb-3 text-zinc-400 grid gap-2">
-              <li>{t('experience.ms1')}</li>
-              <li>{t('experience.ms2')}</li>
-              <li>{t('experience.ms3')}</li>
+              <li>{t('experience.compilando1')}</li>
+              <li>{t('experience.compilando2')}</li>
             </ul>
           </div>
         </li>
@@ -77,16 +79,16 @@ const Experience = () => {
           <div className="flex-start flex items-center pt-2 lg:block lg:pt-0">
             <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-zinc-400 lg:ml-0 lg:mr-0 lg:-mt-[5px]"></div>
             <p className="mt-2 text-sm text-zinc-400">
-              {t('experience.shDate')}
+              {t('experience.codigoFuturoDate')}
             </p>
           </div>
           <div className="mt-2 ml-4 pb-5 lg:ml-0">
-            <h3 className="mb-1.5 text-xl font-semibold">Soy Henry <span className='text-sky-400'>, {t('experience.soyhenry')}</span></h3>
-            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.tech')}:</span> React, Node, Express, PostgreSQL</p>
+            <h3 className="mb-1.5 text-xl font-semibold">Código Futuro <span className='text-sky-400'>, {t('experience.codigoFuturo')}</span></h3>
+            <p className="mb-3 text-white"><span className='text-sky-500'>{t('experience.techCodigoFuturo')}:</span> </p>
             <p className="mb-3 text-zinc-400 grid gap-2">
-              <span>{t('experience.sh1')}</span>
-              <span>{t('experience.sh2')}</span>
-              <span>{t('experience.sh3')}</span>
+              <span>{t('experience.codigoFuturo1')}</span>
+              <span>{t('experience.codigoFuturo2')}</span>
+              <span>{t('experience.codigoFuturo3')}</span>
             </p>
           </div>
         </li>

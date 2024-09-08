@@ -42,7 +42,7 @@ const Projects = () => {
             </ul>
             <div className='grid grid-cols-2 items-stretch h-fit justify-between gap-4 self-end'>
               <a
-                href='https://github.com/vendelo'
+                href='https://github.com/emersonxinay'
                 target={'_blank'}
                 className='font-semibold px-6 py-2 bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl transition-transform flex items-center gap-2 justify-center'>
                 <FaGithub></FaGithub>Github
@@ -80,7 +80,7 @@ const Projects = () => {
             </ul>
             <div className='grid grid-cols-2 items-stretch h-fit justify-between gap-4 self-end'>
               <a
-                href='https://github.com/bautipietra/weather-app'
+                href='https://github.com/emersonxinay'
                 target={'_blank'}
                 className='font-semibold px-6 py-2 bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl transition-transform flex items-center gap-2 justify-center'>
                 <FaGithub></FaGithub>Github
@@ -117,7 +117,7 @@ const Projects = () => {
             </ul>
             <div className='grid grid-cols-2 items-stretch h-fit justify-between gap-4 self-end'>
               <a
-                href='https://github.com/bautipietra/tasty-recipes-app'
+                href='https://github.com/emersonxinay'
                 target={'_blank'}
                 className='font-semibold px-6 py-2 bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl transition-transform flex items-center gap-2 justify-center'>
                 <FaGithub></FaGithub>Github

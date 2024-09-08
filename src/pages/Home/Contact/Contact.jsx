@@ -19,18 +19,13 @@ const Contact = () => {
         <a href='https://github.com/emersonxinay' target={'_blank'} aria-label='Github' className='h-full w-full bg-gradient-to-r  from-slate-600 to-slate-800 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#334155]'>
           <FaGithub size={size} className='drop-shadow-2xl'></FaGithub>
         </a>
-        <a href='mailto:xinayespinoza@gmail.com' aria-label='Mail' className='h-full w-full bg-gradient-to-r  from-red-500 to-red-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#dc2626]'>
-          <GrMail size={size} className='drop-shadow-2xl'></GrMail>
-        </a>
-        <a href='https://www.twitch.tv/emersonxinay' target={'_blank'} aria-label='Twitch' className='h-full w-full bg-gradient-to-r  from-indigo-600 to-indigo-800 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#4338ca]'>
-          <ImTwitch size={size} className='drop-shadow-2xl'></ImTwitch>
-        </a>
         <a href='https://discord.com/invite/' target={'_blank'} aria-label='Discord' className='h-full w-full bg-gradient-to-r  from-indigo-500 to-indigo-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#4f46e5]'>
           <FaDiscord size={size} className='drop-shadow-2xl'></FaDiscord>
         </a>
-        <a href='https://twitter.com/emersonxinay' target={'_blank'} aria-label='Twitter' className='h-full w-full bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#0284c7]'>
+        <a href='https://twitter.com/compilandocode' target={'_blank'} aria-label='Twitter' className='h-full w-full bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl grid place-content-center py-8 shadow-[0px_0px_10px_1px_#0284c7]'>
           <BsTwitter size={size} className='drop-shadow-2xl'></BsTwitter>
         </a>
+        
       </div>
     </div>
   )

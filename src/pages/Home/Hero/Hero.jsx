@@ -82,14 +82,7 @@ const Hero = () => {
             {t('hero.contact')}{' '}
             <TbChevronsDown size={'20px'}></TbChevronsDown>
           </button>
-          <div className='font-semibold p-0.5 bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 rounded-xl overflow-hidden w-fit hover:scale-105 transition-transform'>
-            <a
-              href={i18n.language == 'EN' ? resumeEn : resume}
-              target='_blank'
-              className='px-6 py-2 bg-[#112] rounded-xl flex items-center gap-2'>
-              {t('hero.cv')} <AiFillEye></AiFillEye>
-            </a>
-          </div>
+        
         </div>
       </div>
 

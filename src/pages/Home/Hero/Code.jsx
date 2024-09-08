@@ -54,7 +54,6 @@ const Code = () => {
               {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.name')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Emerson </span>' <br></br>
               {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.lastname')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Espinoza</span>' <br></br>
               {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.image')} <span className="text-blue-400">=</span> <span className="text-yellow-100 underline cursor-pointer cursorClick" onClick={() => setshowImage(true)} >emerson.jpg</span><br></br>
-              {'  '}{'  '}<span className="text-blue-400">let</span> {t('code.age')} <span className="text-blue-400">=</span> <span className="text-yellow-100">28</span> <br></br>
               {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.country')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Latinoamerica</span>' <br></br>
               {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.spanish')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">{t('code.spanishValue')}</span>' <br></br>
               {'  '}{'  '}<span className="text-blue-400">let</span> {t('code.english')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">{t('code.englishValue')}</span>' <br></br>

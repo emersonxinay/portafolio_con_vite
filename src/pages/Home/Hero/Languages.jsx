@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaNodeJs, FaPython } from 'react-icons/fa'
-import { SiExpress, SiDjango, SiPostgresql, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3, SiRubyonrails, SiFlask } from 'react-icons/si'
+import { SiExpress, SiDjango, SiPostgresql, SiRuby , SiDocker, SiPostman, SiGit, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3, SiRubyonrails, SiFlask } from 'react-icons/si'
 
 const Languages = () => {
   const iconSize = '20px'
@@ -65,6 +65,25 @@ const Languages = () => {
         <SiFlask title='Flask' size={iconSize}></SiFlask>
         <span className='font-medium hidden md:inline'>Flask</span>
       </div>
+      <div className='flex items-center gap-2'>
+        <SiDocker title='Docker' size={iconSize}></SiDocker>
+        <span className='font-medium hidden md:inline'>Docker</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiPostman title='Postman' size={iconSize}></SiPostman>
+        <span className='font-medium hidden md:inline'>Postman</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiGit title='Git' size={iconSize}></SiGit>
+        <span className='font-medium hidden md:inline'>Git</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiRuby title='Ruby' size={iconSize}></SiRuby>
+        <span className='font-medium hidden md:inline'>Ruby</span>
+      </div>
+      
+      
+      
     </div>
   )
 }

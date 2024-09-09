@@ -69,7 +69,7 @@ const Hero = () => {
             Emerson
           </span>
           <br></br>
-          Full Stack Developer con Ruby On Rails
+          Full Stack Developer Web y Móvil
         </h1>
         <Languages></Languages>
         <p className='text-zinc-400 font-base m-auto xl:m-0 w-10/12'>

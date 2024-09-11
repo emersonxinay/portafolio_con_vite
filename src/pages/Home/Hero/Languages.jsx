@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaNodeJs, FaPython } from 'react-icons/fa'
-import { SiExpress, SiDjango, SiPostgresql, SiRuby , SiDocker, SiPostman, SiGit, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3, SiRubyonrails, SiFlask } from 'react-icons/si'
+import { SiExpress, SiDjango, SiPostgresql, SiRuby , SiDocker, SiFlutter, SiPostman, SiGit, SiMongodb, SiJavascript, SiTypescript, SiReact, SiRedux, SiHtml5, SiCss3, SiRubyonrails, SiFlask } from 'react-icons/si'
 
 const Languages = () => {
   const iconSize = '20px'
@@ -22,6 +22,7 @@ const Languages = () => {
         <SiTypescript title='Typescript' size={iconSize}></SiTypescript>
         <span className='font-medium hidden md:inline'>Typescript</span>
       </div>
+      
       <div className='flex items-center gap-2'>
         <SiReact title='React' size={iconSize}></SiReact>
         <span className='font-medium hidden md:inline'>React</span>
@@ -80,6 +81,10 @@ const Languages = () => {
       <div className='flex items-center gap-2'>
         <SiRuby title='Ruby' size={iconSize}></SiRuby>
         <span className='font-medium hidden md:inline'>Ruby</span>
+      </div>
+      <div className='flex items-center gap-2'>
+        <SiFlutter title='Flutter' size={iconSize}></SiFlutter>
+        <span className='font-medium hidden md:inline'>Flutter</span>
       </div>
       
       

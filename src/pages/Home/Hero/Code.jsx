@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 const Code = () => {
   const { t } = useTranslation(['translation'])
 
-  const [showImage, setshowImage] = useState(false)
+  const [showImage, setshowImage] = useState(true)
 
   const copyHandler = () => {
     const code = document.querySelector('#code').innerText

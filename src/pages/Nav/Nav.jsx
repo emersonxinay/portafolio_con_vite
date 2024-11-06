@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../assets/logo.jpeg'
+import Logo from '../../assets/emerson_espinoza.jpeg'
 import { Link, useHref } from 'react-router-dom'
 import Language from './Language'
 import Links from './Links'

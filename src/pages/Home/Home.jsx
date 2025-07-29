@@ -1,36 +1,48 @@
-import React from 'react'
-import Hero from './Hero/Hero'
+import Hero from './Hero/HeroFAANG'
+import TechnicalExcellence from './TechnicalExcellence/TechnicalExcellence'
 import { motion } from 'framer-motion'
 import Contact from './Contact/Contact'
 import Blog from './Blog/Blog'
 import Experience from './Experience/Experience'
-import Projects from './Projects/Projects'
+import Projects from './Projects'
+// import Architecture from './Architecture/Architecture'
+// import Terminal from './Terminal/Terminal'
+import Services from './Services/Services'
 import CustomCursor from '../../components/CustomCursor'
 
 const Home = () => {
   return (
-    <motion.main className='max-w-7xl m-auto px-2 xs:px-8 w-full grid gap-24'
+    <motion.main className='w-full'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Components */}
-      <Hero></Hero>
-      <Experience></Experience>
-      <Projects></Projects>
-      <Blog></Blog>
-      <Contact></Contact>
+      {/* Hero Section - Full Width */}
+      <Hero />
+      
+      {/* Rest of sections - Contained */}
+      <div className='max-w-7xl m-auto px-4 xs:px-8 space-y-24 py-20'>
+        <TechnicalExcellence />
+        <Services />
+        <Experience />
+        <Projects />
+        <Blog />
+        <Contact />
+      </div>
 
       {/* Custom cursor */}
-      <CustomCursor></CustomCursor>
+      <CustomCursor />
 
-      {/* Light */}
-      <motion.div className='absolute  left-full -translate-x-1/2 top-[100vh]  shadow-[0px_0px_300px_50px_#0ea5e9]'
-        animate={{ x: [30, -20, 20, -30], y: [30, -20, 20, -30], rotate: [0, 90], scale: [1, 1.2, 1.2, 1] }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
-      ></motion.div>
-
+      {/* Background light effect */}
+      <motion.div className='fixed bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none'
+        animate={{ 
+          x: [0, 50, 0], 
+          y: [0, -30, 0],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{ duration: 15, repeat: Infinity, repeatType: 'reverse' }}
+      />
     </motion.main>
   )
 }

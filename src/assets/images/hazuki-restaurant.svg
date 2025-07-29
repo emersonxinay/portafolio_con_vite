@@ -1,0 +1,105 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg-gradient)" rx="20"/>
+  
+  <!-- Main container -->
+  <rect x="20" y="20" width="360" height="260" fill="url(#card-gradient)" rx="15" stroke="#f97316" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Header -->
+  <text x="200" y="50" text-anchor="middle" fill="#f97316" font-family="Arial, sans-serif" font-size="24" font-weight="bold">HAZUKI</text>
+  <text x="200" y="70" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="14">Restaurant System</text>
+  
+  <!-- Sushi/Restaurant icon -->
+  <g transform="translate(50, 90)">
+    <!-- Sushi roll -->
+    <ellipse cx="15" cy="15" rx="12" ry="8" fill="#fbbf24"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#dc2626"/>
+    <circle cx="15" cy="15" r="3" fill="#22c55e"/>
+    <!-- Chopsticks -->
+    <line x1="35" y1="5" x2="45" y2="25" stroke="#a3a3a3" stroke-width="2"/>
+    <line x1="40" y1="5" x2="50" y2="25" stroke="#a3a3a3" stroke-width="2"/>
+  </g>
+  
+  <!-- WordPress logo -->
+  <g transform="translate(120, 90)" filter="url(#glow)">
+    <circle cx="15" cy="15" r="12" fill="#21759b"/>
+    <path d="M8 15 L15 8 L22 15 L15 22 Z" fill="white"/>
+    <circle cx="15" cy="15" r="3" fill="#21759b"/>
+  </g>
+  
+  <!-- Python logo -->
+  <g transform="translate(190, 90)">
+    <ellipse cx="15" cy="10" rx="8" ry="6" fill="#3776ab"/>
+    <ellipse cx="15" cy="20" rx="8" ry="6" fill="#ffd43b"/>
+    <circle cx="12" cy="8" r="1.5" fill="white"/>
+    <circle cx="18" cy="22" r="1.5" fill="white"/>
+  </g>
+  
+  <!-- Database/PostgreSQL -->
+  <g transform="translate(260, 90)">
+    <ellipse cx="10" cy="8" rx="8" ry="3" fill="#336791"/>
+    <rect x="2" y="8" width="16" height="12" fill="#336791"/>
+    <ellipse cx="10" cy="20" rx="8" ry="3" fill="#2d5a87"/>
+    <ellipse cx="10" cy="14" rx="8" ry="3" fill="#1e3a5f"/>
+  </g>
+  
+  <!-- Nginx/Server icon -->
+  <g transform="translate(330, 90)">
+    <rect x="5" y="5" width="20" height="15" fill="#22c55e" rx="2"/>
+    <rect x="8" y="8" width="4" height="3" fill="#16a34a"/>
+    <rect x="13" y="8" width="4" height="3" fill="#16a34a"/>
+    <rect x="18" y="8" width="4" height="3" fill="#16a34a"/>
+    <circle cx="15" cy="25" r="2" fill="#dc2626"/>
+  </g>
+  
+  <!-- Features -->
+  <g transform="translate(50, 140)">
+    <circle cx="5" cy="5" r="2" fill="#22c55e"/>
+    <text x="15" y="9" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">Gestión completa</text>
+    
+    <circle cx="5" cy="25" r="2" fill="#3b82f6"/>
+    <text x="15" y="29" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">VPS deployment</text>
+    
+    <circle cx="5" cy="45" r="2" fill="#8b5cf6"/>
+    <text x="15" y="49" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">Nginx + Gunicorn</text>
+    
+    <circle cx="5" cy="65" r="2" fill="#f97316"/>
+    <text x="15" y="69" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">WordPress + Backend</text>
+  </g>
+  
+  <!-- Restaurant illustration -->
+  <g transform="translate(280, 140)">
+    <!-- Building -->
+    <rect x="10" y="20" width="40" height="30" fill="#7c3aed" opacity="0.8"/>
+    <rect x="15" y="25" width="8" height="8" fill="#fbbf24"/>
+    <rect x="27" y="25" width="8" height="8" fill="#fbbf24"/>
+    <rect x="21" y="35" width="8" height="15" fill="#a3a3a3"/>
+    <!-- Roof -->
+    <polygon points="5,20 30,5 55,20" fill="#dc2626"/>
+    <!-- Sign -->
+    <rect x="18" y="10" width="24" height="8" fill="#f97316" rx="2"/>
+    <text x="30" y="16" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">HAZUKI</text>
+  </g>
+  
+  <!-- Bottom decoration -->
+  <rect x="50" y="250" width="300" height="3" fill="url(#bg-gradient)" rx="1.5"/>
+</svg>

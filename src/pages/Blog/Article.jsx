@@ -8,12 +8,25 @@ import { TiArrowBack } from 'react-icons/ti';
 import emerson from '../../assets/emerson-espinoza.jpeg';
 import Logo from '../../assets/logo.jpeg';
 import { FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
-import { BsTwitter } from 'react-icons/bs';
+import { BsTwitter, BsCalendar, BsClock, BsEye, BsHeart } from 'react-icons/bs';
+import { BiShare } from 'react-icons/bi';
 import { ImTwitch } from 'react-icons/im';
 
 const Article = () => {
   let { id } = useParams();
   const article = articles.find((a) => a.url == id);
+  
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: article.title,
+        text: article.description,
+        url: window.location.href,
+      });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+    }
+  };
 
   // on enter in component scroll to top
   useEffect(() => {
@@ -71,95 +84,151 @@ const Article = () => {
           repeatType: 'reverse'
         }}></motion.div>
 
-      <div className='grid rounded-xl w-full px-2 md:px-16 lg:px-16 py-16 bg-gradient-to-r  from-slate-900 to-slate-800 ring-0 gap-16 lg:grid-cols-12'>
-        <div className='grid lg:col-span-8 gap-8 '>
-          <nav className='flex' aria-label='Breadcrumb'>
-            <ol className='inline-flex items-center space-x-1 md:space-x-3'>
-              <li className='inline-flex items-center'>
-                <Link
-                  to='/'
-                  className='inline-flex items-center text-sm font-medium text-zinc-400 hover:text-white '>
-                  <svg
-                    aria-hidden='true'
-                    className='w-4 h-4 mr-2'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'>
-                    <path d='M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z' />
-                  </svg>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <div className='flex items-center'>
-                  <svg
-                    aria-hidden='true'
-                    className='w-6 h-6 text-gray-400'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                      fillRule='evenodd'
-                      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                      clipRule='evenodd'
-                    />
-                  </svg>
-                  <Link
-                    to='/blog'
-                    className='ml-1 text-sm font-medium text-zinc-400 hover:text-white md:ml-2 '>
-                    Blog
-                  </Link>
-                </div>
-              </li>
-              <li aria-current='page'>
-                <div className='items-center hidden sm:flex'>
-                  <svg
-                    aria-hidden='true'
-                    className='w-6 h-6 text-gray-400'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                      fillRule='evenodd'
-                      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                      clipRule='evenodd'
-                    />
-                  </svg>
-                  <span className='ml-1 text-sm font-medium text-zinc-400 md:ml-2 '>
-                    {article.title}
-                  </span>
-                </div>
-              </li>
-            </ol>
-          </nav>
+      {/* Navigation */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.1 }}>
+        <Link
+          to={'/blog'}
+          className='inline-flex items-center gap-3 text-zinc-400 hover:text-sky-400 transition-all group w-fit px-4 py-2 rounded-lg hover:bg-slate-800/50'
+          style={{ transitionDuration: '300ms' }}>
+          <TiArrowBack className='group-hover:-translate-x-1 transition-transform' />
+          <span className='font-medium'>Volver al blog</span>
+        </Link>
+      </motion.div>
 
-          <div className='flex items-center gap-2 text-sm font-medium text-zinc-400  w-full'>
+      {/* Article Header */}
+      <motion.div 
+        className='space-y-8'
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}>
+        
+        {/* Hero Image */}
+        <div className='relative overflow-hidden rounded-2xl'>
+          <img
+            src={article.thumbnail}
+            alt={article.title}
+            className='w-full h-96 lg:h-[500px] object-cover'
+          />
+          <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent'></div>
+        </div>
+        
+        {/* Article Meta */}
+        <div className='space-y-6'>
+          {/* Tags */}
+          <div className='flex flex-wrap gap-2'>
+            {article.tags.map((tag, index) => (
+              <span 
+                key={index}
+                className='px-4 py-2 text-sm font-medium bg-sky-500/10 text-sky-400 rounded-full border border-sky-500/20 hover:bg-sky-500/20 transition-colors'>
+                {tag}
+              </span>
+            ))}
+          </div>
+          
+          {/* Title */}
+          <h1 className='text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent'>
+            {article.title}
+          </h1>
+          
+          {/* Author Info */}
+          <div className='flex items-center gap-4 text-sm text-zinc-400'>
             <img
               src={emerson}
               alt='Emerson Espinoza'
-              className='h-8 w-8 object-cover rounded-full'
+              className='h-10 w-10 object-cover rounded-full'
             />
-            <a
-              href='https://www.linkedin.com/in/emerson-espinoza/'
-              target={'_blank'}>
-              Emerson Espinoza
-            </a>
-            <span>•</span>
-            <span>{article.date}</span>
+            <div className='flex items-center gap-2'>
+              <a
+                href='https://www.linkedin.com/in/emerson-espinoza/'
+                target={'_blank'}
+                className='hover:text-sky-400 transition-colors'>
+                Emerson Espinoza
+              </a>
+              <span>•</span>
+              <span>{article.date}</span>
+            </div>
           </div>
-          <div className='docStyle'>
-            <img
-              src={article.thumbnail}
-              alt={article.title}
-              className='rounded-xl'
-            />
-            <h1>{article.title}</h1>
-            <div
-              dangerouslySetInnerHTML={{ __html: article.content }}></div>
+          
+          {/* Article Stats */}
+          <div className='flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-slate-700/50'>
+            <div className='flex items-center gap-6 text-sm text-zinc-500'>
+              <div className='flex items-center gap-2'>
+                <BsCalendar className='text-sky-400' />
+                <span>{article.date}</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <BsClock className='text-sky-400' />
+                <span>8 min lectura</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <BsEye className='text-sky-400' />
+                <span>1.2k vistas</span>
+              </div>
+            </div>
+            
+            {/* Action Buttons */}
+            <div className='flex items-center gap-3'>
+              <button 
+                onClick={handleShare}
+                className='flex items-center gap-2 px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 hover:border-slate-600 rounded-lg transition-all text-sm font-medium'>
+                <BiShare className='text-sky-400' />
+                <span>Compartir</span>
+              </button>
+              <button className='flex items-center gap-2 px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 hover:border-slate-600 rounded-lg transition-all text-sm font-medium'>
+                <BsHeart className='text-red-400' />
+                <span>Me gusta</span>
+              </button>
+            </div>
           </div>
         </div>
+      </motion.div>
 
-        <div className=' lg:col-span-4 flex flex-col gap-8'>
+      {/* Article Content */}
+      <motion.div
+        className='space-y-8'
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}>
+        
+        <div className='bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 lg:p-12'>
+          <div
+            className='prose prose-invert prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-zinc-300 prose-p:leading-relaxed prose-a:text-sky-400 prose-a:no-underline hover:prose-a:text-sky-300 prose-strong:text-white prose-code:text-sky-400 prose-code:bg-slate-800/50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-pre:bg-slate-900/80 prose-pre:border prose-pre:border-slate-700/50 prose-blockquote:border-l-sky-500 prose-blockquote:bg-slate-800/30 prose-blockquote:text-zinc-300'
+            dangerouslySetInnerHTML={{ __html: article.content }}>
+          </div>
+        </div>
+        
+        {/* Author Section */}
+        <div className='bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8'>
+          <div className='flex items-center gap-6'>
+            <img
+              src={emerson}
+              alt='Emerson Espinoza'
+              className='w-16 h-16 object-cover rounded-full'
+            />
+            <div className='space-y-2'>
+              <h3 className='text-xl font-semibold'>Emerson Espinoza</h3>
+              <p className='text-zinc-400'>Desarrollador Full Stack especializado en tecnologías modernas y soluciones innovadoras.</p>
+              <div className='flex gap-2 text-sm text-zinc-500'>
+                <span>•</span>
+                <span>Más de 50 artículos publicados</span>
+                <span>•</span>
+                <span>Experto en React, Node.js, Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Sidebar Section */}
+      <div className='grid rounded-xl w-full px-2 md:px-16 lg:px-16 py-16 bg-gradient-to-r from-slate-900 to-slate-800 ring-0 gap-16 lg:grid-cols-12'>
+        <div className='grid lg:col-span-8 gap-8'>
+          {/* Main content area - can be used for related articles or comments */}
+        </div>
+        
+        <div className='lg:col-span-4 flex flex-col gap-8'>
           <div className='p-4 border-solid border-zinc-400/20 border-[1px] rounded-xl flex flex-col justify-center gap-4 h-fit text-zinc-400  text-sm font-medium text-center'>
             <img
               src={Logo}

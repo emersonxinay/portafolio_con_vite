@@ -1,9 +1,19 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Soy ingeniero de sistemas y desarrollador Full Stack, con una trayectoria sólida en la dirección de proyectos que integran innovación tecnológica y optimización empresarial. He liderado equipos y desarrollado soluciones técnicas enfocadas en impulsar el crecimiento de las organizaciones a través de la tecnología. Además, como docente en cursos y bootcamps de programación, mantengo una conexión constante con las últimas tendencias, lo que me permite aplicar enfoques actualizados en cada iniciativa. Mi objetivo es guiar a las empresas en su adaptación al entorno digital, asegurando un crecimiento sostenible y competitivo. ",
-    "contact": "Contacto!",
-    "cv": "Ver CV"
+    "description": "Ingeniero de Sistemas con más de 6 años de experiencia como desarrollador fullstack y consultor digital. Me especializo en crear plataformas web, APIs robustas y soluciones automatizadas que permiten a negocios y emprendimientos escalar sus operaciones, reducir costos y brindar una mejor experiencia a sus usuarios. Trabajo con emprendedores, empresas y organizaciones en Perú, Chile y otros países de habla hispana.",
+    "contact": "¡Hablemos de tu proyecto!",
+    "cv": "Ver CV",
+    "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
+    "specialty": "Especializado en soluciones a medida",
+    "available": "Disponible para proyectos",
+    "role": "Desarrollador Full Stack & Especialista en IA",
+    "metrics": {
+      "experience": "Años experiencia",
+      "countries": "Países atendidos", 
+      "focus": "Proyectos entregados",
+      "specialty": "Independiente"
+    }
   },
   "code": {
     "welcome": "bienvenida",
@@ -47,53 +57,124 @@
   },
 
   "experience": {
-    "title": "Experiencia profesional",
-    "tech": "Ruby, Ruby on Rails, Python, Flask, Django, MongoDB, Node, Express,React, MySQL, Tailwind, PostgreSQL, Docker, Git, Github",
-    "hazuki": "Desarrollador Web",
-    "compilando": "Desarrollador Fullstack",
-    "codigoFuturo": "Docente TI Python y Robótica",
-    "desafiolatam": "Docente TI Programador",
-    "techCompilando": "React, Python, Ruby, Django, PostgreSQL, Node, Express, MySQL, Tailwind, MongoDB, docker, Flask",
-    "techHazuki": "Php, MySQL, Cpanel, wordpress, html, css, bootstrap, javascript",
-    "techDesafioLatam":"Python, Ruby, javascript, Flask,  ruby on rails, PostgreSQL, MongoDB, Git, github, gitlab, html, css, Tailwind, vercel, heroku, amazon web services, APIS, Postman",
-    "techCodigoFuturo":"Python, javascript, Git, Github, gitlab, html, css, bootstrap, robotica, rasberry pi, PostgreSQL",
+    "title": "Experiencia Profesional",
+    "tech": "Python, Flask, FastAPI, Ruby on Rails, Node.js, React, PostgreSQL, MySQL, Docker, Nginx, WordPress, C# .NET",
+    "completeStack": "Stack Tecnológico Completo",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "devops": "DevOps & Deploy",
+    
+    "hazuki": "Desarrollador Fullstack",
+    "compilando": "Fundador & Desarrollador Principal", 
+    "codigoFuturo": "Instructor de Programación",
+    "desafiolatam": "Docente Fullstack & Mentor",
+    
+    "techCompilando": "React, Python, Flask, Django, PostgreSQL, MongoDB, Docker, APIs, Automatización",
+    "techHazuki": "Python, Flask, PostgreSQL, JavaScript, HTML, CSS, Git, Nginx, Gunicorn, VPS, Sistemas de gestión",
+    "techDesafioLatam": "Python, Ruby on Rails, JavaScript, PostgreSQL, MongoDB, Git, AWS, APIs REST",
+    "techCodigoFuturo": "Python, JavaScript, Git, HTML, CSS, Bootstrap, Robótica, Raspberry Pi",
+    
     "hazukiDate": "FEB 2018 - 2021",
-    "compilandoDate": "FEB 2022 - ACTUALIDAD",
-    "codigoFuturoDate": "AGOST 2022 - ACTUALIDAD",
+    "compilandoDate": "FEB 2022 - ACTUALIDAD", 
+    "codigoFuturoDate": "AGOSTO 2022 - ACTUALIDAD",
     "desafioLatamDate": "NOVIEMBRE 2021 - ACTUALIDAD",
-    "hazuki1": "• Diseñar y crear API RESTful para comunicación entre servicios.",
-    "hazuki2": "• Crear y mantener integraciones con servicios de terceros como pagos en línea, servicios de correo electrónico, servicios de análisis, entre otros.",
-    "hazuki3": "• Desarrollar y mantener sistemas de autenticación y autorización.",
-    "desafioLatam1": "• Despejar dudas de los estudiantes durante las clases.",
-    "desafioLatam2": "• Corregir los desafíos y las entregas intermedias del proyecto final.",
-    "desafioLatam3": "• Realizar un seguimiento y acompañamiento de los estudiantes en su proceso de aprendizaje.",
-    "compilando1": "• Crear interfaces de usuario para aplicaciones web y móviles.",
-    "compilando2": "• Desarrollo de chat automatizado para la atención al cliente.",
-    "codigoFuturo1": "• Coordinar a un grupo de estudiantes para lograr la integración al grupo de estudio.",
-    "codigoFuturo2": "• Orientar a los estudiantes durante la cursada.",
-    "codigoFuturo3": "• Asistir en la resolución de ejercicios y promover la colaboración grupal."
+    
+    "hazuki1": "• Desarrollé sistema integral de gestión para restaurante (reservas, pedidos, áreas)",
+    "hazuki2": "• Implementé arquitectura escalable con despliegue en VPS usando Nginx y Gunicorn",
+    "hazuki3": "• Creé sitio web corporativo con WordPress y backend personalizado",
+    "hazukiMetrics": "Sistema completo • VPS production • WordPress + Custom backend",
+    
+    "desafioLatam1": "• Docente de programación fullstack para bootcamp intensivo",
+    "desafioLatam2": "• Mentor de proyectos finales y desarrollo de APIs REST",
+    "desafioLatam3": "• Especialización en Ruby on Rails y arquitecturas web modernas",
+    "desafioLatamMetrics": "100+ estudiantes graduados • Bootcamp intensivo • Proyectos reales",
+    
+    "compilando1": "• Fundador de plataforma educativa con cursos técnicos online",
+    "compilando2": "• Desarrollo de SaaS educativo con clases en vivo y certificaciones",
+    "compilando3": "• Consultoría digital para empresas en transformación tecnológica",
+    "compilandoMetrics": "Plataforma propia • Cursos online • Consultoría empresarial",
+    
+    "codigoFuturo1": "• Instructor de Python, robótica y programación desde cero",
+    "codigoFuturo2": "• Desarrollo de curriculum técnico para formación profesional",
+    "codigoFuturo3": "• Capacitación en instituciones educativas y empresas privadas",
+    "codigoFuturoMetrics": "Formación técnica • Curriculum propio • Capacitación empresarial"
   },
   "contact": {
-    "title": "Contacto"
+    "title": "Contacto",
+    "subtitle": "¿Listo para transformar tu idea en realidad digital?",
+    "description": "Como desarrollador fullstack independiente, te acompaño desde la conceptualización hasta el despliegue de tu proyecto. Trabajemos juntos para crear soluciones que impulsen tu negocio.",
+    "email": "xinayespinoza@gmail.com",
+    "phonePerу": "+51 974 361 728",
+    "phoneChile": "+56 9 8632 3803",
+    "phones": "Teléfonos",
+    "locationLabel": "Ubicación",
+    "location": "Perú 🇵🇪 / Chile 🇨🇱",
+    "sendEmail": "Enviar Email",
+    "response": "Respuesta en menos de 24 horas",
+    "consultation": "Consulta inicial gratuita"
+  },
+  "education": {
+    "title": "Formación y Certificaciones",
+    "degree": "Ingeniero de Sistemas",
+    "university": "UNHEVAL, Perú",
+    "bootcamp": "Especialización Ruby on Rails Fullstack",
+    "bootcampSchool": "Desafío Latam, Chile",
+    "youtube": "YouTube: Compilando Code",
+    "courses": "Cursos: Python, Flask, React, C# .NET, Análisis de datos",
+    "program": "Creador del programa 'Python con Diagramas de Flujo desde Cero'",
+    "languages": "Español (Nativo) • Inglés (Técnico intermedio)"
   },
   "tools": {
     "title": "Herramientas"
   },
   "projects": {
-    "title": "Proyectos destacados",
-    "tech": "Tecnologías",
-    "ec1": "• Desarrollo de sistema de autenticación y autorización local y de terceros.",
-    "ec2": "• Integración de servicios de pagos en línea.",
-    "ec3": "• Implementación de sistemas de búsqueda, filtrado y guardado  de productos.",
-    "waTitle": "App del clima",
-    "wa1": "• Diseño y desarrollo de una interfaz minimalista, moderna y responsiva",
-    "wa2": "• Integración con API para la obtención de datos en tiempo real",
-    "wa3": "• implementación de sistema de búsqueda por ubicación",
-    "trTitle": "App de recetas",
-    "tr1": "• Configuración de la base de datos y modelación de las relaciones.",
-    "tr2": "• Implementación de API RESTful, manejo de solicitudes HTTP, y validación de datos.",
-    "tr3": "• Desarrollo de  componentes reutilizables y optimizacion del rendimiento mediante el uso de hooks",
-    "coming": "Próximamente... 😉"
+    "title": "Proyectos Destacados",
+    "tech": "Stack Tecnológico",
+    "impact": "Impacto",
+    "features": "Características",
+    "client": "Cliente",
+    
+    "kefytoTitle": "Kefyto - Tienda Online de Kéfir Natural",
+    "kefyto1": "• Plataforma e-commerce con React + Flask + PostgreSQL para venta de kéfir natural",
+    "kefyto2": "• Carrito dinámico, botón 'Comprar Ahora' e integración directa con WhatsApp",
+    "kefyto3": "• Branding kawaii personalizado con stickers propios y diseño único",
+    "kefytoMetrics": "E-commerce funcional • Integración WhatsApp • Branding personalizado",
+    "kefytoUrl": "https://www.kefytoabby.com/",
+    
+    "hazukiTitle": "Hazuki Restaurant - Sistema de Gestión Integral",
+    "hazuki1": "• Sistema web completo para gestión de reservas, pedidos y atención por áreas",
+    "hazuki2": "• Arquitectura escalable con Python/Flask y despliegue en VPS usando Nginx y Gunicorn",
+    "hazuki3": "• Sistema completo con frontend en JavaScript/HTML/CSS, menú digital y gestión multicanal",
+    "hazukiMetrics": "Gestión completa • VPS deployment • Python + Flask + PostgreSQL",
+    "hazukiUrl": "https://www.hazukisushi.cl/",
+    
+    "netmuzTitle": "Netmuz - Red Social para Músicos",
+    "netmuz1": "• Red social especializada para músicos y productores (LinkedIn musical)",
+    "netmuz2": "• Desarrollo fullstack con React, Express y PostgreSQL para conectar artistas",
+    "netmuz3": "• Gestión de eventos, convocatorias y marketplace musical para Latinoamérica",
+    "netmuzMetrics": "React + Express + PostgreSQL • Red social funcional • Mercado musical",
+    "netmuzUrl": "https://www.netmuz.com/",
+    
+    "saasTitle": "SaaS Educativo - Plataforma de Formación",
+    "saas1": "• Sistema completo para formación técnica con clases en vivo y calendario académico",
+    "saas2": "• Rutas formativas personalizadas y sistema de certificación profesional",
+    "saas3": "• Arquitectura SaaS escalable con gestión de usuarios y contenido multimedia",
+    "saasMetrics": "SaaS educativo • Clases en vivo • Certificación digital",
+    
+    "mineraTitle": "Sistema Minera Escondida - Gestión de Producción",
+    "minera1": "• Desarrollo completo en C# y .NET Core para gestión de órdenes de producción",
+    "minera2": "• Lógica empresarial segmentada y API REST para integración con sistemas existentes",
+    "minera3": "• Sistema robusto para una de las mineras más importantes de Chile",
+    "mineraMetrics": "C# .NET Core • API REST • Sistema empresarial robusto",
+    
+    "coming": "Ver proyecto en vivo 🚀"
+  },
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "docs": "Docs",
+    "tools": "Herramientas"
   },
   "error": {
     "button": "Volver al inicio",

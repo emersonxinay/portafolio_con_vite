@@ -1,14 +1,14 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Software Engineer Senior con 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en Inteligencia Artificial, Ciencia de Datos y Arquitecturas Enterprise. Lidero equipos técnicos, optimizo sistemas que procesan millones de transacciones y desarrollo estrategias de transformación digital que generan ROI medible. Experto en Python, React, Machine Learning y Cloud Computing con experiencia comprobada en startups unicornio y empresas Fortune 500.",
+    "description": "Ingeniero de Sistemas peruano con residencia en Chile 🇵🇪🇨🇱, Software Engineer Senior con 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en Inteligencia Artificial, Ciencia de Datos y Arquitecturas Enterprise. Lidero equipos técnicos, optimizo sistemas que procesan millones de transacciones y desarrollo estrategias de transformación digital que generan ROI medible. Experto en Python, React, Machine Learning y Cloud Computing con experiencia comprobada en startups unicornio y empresas Fortune 500.",
     "contact": "Agenda una consulta técnica",
     "cv": "Descargar CV Ejecutivo",
     "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
     "specialty": "Arquitecto de Soluciones Enterprise • Tech Lead • AI Specialist",
     "available": "Disponible para proyectos estratégicos",
     "role": "Senior Software Engineer • AI Expert • Data Scientist • Tech Educator",
-    "pitch": "Transformo desafíos empresariales complejos en soluciones tecnológicas innovadoras que escalan. Con expertise en IA/ML, arquitecturas distribuidas y liderazgo técnico, he optimizado sistemas que manejan +1M usuarios, reducido costos operativos en 60% y liderado equipos que entregan productos de clase mundial.",
+    "pitch": "Ingeniero de Sistemas peruano 🇵🇪 con residencia en Chile 🇨🇱. Transformo desafíos empresariales complejos en soluciones tecnológicas innovadoras que escalan. Con expertise en IA/ML, arquitecturas distribuidas y liderazgo técnico, he optimizado sistemas que manejan +1M usuarios, reducido costos operativos en 60% y liderado equipos que entregan productos de clase mundial.",
     "value_proposition": "Combino visión estratégica con ejecución técnica excepcional para crear soluciones que no solo funcionan, sino que transforman negocios.",
     "metrics": {
       "experience": "Años de experiencia",
@@ -113,11 +113,11 @@
     "subtitle": "¿Listo para transformar tu idea en realidad digital?",
     "description": "Como desarrollador fullstack independiente, te acompaño desde la conceptualización hasta el despliegue de tu proyecto. Trabajemos juntos para crear soluciones que impulsen tu negocio.",
     "email": "xinayespinoza@gmail.com",
-    "phonePerу": "+51 974 361 728",
-    "phoneChile": "+56 9 8632 3803",
-    "phones": "Teléfonos",
+    "phonePerу": "WhatsApp Perú",
+    "phoneChile": "WhatsApp Chile", 
+    "phones": "WhatsApp",
     "locationLabel": "Ubicación",
-    "location": "Perú 🇵🇪 / Chile 🇨🇱",
+    "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
     "sendEmail": "Enviar Email",
     "response": "Respuesta en menos de 24 horas",
     "consultation": "Consulta inicial gratuita"

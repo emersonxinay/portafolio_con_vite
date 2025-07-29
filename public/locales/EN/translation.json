@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hello! I am ",
-    "description": "Senior Software Engineer with 6+ years transforming ideas into scalable technological solutions. Specialist in Artificial Intelligence, Data Science, and Enterprise Architectures. I lead technical teams, optimize systems processing millions of transactions, and develop digital transformation strategies that generate measurable ROI. Expert in Python, React, Machine Learning, and Cloud Computing with proven experience in unicorn startups and Fortune 500 companies.",
+    "description": "Peruvian Systems Engineer with residence in Chile 🇵🇪🇨🇱, Senior Software Engineer with 6+ years transforming ideas into scalable technological solutions. Specialist in Artificial Intelligence, Data Science, and Enterprise Architectures. I lead technical teams, optimize systems processing millions of transactions, and develop digital transformation strategies that generate measurable ROI. Expert in Python, React, Machine Learning, and Cloud Computing with proven experience in unicorn startups and Fortune 500 companies.",
     "contact": "Schedule Technical Consultation",
     "cv": "Download Executive Resume",
     "location": "🇵🇪 Peruvian with residence in Chile 🇨🇱",
@@ -112,11 +112,11 @@
     "subtitle": "Ready to transform your idea into digital reality?",
     "description": "As an independent fullstack developer, I accompany you from conceptualization to deployment of your project. Let's work together to create solutions that drive your business.",
     "email": "xinayespinoza@gmail.com",
-    "phonePerу": "+51 974 361 728",
-    "phoneChile": "+56 9 8632 3803",
+    "phonePerу": "WhatsApp Peru",
+    "phoneChile": "WhatsApp Chile",
     "phones": "Phones",
     "locationLabel": "Location",
-    "location": "Peru 🇵🇪 / Chile 🇨🇱",
+    "location": "🇵🇪 Peruvian with residence in Chile 🇨🇱",
     "sendEmail": "Send Email",
     "response": "Response in less than 24 hours",
     "consultation": "Free initial consultation"

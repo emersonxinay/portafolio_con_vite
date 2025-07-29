@@ -209,6 +209,17 @@ const HeroFAANG = () => {
             >
               Ingeniero de Sistemas
             </motion.span>
+            
+            {/* Nationality Highlight - Subtle */}
+            <motion.div 
+              className="flex items-center gap-2 justify-center xl:justify-start mb-3"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
+              <span className="text-sm text-zinc-400">🇵🇪 Peruano con residencia en Chile 🇨🇱</span>
+            </motion.div>
+            
             <motion.span 
               className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -672,7 +683,7 @@ const HeroFAANG = () => {
               >
                 📍
               </motion.span>
-              <span className="font-semibold text-blue-300 text-lg">Chile/Peru • Remote Worldwide</span>
+              <span className="font-semibold text-blue-300 text-lg">🇵🇪 Peruano con residencia en Chile 🇨🇱 • Remote Worldwide</span>
               <motion.div
                 className="w-1 h-1 bg-blue-400 rounded-full"
                 animate={{ scale: [1, 1.5, 1] }}

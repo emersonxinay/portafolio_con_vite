@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
           
           <div className="flex items-center justify-center gap-3">
-            <i className="fas fa-phone text-green-400 text-xl"></i>
+            <i className="fab fa-whatsapp text-green-400 text-xl"></i>
             <div>
               <p className="text-green-400 font-semibold">{t('contact.phones')}</p>
               <p className="text-zinc-300 text-xs">{t('contact.phonePerу')}</p>

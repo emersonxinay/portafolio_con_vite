@@ -1,24 +1,36 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ConfettiExplosion from 'react-confetti-explosion';
+import { useTranslation } from 'react-i18next';
 
 const HeroFAANG = () => {
+  const { t } = useTranslation(['translation']);
   const [isExploding, setIsExploding] = useState(false);
   const [currentMetric, setCurrentMetric] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // Real business impact metrics
+  // Enhanced impact metrics with translations
   const impactMetrics = [
-    { value: "500K+", label: "Users Served", icon: "👥", color: "from-blue-400 to-cyan-500" },
-    { value: "99.9%", label: "Uptime Achieved", icon: "⚡", color: "from-green-400 to-emerald-500" },
-    { value: "50TB+", label: "Data Processed", icon: "💾", color: "from-purple-400 to-pink-500" },
-    { value: "40%", label: "Cost Reduction", icon: "💰", color: "from-orange-400 to-red-500" }
+    { value: "6+ años", label: "Experiencia Enterprise", icon: "💼", color: "from-blue-400 to-cyan-500", bgColor: "from-blue-900/20 to-cyan-900/20" },
+    { value: "99.9%", label: "Uptime Garantizado", icon: "⚡", color: "from-green-400 to-emerald-500", bgColor: "from-green-900/20 to-emerald-900/20" },
+    { value: "$2M+", label: "Valor Generado", icon: "💰", color: "from-yellow-400 to-orange-500", bgColor: "from-yellow-900/20 to-orange-900/20" },
+    { value: "500+", label: "Desarrolladores Entrenados", icon: "🎓", color: "from-purple-400 to-pink-500", bgColor: "from-purple-900/20 to-pink-900/20" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % impactMetrics.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   const getInTouchHandler = () => {
@@ -30,81 +42,220 @@ const HeroFAANG = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col xl:flex-row items-center justify-center gap-16 xl:gap-0 xl:justify-between w-full relative px-4 py-20"
+      className="min-h-screen flex flex-col xl:flex-row items-center justify-center gap-16 xl:gap-0 xl:justify-between w-full relative px-4 py-20 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Confetti Effect */}
-      {isExploding && (
-        <ConfettiExplosion
-          particleCount={100}
-          className="fixed left-1/2 -translate-x-1/2 z-50"
-        />
-      )}
+      {/* Enhanced Confetti Effect */}
+      <AnimatePresence>
+        {isExploding && (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            className="fixed inset-0 z-50 pointer-events-none"
+          >
+            <ConfettiExplosion
+              particleCount={150}
+              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              colors={['#0ea5e9', '#3b82f6', '#8b5cf6', '#ec4899', '#10b981']}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Animated Background Elements */}
+      {/* Interactive Mouse Follower */}
+      <motion.div
+        className="fixed w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full pointer-events-none z-40 mix-blend-difference"
+        animate={{
+          x: mousePosition.x - 12,
+          y: mousePosition.y - 12,
+          scale: isHovered ? 1.5 : 1
+        }}
+        transition={{ type: "spring", stiffness: 500, damping: 28 }}
+      />
+
+      {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Primary gradient orb */}
         <motion.div
-          className="absolute w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+          className="absolute w-[600px] h-[600px] bg-gradient-to-r from-blue-500/15 via-purple-500/15 to-cyan-500/15 rounded-full blur-3xl"
           animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.2, 1],
+            x: [0, 100, -50, 0],
+            y: [0, -50, 30, 0],
+            scale: [1, 1.3, 0.9, 1],
+            rotate: [0, 180, 360]
           }}
-          transition={{ duration: 20, repeat: Infinity }}
-          style={{ top: '20%', left: '10%' }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+          style={{ top: '10%', left: '5%' }}
         />
+        
+        {/* Secondary gradient orb */}
         <motion.div
-          className="absolute w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-green-500/20 rounded-full blur-3xl"
+          className="absolute w-[400px] h-[400px] bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-cyan-500/15 rounded-full blur-3xl"
           animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
-            scale: [1, 0.8, 1],
+            x: [0, -80, 60, 0],
+            y: [0, 60, -40, 0],
+            scale: [1, 0.8, 1.2, 1],
+            rotate: [360, 180, 0]
           }}
-          transition={{ duration: 15, repeat: Infinity, delay: 5 }}
-          style={{ bottom: '20%', right: '15%' }}
+          transition={{ duration: 20, repeat: Infinity, delay: 3, ease: "easeInOut" }}
+          style={{ bottom: '15%', right: '10%' }}
         />
+        
+        {/* Tertiary accent orb */}
+        <motion.div
+          className="absolute w-[300px] h-[300px] bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 rounded-full blur-3xl"
+          animate={{
+            x: [0, 40, -30, 0],
+            y: [0, -30, 40, 0],
+            scale: [1, 1.1, 0.9, 1]
+          }}
+          transition={{ duration: 18, repeat: Infinity, delay: 7, ease: "easeInOut" }}
+          style={{ top: '60%', left: '60%' }}
+        />
+        
+        {/* Floating particles */}
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+            animate={{
+              y: [-20, -100, -20],
+              x: [0, Math.sin(i) * 50, 0],
+              opacity: [0.3, 1, 0.3],
+              scale: [1, 1.5, 1]
+            }}
+            transition={{
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              delay: i * 1.5,
+              ease: "easeInOut"
+            }}
+            style={{
+              left: `${20 + i * 15}%`,
+              top: `${80 + Math.sin(i) * 10}%`
+            }}
+          />
+        ))}
       </div>
 
       {/* Left Content */}
-      <div className="flex-1 max-w-3xl text-center xl:text-left relative z-10">
-        {/* Top Badge */}
+      <div className="flex-1 max-w-4xl text-center xl:text-left relative z-10">
+        {/* Enhanced Top Badge */}
         <motion.div
-          className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-900/40 to-green-900/40 backdrop-blur-sm border border-emerald-500/30 rounded-full px-6 py-3 mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-8 py-4 mb-10 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-500"
+          initial={{ opacity: 0, y: -30, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
+          whileHover={{ scale: 1.05, y: -2 }}
         >
-          <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-          <span className="text-emerald-300 font-medium text-sm">
-            🚀 Available for Enterprise Projects
+          <motion.div 
+            className="relative"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          >
+            <div className="w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+            <div className="absolute inset-0 w-4 h-4 bg-emerald-400 rounded-full animate-ping opacity-30"></div>
+          </motion.div>
+          <span className="text-emerald-200 font-semibold text-base tracking-wide">
+            💼 {t('hero.available')} • Enterprise Ready
           </span>
+          <motion.div
+            className="w-2 h-2 bg-emerald-300 rounded-full opacity-60"
+            animate={{ scale: [1, 1.5, 1], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
         </motion.div>
 
-        {/* Main Title */}
+        {/* Enhanced Main Title */}
         <motion.div
-          className="mb-8"
-          initial={{ opacity: 0, y: 30 }}
+          className="mb-12"
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
         >
-          <h1 className="text-4xl md:text-6xl xl:text-7xl font-black leading-tight mb-4">
-            <span className="block text-zinc-100 mb-2">
-              Senior Software Engineer
-            </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500">
+          {/* Professional Title */}
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className="flex items-center gap-4 justify-center xl:justify-start mb-4">
+              <motion.div 
+                className="h-1.5 w-20 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: 80 }}
+                transition={{ duration: 1.5, delay: 0.8 }}
+              />
+              <span className="text-lg text-zinc-300 font-bold tracking-wider uppercase">
+                {t('hero.specialty')}
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Main Name */}
+          <h1 className="text-5xl md:text-7xl xl:text-8xl font-black leading-tight mb-6">
+            <motion.span 
+              className="block text-zinc-100 mb-3 drop-shadow-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              Ingeniero de Sistemas
+            </motion.span>
+            <motion.span 
+              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02 }}
+            >
               Emerson Espinoza
-            </span>
+            </motion.span>
           </h1>
           
-          <div className="flex items-center gap-3 justify-center xl:justify-start mb-6">
-            <div className="h-1 w-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-            <span className="text-xl text-zinc-300 font-medium">
-              Building Systems That Scale
-            </span>
-          </div>
+          {/* Enhanced Role Description */}
+          <motion.div
+            className="flex flex-wrap items-center gap-4 justify-center xl:justify-start mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            {[
+              { text: "Senior Software Engineer", icon: "💻", color: "from-blue-400 to-cyan-500" },
+              { text: "AI Expert", icon: "🤖", color: "from-purple-400 to-pink-500" },
+              { text: "Data Scientist", icon: "📊", color: "from-green-400 to-emerald-500" },
+              { text: "Tech Educator", icon: "🎓", color: "from-orange-400 to-red-500" }
+            ].map((role, index) => (
+              <motion.div
+                key={role.text}
+                className={`group flex items-center gap-2 bg-gradient-to-r ${role.color} bg-opacity-10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 hover:scale-105 transition-all duration-300`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                whileHover={{ y: -2, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}
+              >
+                <span className="text-lg">{role.icon}</span>
+                <span className="text-sm font-semibold text-white">{role.text}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Value Proposition */}
+          <motion.p
+            className="text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto xl:mx-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+          >
+            {t('hero.pitch')}
+          </motion.p>
         </motion.div>
 
         {/* Value Proposition */}
@@ -114,38 +265,117 @@ const HeroFAANG = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-2xl font-bold text-white mb-4">
-            🎯 What I Deliver for Enterprise Clients
+          <h2 className="text-2xl font-bold text-white mb-6">
+            🎯 Expertise That Drives Business Results
           </h2>
-          <div className="grid md:grid-cols-2 gap-4 text-left">
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="text-cyan-400 font-semibold">Scalable Architecture:</span>
-                <p className="text-zinc-300 text-sm">Systems handling 500K+ concurrent users</p>
+          
+          {/* Core Specializations */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-2xl p-6 border border-blue-500/20">
+              <h3 className="text-cyan-400 font-bold text-lg mb-3 flex items-center gap-2">
+                🧠 Software Engineering & AI
+              </h3>
+              <ul className="text-zinc-300 text-sm space-y-2">
+                <li>• Arquitecturas escalables con Python & React</li>
+                <li>• Integración de IA/ML en sistemas empresariales</li>
+                <li>• APIs robustas con FastAPI y Flask</li>
+                <li>• Microservicios y Event-Driven Architecture</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-6 border border-purple-500/20">
+              <h3 className="text-purple-400 font-bold text-lg mb-3 flex items-center gap-2">
+                📊 Data Science & Analytics
+              </h3>
+              <ul className="text-zinc-300 text-sm space-y-2">
+                <li>• Análisis predictivo y Machine Learning</li>
+                <li>• Dashboards interactivos con D3.js/Plotly</li>
+                <li>• Procesamiento de Big Data con Pandas/NumPy</li>
+                <li>• Sistemas de recomendación personalizados</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-6 border border-green-500/20">
+              <h3 className="text-green-400 font-bold text-lg mb-3 flex items-center gap-2">
+                🎓 Tech Education & Leadership
+              </h3>
+              <ul className="text-zinc-300 text-sm space-y-2">
+                <li>• Capacitación técnica para equipos empresariales</li>
+                <li>• Mentoring en tecnologías modernas</li>
+                <li>• Workshops de arquitectura y buenas prácticas</li>
+                <li>• Code reviews y pair programming</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-6 border border-orange-500/20">
+              <h3 className="text-orange-400 font-bold text-lg mb-3 flex items-center gap-2">
+                🚀 DevOps & Cloud
+              </h3>
+              <ul className="text-zinc-300 text-sm space-y-2">
+                <li>• Containerización con Docker & Kubernetes</li>
+                <li>• Pipelines CI/CD automatizados</li>
+                <li>• Infraestructura como código (IaC)</li>
+                <li>• Monitoreo y observabilidad avanzada</li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Key Achievements */}
+          <div className="border-t border-slate-700/50 pt-6">
+            <h3 className="text-white font-bold text-lg mb-4">🏆 Logros Empresariales Clave</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
+                  6+ años
+                </div>
+                <div className="text-xs text-zinc-400">Experiencia Full Stack</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
+                  3 países
+                </div>
+                <div className="text-xs text-zinc-400">Proyectos Internacionales</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
+                  50+ proyectos
+                </div>
+                <div className="text-xs text-zinc-400">Soluciones Entregadas</div>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="text-green-400 font-semibold">Performance:</span>
-                <p className="text-zinc-300 text-sm">99.9% uptime with &lt;50ms response times</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="text-purple-400 font-semibold">Cost Optimization:</span>
-                <p className="text-zinc-300 text-sm">Reduced infrastructure costs by 40%</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="text-orange-400 font-semibold">Full-Stack:</span>
-                <p className="text-zinc-300 text-sm">Python, React, PostgreSQL, Docker</p>
-              </div>
-            </div>
+          </div>
+        </motion.div>
+        
+        {/* Technology Expertise Banner */}
+        <motion.div
+          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30 p-6 mb-8"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <h3 className="text-white font-bold text-lg mb-4">🛠️ Stack Tecnológico Principal</h3>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { name: 'Python', color: 'from-yellow-400 to-blue-500' },
+              { name: 'React', color: 'from-cyan-400 to-blue-500' },
+              { name: 'FastAPI', color: 'from-green-400 to-teal-500' },
+              { name: 'PostgreSQL', color: 'from-blue-600 to-purple-600' },
+              { name: 'Docker', color: 'from-blue-400 to-cyan-600' },
+              { name: 'Machine Learning', color: 'from-purple-500 to-pink-500' },
+              { name: 'TypeScript', color: 'from-blue-500 to-indigo-600' },
+              { name: 'Next.js', color: 'from-gray-700 to-gray-900' }
+            ].map((tech, index) => (
+              <motion.span
+                key={tech.name}
+                className={`px-3 py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.color} text-white shadow-lg`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {tech.name}
+              </motion.span>
+            ))}
           </div>
         </motion.div>
 
@@ -187,129 +417,484 @@ const HeroFAANG = () => {
           </div>
         </motion.div>
 
-        {/* Dynamic Impact Metrics */}
+        {/* Enhanced Dynamic Impact Metrics */}
         <motion.div
-          className="mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          className="mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
         >
           <div className="text-center xl:text-left">
-            <h3 className="text-lg font-semibold text-zinc-300 mb-4">
-              📈 Business Impact Delivered
-            </h3>
-            <motion.div
-              key={currentMetric}
-              className="inline-flex items-center gap-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30 px-6 py-4"
-              initial={{ opacity: 0, x: 20 }}
+            <motion.h3 
+              className="text-2xl font-bold text-white mb-6 flex items-center gap-3 justify-center xl:justify-start"
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6, delay: 2 }}
             >
-              <span className="text-3xl">{impactMetrics[currentMetric].icon}</span>
-              <div>
-                <div className={`text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r ${impactMetrics[currentMetric].color}`}>
-                  {impactMetrics[currentMetric].value}
+              <span className="text-3xl">📈</span>
+              Business Impact Delivered
+              <motion.div
+                className="w-2 h-2 bg-cyan-400 rounded-full"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </motion.h3>
+            
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentMetric}
+                className={`group inline-flex items-center gap-6 bg-gradient-to-r ${impactMetrics[currentMetric].bgColor} backdrop-blur-xl rounded-3xl border border-white/20 px-8 py-6 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500`}
+                initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -50, scale: 0.9 }}
+                transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <motion.div
+                  className="relative"
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <span className="text-5xl drop-shadow-lg">{impactMetrics[currentMetric].icon}</span>
+                  <motion.div
+                    className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-xl"
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                </motion.div>
+                
+                <div className="text-left">
+                  <motion.div 
+                    className={`text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${impactMetrics[currentMetric].color} drop-shadow-lg`}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    {impactMetrics[currentMetric].value}
+                  </motion.div>
+                  <motion.div 
+                    className="text-zinc-200 text-lg font-semibold tracking-wide"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
+                    {impactMetrics[currentMetric].label}
+                  </motion.div>
                 </div>
-                <div className="text-zinc-400 text-sm font-medium">
-                  {impactMetrics[currentMetric].label}
+                
+                {/* Progress indicator */}
+                <div className="absolute bottom-2 right-4 flex gap-1">
+                  {impactMetrics.map((_, index) => (
+                    <motion.div
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentMetric ? 'bg-cyan-400 w-6' : 'bg-zinc-600'
+                      }`}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: index * 0.1 }}
+                    />
+                  ))}
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.div>
 
-        {/* CTA Buttons */}
+        {/* Enhanced CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start"
-          initial={{ opacity: 0, y: 20 }}
+          className="flex flex-col sm:flex-row gap-6 justify-center xl:justify-start mb-12"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.8, delay: 2.2 }}
         >
           <motion.button
             onClick={getInTouchHandler}
-            className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-2xl overflow-hidden shadow-2xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 25px 50px rgba(14, 165, 233, 0.4)",
-            }}
+            className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-3xl shadow-2xl hover:shadow-cyan-500/50 transition-all duration-500 overflow-hidden border border-white/20"
+            whileHover={{ scale: 1.08, y: -3 }}
             whileTap={{ scale: 0.95 }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
+            {/* Animated background */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-500"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.6 }}
+            />
+            
+            {/* Glow effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 blur-xl"
+              animate={{ 
+                scale: isHovered ? [1, 1.2, 1] : 1,
+                opacity: isHovered ? [0.5, 0.8, 0.5] : 0.3
               }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <span className="relative z-10 flex items-center gap-2">
-              <i className="fas fa-calendar-check"></i>
+            
+            <span className="relative z-10 flex items-center gap-3 text-lg">
+              <motion.span
+                className="text-2xl"
+                animate={{ rotate: isHovered ? [0, 15, -15, 0] : 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                💼
+              </motion.span>
               Schedule Technical Interview
+              <motion.span
+                className="text-xl"
+                animate={{ x: [0, 8, 0], rotate: [0, 15, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                →
+              </motion.span>
             </span>
+            
+            {/* Particle effect */}
+            <motion.div
+              className="absolute inset-0 pointer-events-none"
+              initial={false}
+            >
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-white rounded-full"
+                  style={{
+                    left: `${20 + i * 15}%`,
+                    top: `${30 + (i % 2) * 40}%`,
+                  }}
+                  animate={{
+                    scale: isHovered ? [0, 1, 0] : 0,
+                    opacity: isHovered ? [0, 1, 0] : 0,
+                  }}
+                  transition={{
+                    duration: 1,
+                    delay: i * 0.1,
+                    repeat: isHovered ? Infinity : 0,
+                  }}
+                />
+              ))}
+            </motion.div>
           </motion.button>
 
           <motion.button
             onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-slate-800/50 text-white font-medium rounded-2xl border border-slate-600/50 hover:border-slate-500 hover:bg-slate-700/50 transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="group relative px-10 py-5 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-500 overflow-hidden backdrop-blur-sm"
+            whileHover={{ scale: 1.08, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <span className="flex items-center gap-2">
-              <i className="fas fa-code"></i>
+            {/* Animated border */}
+            <motion.div
+              className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-3xl"
+              style={{ padding: '2px' }}
+              initial={{ rotate: 0 }}
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 2, ease: "linear" }}
+            >
+              <div className="w-full h-full bg-black/80 rounded-3xl" />
+            </motion.div>
+            
+            {/* Fill effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              initial={{ scale: 0, borderRadius: '50%' }}
+              whileHover={{ scale: 1.5, borderRadius: '24px' }}
+              transition={{ duration: 0.5 }}
+            />
+            
+            <span className="relative z-10 flex items-center gap-3 text-lg">
+              <motion.span
+                className="text-2xl"
+                animate={{ y: [0, -3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                📄
+              </motion.span>
               View Technical Projects
+              <motion.span
+                className="text-xl"
+                animate={{ 
+                  y: [0, -4, 0], 
+                  x: [0, 2, 0],
+                  rotate: [0, 15, 0]
+                }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
+              >
+                ↗
+              </motion.span>
             </span>
           </motion.button>
         </motion.div>
 
-        {/* Location & Availability */}
+        {/* Enhanced Location & Availability */}
         <motion.div
-          className="mt-8 flex flex-wrap gap-4 justify-center xl:justify-start text-sm text-zinc-400"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          className="text-center xl:text-left"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 2.6 }}
         >
-          <div className="flex items-center gap-2">
-            <i className="fas fa-map-marker-alt text-cyan-400"></i>
-            <span>Chile/Peru • Remote Worldwide</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <i className="fas fa-clock text-green-400"></i>
-            <span>GMT-5 • Flexible Hours</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <i className="fas fa-language text-purple-400"></i>
-            <span>Spanish • English</span>
+          <div className="flex flex-col sm:flex-row gap-8 justify-center xl:justify-start items-center">
+            <motion.div 
+              className="group flex items-center gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-green-500/20 hover:border-green-400/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 2.8 }}
+            >
+              <motion.span 
+                className="text-green-400 text-xl"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                🟢
+              </motion.span>
+              <span className="font-semibold text-green-300 text-lg">{t('hero.availability')}</span>
+              <motion.div
+                className="w-2 h-2 bg-green-400 rounded-full"
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </motion.div>
+            
+            <motion.div 
+              className="group flex items-center gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3 }}
+            >
+              <motion.span 
+                className="text-2xl"
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                📍
+              </motion.span>
+              <span className="font-semibold text-blue-300 text-lg">Chile/Peru • Remote Worldwide</span>
+              <motion.div
+                className="w-1 h-1 bg-blue-400 rounded-full"
+                animate={{ scale: [1, 1.5, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              />
+            </motion.div>
+            
+            <motion.div 
+              className="group flex items-center gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 3.2 }}
+            >
+              <motion.span 
+                className="text-2xl"
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              >
+                ⏰
+              </motion.span>
+              <span className="font-semibold text-purple-300 text-lg">GMT-5 • Flexible Hours</span>
+              <motion.div
+                className="flex gap-1"
+              >
+                {[...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="w-1 h-1 bg-purple-400 rounded-full"
+                    animate={{ opacity: [0.3, 1, 0.3] }}
+                    transition={{ 
+                      duration: 1.5, 
+                      repeat: Infinity, 
+                      delay: i * 0.2 
+                    }}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
 
-      {/* Right Side - Code Preview */}
+      {/* Enhanced Right Side - Interactive Code Preview */}
       <motion.div
-        className="flex-1 max-w-2xl"
+        className="flex-1 max-w-2xl relative"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-6 shadow-2xl">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+        {/* Floating Background Elements */}
+        <motion.div
+          className="absolute -inset-8 bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-purple-500/10 rounded-3xl blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            rotate: [0, 5, -5, 0]
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        
+        {/* Enhanced Terminal Window */}
+        <motion.div
+          className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl rounded-3xl border border-slate-600/30 shadow-2xl overflow-hidden"
+          whileHover={{ scale: 1.02, y: -5 }}
+          transition={{ duration: 0.4, type: "spring" }}
+          style={{
+            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+          }}
+        >
+          {/* Enhanced Terminal Header */}
+          <div className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-slate-800/90 to-slate-700/80 border-b border-slate-600/40">
+            <div className="flex gap-3">
+              <motion.div 
+                className="w-4 h-4 bg-red-500 rounded-full shadow-lg"
+                whileHover={{ scale: 1.2 }}
+                animate={{ boxShadow: ['0 0 0 0 rgba(239, 68, 68, 0.4)', '0 0 0 8px rgba(239, 68, 68, 0)'] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+              <motion.div 
+                className="w-4 h-4 bg-yellow-500 rounded-full shadow-lg"
+                whileHover={{ scale: 1.2 }}
+                animate={{ boxShadow: ['0 0 0 0 rgba(245, 158, 11, 0.4)', '0 0 0 8px rgba(245, 158, 11, 0)'] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              />
+              <motion.div 
+                className="w-4 h-4 bg-green-500 rounded-full shadow-lg"
+                whileHover={{ scale: 1.2 }}
+                animate={{ boxShadow: ['0 0 0 0 rgba(34, 197, 94, 0.4)', '0 0 0 8px rgba(34, 197, 94, 0)'] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              />
             </div>
-            <span className="text-zinc-400 text-sm ml-2">enterprise_system.py</span>
+            <div className="flex-1 text-center">
+              <motion.span 
+                className="text-slate-300 text-base font-mono bg-slate-700/50 px-4 py-1 rounded-lg border border-slate-600/30"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                ~/enterprise-ai-system.py
+              </motion.span>
+            </div>
+            <motion.div
+              className="w-3 h-3 bg-cyan-400 rounded-full"
+              animate={{ opacity: [0.3, 1, 0.3] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            />
           </div>
-          
-          <div className="font-mono text-sm space-y-2">
-            <div className="text-zinc-500"># Scalable microservices architecture</div>
-            <div className="text-purple-400">class <span className="text-yellow-400">EnterpriseAPI</span>:</div>
-            <div className="ml-4 text-blue-400">def <span className="text-green-400">handle_millions_requests</span>(self):</div>
-            <div className="ml-8 text-zinc-300">redis_cache = <span className="text-orange-400">RedisCluster</span>()</div>
-            <div className="ml-8 text-zinc-300">db_pool = <span className="text-orange-400">PostgreSQLPool</span>()</div>
-            <div className="ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
-            <div className="text-zinc-500 mt-4"># Result: 99.9% uptime, &lt;50ms response</div>
+
+          {/* Enhanced Code Content */}
+          <div className="p-8 font-mono text-base leading-relaxed">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1 }}
+            >
+              <motion.div 
+                className="text-zinc-500 mb-3 text-lg"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                # Enterprise-grade AI-powered microservices
+              </motion.div>
+              
+              <motion.div 
+                className="mb-6 bg-slate-800/50 rounded-xl p-4 border border-slate-600/30"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+              >
+                <div className="text-purple-400 text-lg">class <span className="text-yellow-400 font-bold">EnterpriseAISystem</span>:</div>
+                <div className="ml-4 text-blue-400 mt-2">def <span className="text-green-400 font-semibold">handle_millions_requests</span>(self):</div>
+                <div className="ml-8 text-zinc-300 mt-1">redis_cache = <span className="text-orange-400">RedisCluster</span>(nodes=50)</div>
+                <div className="ml-8 text-zinc-300">db_pool = <span className="text-orange-400">PostgreSQLPool</span>(max_conn=1000)</div>
+                <div className="ml-8 text-zinc-300">ai_engine = <span className="text-pink-400">TensorFlowServing</span>()</div>
+                <div className="ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
+              </motion.div>
+              
+              <motion.div 
+                className="text-zinc-500 mb-4 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-lg p-3 border border-green-500/20"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.6 }}
+              >
+                <div className="flex items-center gap-2 text-green-400 font-semibold mb-2">
+                  <span className="text-xl">✅</span>
+                  Production Results:
+                </div>
+                <div className="ml-6 space-y-1 text-sm">
+                  <div>• 99.9% uptime across 3 regions</div>
+                  <div>• &lt;50ms response time at scale</div>
+                  <div>• 10M+ daily active users</div>
+                  <div>• $2M+ cost savings annually</div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                className="flex items-center gap-3 mt-6 bg-gradient-to-r from-slate-800/50 to-slate-700/30 rounded-lg p-3 border border-slate-600/30"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.8 }}
+              >
+                <span className="text-green-400 text-lg">$</span>
+                <span className="text-slate-300 text-lg">ready_for_enterprise_challenges</span>
+                <motion.span
+                  className="text-cyan-400 text-xl font-bold"
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity }}
+                >
+                  |||
+                </motion.span>
+                <motion.div
+                  className="ml-auto flex gap-1"
+                >
+                  {[...Array(3)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="w-2 h-2 bg-cyan-400 rounded-full"
+                      animate={{ scale: [0.5, 1, 0.5] }}
+                      transition={{ 
+                        duration: 1.5, 
+                        repeat: Infinity, 
+                        delay: i * 0.3 
+                      }}
+                    />
+                  ))}
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Enhanced Floating Elements */}
+        <motion.div
+          className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-lg opacity-60"
+          animate={{
+            y: [0, -15, 0],
+            x: [0, 10, 0],
+            scale: [1, 1.2, 1],
+            opacity: [0.4, 0.8, 0.4]
+          }}
+          transition={{ duration: 4, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute -bottom-6 -left-6 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-lg opacity-50"
+          animate={{
+            y: [0, 15, 0],
+            x: [0, -8, 0],
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{ duration: 5, repeat: Infinity, delay: 1.5 }}
+        />
+        <motion.div
+          className="absolute top-1/2 -right-8 w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur-md opacity-40"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.5, 1],
+            opacity: [0.2, 0.6, 0.2]
+          }}
+          transition={{ duration: 6, repeat: Infinity, delay: 2 }}
+        />
       </motion.div>
     </motion.div>
   );

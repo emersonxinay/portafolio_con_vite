@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { TiArrowBack } from 'react-icons/ti'
 import { motion } from 'framer-motion'
 import ErrorImage from '../../assets/error/404.png'
-import CustomCursor from '../../components/CustomCursor'
 import { useTranslation } from 'react-i18next'
 
 const Error = () => {
@@ -15,8 +14,6 @@ const Error = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}>
 
-      {/* Custom cursor */}
-      <CustomCursor></CustomCursor>
 
       {/* Lights */}
       <motion.div className='absolute top-1/2 -translate-x-1/2 shadow-[0px_0px_300px_50px_#0ea5e9]'

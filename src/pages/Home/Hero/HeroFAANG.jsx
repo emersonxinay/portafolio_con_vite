@@ -42,7 +42,7 @@ const HeroFAANG = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col xl:flex-row items-center justify-center gap-16 xl:gap-0 xl:justify-between w-full relative px-4 py-20 overflow-hidden"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-0 xl:justify-between w-full relative px-3 sm:px-4 lg:px-6 py-8 sm:py-12 lg:py-20 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -68,9 +68,9 @@ const HeroFAANG = () => {
         )}
       </AnimatePresence>
 
-      {/* Interactive Mouse Follower */}
+      {/* Interactive Mouse Follower - Hidden on mobile */}
       <motion.div
-        className="fixed w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full pointer-events-none z-40 mix-blend-difference"
+        className="hidden lg:block fixed w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full pointer-events-none z-40 mix-blend-difference"
         animate={{
           x: mousePosition.x - 12,
           y: mousePosition.y - 12,
@@ -144,11 +144,11 @@ const HeroFAANG = () => {
         ))}
       </div>
 
-      {/* Left Content */}
-      <div className="flex-1 max-w-4xl text-center xl:text-left relative z-10">
+      {/* Left Content - Mobile optimized */}
+      <div className="flex-1 max-w-4xl text-center lg:text-left relative z-10 w-full">
         {/* Enhanced Top Badge */}
         <motion.div
-          className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-8 py-4 mb-10 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-500"
+          className="group inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 mb-6 sm:mb-8 lg:mb-10 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-500"
           initial={{ opacity: 0, y: -30, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
@@ -162,7 +162,7 @@ const HeroFAANG = () => {
             <div className="w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
             <div className="absolute inset-0 w-4 h-4 bg-emerald-400 rounded-full animate-ping opacity-30"></div>
           </motion.div>
-          <span className="text-emerald-200 font-semibold text-base tracking-wide">
+          <span className="text-emerald-200 font-semibold text-xs sm:text-sm lg:text-base tracking-wide">
             💼 {t('hero.available')} • Enterprise Ready
           </span>
           <motion.div
@@ -199,10 +199,10 @@ const HeroFAANG = () => {
             </div>
           </motion.div>
 
-          {/* Main Name */}
-          <h1 className="text-5xl md:text-7xl xl:text-8xl font-black leading-tight mb-6">
+          {/* Main Name - Mobile responsive */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black leading-tight mb-4 sm:mb-6">
             <motion.span 
-              className="block text-zinc-100 mb-3 drop-shadow-2xl"
+              className="block text-zinc-100 mb-2 sm:mb-3 drop-shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -210,14 +210,14 @@ const HeroFAANG = () => {
               Ingeniero de Sistemas
             </motion.span>
             
-            {/* Nationality Highlight - Subtle */}
+            {/* Nationality Highlight - Mobile optimized */}
             <motion.div 
-              className="flex items-center gap-2 justify-center xl:justify-start mb-3"
+              className="flex items-center gap-2 justify-center lg:justify-start mb-2 sm:mb-3"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              <span className="text-sm text-zinc-400">🇵🇪 Peruano con residencia en Chile 🇨🇱</span>
+              <span className="text-xs sm:text-sm text-zinc-400">🇵🇪 Peruano con residencia en Chile 🇨🇱</span>
             </motion.div>
             
             <motion.span 
@@ -231,9 +231,9 @@ const HeroFAANG = () => {
             </motion.span>
           </h1>
           
-          {/* Enhanced Role Description */}
+          {/* Enhanced Role Description - Mobile grid */}
           <motion.div
-            className="flex flex-wrap items-center gap-4 justify-center xl:justify-start mb-8"
+            className="grid grid-cols-2 lg:flex lg:flex-wrap items-center gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -246,21 +246,21 @@ const HeroFAANG = () => {
             ].map((role, index) => (
               <motion.div
                 key={role.text}
-                className={`group flex items-center gap-2 bg-gradient-to-r ${role.color} bg-opacity-10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 hover:scale-105 transition-all duration-300`}
+                className={`group flex items-center gap-1 sm:gap-2 bg-gradient-to-r ${role.color} bg-opacity-10 backdrop-blur-sm border border-white/10 rounded-full px-2 sm:px-3 lg:px-4 py-1 sm:py-2 hover:scale-105 transition-all duration-300`}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
                 whileHover={{ y: -2, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}
               >
-                <span className="text-lg">{role.icon}</span>
-                <span className="text-sm font-semibold text-white">{role.text}</span>
+                <span className="text-sm sm:text-base lg:text-lg">{role.icon}</span>
+                <span className="text-xs sm:text-sm font-semibold text-white">{role.text}</span>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Value Proposition */}
+          {/* Value Proposition - Mobile responsive */}
           <motion.p
-            className="text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto xl:mx-0"
+            className="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto lg:mx-0 px-2 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
@@ -269,24 +269,24 @@ const HeroFAANG = () => {
           </motion.p>
         </motion.div>
 
-        {/* Value Proposition */}
+        {/* Value Proposition - Mobile optimized */}
         <motion.div
-          className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8 mb-8"
+          className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl lg:rounded-3xl border border-slate-700/50 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-2xl font-bold text-white mb-6">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
             🎯 Expertise That Drives Business Results
           </h2>
           
-          {/* Core Specializations */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-2xl p-6 border border-blue-500/20">
-              <h3 className="text-cyan-400 font-bold text-lg mb-3 flex items-center gap-2">
+          {/* Core Specializations - Mobile first grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8">
+            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-blue-500/20">
+              <h3 className="text-cyan-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
                 🧠 Software Engineering & AI
               </h3>
-              <ul className="text-zinc-300 text-sm space-y-2">
+              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
                 <li>• Arquitecturas escalables con Python & React</li>
                 <li>• Integración de IA/ML en sistemas empresariales</li>
                 <li>• APIs robustas con FastAPI y Flask</li>
@@ -294,11 +294,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-6 border border-purple-500/20">
-              <h3 className="text-purple-400 font-bold text-lg mb-3 flex items-center gap-2">
+            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-purple-500/20">
+              <h3 className="text-purple-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
                 📊 Data Science & Analytics
               </h3>
-              <ul className="text-zinc-300 text-sm space-y-2">
+              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
                 <li>• Análisis predictivo y Machine Learning</li>
                 <li>• Dashboards interactivos con D3.js/Plotly</li>
                 <li>• Procesamiento de Big Data con Pandas/NumPy</li>
@@ -306,11 +306,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-6 border border-green-500/20">
-              <h3 className="text-green-400 font-bold text-lg mb-3 flex items-center gap-2">
+            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-green-500/20">
+              <h3 className="text-green-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
                 🎓 Tech Education & Leadership
               </h3>
-              <ul className="text-zinc-300 text-sm space-y-2">
+              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
                 <li>• Capacitación técnica para equipos empresariales</li>
                 <li>• Mentoring en tecnologías modernas</li>
                 <li>• Workshops de arquitectura y buenas prácticas</li>
@@ -318,11 +318,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-6 border border-orange-500/20">
-              <h3 className="text-orange-400 font-bold text-lg mb-3 flex items-center gap-2">
+            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-orange-500/20">
+              <h3 className="text-orange-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
                 🚀 DevOps & Cloud
               </h3>
-              <ul className="text-zinc-300 text-sm space-y-2">
+              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
                 <li>• Containerización con Docker & Kubernetes</li>
                 <li>• Pipelines CI/CD automatizados</li>
                 <li>• Infraestructura como código (IaC)</li>
@@ -331,41 +331,41 @@ const HeroFAANG = () => {
             </div>
           </div>
           
-          {/* Key Achievements */}
-          <div className="border-t border-slate-700/50 pt-6">
-            <h3 className="text-white font-bold text-lg mb-4">🏆 Logros Empresariales Clave</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+          {/* Key Achievements - Mobile responsive */}
+          <div className="border-t border-slate-700/50 pt-4 sm:pt-6">
+            <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">🏆 Logros Empresariales Clave</h3>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
+                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
                   6+ años
                 </div>
-                <div className="text-xs text-zinc-400">Experiencia Full Stack</div>
+                <div className="text-xs sm:text-sm text-zinc-400">Experiencia Full Stack</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
+                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
                   3 países
                 </div>
-                <div className="text-xs text-zinc-400">Proyectos Internacionales</div>
+                <div className="text-xs sm:text-sm text-zinc-400">Proyectos Internacionales</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
+                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
                   50+ proyectos
                 </div>
-                <div className="text-xs text-zinc-400">Soluciones Entregadas</div>
+                <div className="text-xs sm:text-sm text-zinc-400">Soluciones Entregadas</div>
               </div>
             </div>
           </div>
         </motion.div>
         
-        {/* Technology Expertise Banner */}
+        {/* Technology Expertise Banner - Mobile optimized */}
         <motion.div
-          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30 p-6 mb-8"
+          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-slate-600/30 p-4 sm:p-6 mb-6 sm:mb-8"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <h3 className="text-white font-bold text-lg mb-4">🛠️ Stack Tecnológico Principal</h3>
-          <div className="flex flex-wrap gap-3">
+          <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">🛠️ Stack Tecnológico Principal</h3>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {[
               { name: 'Python', color: 'from-yellow-400 to-blue-500' },
               { name: 'React', color: 'from-cyan-400 to-blue-500' },
@@ -378,7 +378,7 @@ const HeroFAANG = () => {
             ].map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className={`px-3 py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.color} text-white shadow-lg`}
+                className={`px-2 sm:px-3 py-1 sm:py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.color} text-white shadow-lg`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
@@ -390,17 +390,17 @@ const HeroFAANG = () => {
           </div>
         </motion.div>
 
-        {/* Tech Stack Expertise */}
+        {/* Tech Stack Expertise - Mobile optimized */}
         <motion.div
-          className="mb-8"
+          className="mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <h3 className="text-lg font-semibold text-zinc-300 mb-4 text-center xl:text-left">
+          <h3 className="text-base sm:text-lg font-semibold text-zinc-300 mb-3 sm:mb-4 text-center lg:text-left">
             💻 Enterprise Technologies
           </h3>
-          <div className="flex flex-wrap gap-3 justify-center xl:justify-start">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
             {[
               { name: 'Python', level: 95, color: 'from-yellow-400 to-yellow-600' },
               { name: 'React', level: 90, color: 'from-blue-400 to-blue-600' },
@@ -417,10 +417,10 @@ const HeroFAANG = () => {
                 transition={{ delay: 0.9 + index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className={`px-4 py-2 bg-gradient-to-r ${tech.color} text-white rounded-xl font-medium text-sm shadow-lg hover:shadow-xl transition-shadow`}>
+                <div className={`px-3 sm:px-4 py-1 sm:py-2 bg-gradient-to-r ${tech.color} text-white rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm shadow-lg hover:shadow-xl transition-shadow`}>
                   {tech.name}
                 </div>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs text-zinc-400 whitespace-nowrap">
+                <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs text-zinc-400 whitespace-nowrap">
                   {tech.level}% expertise
                 </div>
               </motion.div>
@@ -428,24 +428,24 @@ const HeroFAANG = () => {
           </div>
         </motion.div>
 
-        {/* Enhanced Dynamic Impact Metrics */}
+        {/* Enhanced Dynamic Impact Metrics - Mobile optimized */}
         <motion.div
-          className="mb-12"
+          className="mb-8 sm:mb-10 lg:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
         >
           <div className="text-center xl:text-left">
             <motion.h3 
-              className="text-2xl font-bold text-white mb-6 flex items-center gap-3 justify-center xl:justify-start"
+              className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3 justify-center lg:justify-start"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 2 }}
             >
-              <span className="text-3xl">📈</span>
+              <span className="text-2xl sm:text-3xl">📈</span>
               Business Impact Delivered
               <motion.div
-                className="w-2 h-2 bg-cyan-400 rounded-full"
+                className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-cyan-400 rounded-full"
                 animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
@@ -454,7 +454,7 @@ const HeroFAANG = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentMetric}
-                className={`group inline-flex items-center gap-6 bg-gradient-to-r ${impactMetrics[currentMetric].bgColor} backdrop-blur-xl rounded-3xl border border-white/20 px-8 py-6 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500`}
+                className={`group inline-flex items-center gap-3 sm:gap-4 lg:gap-6 bg-gradient-to-r ${impactMetrics[currentMetric].bgColor} backdrop-blur-xl rounded-2xl lg:rounded-3xl border border-white/20 px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500`}
                 initial={{ opacity: 0, x: 50, scale: 0.9 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: -50, scale: 0.9 }}
@@ -466,7 +466,7 @@ const HeroFAANG = () => {
                   animate={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <span className="text-5xl drop-shadow-lg">{impactMetrics[currentMetric].icon}</span>
+                  <span className="text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg">{impactMetrics[currentMetric].icon}</span>
                   <motion.div
                     className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-xl"
                     animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -476,7 +476,7 @@ const HeroFAANG = () => {
                 
                 <div className="text-left">
                   <motion.div 
-                    className={`text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${impactMetrics[currentMetric].color} drop-shadow-lg`}
+                    className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${impactMetrics[currentMetric].color} drop-shadow-lg`}
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -484,7 +484,7 @@ const HeroFAANG = () => {
                     {impactMetrics[currentMetric].value}
                   </motion.div>
                   <motion.div 
-                    className="text-zinc-200 text-lg font-semibold tracking-wide"
+                    className="text-zinc-200 text-sm sm:text-base lg:text-lg font-semibold tracking-wide"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -493,13 +493,13 @@ const HeroFAANG = () => {
                   </motion.div>
                 </div>
                 
-                {/* Progress indicator */}
-                <div className="absolute bottom-2 right-4 flex gap-1">
+                {/* Progress indicator - Mobile adjusted */}
+                <div className="absolute bottom-1 sm:bottom-2 right-2 sm:right-4 flex gap-1">
                   {impactMetrics.map((_, index) => (
                     <motion.div
                       key={index}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentMetric ? 'bg-cyan-400 w-6' : 'bg-zinc-600'
+                      className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                        index === currentMetric ? 'bg-cyan-400 w-4 sm:w-6' : 'bg-zinc-600'
                       }`}
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -512,20 +512,21 @@ const HeroFAANG = () => {
           </div>
         </motion.div>
 
-        {/* Enhanced CTA Buttons */}
+        {/* Enhanced CTA Buttons - Mobile optimized */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center xl:justify-start mb-12"
+          className="flex flex-col gap-4 sm:gap-6 justify-center lg:justify-start mb-8 sm:mb-10 lg:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2 }}
         >
           <motion.button
             onClick={getInTouchHandler}
-            className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-3xl shadow-2xl hover:shadow-cyan-500/50 transition-all duration-500 overflow-hidden border border-white/20"
+            className="group relative px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-2xl lg:rounded-3xl shadow-2xl hover:shadow-cyan-500/50 transition-all duration-500 overflow-hidden border border-white/20"
             whileHover={{ scale: 1.08, y: -3 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            style={{ touchAction: 'manipulation' }}
           >
             {/* Animated background */}
             <motion.div
@@ -545,17 +546,18 @@ const HeroFAANG = () => {
               transition={{ duration: 2, repeat: Infinity }}
             />
             
-            <span className="relative z-10 flex items-center gap-3 text-lg">
+            <span className="relative z-10 flex items-center gap-2 sm:gap-3 text-sm sm:text-base lg:text-lg">
               <motion.span
-                className="text-2xl"
+                className="text-lg sm:text-xl lg:text-2xl"
                 animate={{ rotate: isHovered ? [0, 15, -15, 0] : 0 }}
                 transition={{ duration: 0.5 }}
               >
                 💼
               </motion.span>
-              Schedule Technical Interview
+              <span className="hidden sm:inline">Schedule Technical Interview</span>
+              <span className="sm:hidden">Contact Me</span>
               <motion.span
-                className="text-xl"
+                className="text-base sm:text-lg lg:text-xl"
                 animate={{ x: [0, 8, 0], rotate: [0, 15, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
@@ -592,9 +594,10 @@ const HeroFAANG = () => {
 
           <motion.button
             onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative px-10 py-5 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-500 overflow-hidden backdrop-blur-sm"
+            className="group relative px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-2xl lg:rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-500 overflow-hidden backdrop-blur-sm"
             whileHover={{ scale: 1.08, y: -3 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
+            style={{ touchAction: 'manipulation' }}
           >
             {/* Animated border */}
             <motion.div
@@ -615,17 +618,18 @@ const HeroFAANG = () => {
               transition={{ duration: 0.5 }}
             />
             
-            <span className="relative z-10 flex items-center gap-3 text-lg">
+            <span className="relative z-10 flex items-center gap-2 sm:gap-3 text-sm sm:text-base lg:text-lg">
               <motion.span
-                className="text-2xl"
+                className="text-lg sm:text-xl lg:text-2xl"
                 animate={{ y: [0, -3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
                 📄
               </motion.span>
-              View Technical Projects
+              <span className="hidden sm:inline">View Technical Projects</span>
+              <span className="sm:hidden">Projects</span>
               <motion.span
-                className="text-xl"
+                className="text-base sm:text-lg lg:text-xl"
                 animate={{ 
                   y: [0, -4, 0], 
                   x: [0, 2, 0],
@@ -639,16 +643,16 @@ const HeroFAANG = () => {
           </motion.button>
         </motion.div>
 
-        {/* Enhanced Location & Availability */}
+        {/* Enhanced Location & Availability - Mobile optimized */}
         <motion.div
-          className="text-center xl:text-left"
+          className="text-center lg:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.6 }}
         >
-          <div className="flex flex-col sm:flex-row gap-8 justify-center xl:justify-start items-center">
+          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-start items-center lg:items-start">
             <motion.div 
-              className="group flex items-center gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-green-500/20 hover:border-green-400/40 transition-all duration-300"
+              className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-green-500/20 hover:border-green-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -661,7 +665,7 @@ const HeroFAANG = () => {
               >
                 🟢
               </motion.span>
-              <span className="font-semibold text-green-300 text-lg">{t('hero.availability')}</span>
+              <span className="font-semibold text-green-300 text-sm sm:text-base lg:text-lg">{t('hero.availability')}</span>
               <motion.div
                 className="w-2 h-2 bg-green-400 rounded-full"
                 animate={{ opacity: [0.3, 1, 0.3] }}
@@ -670,7 +674,7 @@ const HeroFAANG = () => {
             </motion.div>
             
             <motion.div 
-              className="group flex items-center gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+              className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -683,7 +687,10 @@ const HeroFAANG = () => {
               >
                 📍
               </motion.span>
-              <span className="font-semibold text-blue-300 text-lg">🇵🇪 Peruano con residencia en Chile 🇨🇱 • Remote Worldwide</span>
+              <span className="font-semibold text-blue-300 text-xs sm:text-sm lg:text-base">
+                <span className="hidden sm:inline">🇵🇪 Peruano con residencia en Chile 🇨🇱 • Remote Worldwide</span>
+                <span className="sm:hidden">🇵🇪 PE/CL • Remote</span>
+              </span>
               <motion.div
                 className="w-1 h-1 bg-blue-400 rounded-full"
                 animate={{ scale: [1, 1.5, 1] }}
@@ -692,7 +699,7 @@ const HeroFAANG = () => {
             </motion.div>
             
             <motion.div 
-              className="group flex items-center gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+              className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -705,7 +712,7 @@ const HeroFAANG = () => {
               >
                 ⏰
               </motion.span>
-              <span className="font-semibold text-purple-300 text-lg">GMT-5 • Flexible Hours</span>
+              <span className="font-semibold text-purple-300 text-sm sm:text-base lg:text-lg">GMT-5 • Flexible Hours</span>
               <motion.div
                 className="flex gap-1"
               >
@@ -727,9 +734,9 @@ const HeroFAANG = () => {
         </motion.div>
       </div>
 
-      {/* Enhanced Right Side - Interactive Code Preview */}
+      {/* Enhanced Right Side - Interactive Code Preview - Mobile optimized */}
       <motion.div
-        className="flex-1 max-w-2xl relative"
+        className="flex-1 max-w-2xl relative w-full"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
@@ -744,32 +751,32 @@ const HeroFAANG = () => {
           transition={{ duration: 8, repeat: Infinity }}
         />
         
-        {/* Enhanced Terminal Window */}
+        {/* Enhanced Terminal Window - Mobile responsive */}
         <motion.div
-          className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl rounded-3xl border border-slate-600/30 shadow-2xl overflow-hidden"
+          className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl rounded-2xl lg:rounded-3xl border border-slate-600/30 shadow-2xl overflow-hidden"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.4, type: "spring" }}
           style={{
             boxShadow: '0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)'
           }}
         >
-          {/* Enhanced Terminal Header */}
-          <div className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-slate-800/90 to-slate-700/80 border-b border-slate-600/40">
-            <div className="flex gap-3">
+          {/* Enhanced Terminal Header - Mobile optimized */}
+          <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-slate-800/90 to-slate-700/80 border-b border-slate-600/40">
+            <div className="flex gap-2 sm:gap-3">
               <motion.div 
-                className="w-4 h-4 bg-red-500 rounded-full shadow-lg"
+                className="w-3 sm:w-4 h-3 sm:h-4 bg-red-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(239, 68, 68, 0.4)', '0 0 0 8px rgba(239, 68, 68, 0)'] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <motion.div 
-                className="w-4 h-4 bg-yellow-500 rounded-full shadow-lg"
+                className="w-3 sm:w-4 h-3 sm:h-4 bg-yellow-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(245, 158, 11, 0.4)', '0 0 0 8px rgba(245, 158, 11, 0)'] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
               <motion.div 
-                className="w-4 h-4 bg-green-500 rounded-full shadow-lg"
+                className="w-3 sm:w-4 h-3 sm:h-4 bg-green-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(34, 197, 94, 0.4)', '0 0 0 8px rgba(34, 197, 94, 0)'] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
@@ -777,7 +784,7 @@ const HeroFAANG = () => {
             </div>
             <div className="flex-1 text-center">
               <motion.span 
-                className="text-slate-300 text-base font-mono bg-slate-700/50 px-4 py-1 rounded-lg border border-slate-600/30"
+                className="text-slate-300 text-xs sm:text-sm lg:text-base font-mono bg-slate-700/50 px-2 sm:px-3 lg:px-4 py-1 rounded-md lg:rounded-lg border border-slate-600/30"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -792,15 +799,15 @@ const HeroFAANG = () => {
             />
           </div>
 
-          {/* Enhanced Code Content */}
-          <div className="p-8 font-mono text-base leading-relaxed">
+          {/* Enhanced Code Content - Mobile responsive */}
+          <div className="p-3 sm:p-4 lg:p-6 xl:p-8 font-mono text-xs sm:text-sm lg:text-base leading-relaxed">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
               <motion.div 
-                className="text-zinc-500 mb-3 text-lg"
+                className="text-zinc-500 mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
@@ -809,30 +816,30 @@ const HeroFAANG = () => {
               </motion.div>
               
               <motion.div 
-                className="mb-6 bg-slate-800/50 rounded-xl p-4 border border-slate-600/30"
+                className="mb-4 sm:mb-6 bg-slate-800/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-slate-600/30"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
               >
-                <div className="text-purple-400 text-lg">class <span className="text-yellow-400 font-bold">EnterpriseAISystem</span>:</div>
-                <div className="ml-4 text-blue-400 mt-2">def <span className="text-green-400 font-semibold">handle_millions_requests</span>(self):</div>
-                <div className="ml-8 text-zinc-300 mt-1">redis_cache = <span className="text-orange-400">RedisCluster</span>(nodes=50)</div>
-                <div className="ml-8 text-zinc-300">db_pool = <span className="text-orange-400">PostgreSQLPool</span>(max_conn=1000)</div>
-                <div className="ml-8 text-zinc-300">ai_engine = <span className="text-pink-400">TensorFlowServing</span>()</div>
-                <div className="ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
+                <div className="text-purple-400 text-sm sm:text-base lg:text-lg">class <span className="text-yellow-400 font-bold">EnterpriseAISystem</span>:</div>
+                <div className="ml-2 sm:ml-4 text-blue-400 mt-1 sm:mt-2">def <span className="text-green-400 font-semibold">handle_millions_requests</span>(self):</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300 mt-1">redis_cache = <span className="text-orange-400">RedisCluster</span>(nodes=50)</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">db_pool = <span className="text-orange-400">PostgreSQLPool</span>(max_conn=1000)</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">ai_engine = <span className="text-pink-400">TensorFlowServing</span>()</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
               </motion.div>
               
               <motion.div 
-                className="text-zinc-500 mb-4 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-lg p-3 border border-green-500/20"
+                className="text-zinc-500 mb-3 sm:mb-4 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-md lg:rounded-lg p-2 sm:p-3 border border-green-500/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.6 }}
               >
-                <div className="flex items-center gap-2 text-green-400 font-semibold mb-2">
-                  <span className="text-xl">✅</span>
+                <div className="flex items-center gap-1 sm:gap-2 text-green-400 font-semibold mb-1 sm:mb-2">
+                  <span className="text-base sm:text-lg lg:text-xl">✅</span>
                   Production Results:
                 </div>
-                <div className="ml-6 space-y-1 text-sm">
+                <div className="ml-3 sm:ml-6 space-y-1 text-xs sm:text-sm">
                   <div>• 99.9% uptime across 3 regions</div>
                   <div>• &lt;50ms response time at scale</div>
                   <div>• 10M+ daily active users</div>
@@ -841,15 +848,18 @@ const HeroFAANG = () => {
               </motion.div>
               
               <motion.div
-                className="flex items-center gap-3 mt-6 bg-gradient-to-r from-slate-800/50 to-slate-700/30 rounded-lg p-3 border border-slate-600/30"
+                className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-6 bg-gradient-to-r from-slate-800/50 to-slate-700/30 rounded-md lg:rounded-lg p-2 sm:p-3 border border-slate-600/30"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.8 }}
               >
-                <span className="text-green-400 text-lg">$</span>
-                <span className="text-slate-300 text-lg">ready_for_enterprise_challenges</span>
+                <span className="text-green-400 text-base sm:text-lg">$</span>
+                <span className="text-slate-300 text-xs sm:text-sm lg:text-lg">
+                  <span className="hidden sm:inline">ready_for_enterprise_challenges</span>
+                  <span className="sm:hidden">enterprise_ready</span>
+                </span>
                 <motion.span
-                  className="text-cyan-400 text-xl font-bold"
+                  className="text-cyan-400 text-base sm:text-lg lg:text-xl font-bold"
                   animate={{ opacity: [0, 1, 0] }}
                   transition={{ duration: 1.2, repeat: Infinity }}
                 >
@@ -861,7 +871,7 @@ const HeroFAANG = () => {
                   {[...Array(3)].map((_, i) => (
                     <motion.div
                       key={i}
-                      className="w-2 h-2 bg-cyan-400 rounded-full"
+                      className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-cyan-400 rounded-full"
                       animate={{ scale: [0.5, 1, 0.5] }}
                       transition={{ 
                         duration: 1.5, 

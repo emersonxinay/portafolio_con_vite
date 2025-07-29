@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './docs.modules.scss';
 import GoToDocs from '../../../components/GoToDocs';
-import CustomCursor from '../../../components/CustomCursor';
 
 const HTML = () => {
   return (
@@ -12,8 +11,6 @@ const HTML = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}>
-      {/* Custom cursor */}
-      <CustomCursor></CustomCursor>
 
       {/* Lights */}
       <motion.div

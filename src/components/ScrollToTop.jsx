@@ -2,7 +2,6 @@ import { AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react'
 import { IoIosArrowUp } from 'react-icons/io'
 import { motion } from 'framer-motion'
-import CustomCursor from './CustomCursor';
 
 const ScrollToTop = () => {
   const [scroll, setScroll] = useState(0)
@@ -42,7 +41,6 @@ const ScrollToTop = () => {
             null
         }
       </AnimatePresence>
-      <CustomCursor></CustomCursor>
     </div>
   )
 }

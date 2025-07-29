@@ -4,7 +4,6 @@ import BackDocs from './BackDocs'
 import FrontDocs from './FrontDocs'
 import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
-import CustomCursor from '../../components/CustomCursor'
 import { FaCode, FaServer, FaTools, FaRocket } from 'react-icons/fa'
 
 const Docs = () => {
@@ -57,7 +56,6 @@ const Docs = () => {
       transition={{ duration: 0.3 }}>
 
       {/* Custom cursor */}
-      <CustomCursor />
 
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -1,24 +1,10 @@
 // Importaciones necesarias
 import { useTranslation } from 'react-i18next';
-
-// Función para obtener el texto traducido
-function getTranslatedText(key, t) {
-  return t(key);
-}
-
-// Función para obtener la descripción traducida
-function getTranslatedDescription(key, t) {
-  return t(key);
-}
-
-// Función para obtener el contenido traducido
-function getTranslatedContent(key, t) {
-  return t(key);
-}
+import { getArticleImage } from '../../assets/articles/index.js';
 
 const articles = [
   {
-    thumbnail: '/src/assets/articles/ia_webb.png',
+    thumbnail: getArticleImage('ia_webb'),
     url: 'inteligencia+artificial+en+el+desarrollo+web+moderno',
     title: 'Inteligencia Artificial en el Desarrollo Web Moderno',
     description:
@@ -707,7 +693,7 @@ const predictions = model.predict(userFeatures);</code>
   },
   
   {
-    thumbnail: './src/assets/articles/ciencia_datos_web.png',
+    thumbnail: getArticleImage('ciencia_datos'),
     url: 'ciencia+de+datos+para+desarrolladores+web',
     title: 'Ciencia de Datos para Desarrolladores Web',
     description:
@@ -1006,7 +992,7 @@ const predictions = model.predict(userFeatures);</code>
   },
   
   {
-    thumbnail: './src/assets/articles/frontend_moderno.png',
+    thumbnail: getArticleImage('frontend_moderno'),
     url: 'frontend+moderno+2024+react+nextjs+typescript',
     title: 'Frontend Moderno 2024: React, Next.js y TypeScript',
     description:
@@ -1499,7 +1485,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
   },
   
   {
-    thumbnail: './src/assets/articles/backend.png',
+    thumbnail: getArticleImage('backend'),
     url: 'backend+escalable+python+nodejs+microservicios',
     title: 'Backend Escalable: Python, Node.js y Microservicios',
     description:
@@ -1591,7 +1577,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
   },
   
   {
-    thumbnail: './src/assets/articles/fullstack.png',
+    thumbnail: getArticleImage('fullstack'),
     url: 'desarrollo+fullstack+2024+guia+completa',
     title: 'Desarrollo Full Stack 2024: Guía Completa',
     description:
@@ -1741,7 +1727,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     `
   },
   {
-    thumbnail: './src/assets/articles/ruta_fullstack.png',
+    thumbnail: getArticleImage('ruta_fullstack'),
     url: 'ruta+de+aprendizaje+para+ser+un+programador+full+stack',
     title: 'Ruta de aprendizaje para ser un programador full stack',
     description:
@@ -1947,7 +1933,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     `
   },
   {
-    thumbnail: './src/assets/articles/practica_programing.png',
+    thumbnail: getArticleImage('practica_programming'),
     url: 'las+mejores+paginas+para+practicar+programacion',
     title: 'Las mejores páginas para practicar programación',
     description:

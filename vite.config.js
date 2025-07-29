@@ -21,6 +21,18 @@ export default defineConfig({
     sourcemap: true,
     commonjsOptions: {
       include: [/node_modules/]
+    },
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Mantener nombres de archivos de imagen para mejor cache
+          if (assetInfo.name && /\.(png|jpg|jpeg|svg|gif|webp)$/i.test(assetInfo.name)) {
+            return 'assets/images/[name]-[hash][extname]'
+          }
+          return 'assets/[name]-[hash][extname]'
+        }
+      }
     }
   }
 })

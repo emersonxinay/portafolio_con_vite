@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSearchParams } from 'react-router-dom'
-import CustomCursor from '../../components/CustomCursor'
 import { 
   FaGithub, FaDocker, FaAws, FaSlack, FaFigma, FaJira, FaGitlab
 } from 'react-icons/fa'
@@ -311,7 +310,6 @@ const Tools = () => {
       transition={{ duration: 0.3 }}
     >
       {/* Custom cursor */}
-      <CustomCursor />
 
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

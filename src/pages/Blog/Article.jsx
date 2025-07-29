@@ -4,7 +4,6 @@ import articles from './Articles';
 import './article.module.scss';
 import '../../styles/article-content.css';
 import { motion, AnimatePresence } from 'framer-motion';
-import CustomCursor from '../../components/CustomCursor';
 import { TiArrowBack } from 'react-icons/ti';
 import emerson from '../../assets/emerson-espinoza.jpeg';
 import Logo from '../../assets/logo.jpeg';
@@ -118,7 +117,6 @@ const Article = () => {
         transition={{ duration: 0.5 }}>
         
         {/* Custom cursor */}
-        <CustomCursor />
 
         {/* Mouse follower effect */}
         <motion.div

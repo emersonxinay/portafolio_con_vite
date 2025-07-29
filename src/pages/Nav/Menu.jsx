@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { disableScrolling, enableScrolling } from '../../utils/scrollHandler'
 import MenuOpen from './MenuOpen'
 
-const Menu = () => {
+const Menu = ({ scrolled }) => {
   const [menu, setMenu] = useState(false)
 
   useEffect(() => {
@@ -12,25 +13,69 @@ const Menu = () => {
 
 
   return (
-    <div className="block md:hidden">
-      <button className="relative group z-20" onClick={() => setMenu(!menu)} aria-label='menu'>
-        <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-gradient-to-r  from-sky-500 to-sky-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
-          <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-            <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${menu && 'translate-x-10'}`} />
-            <div className={`bg-white h-[2px] w-7 rounded transform transition-all duration-300 ${menu && 'translate-x-10'}`} />
-            <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${menu && 'translate-x-10'}`} />
-            <div className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 flex w-0 ${menu && 'w-12'}`}>
-              <div className={`absolute bg-white h-[2px] w-5 transform transition-all duration-500 rotate-0 ${menu && 'rotate-45'}`} />
-              <div className={`absolute bg-white h-[2px] w-5 transform transition-all duration-500 -rotate-0 ${menu && '-rotate-45'}`} />
-            </div>
-          </div>
+    <div className="block lg:hidden">
+      <motion.button 
+        className={`relative group z-20 p-2 rounded-xl transition-all duration-300 ${
+          scrolled 
+            ? 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-600/30' 
+            : 'hover:bg-white/10'
+        }`}
+        onClick={() => setMenu(!menu)} 
+        aria-label='Toggle menu'
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className="relative w-6 h-6 flex items-center justify-center">
+          {/* Enhanced hamburger animation */}
+          <motion.div className="w-6 h-6 flex flex-col justify-center items-center">
+            <motion.span
+              className="block h-0.5 w-6 bg-white rounded-sm"
+              animate={{
+                rotate: menu ? 45 : 0,
+                y: menu ? 2 : -2,
+                opacity: menu ? 1 : 1
+              }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            />
+            <motion.span
+              className="block h-0.5 w-6 bg-white rounded-sm mt-1"
+              animate={{
+                opacity: menu ? 0 : 1,
+                x: menu ? 20 : 0
+              }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            />
+            <motion.span
+              className="block h-0.5 w-6 bg-white rounded-sm mt-1"
+              animate={{
+                rotate: menu ? -45 : 0,
+                y: menu ? -2 : 2,
+                opacity: menu ? 1 : 1
+              }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            />
+          </motion.div>
+          
+          {/* Pulse effect when menu is open */}
+          {menu && (
+            <motion.div
+              className="absolute inset-0 border border-cyan-400/50 rounded-xl"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.5, 0.8, 0.5]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
+          )}
         </div>
-      </button>
-      {
-        <MenuOpen isOpen={menu} closeMenu={() => setMenu(false)}></MenuOpen>
-      }
+      </motion.button>
+      
+      <MenuOpen isOpen={menu} closeMenu={() => setMenu(false)} scrolled={scrolled} />
     </div>
-
   )
 }
 

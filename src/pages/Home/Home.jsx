@@ -8,7 +8,6 @@ import Projects from './Projects'
 // import Architecture from './Architecture/Architecture'
 // import Terminal from './Terminal/Terminal'
 import Services from './Services/Services'
-import CustomCursor from '../../components/CustomCursor'
 
 const Home = () => {
   return (
@@ -31,8 +30,6 @@ const Home = () => {
         <Contact />
       </div>
 
-      {/* Custom cursor */}
-      <CustomCursor />
 
       {/* Background light effect */}
       <motion.div className='fixed bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none'

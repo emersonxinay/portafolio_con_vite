@@ -2,6 +2,32 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+  ],
+  safelist: [
+    // Ensure mobile utility classes are always included
+    'mobile-container',
+    'mobile-section', 
+    'mobile-title',
+    'mobile-subtitle',
+    'mobile-btn',
+    'mobile-card',
+    'mobile-grid',
+    'mobile-shadow',
+    'mobile-scroll',
+    'touch-target',
+    'text-overflow-safe',
+    'container-safe',
+    'safe-area-top',
+    'safe-area-bottom',
+    // Responsive text sizes
+    'text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl', 'text-7xl',
+    // Responsive spacing
+    'xs:text-sm', 'xs:text-base', 'xs:text-lg', 'xs:text-xl', 'xs:text-2xl', 'xs:text-3xl', 'xs:text-4xl',
+    'sm:text-base', 'sm:text-lg', 'sm:text-xl', 'sm:text-2xl', 'sm:text-3xl', 'sm:text-4xl', 'sm:text-5xl',
+    'md:text-lg', 'md:text-xl', 'md:text-2xl', 'md:text-3xl', 'md:text-4xl', 'md:text-5xl', 'md:text-6xl',
+    'lg:text-xl', 'lg:text-2xl', 'lg:text-3xl', 'lg:text-4xl', 'lg:text-5xl', 'lg:text-6xl', 'lg:text-7xl',
+    'xl:text-2xl', 'xl:text-3xl', 'xl:text-4xl', 'xl:text-5xl', 'xl:text-6xl', 'xl:text-7xl', 'xl:text-8xl'
   ],
   theme: {
     extend: {

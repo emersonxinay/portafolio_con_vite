@@ -42,7 +42,7 @@ const HeroFAANG = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-6 xs:gap-8 lg:gap-12 xl:gap-0 xl:justify-between w-full relative mobile-container mobile-section overflow-hidden safe-area-top"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-6 xs:gap-8 lg:gap-12 xl:gap-0 xl:justify-between w-full relative mobile-container mobile-section safe-area-top"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -200,7 +200,7 @@ const HeroFAANG = () => {
           </motion.div>
 
           {/* Main Name - Mobile responsive */}
-          <h1 className="mobile-title text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-3 xs:mb-4 sm:mb-6">
+          <h1 className="mobile-title text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-3 xs:mb-4 sm:mb-6 text-overflow-safe">
             <motion.span 
               className="block text-zinc-100 mb-2 xs:mb-3 drop-shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
@@ -260,7 +260,7 @@ const HeroFAANG = () => {
 
           {/* Value Proposition - Mobile responsive */}
           <motion.p
-            className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto lg:mx-0 px-1 xs:px-2 sm:px-0"
+            className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto lg:mx-0 px-1 xs:px-2 sm:px-0 text-overflow-safe"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}

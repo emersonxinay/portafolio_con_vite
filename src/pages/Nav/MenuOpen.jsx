@@ -18,7 +18,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          className='fixed inset-0 lg:hidden z-40 bg-slate-900/95 backdrop-blur-2xl flex items-center justify-center'
+          className='fixed inset-0 lg:hidden z-40 bg-slate-900/95 backdrop-blur-2xl flex items-center justify-center safe-area-top safe-area-bottom'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -26,7 +26,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
         >
           {/* Enhanced Mobile Menu */}
           <motion.div 
-            className='w-full max-w-sm mx-4'
+            className='w-full max-w-sm mx-4 mobile-container'
             initial={{ scale: 0.8, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -34,19 +34,19 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
           >
             {/* Menu Title */}
             <motion.div 
-              className='text-center mb-12'
+              className='text-center mb-8 xs:mb-12'
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 mb-2'>
+              <h2 className='text-xl xs:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 mb-2'>
                 Menu de Navegación
               </h2>
               <div className='w-20 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto' />
             </motion.div>
 
             {/* Menu Items */}
-            <div className='space-y-4'>
+            <div className='space-y-3 xs:space-y-4'>
               {navItems.map((item, index) => {
                 const isActive = (path === '/' && item.to === '/') || (path.includes(item.to) && item.to !== '/')
                 
@@ -60,14 +60,14 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                     <Link
                       to={item.to}
                       onClick={closeMenu}
-                      className={`group flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 ${
+                      className={`group flex items-center gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl transition-all duration-300 mobile-btn ${
                         isActive 
                           ? 'bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-400/30 shadow-lg shadow-cyan-500/10' 
                           : 'bg-slate-800/30 hover:bg-slate-700/50 border border-slate-700/30'
                       }`}
                     >
                       <motion.div 
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${
+                        className={`w-10 h-10 xs:w-12 xs:h-12 rounded-xl flex items-center justify-center text-xl xs:text-2xl ${
                           isActive 
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/25' 
                             : 'bg-slate-700/50 group-hover:bg-slate-600/50'
@@ -79,12 +79,12 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                       </motion.div>
                       
                       <div className='flex-1'>
-                        <h3 className={`font-semibold text-lg transition-colors ${
+                        <h3 className={`font-semibold text-base xs:text-lg transition-colors ${
                           isActive ? 'text-white' : 'text-zinc-300 group-hover:text-white'
                         }`}>
                           {item.label}
                         </h3>
-                        <p className='text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors'>
+                        <p className='text-xs xs:text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors'>
                           {item.to === '/' ? 'Página principal' : 
                            item.to === '/blog' ? 'Artículos técnicos' :
                            item.to === '/docs' ? 'Documentación' : 'Herramientas útiles'}
@@ -106,12 +106,12 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
             
             {/* Close instruction */}
             <motion.div 
-              className='text-center mt-12'
+              className='text-center mt-8 xs:mt-12 px-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <p className='text-sm text-zinc-500'>
+              <p className='text-xs xs:text-sm text-zinc-500'>
                 Toca en cualquier lugar para cerrar
               </p>
             </motion.div>

@@ -42,7 +42,7 @@ const HeroFAANG = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-0 xl:justify-between w-full relative px-3 sm:px-4 lg:px-6 py-8 sm:py-12 lg:py-20 overflow-hidden"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-6 xs:gap-8 lg:gap-12 xl:gap-0 xl:justify-between w-full relative mobile-container mobile-section overflow-hidden safe-area-top"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -148,7 +148,7 @@ const HeroFAANG = () => {
       <div className="flex-1 max-w-4xl text-center lg:text-left relative z-10 w-full">
         {/* Enhanced Top Badge */}
         <motion.div
-          className="group inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 mb-6 sm:mb-8 lg:mb-10 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-500"
+          className="group inline-flex items-center gap-2 xs:gap-3 mobile-card bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-3 xs:px-4 sm:px-6 lg:px-8 py-2 xs:py-3 lg:py-4 mb-4 xs:mb-6 sm:mb-8 lg:mb-10 mobile-shadow hover:shadow-emerald-500/25 transition-all duration-500"
           initial={{ opacity: 0, y: -30, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
@@ -200,9 +200,9 @@ const HeroFAANG = () => {
           </motion.div>
 
           {/* Main Name - Mobile responsive */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black leading-tight mb-4 sm:mb-6">
+          <h1 className="mobile-title text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-3 xs:mb-4 sm:mb-6">
             <motion.span 
-              className="block text-zinc-100 mb-2 sm:mb-3 drop-shadow-2xl"
+              className="block text-zinc-100 mb-2 xs:mb-3 drop-shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -233,7 +233,7 @@ const HeroFAANG = () => {
           
           {/* Enhanced Role Description - Mobile grid */}
           <motion.div
-            className="grid grid-cols-2 lg:flex lg:flex-wrap items-center gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"
+            className="mobile-grid grid-cols-1 xs:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center lg:justify-start mb-4 xs:mb-6 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -246,7 +246,7 @@ const HeroFAANG = () => {
             ].map((role, index) => (
               <motion.div
                 key={role.text}
-                className={`group flex items-center gap-1 sm:gap-2 bg-gradient-to-r ${role.color} bg-opacity-10 backdrop-blur-sm border border-white/10 rounded-full px-2 sm:px-3 lg:px-4 py-1 sm:py-2 hover:scale-105 transition-all duration-300`}
+                className={`group mobile-btn flex items-center justify-center gap-1 xs:gap-2 bg-gradient-to-r ${role.color} bg-opacity-10 backdrop-blur-sm border border-white/10 rounded-full px-2 xs:px-3 lg:px-4 py-2 xs:py-3 hover:scale-105 transition-all duration-300 w-full xs:w-auto`}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
@@ -260,7 +260,7 @@ const HeroFAANG = () => {
 
           {/* Value Proposition - Mobile responsive */}
           <motion.p
-            className="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto lg:mx-0 px-2 sm:px-0"
+            className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-300 leading-relaxed font-medium max-w-4xl mx-auto lg:mx-0 px-1 xs:px-2 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
@@ -271,22 +271,22 @@ const HeroFAANG = () => {
 
         {/* Value Proposition - Mobile optimized */}
         <motion.div
-          className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl lg:rounded-3xl border border-slate-700/50 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8"
+          className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-xl xs:rounded-2xl lg:rounded-3xl border border-slate-700/50 mb-4 xs:mb-6 sm:mb-8"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
+          <h2 className="mobile-subtitle text-base xs:text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 xs:mb-4 sm:mb-6">
             🎯 Expertise That Drives Business Results
           </h2>
           
           {/* Core Specializations - Mobile first grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8">
-            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-blue-500/20">
-              <h3 className="text-cyan-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
+          <div className="mobile-grid grid-cols-1 sm:grid-cols-2 mb-4 xs:mb-6 sm:mb-8">
+            <div className="mobile-card bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl lg:rounded-2xl border border-blue-500/20">
+              <h3 className="text-cyan-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
                 🧠 Software Engineering & AI
               </h3>
-              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
+              <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Arquitecturas escalables con Python & React</li>
                 <li>• Integración de IA/ML en sistemas empresariales</li>
                 <li>• APIs robustas con FastAPI y Flask</li>
@@ -294,11 +294,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-purple-500/20">
-              <h3 className="text-purple-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
+            <div className="mobile-card bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl lg:rounded-2xl border border-purple-500/20">
+              <h3 className="text-purple-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
                 📊 Data Science & Analytics
               </h3>
-              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
+              <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Análisis predictivo y Machine Learning</li>
                 <li>• Dashboards interactivos con D3.js/Plotly</li>
                 <li>• Procesamiento de Big Data con Pandas/NumPy</li>
@@ -306,11 +306,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-green-500/20">
-              <h3 className="text-green-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
+            <div className="mobile-card bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl lg:rounded-2xl border border-green-500/20">
+              <h3 className="text-green-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
                 🎓 Tech Education & Leadership
               </h3>
-              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
+              <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Capacitación técnica para equipos empresariales</li>
                 <li>• Mentoring en tecnologías modernas</li>
                 <li>• Workshops de arquitectura y buenas prácticas</li>
@@ -318,11 +318,11 @@ const HeroFAANG = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-orange-500/20">
-              <h3 className="text-orange-400 font-bold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2">
+            <div className="mobile-card bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-xl lg:rounded-2xl border border-orange-500/20">
+              <h3 className="text-orange-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
                 🚀 DevOps & Cloud
               </h3>
-              <ul className="text-zinc-300 text-xs sm:text-sm space-y-1 sm:space-y-2">
+              <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Containerización con Docker & Kubernetes</li>
                 <li>• Pipelines CI/CD automatizados</li>
                 <li>• Infraestructura como código (IaC)</li>
@@ -332,26 +332,26 @@ const HeroFAANG = () => {
           </div>
           
           {/* Key Achievements - Mobile responsive */}
-          <div className="border-t border-slate-700/50 pt-4 sm:pt-6">
-            <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">🏆 Logros Empresariales Clave</h3>
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+          <div className="border-t border-slate-700/50 pt-3 xs:pt-4 sm:pt-6">
+            <h3 className="text-white font-bold text-sm xs:text-base sm:text-lg mb-2 xs:mb-3 sm:mb-4">🏆 Logros Empresariales Clave</h3>
+            <div className="mobile-grid grid-cols-3">
               <div className="text-center">
-                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
+                <div className="text-base xs:text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
                   6+ años
                 </div>
-                <div className="text-xs sm:text-sm text-zinc-400">Experiencia Full Stack</div>
+                <div className="text-xs xs:text-sm text-zinc-400">Experiencia Full Stack</div>
               </div>
               <div className="text-center">
-                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
+                <div className="text-base xs:text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
                   3 países
                 </div>
-                <div className="text-xs sm:text-sm text-zinc-400">Proyectos Internacionales</div>
+                <div className="text-xs xs:text-sm text-zinc-400">Proyectos Internacionales</div>
               </div>
               <div className="text-center">
-                <div className="text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
+                <div className="text-base xs:text-lg sm:text-xl lg:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
                   50+ proyectos
                 </div>
-                <div className="text-xs sm:text-sm text-zinc-400">Soluciones Entregadas</div>
+                <div className="text-xs xs:text-sm text-zinc-400">Soluciones Entregadas</div>
               </div>
             </div>
           </div>
@@ -359,13 +359,13 @@ const HeroFAANG = () => {
         
         {/* Technology Expertise Banner - Mobile optimized */}
         <motion.div
-          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-slate-600/30 p-4 sm:p-6 mb-6 sm:mb-8"
+          className="mobile-card bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-slate-600/30 mb-4 xs:mb-6 sm:mb-8"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">🛠️ Stack Tecnológico Principal</h3>
-          <div className="flex flex-wrap gap-2 sm:gap-3">
+          <h3 className="text-white font-bold text-sm xs:text-base sm:text-lg mb-2 xs:mb-3 sm:mb-4">🛠️ Stack Tecnológico Principal</h3>
+          <div className="flex flex-wrap gap-1 xs:gap-2 sm:gap-3">
             {[
               { name: 'Python', color: 'from-yellow-400 to-blue-500' },
               { name: 'React', color: 'from-cyan-400 to-blue-500' },
@@ -378,7 +378,7 @@ const HeroFAANG = () => {
             ].map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className={`px-2 sm:px-3 py-1 sm:py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.color} text-white shadow-lg`}
+                className={`px-2 xs:px-3 py-1 xs:py-2 text-xs xs:text-sm font-bold rounded-full bg-gradient-to-r ${tech.color} text-white mobile-shadow`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}

@@ -40,7 +40,7 @@ const Experience = () => {
   ]
 
   return (
-    <div className='grid -mt-20 gap-16 relative'>
+    <div className='mobile-section grid -mt-20 gap-12 xs:gap-16 relative'>
       <motion.div className='absolute top-full shadow-[0px_0px_300px_50px_#0ea5e9]'
         animate={{ x: [30, -20, 20, -30], y: [30, -20, 20, -30], rotate: [0, 90], scale: [1, 1.2, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
@@ -49,64 +49,64 @@ const Experience = () => {
       <Title title={t('experience.title')} />
       
       {/* Real Tech Stack Overview */}
-      <div className="bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6">
-        <p className="text-center mb-6">
-          <span className='text-sky-400 font-semibold text-lg'>{t('experience.completeStack')}</span>
+      <div className="mobile-card bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6">
+        <p className="text-center mb-4 xs:mb-6">
+          <span className='text-sky-400 font-semibold text-base xs:text-lg'>{t('experience.completeStack')}</span>
         </p>
         
         {/* Frontend */}
-        <div className="mb-6">
-          <p className="text-green-400 font-semibold mb-3 text-center">{t('experience.frontend')}</p>
-          <div className="flex flex-wrap justify-center gap-4 text-2xl">
-            <i className="fab fa-react text-cyan-400 hover:scale-125 transition-transform" title="React"></i>
-            <div className="text-blue-600 hover:scale-125 transition-transform" title="TailwindCSS">⚡</div>
-            <div className="text-purple-500 hover:scale-125 transition-transform" title="Bootstrap">🅱️</div>
+        <div className="mb-4 xs:mb-6">
+          <p className="text-green-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.frontend')}</p>
+          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
+            <i className="fab fa-react text-cyan-400 hover:scale-125 transition-transform touch-target" title="React"></i>
+            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="TailwindCSS">⚡</div>
+            <div className="text-purple-500 hover:scale-125 transition-transform touch-target" title="Bootstrap">🅱️</div>
           </div>
         </div>
 
         {/* Backend */}
-        <div className="mb-6">
-          <p className="text-blue-400 font-semibold mb-3 text-center">{t('experience.backend')}</p>
-          <div className="flex flex-wrap justify-center gap-4 text-2xl">
-            <i className="fab fa-python text-yellow-400 hover:scale-125 transition-transform" title="Python"></i>
-            <i className="fas fa-flask text-green-500 hover:scale-125 transition-transform" title="Flask"></i>
-            <i className="fas fa-bolt text-teal-400 hover:scale-125 transition-transform" title="FastAPI"></i>
-            <i className="fab fa-node-js text-green-500 hover:scale-125 transition-transform" title="Node.js"></i>
-            <div className="text-red-600 hover:scale-125 transition-transform" title="Ruby on Rails">💎</div>
-            <i className="fas fa-code text-purple-600 hover:scale-125 transition-transform" title="C# .NET"></i>
+        <div className="mb-4 xs:mb-6">
+          <p className="text-blue-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.backend')}</p>
+          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
+            <i className="fab fa-python text-yellow-400 hover:scale-125 transition-transform touch-target" title="Python"></i>
+            <i className="fas fa-flask text-green-500 hover:scale-125 transition-transform touch-target" title="Flask"></i>
+            <i className="fas fa-bolt text-teal-400 hover:scale-125 transition-transform touch-target" title="FastAPI"></i>
+            <i className="fab fa-node-js text-green-500 hover:scale-125 transition-transform touch-target" title="Node.js"></i>
+            <div className="text-red-600 hover:scale-125 transition-transform touch-target" title="Ruby on Rails">💎</div>
+            <i className="fas fa-code text-purple-600 hover:scale-125 transition-transform touch-target" title="C# .NET"></i>
           </div>
         </div>
 
         {/* Bases de Datos */}
-        <div className="mb-6">
-          <p className="text-orange-400 font-semibold mb-3 text-center">{t('experience.databases')}</p>
-          <div className="flex flex-wrap justify-center gap-4 text-2xl">
-            <i className="fas fa-database text-blue-400 hover:scale-125 transition-transform" title="PostgreSQL"></i>
-            <div className="text-blue-600 hover:scale-125 transition-transform" title="MySQL">🐬</div>
-            <i className="fas fa-leaf text-green-500 hover:scale-125 transition-transform" title="MongoDB"></i>
-            <div className="text-gray-400 hover:scale-125 transition-transform" title="SQLite">🗃️</div>
+        <div className="mb-4 xs:mb-6">
+          <p className="text-orange-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.databases')}</p>
+          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
+            <i className="fas fa-database text-blue-400 hover:scale-125 transition-transform touch-target" title="PostgreSQL"></i>
+            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="MySQL">🐬</div>
+            <i className="fas fa-leaf text-green-500 hover:scale-125 transition-transform touch-target" title="MongoDB"></i>
+            <div className="text-gray-400 hover:scale-125 transition-transform touch-target" title="SQLite">🗃️</div>
           </div>
         </div>
 
         {/* DevOps & Deploy */}
-        <div className="mb-4">
-          <p className="text-purple-400 font-semibold mb-3 text-center">{t('experience.devops')}</p>
-          <div className="flex flex-wrap justify-center gap-4 text-2xl">
-            <i className="fab fa-docker text-blue-600 hover:scale-125 transition-transform" title="Docker"></i>
-            <i className="fas fa-server text-green-500 hover:scale-125 transition-transform" title="Nginx"></i>
-            <div className="text-blue-500 hover:scale-125 transition-transform" title="DigitalOcean">🌊</div>
-            <div className="text-orange-500 hover:scale-125 transition-transform" title="GitHub Actions">⚙️</div>
+        <div className="mb-3 xs:mb-4">
+          <p className="text-purple-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.devops')}</p>
+          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
+            <i className="fab fa-docker text-blue-600 hover:scale-125 transition-transform touch-target" title="Docker"></i>
+            <i className="fas fa-server text-green-500 hover:scale-125 transition-transform touch-target" title="Nginx"></i>
+            <div className="text-blue-500 hover:scale-125 transition-transform touch-target" title="DigitalOcean">🌊</div>
+            <div className="text-orange-500 hover:scale-125 transition-transform touch-target" title="GitHub Actions">⚙️</div>
           </div>
         </div>
 
         <p className="text-sm text-zinc-400 text-center">{t('experience.tech')}</p>
       </div>
 
-      <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="mobile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.id}
-            className={`p-6 rounded-2xl backdrop-blur-sm border ${exp.borderColor} bg-gradient-to-br ${exp.bgColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
+            className={`mobile-card p-4 xs:p-5 sm:p-6 rounded-xl xs:rounded-2xl backdrop-blur-sm border ${exp.borderColor} bg-gradient-to-br ${exp.bgColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
               activeExperience === index ? 'ring-2 ring-sky-400/50 shadow-lg shadow-sky-500/20' : ''
             }`}
             onHoverStart={() => setActiveExperience(index)}
@@ -116,9 +116,9 @@ const Experience = () => {
             whileHover={{ y: -5 }}
           >
             {/* Company Icon */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className={`p-3 rounded-xl bg-gradient-to-r ${exp.color} text-white`}>
-                <i className={`${exp.icon} text-xl`}></i>
+            <div className="flex items-center gap-2 xs:gap-3 mb-3 xs:mb-4">
+              <div className={`p-2 xs:p-3 rounded-lg xs:rounded-xl bg-gradient-to-r ${exp.color} text-white`}>
+                <i className={`${exp.icon} text-lg xs:text-xl`}></i>
               </div>
               <div>
                 <p className="text-xs text-zinc-400">{t(`experience.${exp.id}Date`)}</p>
@@ -126,27 +126,27 @@ const Experience = () => {
             </div>
 
             {/* Company & Role */}
-            <h3 className="text-lg font-bold mb-2">
+            <h3 className="text-base xs:text-lg font-bold mb-2 leading-tight">
               {exp.id === 'hazuki' && 'Hazuki'}
               {exp.id === 'desafiolatam' && 'Desafío Latam'}
               {exp.id === 'compilando' && 'CompilandoCode'}
               {exp.id === 'codigoFuturo' && 'Código Futuro'}
               <br />
-              <span className={`text-transparent bg-clip-text bg-gradient-to-r ${exp.color} text-base`}>
+              <span className={`text-transparent bg-clip-text bg-gradient-to-r ${exp.color} text-sm xs:text-base`}>
                 {t(`experience.${exp.id}`)}
               </span>
             </h3>
 
             {/* Tech Stack */}
-            <div className="mb-4">
-              <p className="text-xs text-zinc-500 mb-2">Stack:</p>
+            <div className="mb-3 xs:mb-4">
+              <p className="text-xs text-zinc-500 mb-1 xs:mb-2">Stack:</p>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 {t(`experience.tech${exp.id === 'hazuki' ? 'Hazuki' : exp.id === 'desafiolatam' ? 'DesafioLatam' : exp.id === 'compilando' ? 'Compilando' : 'CodigoFuturo'}`)}
               </p>
             </div>
 
             {/* Achievements */}
-            <ul className="text-sm text-zinc-400 space-y-2 mb-4">
+            <ul className="text-xs xs:text-sm text-zinc-400 space-y-1 xs:space-y-2 mb-3 xs:mb-4">
               <li>{t(`experience.${exp.id}1`)}</li>
               <li>{t(`experience.${exp.id}2`)}</li>
               <li>{t(`experience.${exp.id}3`)}</li>
@@ -154,7 +154,7 @@ const Experience = () => {
 
             {/* Metrics */}
             {t(`experience.${exp.id}Metrics`) !== `experience.${exp.id}Metrics` && (
-              <div className={`text-xs text-center p-2 bg-gradient-to-r ${exp.bgColor} rounded-lg border ${exp.borderColor} mt-auto`}>
+              <div className={`text-xs text-center p-2 xs:p-3 bg-gradient-to-r ${exp.bgColor} rounded-md xs:rounded-lg border ${exp.borderColor} mt-auto mobile-shadow`}>
                 <span className={`text-transparent bg-clip-text bg-gradient-to-r ${exp.color} font-semibold`}>
                   {t(`experience.${exp.id}Metrics`)}
                 </span>

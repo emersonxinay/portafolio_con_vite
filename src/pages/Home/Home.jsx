@@ -21,7 +21,7 @@ const Home = () => {
       <Hero />
       
       {/* Rest of sections - Contained */}
-      <div className='max-w-7xl m-auto px-4 xs:px-8 space-y-24 py-20'>
+      <div className='mobile-container space-y-16 xs:space-y-20 md:space-y-24 py-16 xs:py-20 safe-area-bottom'>
         <TechnicalExcellence />
         <Services />
         <Experience />

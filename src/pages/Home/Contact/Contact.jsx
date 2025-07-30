@@ -7,12 +7,12 @@ const Contact = () => {
   const { t } = useTranslation(['translation'])
   const size = '30px'
   return (
-    <div id='contact' className='grid gap-8 sm:gap-12 lg:gap-16 pb-16 sm:pb-24 lg:pb-32 px-3 sm:px-4'>
+    <div id='contact' className='mobile-section grid gap-8 sm:gap-12 lg:gap-16 pb-16 sm:pb-24 lg:pb-32 safe-area-bottom'>
       <Title title={t('contact.title')}></Title>
       
       {/* Contact Info */}
       <motion.div 
-        className="bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 text-center"
+        className="mobile-card bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -56,7 +56,7 @@ const Contact = () => {
         <div className="flex flex-col gap-3 sm:gap-4 justify-center mb-4 sm:mb-6">
           <motion.a
             href="mailto:xinayespinoza@gmail.com"
-            className="font-semibold px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 rounded-lg lg:rounded-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center shadow-lg hover:shadow-sky-500/25 text-sm sm:text-base"
+            className="mobile-btn font-semibold px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 rounded-lg lg:rounded-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center shadow-lg hover:shadow-sky-500/25 text-sm sm:text-base touch-target"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             style={{ touchAction: 'manipulation' }}
@@ -66,7 +66,7 @@ const Contact = () => {
           <motion.a
             href="https://wa.me/51974361728"
             target="_blank"
-            className="font-semibold px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600 rounded-lg lg:rounded-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center shadow-lg hover:shadow-green-500/25 text-sm sm:text-base"
+            className="mobile-btn font-semibold px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600 rounded-lg lg:rounded-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center shadow-lg hover:shadow-green-500/25 text-sm sm:text-base touch-target"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             style={{ touchAction: 'manipulation' }}
@@ -83,12 +83,12 @@ const Contact = () => {
       </motion.div>
 
       {/* Social Media - Mobile optimized */}
-      <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4'>
+      <div className='mobile-grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5'>
         <motion.a 
           href='https://www.linkedin.com/in/emerson-espinoza-aguirre/' 
           target={'_blank'} 
           aria-label='LinkedIn' 
-          className='h-full w-full bg-gradient-to-r from-sky-500 to-sky-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#0284c7] hover:scale-105 transition-transform'
+          className='touch-target h-full w-full bg-gradient-to-r from-sky-500 to-sky-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#0284c7] hover:scale-105 transition-transform'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -99,7 +99,7 @@ const Contact = () => {
           href='https://github.com/emersonxinay' 
           target={'_blank'} 
           aria-label='GitHub' 
-          className='h-full w-full bg-gradient-to-r from-slate-600 to-slate-800 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#334155] hover:scale-105 transition-transform'
+          className='touch-target h-full w-full bg-gradient-to-r from-slate-600 to-slate-800 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#334155] hover:scale-105 transition-transform'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -110,7 +110,7 @@ const Contact = () => {
           href='https://www.youtube.com/@compilandocode' 
           target={'_blank'} 
           aria-label='YouTube' 
-          className='h-full w-full bg-gradient-to-r from-red-500 to-red-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#c8102e] hover:scale-105 transition-transform'
+          className='touch-target h-full w-full bg-gradient-to-r from-red-500 to-red-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#c8102e] hover:scale-105 transition-transform'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -121,7 +121,7 @@ const Contact = () => {
           href='https://wa.me/51974361728' 
           target={'_blank'} 
           aria-label='WhatsApp' 
-          className='h-full w-full bg-gradient-to-r from-green-500 to-green-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#16a34a] hover:scale-105 transition-transform'
+          className='touch-target h-full w-full bg-gradient-to-r from-green-500 to-green-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#16a34a] hover:scale-105 transition-transform'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -131,7 +131,7 @@ const Contact = () => {
         <motion.a 
           href='mailto:xinayespinoza@gmail.com' 
           aria-label='Email' 
-          className='h-full w-full bg-gradient-to-r from-purple-500 to-purple-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#7c3aed] hover:scale-105 transition-transform'
+          className='touch-target h-full w-full bg-gradient-to-r from-purple-500 to-purple-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#7c3aed] hover:scale-105 transition-transform'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

@@ -35,9 +35,9 @@ const Nav = () => {
   return (
     <AnimatePresence>
       <motion.nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-area-top ${
           scrolled 
-            ? 'bg-slate-900/95 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl shadow-black/20' 
+            ? 'bg-slate-900/95 backdrop-blur-xl border-b border-slate-700/50 mobile-shadow' 
             : 'bg-transparent'
         }`}
         initial={{ y: 0, opacity: 1 }}
@@ -50,8 +50,8 @@ const Nav = () => {
           ease: 'easeInOut' 
         }}
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex justify-between items-center h-16 lg:h-20'>
+        <div className='mobile-container'>
+          <div className='flex justify-between items-center h-14 xs:h-16 lg:h-20'>
             {/* Logo with enhanced animation */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -63,7 +63,7 @@ const Nav = () => {
                   <motion.img 
                     src={Logo} 
                     alt="Emerson Espinoza - Software Engineer" 
-                    className='w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover ring-2 ring-cyan-400/30 group-hover:ring-cyan-400/60 transition-all duration-300'
+                    className='w-8 h-8 xs:w-10 xs:h-10 lg:w-12 lg:h-12 rounded-full object-cover ring-2 ring-cyan-400/30 group-hover:ring-cyan-400/60 transition-all duration-300 touch-target'
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   />
@@ -81,15 +81,15 @@ const Nav = () => {
                   />
                 </div>
                 <motion.div 
-                  className='hidden sm:block'
+                  className='hidden xs:block'
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h1 className='text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400'>
+                  <h1 className='text-sm xs:text-base lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400'>
                     Emerson Dev
                   </h1>
-                  <p className='text-xs text-zinc-400 -mt-1'>Software Engineer</p>
+                  <p className='text-xs text-zinc-400 -mt-1 hidden sm:block'>Software Engineer</p>
                 </motion.div>
               </Link>
             </motion.div>
@@ -98,7 +98,7 @@ const Nav = () => {
             <Links path={path} scrolled={scrolled} />
 
             {/* Language & Menu Container */}
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-2 xs:gap-4'>
               <Language scrolled={scrolled} />
               <Menu scrolled={scrolled} />
             </div>

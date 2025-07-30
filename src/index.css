@@ -4,17 +4,47 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
 }
 
-/* Modern Portfolio Enhancements */
+/* Mobile-first body styles */
 body {
   background: 
     radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
     linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  background-attachment: fixed;
+  /* Use scroll instead of fixed on mobile for better performance */
+  background-attachment: scroll;
   min-height: 100vh;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  /* Better text rendering on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fixed background for larger screens */
+@media (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 767px) {
+  /* Reduce background complexity on mobile for better performance */
+  body {
+    background: 
+      radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 70%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  
+  /* Optimize scroll performance on mobile */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Enhanced Glowing effects */
@@ -193,4 +223,160 @@ body {
 #home:hover ~ #navHover {
   left: 0;
   transform: translate(0%, 0);
+}
+
+/* Mobile-first utility classes */
+@layer utilities {
+  /* Mobile-optimized containers */
+  .mobile-container {
+    @apply px-4 mx-auto max-w-screen-xl;
+  }
+  
+  .mobile-container-sm {
+    @apply px-3 mx-auto max-w-screen-sm;
+  }
+  
+  /* Mobile-friendly spacing */
+  .mobile-section {
+    @apply py-12 px-4;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-section {
+      @apply py-20 px-6;
+    }
+  }
+  
+  /* Mobile-optimized text sizes */
+  .mobile-title {
+    @apply text-2xl font-bold;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-title {
+      @apply text-3xl;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-title {
+      @apply text-4xl;
+    }
+  }
+  
+  .mobile-subtitle {
+    @apply text-lg font-semibold;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-subtitle {
+      @apply text-xl;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-subtitle {
+      @apply text-2xl;
+    }
+  }
+  
+  /* Mobile-friendly buttons */
+  .mobile-btn {
+    @apply px-4 py-3 text-sm font-medium rounded-xl transition-all;
+    min-height: 44px; /* iOS touch target minimum */
+    transition-duration: 300ms;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-btn {
+      @apply px-6 py-3 text-base;
+    }
+  }
+  
+  /* Mobile-optimized cards */
+  .mobile-card {
+    @apply p-4 rounded-xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-card {
+      @apply p-6 rounded-2xl;
+    }
+  }
+  
+  /* Touch-friendly interactive elements */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    @apply flex items-center justify-center;
+  }
+  
+  /* Mobile-optimized grid layouts */
+  .mobile-grid {
+    @apply grid gap-4;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-grid {
+      @apply gap-6;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-grid {
+      @apply gap-8;
+    }
+  }
+  
+  /* Safe area handling for mobile devices */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Mobile-friendly animations */
+  @media (prefers-reduced-motion: reduce) {
+    .motion-reduce {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+  
+  /* Mobile-optimized shadows */
+  .mobile-shadow {
+    @apply shadow-lg;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-shadow {
+      @apply shadow-2xl;
+    }
+  }
+  
+  /* Prevent zoom on input focus (iOS) */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Mobile-friendly scrollbars */
+  .mobile-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+  }
+  
+  .mobile-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .mobile-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .mobile-scroll::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.5);
+    border-radius: 2px;
+  }
 }

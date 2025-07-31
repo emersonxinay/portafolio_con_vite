@@ -275,11 +275,11 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 @layer utilities {
   /* Mobile-optimized containers */
   .mobile-container {
-    @apply px-4 mx-auto max-w-screen-xl;
+    @apply px-4 xs:px-6 md:px-8 mx-auto max-w-screen-xl;
   }
   
   .mobile-container-sm {
-    @apply px-3 mx-auto max-w-screen-sm;
+    @apply px-4 xs:px-5 mx-auto max-w-screen-sm;
   }
   
   /* Mobile-friendly spacing */
@@ -341,12 +341,16 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   
   /* Mobile-optimized cards */
   .mobile-card {
-    @apply p-4 rounded-xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm;
+    @apply p-4 xs:p-5 md:p-6 rounded-xl xs:rounded-2xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm;
+    /* Ensure cards never touch screen edges on mobile */
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
   
-  @media (min-width: 640px) {
+  @media (min-width: 375px) {
     .mobile-card {
-      @apply p-6 rounded-2xl;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   
@@ -418,7 +422,14 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   /* Ultra-small device optimizations */
   @media (max-width: 320px) {
     .mobile-container {
-      @apply px-3;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .mobile-card {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.75rem;
     }
     
     .mobile-title {

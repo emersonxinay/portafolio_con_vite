@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Nav from './pages/Nav/Nav';
+import Footer from './components/Footer';
 import { Toaster } from 'react-hot-toast';
 import ScrollToTop from './components/ScrollToTop';
 import Docs from './pages/Docs/Docs';
@@ -37,6 +38,7 @@ function App() {
           <Route path='*' element={<Error />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }

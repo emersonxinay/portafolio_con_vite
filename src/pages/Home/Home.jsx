@@ -1,13 +1,11 @@
-import Hero from './Hero/HeroFAANG'
-import TechnicalExcellence from './TechnicalExcellence/TechnicalExcellence'
+import Hero from './Hero/HeroSimple'
+import WhyChooseMe from './WhyChooseMe/WhyChooseMe'
+import ServicesSimple from './ServicesSimple/ServicesSimple'
 import { motion } from 'framer-motion'
 import Contact from './Contact/Contact'
 import Blog from './Blog/Blog'
 import Experience from './Experience/Experience'
 import Projects from './Projects'
-// import Architecture from './Architecture/Architecture'
-// import Terminal from './Terminal/Terminal'
-import Services from './Services/Services'
 
 const Home = () => {
   return (
@@ -22,8 +20,8 @@ const Home = () => {
       
       {/* Rest of sections - Contained */}
       <div className='mobile-container space-y-12 xs:space-y-16 md:space-y-20 lg:space-y-24 py-12 xs:py-16 md:py-20 safe-area-bottom'>
-        <TechnicalExcellence />
-        <Services />
+        <WhyChooseMe />
+        <ServicesSimple />
         <Experience />
         <Projects />
         <Blog />

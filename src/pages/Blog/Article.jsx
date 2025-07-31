@@ -110,7 +110,7 @@ const Article = () => {
       </AnimatePresence>
 
       <motion.div
-        className='max-w-7xl m-auto px-4 md:px-6 lg:px-8 w-full min-h-screen mt-24 md:mt-32 mb-16 md:mb-32 relative'
+        className='mobile-container w-full min-h-screen pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 relative safe-area-top safe-area-bottom'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -184,14 +184,14 @@ const Article = () => {
 
         {/* Enhanced Navigation */}
         <motion.div
-          className="mb-8 md:mb-12"
+          className="mb-6 xs:mb-8 md:mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}>
-          <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
+          <div className='flex flex-col xs:flex-row items-start xs:items-center justify-between gap-3 xs:gap-4'>
             <Link
               to={'/blog'}
-              className='inline-flex items-center gap-3 text-zinc-400 hover:text-white transition-all group w-fit px-4 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 hover:border-sky-500/50 hover:shadow-lg hover:shadow-sky-500/10 relative text-sm md:text-base'
+              className='mobile-btn inline-flex items-center gap-2 xs:gap-3 text-zinc-400 hover:text-white transition-all group w-fit px-3 xs:px-4 md:px-6 py-2 xs:py-2.5 md:py-3 rounded-xl md:rounded-2xl bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 hover:border-sky-500/50 hover:shadow-lg hover:shadow-sky-500/10 relative text-sm md:text-base touch-target'
               style={{ transitionDuration: '300ms' }}>
               <motion.div
                 whileHover={{ x: -4 }}

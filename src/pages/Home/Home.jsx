@@ -21,7 +21,7 @@ const Home = () => {
       <Hero />
       
       {/* Rest of sections - Contained */}
-      <div className='mobile-container space-y-16 xs:space-y-20 md:space-y-24 py-16 xs:py-20 safe-area-bottom'>
+      <div className='mobile-container space-y-12 xs:space-y-16 md:space-y-20 lg:space-y-24 py-12 xs:py-16 md:py-20 safe-area-bottom'>
         <TechnicalExcellence />
         <Services />
         <Experience />
@@ -31,12 +31,12 @@ const Home = () => {
       </div>
 
 
-      {/* Background light effect */}
-      <motion.div className='fixed bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none'
+      {/* Background light effect - Mobile optimized */}
+      <motion.div className='fixed bottom-0 right-0 w-48 h-48 xs:w-64 xs:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none overflow-hidden'
         animate={{ 
-          x: [0, 50, 0], 
-          y: [0, -30, 0],
-          scale: [1, 1.2, 1]
+          x: [0, 20, 0], 
+          y: [0, -15, 0],
+          scale: [1, 1.1, 1]
         }}
         transition={{ duration: 15, repeat: Infinity, repeatType: 'reverse' }}
       />

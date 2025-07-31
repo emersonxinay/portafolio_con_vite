@@ -148,7 +148,7 @@ const HeroFAANG = () => {
       <div className="flex-1 max-w-4xl text-center lg:text-left relative z-10 w-full">
         {/* Enhanced Top Badge */}
         <motion.div
-          className="group inline-flex items-center gap-2 xs:gap-3 mobile-card bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-3 xs:px-4 sm:px-6 lg:px-8 py-2 xs:py-3 lg:py-4 mb-4 xs:mb-6 sm:mb-8 lg:mb-10 mobile-shadow hover:shadow-emerald-500/25 transition-all duration-500"
+          className="group inline-flex items-center gap-2 xs:gap-3 mobile-card bg-gradient-to-r from-emerald-900/50 via-green-900/50 to-teal-900/50 backdrop-blur-xl border border-emerald-400/30 rounded-full px-3 xs:px-4 sm:px-6 lg:px-8 py-2 xs:py-3 lg:py-4 mt-6 xs:mt-8 md:mt-12 mb-6 xs:mb-8 md:mb-10 mobile-shadow hover:shadow-emerald-500/25 transition-all duration-500"
           initial={{ opacity: 0, y: -30, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}

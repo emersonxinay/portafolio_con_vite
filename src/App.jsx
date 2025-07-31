@@ -15,7 +15,7 @@ function App() {
   const location = useLocation();
   
   return (
-    <div className='grid relative w-full min-h-screen bg-[#090e19] text-white container-safe'>
+    <div className='grid relative w-full min-h-screen bg-[#090e19] text-white overflow-x-hidden'>
       <ScrollToTop />
       <Nav />
       <Toaster

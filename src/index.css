@@ -406,7 +406,131 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   input, select, textarea {
     font-size: 16px;
   }
+
+  /* Force all elements to respect boundaries */
+  .mobile-safe {
+    max-width: 100vw;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Ultra-small device optimizations */
+  @media (max-width: 320px) {
+    .mobile-container {
+      @apply px-3;
+    }
+    
+    .mobile-title {
+      @apply text-xl;
+    }
+    
+    .mobile-btn {
+      @apply px-3 py-2 text-xs;
+      min-height: 40px;
+    }
+  }
+
+  /* Landscape phone optimizations */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .mobile-section {
+      @apply py-8 px-4;
+    }
+    
+    .hero-section {
+      min-height: auto;
+      padding-top: 5rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  /* Prevent content from getting too wide on large screens */
+  @media (min-width: 1920px) {
+    .mobile-container {
+      max-width: 1600px;
+    }
+  }
+
+  /* Ultimate mobile safety class */
+  .ultra-responsive {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Fix for very small screens (iPhone SE) */
+  @media (max-width: 375px) {
+    .mobile-container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    .mobile-btn {
+      font-size: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      min-height: 40px;
+    }
+    
+    .mobile-title {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Ensure touch targets are adequate on all devices */
+  @media (max-width: 480px) {
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    button, a, input, select, textarea {
+      min-height: 44px;
+    }
+  }
   
+  /* Image optimization utilities */
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  .mobile-img {
+    @apply w-full h-auto object-cover rounded-lg;
+  }
+
+  @media (max-width: 640px) {
+    .mobile-img {
+      max-height: 200px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    .mobile-img {
+      max-height: 250px;
+    }
+  }
+
+  /* Prevent images from causing horizontal overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Optimize background images for mobile */
+  @media (max-width: 767px) {
+    .bg-hero {
+      background-attachment: scroll !important;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
   /* Mobile-friendly scrollbars */
   .mobile-scroll {
     scrollbar-width: thin;

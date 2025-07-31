@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className='flex flex-col xl:flex-row items-center justify-center gap-16 xl:gap-0 xl:justify-between w-full min-h-screen relative mt-40 md:mt-24 xl:mt-0'
+      className='mobile-container flex flex-col xl:flex-row items-center justify-center gap-8 xs:gap-12 md:gap-16 xl:gap-0 xl:justify-between w-full min-h-screen relative pt-20 xs:pt-24 md:pt-32 xl:pt-0 pb-8 xs:pb-12'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -56,7 +56,7 @@ const Hero = () => {
           repeatType: 'reverse'
         }}></motion.div>
 
-      <div className='grid items-center gap-4 xl:max-w-2xl text-center xl:text-start'>
+      <div className='grid items-center gap-4 xs:gap-6 w-full max-w-2xl xl:max-w-2xl text-center xl:text-start'>
         {/* Hero Left side - Enhanced with Glassmorphism */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -68,9 +68,9 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/10 to-transparent backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl -z-10" />
           
           {/* Content with improved spacing */}
-          <div className="p-8">
+          <div className="p-4 xs:p-6 md:p-8">
             <motion.h1 
-              className='font-black text-2xl xxs:text-3xl xs:text-4xl sm:text-5xl xl:text-[4rem] leading-tight mb-6'
+              className='font-black text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl xl:text-[4rem] leading-tight mb-4 xs:mb-6'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.5 }}
@@ -83,11 +83,11 @@ const Hero = () => {
               >
                 <div className="flex items-center gap-3 mb-2">
                   <div className="h-1 w-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-                  <span className='text-zinc-300 text-sm font-medium tracking-wide uppercase'>
+                  <span className='text-zinc-300 text-xs xs:text-sm font-medium tracking-wide uppercase'>
                     Senior Software Engineer
                   </span>
                 </div>
-                <p className="text-cyan-400 text-sm font-medium">
+                <p className="text-cyan-400 text-xs xs:text-sm font-medium">
                   🎯 Building scalable systems that process millions of transactions
                 </p>
               </motion.div>
@@ -103,7 +103,7 @@ const Hero = () => {
               </motion.span>
               
               <motion.span 
-                className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 block text-2xl xl:text-4xl mt-3 font-bold'
+                className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 block text-lg xs:text-xl sm:text-2xl xl:text-4xl mt-2 xs:mt-3 font-bold'
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
@@ -126,10 +126,10 @@ const Hero = () => {
             </div>
           </div>
           
-          <p className='text-zinc-300 text-lg xl:text-xl font-medium mb-2'>
+          <p className='text-zinc-300 text-base xs:text-lg xl:text-xl font-medium mb-2 px-4 xs:px-0'>
             {t('hero.role')}
           </p>
-          <p className='text-zinc-400 text-base leading-relaxed mb-6'>
+          <p className='text-zinc-400 text-sm xs:text-base leading-relaxed mb-4 xs:mb-6 px-4 xs:px-0'>
             {t('hero.description')}
           </p>
         </motion.div>
@@ -144,12 +144,12 @@ const Hero = () => {
           <span className='text-sm text-green-400 font-medium'>{t('hero.location')}</span>
         </motion.div>
         <Languages></Languages>
-        <p className='text-zinc-400 font-base m-auto xl:m-0 w-10/12'>
+        <p className='text-zinc-400 text-sm xs:text-base font-base m-auto xl:m-0 w-full px-4 xs:px-0'>
           {t('hero.description')}
         </p>
         
         {/* Enhanced Professional Metrics */}
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 w-full'>
+        <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 w-full px-2 xs:px-0'>
           <motion.div 
             className='group relative bg-gradient-to-br from-sky-900/20 via-blue-900/30 to-cyan-900/20 backdrop-blur-md border border-sky-400/20 rounded-2xl p-4 text-center overflow-hidden'
             whileHover={{ 
@@ -166,7 +166,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-sky-400/0 via-sky-400/10 to-sky-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <motion.div 
-              className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400 mb-1'
+              className='text-2xl xs:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400 mb-1'
               animate={{ 
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
@@ -174,7 +174,7 @@ const Hero = () => {
             >
               6+
             </motion.div>
-            <div className='text-xs font-medium text-zinc-300 group-hover:text-sky-200 transition-colors'>
+            <div className='text-xs font-medium text-zinc-300 group-hover:text-sky-200 transition-colors leading-tight'>
               {t('hero.metrics.experience')}
             </div>
           </motion.div>
@@ -261,12 +261,12 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className='flex gap-4 relative m-auto xl:m-0 mt-8'>
+        <div className='flex gap-4 relative m-auto xl:m-0 mt-6 xs:mt-8 px-4 xs:px-0'>
           <motion.button
             onClick={getInTouchHandler}
-            className='group relative font-bold px-10 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-2xl flex items-center gap-3 overflow-hidden shadow-2xl'
+            className='group relative font-bold px-6 xs:px-8 md:px-10 py-3 xs:py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-xl xs:rounded-2xl flex items-center justify-center gap-2 xs:gap-3 overflow-hidden shadow-2xl w-full xs:w-auto min-h-[48px] touch-target'
             whileHover={{ 
-              scale: 1.08,
+              scale: 1.05,
               boxShadow: "0 25px 50px rgba(14, 165, 233, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1)",
               y: -2
             }}
@@ -297,7 +297,7 @@ const Hero = () => {
             />
             
             {/* Content */}
-            <span className="relative z-10 text-lg font-bold tracking-wide">
+            <span className="relative z-10 text-base xs:text-lg font-bold tracking-wide">
               {t('hero.contact')}
             </span>
             

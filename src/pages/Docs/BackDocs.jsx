@@ -8,7 +8,7 @@ const BackDocs = () => {
   const backend = [
     {
       name: 'Node.js',
-      icon: <FaNodeJs className='text-6xl text-green-500' />,
+      icon: <FaNodeJs className='text-3xl xs:text-4xl md:text-6xl text-green-500' />,
       description: 'Runtime de JavaScript del lado del servidor con event loop no bloqueante. Perfecto para APIs escalables y aplicaciones en tiempo real.',
       tag: 'Próximamente',
       tagColor: 'from-green-500 to-emerald-500',
@@ -19,7 +19,7 @@ const BackDocs = () => {
     },
     {
       name: 'Express.js',
-      icon: <SiExpress className='text-6xl text-gray-600' />,
+      icon: <SiExpress className='text-3xl xs:text-4xl md:text-6xl text-gray-600' />,
       description: 'Framework minimalista para Node.js. Middleware, routing, y arquitecturas RESTful para APIs modernas y microservicios.',
       tag: 'Próximamente',
       tagColor: 'from-gray-600 to-slate-500',
@@ -30,7 +30,7 @@ const BackDocs = () => {
     },
     {
       name: 'NestJS',
-      icon: <SiNestjs className='text-6xl text-red-500' />,
+      icon: <SiNestjs className='text-3xl xs:text-4xl md:text-6xl text-red-500' />,
       description: 'Framework enterprise para Node.js con TypeScript, decorators, dependency injection, y arquitecturas modulares escalables.',
       tag: 'Próximamente',
       tagColor: 'from-red-500 to-pink-500',
@@ -41,7 +41,7 @@ const BackDocs = () => {
     },
     {
       name: 'Python',
-      icon: <FaPython className='text-6xl text-blue-500' />,
+      icon: <FaPython className='text-3xl xs:text-4xl md:text-6xl text-blue-500' />,
       description: 'Lenguaje versátil para backend, data science, ML/AI. Sintaxis clara, librerías extensas, y ecosistema maduro para aplicaciones enterprise.',
       tag: 'Próximamente',
       tagColor: 'from-blue-500 to-cyan-500',
@@ -52,7 +52,7 @@ const BackDocs = () => {
     },
     {
       name: 'FastAPI',
-      icon: <SiFastapi className='text-6xl text-teal-500' />,
+      icon: <SiFastapi className='text-3xl xs:text-4xl md:text-6xl text-teal-500' />,
       description: 'Framework moderno para Python con validation automática, OpenAPI, async/await, y performance comparable a NodeJS.',
       tag: 'Próximamente',
       tagColor: 'from-teal-500 to-cyan-500',
@@ -63,7 +63,7 @@ const BackDocs = () => {
     },
     {
       name: 'Django',
-      icon: <SiDjango className='text-6xl text-green-600' />,
+      icon: <SiDjango className='text-3xl xs:text-4xl md:text-6xl text-green-600' />,
       description: 'Framework "batteries included" para Python. ORM potente, admin panel, autenticación, y arquitectura MVT para aplicaciones complejas.',
       tag: 'Próximamente',
       tagColor: 'from-green-600 to-emerald-600',
@@ -74,7 +74,7 @@ const BackDocs = () => {
     },
     {
       name: 'Java Spring',
-      icon: <SiSpring className='text-6xl text-green-400' />,
+      icon: <SiSpring className='text-3xl xs:text-4xl md:text-6xl text-green-400' />,
       description: 'Framework enterprise para Java con dependency injection, Spring Boot, microservicios, y ecosystem completo para aplicaciones robustas.',
       tag: 'Próximamente',
       tagColor: 'from-green-400 to-emerald-400',
@@ -85,7 +85,7 @@ const BackDocs = () => {
     },
     {
       name: 'PHP Laravel',
-      icon: <SiLaravel className='text-6xl text-red-600' />,
+      icon: <SiLaravel className='text-3xl xs:text-4xl md:text-6xl text-red-600' />,
       description: 'Framework elegante para PHP con Eloquent ORM, Blade templating, Artisan CLI, y ecosystem completo para desarrollo web.',
       tag: 'Próximamente',
       tagColor: 'from-red-600 to-pink-600',
@@ -96,7 +96,7 @@ const BackDocs = () => {
     },
     {
       name: 'PostgreSQL',
-      icon: <SiPostgresql className='text-6xl text-blue-700' />,
+      icon: <SiPostgresql className='text-3xl xs:text-4xl md:text-6xl text-blue-700' />,
       description: 'Base de datos relacional avanzada con JSON nativo, índices sofisticados, transacciones ACID, y extensiones para casos específicos.',
       tag: 'Próximamente',
       tagColor: 'from-blue-700 to-indigo-600',
@@ -107,7 +107,7 @@ const BackDocs = () => {
     },
     {
       name: 'MongoDB',
-      icon: <SiMongodb className='text-6xl text-green-500' />,
+      icon: <SiMongodb className='text-3xl xs:text-4xl md:text-6xl text-green-500' />,
       description: 'Base de datos NoSQL con documentos flexibles, sharding horizontal, replicación, y agregaciones complejas para big data.',
       tag: 'Próximamente',
       tagColor: 'from-green-500 to-emerald-500',
@@ -118,7 +118,7 @@ const BackDocs = () => {
     },
     {
       name: 'Redis',
-      icon: <SiRedis className='text-6xl text-red-500' />,
+      icon: <SiRedis className='text-3xl xs:text-4xl md:text-6xl text-red-500' />,
       description: 'Cache in-memory ultra-rápido, pub/sub, session store, y estructuras de datos avanzadas para aplicaciones de alto rendimiento.',
       tag: 'Próximamente',
       tagColor: 'from-red-500 to-pink-500',
@@ -129,7 +129,7 @@ const BackDocs = () => {
     },
     {
       name: 'Docker',
-      icon: <SiDocker className='text-6xl text-blue-500' />,
+      icon: <SiDocker className='text-3xl xs:text-4xl md:text-6xl text-blue-500' />,
       description: 'Containerización para desarrollo, testing, y deployment. Multi-stage builds, Docker Compose, y integración con Kubernetes.',
       tag: 'Próximamente',
       tagColor: 'from-blue-500 to-cyan-500',
@@ -153,22 +153,22 @@ const BackDocs = () => {
   }
 
   return (
-    <div className='space-y-8'>
+    <div className='space-y-6 xs:space-y-8'>
       <motion.div
-        className="text-center mb-8"
+        className="text-center mb-6 xs:mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h3 className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-4'>
+        <h3 className='text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3 xs:mb-4 px-4 xs:px-0'>
           Backend Technologies
         </h3>
-        <p className="text-zinc-300 text-lg max-w-3xl mx-auto">
+        <p className="text-zinc-300 text-sm xs:text-base md:text-lg max-w-3xl mx-auto px-4 xs:px-0">
           Tecnologías del lado del servidor para crear APIs robustas, bases de datos escalables y arquitecturas enterprise
         </p>
       </motion.div>
 
-      <div className='grid gap-6 lg:grid-cols-2'>
+      <div className='mobile-grid grid-cols-1 lg:grid-cols-2 gap-4 xs:gap-6'>
         {backend.map((tech, i) => (
           <motion.div 
             key={tech.name} 
@@ -180,22 +180,22 @@ const BackDocs = () => {
           >
             <Link 
               to={tech.link} 
-              className='group relative w-full h-full p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl flex flex-col gap-6 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2 overflow-hidden'
+              className='mobile-card group relative w-full h-full p-4 xs:p-6 md:p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl flex flex-col gap-4 xs:gap-6 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1 xs:hover:-translate-y-2 overflow-hidden touch-target'
             >
               {/* Premium Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               
               {/* Header */}
-              <div className='flex items-start justify-between relative z-10'>
-                <div className='flex items-center gap-4'>
-                  <div className="p-4 bg-slate-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className='flex flex-col xs:flex-row items-start xs:items-start justify-between gap-3 xs:gap-0 relative z-10'>
+                <div className='flex items-center gap-3 xs:gap-4 w-full xs:w-auto'>
+                  <div className="p-2 xs:p-3 md:p-4 bg-slate-800/50 rounded-xl xs:rounded-2xl group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
                   </div>
                   <div>
-                    <h4 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300'>
+                    <h4 className='text-lg xs:text-xl md:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300'>
                       {tech.name}
                     </h4>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="flex items-center gap-1.5 xs:gap-2 mt-1">
                       <span className="text-xs text-zinc-400 font-medium">{tech.level}</span>
                       <div className="w-1 h-1 bg-zinc-500 rounded-full"></div>
                       <span className={`text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r ${getComplexityColor(tech.complexity)}`}>
@@ -207,7 +207,7 @@ const BackDocs = () => {
 
                 {/* Status Badge */}
                 <motion.div 
-                  className={`px-4 py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.tagColor} text-white shadow-lg`}
+                  className={`px-2 xs:px-3 md:px-4 py-1 xs:py-1.5 md:py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.tagColor} text-white shadow-lg flex-shrink-0`}
                   whileHover={{ scale: 1.05 }}
                 >
                   {tech.tag}
@@ -215,16 +215,16 @@ const BackDocs = () => {
               </div>
 
               {/* Description */}
-              <p className='text-zinc-300 leading-relaxed group-hover:text-zinc-200 transition-colors duration-300 relative z-10'>
+              <p className='text-zinc-300 text-sm xs:text-base leading-relaxed group-hover:text-zinc-200 transition-colors duration-300 relative z-10'>
                 {tech.description}
               </p>
 
               {/* Topics */}
-              <div className="flex flex-wrap gap-2 relative z-10">
+              <div className="flex flex-wrap gap-1.5 xs:gap-2 relative z-10">
                 {tech.topics.map((topic, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 text-xs font-medium bg-purple-500/10 text-purple-300 rounded-full border border-purple-500/20 backdrop-blur-sm"
+                    className="px-2 xs:px-3 py-0.5 xs:py-1 text-xs font-medium bg-purple-500/10 text-purple-300 rounded-full border border-purple-500/20 backdrop-blur-sm"
                   >
                     {topic}
                   </span>
@@ -232,8 +232,8 @@ const BackDocs = () => {
               </div>
 
               {/* Progress Bar */}
-              <div className="relative z-10">
-                <div className="flex justify-between items-center mb-2">
+              <div className="relative z-10 hidden xs:block">
+                <div className="flex justify-between items-center mb-1.5 xs:mb-2">
                   <span className="text-xs text-zinc-400">Complejidad</span>
                   <span className="text-xs text-zinc-400">{tech.complexity}/5</span>
                 </div>
@@ -248,8 +248,8 @@ const BackDocs = () => {
               </div>
 
               {/* CTA */}
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50 relative z-10">
-                <div className="text-sm text-zinc-400">
+              <div className="flex items-center justify-between pt-3 xs:pt-4 border-t border-slate-700/50 relative z-10">
+                <div className="text-xs xs:text-sm text-zinc-400">
                   {tech.tag === 'Disponible' ? '📚 Leer documentación' : '⏳ Próximamente'}
                 </div>
                 <motion.div 

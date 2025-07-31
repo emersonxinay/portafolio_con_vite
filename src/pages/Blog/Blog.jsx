@@ -54,35 +54,35 @@ const Blog = () => {
 
   return (
     <motion.div
-      className='max-w-7xl m-auto px-4 xs:px-8 relative w-full min-h-screen flex flex-col gap-16 mt-40 pb-32'
+      className='mobile-container relative w-full min-h-screen flex flex-col gap-8 xs:gap-12 md:gap-16 pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 safe-area-top safe-area-bottom'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}>
       
       {/* Enhanced Hero Section */}
-      <div className='text-center space-y-8 relative'>
-        {/* Animated Background Elements */}
+      <div className='text-center space-y-4 xs:space-y-6 md:space-y-8 relative'>
+        {/* Animated Background Elements - Mobile optimized */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
-            className="absolute w-72 h-72 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
+            className="absolute w-32 h-32 xs:w-48 xs:h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
             animate={{
-              x: [0, 50, 0],
-              y: [0, -30, 0],
+              x: [0, 20, 0],
+              y: [0, -15, 0],
               scale: [1, 1.1, 1],
             }}
             transition={{ duration: 15, repeat: Infinity }}
-            style={{ top: '10%', left: '20%' }}
+            style={{ top: '10%', left: '10%' }}
           />
           <motion.div
-            className="absolute w-48 h-48 bg-gradient-to-r from-cyan-500/10 to-green-500/10 rounded-full blur-3xl"
+            className="absolute w-24 h-24 xs:w-32 xs:h-32 md:w-48 md:h-48 bg-gradient-to-r from-cyan-500/10 to-green-500/10 rounded-full blur-3xl"
             animate={{
-              x: [0, -40, 0],
-              y: [0, 40, 0],
+              x: [0, -20, 0],
+              y: [0, 20, 0],
               scale: [1, 0.9, 1],
             }}
             transition={{ duration: 12, repeat: Infinity, delay: 3 }}
-            style={{ bottom: '20%', right: '25%' }}
+            style={{ bottom: '20%', right: '10%' }}
           />
         </div>
 
@@ -93,42 +93,42 @@ const Blog = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10"
         >
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-1 w-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-            <h1 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+          <div className="flex items-center justify-center gap-2 xs:gap-4 mb-4 xs:mb-6">
+            <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+            <h1 className="mobile-title text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
               Technical Blog
             </h1>
-            <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
+            <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-16 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
           
-          <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8 mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
+            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
               🚀 Enterprise-Level Insights & Technical Deep Dives
             </h2>
-            <p className="text-xl text-zinc-300 leading-relaxed mb-6">
+            <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
               Explora artículos sobre desarrollo web moderno, arquitecturas escalables, inteligencia artificial aplicada, 
               y las tecnologías que impulsan a las empresas más innovadoras del mundo.
             </p>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-700/50">
+            <div className="grid grid-cols-3 gap-3 xs:gap-4 md:gap-6 pt-4 xs:pt-6 border-t border-slate-700/50">
               <div className="text-center">
-                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
                   {articles.length}+
                 </div>
-                <div className="text-sm text-zinc-400 font-medium">Artículos Técnicos</div>
+                <div className="text-xs xs:text-sm text-zinc-400 font-medium">Artículos Técnicos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
                   500K+
                 </div>
-                <div className="text-sm text-zinc-400 font-medium">Líneas de Código</div>
+                <div className="text-xs xs:text-sm text-zinc-400 font-medium">Líneas de Código</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
+                <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
                   6+
                 </div>
-                <div className="text-sm text-zinc-400 font-medium">Años de Experiencia</div>
+                <div className="text-xs xs:text-sm text-zinc-400 font-medium">Años de Experiencia</div>
               </div>
             </div>
           </div>
@@ -137,21 +137,21 @@ const Blog = () => {
 
       {/* Enhanced Search and Filter Section */}
       <motion.div 
-        className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8'
+        className='mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}>
         
-        <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+        <div className='flex flex-col sm:flex-row gap-4 xs:gap-6 items-stretch sm:items-center justify-between'>
           {/* Search Bar */}
-          <div className='relative flex-1 max-w-md'>
+          <div className='relative flex-1 w-full sm:max-w-md'>
             <BsSearch className='absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400 z-10' />
             <input
               type='text'
               placeholder='Buscar por título, tecnología o concepto...'
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className='w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 hover:border-slate-500/70'
+              className='mobile-btn w-full pl-10 xs:pl-12 pr-4 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 hover:border-slate-500/70 text-sm xs:text-base'
             />
             {searchTerm && (
               <motion.button
@@ -167,7 +167,7 @@ const Blog = () => {
           </div>
 
           {/* Category Filter */}
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-col xs:flex-row items-start xs:items-center gap-2 xs:gap-4 w-full sm:w-auto'>
             <div className='flex items-center gap-2'>
               <BiCategory className='text-purple-400 text-xl' />
               <span className='text-zinc-300 font-medium'>Filtrar:</span>
@@ -175,7 +175,7 @@ const Blog = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className='px-6 py-4 bg-slate-800/50 border border-slate-600/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300 hover:border-slate-500/70 cursor-pointer'>
+              className='mobile-btn w-full xs:w-auto px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300 hover:border-slate-500/70 cursor-pointer text-sm xs:text-base'>
               {categories.map(category => (
                 <option key={category} value={category} className='bg-slate-800'>
                   {category === 'all' ? '📚 Todas las categorías' : `🔧 ${category.charAt(0).toUpperCase() + category.slice(1)}`}
@@ -187,12 +187,12 @@ const Blog = () => {
 
         {/* Search Results Info */}
         <motion.div 
-          className='mt-6 pt-6 border-t border-slate-700/50 flex items-center justify-between'
+          className='mt-4 xs:mt-6 pt-4 xs:pt-6 border-t border-slate-700/50 flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2 xs:gap-0'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <div className='text-zinc-400 text-sm'>
+          <div className='text-zinc-400 text-xs xs:text-sm'>
             {searchTerm || selectedCategory !== 'all' ? (
               <span>
                 <span className='font-medium text-blue-400'>{filteredArticles.length}</span> artículos encontrados
@@ -206,7 +206,7 @@ const Blog = () => {
             )}
           </div>
           
-          <div className='flex items-center gap-2 text-xs text-zinc-500'>
+          <div className='flex items-center gap-2 text-xs text-zinc-500 mt-2 xs:mt-0'>
             <span>Ordenado por fecha</span>
             <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
           </div>
@@ -243,11 +243,11 @@ const Blog = () => {
           }}></motion.div>
         {filteredArticles.length === 0 ? (
           <motion.div 
-            className='text-center py-20'
+            className='text-center py-12 xs:py-16 md:py-20'
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}>
-            <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-12 mx-auto max-w-lg">
+            <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-6 xs:p-8 md:p-12 mx-auto max-w-lg">
               <motion.div 
                 className='text-8xl mb-6'
                 animate={{ 
@@ -262,19 +262,19 @@ const Blog = () => {
               >
                 🔍
               </motion.div>
-              <h3 className='text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500'>
+              <h3 className='text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500'>
                 No se encontraron artículos
               </h3>
-              <p className='text-zinc-300 text-lg leading-relaxed mb-6'>
+              <p className='text-zinc-300 text-sm xs:text-base md:text-lg leading-relaxed mb-4 xs:mb-6'>
                 No encontramos artículos que coincidan con tu búsqueda. Intenta con otros términos o explora todas las categorías.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-3 xs:gap-4 justify-center">
                 <motion.button
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="mobile-btn px-4 xs:px-6 py-2.5 xs:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm xs:text-base touch-target"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -282,7 +282,7 @@ const Blog = () => {
                 </motion.button>
                 <motion.button
                   onClick={() => setSearchTerm('')}
-                  className="px-6 py-3 bg-slate-700/50 text-zinc-300 font-medium rounded-2xl border border-slate-600/50 hover:bg-slate-600/50 transition-all duration-300"
+                  className="mobile-btn px-4 xs:px-6 py-2.5 xs:py-3 bg-slate-700/50 text-zinc-300 font-medium rounded-xl xs:rounded-2xl border border-slate-600/50 hover:bg-slate-600/50 transition-all duration-300 text-sm xs:text-base touch-target"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -303,14 +303,14 @@ const Blog = () => {
               <Link
                 to={'/blog/' + a.url}
                 key={a.url}
-                className='bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl grid group relative overflow-hidden md:grid-cols-12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2'>
+                className='mobile-card bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl flex flex-col md:grid md:grid-cols-12 group relative overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 md:hover:-translate-y-2 w-full'>
                 <BottomContainer></BottomContainer>
                 
                 {/* Premium Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 
                 {/* Article Image */}
-                <div className='md:col-span-5 relative overflow-hidden rounded-l-3xl'>
+                <div className='md:col-span-5 relative overflow-hidden rounded-t-2xl xs:rounded-t-3xl md:rounded-t-none md:rounded-l-3xl h-48 xs:h-56 md:h-auto'>
                   <img
                     src={a.thumbnail}
                     alt={a.title}
@@ -331,8 +331,8 @@ const Blog = () => {
                 </div>
                 
                 {/* Article Content */}
-                <div className='flex flex-col md:col-span-7 relative px-8 py-8 justify-between gap-6'>
-                  <div className='space-y-6'>
+                <div className='flex flex-col md:col-span-7 relative p-4 xs:p-6 md:p-8 justify-between gap-4 xs:gap-6'>
+                  <div className='space-y-3 xs:space-y-4 md:space-y-6'>
                     {/* Enhanced Tags */}
                     <div className='flex flex-wrap gap-2'>
                       {a.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -353,19 +353,19 @@ const Blog = () => {
                     </div>
                     
                     {/* Enhanced Title */}
-                    <h3 className='font-black text-2xl lg:text-3xl leading-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500'>
+                    <h3 className='font-black text-lg xs:text-xl md:text-2xl lg:text-3xl leading-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500'>
                       {a.title}
                     </h3>
                     
                     {/* Enhanced Description */}
-                    <p className='text-zinc-300 text-lg leading-relaxed line-clamp-3 group-hover:text-zinc-200 transition-colors duration-300'>
+                    <p className='text-zinc-300 text-sm xs:text-base md:text-lg leading-relaxed line-clamp-2 xs:line-clamp-3 group-hover:text-zinc-200 transition-colors duration-300'>
                       {a.description}
                     </p>
                   </div>
                   
                   {/* Enhanced Footer */}
-                  <div className='flex justify-between items-center pt-6 border-t border-slate-600/50'>
-                    <div className='flex items-center gap-6 text-sm text-zinc-400'>
+                  <div className='flex flex-col xs:flex-row justify-between items-start xs:items-center gap-3 xs:gap-0 pt-4 xs:pt-6 border-t border-slate-600/50'>
+                    <div className='flex items-center gap-3 xs:gap-6 text-xs xs:text-sm text-zinc-400'>
                       <div className='flex items-center gap-2 bg-slate-800/50 px-3 py-2 rounded-xl'>
                         <BsCalendar className='text-blue-400' />
                         <span className='font-medium'>{a.date}</span>
@@ -377,7 +377,7 @@ const Blog = () => {
                     </div>
                     
                     <motion.div 
-                      className='flex items-center gap-3 text-blue-400 group-hover:text-blue-300 transition-all duration-300 font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-6 py-3 rounded-2xl border border-blue-500/20 group-hover:border-blue-400/40'
+                      className='flex items-center gap-2 xs:gap-3 text-blue-400 group-hover:text-blue-300 transition-all duration-300 font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-3 xs:px-6 py-2 xs:py-3 rounded-xl xs:rounded-2xl border border-blue-500/20 group-hover:border-blue-400/40 text-sm xs:text-base touch-target'
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >

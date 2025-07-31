@@ -303,7 +303,7 @@ const Tools = () => {
 
   return (
     <motion.div 
-      className='max-w-7xl m-auto px-4 xs:px-8 relative w-full min-h-screen flex flex-col gap-16 mt-40 pb-32'
+      className='mobile-container relative w-full min-h-screen flex flex-col gap-8 xs:gap-12 md:gap-16 pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 safe-area-top safe-area-bottom'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -311,73 +311,73 @@ const Tools = () => {
     >
       {/* Custom cursor */}
 
-      {/* Enhanced Background Effects */}
+      {/* Enhanced Background Effects - Mobile optimized */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
+          className="absolute w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
           animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
+            x: [0, 50, 0],
+            y: [0, -25, 0],
             scale: [1, 1.2, 1],
           }}
           transition={{ duration: 20, repeat: Infinity }}
-          style={{ top: '20%', left: '10%' }}
+          style={{ top: '20%', left: '5%' }}
         />
         <motion.div
-          className="absolute w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-green-500/10 rounded-full blur-3xl"
+          className="absolute w-32 h-32 xs:w-48 xs:h-48 md:w-64 md:h-64 bg-gradient-to-r from-cyan-500/10 to-green-500/10 rounded-full blur-3xl"
           animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
+            x: [0, -40, 0],
+            y: [0, 30, 0],
             scale: [1, 0.8, 1],
           }}
           transition={{ duration: 15, repeat: Infinity, delay: 5 }}
-          style={{ bottom: '20%', right: '15%' }}
+          style={{ bottom: '20%', right: '5%' }}
         />
       </div>
 
       {/* Enhanced Hero Section */}
-      <div className='text-center space-y-8 relative z-10'>
+      <div className='text-center space-y-4 xs:space-y-6 md:space-y-8 relative z-10'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-            <h1 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+          <div className="flex items-center justify-center gap-2 xs:gap-4 mb-4 xs:mb-6 md:mb-8">
+            <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-20 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+            <h1 className="mobile-title text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
               Professional Tools
             </h1>
-            <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
+            <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
           
-          <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8 mx-auto max-w-4xl">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
+            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
               🛠️ Enterprise-Grade Development Stack
             </h2>
-            <p className="text-xl text-zinc-300 leading-relaxed mb-6">
+            <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
               Herramientas profesionales utilizadas en empresas FAANG y startups unicornio. 
               Desde desarrollo hasta deployment, monitoreo y colaboración en equipos de alto rendimiento.
             </p>
             
             {/* Enhanced Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-700/50">
+            <div className="grid grid-cols-3 gap-3 xs:gap-4 md:gap-6 pt-4 xs:pt-6 border-t border-slate-700/50">
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                <div className="text-lg xs:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
                   {tools.length}+
                 </div>
-                <div className="text-xs text-zinc-400 font-medium">Tools Profesionales</div>
+                <div className="text-xs text-zinc-400 font-medium leading-tight">Tools Profesionales</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                <div className="text-lg xs:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
                   7
                 </div>
-                <div className="text-xs text-zinc-400 font-medium">Categorías</div>
+                <div className="text-xs text-zinc-400 font-medium leading-tight">Categorías</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
+                <div className="text-lg xs:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
                   100%
                 </div>
-                <div className="text-xs text-zinc-400 font-medium">Enterprise Ready</div>
+                <div className="text-xs text-zinc-400 font-medium leading-tight">Enterprise Ready</div>
               </div>
             </div>
           </div>
@@ -386,19 +386,19 @@ const Tools = () => {
 
       {/* Enhanced Categories */}
       <motion.div
-        className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8"
+        className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <div className='flex gap-3 justify-center items-center flex-wrap'>
+        <div className='flex gap-2 xs:gap-3 justify-center items-center flex-wrap'>
           {categories.map((category, i) => (
             <motion.button
               key={category.id}
               onClick={() => filtersHandler(category.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-bold transition-all duration-300 ${
+              className={`mobile-btn flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 md:px-6 py-2 xs:py-2.5 md:py-3 rounded-xl xs:rounded-2xl font-bold transition-all duration-300 text-sm xs:text-base touch-target ${
                 query === category.id
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-110`
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105 xs:scale-110`
                   : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50 hover:scale-105'
               }`}
               whileHover={{ scale: query === category.id ? 1.1 : 1.05 }}
@@ -407,20 +407,20 @@ const Tools = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + i * 0.1 }}
             >
-              <span className="text-lg">{category.icon}</span>
-              <span className="text-sm font-bold">{category.name}</span>
+              <span className="text-base xs:text-lg">{category.icon}</span>
+              <span className="text-xs xs:text-sm font-bold">{category.name}</span>
             </motion.button>
           ))}
         </div>
 
         {/* Results Counter */}
         <motion.div 
-          className="text-center mt-6 pt-6 border-t border-slate-700/50"
+          className="text-center mt-4 xs:mt-6 pt-4 xs:pt-6 border-t border-slate-700/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          <span className="text-zinc-400 text-sm">
+          <span className="text-zinc-400 text-xs xs:text-sm">
             Mostrando <span className="font-bold text-blue-400">{toolsFiltered.length}</span> herramientas profesionales
             {query !== 'all' && (
               <span> en <span className="text-purple-400 font-bold">
@@ -432,7 +432,7 @@ const Tools = () => {
       </motion.div>
 
       {/* Enhanced Tools Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mobile-grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xs:gap-6">
         <AnimatePresence mode="wait">
           {toolsFiltered.map((tool, i) => (
             <motion.a
@@ -440,7 +440,7 @@ const Tools = () => {
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className='group relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-hidden'
+              className='mobile-card group relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl p-4 xs:p-6 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 xs:hover:-translate-y-2 overflow-hidden touch-target'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
@@ -451,14 +451,14 @@ const Tools = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               
               {/* Tool Icon & Header */}
-              <div className="flex items-start justify-between mb-4 relative z-10">
-                <div className="p-3 bg-slate-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className="flex items-start justify-between mb-3 xs:mb-4 relative z-10">
+                <div className="p-2 xs:p-3 bg-slate-800/50 rounded-xl xs:rounded-2xl group-hover:scale-110 transition-transform duration-300">
                   {tool.icon}
                 </div>
                 
                 {/* Type Badge */}
                 <motion.div 
-                  className={`px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-r ${getTypeColor(tool.type)} text-white shadow-lg`}
+                  className={`px-2 xs:px-3 py-0.5 xs:py-1 text-xs font-bold rounded-full bg-gradient-to-r ${getTypeColor(tool.type)} text-white shadow-lg`}
                   whileHover={{ scale: 1.05 }}
                 >
                   {tool.type}
@@ -466,21 +466,21 @@ const Tools = () => {
               </div>
 
               {/* Tool Info */}
-              <div className="space-y-3 relative z-10">
-                <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+              <div className="space-y-2 xs:space-y-3 relative z-10">
+                <h3 className="text-lg xs:text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
                   {tool.name}
                 </h3>
                 
-                <p className="text-zinc-300 text-sm leading-relaxed group-hover:text-zinc-200 transition-colors duration-300">
+                <p className="text-zinc-300 text-xs xs:text-sm leading-relaxed group-hover:text-zinc-200 transition-colors duration-300">
                   {tool.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 xs:gap-2">
                   {tool.tags.slice(0, 3).map((tag, index) => (
                     <span 
                       key={index}
-                      className="px-2 py-1 text-xs font-medium bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 backdrop-blur-sm"
+                      className="px-1.5 xs:px-2 py-0.5 xs:py-1 text-xs font-medium bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 backdrop-blur-sm"
                     >
                       {tag}
                     </span>
@@ -488,8 +488,8 @@ const Tools = () => {
                 </div>
 
                 {/* Popularity Bar */}
-                <div className="pt-3">
-                  <div className="flex justify-between items-center mb-2">
+                <div className="pt-2 xs:pt-3">
+                  <div className="flex justify-between items-center mb-1.5 xs:mb-2">
                     <span className="text-xs text-zinc-400">Popularidad</span>
                     <span className="text-xs text-zinc-400">{tool.popularity}%</span>
                   </div>
@@ -504,8 +504,9 @@ const Tools = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="flex items-center justify-between pt-3 border-t border-slate-700/50">
-                  <span className="text-xs text-zinc-400">Explorar herramienta</span>
+                <div className="flex items-center justify-between pt-2 xs:pt-3 border-t border-slate-700/50">
+                  <span className="text-xs text-zinc-400 hidden xs:inline">Explorar herramienta</span>
+                  <span className="text-xs text-zinc-400 xs:hidden">Ver</span>
                   <motion.div 
                     className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300"
                     whileHover={{ x: 5 }}
@@ -522,22 +523,22 @@ const Tools = () => {
       {/* No Results State */}
       {toolsFiltered.length === 0 && (
         <motion.div
-          className="text-center py-20"
+          className="text-center py-12 xs:py-16 md:py-20"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-12 mx-auto max-w-lg">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-6 xs:p-8 md:p-12 mx-auto max-w-lg">
+            <div className="text-4xl xs:text-5xl md:text-6xl mb-4">🔍</div>
+            <h3 className="text-xl xs:text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               No hay herramientas en esta categoría
             </h3>
-            <p className="text-zinc-300 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-300 text-sm xs:text-base md:text-lg leading-relaxed mb-4 xs:mb-6">
               Estamos agregando más herramientas profesionales constantemente.
             </p>
             <motion.button
               onClick={() => filtersHandler('all')}
-              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="mobile-btn px-4 xs:px-6 py-2.5 xs:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm xs:text-base touch-target"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

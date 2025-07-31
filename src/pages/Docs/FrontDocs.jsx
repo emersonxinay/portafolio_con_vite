@@ -9,7 +9,7 @@ const FrontDocs = () => {
   const front = [
     {
       name: 'HTML5',
-      icon: <FaHtml5 className='text-6xl text-orange-500' />,
+      icon: <FaHtml5 className='text-3xl xs:text-4xl md:text-6xl text-orange-500' />,
       description: 'Semántica moderna, accesibilidad web, y estructura de documentos para aplicaciones escalables. Incluye Web APIs, localStorage, Canvas, y más.',
       tag: 'Disponible',
       tagColor: 'from-green-500 to-emerald-500',
@@ -20,7 +20,7 @@ const FrontDocs = () => {
     },
     {
       name: 'CSS3',
-      icon: <FaCss3Alt className='text-6xl text-blue-500' />,
+      icon: <FaCss3Alt className='text-3xl xs:text-4xl md:text-6xl text-blue-500' />,
       description: 'CSS moderno con Grid, Flexbox, Custom Properties, animaciones avanzadas, y metodologías BEM/SMACSS para proyectos enterprise.',
       tag: 'Próximamente',
       tagColor: 'from-blue-500 to-cyan-500',
@@ -31,7 +31,7 @@ const FrontDocs = () => {
     },
     {
       name: 'JavaScript ES2024',
-      icon: <IoLogoJavascript className='text-6xl text-yellow-500' />,
+      icon: <IoLogoJavascript className='text-3xl xs:text-4xl md:text-6xl text-yellow-500' />,
       description: 'JavaScript moderno con async/await, modules, destructuring, optional chaining, y patrones avanzados usados en FAANG.',
       tag: 'Próximamente',
       tagColor: 'from-yellow-500 to-orange-500',
@@ -42,7 +42,7 @@ const FrontDocs = () => {
     },
     {
       name: 'TypeScript',
-      icon: <SiTypescript className='text-6xl text-blue-600' />,
+      icon: <SiTypescript className='text-3xl xs:text-4xl md:text-6xl text-blue-600' />,
       description: 'Type safety, interfaces, generics, y arquitecturas enterprise con TypeScript. Configuración avanzada para proyectos escalables.',
       tag: 'Próximamente',
       tagColor: 'from-blue-600 to-purple-500',
@@ -53,7 +53,7 @@ const FrontDocs = () => {
     },
     {
       name: 'React 18',
-      icon: <FaReact className='text-6xl text-cyan-500' />,
+      icon: <FaReact className='text-3xl xs:text-4xl md:text-6xl text-cyan-500' />,
       description: 'React moderno con Hooks, Context, Suspense, Concurrent Features, y patrones de arquitectura para aplicaciones enterprise.',
       tag: 'Próximamente',
       tagColor: 'from-cyan-500 to-blue-500',
@@ -64,7 +64,7 @@ const FrontDocs = () => {
     },
     {
       name: 'Next.js 14',
-      icon: <SiNextdotjs className='text-6xl text-black dark:text-white' />,
+      icon: <SiNextdotjs className='text-3xl xs:text-4xl md:text-6xl text-black dark:text-white' />,
       description: 'Framework full-stack con App Router, Server Components, SSR/SSG, y optimizaciones automáticas para performance enterprise.',
       tag: 'Próximamente',
       tagColor: 'from-gray-700 to-black',
@@ -75,7 +75,7 @@ const FrontDocs = () => {
     },
     {
       name: 'Vue.js 3',
-      icon: <FaVuejs className='text-6xl text-green-500' />,
+      icon: <FaVuejs className='text-3xl xs:text-4xl md:text-6xl text-green-500' />,
       description: 'Composition API, Pinia para state management, y ecosystem completo para aplicaciones reactivas modernas.',
       tag: 'Próximamente',
       tagColor: 'from-green-500 to-emerald-500',
@@ -86,7 +86,7 @@ const FrontDocs = () => {
     },
     {
       name: 'Angular',
-      icon: <FaAngular className='text-6xl text-red-600' />,
+      icon: <FaAngular className='text-3xl xs:text-4xl md:text-6xl text-red-600' />,
       description: 'Framework enterprise con dependency injection, RxJS, Angular CLI, y arquitecturas modulares para aplicaciones complejas.',
       tag: 'Próximamente',
       tagColor: 'from-red-600 to-pink-500',
@@ -97,7 +97,7 @@ const FrontDocs = () => {
     },
     {
       name: 'Tailwind CSS',
-      icon: <SiTailwindcss className='text-6xl text-teal-500' />,
+      icon: <SiTailwindcss className='text-3xl xs:text-4xl md:text-6xl text-teal-500' />,
       description: 'Utility-first CSS framework, configuración avanzada, componentes reutilizables, y design systems para equipos.',
       tag: 'Próximamente',
       tagColor: 'from-teal-500 to-cyan-500',
@@ -108,7 +108,7 @@ const FrontDocs = () => {
     },
     {
       name: 'Vite',
-      icon: <SiVite className='text-6xl text-purple-500' />,
+      icon: <SiVite className='text-3xl xs:text-4xl md:text-6xl text-purple-500' />,
       description: 'Build tool ultrarrápido con HMR, plugins, optimizaciones automáticas, y configuración para proyectos modernos.',
       tag: 'Próximamente',
       tagColor: 'from-purple-500 to-pink-500',
@@ -132,22 +132,22 @@ const FrontDocs = () => {
   }
 
   return (
-    <div className='space-y-8'>
+    <div className='space-y-6 xs:space-y-8'>
       <motion.div
-        className="text-center mb-8"
+        className="text-center mb-6 xs:mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h3 className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-4'>
+        <h3 className='text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-3 xs:mb-4 px-4 xs:px-0'>
           Frontend Technologies
         </h3>
-        <p className="text-zinc-300 text-lg max-w-3xl mx-auto">
+        <p className="text-zinc-300 text-sm xs:text-base md:text-lg max-w-3xl mx-auto px-4 xs:px-0">
           Tecnologías del lado del cliente para crear interfaces modernas, escalables y performantes
         </p>
       </motion.div>
 
-      <div className='grid gap-6 lg:grid-cols-2'>
+      <div className='mobile-grid grid-cols-1 lg:grid-cols-2 gap-4 xs:gap-6'>
         {front.map((tech, i) => (
           <motion.div 
             key={tech.name} 
@@ -159,22 +159,22 @@ const FrontDocs = () => {
           >
             <Link 
               to={tech.link} 
-              className='group relative w-full h-full p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl flex flex-col gap-6 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-hidden'
+              className='mobile-card group relative w-full h-full p-4 xs:p-6 md:p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl flex flex-col gap-4 xs:gap-6 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 xs:hover:-translate-y-2 overflow-hidden touch-target'
             >
               {/* Premium Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               
               {/* Header */}
-              <div className='flex items-start justify-between relative z-10'>
-                <div className='flex items-center gap-4'>
-                  <div className="p-4 bg-slate-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className='flex flex-col xs:flex-row items-start xs:items-start justify-between gap-3 xs:gap-0 relative z-10'>
+                <div className='flex items-center gap-3 xs:gap-4 w-full xs:w-auto'>
+                  <div className="p-2 xs:p-3 md:p-4 bg-slate-800/50 rounded-xl xs:rounded-2xl group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
                   </div>
                   <div>
-                    <h4 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300'>
+                    <h4 className='text-lg xs:text-xl md:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300'>
                       {tech.name}
                     </h4>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="flex items-center gap-1.5 xs:gap-2 mt-1">
                       <span className="text-xs text-zinc-400 font-medium">{tech.level}</span>
                       <div className="w-1 h-1 bg-zinc-500 rounded-full"></div>
                       <span className={`text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r ${getComplexityColor(tech.complexity)}`}>
@@ -186,7 +186,7 @@ const FrontDocs = () => {
 
                 {/* Status Badge */}
                 <motion.div 
-                  className={`px-4 py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.tagColor} text-white shadow-lg`}
+                  className={`px-2 xs:px-3 md:px-4 py-1 xs:py-1.5 md:py-2 text-xs font-bold rounded-full bg-gradient-to-r ${tech.tagColor} text-white shadow-lg flex-shrink-0`}
                   whileHover={{ scale: 1.05 }}
                 >
                   {tech.tag}
@@ -194,16 +194,16 @@ const FrontDocs = () => {
               </div>
 
               {/* Description */}
-              <p className='text-zinc-300 leading-relaxed group-hover:text-zinc-200 transition-colors duration-300 relative z-10'>
+              <p className='text-zinc-300 text-sm xs:text-base leading-relaxed group-hover:text-zinc-200 transition-colors duration-300 relative z-10'>
                 {tech.description}
               </p>
 
               {/* Topics */}
-              <div className="flex flex-wrap gap-2 relative z-10">
+              <div className="flex flex-wrap gap-1.5 xs:gap-2 relative z-10">
                 {tech.topics.map((topic, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 text-xs font-medium bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 backdrop-blur-sm"
+                    className="px-2 xs:px-3 py-0.5 xs:py-1 text-xs font-medium bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 backdrop-blur-sm"
                   >
                     {topic}
                   </span>
@@ -211,7 +211,7 @@ const FrontDocs = () => {
               </div>
 
               {/* Progress Bar */}
-              <div className="relative z-10">
+              <div className="relative z-10 hidden xs:block">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-xs text-zinc-400">Complejidad</span>
                   <span className="text-xs text-zinc-400">{tech.complexity}/5</span>
@@ -227,9 +227,16 @@ const FrontDocs = () => {
               </div>
 
               {/* CTA */}
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50 relative z-10">
-                <div className="text-sm text-zinc-400">
-                  {tech.tag === 'Disponible' ? '📚 Leer documentación' : '⏳ Próximamente'}
+              <div className="flex items-center justify-between pt-3 xs:pt-4 border-t border-slate-700/50 relative z-10">
+                <div className="text-xs xs:text-sm text-zinc-400">
+                  {tech.tag === 'Disponible' ? (
+                    <span className="hidden xs:inline">📚 Leer documentación</span>
+                  ) : (
+                    <span className="hidden xs:inline">⏳ Próximamente</span>
+                  )}
+                  <span className="xs:hidden">
+                    {tech.tag === 'Disponible' ? '📚 Leer' : '⏳ Soon'}
+                  </span>
                 </div>
                 <motion.div 
                   className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300"

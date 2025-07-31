@@ -18,11 +18,12 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          className='fixed inset-0 lg:hidden z-40 bg-slate-900/95 backdrop-blur-2xl flex items-center justify-center safe-area-top safe-area-bottom'
+          className='mobile-menu-overlay lg:hidden flex items-center justify-center safe-area-top safe-area-bottom'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+          onClick={closeMenu}
         >
           {/* Enhanced Mobile Menu */}
           <motion.div 
@@ -31,6 +32,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Menu Title */}
             <motion.div 
@@ -60,10 +62,8 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                     <Link
                       to={item.to}
                       onClick={closeMenu}
-                      className={`group flex items-center gap-3 xs:gap-4 p-3 xs:p-4 rounded-2xl transition-all duration-300 mobile-btn ${
-                        isActive 
-                          ? 'bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-400/30 shadow-lg shadow-cyan-500/10' 
-                          : 'bg-slate-800/30 hover:bg-slate-700/50 border border-slate-700/30'
+                      className={`mobile-menu-item group flex items-center gap-3 xs:gap-4 ${
+                        isActive ? 'active' : ''
                       }`}
                     >
                       <motion.div 

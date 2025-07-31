@@ -313,10 +313,10 @@ const ContactModal = ({ isOpen, onClose }) => {
                 También puedes contactarme directamente:
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 xs:gap-6 text-xs xs:text-sm">
-                <a href="mailto:emerson@example.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  📧 emerson@example.com
+                <a href="mailto:xinayespinoza@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  📧 xinayespinoza@gmail.com
                 </a>
-                <a href="https://wa.me/15551234567" className="text-green-400 hover:text-green-300 transition-colors">
+                <a href="https://wa.me/51974361728" className="text-green-400 hover:text-green-300 transition-colors">
                   📱 WhatsApp
                 </a>
                 <a href="https://linkedin.com/in/yourusername" className="text-blue-500 hover:text-blue-400 transition-colors">

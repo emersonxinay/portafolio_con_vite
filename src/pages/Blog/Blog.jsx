@@ -54,7 +54,7 @@ const Blog = () => {
 
   return (
     <motion.div
-      className='mobile-container relative w-full min-h-screen flex flex-col gap-8 xs:gap-12 md:gap-16 pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 safe-area-top safe-area-bottom'
+      className='mobile-container relative w-full min-h-screen flex flex-col gap-6 xs:gap-8 sm:gap-12 md:gap-16 pt-16 xs:pt-20 sm:pt-24 md:pt-32 pb-12 xs:pb-16 sm:pb-24 md:pb-32 safe-area-top safe-area-bottom ultra-responsive'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -137,26 +137,26 @@ const Blog = () => {
 
       {/* Enhanced Search and Filter Section */}
       <motion.div 
-        className='mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8'
+        className='mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-3 xs:p-4 sm:p-6 md:p-8'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}>
         
-        <div className='flex flex-col sm:flex-row gap-4 xs:gap-6 items-stretch sm:items-center justify-between'>
+        <div className='flex flex-col sm:flex-row gap-3 xs:gap-4 sm:gap-6 items-stretch sm:items-center justify-between'>
           {/* Search Bar */}
           <div className='relative flex-1 w-full sm:max-w-md'>
-            <BsSearch className='absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400 z-10' />
+            <BsSearch className='absolute left-3 xs:left-4 top-1/2 transform -translate-y-1/2 text-blue-400 z-10 text-sm xs:text-base' />
             <input
               type='text'
-              placeholder='Buscar por título, tecnología o concepto...'
+              placeholder='Buscar artículos...'
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className='mobile-btn w-full pl-10 xs:pl-12 pr-4 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 hover:border-slate-500/70 text-sm xs:text-base'
+              className='mobile-input w-full pl-9 xs:pl-12 pr-4'
             />
             {searchTerm && (
               <motion.button
                 onClick={() => setSearchTerm('')}
-                className='absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors'
+                className='absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors touch-target'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
@@ -167,21 +167,28 @@ const Blog = () => {
           </div>
 
           {/* Category Filter */}
-          <div className='flex flex-col xs:flex-row items-start xs:items-center gap-2 xs:gap-4 w-full sm:w-auto'>
+          <div className='flex flex-col xs:flex-row items-start xs:items-center gap-2 xs:gap-3 sm:gap-4 w-full sm:w-auto'>
             <div className='flex items-center gap-2'>
-              <BiCategory className='text-purple-400 text-xl' />
-              <span className='text-zinc-300 font-medium'>Filtrar:</span>
+              <BiCategory className='text-purple-400 text-lg xs:text-xl' />
+              <span className='text-zinc-300 font-medium text-sm xs:text-base'>Filtrar:</span>
             </div>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className='mobile-btn w-full xs:w-auto px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300 hover:border-slate-500/70 cursor-pointer text-sm xs:text-base'>
-              {categories.map(category => (
-                <option key={category} value={category} className='bg-slate-800'>
-                  {category === 'all' ? '📚 Todas las categorías' : `🔧 ${category.charAt(0).toUpperCase() + category.slice(1)}`}
-                </option>
-              ))}
-            </select>
+            <div className='relative w-full xs:w-auto min-w-0 xs:min-w-[180px] sm:min-w-[200px]'>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className='mobile-input w-full pr-8 appearance-none cursor-pointer'>
+                {categories.map(category => (
+                  <option key={category} value={category} className='bg-slate-800'>
+                    {category === 'all' ? '📚 Todas las categorías' : `🔧 ${category.charAt(0).toUpperCase() + category.slice(1)}`}
+                  </option>
+                ))}
+              </select>
+              <div className='absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none'>
+                <svg className='w-4 h-4 text-zinc-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 

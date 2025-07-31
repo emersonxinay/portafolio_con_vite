@@ -82,62 +82,31 @@ const Contact = () => {
         </div>
       </motion.div>
 
-      {/* Social Media - Mobile optimized */}
-      <div className='mobile-grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5'>
-        <motion.a 
-          href='https://www.linkedin.com/in/emerson-espinoza-aguirre/' 
-          target={'_blank'} 
-          aria-label='LinkedIn' 
-          className='touch-target h-full w-full bg-gradient-to-r from-sky-500 to-sky-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#0284c7] hover:scale-105 transition-transform'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <i className='fab fa-linkedin-in text-2xl sm:text-3xl drop-shadow-2xl'></i>
-        </motion.a>
-        
-        <motion.a 
-          href='https://github.com/emersonxinay' 
-          target={'_blank'} 
-          aria-label='GitHub' 
-          className='touch-target h-full w-full bg-gradient-to-r from-slate-600 to-slate-800 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#334155] hover:scale-105 transition-transform'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <i className='fab fa-github text-2xl sm:text-3xl drop-shadow-2xl'></i>
-        </motion.a>
-        
-        <motion.a 
-          href='https://www.youtube.com/@compilandocode' 
-          target={'_blank'} 
-          aria-label='YouTube' 
-          className='touch-target h-full w-full bg-gradient-to-r from-red-500 to-red-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#c8102e] hover:scale-105 transition-transform'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <i className='fab fa-youtube text-2xl sm:text-3xl text-white-600 drop-shadow-2xl'></i>
-        </motion.a>
-
-        <motion.a 
-          href='https://wa.me/51974361728' 
-          target={'_blank'} 
-          aria-label='WhatsApp' 
-          className='touch-target h-full w-full bg-gradient-to-r from-green-500 to-green-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#16a34a] hover:scale-105 transition-transform'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <i className='fab fa-whatsapp text-2xl sm:text-3xl drop-shadow-2xl'></i>
-        </motion.a>
-        
-        <motion.a 
-          href='mailto:xinayespinoza@gmail.com' 
-          aria-label='Email' 
-          className='touch-target h-full w-full bg-gradient-to-r from-purple-500 to-purple-700 ring-0 rounded-lg lg:rounded-xl grid place-content-center py-6 sm:py-8 shadow-[0px_0px_10px_1px_#7c3aed] hover:scale-105 transition-transform'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <i className='fas fa-envelope text-2xl sm:text-3xl drop-shadow-2xl'></i>
-        </motion.a>
-      </div>
+      {/* Additional Contact Info */}
+      <motion.div 
+        className="text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <p className="text-zinc-400 text-sm mb-4">
+          ¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 text-xs text-zinc-500">
+          <span className="flex items-center gap-1">
+            <i className="fas fa-clock text-blue-400"></i>
+            Respuesta en 24h
+          </span>
+          <span className="flex items-center gap-1">
+            <i className="fas fa-shield-alt text-green-400"></i>
+            Consulta gratuita
+          </span>
+          <span className="flex items-center gap-1">
+            <i className="fas fa-handshake text-purple-400"></i>
+            Sin compromiso
+          </span>
+        </div>
+      </motion.div>
     </div>
   )
 }

@@ -35,13 +35,13 @@ const Language = ({ scrolled }) => {
           animate={{ rotate: dropdown ? 360 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          {i18n.language == 'EN' 
+          {i18n.language === 'EN' 
             ? <img src={English} alt='English' className='w-5 h-5 rounded-sm object-cover ring-1 ring-slate-400/30' /> 
             : <img src={Spanish} alt='Español' className='w-5 h-5 rounded-sm object-cover ring-1 ring-slate-400/30' />
           }
         </motion.div>
         <span className='text-sm font-semibold text-zinc-300 group-hover:text-white transition-colors'>
-          {i18n.language == 'EN' ? 'EN' : 'ES'}
+          {i18n.language === 'EN' ? 'EN' : 'ES'}
         </span>
         <motion.svg 
           xmlns="http://www.w3.org/2000/svg" 

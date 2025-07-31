@@ -26,42 +26,42 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/emersonxinay',
       color: 'hover:text-gray-400',
       bgColor: 'hover:bg-gray-400/10'
     },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/emerson-espinoza-aguirre',
       color: 'hover:text-blue-500',
       bgColor: 'hover:bg-blue-500/10'
     },
     {
       name: 'Twitter',
       icon: FaTwitter,
-      url: 'https://twitter.com/yourusername',
+      url: 'https://twitter.com/compilandocode',
       color: 'hover:text-sky-400',
       bgColor: 'hover:bg-sky-400/10'
     },
     {
       name: 'Instagram',
       icon: FaInstagram,
-      url: 'https://instagram.com/yourusername',
+      url: 'https://instagram.com/emersonxinay',
       color: 'hover:text-pink-500',
       bgColor: 'hover:bg-pink-500/10'
     },
     {
       name: 'YouTube',
       icon: FaYoutube,
-      url: 'https://youtube.com/@yourusername',
+      url: 'https://youtube.com/@compilandocode',
       color: 'hover:text-red-500',
       bgColor: 'hover:bg-red-500/10'
     },
     {
       name: 'Discord',
       icon: SiDiscord,
-      url: 'https://discord.gg/yourusername',
+      url: 'https://discord.gg/compilandocode',
       color: 'hover:text-indigo-500',
       bgColor: 'hover:bg-indigo-500/10'
     }
@@ -70,20 +70,20 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FaEnvelope,
-      text: 'emerson@example.com',
-      href: 'mailto:emerson@example.com',
+      text: 'xinayespinoza@gmail.com',
+      href: 'mailto:xinayespinoza@gmail.com',
       color: 'text-blue-400'
     },
     {
       icon: FaWhatsapp,
-      text: '+1 (555) 123-4567',
-      href: 'https://wa.me/15551234567',
+      text: '+51 974361728',
+      href: 'https://wa.me/51974361728',
       color: 'text-green-400'
     },
     {
       icon: FaMapMarkerAlt,
-      text: 'San Francisco, CA',
-      href: 'https://maps.google.com/?q=San+Francisco,CA',
+      text: 'Latam',
+      href: 'https://maps.google.com/?q=Lima',
       color: 'text-red-400'
     }
   ]
@@ -352,7 +352,7 @@ const Footer = () => {
             </motion.div>
             <span>y mucho</span>
             <FaCode className="text-blue-400" />
-            <span className="hidden xs:inline">en San Francisco</span>
+            
           </motion.div>
         </motion.div>
       </div>

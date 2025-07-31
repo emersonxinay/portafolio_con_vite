@@ -49,7 +49,7 @@ const Docs = () => {
 
   return (
     <motion.div 
-      className='mobile-container relative w-full min-h-screen flex flex-col gap-8 xs:gap-12 md:gap-16 pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 safe-area-top safe-area-bottom'
+      className='mobile-container relative w-full min-h-screen flex flex-col gap-6 xs:gap-8 sm:gap-12 md:gap-16 pt-16 xs:pt-20 sm:pt-24 md:pt-32 pb-12 xs:pb-16 sm:pb-24 md:pb-32 safe-area-top safe-area-bottom ultra-responsive'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -138,37 +138,37 @@ const Docs = () => {
 
       {/* Enhanced Tab Navigation */}
       <motion.div
-        className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8"
+        className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-3 xs:p-4 sm:p-6 md:p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 mb-6 xs:mb-8">
+        <div className="mobile-grid-sm grid-cols-2 lg:grid-cols-4 mb-4 xs:mb-6 sm:mb-8">
           {tabs.map((tab) => {
             const IconComponent = tab.icon
             return (
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`mobile-btn relative p-4 xs:p-6 rounded-xl xs:rounded-2xl font-bold transition-all duration-300 group touch-target ${
+                className={`mobile-btn relative p-3 xs:p-4 sm:p-6 rounded-lg xs:rounded-xl sm:rounded-2xl font-bold transition-all duration-300 group touch-target ${
                   activeTab === tab.id
-                    ? `bg-gradient-to-r ${tab.gradient} text-white shadow-2xl`
+                    ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg shadow-blue-500/25`
                     : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50'
                 }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div className="flex flex-col items-center gap-2 xs:gap-3">
-                  <IconComponent className="text-2xl xs:text-3xl" />
+                <div className="flex flex-col items-center gap-1.5 xs:gap-2 sm:gap-3">
+                  <IconComponent className="text-lg xs:text-xl sm:text-2xl lg:text-3xl" />
                   <div className="text-center">
-                    <div className="text-sm xs:text-base lg:text-lg font-bold">{tab.title}</div>
-                    <div className="text-xs opacity-75 hidden xs:block">{tab.description}</div>
+                    <div className="text-xs xs:text-sm sm:text-base lg:text-lg font-bold leading-tight">{tab.title}</div>
+                    <div className="text-xs opacity-75 hidden sm:block leading-tight mt-0.5">{tab.description}</div>
                   </div>
                 </div>
                 
                 {activeTab === tab.id && (
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-2xl"
+                    className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-lg xs:rounded-xl sm:rounded-2xl"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}

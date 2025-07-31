@@ -303,7 +303,7 @@ const Tools = () => {
 
   return (
     <motion.div 
-      className='mobile-container relative w-full min-h-screen flex flex-col gap-8 xs:gap-12 md:gap-16 pt-20 xs:pt-24 md:pt-32 pb-16 xs:pb-24 md:pb-32 safe-area-top safe-area-bottom'
+      className='mobile-container relative w-full min-h-screen flex flex-col gap-6 xs:gap-8 sm:gap-12 md:gap-16 pt-16 xs:pt-20 sm:pt-24 md:pt-32 pb-12 xs:pb-16 sm:pb-24 md:pb-32 safe-area-top safe-area-bottom ultra-responsive'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -386,29 +386,36 @@ const Tools = () => {
 
       {/* Enhanced Categories */}
       <motion.div
-        className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8"
+        className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-3 xs:p-4 sm:p-6 md:p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <div className='flex gap-2 xs:gap-3 justify-center items-center flex-wrap'>
+        <div className='grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-2 xs:gap-3 justify-items-center'>
           {categories.map((category, i) => (
             <motion.button
               key={category.id}
               onClick={() => filtersHandler(category.id)}
-              className={`mobile-btn flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 md:px-6 py-2 xs:py-2.5 md:py-3 rounded-xl xs:rounded-2xl font-bold transition-all duration-300 text-sm xs:text-base touch-target ${
+              className={`mobile-btn-sm w-full flex flex-col xs:flex-row items-center justify-center gap-1 xs:gap-1.5 p-2 xs:p-3 rounded-lg xs:rounded-xl font-bold transition-all duration-300 text-xs xs:text-sm touch-target ${
                 query === category.id
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105 xs:scale-110`
-                  : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50 hover:scale-105'
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg shadow-blue-500/25`
+                  : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50 hover:border-slate-500/70'
               }`}
-              whileHover={{ scale: query === category.id ? 1.1 : 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + i * 0.1 }}
             >
-              <span className="text-base xs:text-lg">{category.icon}</span>
-              <span className="text-xs xs:text-sm font-bold">{category.name}</span>
+              <span className="text-sm xs:text-base">{category.icon}</span>
+              <span className="text-xs xs:text-sm font-bold text-center leading-tight">{category.name}</span>
+              {query === category.id && (
+                <motion.div
+                  className="w-1 h-1 xs:w-1.5 xs:h-1.5 bg-white rounded-full xs:ml-1"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                />
+              )}
             </motion.button>
           ))}
         </div>

@@ -80,7 +80,7 @@ const HeroSimple = () => {
         />
       </div>
 
-      <div className="text-center max-w-4xl mx-auto relative z-10 px-4">
+      <div className="text-center max-w-4xl mx-auto relative z-10 px-4 my-16">
         {/* Badge de disponibilidad */}
         <motion.div
           className="inline-flex items-center gap-2 mobile-card bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-400/30 rounded-full px-4 py-2 mb-8"

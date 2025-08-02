@@ -84,7 +84,7 @@ const Hero = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <div className="h-1 w-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
                   <span className='text-zinc-300 text-xs xs:text-sm font-medium tracking-wide uppercase'>
-                    Senior Software Engineer
+                    Senior Software Engineer & Tech Lead
                   </span>
                 </div>
                 <p className="text-cyan-400 text-xs xs:text-sm font-medium">

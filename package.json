@@ -23,6 +23,7 @@
     "react-code-space": "^0.2.0",
     "react-confetti-explosion": "^2.0.2",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-hot-toast": "^2.4.0",
     "react-i18next": "^12.2.0",
     "react-icons": "^4.7.1",

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import SEOHead from '../../components/SEO/SEOHead';
 
 const CVCorporate = () => {
   const { t, i18n } = useTranslation(['translation']);
@@ -169,8 +170,52 @@ const CVCorporate = () => {
     pdf.save(fileName);
   };
 
+  const corporateStructuredData = {
+    "@context": "https://schema.org",
+    "@type": ["Person", "Resume"],
+    "name": "Emerson Espinoza Aguirre",
+    "jobTitle": "Senior Software Engineer & Tech Lead",
+    "description": "CV empresarial de Emerson Espinoza, especialista en soluciones tecnológicas escalables. CTO con track record de $2M+ en ahorros generados y 99.9% uptime en sistemas críticos",
+    "url": "https://emersonespinoza.com/cv/corporate",
+    "image": "https://emersonespinoza.com/assets/emerson-espinoza-5579c795.jpeg",
+    "knowsAbout": [
+      "Python", "React", "Machine Learning", "Artificial Intelligence", "FastAPI", "PostgreSQL",
+      "Docker", "Kubernetes", "Microservices", "Software Architecture", "Technical Leadership"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Senior Software Engineer",
+      "occupationLocation": {
+        "@type": "City",
+        "name": "Santiago, Chile"
+      }
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Technical Leadership & Software Architecture Consulting",
+        "description": "Consultoría en liderazgo técnico, arquitectura de software, IA/ML y transformación digital"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800">
+      <SEOHead 
+        title={currentLanguage === 'ES'
+          ? "CV Empresarial Emerson Espinoza - CTO & Tech Lead | Consultor IA/ML"
+          : "Emerson Espinoza Corporate Resume - CTO & Tech Lead | AI/ML Consultant"
+        }
+        description={currentLanguage === 'ES'
+          ? "CV empresarial de Emerson Espinoza, Senior Software Engineer & CTO con 6+ años liderando transformación digital. Especialista en IA/ML, Python, React. Track record: $2M+ ahorros, 99.9% uptime, 200+ desarrolladores formados. Consultor técnico para startups y empresas Fortune 500."
+          : "Corporate resume of Emerson Espinoza, Senior Software Engineer & CTO with 6+ years leading digital transformation. AI/ML specialist, Python, React. Track record: $2M+ savings, 99.9% uptime, 200+ developers trained. Technical consultant for startups and Fortune 500 companies."
+        }
+        keywords="Emerson Espinoza CTO, Corporate Resume, Tech Lead, Senior Software Engineer, AI ML Consultant, Python Expert, React Developer, Technical Leadership, Software Architecture, Startup CTO, Enterprise Solutions, Digital Transformation Santiago Chile"
+        url="https://emersonespinoza.com/cv/corporate"
+        canonical="https://emersonespinoza.com/cv/corporate"
+        structuredData={corporateStructuredData}
+      />
       {/* Mobile-first styles */}
       <style jsx>{`
         @media print {

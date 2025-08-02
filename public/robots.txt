@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Specific bot permissions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block common unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://emersonespinoza.com/sitemap.xml
+
+# Additional sitemaps (if any)
+# Sitemap: https://emersonespinoza.com/blog-sitemap.xml
+# Sitemap: https://emersonespinoza.com/projects-sitemap.xml
+
+# Clean URLs and performance
+Host: https://emersonespinoza.com

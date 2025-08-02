@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import SEOHead from '../../components/SEO/SEOHead';
 
 const CVHarvard = () => {
   const { t, i18n } = useTranslation(['translation']);
@@ -137,8 +138,60 @@ const CVHarvard = () => {
     pdf.save(fileName);
   };
 
+  const harvardStructuredData = {
+    "@context": "https://schema.org",
+    "@type": ["Person", "Resume"],
+    "name": "Emerson Espinoza Aguirre",
+    "jobTitle": "Senior Software Engineer & Tech Lead", 
+    "description": "CV académico estilo Harvard de Emerson Espinoza, Senior Software Engineer con 6+ años de experiencia liderando proyectos tecnológicos",
+    "url": "https://emersonespinoza.com/cv/harvard",
+    "image": "https://emersonespinoza.com/assets/emerson-espinoza-5579c795.jpeg",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad Nacional Hermilio Valdizán"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Ingeniero de Sistemas",
+        "educationalLevel": "Bachelor's Degree"
+      },
+      {
+        "@type": "EducationalOccupationalCredential", 
+        "name": "Full Stack Web Development",
+        "credentialCategory": "Professional Certification"
+      }
+    ],
+    "workExperience": [
+      {
+        "@type": "WorkExperience",
+        "jobTitle": "Founder & Chief Technology Officer",
+        "employer": {
+          "@type": "Organization",
+          "name": "CompilandoCode"
+        },
+        "startDate": "2022-02",
+        "responsibilities": "Fundé empresa tecnología educativa sirviendo 500+ estudiantes en Latinoamérica"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white text-black">
+      <SEOHead 
+        title={currentLanguage === 'ES' 
+          ? "CV Emerson Espinoza - Ingeniero de Sistemas | Currículum Harvard Style" 
+          : "Emerson Espinoza Resume - Systems Engineer | Harvard Style CV"
+        }
+        description={currentLanguage === 'ES'
+          ? "Currículum Vitae académico de Emerson Espinoza, Ingeniero de Sistemas con 6+ años de experiencia. Senior Software Engineer especialista en Python, React, IA/ML. CTO & Tech Lead con historial comprobado en arquitecturas escalables."
+          : "Academic Curriculum Vitae of Emerson Espinoza, Systems Engineer with 6+ years of experience. Senior Software Engineer specializing in Python, React, AI/ML. CTO & Tech Lead with proven track record in scalable architectures."
+        }
+        keywords="Emerson Espinoza CV, Currículum Vitae, Harvard Style Resume, Ingeniero Sistemas, Senior Software Engineer, Python Developer, React Developer, Tech Lead CTO, Machine Learning Engineer, Santiago Chile, CV Download PDF"
+        url="https://emersonespinoza.com/cv/harvard"
+        canonical="https://emersonespinoza.com/cv/harvard"
+        structuredData={harvardStructuredData}
+      />
       {/* Mobile-first styles */}
       <style jsx>{`
         @media print {

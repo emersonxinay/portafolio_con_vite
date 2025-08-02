@@ -97,7 +97,7 @@ const Nav = () => {
 
             {/* Language & Menu Container */}
             <div className='flex items-center gap-2 xs:gap-4'>
-              <Language scrolled={scrolled} />
+              <Language scrolled={scrolled} path={path} />
               <Menu scrolled={scrolled} />
             </div>
           </div>

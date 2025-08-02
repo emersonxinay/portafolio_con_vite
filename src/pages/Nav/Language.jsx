@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
 
-const Language = ({ scrolled }) => {
+const Language = ({ scrolled, path }) => {
   const { i18n } = useTranslation()
   const [dropdown, setDropdown] = useState(false)
 
@@ -15,6 +15,12 @@ const Language = ({ scrolled }) => {
     setDropdown(false)
     if (boolean) toast.success('Language changed to English')
     else toast.success('Idioma cambiado a Español')
+  }
+
+  // Hide language component in CV routes
+  const isCVRoute = path.includes('/cv/corporate') || path.includes('/cv/harvard')
+  if (isCVRoute) {
+    return null
   }
 
   return (

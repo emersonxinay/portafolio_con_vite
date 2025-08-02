@@ -1,94 +1,101 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
 const CVHarvard = () => {
-  const { t } = useTranslation(['translation']);
+  const { t, i18n } = useTranslation(['translation']);
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+
+  const toggleLanguage = () => {
+    const newLanguage = currentLanguage === 'ES' ? 'EN' : 'ES';
+    i18n.changeLanguage(newLanguage);
+    setCurrentLanguage(newLanguage);
+  };
 
   const education = [
     {
-      degree: "Ingeniero de Sistemas",
-      institution: "Universidad Nacional Hermilio Valdizan",
-      location: "Huacho, Perú",
-      year: "2013-2018",
-      honors: "Graduado"
+      degree: t('cv.harvard.education.degree'),
+      institution: t('cv.harvard.education.university'),
+      location: t('cv.harvard.education.location'),
+      year: t('cv.harvard.education.period'),
+      honors: t('cv.harvard.education.status')
     },
     {
-      degree: "Especialización en Full Stack Web Development",
-      institution: "Desafío Latam",
-      location: "Santiago, Chile",
-      year: "2019-2020"
+      degree: t('cv.harvard.education.specialization1'),
+      institution: t('cv.harvard.education.institution1'),
+      location: t('cv.harvard.education.location1'),
+      year: t('cv.harvard.education.period1')
     },
     {
-      degree: "Especialización en Python y Machine Learning",
-      institution: "Platzi",
+      degree: t('cv.harvard.education.specialization2'),
+      institution: t('cv.harvard.education.institution2'),
+      location: t('cv.harvard.education.location2'),
+      year: t('cv.harvard.education.period2')
+    },
+    {
+      degree: t('cv.harvard.education.continuous'),
+      institution: t('cv.harvard.education.platforms'),
       location: "Online",
-      year: "2021"
-    },
-    {
-      degree: "Actualización constante",
-      institution: "plataformas como Udemy, Coursera, EdTeam, Youtube",
-      location: "Online",
-      year: "siempre activo",
+      year: t('cv.harvard.education.always')
     }
   ];
 
   const projects = [
     {
-      title: "Sistema de Gestión Restaurante Hazuki",
-      description: "Plataforma completa para manejo de pedidos, inventario y reportes",
-      year: "2019",
-      tech: "Python, Flask, PostgreSQL, React"
+      title: t('cv.harvard.projects.hazuki_title'),
+      description: t('cv.harvard.projects.hazuki_description'),
+      year: t('cv.harvard.projects.hazuki_year'),
+      tech: t('cv.harvard.projects.hazuki_tech')
     },
     {
-      title: "CompilandoCode - Plataforma Educativa",
-      description: "LMS con más de 500 estudiantes activos y sistema de evaluación automática",
-      year: "2022",
-      tech: "React, FastAPI, MongoDB, Docker"
+      title: t('cv.harvard.projects.compilando_title'),
+      description: t('cv.harvard.projects.compilando_description'),
+      year: t('cv.harvard.projects.compilando_year'),
+      tech: t('cv.harvard.projects.compilando_tech')
     }
   ];
 
   const certifications = [
     {
-      title: "Full Stack Web Development",
-      organization: "Desafío Latam",
-      year: "2020"
+      title: t('cv.harvard.certifications.fullstack'),
+      organization: t('cv.harvard.certifications.fullstack_org'),
+      year: t('cv.harvard.certifications.fullstack_year')
     },
     {
-      title: "Python para Data Science e IA",
-      organization: "Platzi",
-      year: "2022"
+      title: t('cv.harvard.certifications.python'),
+      organization: t('cv.harvard.certifications.python_org'),
+      year: t('cv.harvard.certifications.python_year')
     },
     {
-      title: "Docker y Kubernetes",
-      organization: "Udemy",
-      year: "2023"
+      title: t('cv.harvard.certifications.docker'),
+      organization: t('cv.harvard.certifications.docker_org'),
+      year: t('cv.harvard.certifications.docker_year')
     }
   ];
 
   const achievements = [
     {
-      title: "Optimización de Performance en Sistemas Enterprise",
-      description: "Lideré implementación de arquitectura microservicios resultando en 70% mejora performance",
-      period: "2020-2021",
-      impact: "50K+ transacciones/mes procesadas"
+      title: t('cv.harvard.achievements.performance_title'),
+      description: t('cv.harvard.achievements.performance_description'),
+      period: t('cv.harvard.achievements.performance_period'),
+      impact: t('cv.harvard.achievements.performance_impact')
     },
     {
-      title: "Desarrollo Plataforma Educativa Escalable",
-      description: "Construí sistema LMS soportando 1000+ usuarios concurrentes con 99.9% uptime",
-      period: "2022-2023",
-      impact: "500+ estudiantes formados"
+      title: t('cv.harvard.achievements.platform_title'),
+      description: t('cv.harvard.achievements.platform_description'),
+      period: t('cv.harvard.achievements.platform_period'),
+      impact: t('cv.harvard.achievements.platform_impact')
     }
   ];
 
   const downloadPDF = async () => {
     const element = document.getElementById('cv-content');
-    
+
     // Asegurar que las animaciones estén completas
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     const canvas = await html2canvas(element, {
       scale: 1.5,
       useCORS: true,
@@ -101,20 +108,20 @@ const CVHarvard = () => {
 
     const imgData = canvas.toDataURL('image/png');
     const pdf = new jsPDF('p', 'mm', 'a4');
-    
+
     const pageWidth = 210; // A4 width in mm
     const pageHeight = 297; // A4 height in mm  
     const margin = 10; // margin in mm
     const imgWidth = pageWidth - (margin * 2);
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
-    
+
     let position = margin;
     let heightLeft = imgHeight;
-    
+
     // Primera página
     pdf.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
     heightLeft -= (pageHeight - margin * 2);
-    
+
     // Páginas adicionales
     while (heightLeft > 0) {
       position = -(imgHeight - heightLeft) + margin;
@@ -123,7 +130,11 @@ const CVHarvard = () => {
       heightLeft -= (pageHeight - margin * 2);
     }
 
-    pdf.save('Emerson_Espinoza_CV_Harvard.pdf');
+    const fileName = currentLanguage === 'ES'
+      ? 'Emerson_Espinoza_CV_Harvard_ES.pdf'
+      : 'Emerson_Espinoza_CV_Harvard_EN.pdf';
+
+    pdf.save(fileName);
   };
 
   return (
@@ -137,11 +148,17 @@ const CVHarvard = () => {
         }
         
         /* Mobile-first responsive text */
-        .responsive-title { font-size: 1.5rem; }
-        .responsive-subtitle { font-size: 1rem; }
-        .responsive-text { font-size: 0.875rem; }
+        .responsive-title { font-size: 1.25rem; }
+        .responsive-subtitle { font-size: 0.875rem; }
+        .responsive-text { font-size: 0.75rem; }
         
         @media (min-width: 640px) {
+          .responsive-title { font-size: 1.5rem; }
+          .responsive-subtitle { font-size: 1rem; }
+          .responsive-text { font-size: 0.875rem; }
+        }
+        
+        @media (min-width: 768px) {
           .responsive-title { font-size: 2rem; }
           .responsive-subtitle { font-size: 1.125rem; }
           .responsive-text { font-size: 0.9375rem; }
@@ -167,68 +184,195 @@ const CVHarvard = () => {
           page-break-inside: avoid;
           break-inside: avoid;
         }
+        
+        /* Enable browser translation */
+        #cv-content {
+          translate: yes;
+        }
+        
+        #cv-content p, #cv-content h1, #cv-content h2, #cv-content h3, #cv-content li {
+          translate: yes;
+        }
+        
+        /* Mobile-first controls */
+        .cv-controls {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 50;
+          background: rgba(15, 23, 42, 0.95);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+          padding: 8px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        @media (min-width: 768px) {
+          .cv-controls {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            left: auto;
+            background: transparent;
+            backdrop-filter: none;
+            border: none;
+            padding: 0;
+            flex-direction: column;
+            width: auto;
+          }
+        }
+        
+        .control-btn {
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          min-width: 44px;
+          min-height: 44px;
+          justify-content: center;
+        }
+        
+        @media (min-width: 640px) {
+          .control-btn {
+            font-size: 14px;
+            padding: 10px 16px;
+          }
+        }
+        
+        @media (min-width: 768px) {
+          .control-btn {
+            margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+        }
+        
+        .lang-btn {
+          background: linear-gradient(135deg, #10b981, #059669);
+          color: white;
+        }
+        
+        .lang-btn:hover {
+          background: linear-gradient(135deg, #059669, #047857);
+          transform: translateY(-1px);
+        }
+        
+        .pdf-btn {
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
+          color: white;
+        }
+        
+        .pdf-btn:hover {
+          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          transform: translateY(-1px);
+        }
+        
+        .cv-title {
+          color: white;
+          font-weight: 600;
+          font-size: 14px;
+          margin: 0;
+        }
+        
+        @media (min-width: 768px) {
+          .cv-title {
+            display: none;
+          }
+        }
       `}</style>
 
-      {/* Fixed Download Button */}
-      <div className="no-print fixed top-4 right-4 z-50">
-        <button
-          onClick={downloadPDF}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-lg text-sm md:text-base"
-        >
-          📄 Descargar PDF
-        </button>
+      {/* Mobile-first Controls */}
+      <div className="cv-controls no-print">
+        <h1 className="cv-title">CV - {t('cv.harvard.title')}</h1>
+        <div className="flex gap-2">
+          <button
+            onClick={toggleLanguage}
+            className="control-btn lang-btn"
+            title={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
+            aria-label={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
+          >
+            <span className="text-xs">🌐</span>
+            <span className="hidden xs:inline">{currentLanguage === 'ES' ? 'EN' : 'ES'}</span>
+          </button>
+          <button
+            onClick={downloadPDF}
+            className="control-btn pdf-btn"
+            aria-label={t('cv.common.download_pdf')}
+          >
+            <span className="text-xs">📄</span>
+            <span className="hidden xs:inline text-xs">PDF</span>
+          </button>
+        </div>
       </div>
 
       {/* CV Content */}
-      <div id="cv-content" className="bg-white text-black">
+      <div id="cv-content" className="bg-white text-black pt-16 md:pt-0 mt-16">
         {/* Header */}
         <motion.header
-          className="text-center py-6 md:py-8 border-b-2 border-gray-800 mt-16 md:mt-0"
+          className="text-center py-6 md:py-8 border-b-2 border-gray-800"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="responsive-title font-bold mb-2 md:mb-4">EMERSON ESPINOZA</h1>
-          <p className="responsive-subtitle text-gray-600 mb-4">Senior Software Engineer & Technical Leader</p>
-          <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-2 md:space-y-0 text-xs md:text-sm text-gray-700 px-4">
-            <span>📧 xinayespinoza@gmail.com</span>
-            <span> <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">🌐 LinkedIn: /in/emerson-espinoza-aguirre</a> </span>
-            <span><a href="http://github.com/emersonxinay" target="_blank" rel="noopener noreferrer">Github: /emersonxinay </a></span>
-            <span>📍Chile y Perú </span>
+          <h1 className="responsive-title font-bold mb-2 md:mb-4">{t('cv.harvard.title')}</h1>
+          <p className="responsive-subtitle text-gray-600 mb-4">{t('cv.harvard.subtitle')}</p>
+          <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-700 px-4">
+            <span>📧 {t('cv.harvard.email')}</span>
+            <span>
+              <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">
+                🌐 {t('cv.harvard.linkedin')}
+              </a>
+            </span>
+            <span>
+              <a href="http://github.com/emersonxinay" target="_blank" rel="noopener noreferrer">
+                {t('cv.harvard.github')}
+              </a>
+            </span>
+            <span>📍{t('cv.harvard.location')}</span>
+          </div>
 
+          {/* Translation note */}
+          <div className="mt-3 text-xs text-gray-500 italic px-4">
+            {t('cv.common.translate_note')}
           </div>
         </motion.header>
 
-        <div className="max-w-4xl mx-auto p-4 md:p-8">
+        <div className="max-w-4xl mx-auto p-3 md:p-8">
 
           {/* Executive Summary */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">RESUMEN EJECUTIVO</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.summary.title')}</h2>
             <p className="responsive-text text-justify leading-relaxed">
-              Ingeniero de Sistemas peruano con 6+ años de experiencia liderando innovación técnica en entornos empresariales.
-              Historial comprobado arquitecturando soluciones escalables que procesan millones de transacciones mientras reducen
-              costos operativos en 60%. Experto en implementación IA/ML, arquitectura de microservicios y liderazgo técnico.
-              Exitosamente mentoré 200+ desarrolladores con 95% tasa de colocación en empresas tecnológicas de primer nivel.
+              {t('cv.harvard.summary.content')}
             </p>
           </motion.section>
 
           {/* Education */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">EDUCACIÓN</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.education.title')}</h2>
             {education.map((edu, index) => (
-              <div key={index} className="mb-3 md:mb-4">
+              <div key={index} className="mb-2 md:mb-4">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start">
-                  <div className="mb-2 md:mb-0">
+                  <div className="mb-1 md:mb-0">
                     <h3 className="font-bold responsive-text">{edu.degree}</h3>
                     <p className="italic text-xs md:text-sm">{edu.institution}, {edu.location}</p>
                     {edu.honors && <p className="text-xs text-gray-600">{edu.honors}</p>}
@@ -241,93 +385,93 @@ const CVHarvard = () => {
 
           {/* Professional Experience */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8 page-break-inside-avoid"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">EXPERIENCIA PROFESIONAL</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.experience.title')}</h2>
 
-            <div className="mb-4 md:mb-6 page-break-inside-avoid">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                <div className="mb-2 md:mb-0">
-                  <h3 className="font-bold responsive-text">Founder & Chief Technology Officer</h3>
-                  <p className="italic text-xs md:text-sm">CompilandoCode, Santiago, Chile</p>
+            <div className="mb-3 md:mb-6 page-break-inside-avoid">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
+                <div className="mb-1 md:mb-0">
+                  <h3 className="font-bold responsive-text">{t('cv.harvard.experience.cto_title')}</h3>
+                  <p className="italic text-xs md:text-sm">{t('cv.harvard.experience.cto_company')}</p>
                 </div>
-                <span className="font-semibold text-xs md:text-sm">Feb 2022 - Presente</span>
+                <span className="font-semibold text-xs md:text-sm">{t('cv.harvard.experience.cto_period')}</span>
               </div>
-              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-4">
-                <li>Fundé empresa tecnología educativa sirviendo 500+ estudiantes en Latinoamérica</li>
-                <li>Desarrollé sistema LMS propietario con personalización potenciada por IA</li>
-                <li>Construí arquitectura plataforma escalable soportando 1000+ usuarios concurrentes</li>
-                <li>Logré 40% mejora retención estudiantil a través optimización curriculum data-driven</li>
+              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-2 md:ml-4">
+                <li>{t('cv.harvard.experience.cto_1')}</li>
+                <li>{t('cv.harvard.experience.cto_2')}</li>
+                <li>{t('cv.harvard.experience.cto_3')}</li>
+                <li>{t('cv.harvard.experience.cto_4')}</li>
               </ul>
             </div>
 
-            <div className="mb-4 md:mb-6 page-break-inside-avoid">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                <div className="mb-2 md:mb-0">
-                  <h3 className="font-bold responsive-text">Lead Technical Instructor</h3>
-                  <p className="italic text-xs md:text-sm">Desafío Latam, Santiago, Chile</p>
+            <div className="mb-3 md:mb-6 page-break-inside-avoid">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
+                <div className="mb-1 md:mb-0">
+                  <h3 className="font-bold responsive-text">{t('cv.harvard.experience.lead_title')}</h3>
+                  <p className="italic text-xs md:text-sm">{t('cv.harvard.experience.lead_company')}</p>
                 </div>
-                <span className="font-semibold text-xs md:text-sm">Nov 2021 - Presente</span>
+                <span className="font-semibold text-xs md:text-sm">{t('cv.harvard.experience.lead_period')}</span>
               </div>
-              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-4">
-                <li>Lideré entrenamiento técnico para 200+ desarrolladores con 95% tasa colocación laboral</li>
-                <li>Diseñé curriculum enterprise adoptado por 5+ instituciones educativas</li>
-                <li>Mentoré equipos desarrollando 50+ aplicaciones producción</li>
-                <li>Establecí partnerships industria resultando en pipeline directo contratación</li>
+              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-2 md:ml-4">
+                <li>{t('cv.harvard.experience.lead_1')}</li>
+                <li>{t('cv.harvard.experience.lead_2')}</li>
+                <li>{t('cv.harvard.experience.lead_3')}</li>
+                <li>{t('cv.harvard.experience.lead_4')}</li>
               </ul>
             </div>
 
-            <div className="mb-4 md:mb-6 page-break-inside-avoid">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                <div className="mb-2 md:mb-0">
-                  <h3 className="font-bold responsive-text">Senior Software Engineer & Tech Lead</h3>
-                  <p className="italic text-xs md:text-sm">Hazuki Restaurant Systems, Santiago, Chile</p>
+            <div className="mb-3 md:mb-6 page-break-inside-avoid">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
+                <div className="mb-1 md:mb-0">
+                  <h3 className="font-bold responsive-text">{t('cv.harvard.experience.senior_title')}</h3>
+                  <p className="italic text-xs md:text-sm">{t('cv.harvard.experience.senior_company')}</p>
                 </div>
-                <span className="font-semibold text-xs md:text-sm">Feb 2018 - 2021</span>
+                <span className="font-semibold text-xs md:text-sm">{t('cv.harvard.experience.senior_period')}</span>
               </div>
-              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-4">
-                <li>Lideré desarrollo de sistema enterprise procesando 50K+ transacciones/mes con 99.9% uptime</li>
-                <li>Implementé arquitectura microservicios reduciendo tiempo respuesta 70%</li>
-                <li>Optimicé infraestructura cloud resultando en $15K reducción costo anual</li>
-                <li>Mentoré desarrolladores junior y establecí mejores prácticas code review</li>
+              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-2 md:ml-4">
+                <li>{t('cv.harvard.experience.senior_1')}</li>
+                <li>{t('cv.harvard.experience.senior_2')}</li>
+                <li>{t('cv.harvard.experience.senior_3')}</li>
+                <li>{t('cv.harvard.experience.senior_4')}</li>
               </ul>
             </div>
 
-            <div className="mb-4 md:mb-6 page-break-inside-avoid">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                <div className="mb-2 md:mb-0">
-                  <h3 className="font-bold responsive-text">Senior Technical Instructor</h3>
-                  <p className="italic text-xs md:text-sm">Código Futuro, Santiago, Chile</p>
+            <div className="mb-3 md:mb-6 page-break-inside-avoid">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
+                <div className="mb-1 md:mb-0">
+                  <h3 className="font-bold responsive-text">{t('cv.harvard.experience.instructor_title')}</h3>
+                  <p className="italic text-xs md:text-sm">{t('cv.harvard.experience.instructor_company')}</p>
                 </div>
-                <span className="font-semibold text-xs md:text-sm">Ago 2022 - Presente</span>
+                <span className="font-semibold text-xs md:text-sm">{t('cv.harvard.experience.instructor_period')}</span>
               </div>
-              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-4">
-                <li>Desarrollé programas especializados en IA y Data Science</li>
-                <li>Implementé metodologías hands-on aumentando engagement 60%</li>
-                <li>Colaboré con industria tech para diseñar contenido relevante</li>
-                <li>Mantuve 4.9/5 rating de satisfacción estudiantil consistentemente</li>
+              <ul className="list-disc list-inside text-xs md:text-sm space-y-1 ml-2 md:ml-4">
+                <li>{t('cv.harvard.experience.instructor_1')}</li>
+                <li>{t('cv.harvard.experience.instructor_2')}</li>
+                <li>{t('cv.harvard.experience.instructor_3')}</li>
+                <li>{t('cv.harvard.experience.instructor_4')}</li>
               </ul>
             </div>
           </motion.section>
 
           {/* Key Projects */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8 page-break-inside-avoid"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">PROYECTOS DESTACADOS</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.projects.title')}</h2>
             {projects.map((proj, index) => (
-              <div key={index} className="mb-4">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+              <div key={index} className="mb-3 md:mb-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
                   <div>
                     <h3 className="font-bold responsive-text">{proj.title}</h3>
                     <p className="text-xs md:text-sm text-gray-600">{proj.description}</p>
-                    <p className="text-xs text-gray-500 mt-1"><strong>Tecnologías:</strong> {proj.tech}</p>
+                    <p className="text-xs text-gray-500 mt-1"><strong>{currentLanguage === 'ES' ? 'Tecnologías:' : 'Technologies:'}</strong> {proj.tech}</p>
                   </div>
                   <span className="font-semibold text-xs md:text-sm">{proj.year}</span>
                 </div>
@@ -337,15 +481,15 @@ const CVHarvard = () => {
 
           {/* Achievements */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8 page-break-inside-avoid"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">LOGROS DESTACADOS</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.achievements.title')}</h2>
             {achievements.map((achievement, index) => (
-              <div key={index} className="mb-4">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+              <div key={index} className="mb-3 md:mb-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
                   <div>
                     <h3 className="font-bold responsive-text">{achievement.title}</h3>
                     <p className="text-xs md:text-sm text-gray-600">{achievement.description}</p>
@@ -359,14 +503,14 @@ const CVHarvard = () => {
 
           {/* Certifications */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">CERTIFICACIONES</h2>
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.certifications.title')}</h2>
             {certifications.map((cert, index) => (
-              <div key={index} className="mb-3 flex flex-col md:flex-row md:justify-between">
+              <div key={index} className="mb-2 md:mb-3 flex flex-col md:flex-row md:justify-between">
                 <div>
                   <p className="font-semibold responsive-text">{cert.title}</p>
                   <p className="italic text-xs md:text-sm">{cert.organization}</p>
@@ -378,44 +522,44 @@ const CVHarvard = () => {
 
           {/* Technical Skills */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">COMPETENCIAS TÉCNICAS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.skills.title')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
               <div>
-                <h3 className="font-bold mb-2 responsive-text">Lenguajes de Programación</h3>
-                <p className="text-xs md:text-sm">Python, JavaScript, TypeScript, Ruby, C#, SQL</p>
+                <h3 className="font-bold mb-1 md:mb-2 responsive-text">{t('cv.harvard.skills.programming_title')}</h3>
+                <p className="text-xs md:text-sm">{t('cv.harvard.skills.programming_list')}</p>
 
-                <h3 className="font-bold mb-2 mt-3 md:mt-4 responsive-text">Frameworks & Librerías</h3>
-                <p className="text-xs md:text-sm">React, Next.js, Flask, FastAPI, Django, Ruby on Rails</p>
+                <h3 className="font-bold mb-1 md:mb-2 mt-2 md:mt-4 responsive-text">{t('cv.harvard.skills.frameworks_title')}</h3>
+                <p className="text-xs md:text-sm">{t('cv.harvard.skills.frameworks_list')}</p>
               </div>
               <div>
-                <h3 className="font-bold mb-2 responsive-text">Cloud & DevOps</h3>
-                <p className="text-xs md:text-sm">DigitalOcean, Docker, Nginx, Git, CI/CD</p>
+                <h3 className="font-bold mb-1 md:mb-2 responsive-text">{t('cv.harvard.skills.cloud_title')}</h3>
+                <p className="text-xs md:text-sm">{t('cv.harvard.skills.cloud_list')}</p>
 
-                <h3 className="font-bold mb-2 mt-3 md:mt-4 responsive-text">Bases de Datos</h3>
-                <p className="text-xs md:text-sm">PostgreSQL, MongoDB, MySQL, Redis</p>
+                <h3 className="font-bold mb-1 md:mb-2 mt-2 md:mt-4 responsive-text">{t('cv.harvard.skills.databases_title')}</h3>
+                <p className="text-xs md:text-sm">{t('cv.harvard.skills.databases_list')}</p>
               </div>
             </div>
           </motion.section>
 
           {/* Languages */}
           <motion.section
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
           >
-            <h2 className="text-lg md:text-2xl font-bold mb-3 md:mb-4 border-b border-gray-300">IDIOMAS</h2>
-            <div className="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
+            <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 border-b border-gray-300">{t('cv.harvard.languages.title')}</h2>
+            <div className="flex flex-col md:flex-row md:space-x-8 space-y-1 md:space-y-0">
               <div>
-                <span className="font-semibold responsive-text">Español:</span> <span className="text-xs md:text-sm">Nativo</span>
+                <span className="font-semibold responsive-text">{t('cv.harvard.languages.spanish')}:</span> <span className="text-xs md:text-sm">{t('cv.harvard.languages.spanish_level')}</span>
               </div>
               <div>
-                <span className="font-semibold responsive-text">Inglés:</span> <span className="text-xs md:text-sm">Intermedio</span>
+                <span className="font-semibold responsive-text">{t('cv.harvard.languages.english')}:</span> <span className="text-xs md:text-sm">{t('cv.harvard.languages.english_level')}</span>
               </div>
             </div>
           </motion.section>

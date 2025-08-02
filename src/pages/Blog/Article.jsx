@@ -17,14 +17,14 @@ import { toast } from 'react-hot-toast';
 const Article = () => {
   let { id } = useParams();
   const article = articles.find((a) => a.url == id);
-  
+
   // Estados para interactividad
   const [isLiked, setIsLiked] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
+
   const handleShare = async () => {
     try {
       if (navigator.share) {
@@ -115,7 +115,7 @@ const Article = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}>
-        
+
         {/* Custom cursor */}
 
         {/* Mouse follower effect */}
@@ -151,7 +151,7 @@ const Article = () => {
             repeatType: 'reverse'
           }}
         />
-        
+
         <motion.div
           className='absolute left-full -translate-x-1/2 top-[100vh] shadow-[0px_0px_300px_50px_#0ea5e9]'
           animate={{
@@ -166,7 +166,7 @@ const Article = () => {
             repeatType: 'reverse'
           }}
         />
-        
+
         <motion.div
           className='absolute -translate-x-1/2 top-full shadow-[0px_0px_300px_50px_#0ea5e9]'
           animate={{
@@ -202,7 +202,7 @@ const Article = () => {
               <span className='font-semibold'>Volver al blog</span>
               <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
             </Link>
-            
+
             {/* Article Progress on Mobile */}
             <div className='flex items-center gap-2 text-sm text-zinc-500 bg-slate-800/50 px-3 py-2 rounded-lg border border-slate-700/30 lg:hidden'>
               <BsClock className='text-blue-400' />
@@ -212,14 +212,14 @@ const Article = () => {
         </motion.div>
 
         {/* Enhanced Article Header */}
-        <motion.div 
+        <motion.div
           className='space-y-8 md:space-y-12 mb-12 md:mb-16'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}>
-          
+
           {/* Enhanced Hero Image */}
-          <motion.div 
+          <motion.div
             className='relative overflow-hidden rounded-2xl md:rounded-3xl group'
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.4 }}>
@@ -231,7 +231,7 @@ const Article = () => {
                 className='w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
-              
+
               {/* Floating elements on image */}
               <div className="absolute top-6 left-6">
                 <motion.div
@@ -253,7 +253,7 @@ const Article = () => {
                   ✨ ARTÍCULO TÉCNICO
                 </motion.div>
               </div>
-              
+
               <div className="absolute bottom-6 right-6">
                 <motion.div
                   className="bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 border border-white/20"
@@ -272,17 +272,17 @@ const Article = () => {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Enhanced Article Meta */}
           <div className='space-y-8'>
             {/* Enhanced Tags */}
-            <motion.div 
+            <motion.div
               className='flex flex-wrap gap-3'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, staggerChildren: 0.1 }}>
               {article.tags.map((tag, index) => (
-                <motion.span 
+                <motion.span
                   key={index}
                   className='px-5 py-2 text-sm font-semibold bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/30 rounded-full hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer backdrop-blur-sm'
                   whileHover={{ scale: 1.05, y: -2 }}
@@ -294,18 +294,18 @@ const Article = () => {
                 </motion.span>
               ))}
             </motion.div>
-            
+
             {/* Enhanced Title */}
-            <motion.h1 
+            <motion.h1
               className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}>
               {article.title}
             </motion.h1>
-            
+
             {/* Enhanced Author Info */}
-            <motion.div 
+            <motion.div
               className='flex items-center gap-6 p-6 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -320,7 +320,7 @@ const Article = () => {
               <div className='flex flex-col gap-2'>
                 <div className='flex items-center gap-3 text-lg'>
                   <a
-                    href='https://www.linkedin.com/in/emerson-espinoza/'
+                    href='https://www.linkedin.com/in/emerson-espinoza-aguirre/'
                     target={'_blank'}
                     className='font-semibold text-white hover:text-blue-400 transition-colors'>
                     Emerson Espinoza
@@ -332,9 +332,9 @@ const Article = () => {
               </div>
             </motion.div>
           </div>
-          
+
           {/* Enhanced Article Stats */}
-          <motion.div 
+          <motion.div
             className='flex flex-wrap items-center justify-between gap-6 pt-8 border-t border-slate-700/50'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -353,10 +353,10 @@ const Article = () => {
                 <span className='font-medium'>1.2k vistas</span>
               </div>
             </div>
-            
+
             {/* Enhanced Action Buttons */}
             <div className='flex items-center gap-3'>
-              <motion.button 
+              <motion.button
                 onClick={handleShare}
                 className='flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-xl transition-all text-sm font-semibold text-blue-400 hover:text-blue-300'
                 whileHover={{ scale: 1.05 }}
@@ -364,27 +364,25 @@ const Article = () => {
                 <BiShare className='text-lg' />
                 <span>Compartir</span>
               </motion.button>
-              
-              <motion.button 
+
+              <motion.button
                 onClick={handleLike}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${
-                  isLiked 
-                    ? 'bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/50 text-red-400' 
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${isLiked
+                    ? 'bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/50 text-red-400'
                     : 'bg-gradient-to-r from-red-500/10 to-pink-500/10 hover:from-red-500/20 hover:to-pink-500/20 border border-red-500/30 hover:border-red-400/50 text-red-400 hover:text-red-300'
-                }`}
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
                 {isLiked ? <BsHeartFill className='text-lg' /> : <BsHeart className='text-lg' />}
                 <span>{isLiked ? 'Te gusta' : 'Me gusta'}</span>
               </motion.button>
-              
-              <motion.button 
+
+              <motion.button
                 onClick={handleBookmark}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${
-                  isBookmarked 
-                    ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/50 text-yellow-400' 
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${isBookmarked
+                    ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/50 text-yellow-400'
                     : 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/30 hover:border-yellow-400/50 text-yellow-400 hover:text-yellow-300'
-                }`}
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
                 {isBookmarked ? <FaBookmark className='text-lg' /> : <FaRegBookmark className='text-lg' />}
@@ -400,14 +398,14 @@ const Article = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}>
-          
+
           {/* Main Article Container with improved readability */}
           <div className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl relative overflow-hidden'>
             {/* Enhanced decorative elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-purple-500/8 to-pink-500/8 rounded-full blur-2xl animate-pulse" />
             <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-xl" />
-            
+
             {/* Content wrapper with better spacing and max-width for readability */}
             <div className='relative p-8 lg:p-16'>
               <div className='max-w-4xl mx-auto'>
@@ -435,11 +433,11 @@ const Article = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Reading progress indicator */}
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden lg:block">
               <div className="w-1 h-32 bg-slate-700/30 rounded-full overflow-hidden">
-                <motion.div 
+                <motion.div
                   className="w-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"
                   style={{ height: `${readingProgress}%` }}
                   initial={{ height: 0 }}
@@ -449,14 +447,14 @@ const Article = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Enhanced Author Section */}
-          <motion.div 
+          <motion.div
             className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 relative overflow-hidden'
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}>
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
-            
+
             <div className='flex items-center gap-8'>
               <motion.img
                 src={emerson}
@@ -486,15 +484,15 @@ const Article = () => {
             </div>
           </motion.div>
         </motion.div>
-        
+
         {/* Table of Contents */}
-        <motion.div 
+        <motion.div
           className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 relative overflow-hidden mb-12'
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}>
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/8 to-purple-500/8 rounded-full blur-3xl" />
-          
+
           <div className='space-y-4'>
             <h3 className='text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-2'>
               <BsClock className='text-indigo-400' />
@@ -521,10 +519,10 @@ const Article = () => {
         <div className='grid rounded-2xl md:rounded-3xl w-full px-4 md:px-8 py-8 md:py-16 bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 gap-8 md:gap-16 lg:grid-cols-12 relative overflow-hidden'>
           {/* Decorative background */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-2xl md:rounded-3xl" />
-          
+
           <div className='grid lg:col-span-8 gap-6 md:gap-8'>
             {/* Newsletter Signup */}
-            <motion.div 
+            <motion.div
               className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-2xl p-6 md:p-8 text-center'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -532,12 +530,12 @@ const Article = () => {
               <h3 className='text-xl md:text-2xl font-bold text-white mb-4'>📧 ¡No te pierdas nada!</h3>
               <p className='text-zinc-300 mb-6 text-sm md:text-base'>Súscribete para recibir mis últimos artículos sobre desarrollo web, IA y tecnología.</p>
               <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto'>
-                <input 
-                  type='email' 
+                <input
+                  type='email'
                   placeholder='tu@email.com'
                   className='flex-1 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-600/50 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500/50 text-sm'
                 />
-                <motion.button 
+                <motion.button
                   className='px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all text-sm'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}>
@@ -545,17 +543,17 @@ const Article = () => {
                 </motion.button>
               </div>
             </motion.div>
-            
+
             {/* Comments placeholder */}
             <div className='text-center py-6 md:py-12'>
               <h3 className='text-xl md:text-2xl font-bold text-zinc-400 mb-4'>Sección de comentarios próximamente</h3>
               <p className='text-zinc-500 text-sm md:text-base'>Estamos trabajando en una experiencia de comentarios interactiva.</p>
             </div>
           </div>
-          
+
           <div className='lg:col-span-4 flex flex-col gap-6 md:gap-8'>
             {/* Enhanced Social Card */}
-            <motion.div 
+            <motion.div
               className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium text-center bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
@@ -581,7 +579,7 @@ const Article = () => {
                 </motion.a>
                 <motion.a
                   target={'_blank'}
-                  href='https://www.linkedin.com/in/emerson-espinoza-aguirre/'
+                  href='https://www.linkedin.com/in/emerson-espinoza-aguirre-aguirre/'
                   className='p-3 bg-slate-700/50 rounded-full hover:bg-blue-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
@@ -613,9 +611,9 @@ const Article = () => {
                 </motion.a>
               </div>
             </motion.div>
-            
+
             {/* Enhanced Tags Card */}
-            <motion.div 
+            <motion.div
               className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
@@ -636,20 +634,20 @@ const Article = () => {
                 ))}
               </div>
             </motion.div>
-            
+
             {/* Enhanced Recent Articles Card */}
-            <motion.div 
+            <motion.div
               className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm relative overflow-hidden'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
               <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-xl" />
-              
+
               <h2 className='text-xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
                 Artículos relacionados
               </h2>
               <div className='space-y-3'>
                 {articles.filter(a => a.url !== article.url).slice(0, 3).map((a) => (
-                  <motion.div 
+                  <motion.div
                     key={a.url}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -661,12 +659,12 @@ const Article = () => {
                       className='block p-4 rounded-xl bg-gradient-to-r from-slate-700/20 to-slate-600/20 hover:from-slate-600/30 hover:to-slate-500/30 transition-all group border border-slate-600/20 hover:border-blue-500/40 relative overflow-hidden'
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-300" />
-                      
+
                       <div className='flex gap-3'>
                         <div className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center border border-blue-500/30'>
                           <span className='text-blue-400 font-bold text-sm'>{a.title.charAt(0)}</span>
                         </div>
-                        
+
                         <div className='flex-1 space-y-2'>
                           <h3 className='text-white group-hover:text-blue-300 transition-colors font-semibold text-sm leading-tight line-clamp-2'>
                             {a.title}
@@ -694,7 +692,7 @@ const Article = () => {
                   </motion.div>
                 ))}
               </div>
-              
+
               <motion.div className='pt-4 border-t border-slate-600/30'>
                 <Link
                   to='/blog'

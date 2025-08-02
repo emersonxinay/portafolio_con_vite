@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import ContactModal from './ContactModal'
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaTwitter, 
-  FaInstagram, 
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
   FaYoutube,
   FaWhatsapp,
   FaEnvelope,
@@ -14,7 +14,7 @@ import {
   FaCode,
   FaRocket
 } from 'react-icons/fa'
-import { 
+import {
   SiDiscord
 } from 'react-icons/si'
 
@@ -33,7 +33,7 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/emerson-espinoza-aguirre',
+      url: 'https://linkedin.com/in/emerson-espinoza-aguirre-aguirre',
       color: 'hover:text-blue-500',
       bgColor: 'hover:bg-blue-500/10'
     },
@@ -124,7 +124,7 @@ const Footer = () => {
   }
 
   return (
-    <motion.footer 
+    <motion.footer
       className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-t border-slate-800/50"
       initial="hidden"
       whileInView="visible"
@@ -158,14 +158,14 @@ const Footer = () => {
       <div className="mobile-container relative z-10 pt-12 xs:pt-16 md:pt-20 pb-6 xs:pb-8 md:pb-10">
         {/* Main Footer Content */}
         <div className="mobile-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 xs:gap-10 md:gap-12 mb-8 xs:mb-12 md:mb-16">
-          
+
           {/* Brand Section */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-2 space-y-4 xs:space-y-6"
             variants={itemVariants}
           >
             <div className="flex items-center gap-3 xs:gap-4">
-              <motion.div 
+              <motion.div
                 className="p-2 xs:p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl xs:rounded-2xl"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
@@ -181,14 +181,14 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            
+
             <p className="text-zinc-300 text-sm xs:text-base leading-relaxed max-w-md">
-              Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise. 
+              Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise.
               Construyendo el futuro digital con código limpio y soluciones innovadoras.
             </p>
 
             {/* Enterprise Badge */}
-            <motion.div 
+            <motion.div
               className="inline-flex items-center gap-2 px-3 xs:px-4 py-2 xs:py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl xs:rounded-2xl backdrop-blur-sm"
               whileHover={{ scale: 1.05 }}
             >
@@ -230,12 +230,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 xs:space-y-3">
               {quickLinks.map((link, index) => (
-                <motion.li 
+                <motion.li
                   key={link.name}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <a 
+                  <a
                     href={link.href}
                     className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 text-sm xs:text-base flex items-center gap-2 group"
                   >
@@ -255,7 +255,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 xs:space-y-3">
               {services.map((service, index) => (
-                <motion.li 
+                <motion.li
                   key={service}
                   className="text-zinc-400 text-sm xs:text-base flex items-center gap-2"
                   whileHover={{ x: 5 }}
@@ -270,13 +270,13 @@ const Footer = () => {
         </div>
 
         {/* Contact Info Bar */}
-        <motion.div 
+        <motion.div
           className="mobile-card bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl p-4 xs:p-6 md:p-8 mb-6 xs:mb-8"
           variants={itemVariants}
         >
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 xs:gap-6">
             <div className="flex items-center gap-2 xs:gap-3">
-              <motion.div 
+              <motion.div
                 className="p-2 xs:p-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -288,7 +288,7 @@ const Footer = () => {
                 <p className="text-zinc-400 text-xs xs:text-sm">Construyamos algo increíble juntos</p>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap items-center justify-center gap-3 xs:gap-4">
               {contactInfo.map((contact, contactIndex) => {
                 const IconComponent = contact.icon
@@ -305,13 +305,13 @@ const Footer = () => {
                     <IconComponent className={`${contact.color} text-sm xs:text-base`} />
                     <span className="hidden xs:inline">{contact.text}</span>
                     <span className="xs:hidden">
-                      {contact.text.includes('@') ? 'Email' : 
-                       contact.text.includes('+') ? 'WhatsApp' : 'Ubicación'}
+                      {contact.text.includes('@') ? 'Email' :
+                        contact.text.includes('+') ? 'WhatsApp' : 'Ubicación'}
                     </span>
                   </motion.a>
                 )
               })}
-              
+
               {/* Contact Modal Trigger Button */}
               <motion.button
                 onClick={() => setIsContactModalOpen(true)}
@@ -327,7 +327,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           className="flex flex-col xs:flex-row items-center justify-between gap-3 xs:gap-0 pt-6 xs:pt-8 border-t border-slate-800/50"
           variants={itemVariants}
         >
@@ -335,14 +335,14 @@ const Footer = () => {
             <span>© 2018 - {currentYear} Emerson Espinoza.</span>
             <span>Todos los derechos reservados.</span>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex items-center gap-1.5 xs:gap-2 text-zinc-400 text-xs xs:text-sm"
             whileHover={{ scale: 1.05 }}
           >
             <span>Hecho con</span>
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.2, 1],
                 color: ['#ef4444', '#f97316', '#ef4444']
               }}
@@ -352,7 +352,7 @@ const Footer = () => {
             </motion.div>
             <span>y mucho</span>
             <FaCode className="text-blue-400" />
-            
+
           </motion.div>
         </motion.div>
       </div>
@@ -383,9 +383,9 @@ const Footer = () => {
       </div>
 
       {/* Contact Modal */}
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </motion.footer>
   )

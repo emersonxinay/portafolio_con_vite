@@ -344,6 +344,37 @@ const Hero = () => {
               ))}
             </motion.div>
           </motion.button>
+
+          {/* CV Download Buttons */}
+          <div className='flex flex-col xs:flex-row gap-2 w-full xs:w-auto'>
+            <motion.a
+              href='/cv/harvard'
+              target='_blank'
+              className='group relative font-semibold px-4 xs:px-6 py-3 xs:py-4 bg-gradient-to-r from-emerald-600 to-green-700 text-white rounded-xl xs:rounded-2xl flex items-center justify-center gap-2 overflow-hidden shadow-xl min-h-[48px] touch-target'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 2.2 }}
+            >
+              <span className="text-sm xs:text-base font-medium">CV Harvard</span>
+              <i className="fas fa-graduation-cap text-sm"></i>
+            </motion.a>
+            
+            <motion.a
+              href='/cv/corporate'
+              target='_blank'
+              className='group relative font-semibold px-4 xs:px-6 py-3 xs:py-4 bg-gradient-to-r from-slate-600 to-gray-700 text-white rounded-xl xs:rounded-2xl flex items-center justify-center gap-2 overflow-hidden shadow-xl min-h-[48px] touch-target'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 2.4 }}
+            >
+              <span className="text-sm xs:text-base font-medium">CV Empresas</span>
+              <i className="fas fa-briefcase text-sm"></i>
+            </motion.a>
+          </div>
         </div>
       </div>
 

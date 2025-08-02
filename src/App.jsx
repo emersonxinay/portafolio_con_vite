@@ -11,6 +11,8 @@ import Error from './pages/Error/Error';
 import Blog from './pages/Blog/Blog';
 import Article from './pages/Blog/Article';
 import Home from './pages/Home/Home';
+import CVHarvard from './pages/CV/CVHarvard';
+import CVCorporate from './pages/CV/CVCorporate';
 
 function App() {
   const location = useLocation();
@@ -35,6 +37,8 @@ function App() {
           <Route path='/tools' element={<Tools />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/blog/:id' element={<Article />} />
+          <Route path='/cv/harvard' element={<CVHarvard />} />
+          <Route path='/cv/corporate' element={<CVCorporate />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </AnimatePresence>

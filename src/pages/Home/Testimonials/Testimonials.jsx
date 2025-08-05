@@ -59,7 +59,7 @@ const Testimonials = () => {
     { number: "50+", label: "Proyectos Exitosos", icon: "🚀" },
     { number: "98%", label: "Satisfacción Cliente", icon: "⭐" },
     { number: "24h", label: "Tiempo de Respuesta", icon: "⚡" },
-    { number: "15+", label: "Países Atendidos", icon: "🌍" }
+    { number: "3+", label: "Países Atendidos", icon: "🌍" }
   ];
 
   const nextTestimonial = () => {
@@ -128,14 +128,14 @@ const Testimonials = () => {
                 <div className="absolute top-6 left-6 text-6xl text-white/10">
                   "
                 </div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Testimonial Text */}
                   <p className="text-2xl text-gray-200 leading-relaxed mb-8 italic">
                     {testimonials[activeTestimonial].text}
                   </p>
-                  
+
                   {/* Author Info */}
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center space-x-4">
@@ -146,7 +146,7 @@ const Testimonials = () => {
                         <p className="text-gray-500 text-sm">{testimonials[activeTestimonial].company}</p>
                       </div>
                     </div>
-                    
+
                     <div className="text-right">
                       <div className="flex text-yellow-400 mb-2">
                         {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
@@ -161,7 +161,7 @@ const Testimonials = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          
+
           {/* Navigation */}
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button
@@ -170,21 +170,20 @@ const Testimonials = () => {
             >
               ←
             </button>
-            
+
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeTestimonial
-                      ? 'bg-yellow-400 scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeTestimonial
+                    ? 'bg-yellow-400 scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+                    }`}
                 />
               ))}
             </div>
-            
+
             <button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-300 text-white hover:scale-110"

@@ -194,7 +194,7 @@ const Footer = () => {
             >
               <FaRocket className="text-green-400 text-sm xs:text-base" />
               <span className="text-green-400 font-bold text-xs xs:text-sm">
-                🚀 Disponible para proyectos enterprise
+                Disponible para proyectos enterprise
               </span>
             </motion.div>
 

@@ -13,8 +13,8 @@ const HeroFAANG = () => {
   // Enhanced impact metrics with translations
   const impactMetrics = [
     { value: "6+ años", label: "Experiencia Enterprise", icon: "💼", color: "from-blue-400 to-cyan-500", bgColor: "from-blue-900/20 to-cyan-900/20" },
-    { value: "99.9%", label: "Uptime Garantizado", icon: "⚡", color: "from-green-400 to-emerald-500", bgColor: "from-green-900/20 to-emerald-900/20" },
-    { value: "$2M+", label: "Valor Generado", icon: "💰", color: "from-yellow-400 to-orange-500", bgColor: "from-yellow-900/20 to-orange-900/20" },
+    { value: "99.9%", label: "Uptime Garantizado", icon: "", color: "from-green-400 to-emerald-500", bgColor: "from-green-900/20 to-emerald-900/20" },
+    { value: "$2M+", label: "Valor Generado", icon: "", color: "from-yellow-400 to-orange-500", bgColor: "from-yellow-900/20 to-orange-900/20" },
     { value: "500+", label: "Desarrolladores Entrenados", icon: "🎓", color: "from-purple-400 to-pink-500", bgColor: "from-purple-900/20 to-pink-900/20" }
   ];
 
@@ -93,7 +93,7 @@ const HeroFAANG = () => {
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
           style={{ top: '10%', left: '5%' }}
         />
-        
+
         {/* Secondary gradient orb */}
         <motion.div
           className="absolute w-[400px] h-[400px] bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-cyan-500/15 rounded-full blur-3xl"
@@ -106,7 +106,7 @@ const HeroFAANG = () => {
           transition={{ duration: 20, repeat: Infinity, delay: 3, ease: "easeInOut" }}
           style={{ bottom: '15%', right: '10%' }}
         />
-        
+
         {/* Tertiary accent orb */}
         <motion.div
           className="absolute w-[300px] h-[300px] bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 rounded-full blur-3xl"
@@ -118,7 +118,7 @@ const HeroFAANG = () => {
           transition={{ duration: 18, repeat: Infinity, delay: 7, ease: "easeInOut" }}
           style={{ top: '60%', left: '60%' }}
         />
-        
+
         {/* Floating particles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -154,7 +154,7 @@ const HeroFAANG = () => {
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
           whileHover={{ scale: 1.05, y: -2 }}
         >
-          <motion.div 
+          <motion.div
             className="relative"
             animate={{ rotate: 360 }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -187,7 +187,7 @@ const HeroFAANG = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div className="flex items-center gap-4 justify-center xl:justify-start mb-4">
-              <motion.div 
+              <motion.div
                 className="h-1.5 w-20 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: 80 }}
@@ -201,7 +201,7 @@ const HeroFAANG = () => {
 
           {/* Main Name - Mobile responsive */}
           <h1 className="mobile-title text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-3 xs:mb-4 sm:mb-6 text-overflow-safe">
-            <motion.span 
+            <motion.span
               className="block text-zinc-100 mb-2 xs:mb-3 drop-shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -209,9 +209,9 @@ const HeroFAANG = () => {
             >
               Ingeniero de Sistemas
             </motion.span>
-            
+
             {/* Nationality Highlight - Mobile optimized */}
-            <motion.div 
+            <motion.div
               className="flex items-center gap-2 justify-center lg:justify-start mb-2 sm:mb-3"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -219,8 +219,8 @@ const HeroFAANG = () => {
             >
               <span className="text-xs sm:text-sm text-zinc-400">🇵🇪 Peruano con residencia en Chile 🇨🇱</span>
             </motion.div>
-            
-            <motion.span 
+
+            <motion.span
               className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -230,7 +230,7 @@ const HeroFAANG = () => {
               Emerson Espinoza
             </motion.span>
           </h1>
-          
+
           {/* Enhanced Role Description - Mobile grid */}
           <motion.div
             className="mobile-grid grid-cols-1 xs:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center lg:justify-start mb-4 xs:mb-6 sm:mb-8"
@@ -240,8 +240,8 @@ const HeroFAANG = () => {
           >
             {[
               { text: "Senior Software Engineer", icon: "💻", color: "from-blue-400 to-cyan-500" },
-              { text: "AI Expert", icon: "🤖", color: "from-purple-400 to-pink-500" },
-              { text: "Data Scientist", icon: "📊", color: "from-green-400 to-emerald-500" },
+              { text: "AI Expert", icon: "", color: "from-purple-400 to-pink-500" },
+              { text: "Data Scientist", icon: "", color: "from-green-400 to-emerald-500" },
               { text: "Tech Educator", icon: "🎓", color: "from-orange-400 to-red-500" }
             ].map((role, index) => (
               <motion.div
@@ -277,9 +277,9 @@ const HeroFAANG = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <h2 className="mobile-subtitle text-base xs:text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 xs:mb-4 sm:mb-6">
-            🎯 Expertise That Drives Business Results
+            Expertise That Drives Business Results
           </h2>
-          
+
           {/* Core Specializations - Mobile first grid */}
           <div className="mobile-grid grid-cols-1 sm:grid-cols-2 mb-4 xs:mb-6 sm:mb-8">
             <div className="mobile-card bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl lg:rounded-2xl border border-blue-500/20">
@@ -293,10 +293,10 @@ const HeroFAANG = () => {
                 <li>• Microservicios y Event-Driven Architecture</li>
               </ul>
             </div>
-            
+
             <div className="mobile-card bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl lg:rounded-2xl border border-purple-500/20">
               <h3 className="text-purple-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
-                📊 Data Science & Analytics
+                Data Science & Analytics
               </h3>
               <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Análisis predictivo y Machine Learning</li>
@@ -305,7 +305,7 @@ const HeroFAANG = () => {
                 <li>• Sistemas de recomendación personalizados</li>
               </ul>
             </div>
-            
+
             <div className="mobile-card bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl lg:rounded-2xl border border-green-500/20">
               <h3 className="text-green-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
                 🎓 Tech Education & Leadership
@@ -317,10 +317,10 @@ const HeroFAANG = () => {
                 <li>• Code reviews y pair programming</li>
               </ul>
             </div>
-            
+
             <div className="mobile-card bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-xl lg:rounded-2xl border border-orange-500/20">
               <h3 className="text-orange-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
-                🚀 DevOps & Cloud
+                DevOps & Cloud
               </h3>
               <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
                 <li>• Containerización con Docker & Kubernetes</li>
@@ -330,7 +330,7 @@ const HeroFAANG = () => {
               </ul>
             </div>
           </div>
-          
+
           {/* Key Achievements - Mobile responsive */}
           <div className="border-t border-slate-700/50 pt-3 xs:pt-4 sm:pt-6">
             <h3 className="text-white font-bold text-sm xs:text-base sm:text-lg mb-2 xs:mb-3 sm:mb-4">🏆 Logros Empresariales Clave</h3>
@@ -356,7 +356,7 @@ const HeroFAANG = () => {
             </div>
           </div>
         </motion.div>
-        
+
         {/* Technology Expertise Banner - Mobile optimized */}
         <motion.div
           className="mobile-card bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-slate-600/30 mb-4 xs:mb-6 sm:mb-8"
@@ -436,7 +436,7 @@ const HeroFAANG = () => {
           transition={{ duration: 0.8, delay: 1.8 }}
         >
           <div className="text-center xl:text-left">
-            <motion.h3 
+            <motion.h3
               className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3 justify-center lg:justify-start"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -450,7 +450,7 @@ const HeroFAANG = () => {
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </motion.h3>
-            
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentMetric}
@@ -473,9 +473,9 @@ const HeroFAANG = () => {
                     transition={{ duration: 2, repeat: Infinity }}
                   />
                 </motion.div>
-                
+
                 <div className="text-left">
-                  <motion.div 
+                  <motion.div
                     className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${impactMetrics[currentMetric].color} drop-shadow-lg`}
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
@@ -483,7 +483,7 @@ const HeroFAANG = () => {
                   >
                     {impactMetrics[currentMetric].value}
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="text-zinc-200 text-sm sm:text-base lg:text-lg font-semibold tracking-wide"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -492,15 +492,14 @@ const HeroFAANG = () => {
                     {impactMetrics[currentMetric].label}
                   </motion.div>
                 </div>
-                
+
                 {/* Progress indicator - Mobile adjusted */}
                 <div className="absolute bottom-1 sm:bottom-2 right-2 sm:right-4 flex gap-1">
                   {impactMetrics.map((_, index) => (
                     <motion.div
                       key={index}
-                      className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
-                        index === currentMetric ? 'bg-cyan-400 w-4 sm:w-6' : 'bg-zinc-600'
-                      }`}
+                      className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-all duration-300 ${index === currentMetric ? 'bg-cyan-400 w-4 sm:w-6' : 'bg-zinc-600'
+                        }`}
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: index * 0.1 }}
@@ -535,17 +534,17 @@ const HeroFAANG = () => {
               whileHover={{ x: '100%' }}
               transition={{ duration: 0.6 }}
             />
-            
+
             {/* Glow effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 blur-xl"
-              animate={{ 
+              animate={{
                 scale: isHovered ? [1, 1.2, 1] : 1,
                 opacity: isHovered ? [0.5, 0.8, 0.5] : 0.3
               }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            
+
             <span className="relative z-10 flex items-center gap-2 sm:gap-3 text-sm sm:text-base lg:text-lg">
               <motion.span
                 className="text-lg sm:text-xl lg:text-2xl"
@@ -564,7 +563,7 @@ const HeroFAANG = () => {
                 →
               </motion.span>
             </span>
-            
+
             {/* Particle effect */}
             <motion.div
               className="absolute inset-0 pointer-events-none"
@@ -609,7 +608,7 @@ const HeroFAANG = () => {
             >
               <div className="w-full h-full bg-black/80 rounded-3xl" />
             </motion.div>
-            
+
             {/* Fill effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -617,7 +616,7 @@ const HeroFAANG = () => {
               whileHover={{ scale: 1.5, borderRadius: '24px' }}
               transition={{ duration: 0.5 }}
             />
-            
+
             <span className="relative z-10 flex items-center gap-2 sm:gap-3 text-sm sm:text-base lg:text-lg">
               <motion.span
                 className="text-lg sm:text-xl lg:text-2xl"
@@ -630,8 +629,8 @@ const HeroFAANG = () => {
               <span className="sm:hidden">Projects</span>
               <motion.span
                 className="text-base sm:text-lg lg:text-xl"
-                animate={{ 
-                  y: [0, -4, 0], 
+                animate={{
+                  y: [0, -4, 0],
                   x: [0, 2, 0],
                   rotate: [0, 15, 0]
                 }}
@@ -651,14 +650,14 @@ const HeroFAANG = () => {
           transition={{ duration: 0.8, delay: 2.6 }}
         >
           <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-start items-center lg:items-start">
-            <motion.div 
+            <motion.div
               className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-green-500/20 hover:border-green-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 2.8 }}
             >
-              <motion.span 
+              <motion.span
                 className="text-green-400 text-xl"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -672,15 +671,15 @@ const HeroFAANG = () => {
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 3 }}
             >
-              <motion.span 
+              <motion.span
                 className="text-2xl"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -697,15 +696,15 @@ const HeroFAANG = () => {
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="group flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 3.2 }}
             >
-              <motion.span 
+              <motion.span
                 className="text-2xl"
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -721,10 +720,10 @@ const HeroFAANG = () => {
                     key={i}
                     className="w-1 h-1 bg-purple-400 rounded-full"
                     animate={{ opacity: [0.3, 1, 0.3] }}
-                    transition={{ 
-                      duration: 1.5, 
-                      repeat: Infinity, 
-                      delay: i * 0.2 
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: i * 0.2
                     }}
                   />
                 ))}
@@ -750,7 +749,7 @@ const HeroFAANG = () => {
           }}
           transition={{ duration: 8, repeat: Infinity }}
         />
-        
+
         {/* Enhanced Terminal Window - Mobile responsive */}
         <motion.div
           className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl rounded-2xl lg:rounded-3xl border border-slate-600/30 shadow-2xl overflow-hidden"
@@ -763,19 +762,19 @@ const HeroFAANG = () => {
           {/* Enhanced Terminal Header - Mobile optimized */}
           <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-slate-800/90 to-slate-700/80 border-b border-slate-600/40">
             <div className="flex gap-2 sm:gap-3">
-              <motion.div 
+              <motion.div
                 className="w-3 sm:w-4 h-3 sm:h-4 bg-red-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(239, 68, 68, 0.4)', '0 0 0 8px rgba(239, 68, 68, 0)'] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
-              <motion.div 
+              <motion.div
                 className="w-3 sm:w-4 h-3 sm:h-4 bg-yellow-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(245, 158, 11, 0.4)', '0 0 0 8px rgba(245, 158, 11, 0)'] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
-              <motion.div 
+              <motion.div
                 className="w-3 sm:w-4 h-3 sm:h-4 bg-green-500 rounded-full shadow-lg"
                 whileHover={{ scale: 1.2 }}
                 animate={{ boxShadow: ['0 0 0 0 rgba(34, 197, 94, 0.4)', '0 0 0 8px rgba(34, 197, 94, 0)'] }}
@@ -783,7 +782,7 @@ const HeroFAANG = () => {
               />
             </div>
             <div className="flex-1 text-center">
-              <motion.span 
+              <motion.span
                 className="text-slate-300 text-xs sm:text-sm lg:text-base font-mono bg-slate-700/50 px-2 sm:px-3 lg:px-4 py-1 rounded-md lg:rounded-lg border border-slate-600/30"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -806,7 +805,7 @@ const HeroFAANG = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <motion.div 
+              <motion.div
                 className="text-zinc-500 mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -814,8 +813,8 @@ const HeroFAANG = () => {
               >
                 # Enterprise-grade AI-powered microservices
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="mb-4 sm:mb-6 bg-slate-800/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-slate-600/30"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -828,8 +827,8 @@ const HeroFAANG = () => {
                 <div className="ml-4 sm:ml-8 text-zinc-300">ai_engine = <span className="text-pink-400">TensorFlowServing</span>()</div>
                 <div className="ml-4 sm:ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-zinc-500 mb-3 sm:mb-4 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-md lg:rounded-lg p-2 sm:p-3 border border-green-500/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -846,7 +845,7 @@ const HeroFAANG = () => {
                   <div>• $2M+ cost savings annually</div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-6 bg-gradient-to-r from-slate-800/50 to-slate-700/30 rounded-md lg:rounded-lg p-2 sm:p-3 border border-slate-600/30"
                 initial={{ opacity: 0, y: 20 }}
@@ -873,10 +872,10 @@ const HeroFAANG = () => {
                       key={i}
                       className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-cyan-400 rounded-full"
                       animate={{ scale: [0.5, 1, 0.5] }}
-                      transition={{ 
-                        duration: 1.5, 
-                        repeat: Infinity, 
-                        delay: i * 0.3 
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        delay: i * 0.3
                       }}
                     />
                   ))}

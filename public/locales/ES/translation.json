@@ -64,7 +64,7 @@
 
   "experience": {
     "title": "Experiencia Profesional & Liderazgo Técnico",
-    "tech": "Python, Flask, FastAPI, Ruby on Rails, Node.js, React, PostgreSQL, MySQL, Docker, Nginx, WordPress, C# .NET",
+    "tech": "Python, Flask, FastAPI, Ruby on Rails, Node.js, React, PostgreSQL, MySQL, Docker, Nginx, JavaScript, C# .NET",
     "completeStack": "Stack Tecnológico Enterprise",
     "frontend": "Frontend & UX Engineering",
     "backend": "Backend & Microservices",
@@ -150,8 +150,60 @@
   "tools": {
     "title": "Herramientas"
   },
+  "portfolio": "Portfolio",
   "projects": {
     "title": "Proyectos Destacados",
+    "subtitle": "Soluciones tecnológicas que transforman ideas en experiencias digitales excepcionales",
+    "categories": {
+      "all": "Todos",
+      "ecommerce": "E-commerce", 
+      "web": "Web Apps",
+      "social": "Social",
+      "saas": "SaaS"
+    },
+    "status": {
+      "live": "En línea",
+      "development": "En desarrollo"
+    },
+    "techStack": "Stack Tecnológico",
+    "viewProject": "Ver Proyecto",
+    "startProject": "Iniciar Proyecto",
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Transformemos tu visión en una realidad digital extraordinaria"
+    },
+    "metrics": {
+      "users": "Usuarios",
+      "performance": "Performance",
+      "uptime": "Uptime",
+      "orders": "Pedidos", 
+      "efficiency": "Eficiencia",
+      "rating": "Rating",
+      "artists": "Artistas",
+      "streams": "Streams",
+      "engagement": "Engagement",
+      "students": "Estudiantes",
+      "courses": "Cursos",
+      "completion": "Completado"
+    },
+    "items": {
+      "1": {
+        "title": "Kefyto E-commerce",
+        "description": "Plataforma completa de e-commerce para venta de kéfir con sistema de pagos integrado y experiencia de usuario optimizada"
+      },
+      "2": {
+        "title": "Hazuki Restaurant", 
+        "description": "Sistema de gestión integral para restaurantes con reservas inteligentes, menús dinámicos y analytics en tiempo real"
+      },
+      "3": {
+        "title": "Netmuz Social",
+        "description": "Red social especializada para músicos y creadores de contenido con streaming en tiempo real y colaboración musical"
+      },
+      "4": {
+        "title": "SaaS Educativo",
+        "description": "Plataforma educativa avanzada con IA, seguimiento de progreso personalizado y certificaciones profesionales"
+      }
+    },
     "tech": "Stack Tecnológico",
     "impact": "Impacto",
     "features": "Características",
@@ -190,7 +242,7 @@
     "minera3": "• Sistema robusto para una de las mineras más importantes de Chile",
     "mineraMetrics": "C# .NET Core • API REST • Sistema empresarial robusto",
     
-    "coming": "Ver proyecto en vivo 🚀"
+    "coming": "Ver proyecto en vivo"
   },
   "nav": {
     "home": "Inicio",
@@ -325,8 +377,8 @@
       "linkedin": "LinkedIn: /in/emerson-espinoza-aguirre",
       "github": "Github: /emersonxinay",
       "location": "Chile y Perú",
-      "impact_title": "📊 Impacto Empresarial",
-      "value_title": "🎯 Propuesta de Valor",
+      "impact_title": " Impacto Empresarial",
+      "value_title": " Propuesta de Valor",
       "why_me": "¿Por qué elegirme?",
       "vision": "Visión Estratégica: Combino expertise técnico con entendimiento del negocio",
       "leadership": "Liderazgo Probado: He formado y liderado equipos técnicos de alto rendimiento",
@@ -344,7 +396,7 @@
     },
     "common": {
       "download_pdf": "📄 Descargar PDF",
-      "toggle_language": "🌐 Idioma",
+      "toggle_language": " Idioma",
       "translate_note": "Este CV también está disponible en inglés. Puedes usar el traductor automático de tu navegador o cambiar el idioma."
     },
     "corporate": {

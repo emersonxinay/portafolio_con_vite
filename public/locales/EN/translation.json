@@ -161,8 +161,60 @@
   "tools": {
     "title": "Tools"
   },
+  "portfolio": "Portfolio",
   "projects": {
     "title": "Featured Projects",
+    "subtitle": "Technological solutions that transform ideas into exceptional digital experiences",
+    "categories": {
+      "all": "All",
+      "ecommerce": "E-commerce", 
+      "web": "Web Apps",
+      "social": "Social",
+      "saas": "SaaS"
+    },
+    "status": {
+      "live": "Live",
+      "development": "In Development"
+    },
+    "techStack": "Tech Stack",
+    "viewProject": "View Project",
+    "startProject": "Start Project",
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "description": "Let's transform your vision into an extraordinary digital reality"
+    },
+    "metrics": {
+      "users": "Users",
+      "performance": "Performance",
+      "uptime": "Uptime",
+      "orders": "Orders", 
+      "efficiency": "Efficiency",
+      "rating": "Rating",
+      "artists": "Artists",
+      "streams": "Streams",
+      "engagement": "Engagement",
+      "students": "Students",
+      "courses": "Courses",
+      "completion": "Completion"
+    },
+    "items": {
+      "1": {
+        "title": "Kefyto E-commerce",
+        "description": "Complete e-commerce platform for kefir sales with integrated payment system and optimized user experience"
+      },
+      "2": {
+        "title": "Hazuki Restaurant", 
+        "description": "Comprehensive restaurant management system with smart reservations, dynamic menus and real-time analytics"
+      },
+      "3": {
+        "title": "Netmuz Social",
+        "description": "Specialized social network for musicians and content creators with real-time streaming and musical collaboration"
+      },
+      "4": {
+        "title": "Educational SaaS",
+        "description": "Advanced educational platform with AI, personalized progress tracking and professional certifications"
+      }
+    },
     "tech": "Tech Stack",
     "impact": "Impact",
     "features": "Features",
@@ -203,7 +255,7 @@
     "minera3": "• Robust system for one of Chile's most important mines",
     "mineraMetrics": "C# .NET Core • REST API • Robust enterprise system",
     
-    "coming": "View live project 🚀"
+    "coming": "View live project"
   },
   "nav": {
     "home": "Home",
@@ -338,8 +390,8 @@
       "linkedin": "LinkedIn: /in/emerson-espinoza-aguirre",
       "github": "Github: /emersonxinay",
       "location": "Chile and Peru",
-      "impact_title": "📊 Business Impact",
-      "value_title": "🎯 Value Proposition",
+      "impact_title": " Business Impact",
+      "value_title": " Value Proposition",
       "why_me": "Why choose me?",
       "vision": "Strategic Vision: I combine technical expertise with business understanding",
       "leadership": "Proven Leadership: I have formed and led high-performance technical teams",
@@ -357,7 +409,7 @@
     },
     "common": {
       "download_pdf": "📄 Download PDF",
-      "toggle_language": "🌐 Language",
+      "toggle_language": " Language",
       "translate_note": "This CV is also available in Spanish. You can use your browser's automatic translator or change the language."
     },
     "corporate": {

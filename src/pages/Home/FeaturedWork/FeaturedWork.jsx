@@ -1,54 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getFeaturedProjects, openProject } from '../../../data/projectsData';
 
 const FeaturedWork = () => {
-  const featuredProjects = [
-    {
-      id: 1,
-      title: "E-commerce Moderno",
-      description: "Plataforma de comercio electrónico con carrito inteligente, pagos seguros y panel administrativo completo.",
-      image: "🛒",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      metrics: {
-        performance: "98%",
-        conversion: "+45%",
-        users: "10K+"
-      },
-      status: "live",
-      color: "from-green-400 to-emerald-500",
-      bgColor: "from-green-900/10 to-emerald-900/10"
-    },
-    {
-      id: 2,
-      title: "Sistema CRM Empresarial",
-      description: "Solución completa para gestión de clientes, ventas y automatización de procesos comerciales.",
-      image: "📊",
-      tech: ["React", "Python", "FastAPI", "MongoDB"],
-      metrics: {
-        efficiency: "+60%",
-        automation: "85%",
-        satisfaction: "4.9/5"
-      },
-      status: "live",
-      color: "from-blue-400 to-cyan-500",
-      bgColor: "from-blue-900/10 to-cyan-900/10"
-    },
-    {
-      id: 3,
-      title: "Chatbot IA Inteligente",
-      description: "Bot conversacional con IA que automatiza atención al cliente y aumenta las ventas 24/7.",
-      image: "🤖",
-      tech: ["Python", "OpenAI", "WhatsApp API", "NLP"],
-      metrics: {
-        response: "<2s",
-        accuracy: "94%",
-        savings: "$5K/mes"
-      },
-      status: "development",
-      color: "from-purple-400 to-pink-500",
-      bgColor: "from-purple-900/10 to-pink-900/10"
-    }
-  ];
+  const featuredProjects = getFeaturedProjects();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,7 +55,8 @@ const FeaturedWork = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="group relative"
+              className="group relative cursor-pointer"
+              onClick={() => openProject(project.liveUrl)}
             >
               <div className={`
                 relative p-8 rounded-2xl border border-white/10 backdrop-blur-sm
@@ -119,14 +75,34 @@ const FeaturedWork = () => {
                 <div className="relative z-10 md:flex items-center gap-8">
                   {/* Project Visual */}
                   <div className="md:w-1/3 mb-6 md:mb-0">
-                    <div className="text-center">
-                      <div className="text-8xl mb-4">{project.image}</div>
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                        project.status === 'live' 
-                          ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                          : 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
-                      }`}>
-                        {project.status === 'live' ? '🟢 En Vivo' : '🟡 En Desarrollo'}
+                    <div className="relative">
+                      {/* Project Image */}
+                      <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 mb-4">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          onError={(e) => {
+                            // Fallback si la imagen no carga
+                            e.target.style.display = 'none';
+                            e.target.nextElementSibling.style.display = 'flex';
+                          }}
+                        />
+                        {/* Fallback visual */}
+                        <div className={`w-full h-full bg-gradient-to-br ${project.color} opacity-20 flex items-center justify-center text-white text-4xl font-bold hidden`}>
+                          {project.title.split(' ')[0]}
+                        </div>
+                      </div>
+                      
+                      {/* Status Badge */}
+                      <div className="text-center">
+                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                          project.status === 'live' 
+                            ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                            : 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
+                        }`}>
+                          {project.status === 'live' ? '🟢 En Vivo' : '🟡 En Desarrollo'}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -154,7 +130,7 @@ const FeaturedWork = () => {
                     </div>
                     
                     {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 gap-4 mb-6">
                       {Object.entries(project.metrics).map(([key, value], idx) => (
                         <div key={idx} className="text-center">
                           <div className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
@@ -170,9 +146,34 @@ const FeaturedWork = () => {
                             {key === 'response' && 'Respuesta'}
                             {key === 'accuracy' && 'Precisión'}
                             {key === 'savings' && 'Ahorro'}
+                            {key === 'uptime' && 'Uptime'}
+                            {key === 'engagement' && 'Engagement'}
+                            {key === 'retention' && 'Retención'}
+                            {key === 'students' && 'Estudiantes'}
+                            {key === 'courses' && 'Cursos'}
+                            {key === 'completion' && 'Completado'}
                           </div>
                         </div>
                       ))}
+                    </div>
+
+                    {/* Action Button */}
+                    <div className="flex justify-start">
+                      <motion.button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openProject(project.liveUrl);
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`
+                          px-6 py-3 bg-gradient-to-r ${project.color} text-white font-semibold rounded-xl
+                          hover:shadow-lg transition-all duration-300 flex items-center gap-2
+                        `}
+                      >
+                        <i className="fas fa-external-link-alt"></i>
+                        Ver Proyecto
+                      </motion.button>
                     </div>
                   </div>
                 </div>

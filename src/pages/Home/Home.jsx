@@ -6,7 +6,7 @@ import Hero from './Hero/HeroSimple';
 import About from './About/About';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
-import FeaturedWork from './FeaturedWork/FeaturedWork';
+import Projects from './Projects/ProjectsSimple';
 import Testimonials from './Testimonials/Testimonials';
 
 const Home = () => {
@@ -77,7 +77,7 @@ const Home = () => {
       <div className="mobile-container space-y-16 md:space-y-24 py-16 md:py-20 safe-area-bottom">
         <About />
         <Services />
-        <FeaturedWork />
+        <Projects />
         <Testimonials />
         <Contact />
       </div>

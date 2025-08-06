@@ -30,7 +30,7 @@ const Services = () => {
       bgColor: "from-green-900/10 to-emerald-900/10"
     },
     {
-      icon: "🤖",
+      icon: "",
       title: "Automatización e IA",
       description: "Bots inteligentes y sistemas de automatización que optimizan procesos empresariales y mejoran la experiencia del cliente.",
       features: [
@@ -150,7 +150,7 @@ const Services = () => {
                   absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20
                   bg-gradient-to-br ${service.color} transition-opacity duration-500 blur-xl
                 `} />
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon & Title */}
@@ -160,12 +160,12 @@ const Services = () => {
                       <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
                     </div>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-gray-300 mb-6 leading-relaxed text-sm">
                     {service.description}
                   </p>
-                  
+
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
@@ -175,7 +175,7 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* CTA Button */}
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -202,7 +202,7 @@ const Services = () => {
           <h3 className="text-3xl font-bold text-white mb-12">
             Mi Proceso de <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Trabajo</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Análisis", desc: "Entiendo tu negocio y objetivos" },
@@ -235,7 +235,7 @@ const Services = () => {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Garantizo entrega en tiempo récord y soporte post-lanzamiento. Tu éxito es mi prioridad.
           </p>
-          
+
           <motion.button
             onClick={scrollToContact}
             whileHover={{ scale: 1.05 }}

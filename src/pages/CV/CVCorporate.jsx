@@ -17,11 +17,11 @@ const CVCorporate = () => {
 
   const keyMetrics = [
     { label: currentLanguage === 'ES' ? 'Años de Experiencia' : 'Years of Experience', value: "6+", icon: "⏱️" },
-    { label: currentLanguage === 'ES' ? 'Proyectos Exitosos' : 'Successful Projects', value: "50+", icon: "🚀" },
+    { label: currentLanguage === 'ES' ? 'Proyectos Exitosos' : 'Successful Projects', value: "50+", icon: "" },
     { label: currentLanguage === 'ES' ? 'Desarrolladores Mentoreados' : 'Developers Mentored', value: "200+", icon: "👥" },
     { label: currentLanguage === 'ES' ? 'Mejora en Performance' : 'Performance Improvement', value: "70%", icon: "📈" },
-    { label: currentLanguage === 'ES' ? 'Reducción de Costos' : 'Cost Reduction', value: "$2M+", icon: "💰" },
-    { label: currentLanguage === 'ES' ? 'Uptime en Producción' : 'Production Uptime', value: "99.9%", icon: "🎯" }
+    { label: currentLanguage === 'ES' ? 'Reducción de Costos' : 'Cost Reduction', value: "$2M+", icon: "" },
+    { label: currentLanguage === 'ES' ? 'Uptime en Producción' : 'Production Uptime', value: "99.9%", icon: "" }
   ];
 
   const coreCompetencies = [
@@ -202,7 +202,7 @@ const CVCorporate = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800">
-      <SEOHead 
+      <SEOHead
         title={currentLanguage === 'ES'
           ? "CV Empresarial Emerson Espinoza - CTO & Tech Lead | Consultor IA/ML"
           : "Emerson Espinoza Corporate Resume - CTO & Tech Lead | AI/ML Consultant"
@@ -391,7 +391,7 @@ const CVCorporate = () => {
             title={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
             aria-label={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
           >
-            <span className="text-xs">🌐</span>
+            <span className="text-xs"></span>
             <span className="hidden xs:inline">{currentLanguage === 'ES' ? 'EN' : 'ES'}</span>
           </button>
           <button
@@ -428,7 +428,7 @@ const CVCorporate = () => {
                   <div>📧 {t('cv.harvard.email')}</div>
                   <div>
                     <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">
-                      🌐 {t('cv.harvard.linkedin')}
+                      {t('cv.harvard.linkedin')}
                     </a>
                   </div>
                   <div>
@@ -457,7 +457,7 @@ const CVCorporate = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="responsive-title font-bold mb-3 md:mb-6 text-center">{currentLanguage === 'ES' ? '📊 Impacto Empresarial' : '📊 Business Impact'}</h2>
+            <h2 className="responsive-title font-bold mb-3 md:mb-6 text-center">{currentLanguage === 'ES' ? ' Impacto Empresarial' : ' Business Impact'}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
               {keyMetrics.map((metric, index) => (
                 <motion.div
@@ -483,7 +483,7 @@ const CVCorporate = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <h2 className="responsive-title font-bold mb-3 md:mb-6">{currentLanguage === 'ES' ? '🎯 Propuesta de Valor' : '🎯 Value Proposition'}</h2>
+            <h2 className="responsive-title font-bold mb-3 md:mb-6">{currentLanguage === 'ES' ? ' Propuesta de Valor' : ' Value Proposition'}</h2>
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               <div>
                 <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">{currentLanguage === 'ES' ? '¿Por qué elegirme?' : 'Why choose me?'}</h3>
@@ -655,7 +655,7 @@ const CVCorporate = () => {
           >
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               <div>
-                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">🌍 {currentLanguage === 'ES' ? 'Idiomas' : 'Languages'}</h3>
+                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"> {currentLanguage === 'ES' ? 'Idiomas' : 'Languages'}</h3>
                 <div className="space-y-1 md:space-y-2">
                   <div>
                     <span className="font-semibold text-xs md:text-sm">{currentLanguage === 'ES' ? 'Español:' : 'Spanish:'}</span> <span className="text-xs md:text-sm">{currentLanguage === 'ES' ? 'Nativo' : 'Native'}</span>
@@ -675,7 +675,7 @@ const CVCorporate = () => {
                 </div>
               </div>
               <div>
-                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">🎯 {currentLanguage === 'ES' ? 'Objetivos' : 'Goals'}</h3>
+                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"> {currentLanguage === 'ES' ? 'Objetivos' : 'Goals'}</h3>
                 <div className="space-y-1 md:space-y-2 text-gray-700">
                   <p className="text-xs md:text-sm">• CTO/Tech Lead roles</p>
                   <p className="text-xs md:text-sm">• {currentLanguage === 'ES' ? 'Proyectos de alto impacto' : 'High-impact projects'}</p>

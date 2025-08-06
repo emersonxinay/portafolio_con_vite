@@ -17,7 +17,7 @@ const Blog = () => {
   const [filteredArticles, setFilteredArticles] = useState(articles);
 
   // Get unique categories from articles
-  const categories = ['all', ...new Set(articles.flatMap(article => 
+  const categories = ['all', ...new Set(articles.flatMap(article =>
     article.tags.map(tag => tag.replace('#', '').toLowerCase())
   ))];
 
@@ -32,23 +32,23 @@ const Blog = () => {
   // Filter articles based on search and category
   useEffect(() => {
     let filtered = articles;
-    
+
     if (searchTerm) {
-      filtered = filtered.filter(article => 
+      filtered = filtered.filter(article =>
         article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         article.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-    
+
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(article => 
-        article.tags.some(tag => 
+      filtered = filtered.filter(article =>
+        article.tags.some(tag =>
           tag.replace('#', '').toLowerCase() === selectedCategory
         )
       );
     }
-    
+
     setFilteredArticles(filtered);
   }, [searchTerm, selectedCategory]);
 
@@ -59,7 +59,7 @@ const Blog = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}>
-      
+
       {/* Enhanced Hero Section */}
       <div className='text-center space-y-4 xs:space-y-6 md:space-y-8 relative'>
         {/* Animated Background Elements - Mobile optimized */}
@@ -100,16 +100,16 @@ const Blog = () => {
             </h1>
             <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-16 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
-          
+
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
             <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
-              🚀 Enterprise-Level Insights & Technical Deep Dives
+              Enterprise-Level Insights & Technical Deep Dives
             </h2>
             <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
-              Explora artículos sobre desarrollo web moderno, arquitecturas escalables, inteligencia artificial aplicada, 
+              Explora artículos sobre desarrollo web moderno, arquitecturas escalables, inteligencia artificial aplicada,
               y las tecnologías que impulsan a las empresas más innovadoras del mundo.
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 xs:gap-4 md:gap-6 pt-4 xs:pt-6 border-t border-slate-700/50">
               <div className="text-center">
@@ -136,12 +136,12 @@ const Blog = () => {
       </div>
 
       {/* Enhanced Search and Filter Section */}
-      <motion.div 
+      <motion.div
         className='mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-3 xs:p-4 sm:p-6 md:p-8'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}>
-        
+
         <div className='flex flex-col sm:flex-row gap-3 xs:gap-4 sm:gap-6 items-stretch sm:items-center justify-between'>
           {/* Search Bar */}
           <div className='relative flex-1 w-full sm:max-w-md'>
@@ -193,7 +193,7 @@ const Blog = () => {
         </div>
 
         {/* Search Results Info */}
-        <motion.div 
+        <motion.div
           className='mt-4 xs:mt-6 pt-4 xs:pt-6 border-t border-slate-700/50 flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2 xs:gap-0'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -212,7 +212,7 @@ const Blog = () => {
               </span>
             )}
           </div>
-          
+
           <div className='flex items-center gap-2 text-xs text-zinc-500 mt-2 xs:mt-0'>
             <span>Ordenado por fecha</span>
             <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
@@ -249,20 +249,20 @@ const Blog = () => {
             repeatType: 'reverse'
           }}></motion.div>
         {filteredArticles.length === 0 ? (
-          <motion.div 
+          <motion.div
             className='text-center py-12 xs:py-16 md:py-20'
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}>
             <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-6 xs:p-8 md:p-12 mx-auto max-w-lg">
-              <motion.div 
+              <motion.div
                 className='text-8xl mb-6'
-                animate={{ 
+                animate={{
                   rotate: [0, 10, -10, 0],
                   scale: [1, 1.1, 1]
                 }}
-                transition={{ 
-                  duration: 2, 
+                transition={{
+                  duration: 2,
                   repeat: Infinity,
                   repeatType: "reverse"
                 }}
@@ -312,10 +312,10 @@ const Blog = () => {
                 key={a.url}
                 className='mobile-card bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl flex flex-col md:grid md:grid-cols-12 group relative overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 md:hover:-translate-y-2 w-full'>
                 <BottomContainer></BottomContainer>
-                
+
                 {/* Premium Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-                
+
                 {/* Article Image */}
                 <div className='md:col-span-5 relative overflow-hidden rounded-t-2xl xs:rounded-t-3xl md:rounded-t-none md:rounded-l-3xl h-48 xs:h-56 md:h-auto'>
                   <img
@@ -324,26 +324,26 @@ const Blog = () => {
                     className='h-full w-full object-cover group-hover:scale-110 transition-transform duration-700'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent'></div>
-                  
+
                   {/* Floating badge */}
                   <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                     TECH ARTICLE
                   </div>
-                  
+
                   {/* Reading time overlay */}
                   <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
                     <BsClock className='text-xs' />
                     5 min
                   </div>
                 </div>
-                
+
                 {/* Article Content */}
                 <div className='flex flex-col md:col-span-7 relative p-4 xs:p-6 md:p-8 justify-between gap-4 xs:gap-6'>
                   <div className='space-y-3 xs:space-y-4 md:space-y-6'>
                     {/* Enhanced Tags */}
                     <div className='flex flex-wrap gap-2'>
                       {a.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <motion.span 
+                        <motion.span
                           key={tagIndex}
                           className='px-4 py-2 text-xs font-bold bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full border border-blue-500/30 backdrop-blur-sm'
                           whileHover={{ scale: 1.05 }}
@@ -358,18 +358,18 @@ const Blog = () => {
                         </span>
                       )}
                     </div>
-                    
+
                     {/* Enhanced Title */}
                     <h3 className='font-black text-lg xs:text-xl md:text-2xl lg:text-3xl leading-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500'>
                       {a.title}
                     </h3>
-                    
+
                     {/* Enhanced Description */}
                     <p className='text-zinc-300 text-sm xs:text-base md:text-lg leading-relaxed line-clamp-2 xs:line-clamp-3 group-hover:text-zinc-200 transition-colors duration-300'>
                       {a.description}
                     </p>
                   </div>
-                  
+
                   {/* Enhanced Footer */}
                   <div className='flex flex-col xs:flex-row justify-between items-start xs:items-center gap-3 xs:gap-0 pt-4 xs:pt-6 border-t border-slate-600/50'>
                     <div className='flex items-center gap-3 xs:gap-6 text-xs xs:text-sm text-zinc-400'>
@@ -382,8 +382,8 @@ const Blog = () => {
                         <span className='font-medium'>Actualizado</span>
                       </div>
                     </div>
-                    
-                    <motion.div 
+
+                    <motion.div
                       className='flex items-center gap-2 xs:gap-3 text-blue-400 group-hover:text-blue-300 transition-all duration-300 font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-3 xs:px-6 py-2 xs:py-3 rounded-xl xs:rounded-2xl border border-blue-500/20 group-hover:border-blue-400/40 text-sm xs:text-base touch-target'
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

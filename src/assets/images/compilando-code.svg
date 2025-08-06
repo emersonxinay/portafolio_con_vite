@@ -56,11 +56,11 @@
     <line x1="13" y1="15" x2="17" y2="15" stroke="#06b6d4" stroke-width="2" stroke-dasharray="2,2"/>
   </g>
   
-  <!-- WordPress logo -->
+  <!-- JavaScript logo -->
   <g transform="translate(190, 90)">
-    <!-- WordPress circle -->
+    <!-- JavaScript circle -->
     <circle cx="15" cy="15" r="12" fill="#21759b" stroke="#0073aa" stroke-width="1"/>
-    <!-- WordPress W -->
+    <!-- JavaScript W -->
     <path d="M8 10 L10 20 L12 15 L14 20 L16 10 L18 20 L20 15 L22 20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   

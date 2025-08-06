@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  FaTimes, 
-  FaEnvelope, 
-  FaUser, 
-  FaBuilding, 
+import {
+  FaTimes,
+  FaEnvelope,
+  FaUser,
+  FaBuilding,
   FaPaperPlane,
   FaCheckCircle,
   FaSpinner
@@ -56,10 +56,10 @@ const ContactModal = ({ isOpen, onClose }) => {
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       setIsSuccess(true)
       toast.success('¡Mensaje enviado con éxito! Te contactaré pronto.')
-      
+
       // Reset form after success
       setTimeout(() => {
         setFormData({
@@ -73,7 +73,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         setIsSuccess(false)
         onClose()
       }, 3000)
-      
+
     } catch (error) {
       toast.error('Error al enviar el mensaje. Inténtalo de nuevo.')
     } finally {
@@ -88,13 +88,13 @@ const ContactModal = ({ isOpen, onClose }) => {
   }
 
   const modalVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       scale: 0.75,
       y: 50
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       y: 0,
       transition: {
@@ -103,8 +103,8 @@ const ContactModal = ({ isOpen, onClose }) => {
         damping: 25
       }
     },
-    exit: { 
-      opacity: 0, 
+    exit: {
+      opacity: 0,
       scale: 0.75,
       y: 50,
       transition: {
@@ -232,7 +232,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               </div>
               <div>
                 <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                  💰 Presupuesto Estimado
+                  Presupuesto Estimado
                 </label>
                 <select
                   name="budget"
@@ -252,7 +252,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             {/* Project Type */}
             <div>
               <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                🚀 Tipo de Proyecto *
+                Tipo de Proyecto *
               </label>
               <select
                 name="subject"

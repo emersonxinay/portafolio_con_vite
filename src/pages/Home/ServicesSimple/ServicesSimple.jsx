@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const ServicesSimple = () => {
   const services = [
     {
-      icon: "🌐",
+      icon: "",
       title: "Desarrollo Web",
       subtitle: "Páginas y aplicaciones modernas",
       description: "Creo sitios web y aplicaciones que destacan, funcionan rápido y se adaptan a cualquier dispositivo.",
@@ -32,7 +32,7 @@ const ServicesSimple = () => {
       bgColor: "from-green-900/20 to-emerald-900/20"
     },
     {
-      icon: "🤖",
+      icon: "",
       title: "Automatización",
       subtitle: "IA para tu negocio",
       description: "Automatizo tareas repetitivas y uso inteligencia artificial para hacer tu negocio más eficiente.",
@@ -46,7 +46,7 @@ const ServicesSimple = () => {
       bgColor: "from-purple-900/20 to-pink-900/20"
     },
     {
-      icon: "📊",
+      icon: "",
       title: "Análisis de Datos",
       subtitle: "Insights para crecer",
       description: "Convierto tus datos en información valiosa para tomar mejores decisiones de negocio.",
@@ -119,7 +119,7 @@ const ServicesSimple = () => {
           >
             {/* Efecto de brillo */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+
             <div className="relative z-10">
               {/* Header del servicio */}
               <div className="flex items-start gap-4 mb-6">
@@ -130,7 +130,7 @@ const ServicesSimple = () => {
                 >
                   <span className="text-4xl">{service.icon}</span>
                 </motion.div>
-                
+
                 <div className="flex-1">
                   <h3 className={`text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r ${service.color}`}>
                     {service.title}
@@ -196,7 +196,7 @@ const ServicesSimple = () => {
           <p className="text-zinc-300 text-lg leading-relaxed mb-8">
             Conversemos sobre cómo puedo ayudarte a hacer realidad tu idea digital.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -208,7 +208,7 @@ const ServicesSimple = () => {
                 💬 Hablemos de tu proyecto
               </span>
             </motion.button>
-            
+
             <motion.button
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="mobile-btn px-8 py-4 bg-transparent border-2 border-blue-400 text-blue-400 font-bold rounded-2xl hover:bg-blue-400 hover:text-black transition-all duration-300"

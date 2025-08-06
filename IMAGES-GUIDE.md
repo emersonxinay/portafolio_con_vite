@@ -94,7 +94,7 @@ npm run build:verify
 4. ✅ Usar `getArticleImage('nombre')` en componentes
 5. ✅ Ejecutar `npm run verify-images`
 
-## 🎯 Mejores Prácticas
+##  Mejores Prácticas
 
 ### Nombres de Archivos
 - Usar snake_case: `frontend_moderno.png`
@@ -111,7 +111,7 @@ npm run build:verify
 - Proporcionar imagen de placeholder
 - Logging para debugging
 
-## 🚀 Funcionamiento en Producción
+##  Funcionamiento en Producción
 
 1. **Build Time**: Vite procesa todas las imágenes importadas
 2. **Hash Generation**: Genera hashes únicos para cache busting
@@ -134,7 +134,7 @@ npm run build:verify
 console.warn(`Imagen de artículo no encontrada: ${imageName}`)
 ```
 
-## 📊 Beneficios de la Solución
+##  Beneficios de la Solución
 
 - ✅ **100% Funcional en Producción**
 - ✅ **Fallbacks Automáticos**

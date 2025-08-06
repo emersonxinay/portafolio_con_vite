@@ -10,10 +10,10 @@ const ProfessionalImpact = () => {
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.3 }
     );
-    
+
     const element = document.getElementById('professional-impact');
     if (element) observer.observe(element);
-    
+
     return () => {
       if (element) observer.unobserve(element);
     };
@@ -47,7 +47,7 @@ const ProfessionalImpact = () => {
     },
     innovation: {
       title: "Innovación & Soluciones Técnicas",
-      icon: "🚀",
+      icon: "",
       gradient: "from-purple-500 to-pink-600",
       highlights: [
         {
@@ -155,10 +155,10 @@ const ProfessionalImpact = () => {
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
-          
+
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
             Más que código: <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold">
-            liderazgo técnico, innovación empresarial y crecimiento de equipos
+              liderazgo técnico, innovación empresarial y crecimiento de equipos
             </span> que generan resultados medibles.
           </p>
         </motion.div>
@@ -175,11 +175,10 @@ const ProfessionalImpact = () => {
           <motion.button
             key={key}
             onClick={() => setActiveArea(key)}
-            className={`relative p-6 rounded-2xl font-bold transition-all duration-300 group ${
-              activeArea === key
+            className={`relative p-6 rounded-2xl font-bold transition-all duration-300 group ${activeArea === key
                 ? `bg-gradient-to-r ${area.gradient} text-white shadow-2xl`
                 : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50'
-            }`}
+              }`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -189,7 +188,7 @@ const ProfessionalImpact = () => {
                 <div className="text-sm font-bold leading-tight">{area.title}</div>
               </div>
             </div>
-            
+
             {activeArea === key && (
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-2xl"
@@ -231,12 +230,12 @@ const ProfessionalImpact = () => {
                         {highlight.badge}
                       </span>
                     </div>
-                    
+
                     <p className="text-zinc-300 leading-relaxed mb-4">
                       {highlight.description}
                     </p>
                   </div>
-                  
+
                   {/* Impact Metric */}
                   <div className="lg:w-48 flex-shrink-0">
                     <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-4 text-center border border-blue-500/20">
@@ -250,7 +249,7 @@ const ProfessionalImpact = () => {
               </motion.div>
             ))}
           </div>
-          
+
           {/* Call to Action */}
           <motion.div
             className="mt-8 pt-8 border-t border-slate-700/50 text-center"

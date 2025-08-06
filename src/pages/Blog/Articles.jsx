@@ -40,7 +40,7 @@ const articles = [
       </div>
     </div>
 
-    <h2>🚀 IA en el Proceso de Desarrollo</h2>
+    <h2> IA en el Proceso de Desarrollo</h2>
     
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1400/1*8qvS-2xgzF7nGqKvVJKKdA.png" alt="AI en desarrollo web" class="article-image" />
@@ -48,7 +48,7 @@ const articles = [
     </div>
 
     <div class="callout callout-info">
-      <div class="callout-icon">💡</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>¿Sabías que?</h3>
         <p>Los asistentes de código como <strong>GitHub Copilot</strong>, <strong>ChatGPT</strong> y <strong>Claude</strong> han revolucionado la forma en que escribimos código. Estas herramientas no solo aceleran el desarrollo en un 300%, sino que también mejoran la calidad del código mediante sugerencias inteligentes basadas en mejores prácticas.</p>
@@ -59,7 +59,7 @@ const articles = [
     
     <div class="benefits-grid">
       <div class="benefit-card">
-        <div class="benefit-icon">⚡</div>
+        <div class="benefit-icon"></div>
         <h4>Autocompletado Inteligente</h4>
         <p>Código predictivo que entiende el contexto y sugiere implementaciones completas</p>
       </div>
@@ -74,7 +74,7 @@ const articles = [
         <p>Identificación temprana de errores y vulnerabilidades de seguridad</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">⚡</div>
+        <div class="benefit-icon"></div>
         <h4>Optimización de Rendimiento</h4>
         <p>Sugerencias automáticas para mejorar la eficiencia del código</p>
       </div>
@@ -87,7 +87,7 @@ const articles = [
     <div class="tech-showcase">
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🎯</span>
+          <span class="tech-icon"></span>
           <h4>Sistemas de Recomendación</h4>
         </div>
         <p>Algoritmos que analizan el comportamiento del usuario en tiempo real para sugerir contenido relevante</p>
@@ -116,7 +116,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🤖</span>
+          <span class="tech-icon"></span>
           <h4>Chatbots Inteligentes</h4>
         </div>
         <p>Asistentes conversacionales que entienden contexto y mantienen conversaciones naturales</p>
@@ -136,8 +136,8 @@ const predictions = model.predict(userFeatures);</code>
           <tr>
             <th>🛠️ Herramienta</th>
             <th>💼 Uso Principal</th>
-            <th>⭐ Ventaja Clave</th>
-            <th>📊 Dificultad</th>
+            <th> Ventaja Clave</th>
+            <th> Dificultad</th>
           </tr>
         </thead>
         <tbody>
@@ -172,7 +172,7 @@ const predictions = model.predict(userFeatures);</code>
     <h2>💼 Casos de Uso Prácticos Reales</h2>
 
     <div class="callout callout-success">
-      <div class="callout-icon">🎯</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Proyectos que he desarrollado</h3>
         <p>En mis más de 6 años de experiencia, he implementado IA en proyectos reales que han impactado positivamente a las empresas:</p>
@@ -240,7 +240,7 @@ const predictions = model.predict(userFeatures);</code>
     <h2>🔮 El Futuro de la IA en Web Development</h2>
 
     <div class="callout callout-warning">
-      <div class="callout-icon">⚡</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Tendencias Emergentes 2024-2025</h3>
         <p>La IA continuará evolucionando y transformando el desarrollo web de maneras que apenas estamos comenzando a imaginar.</p>
@@ -251,7 +251,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">2024</span>
-          <h4>🤖 Desarrollo Completamente Automatizado</h4>
+          <h4> Desarrollo Completamente Automatizado</h4>
         </div>
         <p>Herramientas que pueden crear aplicaciones completas desde una descripción en lenguaje natural</p>
         <div class="trend-examples">
@@ -272,7 +272,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">2025</span>
-          <h4>⚡ Optimización en Tiempo Real</h4>
+          <h4> Optimización en Tiempo Real</h4>
         </div>
         <p>Algoritmos que optimizan el rendimiento de aplicaciones automáticamente mientras están en ejecución</p>
       </div>
@@ -286,7 +286,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>🎯 Conclusión</h2>
+    <h2> Conclusión</h2>
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
@@ -315,7 +315,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
 
       <div class="next-steps">
-        <h3>🚀 Próximos Pasos Recomendados:</h3>
+        <h3> Próximos Pasos Recomendados:</h3>
         <ol>
           <li>Instala GitHub Copilot y úsalo por una semana</li>
           <li>Experimenta con la API de OpenAI en un proyecto personal</li>
@@ -691,7 +691,7 @@ const predictions = model.predict(userFeatures);</code>
     </style>
     `
   },
-  
+
   {
     thumbnail: getArticleImage('ciencia_datos'),
     url: 'ciencia+de+datos+para+desarrolladores+web',
@@ -729,7 +729,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>💡 ¿Por qué los Desarrolladores Web Necesitan Data Science?</h2>
+    <h2> ¿Por qué los Desarrolladores Web Necesitan Data Science?</h2>
     
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1400/1*U_L8qV2Z2Xiikg9oOkfi-Q.png" alt="Data Science para Web" class="article-image" />
@@ -746,12 +746,12 @@ const predictions = model.predict(userFeatures);</code>
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <div class="benefit-icon">📊</div>
+        <div class="benefit-icon"></div>
         <h4>Análisis de Comportamiento</h4>
         <p>Entender cómo los usuarios interactúan con tu aplicación para optimizar la experiencia</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🎯</div>
+        <div class="benefit-icon"></div>
         <h4>Optimización de Conversiones</h4>
         <p>Identificar puntos de fricción y mejorar las tasas de conversión basado en datos reales</p>
       </div>
@@ -770,7 +770,7 @@ const predictions = model.predict(userFeatures);</code>
     <h2>🛠️ Stack Tecnológico Esencial</h2>
 
     <div class="callout callout-warning">
-      <div class="callout-icon">⚡</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Mi Stack Recomendado</h3>
         <p>Después de probar múltiples combinaciones, este es el stack que uso para integrar ciencia de datos en aplicaciones web de forma efectiva y escalable.</p>
@@ -794,7 +794,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">📊</span>
+          <span class="tech-icon"></span>
           <h4>Frontend - Visualización JavaScript</h4>
         </div>
         <p>Herramientas modernas para crear dashboards interactivos y visualizaciones que cautiven a los usuarios</p>
@@ -815,7 +815,7 @@ const predictions = model.predict(userFeatures);</code>
     </div>
 
     <div class="callout callout-success">
-      <div class="callout-icon">🎯</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Proyectos Reales con Impacto Medible</h3>
         <p>Estos son algunos de los proyectos de data science que he desarrollado, con resultados concretos y medibles para las empresas:</p>
@@ -825,7 +825,7 @@ const predictions = model.predict(userFeatures);</code>
     <div class="use-cases">
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">📊</span>
+          <span class="use-case-icon"></span>
           <h4>Dashboard de Analytics en Tiempo Real</h4>
           <span class="use-case-badge">+400% mejor toma de decisiones</span>
         </div>
@@ -922,7 +922,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">4️⃣</span>
-          <h4>📊 Visualización Interactiva</h4>
+          <h4> Visualización Interactiva</h4>
         </div>
         <p>Dashboards en React con D3.js que permiten exploración de datos en tiempo real y generación de insights accionables</p>
         <div class="trend-examples">
@@ -935,7 +935,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">5️⃣</span>
-          <h4>🚀 APIs Inteligentes</h4>
+          <h4> APIs Inteligentes</h4>
         </div>
         <p>FastAPI endpoints que sirven insights, predicciones y recomendaciones con latencia ultra-baja y alta disponibilidad</p>
         <div class="trend-examples">
@@ -959,7 +959,7 @@ const predictions = model.predict(userFeatures);</code>
       </ul>
     </div>
 
-    <h2>🎯 Conclusión</h2>
+    <h2> Conclusión</h2>
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
@@ -978,7 +978,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
 
       <div class="next-steps">
-        <h3>🚀 Tu Siguiente Paso:</h3>
+        <h3> Tu Siguiente Paso:</h3>
         <ol>
           <li>Identifica una métrica clave en tu aplicación actual</li>
           <li>Implementa tracking básico con Google Analytics 4</li>
@@ -990,7 +990,7 @@ const predictions = model.predict(userFeatures);</code>
     </div>
     `
   },
-  
+
   {
     thumbnail: getArticleImage('frontend_moderno'),
     url: 'frontend+moderno+2024+react+nextjs+typescript',
@@ -1028,7 +1028,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>⚡ El Stack Frontend Definitivo 2024</h2>
+    <h2> El Stack Frontend Definitivo 2024</h2>
     
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1400/1*l4xICbIIYlz1OTymWCoUTg.png" alt="Modern Frontend Stack" class="article-image" />
@@ -1036,7 +1036,7 @@ const predictions = model.predict(userFeatures);</code>
     </div>
 
     <div class="callout callout-info">
-      <div class="callout-icon">🚀</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Mi Stack Batalla-Probado</h3>
         <p>Después de construir <strong>más de 50 aplicaciones frontend</strong> en producción, este es el stack que garantiza velocidad de desarrollo, mantenibilidad y performance excepcional.</p>
@@ -1049,8 +1049,8 @@ const predictions = model.predict(userFeatures);</code>
           <tr>
             <th>🛠️ Tecnología</th>
             <th>💼 Propósito</th>
-            <th>⭐ Ventaja Clave</th>
-            <th>📊 Adopción 2024</th>
+            <th> Ventaja Clave</th>
+            <th> Adopción 2024</th>
           </tr>
         </thead>
         <tbody>
@@ -1091,7 +1091,7 @@ const predictions = model.predict(userFeatures);</code>
     <h2>⚛️ React 18: Las Características que Cambian Todo</h2>
 
     <div class="callout callout-warning">
-      <div class="callout-icon">⚡</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Concurrent Features Revolution</h3>
         <p>React 18 introdujo características que literalmente cambian cómo pensamos sobre el rendering. Estas no son solo mejoras incrementales, son <strong>cambios fundamentales</strong> que mejoran la UX dramáticamente.</p>
@@ -1132,7 +1132,7 @@ const handleClick = () => {
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🎯</span>
+          <span class="tech-icon"></span>
           <h4>useTransition Hook</h4>
         </div>
         <p>Marca actualizaciones como no urgentes, permitiendo que React priorice interacciones críticas del usuario</p>
@@ -1157,7 +1157,7 @@ const handleSearch = (query) => {
     </div>
 
     <div class="callout callout-success">
-      <div class="callout-icon">🎯</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Game Changer Total</h3>
         <p>El App Router no es solo una mejora, es una <strong>reimaginación completa</strong> de cómo construimos aplicaciones web. Server Components por defecto, layouts anidados, y streaming cambian las reglas del juego.</p>
@@ -1243,7 +1243,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <div class="use-cases">
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">⚡</span>
+          <span class="use-case-icon"></span>
           <h4>Desarrollo 5x Más Rápido</h4>
           <span class="use-case-badge">Velocidad extrema</span>
         </div>
@@ -1258,7 +1258,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🎯</span>
+          <span class="use-case-icon"></span>
           <h4>Design System Consistente</h4>
           <span class="use-case-badge">Zero config</span>
         </div>
@@ -1271,7 +1271,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
     </div>
 
-    <h2>🚀 Performance: Optimización que Importa</h2>
+    <h2> Performance: Optimización que Importa</h2>
 
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1200/1*OQS8FY0q1YbQqTqVqKKJOw.png" alt="React Performance" class="article-image" />
@@ -1279,7 +1279,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     </div>
 
     <div class="callout callout-warning">
-      <div class="callout-icon">⚡</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Performance != Premature Optimization</h3>
         <p>Después de optimizar cientos de aplicaciones React, he aprendido que <strong>las optimizaciones correctas en el momento correcto</strong> pueden mejorar la UX dramáticamente.</p>
@@ -1315,7 +1315,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">📊</span>
+          <span class="trend-year"></span>
           <h4>Bundle Analysis</h4>
         </div>
         <p>Análisis continuo del bundle size para identificar dependencias innecesarias</p>
@@ -1343,7 +1343,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <h2>🧪 Testing: Calidad Asegurada</h2>
 
     <div class="callout callout-success">
-      <div class="callout-icon">🎯</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Testing Strategy que Funciona</h3>
         <p>Después de mantener aplicaciones en producción con millones de usuarios, esta es la estrategia de testing que <strong>realmente previene bugs</strong> y mantiene la confianza del equipo.</p>
@@ -1362,7 +1362,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
         <p>Testing de user flows completos que validan la experiencia real del usuario</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🌐</div>
+        <div class="benefit-icon"></div>
         <h4>E2E con Playwright</h4>
         <p>Tests end-to-end para casos críticos de negocio en múltiples navegadores</p>
       </div>
@@ -1376,7 +1376,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <h2>🔮 Tendencias Frontend 2024-2025</h2>
 
     <div class="callout callout-primary">
-      <div class="callout-icon">🚀</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>El Futuro ya Está Aquí</h3>
         <p>Estas tendencias no son especulación - son tecnologías que <strong>ya estoy usando en producción</strong> y que definirán el frontend en los próximos años.</p>
@@ -1400,7 +1400,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🤖</span>
+          <span class="use-case-icon"></span>
           <h4>AI-Powered Development</h4>
           <span class="use-case-badge">Productividad 3x</span>
         </div>
@@ -1428,7 +1428,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">⚡</span>
+          <span class="use-case-icon"></span>
           <h4>Edge Computing Integration</h4>
           <span class="use-case-badge">Performance global</span>
         </div>
@@ -1441,7 +1441,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
     </div>
 
-    <h2>🎯 Conclusión</h2>
+    <h2> Conclusión</h2>
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
@@ -1471,7 +1471,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
 
       <div class="next-steps">
-        <h3>🚀 Plan de Acción Inmediato:</h3>
+        <h3> Plan de Acción Inmediato:</h3>
         <ol>
           <li>Migra tu próximo proyecto a Next.js 14 App Router</li>
           <li>Implementa TypeScript con configuración estricta</li>
@@ -1483,7 +1483,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     </div>
     `
   },
-  
+
   {
     thumbnail: getArticleImage('backend'),
     url: 'backend+escalable+python+nodejs+microservicios',
@@ -1575,7 +1575,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <p>Python y Node.js, combinados con containerización y orquestación, proporcionan una base sólida para cualquier aplicación moderna.</p>
     `
   },
-  
+
   {
     thumbnail: getArticleImage('fullstack'),
     url: 'desarrollo+fullstack+2024+guia+completa',

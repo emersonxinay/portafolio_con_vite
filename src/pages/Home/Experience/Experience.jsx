@@ -17,7 +17,7 @@ const Experience = () => {
       borderColor: 'border-blue-500/30'
     },
     {
-      id: 'desafiolatam', 
+      id: 'desafiolatam',
       icon: 'fas fa-users',
       color: 'from-purple-500 to-pink-600',
       bgColor: 'from-purple-900/20 to-pink-900/20',
@@ -26,7 +26,7 @@ const Experience = () => {
     {
       id: 'compilando',
       icon: 'fas fa-rocket',
-      color: 'from-green-500 to-emerald-600', 
+      color: 'from-green-500 to-emerald-600',
       bgColor: 'from-green-900/20 to-emerald-900/20',
       borderColor: 'border-green-500/30'
     },
@@ -34,7 +34,7 @@ const Experience = () => {
       id: 'codigoFuturo',
       icon: 'fas fa-chart-line',
       color: 'from-orange-500 to-red-600',
-      bgColor: 'from-orange-900/20 to-red-900/20', 
+      bgColor: 'from-orange-900/20 to-red-900/20',
       borderColor: 'border-orange-500/30'
     }
   ]
@@ -45,21 +45,21 @@ const Experience = () => {
         animate={{ x: [30, -20, 20, -30], y: [30, -20, 20, -30], rotate: [0, 90], scale: [1, 1.2, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
       ></motion.div>
-      
+
       <Title title={t('experience.title')} />
-      
+
       {/* Real Tech Stack Overview */}
       <div className="mobile-card bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6">
         <p className="text-center mb-4 xs:mb-6">
           <span className='text-sky-400 font-semibold text-base xs:text-lg'>{t('experience.completeStack')}</span>
         </p>
-        
+
         {/* Frontend */}
         <div className="mb-4 xs:mb-6">
           <p className="text-green-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.frontend')}</p>
           <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
             <i className="fab fa-react text-cyan-400 hover:scale-125 transition-transform touch-target" title="React"></i>
-            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="TailwindCSS">⚡</div>
+            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="TailwindCSS"></div>
             <div className="text-purple-500 hover:scale-125 transition-transform touch-target" title="Bootstrap">🅱️</div>
           </div>
         </div>
@@ -106,9 +106,8 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.id}
-            className={`mobile-card p-4 xs:p-5 sm:p-6 rounded-xl xs:rounded-2xl backdrop-blur-sm border ${exp.borderColor} bg-gradient-to-br ${exp.bgColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
-              activeExperience === index ? 'ring-2 ring-sky-400/50 shadow-lg shadow-sky-500/20' : ''
-            }`}
+            className={`mobile-card p-4 xs:p-5 sm:p-6 rounded-xl xs:rounded-2xl backdrop-blur-sm border ${exp.borderColor} bg-gradient-to-br ${exp.bgColor} hover:scale-105 transition-all duration-300 cursor-pointer ${activeExperience === index ? 'ring-2 ring-sky-400/50 shadow-lg shadow-sky-500/20' : ''
+              }`}
             onHoverStart={() => setActiveExperience(index)}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

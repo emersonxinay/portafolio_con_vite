@@ -142,7 +142,7 @@ const CVHarvard = () => {
     "@context": "https://schema.org",
     "@type": ["Person", "Resume"],
     "name": "Emerson Espinoza Aguirre",
-    "jobTitle": "Senior Software Engineer & Tech Lead", 
+    "jobTitle": "Senior Software Engineer & Tech Lead",
     "description": "CV académico estilo Harvard de Emerson Espinoza, Senior Software Engineer con 6+ años de experiencia liderando proyectos tecnológicos",
     "url": "https://emersonespinoza.com/cv/harvard",
     "image": "https://emersonespinoza.com/assets/emerson-espinoza-5579c795.jpeg",
@@ -157,7 +157,7 @@ const CVHarvard = () => {
         "educationalLevel": "Bachelor's Degree"
       },
       {
-        "@type": "EducationalOccupationalCredential", 
+        "@type": "EducationalOccupationalCredential",
         "name": "Full Stack Web Development",
         "credentialCategory": "Professional Certification"
       }
@@ -178,9 +178,9 @@ const CVHarvard = () => {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <SEOHead 
-        title={currentLanguage === 'ES' 
-          ? "CV Emerson Espinoza - Ingeniero de Sistemas | Currículum Harvard Style" 
+      <SEOHead
+        title={currentLanguage === 'ES'
+          ? "CV Emerson Espinoza - Ingeniero de Sistemas | Currículum Harvard Style"
           : "Emerson Espinoza Resume - Systems Engineer | Harvard Style CV"
         }
         description={currentLanguage === 'ES'
@@ -353,7 +353,7 @@ const CVHarvard = () => {
             title={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
             aria-label={currentLanguage === 'ES' ? 'Switch to English' : 'Cambiar a Español'}
           >
-            <span className="text-xs">🌐</span>
+            <span className="text-xs"></span>
             <span className="hidden xs:inline">{currentLanguage === 'ES' ? 'EN' : 'ES'}</span>
           </button>
           <button
@@ -382,7 +382,7 @@ const CVHarvard = () => {
             <span>📧 {t('cv.harvard.email')}</span>
             <span>
               <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">
-                🌐 {t('cv.harvard.linkedin')}
+                {t('cv.harvard.linkedin')}
               </a>
             </span>
             <span>

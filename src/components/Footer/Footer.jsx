@@ -60,7 +60,7 @@ const Footer = () => {
     <footer className="relative bg-gradient-to-b from-slate-900 to-black border-t border-slate-800">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 via-purple-900/5 to-green-900/5" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -78,7 +78,7 @@ const Footer = () => {
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Desarrollador Full Stack especializado en crear soluciones tecnológicas que impulsan el crecimiento empresarial.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center text-gray-400">
@@ -90,7 +90,7 @@ const Footer = () => {
                 <div className="flex items-center text-gray-400">
                   <span className="mr-3">📱</span>
                   <a href="https://wa.me/51987654321" className="hover:text-white transition-colors">
-                    +51 987 654 321
+                    +51 974361728
                   </a>
                 </div>
                 <div className="flex items-center text-gray-400">
@@ -153,7 +153,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h4 className="text-lg font-semibold text-white mb-6">Conecta Conmigo</h4>
-              
+
               {/* Social Icons */}
               <div className="flex space-x-4 mb-6">
                 {socialLinks.map((social, index) => (
@@ -196,7 +196,7 @@ const Footer = () => {
             >
               © 2024 Emerson Espinoza. Todos los derechos reservados.
             </motion.p>
-            
+
             <motion.div
               className="flex space-x-6 text-sm text-gray-400"
               initial={{ opacity: 0 }}

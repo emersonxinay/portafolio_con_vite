@@ -2,80 +2,18 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Title from '../../../components/Title';
 import { useTranslation } from 'react-i18next';
+import { projectsData, projectCategories, openProject, getProjectsByCategory } from '../../../data/projectsData';
 
 const Projects = () => {
   const { t } = useTranslation(['translation']);
   const [hoveredProject, setHoveredProject] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const projects = [
-    {
-      id: 1,
-      title: "Kefyto E-commerce",
-      description: "Plataforma completa de e-commerce para venta de kefir con sistema de pagos integrado",
-      category: "ecommerce",
-      tech: ["React", "Flask", "PostgreSQL", "MercadoPago"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "https://kefyto.com",
-      githubUrl: "#",
-      status: "live",
-      gradient: "from-blue-500 via-purple-500 to-pink-500"
-    },
-    {
-      id: 2,
-      title: "Hazuki Restaurant",
-      description: "Sistema de gestión completo para restaurante con reservas, menús dinámicos y panel administrativo",
-      category: "web",
-      tech: ["WordPress", "Python", "FastAPI", "PostgreSQL"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "https://hazuki.cl",
-      githubUrl: "#",
-      status: "live",
-      gradient: "from-green-500 via-teal-500 to-blue-500"
-    },
-    {
-      id: 3,
-      title: "Netmuz Social",
-      description: "Red social especializada para músicos y creadores de contenido con streaming en tiempo real",
-      category: "social",
-      tech: ["React", "Express", "Socket.io", "PostgreSQL"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "https://netmuz.com",
-      githubUrl: "#",
-      status: "development",
-      gradient: "from-purple-500 via-pink-500 to-red-500"
-    },
-    {
-      id: 4,
-      title: "SaaS Educativo",
-      description: "Plataforma educativa con gestión de cursos, seguimiento de progreso y sistema de certificaciones",
-      category: "saas",
-      tech: ["React", "Python", "Django", "Redis"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "development",
-      gradient: "from-orange-500 via-red-500 to-pink-500"
-    }
-  ];
 
-  const categories = [
-    { id: 'all', name: 'Todos', icon: 'fas fa-th-large' },
-    { id: 'ecommerce', name: 'E-commerce', icon: 'fas fa-shopping-cart' },
-    { id: 'web', name: 'Web Apps', icon: 'fas fa-globe' },
-    { id: 'social', name: 'Social', icon: 'fas fa-users' },
-    { id: 'saas', name: 'SaaS', icon: 'fas fa-cloud' }
-  ];
+  const categories = projectCategories;
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects = getProjectsByCategory(selectedCategory);
 
-  const openProject = (url) => {
-    if (url && url !== '#') {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -131,37 +69,44 @@ const Projects = () => {
 
       {/* Projects Grid */}
       <AnimatePresence mode="wait">
-        <motion.div 
-          className="mobile-grid grid-cols-1 md:grid-cols-2"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           key={selectedCategory}
         >
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <div
               key={project.id}
-              variants={cardVariants}
-              className="group relative mobile-card bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl xs:rounded-3xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500"
+              className="group relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl xs:rounded-3xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
-              whileHover={{ 
-                y: -10,
-                boxShadow: "0 25px 50px rgba(6, 182, 212, 0.15)"
-              }}
             >
               {/* Background Gradient Effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               
               {/* Project Image/Preview */}
-              <div className="relative h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}
-                  animate={{
-                    backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"]
+              <div className="relative h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden rounded-t-2xl xs:rounded-t-3xl">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    // Fallback si la imagen no carga
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'block';
                   }}
-                  transition={{ duration: 8, repeat: Infinity }}
                 />
+                
+                {/* Fallback cuando no carga la imagen */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 hidden`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                    >
+                      <i className="fas fa-rocket text-2xl text-white/70"></i>
+                    </motion.div>
+                  </div>
+                </div>
                 
                 {/* Status Badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
@@ -173,16 +118,6 @@ const Projects = () => {
                     project.status === 'live' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'
                   }`} />
                   {project.status === 'live' ? 'En línea' : 'En desarrollo'}
-                </div>
-
-                {/* Project Icon/Logo Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                  >
-                    <i className="fas fa-rocket text-2xl text-white/70"></i>
-                  </motion.div>
                 </div>
               </div>
 
@@ -220,26 +155,24 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2 xs:gap-3 pt-4">
-                  <motion.button
-                    onClick={() => openProject(project.liveUrl)}
-                    className="flex-1 mobile-btn bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 xs:px-4 py-2.5 xs:py-2 rounded-lg xs:rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-sm xs:text-base touch-target"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    disabled={project.liveUrl === '#'}
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 xs:px-4 py-2.5 xs:py-2 rounded-lg xs:rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-sm xs:text-base no-underline"
                   >
                     <i className="fas fa-external-link-alt text-sm"></i>
                     Ver Proyecto
-                  </motion.button>
+                  </a>
                   
-                  <motion.button
-                    onClick={() => openProject(project.githubUrl)}
-                    className="mobile-btn px-3 xs:px-4 py-2.5 xs:py-2 bg-slate-800/50 text-zinc-300 rounded-lg xs:rounded-xl border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300 flex items-center justify-center text-sm xs:text-base touch-target"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    disabled={project.githubUrl === '#'}
+                  <a
+                    href={project.githubUrl !== '#' ? project.githubUrl : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-3 xs:px-4 py-2.5 xs:py-2 bg-slate-800/50 text-zinc-300 rounded-lg xs:rounded-xl border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300 flex items-center justify-center text-sm xs:text-base no-underline ${project.githubUrl === '#' ? 'opacity-50 pointer-events-none' : ''}`}
                   >
                     <i className="fab fa-github text-lg"></i>
-                  </motion.button>
+                  </a>
                 </div>
               </div>
 
@@ -255,9 +188,9 @@ const Projects = () => {
                   />
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </AnimatePresence>
 
       {/* Call to Action */}

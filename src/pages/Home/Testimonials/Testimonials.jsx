@@ -10,7 +10,7 @@ const Testimonials = () => {
       name: "María González",
       role: "CEO, TechStart",
       company: "Startup Tecnológica",
-      avatar: "👩‍💼",
+      avatar: "",
       rating: 5,
       text: "Emerson transformó completamente nuestra presencia digital. Nuestras ventas online aumentaron un 300% en solo 3 meses. Su enfoque técnico y visión de negocio son excepcionales.",
       project: "E-commerce + CRM",
@@ -22,7 +22,7 @@ const Testimonials = () => {
       name: "Carlos Mendoza",
       role: "Director de Operaciones",
       company: "Retail Solutions",
-      avatar: "👨‍💻",
+      avatar: "",
       rating: 5,
       text: "La automatización que desarrolló nos ahorra 40 horas semanales de trabajo manual. El ROI fue inmediato y el soporte post-lanzamiento es impecable.",
       project: "Sistema de Automatización",
@@ -34,7 +34,7 @@ const Testimonials = () => {
       name: "Ana Rodríguez",
       role: "Fundadora",
       company: "Boutique Online",
-      avatar: "👩‍🎨",
+      avatar: "",
       rating: 5,
       text: "Mi tienda online pasó de 0 a 50K usuarios mensuales. El diseño es hermoso, la funcionalidad perfecta y el SEO nos posicionó en el top 3 de Google.",
       project: "Tienda Online",
@@ -46,7 +46,7 @@ const Testimonials = () => {
       name: "Roberto Silva",
       role: "Gerente General",
       company: "Servicios Profesionales",
-      avatar: "👨‍💼",
+      avatar: "",
       rating: 5,
       text: "El chatbot IA que desarrolló atiende el 80% de nuestras consultas automáticamente. Nuestros clientes están más satisfechos y nosotros más eficientes.",
       project: "Chatbot IA",
@@ -56,10 +56,10 @@ const Testimonials = () => {
   ];
 
   const stats = [
-    { number: "50+", label: "Proyectos Exitosos", icon: "🚀" },
-    { number: "98%", label: "Satisfacción Cliente", icon: "⭐" },
-    { number: "24h", label: "Tiempo de Respuesta", icon: "⚡" },
-    { number: "3+", label: "Países Atendidos", icon: "🌍" }
+    { number: "50+", label: "Proyectos Exitosos", icon: "" },
+    { number: "98%", label: "Satisfacción Cliente", icon: "" },
+    { number: "24h", label: "Tiempo de Respuesta", icon: "" },
+    { number: "3+", label: "Países Atendidos", icon: "" }
   ];
 
   const nextTestimonial = () => {
@@ -150,7 +150,7 @@ const Testimonials = () => {
                     <div className="text-right">
                       <div className="flex text-yellow-400 mb-2">
                         {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
-                          <span key={i}>⭐</span>
+                          <span key={i}></span>
                         ))}
                       </div>
                       <div className="text-sm text-gray-400">{testimonials[activeTestimonial].project}</div>

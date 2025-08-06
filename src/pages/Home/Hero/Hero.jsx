@@ -66,16 +66,16 @@ const Hero = () => {
         >
           {/* Glassmorphism Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/10 to-transparent backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl -z-10" />
-          
+
           {/* Content with improved spacing */}
           <div className="p-4 xs:p-6 md:p-8">
-            <motion.h1 
+            <motion.h1
               className='font-black text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl xl:text-[4rem] leading-tight mb-4 xs:mb-6'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.5 }}
             >
-              <motion.div 
+              <motion.div
                 className='mb-4'
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -88,11 +88,11 @@ const Hero = () => {
                   </span>
                 </div>
                 <p className="text-cyan-400 text-xs xs:text-sm font-medium">
-                  🎯 Building scalable systems that process millions of transactions
+                  Building scalable systems that process millions of transactions
                 </p>
               </motion.div>
-              
-              <motion.span 
+
+              <motion.span
                 className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 block drop-shadow-lg'
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -101,8 +101,8 @@ const Hero = () => {
               >
                 Emerson Espinoza
               </motion.span>
-              
-              <motion.span 
+
+              <motion.span
                 className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 block text-lg xs:text-xl sm:text-2xl xl:text-4xl mt-2 xs:mt-3 font-bold'
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -113,7 +113,7 @@ const Hero = () => {
             </motion.h1>
           </div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const Hero = () => {
               <span className='text-sm text-emerald-300 font-medium'>{t('hero.available')}</span>
             </div>
           </div>
-          
+
           <p className='text-zinc-300 text-base xs:text-lg xl:text-xl font-medium mb-2 px-4 xs:px-0'>
             {t('hero.role')}
           </p>
@@ -133,9 +133,9 @@ const Hero = () => {
             {t('hero.description')}
           </p>
         </motion.div>
-        
+
         {/* Location Badge */}
-        <motion.div 
+        <motion.div
           className='bg-gradient-to-r from-green-900/30 to-blue-900/30 backdrop-blur-sm border border-green-500/20 rounded-full px-4 py-2 text-center w-fit mx-auto xl:mx-0'
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -147,12 +147,12 @@ const Hero = () => {
         <p className='text-zinc-400 text-sm xs:text-base font-base m-auto xl:m-0 w-full px-4 xs:px-0'>
           {t('hero.description')}
         </p>
-        
+
         {/* Enhanced Professional Metrics */}
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 xs:gap-4 w-full px-2 xs:px-0'>
-          <motion.div 
+          <motion.div
             className='group relative bg-gradient-to-br from-sky-900/20 via-blue-900/30 to-cyan-900/20 backdrop-blur-md border border-sky-400/20 rounded-2xl p-4 text-center overflow-hidden'
-            whileHover={{ 
+            whileHover={{
               scale: 1.08,
               boxShadow: "0 20px 40px rgba(14, 165, 233, 0.3)",
               borderColor: "rgba(14, 165, 233, 0.5)"
@@ -164,10 +164,10 @@ const Hero = () => {
           >
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-sky-400/0 via-sky-400/10 to-sky-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            <motion.div 
+
+            <motion.div
               className='text-2xl xs:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400 mb-1'
-              animate={{ 
+              animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{ duration: 3, repeat: Infinity }}
@@ -178,10 +178,10 @@ const Hero = () => {
               {t('hero.metrics.experience')}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className='group relative bg-gradient-to-br from-purple-900/20 via-pink-900/30 to-fuchsia-900/20 backdrop-blur-md border border-purple-400/20 rounded-2xl p-4 text-center overflow-hidden'
-            whileHover={{ 
+            whileHover={{
               scale: 1.08,
               boxShadow: "0 20px 40px rgba(168, 85, 247, 0.3)",
               borderColor: "rgba(168, 85, 247, 0.5)"
@@ -192,9 +192,9 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/10 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <motion.div 
+            <motion.div
               className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-400 mb-1'
-              animate={{ 
+              animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
@@ -205,10 +205,10 @@ const Hero = () => {
               {t('hero.metrics.focus')}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className='group relative bg-gradient-to-br from-green-900/20 via-emerald-900/30 to-teal-900/20 backdrop-blur-md border border-green-400/20 rounded-2xl p-4 text-center overflow-hidden'
-            whileHover={{ 
+            whileHover={{
               scale: 1.08,
               boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)",
               borderColor: "rgba(34, 197, 94, 0.5)"
@@ -219,9 +219,9 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-green-400/0 via-green-400/10 to-green-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <motion.div 
+            <motion.div
               className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-1'
-              animate={{ 
+              animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{ duration: 3, repeat: Infinity, delay: 1 }}
@@ -232,10 +232,10 @@ const Hero = () => {
               {t('hero.metrics.countries')}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className='group relative bg-gradient-to-br from-orange-900/20 via-red-900/30 to-pink-900/20 backdrop-blur-md border border-orange-400/20 rounded-2xl p-4 text-center overflow-hidden'
-            whileHover={{ 
+            whileHover={{
               scale: 1.08,
               boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
               borderColor: "rgba(249, 115, 22, 0.5)"
@@ -246,9 +246,9 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-orange-400/0 via-orange-400/10 to-orange-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <motion.div 
+            <motion.div
               className='text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-red-400 mb-1'
-              animate={{ 
+              animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
@@ -265,7 +265,7 @@ const Hero = () => {
           <motion.button
             onClick={getInTouchHandler}
             className='group relative font-bold px-6 xs:px-8 md:px-10 py-3 xs:py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-xl xs:rounded-2xl flex items-center justify-center gap-2 xs:gap-3 overflow-hidden shadow-2xl w-full xs:w-auto min-h-[48px] touch-target'
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: "0 25px 50px rgba(14, 165, 233, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1)",
               y: -2
@@ -287,7 +287,7 @@ const Hero = () => {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            
+
             {/* Shimmer effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
@@ -295,27 +295,27 @@ const Hero = () => {
               whileHover={{ x: '200%' }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             />
-            
+
             {/* Content */}
             <span className="relative z-10 text-base xs:text-lg font-bold tracking-wide">
               {t('hero.contact')}
             </span>
-            
+
             <motion.div
               className="relative z-10 flex items-center justify-center w-6 h-6 bg-white/20 rounded-full"
-              animate={{ 
+              animate={{
                 y: [0, -4, 0],
                 rotate: [0, 5, -5, 0]
               }}
-              transition={{ 
-                duration: 2, 
+              transition={{
+                duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
               <i className="fas fa-rocket text-sm"></i>
             </motion.div>
-            
+
             {/* Floating particles */}
             <motion.div
               className="absolute inset-0 pointer-events-none"
@@ -360,7 +360,7 @@ const Hero = () => {
               <span className="text-sm xs:text-base font-medium">CV Harvard</span>
               <i className="fas fa-graduation-cap text-sm"></i>
             </motion.a>
-            
+
             <motion.a
               href='/cv/corporate'
               target='_blank'

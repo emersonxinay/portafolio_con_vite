@@ -10,110 +10,123 @@
       <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.9" />
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge> 
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
+      <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
   </defs>
-  
+
   <!-- Background -->
-  <rect width="400" height="300" fill="url(#bg-gradient)" rx="20"/>
-  
+  <rect width="400" height="300" fill="url(#bg-gradient)" rx="20" />
+
   <!-- Main container -->
-  <rect x="20" y="20" width="360" height="260" fill="url(#card-gradient)" rx="15" stroke="#22c55e" stroke-width="1" opacity="0.8"/>
-  
+  <rect x="20" y="20" width="360" height="260" fill="url(#card-gradient)" rx="15" stroke="#22c55e" stroke-width="1"
+    opacity="0.8" />
+
   <!-- Header -->
-  <text x="200" y="50" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="24" font-weight="bold">CASH GITHUB</text>
-  <text x="200" y="70" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="14">Financial Tool</text>
-  
+  <text x="200" y="50" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="24"
+    font-weight="bold">CASH GITHUB</text>
+  <text x="200" y="70" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="14">Financial
+    Tool</text>
+
   <!-- Money/Dollar icon -->
   <g transform="translate(50, 90)">
     <!-- Dollar bill -->
-    <rect x="5" y="8" width="25" height="15" fill="#22c55e" stroke="#16a34a" stroke-width="1" rx="3"/>
-    <text x="17" y="18" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">$</text>
+    <rect x="5" y="8" width="25" height="15" fill="#22c55e" stroke="#16a34a" stroke-width="1" rx="3" />
+    <text x="17" y="18" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12"
+      font-weight="bold">$</text>
     <!-- Coins -->
-    <circle cx="8" cy="28" r="4" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
-    <text x="8" y="30" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="6" font-weight="bold">¢</text>
-    <circle cx="18" cy="28" r="4" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
-    <text x="18" y="30" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="6" font-weight="bold">¢</text>
+    <circle cx="8" cy="28" r="4" fill="#fbbf24" stroke="#f59e0b" stroke-width="1" />
+    <text x="8" y="30" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="6"
+      font-weight="bold">¢</text>
+    <circle cx="18" cy="28" r="4" fill="#fbbf24" stroke="#f59e0b" stroke-width="1" />
+    <text x="18" y="30" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="6"
+      font-weight="bold">¢</text>
   </g>
-  
+
   <!-- GitHub logo -->
   <g transform="translate(120, 90)" filter="url(#glow)">
-    <circle cx="15" cy="15" r="12" fill="#24292e"/>
-    <path d="M15 3 C8.37 3 3 8.37 3 15 C3 20.31 6.435 24.795 11.205 26.385 C11.805 26.49 12.03 26.13 12.03 25.815 C12.03 25.53 12.015 24.585 12.015 23.55 C9 24.09 8.22 22.68 7.98 21.93 C7.845 21.54 7.26 20.43 6.75 20.145 C6.33 19.92 5.73 19.38 6.735 19.365 C7.68 19.35 8.355 20.22 8.58 20.58 C9.66 22.305 11.385 21.795 12.075 21.48 C12.18 20.7 12.495 20.19 12.84 19.89 C10.17 19.59 7.38 18.54 7.38 14.01 C7.38 12.735 7.845 11.685 8.61 10.875 C8.49 10.575 8.07 9.345 8.73 7.785 C8.73 7.785 9.735 7.47 12.03 8.985 C12.99 8.715 14.01 8.58 15.03 8.58 C16.05 8.58 17.07 8.715 18.03 8.985 C20.325 7.455 21.33 7.785 21.33 7.785 C21.99 9.345 21.57 10.575 21.45 10.875 C22.215 11.685 22.68 12.72 22.68 14.01 C22.68 18.555 19.875 19.59 17.205 19.89 C17.64 20.265 18.015 20.985 18.015 22.11 C18.015 23.76 18 25.095 18 25.815 C18 26.13 18.225 26.505 18.825 26.385 C23.565 24.795 27 20.295 27 15 C27 8.37 21.63 3 15 3 Z" fill="white"/>
+    <circle cx="15" cy="15" r="12" fill="#24292e" />
+    <path
+      d="M15 3 C8.37 3 3 8.37 3 15 C3 20.31 6.435 24.795 11.205 26.385 C11.805 26.49 12.03 26.13 12.03 25.815 C12.03 25.53 12.015 24.585 12.015 23.55 C9 24.09 8.22 22.68 7.98 21.93 C7.845 21.54 7.26 20.43 6.75 20.145 C6.33 19.92 5.73 19.38 6.735 19.365 C7.68 19.35 8.355 20.22 8.58 20.58 C9.66 22.305 11.385 21.795 12.075 21.48 C12.18 20.7 12.495 20.19 12.84 19.89 C10.17 19.59 7.38 18.54 7.38 14.01 C7.38 12.735 7.845 11.685 8.61 10.875 C8.49 10.575 8.07 9.345 8.73 7.785 C8.73 7.785 9.735 7.47 12.03 8.985 C12.99 8.715 14.01 8.58 15.03 8.58 C16.05 8.58 17.07 8.715 18.03 8.985 C20.325 7.455 21.33 7.785 21.33 7.785 C21.99 9.345 21.57 10.575 21.45 10.875 C22.215 11.685 22.68 12.72 22.68 14.01 C22.68 18.555 19.875 19.59 17.205 19.89 C17.64 20.265 18.015 20.985 18.015 22.11 C18.015 23.76 18 25.095 18 25.815 C18 26.13 18.225 26.505 18.825 26.385 C23.565 24.795 27 20.295 27 15 C27 8.37 21.63 3 15 3 Z"
+      fill="white" />
   </g>
-  
+
   <!-- React logo -->
   <g transform="translate(190, 90)">
-    <circle cx="15" cy="15" r="3" fill="#61dafb"/>
-    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5"/>
-    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5" transform="rotate(60 15 15)"/>
-    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5" transform="rotate(120 15 15)"/>
+    <circle cx="15" cy="15" r="3" fill="#61dafb" />
+    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5" />
+    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5"
+      transform="rotate(60 15 15)" />
+    <ellipse cx="15" cy="15" rx="12" ry="5" fill="none" stroke="#61dafb" stroke-width="1.5"
+      transform="rotate(120 15 15)" />
   </g>
-  
+
   <!-- Vercel/Cloud icon -->
   <g transform="translate(260, 90)">
-    <polygon points="15,5 25,20 5,20" fill="#000000"/>
-    <polygon points="15,8 22,18 8,18" fill="#ffffff"/>
+    <polygon points="15,5 25,20 5,20" fill="#000000" />
+    <polygon points="15,8 22,18 8,18" fill="#ffffff" />
   </g>
-  
+
   <!-- Chart/Analytics icon -->
   <g transform="translate(330, 90)">
     <!-- Chart bars -->
-    <rect x="5" y="20" width="4" height="8" fill="#22c55e"/>
-    <rect x="11" y="15" width="4" height="13" fill="#10b981"/>
-    <rect x="17" y="10" width="4" height="18" fill="#14b8a6"/>
-    <rect x="23" y="18" width="4" height="10" fill="#0d9488"/>
+    <rect x="5" y="20" width="4" height="8" fill="#22c55e" />
+    <rect x="11" y="15" width="4" height="13" fill="#10b981" />
+    <rect x="17" y="10" width="4" height="18" fill="#14b8a6" />
+    <rect x="23" y="18" width="4" height="10" fill="#0d9488" />
     <!-- Trend line -->
-    <path d="M7 22 L13 17 L19 12 L25 20" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <path d="M7 22 L13 17 L19 12 L25 20" fill="none" stroke="#fbbf24" stroke-width="2" />
   </g>
-  
+
   <!-- Features -->
   <g transform="translate(50, 140)">
-    <circle cx="5" cy="5" r="2" fill="#22c55e"/>
+    <circle cx="5" cy="5" r="2" fill="#22c55e" />
     <text x="15" y="9" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">Herramienta financiera</text>
-    
-    <circle cx="5" cy="25" r="2" fill="#3b82f6"/>
+
+    <circle cx="5" cy="25" r="2" fill="#3b82f6" />
     <text x="15" y="29" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">GitHub integration</text>
-    
-    <circle cx="5" cy="45" r="2" fill="#8b5cf6"/>
+
+    <circle cx="5" cy="45" r="2" fill="#8b5cf6" />
     <text x="15" y="49" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">React frontend</text>
-    
-    <circle cx="5" cy="65" r="2" fill="#f97316"/>
+
+    <circle cx="5" cy="65" r="2" fill="#f97316" />
     <text x="15" y="69" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12">Vercel deploy</text>
   </g>
-  
+
   <!-- Financial dashboard illustration -->
   <g transform="translate(280, 140)">
     <!-- Dashboard screen -->
-    <rect x="10" y="10" width="50" height="35" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="5"/>
-    <rect x="13" y="13" width="44" height="29" fill="#0f172a"/>
-    
+    <rect x="10" y="10" width="50" height="35" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="5" />
+    <rect x="13" y="13" width="44" height="29" fill="#0f172a" />
+
     <!-- Financial widgets -->
-    <rect x="15" y="15" width="18" height="12" fill="#22c55e" opacity="0.3" rx="2"/>
-    <text x="24" y="22" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="8" font-weight="bold">$1,234</text>
-    
-    <rect x="35" y="15" width="18" height="12" fill="#3b82f6" opacity="0.3" rx="2"/>
-    <text x="44" y="22" text-anchor="middle" fill="#3b82f6" font-family="Arial, sans-serif" font-size="8" font-weight="bold">+15%</text>
-    
+    <rect x="15" y="15" width="18" height="12" fill="#22c55e" opacity="0.3" rx="2" />
+    <text x="24" y="22" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="8"
+      font-weight="bold">$1,234</text>
+
+    <rect x="35" y="15" width="18" height="12" fill="#3b82f6" opacity="0.3" rx="2" />
+    <text x="44" y="22" text-anchor="middle" fill="#3b82f6" font-family="Arial, sans-serif" font-size="8"
+      font-weight="bold">+15%</text>
+
     <!-- Chart area -->
-    <rect x="15" y="29" width="38" height="12" fill="#374151" rx="2"/>
+    <rect x="15" y="29" width="38" height="12" fill="#374151" rx="2" />
     <!-- Mini chart -->
-    <path d="M17 37 L22 34 L27 36 L32 32 L37 35 L42 33 L47 31" fill="none" stroke="#22c55e" stroke-width="1.5"/>
-    
+    <path d="M17 37 L22 34 L27 36 L32 32 L37 35 L42 33 L47 31" fill="none" stroke="#22c55e" stroke-width="1.5" />
+
     <!-- GitHub integration indicator -->
-    <circle cx="50" cy="18" r="3" fill="#24292e"/>
-    <path d="M48 18 C48 16.9 48.9 16 50 16 C51.1 16 52 16.9 52 18 C52 19.1 51.1 20 50 20 C48.9 20 48 19.1 48 18 Z" fill="white"/>
+    <circle cx="50" cy="18" r="3" fill="#24292e" />
+    <path d="M48 18 C48 16.9 48.9 16 50 16 C51.1 16 52 16.9 52 18 C52 19.1 51.1 20 50 20 C48.9 20 48 19.1 48 18 Z"
+      fill="white" />
   </g>
-  
+
   <!-- Bottom decoration -->
-  <rect x="50" y="250" width="300" height="3" fill="url(#bg-gradient)" rx="1.5"/>
+  <rect x="50" y="250" width="300" height="3" fill="url(#bg-gradient)" rx="1.5" />
   <!-- Money symbols -->
-  <text x="80" y="265" fill="#22c55e" font-family="Arial, sans-serif" font-size="12" opacity="0.6">💰</text>
+  <text x="80" y="265" fill="#22c55e" font-family="Arial, sans-serif" font-size="12" opacity="0.6"></text>
   <text x="150" y="265" fill="#10b981" font-family="Arial, sans-serif" font-size="12" opacity="0.6">💳</text>
-  <text x="220" y="265" fill="#14b8a6" font-family="Arial, sans-serif" font-size="12" opacity="0.6">📊</text>
+  <text x="220" y="265" fill="#14b8a6" font-family="Arial, sans-serif" font-size="12" opacity="0.6"></text>
   <text x="290" y="265" fill="#0d9488" font-family="Arial, sans-serif" font-size="12" opacity="0.6">💸</text>
 </svg>

@@ -17,38 +17,38 @@ const Docs = () => {
   }, [i18n.language])
 
   const tabs = [
-    { 
-      id: 'frontend', 
-      title: 'Frontend', 
-      icon: FaCode, 
+    {
+      id: 'frontend',
+      title: 'Frontend',
+      icon: FaCode,
       gradient: 'from-blue-500 to-cyan-500',
       description: 'Tecnologías del lado del cliente'
     },
-    { 
-      id: 'backend', 
-      title: 'Backend', 
-      icon: FaServer, 
+    {
+      id: 'backend',
+      title: 'Backend',
+      icon: FaServer,
       gradient: 'from-purple-500 to-pink-500',
       description: 'Tecnologías del lado del servidor'
     },
-    { 
-      id: 'tools', 
-      title: 'DevOps', 
-      icon: FaTools, 
+    {
+      id: 'tools',
+      title: 'DevOps',
+      icon: FaTools,
       gradient: 'from-green-500 to-emerald-500',
       description: 'Herramientas y deployment'
     },
-    { 
-      id: 'advanced', 
-      title: 'Avanzado', 
-      icon: FaRocket, 
+    {
+      id: 'advanced',
+      title: 'Avanzado',
+      icon: FaRocket,
       gradient: 'from-orange-500 to-red-500',
       description: 'Arquitecturas y patrones'
     }
   ]
 
   return (
-    <motion.div 
+    <motion.div
       className='mobile-container relative w-full min-h-screen flex flex-col gap-6 xs:gap-8 sm:gap-12 md:gap-16 pt-16 xs:pt-20 sm:pt-24 md:pt-32 pb-12 xs:pb-16 sm:pb-24 md:pb-32 safe-area-top safe-area-bottom ultra-responsive'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -95,16 +95,16 @@ const Docs = () => {
             </h1>
             <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
-          
+
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
             <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
               📚 Guías Técnicas & Mejores Prácticas Empresariales
             </h2>
             <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
-              Documentación completa sobre tecnologías modernas, arquitecturas escalables, 
+              Documentación completa sobre tecnologías modernas, arquitecturas escalables,
               y metodologías utilizadas en empresas de clase mundial como Google, Facebook, y Amazon.
             </p>
-            
+
             {/* Enhanced Stats */}
             <div className="grid grid-cols-2 xs:grid-cols-4 gap-3 xs:gap-4 md:gap-6 pt-4 xs:pt-6 border-t border-slate-700/50">
               <div className="text-center">
@@ -150,11 +150,10 @@ const Docs = () => {
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`mobile-btn relative p-3 xs:p-4 sm:p-6 rounded-lg xs:rounded-xl sm:rounded-2xl font-bold transition-all duration-300 group touch-target ${
-                  activeTab === tab.id
+                className={`mobile-btn relative p-3 xs:p-4 sm:p-6 rounded-lg xs:rounded-xl sm:rounded-2xl font-bold transition-all duration-300 group touch-target ${activeTab === tab.id
                     ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg shadow-blue-500/25`
                     : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50'
-                }`}
+                  }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -165,7 +164,7 @@ const Docs = () => {
                     <div className="text-xs opacity-75 hidden sm:block leading-tight mt-0.5">{tab.description}</div>
                   </div>
                 </div>
-                
+
                 {activeTab === tab.id && (
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-lg xs:rounded-xl sm:rounded-2xl"
@@ -203,7 +202,7 @@ const Docs = () => {
             )}
             {activeTab === 'advanced' && (
               <div className="text-center py-12 xs:py-16">
-                <div className="text-4xl xs:text-5xl md:text-6xl mb-4">🚀</div>
+                <div className="text-4xl xs:text-5xl md:text-6xl mb-4"></div>
                 <h3 className="text-xl xs:text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
                   Arquitecturas Avanzadas
                 </h3>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSearchParams } from 'react-router-dom'
-import { 
+import {
   FaGithub, FaDocker, FaAws, FaSlack, FaFigma, FaJira, FaGitlab
 } from 'react-icons/fa'
-import { 
-  SiVisualstudiocode, SiPostman, SiVercel, SiJenkins, 
-  SiKubernetes, SiGrafana, SiPrometheus, SiVite, SiJest, 
+import {
+  SiVisualstudiocode, SiPostman, SiVercel, SiJenkins,
+  SiKubernetes, SiGrafana, SiPrometheus, SiVite, SiJest,
   SiCypress, SiStorybook, SiNotion, SiLinear,
   SiTypescript, SiTailwindcss, SiFramer, SiNextdotjs
 } from 'react-icons/si'
@@ -34,7 +34,7 @@ const Tools = () => {
     { id: 'design', name: 'Diseño', icon: '🎨', color: 'from-purple-500 to-pink-500' },
     { id: 'productivity', name: 'Productividad', icon: '📈', color: 'from-orange-500 to-red-500' },
     { id: 'testing', name: 'Testing', icon: '🧪', color: 'from-teal-500 to-cyan-500' },
-    { id: 'monitoring', name: 'Monitoreo', icon: '📊', color: 'from-indigo-500 to-purple-500' },
+    { id: 'monitoring', name: 'Monitoreo', icon: '', color: 'from-indigo-500 to-purple-500' },
   ]
 
   const tools = [
@@ -302,7 +302,7 @@ const Tools = () => {
   }
 
   return (
-    <motion.div 
+    <motion.div
       className='mobile-container relative w-full min-h-screen flex flex-col gap-6 xs:gap-8 sm:gap-12 md:gap-16 pt-16 xs:pt-20 sm:pt-24 md:pt-32 pb-12 xs:pb-16 sm:pb-24 md:pb-32 safe-area-top safe-area-bottom ultra-responsive'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -349,16 +349,16 @@ const Tools = () => {
             </h1>
             <div className="h-0.5 xs:h-1 w-8 xs:w-12 md:w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
-          
+
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
             <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
               🛠️ Enterprise-Grade Development Stack
             </h2>
             <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
-              Herramientas profesionales utilizadas en empresas FAANG y startups unicornio. 
+              Herramientas profesionales utilizadas en empresas FAANG y startups unicornio.
               Desde desarrollo hasta deployment, monitoreo y colaboración en equipos de alto rendimiento.
             </p>
-            
+
             {/* Enhanced Stats */}
             <div className="grid grid-cols-3 gap-3 xs:gap-4 md:gap-6 pt-4 xs:pt-6 border-t border-slate-700/50">
               <div className="text-center">
@@ -396,11 +396,10 @@ const Tools = () => {
             <motion.button
               key={category.id}
               onClick={() => filtersHandler(category.id)}
-              className={`mobile-btn-sm w-full flex flex-col xs:flex-row items-center justify-center gap-1 xs:gap-1.5 p-2 xs:p-3 rounded-lg xs:rounded-xl font-bold transition-all duration-300 text-xs xs:text-sm touch-target ${
-                query === category.id
+              className={`mobile-btn-sm w-full flex flex-col xs:flex-row items-center justify-center gap-1 xs:gap-1.5 p-2 xs:p-3 rounded-lg xs:rounded-xl font-bold transition-all duration-300 text-xs xs:text-sm touch-target ${query === category.id
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg shadow-blue-500/25`
                   : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-600/50 hover:border-slate-500/70'
-              }`}
+                }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 20 }}
@@ -421,7 +420,7 @@ const Tools = () => {
         </div>
 
         {/* Results Counter */}
-        <motion.div 
+        <motion.div
           className="text-center mt-4 xs:mt-6 pt-4 xs:pt-6 border-t border-slate-700/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -456,15 +455,15 @@ const Tools = () => {
             >
               {/* Premium Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              
+
               {/* Tool Icon & Header */}
               <div className="flex items-start justify-between mb-3 xs:mb-4 relative z-10">
                 <div className="p-2 xs:p-3 bg-slate-800/50 rounded-xl xs:rounded-2xl group-hover:scale-110 transition-transform duration-300">
                   {tool.icon}
                 </div>
-                
+
                 {/* Type Badge */}
-                <motion.div 
+                <motion.div
                   className={`px-2 xs:px-3 py-0.5 xs:py-1 text-xs font-bold rounded-full bg-gradient-to-r ${getTypeColor(tool.type)} text-white shadow-lg`}
                   whileHover={{ scale: 1.05 }}
                 >
@@ -477,7 +476,7 @@ const Tools = () => {
                 <h3 className="text-lg xs:text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
                   {tool.name}
                 </h3>
-                
+
                 <p className="text-zinc-300 text-xs xs:text-sm leading-relaxed group-hover:text-zinc-200 transition-colors duration-300">
                   {tool.description}
                 </p>
@@ -485,7 +484,7 @@ const Tools = () => {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 xs:gap-2">
                   {tool.tags.slice(0, 3).map((tag, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-1.5 xs:px-2 py-0.5 xs:py-1 text-xs font-medium bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 backdrop-blur-sm"
                     >
@@ -501,7 +500,7 @@ const Tools = () => {
                     <span className="text-xs text-zinc-400">{tool.popularity}%</span>
                   </div>
                   <div className="w-full bg-slate-700/50 rounded-full h-2">
-                    <motion.div 
+                    <motion.div
                       className="h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-500"
                       initial={{ width: 0 }}
                       animate={{ width: `${tool.popularity}%` }}
@@ -514,7 +513,7 @@ const Tools = () => {
                 <div className="flex items-center justify-between pt-2 xs:pt-3 border-t border-slate-700/50">
                   <span className="text-xs text-zinc-400 hidden xs:inline">Explorar herramienta</span>
                   <span className="text-xs text-zinc-400 xs:hidden">Ver</span>
-                  <motion.div 
+                  <motion.div
                     className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300"
                     whileHover={{ x: 5 }}
                   >

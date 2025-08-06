@@ -11,25 +11,25 @@ const HeroSimple = () => {
     {
       title: "Desarrollo Web",
       subtitle: "Páginas y aplicaciones web modernas",
-      icon: "🌐",
+      icon: "",
       color: "from-blue-400 to-cyan-500"
     },
     {
-      title: "Inteligencia Artificial", 
+      title: "Inteligencia Artificial",
       subtitle: "Automatización inteligente para tu negocio",
-      icon: "🤖",
+      icon: "",
       color: "from-purple-400 to-pink-500"
     },
     {
       title: "Análisis de Datos",
       subtitle: "Insights que impulsan decisiones",
-      icon: "📊", 
+      icon: "",
       color: "from-green-400 to-emerald-500"
     },
     {
       title: "Consultoría Digital",
       subtitle: "Estrategia tecnológica personalizada",
-      icon: "💡",
+      icon: "",
       color: "from-orange-400 to-red-500"
     }
   ];
@@ -107,17 +107,17 @@ const HeroSimple = () => {
               Emerson Espinoza
             </span>
           </h1>
-          
+
           <div className="flex items-center justify-center gap-2 mb-6 text-zinc-400">
             <span>🇵🇪 Peruano</span>
             <span>•</span>
             <span>🇨🇱 Residencia en Chile</span>
             <span>•</span>
-            <span>🌍 Trabajo Remoto</span>
+            <span> Trabajo Remoto</span>
           </div>
 
           <p className="text-xl md:text-2xl text-zinc-300 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ayudo a empresas a <span className="text-blue-400 font-bold">crecer digitalmente</span> con 
+            Ayudo a empresas a <span className="text-blue-400 font-bold">crecer digitalmente</span> con
             tecnología moderna, inteligencia artificial y análisis de datos.
           </p>
         </motion.div>
@@ -132,7 +132,7 @@ const HeroSimple = () => {
           <h2 className="text-lg font-semibold text-zinc-400 mb-4">
             Especializado en:
           </h2>
-          
+
           <AnimatePresence mode="wait">
             <motion.div
               key={currentService}
@@ -161,9 +161,8 @@ const HeroSimple = () => {
               <button
                 key={index}
                 onClick={() => setCurrentService(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentService ? 'bg-blue-400 w-8' : 'bg-zinc-600'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentService ? 'bg-blue-400 w-8' : 'bg-zinc-600'
+                  }`}
               />
             ))}
           </div>
@@ -227,7 +226,7 @@ const HeroSimple = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="flex items-center gap-2 justify-center">
-              👁️ Ver proyectos
+              Ver proyectos
             </span>
           </motion.button>
         </motion.div>

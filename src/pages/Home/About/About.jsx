@@ -7,28 +7,28 @@ const About = () => {
 
   const highlights = [
     {
-      icon: "⚡",
+      icon: "",
       title: "6+ Años",
       subtitle: "Experiencia",
       description: "Desarrollando soluciones digitales",
       color: "from-blue-400 to-cyan-500"
     },
     {
-      icon: "🚀",
+      icon: "",
       title: "50+ Proyectos",
       subtitle: "Exitosos",
       description: "En 3 países diferentes",
       color: "from-green-400 to-emerald-500"
     },
     {
-      icon: "💰",
+      icon: "",
       title: "+$2M",
       subtitle: "En ahorros",
       description: "Generados para clientes",
       color: "from-purple-400 to-pink-500"
     },
     {
-      icon: "🎯",
+      icon: "",
       title: "99.9%",
       subtitle: "Uptime",
       description: "En sistemas en producción",
@@ -52,7 +52,7 @@ const About = () => {
       { name: "MongoDB", description: "Almacenamiento NoSQL para datos no estructurados" },
       { name: "Ruby no Rails", description: "Desarrollo backend robusto y APIs de alto rendimiento" },
       { name: "Redis", description: "Caché y almacenamiento en memoria para aplicaciones web" }
-      
+
     ],
     devops: [
       { name: "Docker", description: "Containerización y despliegues consistentes" },
@@ -99,7 +99,7 @@ const About = () => {
           </span>
         </h2>
         <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-          Desarrollador Full Stack especializado en crear soluciones que impulsan 
+          Desarrollador Full Stack especializado en crear soluciones que impulsan
           el crecimiento real de los negocios.
         </p>
       </motion.div>
@@ -144,7 +144,7 @@ const About = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">
           🛠️ Stack Tecnológico
         </h3>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {/* Frontend */}
           <div>
@@ -216,7 +216,7 @@ const About = () => {
         {/* Bottom CTA */}
         <div className="mt-8 pt-6 border-t border-slate-700/50 text-center">
           <p className="text-zinc-300 leading-relaxed">
-            <span className="font-semibold text-blue-400">Empresas de 3 países</span> confían en mi experiencia 
+            <span className="font-semibold text-blue-400">Empresas de 3 países</span> confían en mi experiencia
             para transformar sus ideas en soluciones digitales exitosas.
           </p>
         </div>

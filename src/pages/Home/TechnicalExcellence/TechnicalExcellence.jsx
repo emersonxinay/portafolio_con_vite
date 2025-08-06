@@ -161,9 +161,9 @@ jobs:
     <section className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4">
         <Title title="💻 Technical Excellence" />
-        
+
         {/* Tab Navigation */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -173,11 +173,10 @@ jobs:
             <motion.button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3 ${
-                activeTab === key
+              className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3 ${activeTab === key
                   ? `bg-gradient-to-r ${area.gradient} text-white shadow-lg`
                   : 'bg-slate-800/50 text-zinc-300 hover:bg-slate-700/50 border border-slate-700/50'
-              }`}
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -281,7 +280,7 @@ jobs:
         >
           <div className="bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              🚀 Ready to Scale Your Systems?
+              Ready to Scale Your Systems?
             </h3>
             <p className="text-zinc-300 mb-6 max-w-2xl mx-auto">
               Let's discuss how these technical skills can solve your enterprise challenges and drive business growth.

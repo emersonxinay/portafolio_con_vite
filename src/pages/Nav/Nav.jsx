@@ -35,7 +35,7 @@ const Nav = () => {
   return (
     <AnimatePresence>
       <motion.nav 
-        className={`mobile-nav safe-area-top ${
+        className={`mobile-nav safe-area-top w-full ${
           scrolled ? 'mobile-nav-scrolled' : ''
         }`}
         initial={{ y: 0, opacity: 1 }}
@@ -48,20 +48,20 @@ const Nav = () => {
           ease: 'easeInOut' 
         }}
       >
-        <div className='mobile-container'>
-          <div className='flex justify-between items-center h-14 xs:h-16 lg:h-20'>
+        <div className='mobile-container w-full'>
+          <div className='flex justify-between items-center h-14 xs:h-16 lg:h-20 w-full'>
             {/* Logo with enhanced animation */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className='relative z-20'
             >
-              <Link to={'/'} className='flex items-center gap-3 group'>
+              <Link to={'/'} className='flex items-center gap-2 xs:gap-3 group'>
                 <div className='relative'>
                   <motion.img 
                     src={Logo} 
                     alt="Emerson Espinoza - Software Engineer" 
-                    className='w-8 h-8 xs:w-10 xs:h-10 lg:w-12 lg:h-12 rounded-full object-cover ring-2 ring-cyan-400/30 group-hover:ring-cyan-400/60 transition-all duration-300 touch-target'
+                    className='w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full object-cover ring-2 ring-cyan-400/30 group-hover:ring-cyan-400/60 transition-all duration-300 touch-target'
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   />

@@ -66,7 +66,7 @@ const Home = () => {
       />
       
       <motion.main 
-        className="w-full"
+        className="w-full overflow-hidden mobile-safe"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -74,7 +74,7 @@ const Home = () => {
       >
       <Hero />
       
-      <div className="mobile-container space-y-16 md:space-y-24 py-16 md:py-20 safe-area-bottom">
+      <div className="mobile-container space-y-12 xs:space-y-16 md:space-y-24 py-12 xs:py-16 md:py-20 safe-area-bottom w-full">
         <About />
         <Services />
         <Projects />
@@ -84,7 +84,7 @@ const Home = () => {
       
       
       <motion.div 
-        className="fixed bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl pointer-events-none"
+        className="fixed bottom-0 right-0 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl pointer-events-none"
         animate={{ 
           x: [0, 20, 0], 
           y: [0, -15, 0],

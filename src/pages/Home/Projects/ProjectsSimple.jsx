@@ -45,8 +45,8 @@ const ProjectsSimple = () => {
   };
 
   return (
-    <section style={{
-      padding: '80px 20px',
+    <section className="projects-section" style={{
+      padding: '60px 16px',
       background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
       position: 'relative',
       borderTop: '1px solid rgba(148, 163, 184, 0.2)',
@@ -69,10 +69,10 @@ const ProjectsSimple = () => {
 
       {/* Header */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        <div style={{
+        <div className="projects-header" style={{
           textAlign: 'center',
-          marginBottom: '60px',
-          padding: '40px',
+          marginBottom: '40px',
+          padding: '30px',
           border: '2px solid rgba(148, 163, 184, 0.2)',
           borderRadius: '20px',
           background: 'rgba(15, 23, 42, 0.6)',
@@ -109,13 +109,13 @@ const ProjectsSimple = () => {
         </div>
 
         {/* Filter Categories */}
-        <div style={{
+        <div className="filter-categories" style={{
           display: 'flex',
           justifyContent: 'center',
           flexWrap: 'wrap',
-          gap: '16px',
-          marginBottom: '60px',
-          padding: '24px',
+          gap: '12px',
+          marginBottom: '40px',
+          padding: '20px',
           border: '1px solid rgba(148, 163, 184, 0.2)',
           borderRadius: '16px',
           background: 'rgba(30, 41, 59, 0.4)',
@@ -128,6 +128,7 @@ const ProjectsSimple = () => {
             <button
               key={category.id}
               onClick={() => setSelectedFilter(category.id)}
+              className="filter-button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -173,10 +174,12 @@ const ProjectsSimple = () => {
         </div>
 
         {/* Projects Grid */}
-        <div style={{
+        <div className="projects-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '28px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '20px',
+          width: '100%',
+          overflowX: 'hidden'
         }}>
           {filteredProjects.map((project, index) => (
             <div
@@ -205,7 +208,7 @@ const ProjectsSimple = () => {
             >
               {/* Header with Icon */}
               <div style={{
-                padding: '32px',
+                padding: '20px',
                 borderBottom: '1px solid rgba(148, 163, 184, 0.1)',
                 background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%)',
                 borderRadius: '18px 18px 0 0'
@@ -261,7 +264,7 @@ const ProjectsSimple = () => {
                   </div>
                 </div>
 
-                <h3 style={{
+                <h3 className="project-title" style={{
                   fontSize: '28px',
                   fontWeight: '700',
                   marginBottom: '12px',
@@ -271,7 +274,7 @@ const ProjectsSimple = () => {
                   {t(`projects.items.${project.id}.title`)}
                 </h3>
 
-                <p style={{
+                <p className="project-description" style={{
                   color: 'rgba(148, 163, 184, 0.8)',
                   lineHeight: '1.6',
                   fontSize: '16px'
@@ -281,14 +284,14 @@ const ProjectsSimple = () => {
               </div>
 
               {/* Metrics Section */}
-              <div style={{
+              <div className="project-metrics" style={{
                 padding: '24px 32px',
                 borderBottom: '1px solid rgba(148, 163, 184, 0.1)'
               }}>
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '20px'
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))',
+                  gap: '10px'
                 }}>
                   {Object.entries(project.metrics).map(([key, value]) => (
                     <div key={key} style={{
@@ -335,7 +338,7 @@ const ProjectsSimple = () => {
                 }}>
                   {t('projects.techStack')}
                 </h4>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <div className="project-tech" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                   {project.tech.map((tech, techIndex) => (
                     <span key={tech} style={{
                       background: 'rgba(51, 65, 85, 0.4)',
@@ -358,11 +361,12 @@ const ProjectsSimple = () => {
               </div>
 
               {/* CTA Button Section */}
-              <div style={{ padding: '32px' }}>
+              <div className="project-cta" style={{ padding: '32px' }}>
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="project-cta-button"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -407,9 +411,9 @@ const ProjectsSimple = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div style={{
-          marginTop: '80px',
-          padding: '40px',
+        <div className="bottom-cta" style={{
+          marginTop: '60px',
+          padding: '30px',
           border: '2px solid rgba(148, 163, 184, 0.2)',
           borderRadius: '20px',
           background: 'rgba(15, 23, 42, 0.6)',
@@ -424,7 +428,7 @@ const ProjectsSimple = () => {
             fontWeight: '700',
             color: 'white',
             marginBottom: '12px'
-          }}>
+          }} className="bottom-cta-title">
             {t('projects.cta.title')}
           </h3>
           <p style={{
@@ -451,7 +455,7 @@ const ProjectsSimple = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '10px'
-            }}
+            }} className="bottom-cta-button"
             onMouseEnter={(e) => {
               e.target.style.transform = 'translateY(-3px)';
               e.target.style.boxShadow = '0 15px 60px rgba(99, 102, 241, 0.4)';
@@ -477,9 +481,60 @@ const ProjectsSimple = () => {
           }
           
           @media (max-width: 768px) {
+            .projects-section {
+              padding: 40px 12px !important;
+            }
+            .projects-header {
+              padding: 24px 16px !important;
+              margin-bottom: 30px !important;
+              border-radius: 16px !important;
+            }
+            .filter-categories {
+              padding: 16px 12px !important;
+              margin-bottom: 30px !important;
+              gap: 8px !important;
+            }
+            .filter-button {
+              padding: 10px 16px !important;
+              font-size: 13px !important;
+            }
             .projects-grid {
-              grid-template-columns: 1fr !important;
-              gap: 24px !important;
+              grid-template-columns: 1fr;
+              gap: 24px;
+            }
+            .project-title {
+              font-size: 22px !important;
+            }
+            .project-description {
+              font-size: 14px !important;
+            }
+            .project-metrics {
+              padding: 16px 20px !important;
+            }
+            .project-tech span {
+              padding: 8px 12px !important;
+              font-size: 12px !important;
+            }
+            .project-cta {
+              padding: 20px !important;
+            }
+            .project-cta-button {
+              padding: 14px 24px !important;
+              font-size: 15px !important;
+            }
+            .bottom-cta {
+              padding: 24px 20px !important;
+              margin-top: 40px !important;
+              border-radius: 16px !important;
+            }
+            .bottom-cta-title {
+              font-size: 20px !important;
+              margin-bottom: 10px !important;
+            }
+            .bottom-cta-button {
+              padding: 14px 24px !important;
+              font-size: 15px !important;
+              border-radius: 12px !important;
             }
           }
         `}

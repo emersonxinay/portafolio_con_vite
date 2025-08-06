@@ -35,7 +35,7 @@ const HeroSimple = () => {
 
   return (
     <motion.section
-      className="min-h-screen flex items-center justify-center w-full relative mobile-container safe-area-top"
+      className="min-h-screen flex items-center justify-center w-full relative mobile-container safe-area-top overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -64,7 +64,7 @@ const HeroSimple = () => {
         />
       </div>
 
-      <div className="text-center max-w-4xl mx-auto relative z-10 px-4 my-16">
+      <div className="text-center w-full max-w-4xl mx-auto relative z-10 px-4 my-16">
         {/* Badge de disponibilidad */}
         <motion.div
           className="inline-flex items-center gap-2 mobile-card bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-400/30 rounded-full px-4 py-2 mb-8"
@@ -85,7 +85,7 @@ const HeroSimple = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-black mb-4">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 break-words">
             <span className="text-white block mb-2">{t('heroSimple.greeting')}</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
               Emerson Espinoza
@@ -96,15 +96,15 @@ const HeroSimple = () => {
             {t('heroSimple.subtitle')}
           </p>
 
-          <div className="flex items-center justify-center gap-2 mb-6 text-zinc-400">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6 text-zinc-400 text-sm xs:text-base">
             <span>🇵🇪 Peruano</span>
-            <span>•</span>
+            <span className="hidden xs:inline">•</span>
             <span>🇨🇱 Residencia en Chile</span>
-            <span>•</span>
-            <span> Trabajo Remoto</span>
+            <span className="hidden xs:inline">•</span>
+            <span>Trabajo Remoto</span>
           </div>
 
-          <p className="text-xl md:text-2xl text-zinc-300 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg xs:text-xl md:text-2xl text-zinc-300 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
             {t('heroSimple.description')}
           </p>
         </motion.div>
@@ -157,28 +157,28 @@ const HeroSimple = () => {
 
         {/* Métricas clave - simplificadas */}
         <motion.div
-          className="grid grid-cols-3 gap-4 md:gap-8 mb-12"
+          className="grid grid-cols-3 gap-2 xs:gap-4 md:gap-8 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
+            <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 mb-1">
               6+
             </div>
-            <div className="text-sm text-zinc-400">Años de experiencia</div>
+            <div className="text-xs xs:text-sm text-zinc-400">Años de experiencia</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
+            <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">
               50+
             </div>
-            <div className="text-sm text-zinc-400">Proyectos exitosos</div>
+            <div className="text-xs xs:text-sm text-zinc-400">Proyectos exitosos</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
+            <div className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-1">
               3
             </div>
-            <div className="text-sm text-zinc-400">Países atendidos</div>
+            <div className="text-xs xs:text-sm text-zinc-400">Países atendidos</div>
           </div>
         </motion.div>
 
@@ -228,11 +228,11 @@ const HeroSimple = () => {
           <p className="text-zinc-400 text-sm mb-4">
             Trabajo con tecnologías modernas:
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 xs:gap-3">
             {['Python', 'React', 'AI/ML', 'PostgreSQL', 'Docker', 'AWS'].map((tech, index) => (
               <motion.span
                 key={tech}
-                className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-full text-zinc-300 text-sm font-medium"
+                className="px-3 xs:px-4 py-1.5 xs:py-2 bg-slate-800/50 border border-slate-600/50 rounded-full text-zinc-300 text-xs xs:text-sm font-medium"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.2 + index * 0.1 }}

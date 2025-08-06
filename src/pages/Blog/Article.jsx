@@ -204,8 +204,8 @@ const Article = () => {
             </Link>
 
             {/* Article Progress on Mobile */}
-            <div className='flex items-center gap-2 text-sm text-zinc-500 bg-slate-800/50 px-3 py-2 rounded-lg border border-slate-700/30 lg:hidden'>
-              <BsClock className='text-blue-400' />
+            <div className='flex items-center gap-1.5 text-xs sm:text-sm text-zinc-500 bg-slate-800/50 px-2 sm:px-3 py-1.5 sm:py-2 rounded-md sm:rounded-lg border border-slate-700/30 lg:hidden'>
+              <BsClock className='text-blue-400 text-xs sm:text-sm' />
               <span>Progreso: {Math.round(readingProgress)}%</span>
             </div>
           </div>
@@ -213,29 +213,29 @@ const Article = () => {
 
         {/* Enhanced Article Header */}
         <motion.div
-          className='space-y-8 md:space-y-12 mb-12 md:mb-16'
+          className='space-y-6 sm:space-y-8 md:space-y-12 mb-8 sm:mb-12 md:mb-16'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}>
 
           {/* Enhanced Hero Image */}
           <motion.div
-            className='relative overflow-hidden rounded-2xl md:rounded-3xl group'
+            className='relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl group'
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.4 }}>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/15 to-purple-500/15 rounded-2xl md:rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-            <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-slate-700/50 group-hover:border-sky-500/30 transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/15 to-purple-500/15 rounded-xl sm:rounded-2xl md:rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl border border-slate-700/50 group-hover:border-sky-500/30 transition-all duration-500">
               <img
                 src={article.thumbnail}
                 alt={article.title}
-                className='w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700'
+                className='w-full h-48 xs:h-56 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
               {/* Floating elements on image */}
-              <div className="absolute top-6 left-6">
+              <div className="absolute top-3 sm:top-4 md:top-6 left-3 sm:left-4 md:left-6">
                 <motion.div
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-2xl backdrop-blur-sm"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-2xl backdrop-blur-sm"
                   animate={{
                     y: [0, -5, 0],
                     boxShadow: [
@@ -254,9 +254,9 @@ const Article = () => {
                 </motion.div>
               </div>
 
-              <div className="absolute bottom-6 right-6">
+              <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6">
                 <motion.div
-                  className="bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 border border-white/20"
+                  className="bg-black/60 backdrop-blur-sm text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium flex items-center gap-1.5 sm:gap-2 border border-white/20"
                   animate={{
                     scale: [1, 1.05, 1],
                   }}
@@ -266,7 +266,7 @@ const Article = () => {
                     ease: "easeInOut"
                   }}
                 >
-                  <BsClock className='text-sky-400' />
+                  <BsClock className='text-sky-400 text-xs sm:text-sm' />
                   8 min lectura
                 </motion.div>
               </div>
@@ -274,17 +274,17 @@ const Article = () => {
           </motion.div>
 
           {/* Enhanced Article Meta */}
-          <div className='space-y-8'>
+          <div className='space-y-5 sm:space-y-6 md:space-y-8'>
             {/* Enhanced Tags */}
             <motion.div
-              className='flex flex-wrap gap-3'
+              className='flex flex-wrap gap-2 sm:gap-3'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, staggerChildren: 0.1 }}>
               {article.tags.map((tag, index) => (
                 <motion.span
                   key={index}
-                  className='px-5 py-2 text-sm font-semibold bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/30 rounded-full hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer backdrop-blur-sm'
+                  className='px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/30 rounded-full hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer backdrop-blur-sm'
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -297,7 +297,7 @@ const Article = () => {
 
             {/* Enhanced Title */}
             <motion.h1
-              className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent'
+              className='text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}>
@@ -306,86 +306,86 @@ const Article = () => {
 
             {/* Enhanced Author Info */}
             <motion.div
-              className='flex items-center gap-6 p-6 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30'
+              className='flex flex-col xs:flex-row items-center gap-4 xs:gap-6 p-4 xs:p-6 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl xs:rounded-2xl border border-slate-600/30'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}>
               <motion.img
                 src={emerson}
                 alt='Emerson Espinoza'
-                className='h-14 w-14 object-cover rounded-full border-2 border-blue-500/30'
+                className='h-12 w-12 xs:h-14 xs:w-14 object-cover rounded-full border-2 border-blue-500/30'
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-              <div className='flex flex-col gap-2'>
-                <div className='flex items-center gap-3 text-lg'>
+              <div className='flex flex-col gap-2 text-center xs:text-left'>
+                <div className='flex flex-col xs:flex-row items-center gap-1 xs:gap-3 text-base xs:text-lg'>
                   <a
                     href='https://www.linkedin.com/in/emerson-espinoza-aguirre/'
                     target={'_blank'}
                     className='font-semibold text-white hover:text-blue-400 transition-colors'>
                     Emerson Espinoza
                   </a>
-                  <span className='text-zinc-500'>•</span>
-                  <span className='text-zinc-400 font-medium'>{article.date}</span>
+                  <span className='text-zinc-500 hidden xs:inline'>•</span>
+                  <span className='text-zinc-400 font-medium text-sm xs:text-base'>{article.date}</span>
                 </div>
-                <p className='text-sm text-zinc-400'>Senior Full Stack Developer & AI Specialist</p>
+                <p className='text-xs xs:text-sm text-zinc-400'>Senior Full Stack Developer & AI Specialist</p>
               </div>
             </motion.div>
           </div>
 
           {/* Enhanced Article Stats */}
           <motion.div
-            className='flex flex-wrap items-center justify-between gap-6 pt-8 border-t border-slate-700/50'
+            className='flex flex-wrap items-center justify-between gap-4 xs:gap-6 pt-6 xs:pt-8 border-t border-slate-700/50'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0 }}>
             <div className='flex items-center gap-6 text-sm text-zinc-500'>
-              <div className='flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-xl border border-slate-700/50'>
-                <BsCalendar className='text-blue-400' />
-                <span className='font-medium'>{article.date}</span>
+              <div className='flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl border border-slate-700/50'>
+                <BsCalendar className='text-blue-400 text-sm sm:text-base' />
+                <span className='font-medium text-xs sm:text-sm'>{article.date}</span>
               </div>
-              <div className='flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-xl border border-slate-700/50'>
-                <BsClock className='text-green-400' />
-                <span className='font-medium'>8 min lectura</span>
+              <div className='flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl border border-slate-700/50'>
+                <BsClock className='text-green-400 text-sm sm:text-base' />
+                <span className='font-medium text-xs sm:text-sm'>8 min lectura</span>
               </div>
-              <div className='flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-xl border border-slate-700/50'>
-                <BsEye className='text-purple-400' />
-                <span className='font-medium'>1.2k vistas</span>
+              <div className='flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl border border-slate-700/50'>
+                <BsEye className='text-purple-400 text-sm sm:text-base' />
+                <span className='font-medium text-xs sm:text-sm'>1.2k vistas</span>
               </div>
             </div>
 
             {/* Enhanced Action Buttons */}
-            <div className='flex items-center gap-3'>
+              <div className='flex items-center gap-2 sm:gap-3'>
               <motion.button
                 onClick={handleShare}
-                className='flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-xl transition-all text-sm font-semibold text-blue-400 hover:text-blue-300'
+                className='flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold text-blue-400 hover:text-blue-300'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
-                <BiShare className='text-lg' />
+                <BiShare className='text-base sm:text-lg' />
                 <span>Compartir</span>
               </motion.button>
 
               <motion.button
                 onClick={handleLike}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${isLiked
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold ${isLiked
                     ? 'bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/50 text-red-400'
                     : 'bg-gradient-to-r from-red-500/10 to-pink-500/10 hover:from-red-500/20 hover:to-pink-500/20 border border-red-500/30 hover:border-red-400/50 text-red-400 hover:text-red-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
-                {isLiked ? <BsHeartFill className='text-lg' /> : <BsHeart className='text-lg' />}
+                {isLiked ? <BsHeartFill className='text-base sm:text-lg' /> : <BsHeart className='text-base sm:text-lg' />}
                 <span>{isLiked ? 'Te gusta' : 'Me gusta'}</span>
               </motion.button>
 
               <motion.button
                 onClick={handleBookmark}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-sm font-semibold ${isBookmarked
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold ${isBookmarked
                     ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/50 text-yellow-400'
                     : 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/30 hover:border-yellow-400/50 text-yellow-400 hover:text-yellow-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
-                {isBookmarked ? <FaBookmark className='text-lg' /> : <FaRegBookmark className='text-lg' />}
+                {isBookmarked ? <FaBookmark className='text-base sm:text-lg' /> : <FaRegBookmark className='text-base sm:text-lg' />}
                 <span>{isBookmarked ? 'Guardado' : 'Guardar'}</span>
               </motion.button>
             </div>
@@ -394,7 +394,7 @@ const Article = () => {
 
         {/* Enhanced Article Content */}
         <motion.div
-          className='space-y-12 mb-16'
+          className='space-y-8 sm:space-y-10 md:space-y-12 mb-8 sm:mb-12 md:mb-16'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}>
@@ -410,25 +410,25 @@ const Article = () => {
             <div className='relative p-8 lg:p-16'>
               <div className='max-w-4xl mx-auto'>
                 <div
-                  className='prose prose-invert prose-lg lg:prose-xl max-w-none 
+                  className='prose prose-invert prose-sm sm:prose-base lg:prose-xl max-w-none 
                            prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight prose-headings:leading-tight
-                           prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:mb-8 prose-h1:bg-gradient-to-r prose-h1:from-white prose-h1:to-blue-200 prose-h1:bg-clip-text prose-h1:text-transparent
-                           prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-slate-700/50 prose-h2:bg-gradient-to-r prose-h2:from-blue-400 prose-h2:to-purple-400 prose-h2:bg-clip-text prose-h2:text-transparent
-                           prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-blue-300
-                           prose-p:text-zinc-200 prose-p:leading-loose prose-p:text-base lg:prose-p:text-lg prose-p:mb-6 prose-p:tracking-wide
+                           prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:mb-6 sm:prose-h1:mb-8 prose-h1:bg-gradient-to-r prose-h1:from-white prose-h1:to-blue-200 prose-h1:bg-clip-text prose-h1:text-transparent
+                           prose-h2:text-xl sm:prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:mt-8 sm:prose-h2:mt-12 prose-h2:mb-4 sm:prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-slate-700/50 prose-h2:bg-gradient-to-r prose-h2:from-blue-400 prose-h2:to-purple-400 prose-h2:bg-clip-text prose-h2:text-transparent
+                           prose-h3:text-lg sm:prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:mt-6 sm:prose-h3:mt-8 prose-h3:mb-3 sm:prose-h3:mb-4 prose-h3:text-blue-300
+                           prose-p:text-zinc-200 prose-p:leading-relaxed sm:prose-p:leading-loose prose-p:text-sm sm:prose-p:text-base lg:prose-p:text-lg prose-p:mb-4 sm:prose-p:mb-6 prose-p:tracking-wide
                            prose-a:text-blue-400 prose-a:no-underline prose-a:font-medium hover:prose-a:text-blue-300 hover:prose-a:underline prose-a:transition-all
                            prose-strong:text-white prose-strong:font-semibold
-                           prose-code:text-blue-400 prose-code:bg-slate-800/80 prose-code:px-3 prose-code:py-1 prose-code:rounded-lg prose-code:text-sm prose-code:font-mono
-                           prose-pre:bg-slate-900/90 prose-pre:border prose-pre:border-slate-700/50 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:shadow-2xl
-                           prose-blockquote:border-l-4 prose-blockquote:border-l-blue-500 prose-blockquote:bg-slate-800/40 prose-blockquote:text-zinc-300 prose-blockquote:rounded-r-xl prose-blockquote:p-6 prose-blockquote:my-8 prose-blockquote:font-medium prose-blockquote:italic
-                           prose-ul:text-zinc-200 prose-ul:space-y-2 prose-ul:my-6
-                           prose-ol:text-zinc-200 prose-ol:space-y-2 prose-ol:my-6
-                           prose-li:text-zinc-200 prose-li:leading-relaxed prose-li:pl-2
+                           prose-code:text-blue-400 prose-code:bg-slate-800/80 prose-code:px-2 sm:prose-code:px-3 prose-code:py-0.5 sm:prose-code:py-1 prose-code:rounded-lg prose-code:text-xs sm:prose-code:text-sm prose-code:font-mono
+                           prose-pre:bg-slate-900/90 prose-pre:border prose-pre:border-slate-700/50 prose-pre:rounded-xl sm:prose-pre:rounded-2xl prose-pre:p-4 sm:prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:shadow-2xl
+                           prose-blockquote:border-l-4 prose-blockquote:border-l-blue-500 prose-blockquote:bg-slate-800/40 prose-blockquote:text-zinc-300 prose-blockquote:rounded-r-xl prose-blockquote:p-4 sm:prose-blockquote:p-6 prose-blockquote:my-6 sm:prose-blockquote:my-8 prose-blockquote:font-medium prose-blockquote:italic
+                           prose-ul:text-zinc-200 prose-ul:space-y-1 sm:prose-ul:space-y-2 prose-ul:my-4 sm:prose-ul:my-6
+                           prose-ol:text-zinc-200 prose-ol:space-y-1 sm:prose-ol:space-y-2 prose-ol:my-4 sm:prose-ol:my-6
+                           prose-li:text-zinc-200 prose-li:leading-normal sm:prose-li:leading-relaxed prose-li:pl-1 sm:prose-li:pl-2
                            prose-li:marker:text-blue-400 prose-li:marker:font-bold
-                           prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-8 prose-img:mx-auto prose-img:border prose-img:border-slate-700/30
-                           prose-table:border prose-table:border-slate-700/50 prose-table:rounded-xl prose-table:overflow-hidden
-                           prose-th:bg-slate-800/50 prose-th:text-white prose-th:font-semibold prose-th:p-4 prose-th:border-b prose-th:border-slate-700/50
-                           prose-td:p-4 prose-td:border-b prose-td:border-slate-700/30 prose-td:text-zinc-300'
+                           prose-img:rounded-xl sm:prose-img:rounded-2xl prose-img:shadow-xl sm:prose-img:shadow-2xl prose-img:my-6 sm:prose-img:my-8 prose-img:mx-auto prose-img:border prose-img:border-slate-700/30
+                           prose-table:border prose-table:border-slate-700/50 prose-table:rounded-lg sm:prose-table:rounded-xl prose-table:overflow-hidden
+                           prose-th:bg-slate-800/50 prose-th:text-white prose-th:font-semibold prose-th:p-3 sm:prose-th:p-4 prose-th:border-b prose-th:border-slate-700/50
+                           prose-td:p-3 sm:prose-td:p-4 prose-td:border-b prose-td:border-slate-700/30 prose-td:text-zinc-300'
                   dangerouslySetInnerHTML={{ __html: article.content }}>
                 </div>
               </div>
@@ -450,23 +450,23 @@ const Article = () => {
 
           {/* Enhanced Author Section */}
           <motion.div
-            className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 relative overflow-hidden'
+            className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 sm:p-8 relative overflow-hidden'
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}>
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
 
-            <div className='flex items-center gap-8'>
+            <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center sm:text-left'>
               <motion.img
                 src={emerson}
                 alt='Emerson Espinoza'
-                className='w-20 h-20 object-cover rounded-full border-3 border-blue-500/30'
+                className='w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-full border-3 border-blue-500/30'
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
               <div className='space-y-3 flex-1'>
-                <h3 className='text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent'>Emerson Espinoza</h3>
-                <p className='text-zinc-400 text-lg leading-relaxed'>Desarrollador Full Stack especializado en tecnologías modernas y soluciones innovadoras. Apasionado por la IA y el desarrollo web de vanguardia.</p>
-                <div className='flex flex-wrap gap-4 text-sm text-zinc-500'>
+                <h3 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent'>Emerson Espinoza</h3>
+                <p className='text-zinc-400 text-base sm:text-lg leading-relaxed'>Desarrollador Full Stack especializado en tecnologías modernas y soluciones innovadoras. Apasionado por la IA y el desarrollo web de vanguardia.</p>
+                <div className='flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 text-xs sm:text-sm text-zinc-500'>
                   <span className='flex items-center gap-2 bg-slate-800/50 px-3 py-1 rounded-full'>
                     <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
                     Más de 50 artículos publicados
@@ -487,18 +487,18 @@ const Article = () => {
 
         {/* Table of Contents */}
         <motion.div
-          className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 relative overflow-hidden mb-12'
+          className='bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden mb-8 sm:mb-10 md:mb-12'
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}>
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/8 to-purple-500/8 rounded-full blur-3xl" />
 
-          <div className='space-y-4'>
-            <h3 className='text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-2'>
+          <div className='space-y-3 sm:space-y-4'>
+            <h3 className='text-lg sm:text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-2'>
               <BsClock className='text-indigo-400' />
               Tabla de Contenidos
             </h3>
-            <div className='space-y-2 text-sm'>
+            <div className='space-y-2 text-xs sm:text-sm'>
               <div className='flex items-center justify-between py-2 px-3 rounded-lg bg-slate-800/30 hover:bg-slate-700/40 transition-colors cursor-pointer border border-slate-700/30'>
                 <span className='text-zinc-300'>Tiempo de lectura estimado</span>
                 <span className='text-blue-400 font-semibold'>8 min</span>
@@ -516,27 +516,27 @@ const Article = () => {
         </motion.div>
 
         {/* Enhanced Sidebar Section */}
-        <div className='grid rounded-2xl md:rounded-3xl w-full px-4 md:px-8 py-8 md:py-16 bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 gap-8 md:gap-16 lg:grid-cols-12 relative overflow-hidden'>
+        <div className='grid rounded-2xl md:rounded-3xl w-full px-4 md:px-8 py-8 md:py-16 bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 gap-6 sm:gap-8 md:gap-16 lg:grid-cols-12 relative overflow-hidden'>
           {/* Decorative background */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-2xl md:rounded-3xl" />
 
           <div className='grid lg:col-span-8 gap-6 md:gap-8'>
             {/* Newsletter Signup */}
             <motion.div
-              className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-2xl p-6 md:p-8 text-center'
+              className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 text-center'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}>
-              <h3 className='text-xl md:text-2xl font-bold text-white mb-4'>📧 ¡No te pierdas nada!</h3>
-              <p className='text-zinc-300 mb-6 text-sm md:text-base'>Súscribete para recibir mis últimos artículos sobre desarrollo web, IA y tecnología.</p>
+              <h3 className='text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4'>📧 ¡No te pierdas nada!</h3>
+              <p className='text-zinc-300 mb-4 sm:mb-6 text-sm sm:text-base'>Súscribete para recibir mis últimos artículos sobre desarrollo web, IA y tecnología.</p>
               <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto'>
                 <input
                   type='email'
                   placeholder='tu@email.com'
-                  className='flex-1 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-600/50 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500/50 text-sm'
+                  className='flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-slate-800/50 border border-slate-600/50 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500/50 text-sm sm:text-base'
                 />
                 <motion.button
-                  className='px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all text-sm'
+                  className='px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg sm:rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all text-sm sm:text-base'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}>
                   Suscribirse
@@ -554,7 +554,7 @@ const Article = () => {
           <div className='lg:col-span-4 flex flex-col gap-6 md:gap-8'>
             {/* Enhanced Social Card */}
             <motion.div
-              className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium text-center bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
+              className='p-6 border border-slate-600/30 rounded-xl sm:rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium text-center bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
               <motion.img
@@ -564,67 +564,68 @@ const Article = () => {
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.8 }}
               />
-              <p className='text-lg leading-relaxed'>
+              <h3 className='text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>Sígueme en redes sociales</h3>
+              <p className='text-sm sm:text-lg leading-relaxed'>
                 Si crees que mi contenido te es útil, te invito a seguirme en
                 mis otras redes! 😏
               </p>
-              <div className='flex gap-4 justify-center w-full'>
+              <div className='flex gap-3 sm:gap-4 justify-center w-full'>
                 <motion.a
                   target={'_blank'}
                   href='https://github.com/emersonxinay'
-                  className='p-3 bg-slate-700/50 rounded-full hover:bg-slate-600/50 hover:text-white transition-all'
+                  className='p-2 sm:p-3 bg-slate-700/50 rounded-full hover:bg-slate-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
-                  <FaGithub className='text-xl' />
+                  <FaGithub className='text-lg sm:text-xl' />
                 </motion.a>
                 <motion.a
                   target={'_blank'}
                   href='https://www.linkedin.com/in/emerson-espinoza-aguirre-aguirre/'
-                  className='p-3 bg-slate-700/50 rounded-full hover:bg-blue-600/50 hover:text-white transition-all'
+                  className='p-2 sm:p-3 bg-slate-700/50 rounded-full hover:bg-blue-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
-                  <FaLinkedinIn className='text-xl' />
+                  <FaLinkedinIn className='text-lg sm:text-xl' />
                 </motion.a>
                 <motion.a
                   target={'_blank'}
                   href='https://discord.com/'
-                  className='p-3 bg-slate-700/50 rounded-full hover:bg-indigo-600/50 hover:text-white transition-all'
+                  className='p-2 sm:p-3 bg-slate-700/50 rounded-full hover:bg-indigo-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
-                  <FaDiscord className='text-xl' />
+                  <FaDiscord className='text-lg sm:text-xl' />
                 </motion.a>
                 <motion.a
                   target={'_blank'}
                   href='https://twitter.com/compilandocode'
-                  className='p-3 bg-slate-700/50 rounded-full hover:bg-sky-600/50 hover:text-white transition-all'
+                  className='p-2 sm:p-3 bg-slate-700/50 rounded-full hover:bg-sky-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
-                  <BsTwitter className='text-xl' />
+                  <BsTwitter className='text-lg sm:text-xl' />
                 </motion.a>
                 <motion.a
                   target={'_blank'}
                   href='https://www.twitch.tv/emersonxinay'
-                  className='p-3 bg-slate-700/50 rounded-full hover:bg-purple-600/50 hover:text-white transition-all'
+                  className='p-2 sm:p-3 bg-slate-700/50 rounded-full hover:bg-purple-600/50 hover:text-white transition-all'
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}>
-                  <ImTwitch className='text-xl' />
+                  <ImTwitch className='text-lg sm:text-xl' />
                 </motion.a>
               </div>
             </motion.div>
 
             {/* Enhanced Tags Card */}
             <motion.div
-              className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
+              className='p-5 sm:p-6 border border-slate-600/30 rounded-xl sm:rounded-2xl flex flex-col justify-center gap-4 sm:gap-6 h-fit text-zinc-400 text-xs sm:text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
-              <h2 className='text-2xl font-black text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
+              <h2 className='text-xl sm:text-2xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
                 Etiquetas
               </h2>
-              <div className='flex gap-3 flex-wrap justify-center text-center'>
+              <div className='flex gap-2 sm:gap-3 flex-wrap justify-center text-center'>
                 {article.tags.map((t) => (
                   <motion.span
                     key={t}
-                    className='border border-blue-500/30 bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-3 py-2 rounded-xl text-blue-400 hover:border-blue-400/50 transition-all cursor-pointer'
+                    className='border border-blue-500/30 bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-2 sm:px-3 py-1 sm:py-2 rounded-md sm:rounded-xl text-blue-400 hover:border-blue-400/50 transition-all cursor-pointer text-xs sm:text-sm'
                     whileHover={{ scale: 1.05, y: -2 }}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -637,12 +638,12 @@ const Article = () => {
 
             {/* Enhanced Recent Articles Card */}
             <motion.div
-              className='p-6 border border-slate-600/30 rounded-2xl flex flex-col justify-center gap-6 h-fit text-zinc-400 text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm relative overflow-hidden'
+              className='p-5 sm:p-6 border border-slate-600/30 rounded-xl sm:rounded-2xl flex flex-col justify-center gap-4 sm:gap-6 h-fit text-zinc-400 text-xs sm:text-sm font-medium bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm relative overflow-hidden'
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}>
               <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-xl" />
 
-              <h2 className='text-xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
+              <h2 className='text-lg sm:text-xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
                 Artículos relacionados
               </h2>
               <div className='space-y-3'>
@@ -656,32 +657,32 @@ const Article = () => {
                   >
                     <Link
                       to={`/blog/${a.url}`}
-                      className='block p-4 rounded-xl bg-gradient-to-r from-slate-700/20 to-slate-600/20 hover:from-slate-600/30 hover:to-slate-500/30 transition-all group border border-slate-600/20 hover:border-blue-500/40 relative overflow-hidden'
+                      className='block p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-slate-700/20 to-slate-600/20 hover:from-slate-600/30 hover:to-slate-500/30 transition-all group border border-slate-600/20 hover:border-blue-500/40 relative overflow-hidden'
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-300" />
 
-                      <div className='flex gap-3'>
-                        <div className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center border border-blue-500/30'>
-                          <span className='text-blue-400 font-bold text-sm'>{a.title.charAt(0)}</span>
+                      <div className='flex gap-2 sm:gap-3'>
+                        <div className='flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-md sm:rounded-lg flex items-center justify-center border border-blue-500/30'>
+                          <span className='text-blue-400 font-bold text-xs sm:text-sm'>{a.title.charAt(0)}</span>
                         </div>
 
-                        <div className='flex-1 space-y-2'>
-                          <h3 className='text-white group-hover:text-blue-300 transition-colors font-semibold text-sm leading-tight line-clamp-2'>
+                        <div className='flex-1 space-y-1 sm:space-y-2'>
+                          <h3 className='text-white group-hover:text-blue-300 transition-colors font-semibold text-xs sm:text-sm leading-tight line-clamp-2'>
                             {a.title}
                           </h3>
-                          <div className='flex items-center gap-3 text-xs'>
+                          <div className='flex items-center gap-2 sm:gap-3 text-xs'>
                             <div className='flex items-center gap-1 text-zinc-500'>
-                              <BsCalendar className='text-blue-400' />
-                              <span>{a.date}</span>
+                              <BsCalendar className='text-blue-400 text-xs' />
+                              <span className='text-xs'>{a.date}</span>
                             </div>
                             <div className='flex items-center gap-1 text-zinc-500'>
-                              <BsClock className='text-green-400' />
-                              <span>5 min</span>
+                              <BsClock className='text-green-400 text-xs' />
+                              <span className='text-xs'>5 min</span>
                             </div>
                           </div>
                           <div className='flex flex-wrap gap-1'>
                             {a.tags.slice(0, 2).map(tag => (
-                              <span key={tag} className='px-2 py-1 text-xs bg-blue-500/10 text-blue-400 rounded border border-blue-500/20'>
+                              <span key={tag} className='px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs bg-blue-500/10 text-blue-400 rounded border border-blue-500/20'>
                                 {tag.replace('#', '')}
                               </span>
                             ))}
@@ -693,10 +694,10 @@ const Article = () => {
                 ))}
               </div>
 
-              <motion.div className='pt-4 border-t border-slate-600/30'>
+              <motion.div className='pt-3 sm:pt-4 border-t border-slate-600/30'>
                 <Link
                   to='/blog'
-                  className='block text-center py-3 px-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-xl transition-all text-sm font-semibold text-blue-400 hover:text-blue-300'
+                  className='block text-center py-2.5 sm:py-3 px-3 sm:px-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold text-blue-400 hover:text-blue-300'
                 >
                   Ver todos los artículos →
                 </Link>

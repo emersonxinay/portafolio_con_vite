@@ -8,6 +8,8 @@ html {
   overflow-x: hidden;
   /* Ensure proper box sizing */
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 *, *::before, *::after {
@@ -32,6 +34,9 @@ body {
   /* Ensure proper word wrapping */
   word-wrap: break-word;
   overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 /* Fixed background for larger screens */

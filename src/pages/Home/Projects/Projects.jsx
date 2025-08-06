@@ -39,7 +39,7 @@ const Projects = () => {
   };
 
   return (
-    <div className='mobile-section grid gap-12 xs:gap-16 relative'>
+    <div className='mobile-section grid gap-12 xs:gap-16 relative w-full overflow-hidden'>
       <Title title={t('projects.title')} />
       
       {/* Category Filter */}
@@ -70,7 +70,7 @@ const Projects = () => {
       {/* Projects Grid */}
       <AnimatePresence mode="wait">
         <div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 sm:gap-6"
           key={selectedCategory}
         >
           {filteredProjects.map((project, index) => (
@@ -84,7 +84,7 @@ const Projects = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               
               {/* Project Image/Preview */}
-              <div className="relative h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden rounded-t-2xl xs:rounded-t-3xl">
+              <div className="relative h-36 xxs:h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden rounded-t-2xl xs:rounded-t-3xl">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -109,12 +109,12 @@ const Projects = () => {
                 </div>
                 
                 {/* Status Badge */}
-                <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
+                <div className={`absolute top-2 xxs:top-3 xs:top-4 right-2 xxs:right-3 xs:right-4 px-2 xxs:px-3 py-0.5 xxs:py-1 rounded-full text-[10px] xxs:text-xs font-medium ${
                   project.status === 'live' 
                     ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
                     : 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
                 }`}>
-                  <div className={`w-2 h-2 rounded-full inline-block mr-2 ${
+                  <div className={`w-1.5 xxs:w-2 h-1.5 xxs:h-2 rounded-full inline-block mr-1 xxs:mr-2 ${
                     project.status === 'live' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'
                   }`} />
                   {project.status === 'live' ? 'En línea' : 'En desarrollo'}
@@ -122,26 +122,26 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-4 xs:p-5 sm:p-6 space-y-3 xs:space-y-4">
+              <div className="p-3 xxs:p-4 xs:p-5 sm:p-6 space-y-2 xxs:space-y-3 xs:space-y-4">
                 <div>
-                  <h3 className="text-lg xs:text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300 leading-tight">
+                  <h3 className="text-base xxs:text-lg xs:text-xl font-bold text-white mb-1 xxs:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300 leading-tight">
                     {t(project.title)}
                   </h3>
-                  <p className="text-zinc-400 text-sm xs:text-base leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">
+                  <p className="text-zinc-400 text-xs xxs:text-sm xs:text-base leading-relaxed group-hover:text-zinc-300 transition-colors duration-300 line-clamp-3">
                     {t(project.description)}
                   </p>
                 </div>
 
                 {/* Tech Stack */}
                 <div>
-                  <h4 className="text-sm font-semibold text-zinc-300 mb-2 xs:mb-3">
+                  <h4 className="text-xs xxs:text-sm font-semibold text-zinc-300 mb-1 xxs:mb-2 xs:mb-3">
                     {t('projects.technologies')}
                   </h4>
-                  <div className="flex flex-wrap gap-1.5 xs:gap-2">
+                  <div className="flex flex-wrap gap-1 xxs:gap-1.5 xs:gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <motion.span
                         key={tech}
-                        className="px-2 xs:px-3 py-1 bg-slate-800/50 border border-slate-600/30 rounded-md xs:rounded-lg text-xs text-zinc-300 hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300 mobile-shadow"
+                        className="px-1.5 xxs:px-2 xs:px-3 py-0.5 xxs:py-1 bg-slate-800/50 border border-slate-600/30 rounded-md xs:rounded-lg text-[10px] xxs:text-xs text-zinc-300 hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300 mobile-shadow"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: techIndex * 0.1 }}
@@ -154,14 +154,14 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-2 xs:gap-3 pt-4">
+                <div className="flex gap-1.5 xxs:gap-2 xs:gap-3 pt-2 xxs:pt-3 xs:pt-4">
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 xs:px-4 py-2.5 xs:py-2 rounded-lg xs:rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-sm xs:text-base no-underline"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-2 xxs:px-3 xs:px-4 py-1.5 xxs:py-2 xs:py-2.5 rounded-md xxs:rounded-lg xs:rounded-xl font-medium flex items-center justify-center gap-1 xxs:gap-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-xs xxs:text-sm xs:text-base no-underline"
                   >
-                    <i className="fas fa-external-link-alt text-sm"></i>
+                    <i className="fas fa-external-link-alt text-xs xxs:text-sm"></i>
                     Ver Proyecto
                   </a>
                   
@@ -169,9 +169,9 @@ const Projects = () => {
                     href={project.githubUrl !== '#' ? project.githubUrl : undefined}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-3 xs:px-4 py-2.5 xs:py-2 bg-slate-800/50 text-zinc-300 rounded-lg xs:rounded-xl border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300 flex items-center justify-center text-sm xs:text-base no-underline ${project.githubUrl === '#' ? 'opacity-50 pointer-events-none' : ''}`}
+                    className={`px-2 xxs:px-3 xs:px-4 py-1.5 xxs:py-2 xs:py-2.5 bg-slate-800/50 text-zinc-300 rounded-md xxs:rounded-lg xs:rounded-xl border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300 flex items-center justify-center text-xs xxs:text-sm xs:text-base no-underline ${project.githubUrl === '#' ? 'opacity-50 pointer-events-none' : ''}`}
                   >
-                    <i className="fab fa-github text-lg"></i>
+                    <i className="fab fa-github text-sm xxs:text-base xs:text-lg"></i>
                   </a>
                 </div>
               </div>
@@ -200,11 +200,11 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        <p className="text-zinc-400 mb-6">
+        <p className="text-zinc-400 text-sm xs:text-base mb-4 xs:mb-6">
           ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte.
         </p>
         <motion.button
-          className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+          className="px-6 xs:px-8 py-2 xs:py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl xs:rounded-2xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-sm xs:text-base"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}

@@ -29,7 +29,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-8 md:py-12">
+    <section id="about" className="py-6 xs:py-8 md:py-12 w-full overflow-hidden">
       {/* Header */}
       <motion.div
         className="text-center mb-12 md:mb-16"
@@ -38,19 +38,19 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+        <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-black mb-3 xs:mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
             {t('about.title')}
           </span>
         </h2>
-        <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base xs:text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
           {t('about.description')}
         </p>
       </motion.div>
 
       {/* Key Highlights */}
       <motion.div
-        className="mobile-grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16"
+        className="mobile-grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 md:gap-6 mb-10 xs:mb-12 md:mb-16"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -63,14 +63,14 @@ const About = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05, y: -5 }}
           >
-            <div className="text-3xl md:text-4xl mb-3">{highlight.icon}</div>
-            <div className={`text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r ${highlight.color} mb-1`}>
+            <div className="text-2xl xs:text-3xl md:text-4xl mb-2 xs:mb-3">{highlight.icon}</div>
+            <div className={`text-lg xs:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r ${highlight.color} mb-1`}>
               {highlight.title}
             </div>
-            <div className="text-sm font-semibold text-zinc-300 mb-2">
+            <div className="text-xs xs:text-sm font-semibold text-zinc-300 mb-1 xs:mb-2">
               {highlight.subtitle}
             </div>
-            <div className="text-xs text-zinc-400">
+            <div className="text-xs text-zinc-400 line-clamp-3 xs:line-clamp-none">
               {highlight.description}
             </div>
           </motion.div>
@@ -85,11 +85,11 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">
+        <h3 className="text-xl xs:text-2xl md:text-3xl font-bold text-center mb-6 xs:mb-8 text-white">
           🛠️ {t('about.techStackTitle', 'Stack Tecnológico')}
         </h3>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xs:gap-8">
           {/* Frontend */}
           <div>
             <h4 className="text-lg font-semibold text-green-400 mb-4 text-center">

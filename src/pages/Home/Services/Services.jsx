@@ -55,20 +55,20 @@ const Services = () => {
   };
 
   return (
-    <section className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section className="py-12 xs:py-16 md:py-20 relative w-full overflow-hidden">
+      <div className="mobile-container">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 xs:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 xs:mb-4 md:mb-6">
             {t('services.title')} que <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Transforman</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base xs:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             {t('services.subtitle')}
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 md:gap-8 mb-10 xs:mb-12 md:mb-16"
         >
           {services.map((service, index) => (
             <motion.div
@@ -102,20 +102,20 @@ const Services = () => {
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon & Title */}
-                  <div className="flex items-center mb-6">
-                    <div className="text-4xl mr-4">{service.icon}</div>
+                  <div className="flex items-center mb-4 xs:mb-6">
+                    <div className="text-3xl xs:text-4xl mr-3 xs:mr-4">{service.icon}</div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
+                      <h3 className="text-lg xs:text-xl font-bold text-white mb-1">{service.title}</h3>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 xs:mb-6 leading-relaxed text-xs xs:text-sm">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-1 xs:space-y-2 mb-4 xs:mb-6">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start text-gray-300">
                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color} mr-3 flex-shrink-0 mt-2`} />
@@ -145,13 +145,13 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 xs:mb-12 md:mb-16"
         >
-          <h3 className="text-3xl font-bold text-white mb-12">
+          <h3 className="text-xl xs:text-2xl md:text-3xl font-bold text-white mb-8 xs:mb-10 md:mb-12">
             Mi Proceso de <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Trabajo</span>
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
             {[
               { step: "01", title: "Análisis", desc: "Entiendo tu negocio y objetivos" },
               { step: "02", title: "Estrategia", desc: "Diseño la solución perfecta" },
@@ -159,11 +159,11 @@ const Services = () => {
               { step: "04", title: "Lanzamiento", desc: "Entrego y doy soporte continuo" }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-12 h-12 xs:w-14 xs:h-14 md:w-16 md:h-16 mx-auto mb-2 xs:mb-3 md:mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base xs:text-lg md:text-xl">
                   {item.step}
                 </div>
-                <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
+                <h4 className="text-base xs:text-lg md:text-xl font-semibold text-white mb-1 xs:mb-2">{item.title}</h4>
+                <p className="text-gray-400 text-xs xs:text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -175,12 +175,12 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl p-8 border border-white/10"
+          className="text-center bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-xl xs:rounded-2xl p-5 xs:p-6 md:p-8 border border-white/10"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-2 xs:mb-3 md:mb-4">
             ¿Listo para transformar tu idea en realidad?
           </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-5 xs:mb-6 md:mb-8 max-w-2xl mx-auto text-sm xs:text-base">
             Garantizo entrega en tiempo récord y soporte post-lanzamiento. Tu éxito es mi prioridad.
           </p>
 

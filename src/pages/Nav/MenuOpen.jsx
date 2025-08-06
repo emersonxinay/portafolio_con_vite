@@ -18,7 +18,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          className='mobile-menu-overlay lg:hidden flex items-center justify-center safe-area-top safe-area-bottom'
+          className='mobile-menu-overlay lg:hidden flex items-center justify-center safe-area-top safe-area-bottom w-full'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -27,7 +27,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
         >
           {/* Enhanced Mobile Menu */}
           <motion.div 
-            className='w-full max-w-sm mx-4 mobile-container'
+            className='w-full max-w-sm mx-3 xs:mx-4 mobile-container overflow-hidden'
             initial={{ scale: 0.8, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -48,7 +48,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
             </motion.div>
 
             {/* Menu Items */}
-            <div className='space-y-3 xs:space-y-4'>
+            <div className='space-y-2 xs:space-y-3 sm:space-y-4'>
               {navItems.map((item, index) => {
                 const isActive = (path === '/' && item.to === '/') || (path.includes(item.to) && item.to !== '/')
                 
@@ -67,7 +67,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                       }`}
                     >
                       <motion.div 
-                        className={`w-10 h-10 xs:w-12 xs:h-12 rounded-xl flex items-center justify-center text-xl xs:text-2xl ${
+                        className={`w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl flex items-center justify-center text-lg xs:text-xl sm:text-2xl ${
                           isActive 
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/25' 
                             : 'bg-slate-700/50 group-hover:bg-slate-600/50'
@@ -79,12 +79,12 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                       </motion.div>
                       
                       <div className='flex-1'>
-                        <h3 className={`font-semibold text-base xs:text-lg transition-colors ${
+                        <h3 className={`font-semibold text-sm xs:text-base sm:text-lg transition-colors ${
                           isActive ? 'text-white' : 'text-zinc-300 group-hover:text-white'
                         }`}>
                           {item.label}
                         </h3>
-                        <p className='text-xs xs:text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors'>
+                        <p className='text-xs xs:text-xs sm:text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors line-clamp-2'>
                           {t(`nav.menu.descriptions.${item.id}`)}
                         </p>
                       </div>

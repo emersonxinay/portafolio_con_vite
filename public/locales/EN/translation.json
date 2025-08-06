@@ -358,6 +358,38 @@
       }
     ]
   },
+  "footer": {
+    "subtitle": "Full-Stack Developer & Tech Architect",
+    "description": "Specialist in modern web development, scalable architectures and enterprise technologies. Building the digital future with clean code and innovative solutions.",
+    "availabilityBadge": "Available for enterprise projects",
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "blog": "Blog", 
+      "tools": "Tools",
+      "docs": "Documentation"
+    },
+    "services": {
+      "title": "Services",
+      "items": [
+        "Full-Stack Development",
+        "Software Architecture",
+        "Tech Consulting",
+        "Mentoring & Training"
+      ]
+    },
+    "contact": {
+      "readyTitle": "Ready to collaborate?",
+      "readySubtitle": "Let's build something incredible together",
+      "contactButton": "Contact",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location"
+    },
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "and": "and lots of"
+  },
   "portfolio": "Portfolio",
   "projects": {
     "title": "Featured Projects",
@@ -457,8 +489,88 @@
   "nav": {
     "home": "Home",
     "blog": "Blog",
-    "docs": "Docs",
-    "tools": "Tools"
+    "docs": "Docs", 
+    "tools": "Tools",
+    "menu": {
+      "title": "Navigation Menu",
+      "descriptions": {
+        "home": "Main page",
+        "blog": "Technical articles",
+        "docs": "Documentation",
+        "tools": "Useful tools" 
+      },
+      "closeInstruction": "Tap anywhere to close"
+    }
+  },
+  "language": {
+    "changedToEnglish": "Language changed to English",
+    "changedToSpanish": "Idioma cambiado a Español",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "contactModal": {
+    "title": "Let's Start Your Project",
+    "subtitle": "Tell me about your vision and let's make it reality",
+    "form": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com"
+      },
+      "company": {
+        "label": "Company (optional)",
+        "placeholder": "Your company name"
+      },
+      "subject": {
+        "label": "Project type",
+        "options": [
+          "Full-Stack Web Development",
+          "API & Backend Services", 
+          "Software Architecture",
+          "Technical Consulting",
+          "Mentoring & Training",
+          "Other (specify in message)"
+        ]
+      },
+      "budget": {
+        "label": "Estimated budget",
+        "placeholder": "Select your budget",
+        "options": [
+          "Select your budget",
+          "$5,000 - $15,000 USD",
+          "$15,000 - $30,000 USD",
+          "$30,000 - $50,000 USD", 
+          "$50,000+ USD",
+          "Consulting/Mentoring"
+        ]
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Describe your project, goals, timeline and any relevant details..."
+      }
+    },
+    "buttons": {
+      "send": "Send Message",
+      "sending": "Sending...",
+      "close": "Close"
+    },
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thanks for contacting me. I'll respond within 24 hours.",
+      "closeAutomatically": "This window will close automatically"
+    },
+    "toast": {
+      "success": "Message sent successfully! I'll contact you soon.",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "responseTime": "⚡ Guaranteed response in 24h",
+      "consultation": "💬 Free initial consultation", 
+      "nda": "🔒 Confidentiality guaranteed"
+    }
   },
   "error": {
     "button": "Back to home",

@@ -347,6 +347,38 @@
       }
     ]
   },
+  "footer": {
+    "subtitle": "Full-Stack Developer & Tech Architect",
+    "description": "Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise. Construyendo el futuro digital con código limpio y soluciones innovadoras.",
+    "availabilityBadge": "Disponible para proyectos enterprise",
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "home": "Inicio",
+      "blog": "Blog", 
+      "tools": "Herramientas",
+      "docs": "Documentación"
+    },
+    "services": {
+      "title": "Servicios",
+      "items": [
+        "Desarrollo Full-Stack",
+        "Arquitectura de Software",
+        "Consultoría Tech",
+        "Mentoring & Training"
+      ]
+    },
+    "contact": {
+      "readyTitle": "¿Listo para colaborar?",
+      "readySubtitle": "Construyamos algo increíble juntos",
+      "contactButton": "Contactar",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Ubicación"
+    },
+    "copyright": "Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "and": "y mucho"
+  },
   "portfolio": "Portfolio",
   "projects": {
     "title": "Proyectos Destacados",
@@ -443,9 +475,89 @@
   },
   "nav": {
     "home": "Inicio",
-    "blog": "Blog",
+    "blog": "Blog", 
     "docs": "Docs",
-    "tools": "Herramientas"
+    "tools": "Herramientas",
+    "menu": {
+      "title": "Menu de Navegación",
+      "descriptions": {
+        "home": "Página principal",
+        "blog": "Artículos técnicos",
+        "docs": "Documentación", 
+        "tools": "Herramientas útiles"
+      },
+      "closeInstruction": "Toca en cualquier lugar para cerrar"
+    }
+  },
+  "language": {
+    "changedToEnglish": "Language changed to English",
+    "changedToSpanish": "Idioma cambiado a Español",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "contactModal": {
+    "title": "Iniciemos tu Proyecto",
+    "subtitle": "Cuéntame sobre tu visión y hagámosla realidad",
+    "form": {
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "tu@email.com"
+      },
+      "company": {
+        "label": "Empresa (opcional)",
+        "placeholder": "Nombre de tu empresa"
+      },
+      "subject": {
+        "label": "Tipo de proyecto",
+        "options": [
+          "Desarrollo Web Full-Stack",
+          "API & Backend Services",
+          "Arquitectura de Software", 
+          "Consultoría Técnica",
+          "Mentoring & Training",
+          "Otro (especificar en mensaje)"
+        ]
+      },
+      "budget": {
+        "label": "Presupuesto estimado",
+        "placeholder": "Selecciona tu presupuesto",
+        "options": [
+          "Selecciona tu presupuesto",
+          "$5,000 - $15,000 USD",
+          "$15,000 - $30,000 USD", 
+          "$30,000 - $50,000 USD",
+          "$50,000+ USD",
+          "Consultoría/Mentoring"
+        ]
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Describe tu proyecto, objetivos, timeline y cualquier detalle relevante..."
+      }
+    },
+    "buttons": {
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "close": "Cerrar"
+    },
+    "success": {
+      "title": "¡Mensaje Enviado!",
+      "message": "Gracias por contactarme. Te responderé en menos de 24 horas.",
+      "closeAutomatically": "Esta ventana se cerrará automáticamente"
+    },
+    "toast": {
+      "success": "¡Mensaje enviado con éxito! Te contactaré pronto.",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo."
+    },
+    "info": {
+      "responseTime": "⚡ Respuesta garantizada en 24h",
+      "consultation": "💬 Consulta inicial gratuita",
+      "nda": "🔒 Confidencialidad garantizada"
+    }
   },
   "error": {
     "button": "Volver al inicio",

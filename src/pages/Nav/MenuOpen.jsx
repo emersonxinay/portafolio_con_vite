@@ -42,7 +42,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
               transition={{ delay: 0.2 }}
             >
               <h2 className='text-xl xs:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 mb-2'>
-                Menu de Navegación
+                {t('nav.menu.title')}
               </h2>
               <div className='w-20 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto' />
             </motion.div>
@@ -85,9 +85,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                           {item.label}
                         </h3>
                         <p className='text-xs xs:text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors'>
-                          {item.to === '/' ? 'Página principal' : 
-                           item.to === '/blog' ? 'Artículos técnicos' :
-                           item.to === '/docs' ? 'Documentación' : 'Herramientas útiles'}
+                          {t(`nav.menu.descriptions.${item.id}`)}
                         </p>
                       </div>
                       
@@ -112,7 +110,7 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
               transition={{ delay: 0.6 }}
             >
               <p className='text-xs xs:text-sm text-zinc-500'>
-                Toca en cualquier lugar para cerrar
+                {t('nav.menu.closeInstruction')}
               </p>
             </motion.div>
           </motion.div>

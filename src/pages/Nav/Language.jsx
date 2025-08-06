@@ -7,14 +7,14 @@ import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
 
 const Language = ({ scrolled }) => {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [dropdown, setDropdown] = useState(false)
 
   const languageHandler = (boolean) => {
     i18n.changeLanguage(boolean ? 'EN' : 'ES')
     setDropdown(false)
-    if (boolean) toast.success('Language changed to English')
-    else toast.success('Idioma cambiado a Español')
+    if (boolean) toast.success(t('language.changedToEnglish'))
+    else toast.success(t('language.changedToSpanish'))
   }
 
   return (
@@ -74,7 +74,7 @@ const Language = ({ scrolled }) => {
               disabled={i18n.language === 'ES'}
             >
               <img src={Spanish} alt='Español' className='w-5 h-5 rounded-sm object-cover ring-1 ring-slate-400/30' />
-              <span className='text-sm font-medium text-zinc-300 group-hover:text-white'>Español</span>
+              <span className='text-sm font-medium text-zinc-300 group-hover:text-white'>{t('language.spanish')}</span>
               {i18n.language === 'ES' && (
                 <motion.div 
                   className='ml-auto w-2 h-2 bg-green-400 rounded-full'
@@ -91,7 +91,7 @@ const Language = ({ scrolled }) => {
               disabled={i18n.language === 'EN'}
             >
               <img src={English} alt='English' className='w-5 h-5 rounded-sm object-cover ring-1 ring-slate-400/30' />
-              <span className='text-sm font-medium text-zinc-300 group-hover:text-white'>English</span>
+              <span className='text-sm font-medium text-zinc-300 group-hover:text-white'>{t('language.english')}</span>
               {i18n.language === 'EN' && (
                 <motion.div 
                   className='ml-auto w-2 h-2 bg-green-400 rounded-full'

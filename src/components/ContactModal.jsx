@@ -10,8 +10,10 @@ import {
   FaSpinner
 } from 'react-icons/fa'
 import { toast } from 'react-hot-toast'
+import { useTranslation } from 'react-i18next'
 
 const ContactModal = ({ isOpen, onClose }) => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,23 +25,12 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  const budgetOptions = [
-    { value: '', label: 'Selecciona tu presupuesto' },
-    { value: '5k-15k', label: '$5,000 - $15,000 USD' },
-    { value: '15k-30k', label: '$15,000 - $30,000 USD' },
-    { value: '30k-50k', label: '$30,000 - $50,000 USD' },
-    { value: '50k+', label: '$50,000+ USD' },
-    { value: 'consulting', label: 'Consultoría/Mentoring' },
-  ]
+  const budgetOptions = t('contactModal.form.budget.options', { returnObjects: true }).map((label, index) => {
+    const values = ['', '5k-15k', '15k-30k', '30k-50k', '50k+', 'consulting']
+    return { value: values[index], label }
+  })
 
-  const projectTypes = [
-    'Desarrollo Web Full-Stack',
-    'API & Backend Services',
-    'Arquitectura de Software',
-    'Consultoría Técnica',
-    'Mentoring & Training',
-    'Otro (especificar en mensaje)'
-  ]
+  const projectTypes = t('contactModal.form.subject.options', { returnObjects: true })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -58,7 +49,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       setIsSuccess(true)
-      toast.success('¡Mensaje enviado con éxito! Te contactaré pronto.')
+      toast.success(t('contactModal.toast.success'))
 
       // Reset form after success
       setTimeout(() => {
@@ -75,7 +66,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       }, 3000)
 
     } catch (error) {
-      toast.error('Error al enviar el mensaje. Inténtalo de nuevo.')
+      toast.error(t('contactModal.toast.error'))
     } finally {
       setIsSubmitting(false)
     }
@@ -134,10 +125,10 @@ const ContactModal = ({ isOpen, onClose }) => {
           <div className="flex items-center justify-between p-4 xs:p-6 md:p-8 border-b border-slate-700/50">
             <div>
               <h2 className="text-xl xs:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                ¡Trabajemos Juntos!
+                {t('contactModal.title')}
               </h2>
               <p className="text-zinc-400 text-sm xs:text-base mt-1">
-                Cuéntame sobre tu proyecto y cómo puedo ayudarte
+                {t('contactModal.subtitle')}
               </p>
             </div>
             <motion.button
@@ -168,10 +159,10 @@ const ContactModal = ({ isOpen, onClose }) => {
                     <FaCheckCircle className="text-6xl xs:text-7xl text-green-400 mx-auto mb-6" />
                   </motion.div>
                   <h3 className="text-2xl xs:text-3xl font-bold text-white mb-4">
-                    ¡Mensaje Enviado!
+                    {t('contactModal.success.title')}
                   </h3>
                   <p className="text-zinc-300 text-base xs:text-lg">
-                    Gracias por contactarme. Te responderé dentro de 24 horas.
+                    {t('contactModal.success.message')}
                   </p>
                 </div>
               </motion.div>
@@ -185,7 +176,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               <div>
                 <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
                   <FaUser className="inline mr-2 text-blue-400" />
-                  Nombre Completo *
+                  {t('contactModal.form.name.label')} *
                 </label>
                 <input
                   type="text"
@@ -194,13 +185,13 @@ const ContactModal = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   required
                   className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300"
-                  placeholder="Tu nombre completo"
+                  placeholder={t('contactModal.form.name.placeholder')}
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
                   <FaEnvelope className="inline mr-2 text-blue-400" />
-                  Email *
+                  {t('contactModal.form.email.label')} *
                 </label>
                 <input
                   type="email"
@@ -209,7 +200,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   required
                   className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300"
-                  placeholder="tu@email.com"
+                  placeholder={t('contactModal.form.email.placeholder')}
                 />
               </div>
             </div>
@@ -219,7 +210,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               <div>
                 <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
                   <FaBuilding className="inline mr-2 text-purple-400" />
-                  Empresa/Proyecto
+                  {t('contactModal.form.company.label')}
                 </label>
                 <input
                   type="text"
@@ -227,12 +218,12 @@ const ContactModal = ({ isOpen, onClose }) => {
                   value={formData.company}
                   onChange={handleInputChange}
                   className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300"
-                  placeholder="Nombre de tu empresa o proyecto"
+                  placeholder={t('contactModal.form.company.placeholder')}
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                  Presupuesto Estimado
+                  {t('contactModal.form.budget.label')}
                 </label>
                 <select
                   name="budget"
@@ -252,7 +243,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             {/* Project Type */}
             <div>
               <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                Tipo de Proyecto *
+                {t('contactModal.form.subject.label')} *
               </label>
               <select
                 name="subject"
@@ -261,7 +252,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 required
                 className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 cursor-pointer"
               >
-                <option value="" className="bg-slate-800">Selecciona el tipo de proyecto</option>
+                <option value="" className="bg-slate-800">{t('contactModal.form.subject.placeholder', 'Selecciona el tipo de proyecto')}</option>
                 {projectTypes.map(type => (
                   <option key={type} value={type} className="bg-slate-800">
                     {type}
@@ -273,7 +264,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             {/* Message */}
             <div>
               <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                💬 Mensaje *
+                💬 {t('contactModal.form.message.label')} *
               </label>
               <textarea
                 name="message"
@@ -282,7 +273,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 required
                 rows={5}
                 className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500/50 transition-all duration-300 resize-none"
-                placeholder="Cuéntame sobre tu proyecto, objetivos, timeline, y cualquier detalle relevante..."
+                placeholder={t('contactModal.form.message.placeholder')}
               />
             </div>
 
@@ -297,12 +288,12 @@ const ContactModal = ({ isOpen, onClose }) => {
               {isSubmitting ? (
                 <>
                   <FaSpinner className="animate-spin" />
-                  Enviando mensaje...
+                  {t('contactModal.buttons.sending')}
                 </>
               ) : (
                 <>
                   <FaPaperPlane />
-                  Enviar Mensaje
+                  {t('contactModal.buttons.send')}
                 </>
               )}
             </motion.button>

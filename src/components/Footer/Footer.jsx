@@ -33,21 +33,13 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Sobre Mí', href: '#about' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Contacto', href: '#contact' }
+    { name: t('footer.quickLinks.home'), href: '#hero' },
+    { name: t('footer.quickLinks.blog'), href: '#blog' },
+    { name: t('footer.quickLinks.tools'), href: '#tools' },
+    { name: t('footer.quickLinks.docs'), href: '#docs' }
   ];
 
-  const services = [
-    'Desarrollo Web',
-    'E-commerce',
-    'Automatización IA',
-    'Sistemas Empresariales',
-    'DevOps & Cloud',
-    'Capacitación Técnica'
-  ];
+  const services = t('footer.services.items', { returnObjects: true });
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId.replace('#', ''));
@@ -72,12 +64,21 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
                 Emerson Espinoza
               </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Desarrollador Full Stack especializado en crear soluciones tecnológicas que impulsan el crecimiento empresarial.
+              <p className="text-sm text-gray-500 mb-4">
+                {t('footer.subtitle')}
               </p>
+              <p className="text-gray-400 mb-4 leading-relaxed">
+                {t('footer.description')}
+              </p>
+
+              {/* Availability Badge */}
+              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30 mb-6">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                {t('footer.availabilityBadge')}
+              </div>
 
               {/* Contact Info */}
               <div className="space-y-3">
@@ -109,7 +110,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Navegación</h4>
+              <h4 className="text-lg font-semibold text-white mb-6">{t('footer.quickLinks.title')}</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
@@ -133,7 +134,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Servicios</h4>
+              <h4 className="text-lg font-semibold text-white mb-6">{t('footer.services.title')}</h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index} className="text-gray-400 text-sm">
@@ -152,7 +153,8 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Conecta Conmigo</h4>
+              <h4 className="text-lg font-semibold text-white mb-2">{t('footer.contact.readyTitle')}</h4>
+              <p className="text-gray-400 text-sm mb-6">{t('footer.contact.readySubtitle')}</p>
 
               {/* Social Icons */}
               <div className="flex space-x-4 mb-6">
@@ -178,7 +180,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Iniciar Proyecto
+                {t('footer.contact.contactButton')}
               </motion.button>
             </motion.div>
           </div>
@@ -187,15 +189,26 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <motion.p
-              className="text-gray-400 text-sm mb-4 md:mb-0"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              © 2024 Emerson Espinoza. Todos los derechos reservados.
-            </motion.p>
+            <div className="text-center md:text-left">
+              <motion.p
+                className="text-gray-400 text-sm mb-2 md:mb-0"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                © 2024 Emerson Espinoza. {t('footer.copyright')}
+              </motion.p>
+              <motion.p
+                className="text-gray-500 text-xs"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                {t('footer.madeWith')} ❤️ {t('footer.and')} ☕
+              </motion.p>
+            </div>
 
             <motion.div
               className="flex space-x-6 text-sm text-gray-400"

@@ -120,7 +120,11 @@
     "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
     "sendEmail": "Enviar Email",
     "response": "Respuesta en menos de 24 horas",
-    "consultation": "Consulta inicial gratuita"
+    "consultation": "Consulta inicial gratuita",
+    "additionalText": "¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad.",
+    "responseTime": "Respuesta en 24h",
+    "freeConsultation": "Consulta gratuita",
+    "callToAction": "Proyecto completo en 30 días"
   },
   "education": {
     "title": "Formación Académica & Certificaciones Profesionales",
@@ -149,6 +153,199 @@
   },
   "tools": {
     "title": "Herramientas"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Soluciones tecnológicas para cada necesidad",
+    "items": [
+      {
+        "title": "Plataformas Web Enterprise",
+        "description": "Desarrollo completo de aplicaciones web escalables con arquitecturas robustas que manejan miles de usuarios concurrentes.",
+        "features": [
+          "React + TypeScript para interfaces modernas",
+          "FastAPI/Flask para backends de alto rendimiento",
+          "PostgreSQL con optimización avanzada",
+          "Despliegue en VPS con Docker y Nginx"
+        ]
+      },
+      {
+        "title": "E-commerce Avanzado",
+        "description": "Tiendas online completas con gestión inteligente de inventario, múltiples métodos de pago y analytics en tiempo real.",
+        "features": [
+          "Carrito dinámico con checkout optimizado",
+          "Integración Stripe, Culqi, Yape y más",
+          "Gestión de inventario automatizada",
+          "Panel administrativo completo con reportes"
+        ]
+      },
+      {
+        "title": "Automatización e IA",
+        "description": "Bots inteligentes y sistemas de automatización que optimizan procesos empresariales y mejoran la experiencia del cliente.",
+        "features": [
+          "Chatbots con OpenAI y procesamiento de lenguaje natural",
+          "Automatización de workflows con n8n y Zapier",
+          "Integración WhatsApp Business API",
+          "Sistemas de recomendación personalizados"
+        ]
+      },
+      {
+        "title": "Sistemas Empresariales",
+        "description": "CRM personalizados, sistemas de gestión y soluciones administrativas que escalan con tu negocio.",
+        "features": [
+          "CRM con pipeline de ventas automatizado",
+          "Sistemas de reservas y gestión de citas",
+          "Integración con APIs de terceros",
+          "Dashboards interactivos con métricas clave"
+        ]
+      },
+      {
+        "title": "DevOps & Cloud",
+        "description": "Infraestructura escalable, contenedores Docker, CI/CD y monitoreo avanzado para aplicaciones de producción.",
+        "features": [
+          "Containerización con Docker y Kubernetes",
+          "Pipelines CI/CD automatizados",
+          "Configuración VPS en DigitalOcean/AWS",
+          "SSL, CDN y optimización de performance"
+        ]
+      },
+      {
+        "title": "Capacitación Técnica",
+        "description": "Mentorías especializadas, workshops y documentación técnica para equipos de desarrollo.",
+        "features": [
+          "Mentorías 1:1 en tecnologías modernas",
+          "Workshops de arquitectura de software",
+          "Code reviews y pair programming",
+          "Documentación técnica completa"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre mi experiencia",
+    "description": "Ingeniero de Sistemas con 6+ años transformando ideas en soluciones digitales exitosas",
+    "highlights": [
+      {
+        "title": "6+ Años",
+        "subtitle": "Experiencia",
+        "description": "Desarrollando soluciones digitales"
+      },
+      {
+        "title": "50+ Proyectos",
+        "subtitle": "Exitosos",
+        "description": "En 3 países diferentes"
+      },
+      {
+        "title": "+$2M",
+        "subtitle": "En ahorros",
+        "description": "Generados para clientes"
+      },
+      {
+        "title": "99.9%",
+        "subtitle": "Uptime",
+        "description": "En sistemas en producción"
+      }
+    ],
+    "techStack": {
+      "frontend": [
+        { "name": "React", "description": "Desarrollo de interfaces modernas y componentes reutilizables" },
+        { "name": "TypeScript", "description": "Código más robusto y mantenible con tipado estático" },
+        { "name": "Next.js", "description": "Aplicaciones full-stack con SSR y optimización automática" },
+        { "name": "Tailwind CSS", "description": "Diseños responsive y sistemas de diseño escalables" },
+        { "name": "Vue.js", "description": "Desarrollo ágil de SPAs con arquitectura reactiva" }
+      ],
+      "backend": [
+        { "name": "Python", "description": "Desarrollo backend robusto y APIs de alto rendimiento" },
+        { "name": "FastAPI", "description": "APIs modernas con documentación automática y validación" },
+        { "name": "Flask", "description": "Microservicios y aplicaciones web ligeras y flexibles" },
+        { "name": "PostgreSQL", "description": "Bases de datos relacionales optimizadas para producción" },
+        { "name": "MongoDB", "description": "Almacenamiento NoSQL para datos no estructurados" },
+        { "name": "Ruby on Rails", "description": "Desarrollo backend robusto y APIs de alto rendimiento" },
+        { "name": "Redis", "description": "Caché y almacenamiento en memoria para aplicaciones web" }
+      ],
+      "devops": [
+        { "name": "Docker", "description": "Containerización y despliegues consistentes" },
+        { "name": "Git", "description": "Control de versiones y colaboración en equipo" },
+        { "name": "Linux", "description": "Administración de servidores y automatización" },
+        { "name": "DigitalOcean", "description": "Infraestructura cloud escalable y confiable" },
+        { "name": "Nginx", "description": "Proxy reverso y optimización de performance" }
+      ]
+    },
+    "sections": {
+      "frontend": "Frontend & UI/UX",
+      "backend": "Backend & Databases",
+      "devops": "DevOps & Cloud"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen mis",
+    "titleHighlight": "Clientes",
+    "subtitle": "Resultados reales de empresas que confiaron en mis soluciones tecnológicas",
+    "stats": [
+      { "number": "50+", "label": "Proyectos Exitosos" },
+      { "number": "98%", "label": "Satisfacción Cliente" },
+      { "number": "24h", "label": "Tiempo de Respuesta" },
+      { "number": "3+", "label": "Países Atendidos" }
+    ],
+    "items": [
+      {
+        "name": "María González",
+        "role": "CEO, TechStart",
+        "company": "Startup Tecnológica",
+        "text": "Emerson transformó completamente nuestra presencia digital. Nuestras ventas online aumentaron un 300% en solo 3 meses. Su enfoque técnico y visión de negocio son excepcionales.",
+        "project": "E-commerce + CRM",
+        "result": "+300% ventas"
+      },
+      {
+        "name": "Carlos Mendoza",
+        "role": "Director de Operaciones",
+        "company": "Retail Solutions",
+        "text": "La automatización que desarrolló nos ahorra 40 horas semanales de trabajo manual. El ROI fue inmediato y el soporte post-lanzamiento es impecable.",
+        "project": "Sistema de Automatización",
+        "result": "40h/semana ahorradas"
+      },
+      {
+        "name": "Ana Rodríguez",
+        "role": "Fundadora",
+        "company": "Boutique Online",
+        "text": "Mi tienda online pasó de 0 a 50K usuarios mensuales. El diseño es hermoso, la funcionalidad perfecta y el SEO nos posicionó en el top 3 de Google.",
+        "project": "Tienda Online",
+        "result": "50K usuarios/mes"
+      },
+      {
+        "name": "Roberto Silva",
+        "role": "Gerente General",
+        "company": "Servicios Profesionales",
+        "text": "El chatbot IA que desarrolló atiende el 80% de nuestras consultas automáticamente. Nuestros clientes están más satisfechos y nosotros más eficientes.",
+        "project": "Chatbot IA",
+        "result": "80% automatización"
+      }
+    ]
+  },
+  "heroSimple": {
+    "availability": "✅ Disponible para nuevos proyectos",
+    "greeting": "¡Hola! Soy Emerson",
+    "subtitle": "Senior Software Engineer",
+    "description": "Ingeniero de Sistemas peruano con 6+ años transformando ideas en soluciones tecnológicas exitosas. Especialista en desarrollo web, IA y automatización.",
+    "ctaPrimary": "Ver Proyectos",
+    "ctaSecondary": "Contactar",
+    "services": [
+      {
+        "title": "Desarrollo Web",
+        "subtitle": "Páginas y aplicaciones web modernas"
+      },
+      {
+        "title": "Inteligencia Artificial",
+        "subtitle": "Automatización inteligente para tu negocio"
+      },
+      {
+        "title": "Análisis de Datos",
+        "subtitle": "Insights que impulsan decisiones"
+      },
+      {
+        "title": "Consultoría Digital",
+        "subtitle": "Estrategia tecnológica personalizada"
+      }
+    ]
   },
   "portfolio": "Portfolio",
   "projects": {

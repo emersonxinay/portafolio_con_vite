@@ -1,87 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
-  const services = [
-    {
-      icon: "💻",
-      title: "Plataformas Web Enterprise",
-      description: "Desarrollo completo de aplicaciones web escalables con arquitecturas robustas que manejan miles de usuarios concurrentes.",
-      features: [
-        "React + TypeScript para interfaces modernas",
-        "FastAPI/Flask para backends de alto rendimiento",
-        "PostgreSQL con optimización avanzada",
-        "Despliegue en VPS con Docker y Nginx"
-      ],
-      color: "from-blue-400 to-cyan-500",
-      bgColor: "from-blue-900/10 to-cyan-900/10"
-    },
-    {
-      icon: "🛒",
-      title: "E-commerce Avanzado",
-      description: "Tiendas online completas con gestión inteligente de inventario, múltiples métodos de pago y analytics en tiempo real.",
-      features: [
-        "Carrito dinámico con checkout optimizado",
-        "Integración Stripe, Culqi, Yape y más",
-        "Gestión de inventario automatizada",
-        "Panel administrativo completo con reportes"
-      ],
-      color: "from-green-400 to-emerald-500",
-      bgColor: "from-green-900/10 to-emerald-900/10"
-    },
-    {
-      icon: "",
-      title: "Automatización e IA",
-      description: "Bots inteligentes y sistemas de automatización que optimizan procesos empresariales y mejoran la experiencia del cliente.",
-      features: [
-        "Chatbots con OpenAI y procesamiento de lenguaje natural",
-        "Automatización de workflows con n8n y Zapier",
-        "Integración WhatsApp Business API",
-        "Sistemas de recomendación personalizados"
-      ],
-      color: "from-purple-400 to-pink-500",
-      bgColor: "from-purple-900/10 to-pink-900/10"
-    },
-    {
-      icon: "⚙️",
-      title: "Sistemas Empresariales",
-      description: "CRM personalizados, sistemas de gestión y soluciones administrativas que escalan con tu negocio.",
-      features: [
-        "CRM con pipeline de ventas automatizado",
-        "Sistemas de reservas y gestión de citas",
-        "Integración con APIs de terceros",
-        "Dashboards interactivos con métricas clave"
-      ],
-      color: "from-orange-400 to-red-500",
-      bgColor: "from-orange-900/10 to-red-900/10"
-    },
-    {
-      icon: "☁️",
-      title: "DevOps & Cloud",
-      description: "Infraestructura escalable, contenedores Docker, CI/CD y monitoreo avanzado para aplicaciones de producción.",
-      features: [
-        "Containerización con Docker y Kubernetes",
-        "Pipelines CI/CD automatizados",
-        "Configuración VPS en DigitalOcean/AWS",
-        "SSL, CDN y optimización de performance"
-      ],
-      color: "from-indigo-400 to-purple-500",
-      bgColor: "from-indigo-900/10 to-purple-900/10"
-    },
-    {
-      icon: "🎓",
-      title: "Capacitación Técnica",
-      description: "Mentorías especializadas, workshops y documentación técnica para equipos de desarrollo.",
-      features: [
-        "Mentorías 1:1 en tecnologías modernas",
-        "Workshops de arquitectura de software",
-        "Code reviews y pair programming",
-        "Documentación técnica completa"
-      ],
-      color: "from-teal-400 to-cyan-500",
-      bgColor: "from-teal-900/10 to-cyan-900/10"
-    }
+  const { t } = useTranslation(['translation']);
+  
+  // Visual styling arrays to preserve design
+  const icons = ["💻", "🛒", "🤖", "⚙️", "☁️", "🎓"];
+  const colors = [
+    "from-blue-400 to-cyan-500",
+    "from-green-400 to-emerald-500",
+    "from-purple-400 to-pink-500",
+    "from-orange-400 to-red-500",
+    "from-indigo-400 to-purple-500",
+    "from-teal-400 to-cyan-500"
   ];
+  const bgColors = [
+    "from-blue-900/10 to-cyan-900/10",
+    "from-green-900/10 to-emerald-900/10",
+    "from-purple-900/10 to-pink-900/10",
+    "from-orange-900/10 to-red-900/10",
+    "from-indigo-900/10 to-purple-900/10",
+    "from-teal-900/10 to-cyan-900/10"
+  ];
+  
+  const services = t('services.items', { returnObjects: true }).map((service, index) => ({
+    ...service,
+    icon: icons[index],
+    color: colors[index],
+    bgColor: bgColors[index]
+  }));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -118,10 +66,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Servicios que <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Transforman</span>
+            {t('services.title')} que <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Transforman</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Soluciones tecnológicas diseñadas para hacer crecer tu negocio y superar a la competencia
+            {t('services.subtitle')}
           </p>
         </motion.div>
 

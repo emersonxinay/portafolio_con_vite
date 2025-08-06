@@ -6,33 +6,17 @@ const HeroSimple = () => {
   const { t } = useTranslation(['translation']);
   const [currentService, setCurrentService] = useState(0);
 
-  // Servicios principales - lenguaje simple
-  const services = [
-    {
-      title: "Desarrollo Web",
-      subtitle: "Páginas y aplicaciones web modernas",
-      icon: "",
-      color: "from-blue-400 to-cyan-500"
-    },
-    {
-      title: "Inteligencia Artificial",
-      subtitle: "Automatización inteligente para tu negocio",
-      icon: "",
-      color: "from-purple-400 to-pink-500"
-    },
-    {
-      title: "Análisis de Datos",
-      subtitle: "Insights que impulsan decisiones",
-      icon: "",
-      color: "from-green-400 to-emerald-500"
-    },
-    {
-      title: "Consultoría Digital",
-      subtitle: "Estrategia tecnológica personalizada",
-      icon: "",
-      color: "from-orange-400 to-red-500"
-    }
-  ];
+  // Servicios principales - usando traducciones
+  const services = t('heroSimple.services', { returnObjects: true }).map((service, index) => ({
+    ...service,
+    icon: "",
+    color: [
+      "from-blue-400 to-cyan-500",
+      "from-purple-400 to-pink-500", 
+      "from-green-400 to-emerald-500",
+      "from-orange-400 to-red-500"
+    ][index]
+  }));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -90,7 +74,7 @@ const HeroSimple = () => {
         >
           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           <span className="text-green-300 font-medium text-sm">
-            ✅ Disponible para nuevos proyectos
+            {t('heroSimple.availability')}
           </span>
         </motion.div>
 
@@ -102,11 +86,15 @@ const HeroSimple = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-black mb-4">
-            <span className="text-white block mb-2">¡Hola! Soy</span>
+            <span className="text-white block mb-2">{t('heroSimple.greeting')}</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
               Emerson Espinoza
             </span>
           </h1>
+          
+          <p className="text-xl md:text-2xl text-blue-400 font-semibold mb-6">
+            {t('heroSimple.subtitle')}
+          </p>
 
           <div className="flex items-center justify-center gap-2 mb-6 text-zinc-400">
             <span>🇵🇪 Peruano</span>
@@ -117,8 +105,7 @@ const HeroSimple = () => {
           </div>
 
           <p className="text-xl md:text-2xl text-zinc-300 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ayudo a empresas a <span className="text-blue-400 font-bold">crecer digitalmente</span> con
-            tecnología moderna, inteligencia artificial y análisis de datos.
+            {t('heroSimple.description')}
           </p>
         </motion.div>
 
@@ -209,7 +196,7 @@ const HeroSimple = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="flex items-center gap-2 justify-center">
-              💬 Conversemos
+              {t('heroSimple.ctaSecondary')}
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -226,7 +213,7 @@ const HeroSimple = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="flex items-center gap-2 justify-center">
-              Ver proyectos
+              {t('heroSimple.ctaPrimary')}
             </span>
           </motion.button>
         </motion.div>

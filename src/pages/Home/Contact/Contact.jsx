@@ -90,20 +90,20 @@ const Contact = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <p className="text-zinc-400 text-sm mb-4">
-          ¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad.
+          {t('contact.additionalText')}
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-xs text-zinc-500">
           <span className="flex items-center gap-1">
             <i className="fas fa-clock text-blue-400"></i>
-            Respuesta en 24h
+            {t('contact.responseTime')}
           </span>
           <span className="flex items-center gap-1">
             <i className="fas fa-shield-alt text-green-400"></i>
-            Consulta gratuita
+            {t('contact.freeConsultation')}
           </span>
           <span className="flex items-center gap-1">
-            <i className="fas fa-handshake text-purple-400"></i>
-            Sin compromiso
+            <i className="fas fa-rocket text-purple-400"></i>
+            {t('contact.callToAction')}
           </span>
         </div>
       </motion.div>

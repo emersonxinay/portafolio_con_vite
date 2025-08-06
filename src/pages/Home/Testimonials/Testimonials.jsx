@@ -1,66 +1,28 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "María González",
-      role: "CEO, TechStart",
-      company: "Startup Tecnológica",
-      avatar: "",
-      rating: 5,
-      text: "Emerson transformó completamente nuestra presencia digital. Nuestras ventas online aumentaron un 300% en solo 3 meses. Su enfoque técnico y visión de negocio son excepcionales.",
-      project: "E-commerce + CRM",
-      result: "+300% ventas",
-      color: "from-pink-400 to-rose-500"
-    },
-    {
-      id: 2,
-      name: "Carlos Mendoza",
-      role: "Director de Operaciones",
-      company: "Retail Solutions",
-      avatar: "",
-      rating: 5,
-      text: "La automatización que desarrolló nos ahorra 40 horas semanales de trabajo manual. El ROI fue inmediato y el soporte post-lanzamiento es impecable.",
-      project: "Sistema de Automatización",
-      result: "40h/semana ahorradas",
-      color: "from-blue-400 to-cyan-500"
-    },
-    {
-      id: 3,
-      name: "Ana Rodríguez",
-      role: "Fundadora",
-      company: "Boutique Online",
-      avatar: "",
-      rating: 5,
-      text: "Mi tienda online pasó de 0 a 50K usuarios mensuales. El diseño es hermoso, la funcionalidad perfecta y el SEO nos posicionó en el top 3 de Google.",
-      project: "Tienda Online",
-      result: "50K usuarios/mes",
-      color: "from-purple-400 to-indigo-500"
-    },
-    {
-      id: 4,
-      name: "Roberto Silva",
-      role: "Gerente General",
-      company: "Servicios Profesionales",
-      avatar: "",
-      rating: 5,
-      text: "El chatbot IA que desarrolló atiende el 80% de nuestras consultas automáticamente. Nuestros clientes están más satisfechos y nosotros más eficientes.",
-      project: "Chatbot IA",
-      result: "80% automatización",
-      color: "from-green-400 to-emerald-500"
-    }
-  ];
+  const testimonials = t('testimonials.items', { returnObjects: true }).map((testimonial, index) => ({
+    ...testimonial,
+    id: index + 1,
+    avatar: "",
+    rating: 5,
+    color: [
+      "from-pink-400 to-rose-500",
+      "from-blue-400 to-cyan-500", 
+      "from-purple-400 to-indigo-500",
+      "from-green-400 to-emerald-500"
+    ][index % 4]
+  }));
 
-  const stats = [
-    { number: "50+", label: "Proyectos Exitosos", icon: "" },
-    { number: "98%", label: "Satisfacción Cliente", icon: "" },
-    { number: "24h", label: "Tiempo de Respuesta", icon: "" },
-    { number: "3+", label: "Países Atendidos", icon: "" }
-  ];
+  const stats = t('testimonials.stats', { returnObjects: true }).map(stat => ({
+    ...stat,
+    icon: ""
+  }));
 
   const nextTestimonial = () => {
     setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -82,10 +44,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Lo que dicen mis <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Clientes</span>
+            {t('testimonials.title')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('testimonials.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Resultados reales de empresas que confiaron en mis soluciones tecnológicas
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 

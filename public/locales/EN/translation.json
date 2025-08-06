@@ -114,12 +114,16 @@
     "email": "xinayespinoza@gmail.com",
     "phonePerу": "WhatsApp Peru",
     "phoneChile": "WhatsApp Chile",
-    "phones": "Phones",
+    "phones": "WhatsApp",
     "locationLabel": "Location",
     "location": "🇵🇪 Peruvian with residence in Chile 🇨🇱",
     "sendEmail": "Send Email",
     "response": "Response in less than 24 hours",
-    "consultation": "Free initial consultation"
+    "consultation": "Free initial consultation",
+    "additionalText": "Do you have a project in mind? Let's talk and make it happen.",
+    "responseTime": "24h response",
+    "freeConsultation": "Free consultation",
+    "callToAction": "Complete project in 30 days"
   },
   "education": {
     "title": "Education & Professional Certifications",
@@ -160,6 +164,199 @@
   },
   "tools": {
     "title": "Tools"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Technological solutions for every need",
+    "items": [
+      {
+        "title": "Enterprise Web Platforms",
+        "description": "Complete development of scalable web applications with robust architectures that handle thousands of concurrent users.",
+        "features": [
+          "React + TypeScript for modern interfaces",
+          "FastAPI/Flask for high-performance backends",
+          "PostgreSQL with advanced optimization",
+          "VPS deployment with Docker and Nginx"
+        ]
+      },
+      {
+        "title": "Advanced E-commerce",
+        "description": "Complete online stores with intelligent inventory management, multiple payment methods and real-time analytics.",
+        "features": [
+          "Dynamic cart with optimized checkout",
+          "Stripe, Culqi, Yape integration and more",
+          "Automated inventory management",
+          "Complete admin panel with reports"
+        ]
+      },
+      {
+        "title": "Automation & AI",
+        "description": "Intelligent bots and automation systems that optimize business processes and improve customer experience.",
+        "features": [
+          "Chatbots with OpenAI and natural language processing",
+          "Workflow automation with n8n and Zapier",
+          "WhatsApp Business API integration",
+          "Personalized recommendation systems"
+        ]
+      },
+      {
+        "title": "Enterprise Systems",
+        "description": "Customized CRM, management systems and administrative solutions that scale with your business.",
+        "features": [
+          "CRM with automated sales pipeline",
+          "Reservation and appointment management systems",
+          "Third-party API integration",
+          "Interactive dashboards with key metrics"
+        ]
+      },
+      {
+        "title": "DevOps & Cloud",
+        "description": "Scalable infrastructure, Docker containers, CI/CD and advanced monitoring for production applications.",
+        "features": [
+          "Containerization with Docker and Kubernetes",
+          "Automated CI/CD pipelines",
+          "VPS configuration on DigitalOcean/AWS",
+          "SSL, CDN and performance optimization"
+        ]
+      },
+      {
+        "title": "Technical Training",
+        "description": "Specialized mentoring, workshops and technical documentation for development teams.",
+        "features": [
+          "1:1 mentoring in modern technologies",
+          "Software architecture workshops",
+          "Code reviews and pair programming",
+          "Complete technical documentation"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About my experience",
+    "description": "Systems Engineer with 6+ years transforming ideas into successful digital solutions",
+    "highlights": [
+      {
+        "title": "6+ Years",
+        "subtitle": "Experience",
+        "description": "Developing digital solutions"
+      },
+      {
+        "title": "50+ Projects",
+        "subtitle": "Successful",
+        "description": "In 3 different countries"
+      },
+      {
+        "title": "+$2M",
+        "subtitle": "In savings",
+        "description": "Generated for clients"
+      },
+      {
+        "title": "99.9%",
+        "subtitle": "Uptime",
+        "description": "In production systems"
+      }
+    ],
+    "techStack": {
+      "frontend": [
+        { "name": "React", "description": "Modern interface development and reusable components" },
+        { "name": "TypeScript", "description": "More robust and maintainable code with static typing" },
+        { "name": "Next.js", "description": "Full-stack applications with SSR and automatic optimization" },
+        { "name": "Tailwind CSS", "description": "Responsive designs and scalable design systems" },
+        { "name": "Vue.js", "description": "Agile SPA development with reactive architecture" }
+      ],
+      "backend": [
+        { "name": "Python", "description": "Robust backend development and high-performance APIs" },
+        { "name": "FastAPI", "description": "Modern APIs with automatic documentation and validation" },
+        { "name": "Flask", "description": "Microservices and lightweight, flexible web applications" },
+        { "name": "PostgreSQL", "description": "Relational databases optimized for production" },
+        { "name": "MongoDB", "description": "NoSQL storage for unstructured data" },
+        { "name": "Ruby on Rails", "description": "Robust backend development and high-performance APIs" },
+        { "name": "Redis", "description": "Cache and in-memory storage for web applications" }
+      ],
+      "devops": [
+        { "name": "Docker", "description": "Containerization and consistent deployments" },
+        { "name": "Git", "description": "Version control and team collaboration" },
+        { "name": "Linux", "description": "Server administration and automation" },
+        { "name": "DigitalOcean", "description": "Scalable and reliable cloud infrastructure" },
+        { "name": "Nginx", "description": "Reverse proxy and performance optimization" }
+      ]
+    },
+    "sections": {
+      "frontend": "Frontend & UI/UX",
+      "backend": "Backend & Databases",
+      "devops": "DevOps & Cloud"
+    }
+  },
+  "testimonials": {
+    "title": "What my",
+    "titleHighlight": "Clients",
+    "subtitle": "Real results from companies that trusted my technological solutions",
+    "stats": [
+      { "number": "50+", "label": "Successful Projects" },
+      { "number": "98%", "label": "Client Satisfaction" },
+      { "number": "24h", "label": "Response Time" },
+      { "number": "3+", "label": "Countries Served" }
+    ],
+    "items": [
+      {
+        "name": "María González",
+        "role": "CEO, TechStart",
+        "company": "Technology Startup",
+        "text": "Emerson completely transformed our digital presence. Our online sales increased 300% in just 3 months. His technical approach and business vision are exceptional.",
+        "project": "E-commerce + CRM",
+        "result": "+300% sales"
+      },
+      {
+        "name": "Carlos Mendoza",
+        "role": "Operations Director",
+        "company": "Retail Solutions",
+        "text": "The automation he developed saves us 40 hours of manual work per week. The ROI was immediate and the post-launch support is impeccable.",
+        "project": "Automation System",
+        "result": "40h/week saved"
+      },
+      {
+        "name": "Ana Rodríguez",
+        "role": "Founder",
+        "company": "Online Boutique",
+        "text": "My online store went from 0 to 50K monthly users. The design is beautiful, the functionality perfect and SEO positioned us in Google's top 3.",
+        "project": "Online Store",
+        "result": "50K users/month"
+      },
+      {
+        "name": "Roberto Silva",
+        "role": "General Manager",
+        "company": "Professional Services",
+        "text": "The AI chatbot he developed handles 80% of our queries automatically. Our customers are more satisfied and we are more efficient.",
+        "project": "AI Chatbot",
+        "result": "80% automation"
+      }
+    ]
+  },
+  "heroSimple": {
+    "availability": "✅ Available for new projects",
+    "greeting": "Hello! I'm Emerson",
+    "subtitle": "Senior Software Engineer",
+    "description": "Peruvian Systems Engineer with 6+ years transforming ideas into successful technological solutions. Specialist in web development, AI and automation.",
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Contact",
+    "services": [
+      {
+        "title": "Web Development",
+        "subtitle": "Modern web pages and applications"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "subtitle": "Smart automation for your business"
+      },
+      {
+        "title": "Data Analysis",
+        "subtitle": "Insights that drive decisions"
+      },
+      {
+        "title": "Digital Consulting",
+        "subtitle": "Personalized technology strategy"
+      }
+    ]
   },
   "portfolio": "Portfolio",
   "projects": {

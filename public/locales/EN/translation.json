@@ -588,6 +588,7 @@
   },
   "nav": {
     "home": "Home",
+    "projects": "Projects",
     "blog": "Blog",
     "docs": "Docs",
     "tools": "Tools",
@@ -595,6 +596,7 @@
       "title": "Navigation Menu",
       "descriptions": {
         "home": "Main page",
+        "projects": "Project portfolio",
         "blog": "Technical articles",
         "docs": "Documentation",
         "tools": "Useful tools"
@@ -1130,6 +1132,9 @@
         "Leader of collaborative projects with multidisciplinary teams"
       ],
       "twitterDescription": "Peruvian Senior Software Engineer 🇵🇪 residing in Chile 🇨🇱. 6+ years transforming ideas into scalable technological solutions. Specialist in AI/ML, Python, React, enterprise architectures. CTO & Founder. 99.9% uptime, $2M+ savings generated."
+    },
+    "projects": {
+      "description": "Software project portfolio: web applications, enterprise systems, AI/ML solutions and educational tools. Technologies: React, Python, Node.js, PostgreSQL, Docker and more."
     }
   }
 }

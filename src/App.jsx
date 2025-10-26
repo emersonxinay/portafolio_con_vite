@@ -11,6 +11,7 @@ import Error from './pages/Error/Error';
 import Blog from './pages/Blog/Blog';
 import Article from './pages/Blog/Article';
 import Home from './pages/Home/Home';
+import ProjectsPage from './pages/Projects/Projects';
 import CVHarvard from './pages/CV/CVHarvard';
 import CVCorporate from './pages/CV/CVCorporate';
 
@@ -32,6 +33,7 @@ function App() {
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<ProjectsPage />} />
           <Route path='/docs' element={<Docs />} />
           <Route path='/docs/html' element={<HTML />} />
           <Route path='/tools' element={<Tools />} />

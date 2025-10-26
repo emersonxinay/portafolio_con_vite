@@ -8,10 +8,11 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
   const path = useHref()
 
   const navItems = [
-    { id: 'home', to: '/', label: t('nav.home'), icon: '🏠' },
-    { id: 'blog', to: '/blog', label: t('nav.blog'), icon: '📝' },
-    { id: 'docs', to: '/docs', label: t('nav.docs'), icon: '📚' },
-    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: '🛠️' }
+    { id: 'home', to: '/', label: t('nav.home'), icon: 'fas fa-home' },
+    { id: 'projects', to: '/projects', label: t('nav.projects'), icon: 'fas fa-folder-open' },
+    { id: 'blog', to: '/blog', label: t('nav.blog'), icon: 'fas fa-blog' },
+    { id: 'docs', to: '/docs', label: t('nav.docs'), icon: 'fas fa-book' },
+    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: 'fas fa-tools' }
   ]
 
   return (
@@ -66,16 +67,16 @@ const MenuOpen = ({ isOpen, closeMenu, scrolled }) => {
                         isActive ? 'active' : ''
                       }`}
                     >
-                      <motion.div 
-                        className={`w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl flex items-center justify-center text-lg xs:text-xl sm:text-2xl ${
-                          isActive 
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/25' 
+                      <motion.div
+                        className={`w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl flex items-center justify-center ${
+                          isActive
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/25'
                             : 'bg-slate-700/50 group-hover:bg-slate-600/50'
                         }`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                       >
-                        {item.icon}
+                        <i className={`${item.icon} text-lg xs:text-xl sm:text-2xl`}></i>
                       </motion.div>
                       
                       <div className='flex-1'>

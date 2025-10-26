@@ -85,10 +85,10 @@ const Projects = () => {
               
               {/* Project Image/Preview */}
               <div className="relative h-36 xxs:h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden rounded-t-2xl xs:rounded-t-3xl">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                <img
+                  src={project.image}
+                  alt={t(`projects.items.${project.id}.title`)}
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     // Fallback si la imagen no carga
                     e.target.style.display = 'none';
@@ -125,10 +125,10 @@ const Projects = () => {
               <div className="p-3 xxs:p-4 xs:p-5 sm:p-6 space-y-2 xxs:space-y-3 xs:space-y-4">
                 <div>
                   <h3 className="text-base xxs:text-lg xs:text-xl font-bold text-white mb-1 xxs:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300 leading-tight">
-                    {t(project.title)}
+                    {t(`projects.items.${project.id}.title`)}
                   </h3>
                   <p className="text-zinc-400 text-xs xxs:text-sm xs:text-base leading-relaxed group-hover:text-zinc-300 transition-colors duration-300 line-clamp-3">
-                    {t(project.description)}
+                    {t(`projects.items.${project.id}.description`)}
                   </p>
                 </div>
 

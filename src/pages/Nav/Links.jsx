@@ -8,17 +8,19 @@ const Links = ({ path, scrolled }) => {
   const [hoveredLink, setHoveredLink] = useState(null)
 
   const navItems = [
-    { id: 'home', to: '/', label: t('nav.home'), icon: '🏠' },
-    { id: 'blog', to: '/blog', label: t('nav.blog'), icon: '📝' },
-    { id: 'docs', to: '/docs', label: t('nav.docs'), icon: '📚' },
-    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: '🛠️' }
+    { id: 'home', to: '/', label: t('nav.home'), icon: 'fas fa-home' },
+    { id: 'projects', to: '/projects', label: t('nav.projects'), icon: 'fas fa-folder-open' },
+    { id: 'blog', to: '/blog', label: t('nav.blog'), icon: 'fas fa-blog' },
+    { id: 'docs', to: '/docs', label: t('nav.docs'), icon: 'fas fa-book' },
+    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: 'fas fa-tools' }
   ]
 
   const getActiveIndex = () => {
     if (path === '/') return 0
-    if (path.includes('/blog')) return 1
-    if (path.includes('/docs')) return 2
-    if (path.includes('/tools')) return 3
+    if (path.includes('/projects')) return 1
+    if (path.includes('/blog')) return 2
+    if (path.includes('/docs')) return 3
+    if (path.includes('/tools')) return 4
     return 0
   }
 
@@ -41,12 +43,12 @@ const Links = ({ path, scrolled }) => {
               <Link
                 to={item.to}
                 className={`relative z-10 flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                  isActive 
-                    ? 'text-white' 
+                  isActive
+                    ? 'text-white'
                     : 'text-zinc-400 hover:text-white'
                 }`}
               >
-                <span className='text-sm'>{item.icon}</span>
+                <i className={`${item.icon} text-sm`}></i>
                 <span className='text-sm font-semibold'>{item.label}</span>
               </Link>
               

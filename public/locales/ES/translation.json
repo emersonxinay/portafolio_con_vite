@@ -595,6 +595,7 @@
   },
   "nav": {
     "home": "Inicio",
+    "projects": "Proyectos",
     "blog": "Blog",
     "docs": "Docs",
     "tools": "Herramientas",
@@ -602,6 +603,7 @@
       "title": "Menu de Navegación",
       "descriptions": {
         "home": "Página principal",
+        "projects": "Portfolio de proyectos",
         "blog": "Artículos técnicos",
         "docs": "Documentación",
         "tools": "Herramientas útiles"
@@ -1137,6 +1139,9 @@
         "Líder de proyectos colaborativos con equipos multidisciplinarios"
       ],
       "twitterDescription": "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise. CTO & Founder. 99.9% uptime, $2M+ ahorros generados."
+    },
+    "projects": {
+      "description": "Portfolio de proyectos de software: aplicaciones web, sistemas empresariales, soluciones de IA/ML y herramientas educativas. Tecnologías: React, Python, Node.js, PostgreSQL, Docker y más."
     }
   }
 }

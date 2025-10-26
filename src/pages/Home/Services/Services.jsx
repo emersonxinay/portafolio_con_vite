@@ -1,77 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { getServiceStyle } from '../../../data/servicesData';
+import { useAnimationVariants } from '../../../hooks/useAnimationVariants';
+import { useScrollToSection } from '../../../hooks/useScrollToSection';
+import SectionHeader from '../../../components/SectionHeader';
 
 const Services = () => {
   const { t } = useTranslation(['translation']);
-  
-  // Visual styling arrays to preserve design
-  const icons = ["💻", "🛒", "🤖", "⚙️", "☁️", "🎓"];
-  const colors = [
-    "from-blue-400 to-cyan-500",
-    "from-green-400 to-emerald-500",
-    "from-purple-400 to-pink-500",
-    "from-orange-400 to-red-500",
-    "from-indigo-400 to-purple-500",
-    "from-teal-400 to-cyan-500"
-  ];
-  const bgColors = [
-    "from-blue-900/10 to-cyan-900/10",
-    "from-green-900/10 to-emerald-900/10",
-    "from-purple-900/10 to-pink-900/10",
-    "from-orange-900/10 to-red-900/10",
-    "from-indigo-900/10 to-purple-900/10",
-    "from-teal-900/10 to-cyan-900/10"
-  ];
-  
+  const { containerVariants, itemVariants } = useAnimationVariants();
+  const { scrollToContact } = useScrollToSection();
+
   const services = t('services.items', { returnObjects: true }).map((service, index) => ({
     ...service,
-    icon: icons[index],
-    color: colors[index],
-    bgColor: bgColors[index]
+    ...getServiceStyle(index)
   }));
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  const scrollToContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-12 xs:py-16 md:py-20 relative w-full overflow-hidden">
       <div className="mobile-container">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-10 xs:mb-12 md:mb-16"
-        >
-          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 xs:mb-4 md:mb-6">
-            {t('services.title')} que <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Transforman</span>
-          </h2>
-          <p className="text-base xs:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('services.subtitle')}
-          </p>
-        </motion.div>
+        <SectionHeader
+          title={t('services.title')}
+          highlightText="Transforman"
+          subtitle={t('services.subtitle')}
+          gradient="from-blue-400 to-purple-500"
+        />
 
         {/* Services Grid */}
         <motion.div
@@ -103,7 +57,9 @@ const Services = () => {
                 <div className="relative z-10">
                   {/* Icon & Title */}
                   <div className="flex items-center mb-4 xs:mb-6">
-                    <div className="text-3xl xs:text-4xl mr-3 xs:mr-4">{service.icon}</div>
+                    <div className={`w-12 h-12 xs:w-14 xs:h-14 rounded-xl bg-gradient-to-br ${service.bgColor} flex items-center justify-center mr-3 xs:mr-4`}>
+                      <i className={`${service.icon} text-2xl xs:text-3xl text-transparent bg-clip-text bg-gradient-to-r ${service.color}`}></i>
+                    </div>
                     <div>
                       <h3 className="text-lg xs:text-xl font-bold text-white mb-1">{service.title}</h3>
                     </div>
@@ -131,7 +87,7 @@ const Services = () => {
                     onClick={scrollToContact}
                     className={`w-full px-6 py-3 rounded-xl bg-gradient-to-r ${service.color} text-white font-semibold hover:shadow-lg transition-all duration-300`}
                   >
-                    Solicitar Información
+                    {t('servicesPage.requestInfo')}
                   </motion.button>
                 </div>
               </div>
@@ -153,10 +109,10 @@ const Services = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
             {[
-              { step: "01", title: "Análisis", desc: "Entiendo tu negocio y objetivos" },
-              { step: "02", title: "Estrategia", desc: "Diseño la solución perfecta" },
-              { step: "03", title: "Desarrollo", desc: "Construyo con las mejores tecnologías" },
-              { step: "04", title: "Lanzamiento", desc: "Entrego y doy soporte continuo" }
+              { step: "01", title: t('servicesPage.process.steps.0.title'), desc: t('servicesPage.process.steps.0.description') },
+              { step: "02", title: t('servicesPage.process.steps.1.title'), desc: t('servicesPage.process.steps.1.description') },
+              { step: "03", title: t('servicesPage.process.steps.2.title'), desc: t('servicesPage.process.steps.2.description') },
+              { step: "04", title: t('servicesPage.process.steps.3.title'), desc: t('servicesPage.process.steps.3.description') }
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 xs:w-14 xs:h-14 md:w-16 md:h-16 mx-auto mb-2 xs:mb-3 md:mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base xs:text-lg md:text-xl">
@@ -178,10 +134,10 @@ const Services = () => {
           className="text-center bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-xl xs:rounded-2xl p-5 xs:p-6 md:p-8 border border-white/10"
         >
           <h3 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-2 xs:mb-3 md:mb-4">
-            ¿Listo para transformar tu idea en realidad?
+            {t('servicesPage.cta.title')}
           </h3>
           <p className="text-gray-300 mb-5 xs:mb-6 md:mb-8 max-w-2xl mx-auto text-sm xs:text-base">
-            Garantizo entrega en tiempo récord y soporte post-lanzamiento. Tu éxito es mi prioridad.
+            {t('servicesPage.cta.description')}
           </p>
 
           <motion.button
@@ -194,7 +150,7 @@ const Services = () => {
               shadow-lg hover:shadow-xl
             "
           >
-            Comenzar Proyecto
+            {t('servicesPage.cta.button')}
           </motion.button>
         </motion.div>
       </div>

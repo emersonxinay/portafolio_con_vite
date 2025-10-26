@@ -1,36 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { socialLinks } from '../../data/socialLinksData';
+import { useScrollToSection } from '../../hooks/useScrollToSection';
 
 const Footer = () => {
   const { t } = useTranslation();
-
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/emersonespinoza',
-      icon: '💼',
-      color: 'hover:text-blue-400'
-    },
-    {
-      name: 'GitHub',
-      url: 'https://github.com/emersonespinoza',
-      icon: '🐱',
-      color: 'hover:text-gray-400'
-    },
-    {
-      name: 'WhatsApp',
-      url: 'https://wa.me/51987654321',
-      icon: '📱',
-      color: 'hover:text-green-400'
-    },
-    {
-      name: 'Email',
-      url: 'mailto:emerson@emersonespinoza.com',
-      icon: '📧',
-      color: 'hover:text-red-400'
-    }
-  ];
+  const { scrollToSection } = useScrollToSection();
 
   const quickLinks = [
     { name: t('footer.quickLinks.home'), href: '#hero' },
@@ -40,13 +16,6 @@ const Footer = () => {
   ];
 
   const services = t('footer.services.items', { returnObjects: true });
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId.replace('#', ''));
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="relative bg-gradient-to-b from-slate-900 to-black border-t border-slate-800 w-full overflow-hidden">
@@ -83,20 +52,23 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-2 xs:space-y-3">
                 <div className="flex items-center text-gray-400 text-xs xs:text-sm">
-                  <span className="mr-3">📧</span>
+                  <i className="fas fa-envelope mr-3 text-blue-400"></i>
                   <a href="mailto:emerson@emersonespinoza.com" className="hover:text-white transition-colors">
                     emerson@emersonespinoza.com
                   </a>
                 </div>
-                <div className="flex items-center text-gray-400">
-                  <span className="mr-3">📱</span>
-                  <a href="https://wa.me/51987654321" className="hover:text-white transition-colors">
+                <div className="flex items-center text-gray-400 text-xs xs:text-sm">
+                  <i className="fab fa-whatsapp mr-3 text-green-400"></i>
+                  <a href="https://wa.me/51974361728" className="hover:text-white transition-colors">
                     +51 974361728
                   </a>
                 </div>
-                <div className="flex items-center text-gray-400">
-                  <span className="mr-3">📍</span>
-                  <span>Lima, Perú</span>
+                <div className="flex items-center text-gray-400 text-xs xs:text-sm">
+                  <i className="fas fa-map-marker-alt mr-3 text-purple-400"></i>
+                  <span className="flex items-center gap-2">
+                    <i className="fas fa-globe text-cyan-400"></i>
+                    {t('footerComponent.location')}
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -164,11 +136,11 @@ const Footer = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 xs:w-12 xs:h-12 bg-slate-800 rounded-lg xs:rounded-xl flex items-center justify-center text-lg xs:text-xl transition-all duration-300 ${social.color} hover:scale-110 hover:bg-slate-700`}
+                    className={`w-10 h-10 xs:w-12 xs:h-12 bg-slate-800 rounded-lg xs:rounded-xl flex items-center justify-center transition-all duration-300 ${social.color} hover:scale-110 hover:bg-slate-700`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {social.icon}
+                    <i className={`${social.icon} text-lg xs:text-xl`}></i>
                   </motion.a>
                 ))}
               </div>
@@ -206,7 +178,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                {t('footer.madeWith')} ❤️ {t('footer.and')} ☕
+                {t('footer.madeWith')} <i className="fas fa-heart text-red-500"></i> {t('footer.and')} <i className="fas fa-coffee text-amber-500"></i>
               </motion.p>
             </div>
 
@@ -217,8 +189,8 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <span className="hover:text-white transition-colors cursor-pointer">Política de Privacidad</span>
-              <span className="hover:text-white transition-colors cursor-pointer">Términos de Servicio</span>
+              <span className="hover:text-white transition-colors cursor-pointer">{t('footerComponent.privacy')}</span>
+              <span className="hover:text-white transition-colors cursor-pointer">{t('footerComponent.terms')}</span>
             </motion.div>
           </div>
         </div>

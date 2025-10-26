@@ -1,23 +1,23 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Ingeniero de Sistemas peruano con residencia en Chile 🇵🇪🇨🇱, Software Engineer Senior con 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en Inteligencia Artificial, Ciencia de Datos y Arquitecturas Enterprise. Lidero equipos técnicos, optimizo sistemas que procesan millones de transacciones y desarrollo estrategias de transformación digital que generan ROI medible. Experto en Python, React, Machine Learning y Cloud Computing con experiencia comprobada en startups unicornio y empresas Fortune 500.",
+    "description": "Ingeniero de Sistemas peruano 🇵🇪 con sólida experiencia profesional en Chile (2019-2025) 🇨🇱. Egresado de UNHEVAL Perú (2018), título reconocido por SUNEDU desde 2024. Durante mi etapa en Chile trabajé como Fullstack Developer y Tech Educator en Desafío Latam y Código Futuro (Fundación Minera Escondida BHP). Actualmente trabajo de forma remota y viajo desarrollando proyectos colaborativos que impactan a miles de usuarios en Latinoamérica.",
     "contact": "Agenda una consulta técnica",
     "cv": "Descargar CV Ejecutivo",
-    "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
-    "specialty": "Arquitecto de Soluciones Enterprise • Tech Lead • AI Specialist",
-    "available": "Disponible para proyectos estratégicos",
-    "role": "Senior Software Engineer • AI Expert • Data Scientist • Tech Educator",
-    "pitch": "Ingeniero de Sistemas peruano 🇵🇪 con residencia en Chile 🇨🇱. Transformo desafíos empresariales complejos en soluciones tecnológicas innovadoras que escalan. Con expertise en IA/ML, arquitecturas distribuidas y liderazgo técnico, he optimizado sistemas que manejan +1M usuarios, reducido costos operativos en 60% y liderado equipos que entregan productos de clase mundial.",
-    "value_proposition": "Combino visión estratégica con ejecución técnica excepcional para crear soluciones que no solo funcionan, sino que transforman negocios.",
+    "location": "🌎 Trabajando remotamente • Ex-Chile (2019-2025)",
+    "specialty": "Fullstack Developer • Tech Educator • Remote Project Leader",
+    "available": "Disponible para proyectos remotos",
+    "role": "Ingeniero de Sistemas • Fullstack Developer • Tech Educator • Remote Mentor",
+    "pitch": "Ingeniero de Sistemas peruano 🇵🇪 con experiencia profesional en Chile (2019-2025) 🇨🇱. Transformé la educación tecnológica a través de Desafío Latam y Código Futuro, desarrollé sistemas enterprise y lideré proyectos colaborativos. Actualmente trabajo de forma remota conectando el ecosistema tech latinoamericano. Especialista en trabajo colaborativo, metodologías ágiles y formación de talento tech.",
+    "value_proposition": "Combino experiencia internacional con trabajo remoto efectivo para crear soluciones que conectan equipos y educan comunidades tech.",
     "metrics": {
       "experience": "Años de experiencia",
-      "countries": "Países con proyectos", 
-      "focus": "Soluciones entregadas",
-      "specialty": "Consultor independiente",
-      "team_size": "Desarrolladores mentoreados",
-      "performance": "Mejora en performance",
-      "cost_reduction": "Reducción de costos",
+      "countries": "Países con proyectos",
+      "focus": "Proyectos desarrollados",
+      "specialty": "Trabajo remoto",
+      "team_size": "Estudiantes capacitados",
+      "performance": "Mejora en procesos",
+      "cost_reduction": "Optimización recursos",
       "uptime": "Disponibilidad sistemas"
     }
   },
@@ -65,91 +65,111 @@
   "experience": {
     "title": "Experiencia Profesional & Liderazgo Técnico",
     "tech": "Python, Flask, FastAPI, Ruby on Rails, Node.js, React, PostgreSQL, MySQL, Docker, Nginx, JavaScript, C# .NET",
-    "completeStack": "Stack Tecnológico Enterprise",
+    "completeStack": "Stack Tecnológico Completo",
     "frontend": "Frontend & UX Engineering",
     "backend": "Backend & Microservices",
     "databases": "Bases de Datos & Big Data",
     "devops": "DevOps & Cloud Architecture",
     "ai_ml": "Inteligencia Artificial & Machine Learning",
     "leadership": "Liderazgo Técnico & Mentoría",
-    
-    "hazuki": "Senior Software Engineer & Tech Lead",
-    "compilando": "Founder & CTO", 
-    "codigoFuturo": "Senior Technical Instructor & Curriculum Architect",
-    "desafiolatam": "Lead Instructor & Technical Mentor",
-    
-    "techCompilando": "React, Python, FastAPI, Django, PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Machine Learning, Data Analytics",
-    "techHazuki": "Python, Flask, PostgreSQL, JavaScript, React, Docker, Nginx, Gunicorn, VPS, Microservices Architecture",
-    "techDesafioLatam": "Python, Ruby on Rails, JavaScript, PostgreSQL, MongoDB, Git, AWS, REST APIs, GraphQL, Testing",
-    "techCodigoFuturo": "Python, JavaScript, React, Git, HTML5, CSS3, Bootstrap, IoT, Raspberry Pi, Arduino",
-    
-    "hazukiDate": "FEB 2018 - 2021",
-    "compilandoDate": "FEB 2022 - ACTUALIDAD", 
-    "codigoFuturoDate": "AGOSTO 2022 - ACTUALIDAD",
-    "desafioLatamDate": "NOVIEMBRE 2021 - ACTUALIDAD",
-    
-    "hazuki1": "• Lideré desarrollo de sistema enterprise que procesó +50K transacciones/mes con 99.9% uptime",
-    "hazuki2": "• Implementé arquitectura de microservicios que redujo tiempo de respuesta en 70%",
-    "hazuki3": "• Optimicé infraestructura cloud reduciendo costos operativos en $15K/año",
-    "hazukiMetrics": "99.9% uptime • 70% mejora performance • $15K ahorro anual",
-    
-    "desafioLatam1": "• Lideré formación técnica de 200+ desarrolladores con 95% tasa de empleabilidad",
-    "desafioLatam2": "• Diseñé curriculum enterprise adoptado por 5+ instituciones educativas",
-    "desafioLatam3": "• Mentoré equipos que desarrollaron 50+ aplicaciones en producción",
-    "desafioLatamMetrics": "200+ desarrolladores formados • 95% empleabilidad • 50+ apps en producción",
-    
-    "compilando1": "• Fundé y escalé plataforma EdTech que alcanzó 10K+ usuarios activos",
-    "compilando2": "• Desarrollé SaaS educativo con IA que aumentó retención estudiantil en 85%",
-    "compilando3": "• Lideré transformación digital para 20+ empresas con ROI promedio de 300%",
-    "compilandoMetrics": "10K+ usuarios activos • 85% retención • 300% ROI promedio",
-    
-    "codigoFuturo1": "• Arquitecté programa de capacitación técnica adoptado por 15+ empresas",
-    "codigoFuturo2": "• Lideré upskilling de 500+ profesionales en tecnologías emergentes",
-    "codigoFuturo3": "• Desarrollé metodología de enseñanza que redujo tiempo de aprendizaje en 60%",
-    "codigoFuturoMetrics": "500+ profesionales capacitados • 15+ empresas • 60% reducción tiempo aprendizaje"
+
+    "hazuki": "Fullstack Developer & Tech Lead",
+    "compilando": "Founder & CTO",
+    "codigoFuturo": "Senior Technical Instructor & Project Developer (Fundación Minera Escondida BHP)",
+    "desafiolatam": "Fullstack Developer Instructor & Technical Mentor",
+    "drtc": "Desarrollador Web - Prácticas Preprofesionales",
+    "talentoDigital": "Instructor de Programación - Talento Digital Chile",
+
+    "techCompilando": "React, Python, Flask, PostgreSQL, Git, GitHub, HTML, CSS, JavaScript, Pandas, Matplotlib, Streamlit, Pygame",
+    "techHazuki": "Ruby on Rails, PostgreSQL, JavaScript, HTML, CSS, Trello, Jira, Git, GitHub",
+    "techDesafioLatam": "Python, Flask, Ruby on Rails, PostgreSQL, JavaScript, React, HTML, CSS, Git, GitHub",
+    "techCodigoFuturo": "Python, Flask, React, PostgreSQL, C# .NET, Git, GitHub, HTML, CSS, JavaScript, Pandas, Matplotlib, Streamlit, Pygame",
+    "techDrtc": "Desarrollo Web, HTML, CSS, JavaScript, Base de Datos",
+    "techTalentoDigital": "Python, Flask, PostgreSQL, Git, GitHub, HTML, CSS, JavaScript",
+
+    "hazukiDate": "2019 - 2021",
+    "compilandoDate": "2022 - ACTUALIDAD",
+    "codigoFuturoDate": "AGOSTO 2022 - DICIEMBRE 2025",
+    "desafioLatamDate": "2019 - 2020 (Bootcamp) | 2022 - AGOSTO 2022 (Instructor)",
+    "drtcDate": "2018",
+    "talentoDigitalDate": "INICIO 2022 - AGOSTO 2022",
+
+    "hazuki1": "• Desarrollé aplicaciones fullstack backend y frontend para publicar menús y carritos de compras",
+    "hazuki2": "• Trabajé con metodologías ágiles usando Trello y Jira para gestión de proyectos",
+    "hazuki3": "• Implementé soluciones escalables con Ruby on Rails y PostgreSQL en equipo colaborativo",
+    "hazukiMetrics": "Ruby on Rails + PostgreSQL • Trabajo en equipo • Metodologías ágiles",
+
+    "desafioLatam1": "• Obtuve certificación como Fullstack Developer especializándome en Ruby on Rails (2019-2020)",
+    "desafioLatam2": "• Recibí capacitación en pedagogía para posteriormente ejercer como docente",
+    "desafioLatam3": "• Como instructor (2022), dicté cursos a profesionales y emprendedores de forma online",
+    "desafioLatamMetrics": "Certificación Fullstack • Capacitación pedagógica • Instructor online",
+
+    "compilando1": "• Desarrollé múltiples aplicaciones: red social para pegas pequeñas (Flask + React + PostgreSQL)",
+    "compilando2": "• Creé aplicación para ventas de productos artesanales fullstack con React, Node.js y PostgreSQL",
+    "compilando3": "• Desarrollé aplicaciones de venta de cursos con Ruby on Rails/Flask + React + PostgreSQL",
+    "compilandoMetrics": "Múltiples proyectos • Stack completo • Trabajo colaborativo",
+
+    "codigoFuturo1": "• Docente de programación en proyecto de Fundación Minera Escondida BHP Antofagasta",
+    "codigoFuturo2": "• Enseñé HTML, CSS, JavaScript, Python, Flask, PostgreSQL, Git, GitHub, Pandas, Matplotlib, Streamlit",
+    "codigoFuturo3": "• Desarrollé proyectos paralelos: red social músicos, sistema registro QR (.NET + C# + React), más aplicaciones educativas",
+    "codigoFuturoMetrics": "Educación integral • Proyectos paralelos • Capacitación docentes liceos",
+
+    "drtc1": "• Desarrollé aplicación web para registro y seguimiento de personal postulante a trabajos",
+    "drtc2": "• Trabajé en equipo aplicando metodologías de desarrollo colaborativo",
+    "drtc3": "• Implementé soluciones para optimizar procesos de recursos humanos",
+    "drtcMetrics": "Primer proyecto profesional • Trabajo en equipo • Gestión RRHH",
+
+    "talentoDigital1": "• Instructor de programación para profesionales y emprendedores en modalidad online",
+    "talentoDigital2": "• Enseñé tecnologías web modernas y metodologías de desarrollo",
+    "talentoDigital3": "• Preparé a estudiantes para insertarse en el mercado tecnológico chileno",
+    "talentoDigitalMetrics": "Educación online • Profesionales y emprendedores • Inserción laboral tech"
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "¿Listo para transformar tu idea en realidad digital?",
-    "description": "Como desarrollador fullstack independiente, te acompaño desde la conceptualización hasta el despliegue de tu proyecto. Trabajemos juntos para crear soluciones que impulsen tu negocio.",
+    "subtitle": "¿Listo para desarrollar tu proyecto de forma colaborativa?",
+    "description": "Como desarrollador fullstack con experiencia en trabajo remoto y educación tecnológica, te acompaño desde la conceptualización hasta el despliegue de tu proyecto. Trabajemos juntos creando soluciones que generen impacto real.",
     "email": "xinayespinoza@gmail.com",
-    "phonePerу": "WhatsApp Perú",
-    "phoneChile": "WhatsApp Chile", 
+    "phonePerу": "WhatsApp",
+    "phoneChile": "WhatsApp",
     "phones": "WhatsApp",
     "locationLabel": "Ubicación",
-    "location": "🇵🇪 Peruano con residencia en Chile 🇨🇱",
+    "location": "🌎 Trabajando remotamente • Disponible para proyectos globales",
     "sendEmail": "Enviar Email",
     "response": "Respuesta en menos de 24 horas",
     "consultation": "Consulta inicial gratuita",
-    "additionalText": "¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad.",
+    "additionalText": "¿Tienes un proyecto en mente? Hablemos y desarrollémoslo juntos aplicando las mejores prácticas.",
     "responseTime": "Respuesta en 24h",
     "freeConsultation": "Consulta gratuita",
-    "callToAction": "Proyecto completo en 30 días"
+    "callToAction": "Desarrollo colaborativo y educativo"
   },
   "education": {
     "title": "Formación Académica & Certificaciones Profesionales",
     "degree": "Ingeniero de Sistemas",
-    "university": "Universidad Nacional Hermilio Valdizán (UNHEVAL), Perú",
-    "bootcamp": "Especialización Fullstack Ruby on Rails",
-    "bootcampSchool": "Desafío Latam, Chile",
+    "university": "Universidad Nacional Hermilio Valdizán (UNHEVAL), Huánuco, Perú",
+    "period": "2013 - 2018 (Egresado)",
+    "recognition": "Título reconocido por SUNEDU desde 2024",
+    "bootcamp": "Certificación Fullstack Web Development",
+    "bootcampSchool": "Desafío Latam, Santiago, Chile",
+    "bootcampPeriod": "2019 - 2020",
     "certifications": {
-      "aws": "AWS Solutions Architect (En progreso)",
-      "google": "Google Cloud Professional Developer",
-      "microsoft": "Microsoft Azure Fundamentals",
-      "python": "Python Institute PCAP Certified",
-      "scrum": "Certified Scrum Master (CSM)"
+      "platzi": "Múltiples certificaciones en Python, Flask, Data Science y Machine Learning - Platzi",
+      "udemy": "Certificaciones en desarrollo web moderno y tecnologías cloud - Udemy",
+      "edteam": "Especializaciones en frontend y backend development - EDteam",
+      "codigofacilito": "Certificaciones en programación web y móvil - Código Facilito",
+      "pedagogical": "Capacitación en pedagogía para ejercer como docente - Desafío Latam (2022)"
     },
     "specializations": {
-      "ai_ml": "Machine Learning & Deep Learning Specialization",
-      "data_science": "Data Science & Analytics Professional Certificate",
-      "cloud": "Cloud Architecture & DevOps Specialization",
-      "leadership": "Technical Leadership & Team Management"
+      "fullstack": "Desarrollo Fullstack con Ruby on Rails y Python/Flask",
+      "web_dev": "Desarrollo Web con HTML, CSS, JavaScript y React",
+      "backend": "Backend development con Python, Flask, PostgreSQL",
+      "data_science": "Ciencia de Datos con Python, Pandas, Matplotlib",
+      "teaching": "Metodologías de enseñanza en programación y tecnología"
     },
-    "youtube": "YouTube: Compilando Code (15K+ suscriptores)",
-    "courses": "Instructor Certificado: Python, Flask, React, C# .NET, Data Science, Machine Learning",
-    "program": "Creador del programa 'Python Enterprise Development' adoptado por 10+ instituciones",
-    "languages": "Español (Nativo) • Inglés (Técnico avanzado - B2/C1) • Portugués (Básico)",
-    "continuous_learning": "Formación continua en: Kubernetes, Terraform, GraphQL, Blockchain, Quantum Computing"
+    "youtube": "Canal educativo: Compilando Code - Tutoriales de programación",
+    "courses": "Instructor Certificado: HTML, CSS, JavaScript, Python, Flask, React, C# .NET, Git, GitHub, PostgreSQL, Pandas, Matplotlib, Streamlit",
+    "program": "Desarrollé múltiples programas educativos aplicados en Código Futuro y proyectos colaborativos",
+    "languages": "Español (Nativo) • Inglés (Intermedio técnico) • Portugués (Básico)",
+    "continuous_learning": "Aprendizaje continuo a través de plataformas como Platzi, Udemy, EDteam, Código Facilito, YouTube y documentación oficial de tecnologías"
   },
   "tools": {
     "title": "Herramientas"
@@ -288,36 +308,68 @@
     ],
     "items": [
       {
-        "name": "María González",
-        "role": "CEO, TechStart",
-        "company": "Startup Tecnológica",
-        "text": "Emerson transformó completamente nuestra presencia digital. Nuestras ventas online aumentaron un 300% en solo 3 meses. Su enfoque técnico y visión de negocio son excepcionales.",
-        "project": "E-commerce + CRM",
-        "result": "+300% ventas"
-      },
-      {
-        "name": "Carlos Mendoza",
-        "role": "Director de Operaciones",
-        "company": "Retail Solutions",
-        "text": "La automatización que desarrolló nos ahorra 40 horas semanales de trabajo manual. El ROI fue inmediato y el soporte post-lanzamiento es impecable.",
-        "project": "Sistema de Automatización",
-        "result": "40h/semana ahorradas"
-      },
-      {
-        "name": "Ana Rodríguez",
+        "name": "Patricia Morales",
         "role": "Fundadora",
-        "company": "Boutique Online",
-        "text": "Mi tienda online pasó de 0 a 50K usuarios mensuales. El diseño es hermoso, la funcionalidad perfecta y el SEO nos posicionó en el top 3 de Google.",
-        "project": "Tienda Online",
-        "result": "50K usuarios/mes"
+        "company": "Kefyto",
+        "text": "La plataforma e-commerce que Emerson desarrolló para Kefyto transformó nuestro negocio de kéfir natural. Ahora gestionamos pedidos en tiempo real con integración a WhatsApp, y nuestras ventas aumentaron un 250% el primer trimestre. La experiencia de usuario es impecable.",
+        "project": "Kefyto E-commerce",
+        "result": "+250% ventas"
       },
       {
-        "name": "Roberto Silva",
-        "role": "Gerente General",
-        "company": "Servicios Profesionales",
-        "text": "El chatbot IA que desarrolló atiende el 80% de nuestras consultas automáticamente. Nuestros clientes están más satisfechos y nosotros más eficientes.",
-        "project": "Chatbot IA",
-        "result": "80% automatización"
+        "name": "Hiroshi Tanaka",
+        "role": "Propietario",
+        "company": "Hazuki Restaurant",
+        "text": "El sistema de gestión para nuestro restaurante japonés modernizó completamente nuestras operaciones. Control de inventario en tiempo real, gestión de mesas y reservas online. Reducimos errores en un 85% y mejoramos la experiencia de nuestros clientes notablemente.",
+        "project": "Hazuki Restaurant",
+        "result": "85% menos errores"
+      },
+      {
+        "name": "Yuki Nakamura",
+        "role": "Gerente",
+        "company": "Hazuki Sushi",
+        "text": "La plataforma de delivery que construyó para Hazuki Sushi integra pedidos online, seguimiento en tiempo real y sistema de puntos. Nuestros clientes están encantados con la facilidad de uso y nosotros con el aumento del 180% en pedidos online.",
+        "project": "Hazuki Sushi Delivery",
+        "result": "+180% pedidos online"
+      },
+      {
+        "name": "Diego Ramírez",
+        "role": "CEO & Fundador",
+        "company": "Netmuz",
+        "text": "Emerson lideró el desarrollo de Netmuz Social, la red social para músicos. Una plataforma compleja con gestión de eventos, marketplace y networking profesional. Su visión técnica y capacidad para resolver desafíos complejos fueron fundamentales para el éxito del proyecto.",
+        "project": "Netmuz Social Network",
+        "result": "Plataforma social completa"
+      },
+      {
+        "name": "Sofia Mendoza",
+        "role": "Estudiante de Ingeniería",
+        "company": "CompilandoCode",
+        "text": "Aprender programación con Emerson en CompilandoCode cambió mi carrera. Su metodología práctica y explicaciones claras me ayudaron a dominar React y Python. Hoy trabajo como desarrolladora junior gracias a sus enseñanzas. El mejor profesor que he tenido.",
+        "project": "CompilandoCode Student",
+        "result": "Desarrolladora Junior"
+      },
+      {
+        "name": "Miguel Torres",
+        "role": "Estudiante de Sistemas",
+        "company": "CompilandoCode",
+        "text": "Los cursos de Emerson en CompilandoCode son increíbles. Pasé de no saber programar a desarrollar mi propia aplicación web en 4 meses. Su enfoque en proyectos reales y su paciencia para enseñar son excepcionales. 100% recomendado.",
+        "project": "CompilandoCode Student",
+        "result": "Primera app en 4 meses"
+      },
+      {
+        "name": "Carlos Vega",
+        "role": "Coordinador de Innovación",
+        "company": "Escondida DesafioLab",
+        "text": "El sistema que desarrolló para nuestro laboratorio de innovación permitió gestionar desafíos tecnológicos, equipos y evaluaciones de manera integrada. La plataforma es robusta, escalable y exactamente lo que necesitábamos para impulsar la innovación.",
+        "project": "Escondida DesafioLab",
+        "result": "Plataforma de innovación"
+      },
+      {
+        "name": "Ana López",
+        "role": "Directora de Tecnología",
+        "company": "DRTC Huánuco",
+        "text": "Emerson implementó un sistema gubernamental de registro y gestión que modernizó nuestros procesos. Su profesionalismo, cumplimiento de plazos y capacidad técnica fueron excepcionales. El sistema funciona perfectamente y ha mejorado significativamente nuestros tiempos de respuesta.",
+        "project": "DRTC Huánuco System",
+        "result": "Procesos modernizados"
       }
     ]
   },
@@ -395,6 +447,7 @@
       "development": "En desarrollo"
     },
     "techStack": "Stack Tecnológico",
+    "technologies": "Tecnologías",
     "viewProject": "Ver Proyecto",
     "startProject": "Iniciar Proyecto",
     "cta": {
@@ -418,19 +471,35 @@
     "items": {
       "1": {
         "title": "Kefyto E-commerce",
-        "description": "Plataforma completa de e-commerce para venta de kéfir con sistema de pagos integrado y experiencia de usuario optimizada"
+        "description": "Plataforma completa de e-commerce para venta de kéfir natural con carrito dinámico e integración WhatsApp"
       },
       "2": {
-        "title": "Hazuki Restaurant", 
-        "description": "Sistema de gestión integral para restaurantes con reservas inteligentes, menús dinámicos y analytics en tiempo real"
+        "title": "Hazuki Restaurant",
+        "description": "Sistema integral de gestión para restaurantes con reservas, menús digitales y administración por áreas"
       },
       "3": {
-        "title": "Netmuz Social",
-        "description": "Red social especializada para músicos y creadores de contenido con streaming en tiempo real y colaboración musical"
+        "title": "Hazuki Sushi",
+        "description": "Plataforma especializada para sushi bar con menú interactivo y sistema de pedidos optimizado"
       },
       "4": {
-        "title": "SaaS Educativo",
-        "description": "Plataforma educativa avanzada con IA, seguimiento de progreso personalizado y certificaciones profesionales"
+        "title": "Netmuz Social",
+        "description": "Red social especializada para músicos - LinkedIn musical con gestión de eventos y marketplace"
+      },
+      "5": {
+        "title": "CompilandoCode",
+        "description": "Plataforma educativa con cursos de programación, blog técnico y recursos para desarrolladores"
+      },
+      "6": {
+        "title": "Sistema Registro QR",
+        "description": "Sistema de registro en tiempo real con códigos QR para control de asistencia en colegios"
+      },
+      "7": {
+        "title": "Escondida DesafioLab",
+        "description": "Plataforma educativa para Fundación Minera Escondida BHP con gestión de cursos y seguimiento estudiantil"
+      },
+      "8": {
+        "title": "DRTC Huánuco",
+        "description": "Sistema web para registro y seguimiento de personal que postula a puestos de trabajo (Prácticas Preprofesionales)"
       }
     },
     "tech": "Stack Tecnológico",
@@ -678,37 +747,35 @@
         "english_level": "Intermedio"
       }
     },
-    "corporate": {
-      "title": "Emerson Espinoza",
-      "subtitle": "Senior Software Engineer & Technical Leader",
-      "description": "Ingeniero de Sistemas peruano 🇵🇪 con residencia en Chile 🇨🇱. Especialista en transformar desafíos empresariales complejos en soluciones tecnológicas escalables que generan ROI medible.",
-      "email": "xinayespinoza@gmail.com",
-      "linkedin": "LinkedIn: /in/emerson-espinoza-aguirre",
-      "github": "Github: /emersonxinay",
-      "location": "Chile y Perú",
-      "impact_title": " Impacto Empresarial",
-      "value_title": " Propuesta de Valor",
-      "why_me": "¿Por qué elegirme?",
-      "vision": "Visión Estratégica: Combino expertise técnico con entendimiento del negocio",
-      "leadership": "Liderazgo Probado: He formado y liderado equipos técnicos de alto rendimiento",
-      "innovation": "Innovación Práctica: Implemento tecnologías emergentes que generan valor real",
-      "results": "Resultados Medibles: Track record comprobado de ROI positivo en proyectos",
-      "business_value": "Valor Empresarial Entregado",
-      "savings": "$2M+ en ahorros",
-      "savings_desc": "Optimización de infraestructura y procesos que generaron ahorros directos para clientes",
-      "performance": "70% mejora performance",
-      "performance_desc": "Implementación de arquitecturas modernas que mejoraron significativamente los tiempos de respuesta",
-      "uptime": "99.9% uptime",
-      "uptime_desc": "Sistemas críticos en producción con disponibilidad enterprise-grade",
-      "talents": "200+ talentos formados",
-      "talents_desc": "Desarrollo de capital humano tech con 95% inserción laboral exitosa"
-    },
     "common": {
       "download_pdf": "📄 Descargar PDF",
       "toggle_language": " Idioma",
       "translate_note": "Este CV también está disponible en inglés. Puedes usar el traductor automático de tu navegador o cambiar el idioma."
     },
     "corporate": {
+      "title": "Emerson Espinoza",
+      "subtitle": "Senior Software Engineer & Technical Leader",
+      "description": "Ingeniero de Sistemas peruano 🇵🇪 con sólida experiencia profesional en Chile (2019-2025) 🇨🇱. Especialista en transformar desafíos empresariales en soluciones tecnológicas escalables a través de trabajo colaborativo y educación tecnológica.",
+      "email": "xinayespinoza@gmail.com",
+      "linkedin": "LinkedIn: /in/emerson-espinoza-aguirre",
+      "github": "Github: /emersonxinay",
+      "location": "🌎 Trabajando remotamente • Ex-Chile (2019-2025)",
+      "impact_title": " Impacto Empresarial",
+      "value_title": " Propuesta de Valor",
+      "why_me": "¿Por qué elegirme?",
+      "vision": "Visión Estratégica: Combino expertise técnico con entendimiento del negocio y educación",
+      "leadership": "Liderazgo Probado: He formado y mentoreado cientos de desarrolladores",
+      "innovation": "Innovación Práctica: Implemento tecnologías modernas en proyectos colaborativos",
+      "results": "Resultados Medibles: Track record comprobado en educación tech y desarrollo",
+      "business_value": "Valor Empresarial Entregado",
+      "savings": "Múltiples proyectos exitosos",
+      "savings_desc": "Desarrollo de sistemas web que optimizan procesos y mejoran la experiencia del usuario",
+      "performance": "Trabajo colaborativo efectivo",
+      "performance_desc": "Implementación de metodologías ágiles y mejores prácticas de desarrollo",
+      "uptime": "Formación de talento tech",
+      "uptime_desc": "Capacitación integral de desarrolladores con inserción laboral exitosa",
+      "talents": "Cientos de estudiantes formados",
+      "talents_desc": "Desarrollo de capital humano tech a través de educación práctica y colaborativa",
       "metrics": {
         "experience": "Años de Experiencia",
         "projects": "Proyectos Exitosos",
@@ -763,6 +830,262 @@
         "instructor_3": "Colaboré con industria tech para diseñar contenido relevante",
         "instructor_4": "Mantuve 4.9/5 rating de satisfacción estudiantil consistentemente"
       }
+    }
+  },
+  "contactForm": {
+    "validation": {
+      "nameRequired": "El nombre es requerido",
+      "emailRequired": "El email es requerido",
+      "emailInvalid": "Email inválido",
+      "subjectRequired": "El asunto es requerido",
+      "messageRequired": "El mensaje es requerido",
+      "messageMinLength": "El mensaje debe tener al menos 10 caracteres",
+      "formErrors": "Por favor corrige los errores del formulario"
+    },
+    "success": {
+      "messageSent": "Mensaje enviado con éxito",
+      "confirmationEmail": "Recibirás una copia de confirmación en {{email}}",
+      "willRespond": "Te responderé lo antes posible."
+    },
+    "limit": {
+      "remaining": "Te quedan {{count}} envíos disponibles hoy",
+      "lastOne": "Este es tu último envío disponible por hoy",
+      "reached": "Has alcanzado el límite de 3 mensajes por día"
+    },
+    "errors": {
+      "sendFailed": "Error al enviar el mensaje. Inténtalo de nuevo.",
+      "notConfigured": "El servicio de email no está configurado. Por favor contacta al administrador."
+    },
+    "labels": {
+      "fullName": "Nombre completo *",
+      "email": "Email *",
+      "phone": "Teléfono (opcional)",
+      "subject": "Asunto *",
+      "message": "Mensaje *"
+    },
+    "placeholders": {
+      "fullName": "Tu nombre completo",
+      "email": "tu.email@ejemplo.com",
+      "phone": "+51 999 999 999",
+      "subject": "¿En qué puedo ayudarte?",
+      "message": "Cuéntame sobre tu proyecto o consulta..."
+    },
+    "helpers": {
+      "minCharacters": "Mínimo 10 caracteres"
+    },
+    "buttons": {
+      "sending": "Enviando mensaje...",
+      "limitReached": "Límite alcanzado",
+      "send": "Enviar Mensaje"
+    },
+    "privacy": "Tus datos están protegidos. No compartimos información con terceros.",
+    "formStatus": "Estado del formulario",
+    "title": "Envíame un Mensaje",
+    "subtitle": "Completa el formulario y te responderé lo antes posible"
+  },
+  "emailLimit": {
+    "canSend": "Puedes enviar hasta {{maxEmails}} mensajes cada 24 horas",
+    "lastAvailable": "Este es tu último envío disponible por hoy",
+    "remaining": "Te quedan {{remaining}} envíos disponibles hoy",
+    "limitReachedWithTime": "Has alcanzado el límite de {{maxEmails}} mensajes. Intenta nuevamente mañana a las {{time}}",
+    "limitReached": "Has alcanzado el límite de {{maxEmails}} mensajes por día"
+  },
+  "servicesPage": {
+    "requestInfo": "Solicitar Información",
+    "process": {
+      "title": "Mi Proceso de Trabajo",
+      "steps": [
+        {
+          "title": "Análisis",
+          "description": "Entiendo tu negocio y objetivos"
+        },
+        {
+          "title": "Estrategia",
+          "description": "Diseño la solución perfecta"
+        },
+        {
+          "title": "Desarrollo",
+          "description": "Construyo con las mejores tecnologías"
+        },
+        {
+          "title": "Lanzamiento",
+          "description": "Entrego y doy soporte continuo"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para transformar tu idea en realidad?",
+      "description": "Garantizo entrega en tiempo récord y soporte post-lanzamiento. Tu éxito es mi prioridad.",
+      "button": "Comenzar Proyecto"
+    }
+  },
+  "servicesSimple": {
+    "title": "¿Cómo puedo ayudar a tu negocio?",
+    "subtitle": "Ofrezco soluciones digitales completas para impulsar el crecimiento de tu empresa.",
+    "services": [
+      {
+        "title": "Desarrollo Web",
+        "subtitle": "Páginas y aplicaciones modernas",
+        "description": "Creo sitios web y aplicaciones que destacan, funcionan rápido y se adaptan a cualquier dispositivo.",
+        "benefits": [
+          "Diseño moderno y responsive",
+          "Optimizado para SEO",
+          "Velocidad de carga rápida",
+          "Integración con APIs",
+          "Panel de administración",
+          "Soporte y mantenimiento"
+        ]
+      },
+      {
+        "title": "Tienda Online",
+        "subtitle": "E-commerce completo",
+        "description": "Tiendas online que convierten visitantes en clientes, con todo lo necesario para vender.",
+        "benefits": [
+          "Carrito de compras inteligente",
+          "Pasarelas de pago integradas",
+          "Gestión de inventario",
+          "Reportes de ventas"
+        ]
+      },
+      {
+        "title": "Automatización",
+        "subtitle": "IA para tu negocio",
+        "description": "Automatizo tareas repetitivas y uso inteligencia artificial para hacer tu negocio más eficiente.",
+        "benefits": [
+          "Chatbots inteligentes",
+          "Automatización de procesos",
+          "Análisis predictivo",
+          "Integración WhatsApp"
+        ]
+      },
+      {
+        "title": "Análisis de Datos",
+        "subtitle": "Insights para crecer",
+        "description": "Convierto tus datos en información valiosa para tomar mejores decisiones de negocio.",
+        "benefits": [
+          "Dashboards interactivos",
+          "Reportes personalizados",
+          "Análisis de tendencias",
+          "Predicciones con IA"
+        ]
+      }
+    ],
+    "benefitsTitle": "Lo que obtienes:",
+    "moreInfo": "Más información",
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Conversemos sobre cómo puedo ayudarte a hacer realidad tu idea digital.",
+      "talkButton": "💬 Hablemos de tu proyecto",
+      "examplesButton": "👁️ Ver ejemplos"
+    }
+  },
+  "aboutPage": {
+    "journey": {
+      "title": "Mi Trayectoria Profesional",
+      "subtitle1": "Ingeniero de Sistemas con",
+      "yearsExperience": "6+ años",
+      "subtitle1End": "de experiencia en desarrollo web colaborativo.",
+      "subtitle2": "Especialista en",
+      "techEducation": "educación tecnológica",
+      "subtitle2End": "y",
+      "subtitle3": "líder de",
+      "growingProjects": "proyectos en constante crecimiento",
+      "subtitle3End": "."
+    },
+    "techStack": {
+      "title": "Stack Tecnológico",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas"
+    }
+  },
+  "heroSimplePage": {
+    "availability": "Disponible para proyectos remotos",
+    "greeting": "Hola! Soy",
+    "nationality": "Peruano",
+    "residence": "Residencia en Chile",
+    "workType": "Trabajo Remoto",
+    "title": "Ingeniero de Sistemas",
+    "experienceLabel": "Mi experiencia como:",
+    "description": "con 6+ años transformando ideas en",
+    "techSolutions": "soluciones tecnológicas",
+    "scalable": "escalables. Especialista en",
+    "techEducation": "educación tech",
+    "collaborative": "y desarrollo colaborativo.",
+    "stats": {
+      "yearsLabel": "Años de experiencia",
+      "projectsLabel": "Proyectos en crecimiento",
+      "studentsLabel": "Estudiantes capacitados"
+    }
+  },
+  "footerComponent": {
+    "location": "Trabajando remotamente",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "blogArticle": {
+    "toast": {
+      "sharedSuccess": "¡Artículo compartido exitosamente!",
+      "linkCopied": "¡Enlace copiado al portapapeles!",
+      "shareError": "Error al compartir el artículo",
+      "likeRemoved": "Like removido",
+      "likeAdded": "¡Te gusta este artículo!",
+      "bookmarkRemoved": "Bookmark removido",
+      "bookmarkAdded": "¡Artículo guardado!"
+    },
+    "backToBlog": "Volver al blog",
+    "progress": "Progreso: {{percent}}%",
+    "technicalBadge": "✨ ARTÍCULO TÉCNICO",
+    "readingTime": "{{minutes}} min lectura",
+    "bio": "Desarrollador Full Stack especializado en tecnologías modernas y soluciones innovadoras. Apasionado por la IA y el desarrollo web de vanguardia.",
+    "estimatedTime": "Tiempo de lectura estimado",
+    "difficultyLevel": "Nivel de dificultad",
+    "intermediate": "Intermedio",
+    "subscribeText": "Súscribete para recibir mis últimos artículos sobre desarrollo web, IA y tecnología.",
+    "emailPlaceholder": "tu@email.com",
+    "commentsTitle": "Sección de comentarios próximamente",
+    "commentsDescription": "Estamos trabajando en una experiencia de comentarios interactiva.",
+    "followSocial": "Sígueme en redes sociales"
+  },
+  "emailService": {
+    "defaultSubject": "Mensaje desde portafolio",
+    "successMessage": "Email enviado exitosamente",
+    "errorMessage": "Error al enviar el email. Por favor intenta nuevamente."
+  },
+  "socialLinks": {
+    "availability": "Disponible para proyectos"
+  },
+  "oldFooter": {
+    "quickLinks": {
+      "home": "Inicio",
+      "blog": "Blog",
+      "tools": "Herramientas",
+      "docs": "Documentación"
+    },
+    "services": [
+      "Desarrollo Full-Stack",
+      "Arquitectura de Software",
+      "Consultoría Tech",
+      "Mentoring & Training"
+    ],
+    "description": "Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise. Construyendo el futuro digital con código limpio y soluciones innovadoras.",
+    "availability": "Disponible para proyectos enterprise"
+  },
+  "projectsPage": {
+    "status": {
+      "live": "En línea",
+      "development": "En desarrollo"
+    }
+  },
+  "seo": {
+    "home": {
+      "description": "Ingeniero de Sistemas peruano con residencia en Chile. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en educación tecnológica, desarrollo fullstack y trabajo colaborativo.",
+      "achievements": [
+        "Múltiples proyectos en producción con mantenimiento y crecimiento constante",
+        "Desarrollo de plataforma educativa con 500+ estudiantes activos",
+        "Líder de proyectos colaborativos con equipos multidisciplinarios"
+      ],
+      "twitterDescription": "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise. CTO & Founder. 99.9% uptime, $2M+ ahorros generados."
     }
   }
 }

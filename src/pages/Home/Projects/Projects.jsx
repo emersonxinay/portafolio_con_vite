@@ -117,7 +117,7 @@ const Projects = () => {
                   <div className={`w-1.5 xxs:w-2 h-1.5 xxs:h-2 rounded-full inline-block mr-1 xxs:mr-2 ${
                     project.status === 'live' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'
                   }`} />
-                  {project.status === 'live' ? 'En línea' : 'En desarrollo'}
+                  {project.status === 'live' ? t('projectsPage.status.live') : t('projectsPage.status.development')}
                 </div>
               </div>
 

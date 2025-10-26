@@ -4,14 +4,15 @@ import { useTranslation } from 'react-i18next';
 import SEOHead from '../../components/SEO/SEOHead';
 import Hero from './Hero/HeroSimple';
 import About from './About/About';
+import Experience from './Experience/Experience';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
 import Projects from './Projects/ProjectsSimple';
 import Testimonials from './Testimonials/Testimonials';
 
 const Home = () => {
-  const { i18n } = useTranslation();
-  
+  const { t, i18n } = useTranslation();
+
   const homeStructuredData = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -19,8 +20,8 @@ const Home = () => {
       "@type": "Person",
       "name": "Emerson Espinoza Aguirre",
       "alternateName": "Emerson Espinoza",
-      "jobTitle": "Senior Software Engineer & Tech Lead",
-      "description": "Senior Software Engineer peruano con residencia en Chile. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise.",
+      "jobTitle": "Ingeniero de Sistemas & Fullstack Developer",
+      "description": t('seo.home.description'),
       "url": "https://emersonespinoza.com",
       "image": "https://emersonespinoza.com/assets/emerson-espinoza-5579c795.jpeg",
       "address": {
@@ -37,13 +38,9 @@ const Home = () => {
           "@type": "City",
           "name": "Santiago, Chile"
         },
-        "skills": "Python, React, Machine Learning, AI, FastAPI, PostgreSQL, Docker, Kubernetes, Technical Leadership"
+        "skills": "Python, React, Flask, Ruby on Rails, PostgreSQL, JavaScript, HTML, CSS, Git, GitHub, C# .NET, Docker, Liderazgo de Proyectos, Educación Tecnológica"
       },
-      "award": [
-        "99.9% uptime en sistemas críticos",
-        "$2M+ en ahorros generados para clientes",
-        "200+ desarrolladores mentoreados"
-      ]
+      "award": t('seo.home.achievements', { returnObjects: true })
     }
   };
 
@@ -54,10 +51,7 @@ const Home = () => {
           ? "Emerson Espinoza - Senior Software Engineer | Tech Lead | Consultor IA & ML" 
           : "Emerson Espinoza - Senior Software Engineer | Tech Lead | AI & ML Consultant"
         }
-        description={i18n.language === 'ES'
-          ? "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise. CTO & Founder. 99.9% uptime, $2M+ ahorros generados."
-          : "Peruvian Senior Software Engineer 🇵🇪 with residence in Chile 🇨🇱. 6+ years transforming ideas into scalable technological solutions. AI/ML specialist, Python, React, enterprise architectures. CTO & Founder. 99.9% uptime, $2M+ savings generated."
-        }
+        description={t('seo.home.twitterDescription')}
         keywords="Emerson Espinoza, Senior Software Engineer Santiago Chile, Tech Lead CTO, Python Developer Chile, React Developer, Machine Learning Engineer, AI Specialist, Ingeniero Sistemas Chile, Consultor IA ML, Technical Leadership, Software Architecture, Startup CTO, EdTech Founder, Full Stack Developer Santiago"
         url="https://emersonespinoza.com"
         canonical="https://emersonespinoza.com"
@@ -76,6 +70,7 @@ const Home = () => {
       
       <div className="mobile-container space-y-12 xs:space-y-16 md:space-y-24 py-12 xs:py-16 md:py-20 safe-area-bottom w-full">
         <About />
+        <Experience />
         <Services />
         <Projects />
         <Testimonials />

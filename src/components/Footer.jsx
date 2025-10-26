@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import ContactModal from './ContactModal'
 import {
   FaGithub,
@@ -19,6 +20,7 @@ import {
 } from 'react-icons/si'
 
 const Footer = () => {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
@@ -89,13 +91,13 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'Inicio', href: '/' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Herramientas', href: '/tools' },
-    { name: 'Documentación', href: '/docs' }
+    { name: t('oldFooter.quickLinks.home'), href: '/' },
+    { name: t('oldFooter.quickLinks.blog'), href: '/blog' },
+    { name: t('oldFooter.quickLinks.tools'), href: '/tools' },
+    { name: t('oldFooter.quickLinks.docs'), href: '/docs' }
   ]
 
-  const services = [
+  const services = t('oldFooter.services', { returnObjects: true }) || [
     'Desarrollo Full-Stack',
     'Arquitectura de Software',
     'Consultoría Tech',
@@ -183,8 +185,7 @@ const Footer = () => {
             </div>
 
             <p className="text-zinc-300 text-sm xs:text-base leading-relaxed max-w-md">
-              Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise.
-              Construyendo el futuro digital con código limpio y soluciones innovadoras.
+              {t('oldFooter.description')}
             </p>
 
             {/* Enterprise Badge */}
@@ -194,7 +195,7 @@ const Footer = () => {
             >
               <FaRocket className="text-green-400 text-sm xs:text-base" />
               <span className="text-green-400 font-bold text-xs xs:text-sm">
-                Disponible para proyectos enterprise
+                {t('oldFooter.availability')}
               </span>
             </motion.div>
 

@@ -1,545 +1,238 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import Title from '../../../components/Title';
-import { projectsData } from '../../../data/projectsData';
+import SectionHeader from '../../../components/SectionHeader';
+import AnimatedSection from '../../../components/AnimatedSection';
+import OptimizedImage from '../../../components/OptimizedImage';
+import { projectsData, projectCategories } from '../../../data/projectsData';
 
-const ProjectsSimple = () => {
-  const { t } = useTranslation(['translation']);
-  const [hoveredProject, setHoveredProject] = useState(null);
-  const [selectedFilter, setSelectedFilter] = useState('all');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const projects = projectsData.map(project => ({
-    ...project,
-    icon: project.id === 1 ? '' : project.id === 2 ? '' : project.id === 3 ? '' : '',
-    gradient: project.id === 1 ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' :
-      project.id === 2 ? 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' :
-        project.id === 3 ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' :
-          'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    metrics: project.id === 1 ? { users: '1.2K+', performance: '98%', uptime: '99.9%' } :
-      project.id === 2 ? { orders: '5K+', efficiency: '+70%', rating: '4.9/5' } :
-        project.id === 3 ? { artists: '800+', streams: '15K', engagement: '92%' } :
-          { students: '500+', courses: '25+', completion: '87%' }
-  }));
-
-  const categories = [
-    { id: 'all', name: t('projects.categories.all'), icon: '' },
-    { id: 'ecommerce', name: t('projects.categories.ecommerce'), icon: '' },
-    { id: 'web', name: t('projects.categories.web'), icon: '' },
-    { id: 'social', name: t('projects.categories.social'), icon: '' },
-    { id: 'saas', name: t('projects.categories.saas'), icon: '' }
-  ];
-
-  const filteredProjects = selectedFilter === 'all'
-    ? projects
-    : projects.filter(p => p.category === selectedFilter);
-
-  const openProject = (url) => {
-    if (url && url !== '#') {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-  };
-
+// Memoized Project Card Component
+const ProjectCard = React.memo(({ project, index, hoveredProject, setHoveredProject, t }) => {
   return (
-    <section className="projects-section" style={{
-      padding: '60px 16px',
-      background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
-      position: 'relative',
-      borderTop: '1px solid rgba(148, 163, 184, 0.2)',
-      borderBottom: '1px solid rgba(148, 163, 184, 0.2)'
-    }}>
-      {/* Geometric Pattern Overlay */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundImage: `
-          linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
-          linear-gradient(180deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px)
-        `,
-        backgroundSize: '40px 40px',
-        pointerEvents: 'none'
-      }}></div>
+    <motion.div
+      key={project.id}
+      className="group relative bg-slate-900/50 backdrop-blur-sm rounded-2xl xs:rounded-3xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      onMouseEnter={() => setHoveredProject(project.id)}
+      onMouseLeave={() => setHoveredProject(null)}
+      whileHover={{ y: -8 }}
+    >
+      {/* Project Image */}
+      <div className="relative h-48 xs:h-56 md:h-64 overflow-hidden">
+        <motion.div
+          initial={{ scale: 1 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.4 }}
+          className="w-full h-full"
+        >
+          <OptimizedImage
+            src={project.image}
+            alt={t(`projects.items.${project.id}.title`)}
+            className="w-full h-full"
+            objectFit="cover"
+            objectPosition="top"
+          />
+        </motion.div>
 
-      {/* Header */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        <div className="projects-header" style={{
-          textAlign: 'center',
-          marginBottom: '40px',
-          padding: '30px',
-          border: '2px solid rgba(148, 163, 184, 0.2)',
-          borderRadius: '20px',
-          background: 'rgba(15, 23, 42, 0.6)',
-          backdropFilter: 'blur(10px)',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)'
-        }}>
-          <div style={{
-            display: 'inline-block',
-            padding: '12px 24px',
-            border: '1px solid rgba(59, 130, 246, 0.3)',
-            borderRadius: '50px',
-            background: 'rgba(59, 130, 246, 0.1)',
-            color: '#60a5fa',
-            fontSize: '14px',
-            fontWeight: '600',
-            letterSpacing: '0.5px',
-            textTransform: 'uppercase',
-            marginBottom: '24px'
-          }}>
-            {t('portfolio')}
+        {/* Gradient Overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+
+        {/* Dark Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+
+        {/* Status Badge */}
+        <div className="absolute top-4 right-4 z-10">
+          <div className={`flex items-center gap-2 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full backdrop-blur-md border ${
+            project.status === 'live'
+              ? 'bg-green-500/20 border-green-500/30 text-green-400'
+              : 'bg-orange-500/20 border-orange-500/30 text-orange-400'
+          }`}>
+            <div className={`w-2 h-2 rounded-full ${
+              project.status === 'live' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'
+            }`} />
+            <span className="text-xs xs:text-sm font-semibold uppercase">
+              {project.status === 'live' ? t('projectsPage.status.live') : t('projectsPage.status.development')}
+            </span>
           </div>
-          <Title title={t('projects.title')} />
-          <p style={{
-            fontSize: '20px',
-            color: 'rgba(148, 163, 184, 0.8)',
-            maxWidth: '700px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
-            {t('projects.subtitle')}
-          </p>
         </div>
 
-        {/* Filter Categories */}
-        <div className="filter-categories" style={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          gap: '12px',
-          marginBottom: '40px',
-          padding: '20px',
-          border: '1px solid rgba(148, 163, 184, 0.2)',
-          borderRadius: '16px',
-          background: 'rgba(30, 41, 59, 0.4)',
-          backdropFilter: 'blur(10px)',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s'
-        }}>
-          {categories.map((category, index) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedFilter(category.id)}
-              className="filter-button"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                padding: '14px 24px',
-                borderRadius: '12px',
-                border: selectedFilter === category.id
-                  ? '2px solid #3b82f6'
-                  : '2px solid rgba(148, 163, 184, 0.2)',
-                background: selectedFilter === category.id
-                  ? 'rgba(59, 130, 246, 0.1)'
-                  : 'rgba(51, 65, 85, 0.3)',
-                color: selectedFilter === category.id ? '#60a5fa' : '#cbd5e1',
-                fontSize: '15px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                backdropFilter: 'blur(10px)',
-                transform: selectedFilter === category.id ? 'translateY(-2px)' : 'translateY(0)',
-                boxShadow: selectedFilter === category.id
-                  ? '0 8px 25px rgba(59, 130, 246, 0.2)'
-                  : '0 2px 10px rgba(0, 0, 0, 0.1)'
-              }}
-              onMouseEnter={(e) => {
-                if (selectedFilter !== category.id) {
-                  e.target.style.borderColor = 'rgba(148, 163, 184, 0.4)';
-                  e.target.style.background = 'rgba(71, 85, 105, 0.5)';
-                  e.target.style.transform = 'translateY(-1px)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (selectedFilter !== category.id) {
-                  e.target.style.borderColor = 'rgba(148, 163, 184, 0.2)';
-                  e.target.style.background = 'rgba(51, 65, 85, 0.3)';
-                  e.target.style.transform = 'translateY(0)';
-                }
-              }}
-            >
-              <span style={{ fontSize: '18px' }}>{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Projects Grid */}
-        <div className="projects-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '20px',
-          width: '100%',
-          overflowX: 'hidden'
-        }}>
-          {filteredProjects.map((project, index) => (
-            <div
-              key={project.id}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              style={{
-                background: 'rgba(15, 23, 42, 0.9)',
-                backdropFilter: 'blur(20px)',
-                border: hoveredProject === project.id
-                  ? '2px solid #3b82f6'
-                  : '2px solid rgba(148, 163, 184, 0.2)',
-                borderRadius: '20px',
-                padding: '0',
-                color: 'white',
-                position: 'relative',
-                overflow: 'hidden',
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
-                transition: `all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) ${index * 0.1}s`,
-                boxShadow: hoveredProject === project.id
-                  ? '0 20px 60px rgba(59, 130, 246, 0.3)'
-                  : '0 8px 30px rgba(0, 0, 0, 0.2)',
-                cursor: 'default'
-              }}
-            >
-              {/* Header with Icon */}
-              <div style={{
-                padding: '20px',
-                borderBottom: '1px solid rgba(148, 163, 184, 0.1)',
-                background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%)',
-                borderRadius: '18px 18px 0 0'
-              }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  marginBottom: '16px'
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px'
-                  }}>
-                    <div style={{
-                      fontSize: '40px',
-                      filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))'
-                    }}>
-                      {project.icon}
-                    </div>
-                    <div style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      padding: '8px 16px',
-                      border: project.status === 'live'
-                        ? '1px solid rgba(16, 185, 129, 0.3)'
-                        : '1px solid rgba(245, 158, 11, 0.3)',
-                      borderRadius: '20px',
-                      background: project.status === 'live'
-                        ? 'rgba(16, 185, 129, 0.1)'
-                        : 'rgba(245, 158, 11, 0.1)',
-                    }}>
-                      <div style={{
-                        width: '8px',
-                        height: '8px',
-                        borderRadius: '50%',
-                        background: project.status === 'live' ? '#10b981' : '#f59e0b',
-                        boxShadow: `0 0 10px ${project.status === 'live' ? '#10b981' : '#f59e0b'}60`,
-                        animation: project.status === 'live' ? 'pulse 2s infinite' : 'none'
-                      }}></div>
-                      <span style={{
-                        color: project.status === 'live' ? '#10b981' : '#f59e0b',
-                        fontSize: '13px',
-                        fontWeight: '600',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.5px'
-                      }}>
-                        {project.status === 'live' ? t('projects.status.live') : t('projects.status.development')}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="project-title" style={{
-                  fontSize: '28px',
-                  fontWeight: '700',
-                  marginBottom: '12px',
-                  color: 'white',
-                  lineHeight: '1.2'
-                }}>
-                  {t(`projects.items.${project.id}.title`)}
-                </h3>
-
-                <p className="project-description" style={{
-                  color: 'rgba(148, 163, 184, 0.8)',
-                  lineHeight: '1.6',
-                  fontSize: '16px'
-                }}>
-                  {t(`projects.items.${project.id}.description`)}
-                </p>
-              </div>
-
-              {/* Metrics Section */}
-              <div className="project-metrics" style={{
-                padding: '24px 32px',
-                borderBottom: '1px solid rgba(148, 163, 184, 0.1)'
-              }}>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))',
-                  gap: '10px'
-                }}>
-                  {Object.entries(project.metrics).map(([key, value]) => (
-                    <div key={key} style={{
-                      textAlign: 'center',
-                      padding: '16px',
-                      border: '1px solid rgba(148, 163, 184, 0.1)',
-                      borderRadius: '12px',
-                      background: 'rgba(30, 41, 59, 0.3)'
-                    }}>
-                      <div style={{
-                        fontSize: '24px',
-                        fontWeight: '800',
-                        color: '#60a5fa',
-                        marginBottom: '6px'
-                      }}>
-                        {value}
-                      </div>
-                      <div style={{
-                        fontSize: '12px',
-                        color: 'rgba(148, 163, 184, 0.8)',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.5px',
-                        fontWeight: '600'
-                      }}>
-                        {t(`projects.metrics.${key}`)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tech Stack Section */}
-              <div style={{
-                padding: '24px 32px',
-                borderBottom: '1px solid rgba(148, 163, 184, 0.1)'
-              }}>
-                <h4 style={{
-                  fontSize: '14px',
-                  marginBottom: '16px',
-                  color: '#e2e8f0',
-                  fontWeight: '700',
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px'
-                }}>
-                  {t('projects.techStack')}
-                </h4>
-                <div className="project-tech" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                  {project.tech.map((tech, techIndex) => (
-                    <span key={tech} style={{
-                      background: 'rgba(51, 65, 85, 0.4)',
-                      backdropFilter: 'blur(10px)',
-                      border: '2px solid rgba(148, 163, 184, 0.2)',
-                      borderRadius: '10px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      color: '#e2e8f0',
-                      fontWeight: '600',
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible ? 'scale(1)' : 'scale(0.8)',
-                      transition: `all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) ${techIndex * 0.05}s`,
-                      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)'
-                    }}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* CTA Button Section */}
-              <div className="project-cta" style={{ padding: '32px' }}>
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-cta-button"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '12px',
-                    background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-                    color: 'white',
-                    padding: '18px 32px',
-                    border: '2px solid transparent',
-                    borderRadius: '14px',
-                    textDecoration: 'none',
-                    fontSize: '16px',
-                    fontWeight: '700',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    boxShadow: '0 8px 30px rgba(59, 130, 246, 0.3)',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    width: '100%'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = 'translateY(-3px)';
-                    e.target.style.boxShadow = '0 15px 50px rgba(59, 130, 246, 0.4)';
-                    e.target.style.borderColor = '#60a5fa';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = '0 8px 30px rgba(59, 130, 246, 0.3)';
-                    e.target.style.borderColor = 'transparent';
-                  }}
-                >
-                  <span style={{ fontSize: '20px' }}></span>
-                  {t('projects.viewProject')}
-                  <span style={{
-                    fontSize: '16px',
-                    opacity: 0.9,
-                    transition: 'transform 0.3s ease'
-                  }}>↗</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="bottom-cta" style={{
-          marginTop: '60px',
-          padding: '30px',
-          border: '2px solid rgba(148, 163, 184, 0.2)',
-          borderRadius: '20px',
-          background: 'rgba(15, 23, 42, 0.6)',
-          backdropFilter: 'blur(15px)',
-          textAlign: 'center',
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s'
-        }}>
-          <h3 style={{
-            fontSize: '24px',
-            fontWeight: '700',
-            color: 'white',
-            marginBottom: '12px'
-          }} className="bottom-cta-title">
-            {t('projects.cta.title')}
-          </h3>
-          <p style={{
-            fontSize: '18px',
-            color: 'rgba(148, 163, 184, 0.8)',
-            marginBottom: '32px',
-            lineHeight: '1.6'
-          }}>
-            {t('projects.cta.description')}
-          </p>
-          <button
-            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            style={{
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)',
-              color: 'white',
-              border: '2px solid transparent',
-              padding: '18px 40px',
-              borderRadius: '14px',
-              fontSize: '17px',
-              fontWeight: '700',
-              cursor: 'pointer',
-              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-              boxShadow: '0 10px 40px rgba(99, 102, 241, 0.3)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '10px'
-            }} className="bottom-cta-button"
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-3px)';
-              e.target.style.boxShadow = '0 15px 60px rgba(99, 102, 241, 0.4)';
-              e.target.style.borderColor = '#a855f7';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 10px 40px rgba(99, 102, 241, 0.3)';
-              e.target.style.borderColor = 'transparent';
-            }}
-          >
-            {t('projects.startProject')}
-          </button>
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4 z-10">
+          <div className="px-3 xs:px-4 py-1.5 xs:py-2 rounded-full backdrop-blur-md bg-slate-900/60 border border-slate-700/50 text-white">
+            <i className={`${projectCategories.find(c => c.id === project.category)?.icon} mr-2 text-xs xs:text-sm`}></i>
+            <span className="text-xs xs:text-sm font-medium">
+              {projectCategories.find(c => c.id === project.category)?.name}
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* CSS Animations */}
-      <style>
-        {`
-          @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-          }
-          
-          @media (max-width: 768px) {
-            .projects-section {
-              padding: 40px 12px !important;
-            }
-            .projects-header {
-              padding: 24px 16px !important;
-              margin-bottom: 30px !important;
-              border-radius: 16px !important;
-            }
-            .filter-categories {
-              padding: 16px 12px !important;
-              margin-bottom: 30px !important;
-              gap: 8px !important;
-            }
-            .filter-button {
-              padding: 10px 16px !important;
-              font-size: 13px !important;
-            }
-            .projects-grid {
-              grid-template-columns: 1fr;
-              gap: 24px;
-            }
-            .project-title {
-              font-size: 22px !important;
-            }
-            .project-description {
-              font-size: 14px !important;
-            }
-            .project-metrics {
-              padding: 16px 20px !important;
-            }
-            .project-tech span {
-              padding: 8px 12px !important;
-              font-size: 12px !important;
-            }
-            .project-cta {
-              padding: 20px !important;
-            }
-            .project-cta-button {
-              padding: 14px 24px !important;
-              font-size: 15px !important;
-            }
-            .bottom-cta {
-              padding: 24px 20px !important;
-              margin-top: 40px !important;
-              border-radius: 16px !important;
-            }
-            .bottom-cta-title {
-              font-size: 20px !important;
-              margin-bottom: 10px !important;
-            }
-            .bottom-cta-button {
-              padding: 14px 24px !important;
-              font-size: 15px !important;
-              border-radius: 12px !important;
-            }
-          }
-        `}
-      </style>
-    </section>
+      {/* Project Content */}
+      <div className="p-5 xs:p-6 md:p-8 space-y-4 xs:space-y-5">
+        {/* Title */}
+        <div>
+          <h3 className="text-xl xs:text-2xl md:text-3xl font-bold text-white mb-2 xs:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300">
+            {t(`projects.items.${project.id}.title`)}
+          </h3>
+          <p className="text-zinc-400 text-sm xs:text-base leading-relaxed line-clamp-2 group-hover:text-zinc-300 transition-colors duration-300">
+            {t(`projects.items.${project.id}.description`)}
+          </p>
+        </div>
+
+        {/* Tech Stack */}
+        <div>
+          <h4 className="text-xs xs:text-sm font-semibold text-zinc-300 mb-2 xs:mb-3 uppercase tracking-wider">
+            {t('projects.technologies')}
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {project.tech.slice(0, 4).map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 xs:px-3 py-1 xs:py-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-600/30 rounded-lg text-xs xs:text-sm text-zinc-300 font-medium"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 pt-2 xs:pt-3">
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 xs:px-6 py-2.5 xs:py-3 rounded-xl font-semibold text-sm xs:text-base flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all duration-300 no-underline"
+          >
+            <i className="fas fa-external-link-alt text-xs xs:text-sm"></i>
+            {t('projects.viewProject')}
+          </a>
+
+          {project.githubUrl !== '#' && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 xs:px-5 py-2.5 xs:py-3 bg-slate-800/50 text-zinc-300 rounded-xl border border-slate-700/50 hover:border-slate-600 hover:text-white hover:bg-slate-700/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center no-underline"
+            >
+              <i className="fab fa-github text-base xs:text-lg"></i>
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* Hover Gradient Effect */}
+      <AnimatePresence>
+        {hoveredProject === project.id && (
+          <motion.div
+            className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 pointer-events-none`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.05 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          />
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+});
+
+ProjectCard.displayName = 'ProjectCard';
+
+const ProjectsSimple = () => {
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  const filteredProjects = selectedCategory === 'all'
+    ? projectsData
+    : projectsData.filter(p => p.category === selectedCategory);
+
+  return (
+    <AnimatedSection id="projects" className="mobile-section">
+      <SectionHeader
+        badge={t('portfolio')}
+        title={t('projects.title')}
+        subtitle={t('projects.subtitle')}
+      />
+
+      {/* Filter Categories */}
+      <motion.div
+        className="flex flex-wrap justify-center gap-2 xs:gap-3 mb-8 xs:mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        {projectCategories.map((category) => (
+          <motion.button
+            key={category.id}
+            onClick={() => setSelectedCategory(category.id)}
+            className={`px-4 xs:px-6 py-2 xs:py-3 rounded-xl xs:rounded-2xl font-semibold text-sm xs:text-base transition-all duration-300 ${
+              selectedCategory === category.id
+                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25'
+                : 'bg-slate-800/50 text-zinc-400 hover:bg-slate-700/50 hover:text-white border border-slate-700/50'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <i className={`${category.icon} mr-2`}></i>
+            {category.name}
+          </motion.button>
+        ))}
+      </motion.div>
+
+      {/* Projects Grid */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selectedCategory}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 xs:gap-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              hoveredProject={hoveredProject}
+              setHoveredProject={setHoveredProject}
+              t={t}
+            />
+          ))}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Call to Action */}
+      <motion.div
+        className="text-center mt-12 xs:mt-16 md:mt-20 p-6 xs:p-8 md:p-10 rounded-2xl xs:rounded-3xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border border-slate-700/50"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        <h3 className="text-2xl xs:text-3xl md:text-4xl font-bold text-white mb-3 xs:mb-4">
+          {t('projects.cta.title')}
+        </h3>
+        <p className="text-zinc-400 text-base xs:text-lg mb-6 xs:mb-8 max-w-2xl mx-auto">
+          {t('projects.cta.description')}
+        </p>
+        <motion.button
+          onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+          className="inline-flex items-center gap-2 xs:gap-3 px-6 xs:px-8 md:px-10 py-3 xs:py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-xl xs:rounded-2xl font-bold text-base xs:text-lg shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <i className="fas fa-paper-plane"></i>
+          {t('projects.startProject')}
+        </motion.button>
+      </motion.div>
+    </AnimatedSection>
   );
 };
 

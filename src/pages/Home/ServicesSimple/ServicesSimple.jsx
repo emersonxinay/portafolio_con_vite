@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { getServiceStyle } from '../../../data/servicesData';
+import { useAnimationVariants } from '../../../hooks/useAnimationVariants';
+import SectionHeader from '../../../components/SectionHeader';
 
 const ServicesSimple = () => {
-  const services = [
+  const { t } = useTranslation();
+  const { containerVariants, itemVariants } = useAnimationVariants();
+
+  const servicesData = t('servicesSimple.services', { returnObjects: true }) || [
     {
-      icon: "",
       title: "Desarrollo Web",
       subtitle: "Páginas y aplicaciones modernas",
       description: "Creo sitios web y aplicaciones que destacan, funcionan rápido y se adaptan a cualquier dispositivo.",
@@ -13,12 +19,9 @@ const ServicesSimple = () => {
         "Optimizado para móviles",
         "Carga ultra-rápida",
         "Fácil de administrar"
-      ],
-      color: "from-blue-400 to-cyan-500",
-      bgColor: "from-blue-900/20 to-cyan-900/20"
+      ]
     },
     {
-      icon: "🛒",
       title: "Tienda Online",
       subtitle: "E-commerce completo",
       description: "Tiendas online que convierten visitantes en clientes, con todo lo necesario para vender.",
@@ -27,12 +30,9 @@ const ServicesSimple = () => {
         "Pagos seguros integrados",
         "Gestión de inventario",
         "Panel de administración"
-      ],
-      color: "from-green-400 to-emerald-500",
-      bgColor: "from-green-900/20 to-emerald-900/20"
+      ]
     },
     {
-      icon: "",
       title: "Automatización",
       subtitle: "IA para tu negocio",
       description: "Automatizo tareas repetitivas y uso inteligencia artificial para hacer tu negocio más eficiente.",
@@ -41,12 +41,9 @@ const ServicesSimple = () => {
         "Reduce errores humanos",
         "Análisis inteligente",
         "Decisiones basadas en datos"
-      ],
-      color: "from-purple-400 to-pink-500",
-      bgColor: "from-purple-900/20 to-pink-900/20"
+      ]
     },
     {
-      icon: "",
       title: "Análisis de Datos",
       subtitle: "Insights para crecer",
       description: "Convierto tus datos en información valiosa para tomar mejores decisiones de negocio.",
@@ -55,30 +52,15 @@ const ServicesSimple = () => {
         "Tendencias y predicciones",
         "Dashboards interactivos",
         "Métricas clave en tiempo real"
-      ],
-      color: "from-orange-400 to-red-500",
-      bgColor: "from-orange-900/20 to-red-900/20"
+      ]
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
+  // Map service data with centralized styles
+  const services = servicesData.map((service, index) => ({
+    ...service,
+    ...getServiceStyle(index)
+  }));
 
   return (
     <section id="services" className="py-16 md:py-24">
@@ -91,13 +73,12 @@ const ServicesSimple = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            <span className="text-white">¿Cómo puedo </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              ayudar a tu negocio?
+              {t('servicesSimple.title')}
             </span>
           </h2>
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-            Ofrezco soluciones digitales completas para impulsar el crecimiento de tu empresa.
+            {t('servicesSimple.subtitle')}
           </p>
         </motion.div>
       </div>
@@ -124,11 +105,11 @@ const ServicesSimple = () => {
               {/* Header del servicio */}
               <div className="flex items-start gap-4 mb-6">
                 <motion.div
-                  className={`p-4 rounded-2xl bg-gradient-to-r ${service.color}/10 border border-current/20`}
+                  className={`p-4 rounded-2xl bg-gradient-to-r ${service.bgColor} border border-current/20 flex items-center justify-center`}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <span className="text-4xl">{service.icon}</span>
+                  <i className={`${service.icon} text-4xl text-transparent bg-clip-text bg-gradient-to-r ${service.color}`}></i>
                 </motion.div>
 
                 <div className="flex-1">
@@ -149,7 +130,7 @@ const ServicesSimple = () => {
               {/* Beneficios */}
               <div className="space-y-3">
                 <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
-                  ✨ Lo que obtienes:
+                  <i className="fas fa-star text-yellow-400"></i> {t('servicesSimple.benefitsTitle')}
                 </h4>
                 {service.benefits.map((benefit, benefitIndex) => (
                   <motion.div
@@ -172,7 +153,7 @@ const ServicesSimple = () => {
                   className="flex items-center gap-2 text-blue-400 font-medium group-hover:text-blue-300 transition-colors duration-300"
                   whileHover={{ x: 5 }}
                 >
-                  <span>Más información</span>
+                  <span>{t('servicesSimple.moreInfo')}</span>
                   <span>→</span>
                 </motion.div>
               </div>
@@ -191,10 +172,10 @@ const ServicesSimple = () => {
       >
         <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 max-w-3xl mx-auto">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            ¿Tienes un proyecto en mente?
+            {t('servicesSimple.cta.title')}
           </h3>
           <p className="text-zinc-300 text-lg leading-relaxed mb-8">
-            Conversemos sobre cómo puedo ayudarte a hacer realidad tu idea digital.
+            {t('servicesSimple.cta.description')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -205,7 +186,7 @@ const ServicesSimple = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center gap-2 justify-center">
-                💬 Hablemos de tu proyecto
+                {t('servicesSimple.cta.talkButton')}
               </span>
             </motion.button>
 
@@ -216,7 +197,7 @@ const ServicesSimple = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center gap-2 justify-center">
-                👁️ Ver ejemplos
+                {t('servicesSimple.cta.examplesButton')}
               </span>
             </motion.button>
           </div>

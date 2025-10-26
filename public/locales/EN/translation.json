@@ -299,36 +299,68 @@
     ],
     "items": [
       {
-        "name": "María González",
-        "role": "CEO, TechStart",
-        "company": "Technology Startup",
-        "text": "Emerson completely transformed our digital presence. Our online sales increased 300% in just 3 months. His technical approach and business vision are exceptional.",
-        "project": "E-commerce + CRM",
-        "result": "+300% sales"
-      },
-      {
-        "name": "Carlos Mendoza",
-        "role": "Operations Director",
-        "company": "Retail Solutions",
-        "text": "The automation he developed saves us 40 hours of manual work per week. The ROI was immediate and the post-launch support is impeccable.",
-        "project": "Automation System",
-        "result": "40h/week saved"
-      },
-      {
-        "name": "Ana Rodríguez",
+        "name": "Patricia Morales",
         "role": "Founder",
-        "company": "Online Boutique",
-        "text": "My online store went from 0 to 50K monthly users. The design is beautiful, the functionality perfect and SEO positioned us in Google's top 3.",
-        "project": "Online Store",
-        "result": "50K users/month"
+        "company": "Kefyto",
+        "text": "The e-commerce platform Emerson developed for Kefyto transformed our natural kefir business. Now we manage real-time orders with WhatsApp integration, and our sales increased 250% in the first quarter. The user experience is impeccable.",
+        "project": "Kefyto E-commerce",
+        "result": "+250% sales"
       },
       {
-        "name": "Roberto Silva",
-        "role": "General Manager",
-        "company": "Professional Services",
-        "text": "The AI chatbot he developed handles 80% of our queries automatically. Our customers are more satisfied and we are more efficient.",
-        "project": "AI Chatbot",
-        "result": "80% automation"
+        "name": "Hiroshi Tanaka",
+        "role": "Owner",
+        "company": "Hazuki Restaurant",
+        "text": "The management system for our Japanese restaurant completely modernized our operations. Real-time inventory control, table management and online reservations. We reduced errors by 85% and significantly improved our customers' experience.",
+        "project": "Hazuki Restaurant",
+        "result": "85% fewer errors"
+      },
+      {
+        "name": "Yuki Nakamura",
+        "role": "Manager",
+        "company": "Hazuki Sushi",
+        "text": "The delivery platform he built for Hazuki Sushi integrates online orders, real-time tracking and a points system. Our customers are delighted with the ease of use and we're thrilled with the 180% increase in online orders.",
+        "project": "Hazuki Sushi Delivery",
+        "result": "+180% online orders"
+      },
+      {
+        "name": "Diego Ramírez",
+        "role": "CEO & Founder",
+        "company": "Netmuz",
+        "text": "Emerson led the development of Netmuz Social, the social network for musicians. A complex platform with event management, marketplace and professional networking. His technical vision and ability to solve complex challenges were fundamental to the project's success.",
+        "project": "Netmuz Social Network",
+        "result": "Complete social platform"
+      },
+      {
+        "name": "Sofia Mendoza",
+        "role": "Engineering Student",
+        "company": "CompilandoCode",
+        "text": "Learning programming with Emerson at CompilandoCode changed my career. His practical methodology and clear explanations helped me master React and Python. Today I work as a junior developer thanks to his teachings. The best teacher I've ever had.",
+        "project": "CompilandoCode Student",
+        "result": "Junior Developer"
+      },
+      {
+        "name": "Miguel Torres",
+        "role": "Systems Student",
+        "company": "CompilandoCode",
+        "text": "Emerson's courses at CompilandoCode are incredible. I went from not knowing how to program to developing my own web application in 4 months. His focus on real projects and his patience in teaching are exceptional. 100% recommended.",
+        "project": "CompilandoCode Student",
+        "result": "First app in 4 months"
+      },
+      {
+        "name": "Carlos Vega",
+        "role": "Innovation Coordinator",
+        "company": "Escondida DesafioLab",
+        "text": "The system he developed for our innovation lab allowed us to manage technological challenges, teams and evaluations in an integrated way. The platform is robust, scalable and exactly what we needed to drive innovation.",
+        "project": "Escondida DesafioLab",
+        "result": "Innovation platform"
+      },
+      {
+        "name": "Ana López",
+        "role": "Technology Director",
+        "company": "DRTC Huánuco",
+        "text": "Emerson implemented a government registration and management system that modernized our processes. His professionalism, deadline compliance and technical capability were exceptional. The system works perfectly and has significantly improved our response times.",
+        "project": "DRTC Huánuco System",
+        "result": "Modernized processes"
       }
     ]
   },
@@ -406,6 +438,7 @@
       "development": "In Development"
     },
     "techStack": "Tech Stack",
+    "technologies": "Technologies",
     "viewProject": "View Project",
     "startProject": "Start Project",
     "cta": {
@@ -429,19 +462,35 @@
     "items": {
       "1": {
         "title": "Kefyto E-commerce",
-        "description": "Complete e-commerce platform for kefir sales with integrated payment system and optimized user experience"
+        "description": "Complete e-commerce platform for natural kefir sales with dynamic cart and WhatsApp integration"
       },
       "2": {
-        "title": "Hazuki Restaurant", 
-        "description": "Comprehensive restaurant management system with smart reservations, dynamic menus and real-time analytics"
+        "title": "Hazuki Restaurant",
+        "description": "Comprehensive restaurant management system with reservations, digital menus and area-based administration"
       },
       "3": {
-        "title": "Netmuz Social",
-        "description": "Specialized social network for musicians and content creators with real-time streaming and musical collaboration"
+        "title": "Hazuki Sushi",
+        "description": "Specialized platform for sushi bar with interactive menu and optimized ordering system"
       },
       "4": {
-        "title": "Educational SaaS",
-        "description": "Advanced educational platform with AI, personalized progress tracking and professional certifications"
+        "title": "Netmuz Social",
+        "description": "Specialized social network for musicians - Musical LinkedIn with event management and marketplace"
+      },
+      "5": {
+        "title": "CompilandoCode",
+        "description": "Educational platform with programming courses, technical blog and resources for developers"
+      },
+      "6": {
+        "title": "QR Registration System",
+        "description": "Real-time registration system with QR codes for attendance control in schools"
+      },
+      "7": {
+        "title": "Escondida DesafioLab",
+        "description": "Educational platform for Escondida Mining Foundation BHP with course management and student tracking"
+      },
+      "8": {
+        "title": "DRTC Huánuco",
+        "description": "Web system for registration and tracking of personnel applying for jobs (Pre-professional Internships)"
       }
     },
     "tech": "Tech Stack",
@@ -691,6 +740,11 @@
         "english_level": "Intermediate"
       }
     },
+    "common": {
+      "download_pdf": "📄 Download PDF",
+      "toggle_language": " Language",
+      "translate_note": "This CV is also available in Spanish. You can use your browser's automatic translator or change the language."
+    },
     "corporate": {
       "title": "Emerson Espinoza",
       "subtitle": "Senior Software Engineer & Technical Leader",
@@ -714,14 +768,7 @@
       "uptime": "99.9% uptime",
       "uptime_desc": "Critical production systems with enterprise-grade availability",
       "talents": "200+ talents trained",
-      "talents_desc": "Tech human capital development with 95% successful job placement"
-    },
-    "common": {
-      "download_pdf": "📄 Download PDF",
-      "toggle_language": " Language",
-      "translate_note": "This CV is also available in Spanish. You can use your browser's automatic translator or change the language."
-    },
-    "corporate": {
+      "talents_desc": "Tech human capital development with 95% successful job placement",
       "metrics": {
         "experience": "Years of Experience",
         "projects": "Successful Projects",
@@ -776,6 +823,262 @@
         "instructor_3": "Collaborated with tech industry to design relevant content",
         "instructor_4": "Maintained 4.9/5 student satisfaction rating consistently"
       }
+    }
+  },
+  "contactForm": {
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "formErrors": "Please fix the form errors"
+    },
+    "success": {
+      "messageSent": "Message sent successfully",
+      "confirmationEmail": "You will receive a confirmation copy at {{email}}",
+      "willRespond": "I will respond as soon as possible."
+    },
+    "limit": {
+      "remaining": "You have {{count}} sends available today",
+      "lastOne": "This is your last available send for today",
+      "reached": "You have reached the limit of 3 messages per day"
+    },
+    "errors": {
+      "sendFailed": "Error sending message. Please try again.",
+      "notConfigured": "Email service is not configured. Please contact the administrator."
+    },
+    "labels": {
+      "fullName": "Full name *",
+      "email": "Email *",
+      "phone": "Phone (optional)",
+      "subject": "Subject *",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "fullName": "Your full name",
+      "email": "your.email@example.com",
+      "phone": "+51 999 999 999",
+      "subject": "How can I help you?",
+      "message": "Tell me about your project or inquiry..."
+    },
+    "helpers": {
+      "minCharacters": "Minimum 10 characters"
+    },
+    "buttons": {
+      "sending": "Sending message...",
+      "limitReached": "Limit reached",
+      "send": "Send Message"
+    },
+    "privacy": "Your data is protected. We do not share information with third parties.",
+    "formStatus": "Form status",
+    "title": "Send me a Message",
+    "subtitle": "Complete the form and I will respond as soon as possible"
+  },
+  "emailLimit": {
+    "canSend": "You can send up to {{maxEmails}} messages every 24 hours",
+    "lastAvailable": "This is your last available send for today",
+    "remaining": "You have {{remaining}} sends available today",
+    "limitReachedWithTime": "You have reached the limit of {{maxEmails}} messages. Try again tomorrow at {{time}}",
+    "limitReached": "You have reached the limit of {{maxEmails}} messages per day"
+  },
+  "servicesPage": {
+    "requestInfo": "Request Information",
+    "process": {
+      "title": "My Work Process",
+      "steps": [
+        {
+          "title": "Analysis",
+          "description": "I understand your business and goals"
+        },
+        {
+          "title": "Strategy",
+          "description": "I design the perfect solution"
+        },
+        {
+          "title": "Development",
+          "description": "I build with the best technologies"
+        },
+        {
+          "title": "Launch",
+          "description": "I deliver and provide ongoing support"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to turn your idea into reality?",
+      "description": "I guarantee record-time delivery and post-launch support. Your success is my priority.",
+      "button": "Start Project"
+    }
+  },
+  "servicesSimple": {
+    "title": "How can I help your business?",
+    "subtitle": "I offer complete digital solutions to drive your company's growth.",
+    "services": [
+      {
+        "title": "Web Development",
+        "subtitle": "Modern pages and applications",
+        "description": "I create websites and applications that stand out, run fast, and adapt to any device.",
+        "benefits": [
+          "Modern and responsive design",
+          "SEO optimized",
+          "Fast loading speed",
+          "API integration",
+          "Admin panel",
+          "Support and maintenance"
+        ]
+      },
+      {
+        "title": "Online Store",
+        "subtitle": "Complete e-commerce",
+        "description": "Online stores that convert visitors into customers, with everything needed to sell.",
+        "benefits": [
+          "Smart shopping cart",
+          "Integrated payment gateways",
+          "Inventory management",
+          "Sales reports"
+        ]
+      },
+      {
+        "title": "Automation",
+        "subtitle": "AI for your business",
+        "description": "I automate repetitive tasks and use artificial intelligence to make your business more efficient.",
+        "benefits": [
+          "Intelligent chatbots",
+          "Process automation",
+          "Predictive analysis",
+          "WhatsApp integration"
+        ]
+      },
+      {
+        "title": "Data Analysis",
+        "subtitle": "Insights to grow",
+        "description": "I turn your data into valuable information to make better business decisions.",
+        "benefits": [
+          "Interactive dashboards",
+          "Custom reports",
+          "Trend analysis",
+          "AI predictions"
+        ]
+      }
+    ],
+    "benefitsTitle": "What you get:",
+    "moreInfo": "More information",
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "description": "Let's talk about how I can help you make your digital idea a reality.",
+      "talkButton": "💬 Let's talk about your project",
+      "examplesButton": "👁️ See examples"
+    }
+  },
+  "aboutPage": {
+    "journey": {
+      "title": "My Professional Journey",
+      "subtitle1": "Systems Engineer with",
+      "yearsExperience": "6+ years",
+      "subtitle1End": "of experience in collaborative web development.",
+      "subtitle2": "Specialist in",
+      "techEducation": "tech education",
+      "subtitle2End": "and",
+      "subtitle3": "leader of",
+      "growingProjects": "constantly growing projects",
+      "subtitle3End": "."
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    }
+  },
+  "heroSimplePage": {
+    "availability": "Available for remote projects",
+    "greeting": "Hello! I'm",
+    "nationality": "Peruvian",
+    "residence": "Residence in Chile",
+    "workType": "Remote Work",
+    "title": "Systems Engineer",
+    "experienceLabel": "My experience as:",
+    "description": "with 6+ years transforming ideas into",
+    "techSolutions": "technological solutions",
+    "scalable": "scalable. Specialist in",
+    "techEducation": "tech education",
+    "collaborative": "and collaborative development.",
+    "stats": {
+      "yearsLabel": "Years of experience",
+      "projectsLabel": "Growing projects",
+      "studentsLabel": "Students trained"
+    }
+  },
+  "footerComponent": {
+    "location": "Working remotely",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "blogArticle": {
+    "toast": {
+      "sharedSuccess": "Article shared successfully!",
+      "linkCopied": "Link copied to clipboard!",
+      "shareError": "Error sharing article",
+      "likeRemoved": "Like removed",
+      "likeAdded": "You like this article!",
+      "bookmarkRemoved": "Bookmark removed",
+      "bookmarkAdded": "Article saved!"
+    },
+    "backToBlog": "Back to blog",
+    "progress": "Progress: {{percent}}%",
+    "technicalBadge": "✨ TECHNICAL ARTICLE",
+    "readingTime": "{{minutes}} min read",
+    "bio": "Full Stack Developer specialized in modern technologies and innovative solutions. Passionate about AI and cutting-edge web development.",
+    "estimatedTime": "Estimated reading time",
+    "difficultyLevel": "Difficulty level",
+    "intermediate": "Intermediate",
+    "subscribeText": "Subscribe to receive my latest articles on web development, AI and technology.",
+    "emailPlaceholder": "your@email.com",
+    "commentsTitle": "Comments section coming soon",
+    "commentsDescription": "We are working on an interactive comments experience.",
+    "followSocial": "Follow me on social media"
+  },
+  "emailService": {
+    "defaultSubject": "Message from portfolio",
+    "successMessage": "Email sent successfully",
+    "errorMessage": "Error sending email. Please try again."
+  },
+  "socialLinks": {
+    "availability": "Available for projects"
+  },
+  "oldFooter": {
+    "quickLinks": {
+      "home": "Home",
+      "blog": "Blog",
+      "tools": "Tools",
+      "docs": "Documentation"
+    },
+    "services": [
+      "Full-Stack Development",
+      "Software Architecture",
+      "Tech Consulting",
+      "Mentoring & Training"
+    ],
+    "description": "Specialist in modern web development, scalable architectures and enterprise technologies. Building the digital future with clean code and innovative solutions.",
+    "availability": "Available for enterprise projects"
+  },
+  "projectsPage": {
+    "status": {
+      "live": "Live",
+      "development": "In Development"
+    }
+  },
+  "seo": {
+    "home": {
+      "description": "Peruvian Systems Engineer residing in Chile. 6+ years transforming ideas into scalable technological solutions. Specialist in tech education, fullstack development and collaborative work.",
+      "achievements": [
+        "Multiple projects in production with constant maintenance and growth",
+        "Development of educational platform with 500+ active students",
+        "Leader of collaborative projects with multidisciplinary teams"
+      ],
+      "twitterDescription": "Peruvian Senior Software Engineer 🇵🇪 residing in Chile 🇨🇱. 6+ years transforming ideas into scalable technological solutions. Specialist in AI/ML, Python, React, enterprise architectures. CTO & Founder. 99.9% uptime, $2M+ savings generated."
     }
   }
 }

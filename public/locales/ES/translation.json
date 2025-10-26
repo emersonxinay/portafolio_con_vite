@@ -90,7 +90,7 @@
     "hazukiDate": "2019 - 2021",
     "compilandoDate": "2022 - ACTUALIDAD",
     "codigoFuturoDate": "AGOSTO 2022 - DICIEMBRE 2025",
-    "desafioLatamDate": "2019 - 2020 (Bootcamp) | 2022 - AGOSTO 2022 (Instructor)",
+    "desafiolatamDate": "2019 - 2020 (Bootcamp) | 2022 - AGOSTO 2022 (Instructor)",
     "drtcDate": "2018",
     "talentoDigitalDate": "INICIO 2022 - AGOSTO 2022",
 
@@ -99,10 +99,10 @@
     "hazuki3": "• Implementé soluciones escalables con Ruby on Rails y PostgreSQL en equipo colaborativo",
     "hazukiMetrics": "Ruby on Rails + PostgreSQL • Trabajo en equipo • Metodologías ágiles",
 
-    "desafioLatam1": "• Obtuve certificación como Fullstack Developer especializándome en Ruby on Rails (2019-2020)",
-    "desafioLatam2": "• Recibí capacitación en pedagogía para posteriormente ejercer como docente",
-    "desafioLatam3": "• Como instructor (2022), dicté cursos a profesionales y emprendedores de forma online",
-    "desafioLatamMetrics": "Certificación Fullstack • Capacitación pedagógica • Instructor online",
+    "desafiolatam1": "• Obtuve certificación como Fullstack Developer especializándome en Ruby on Rails (2019-2020)",
+    "desafiolatam2": "• Recibí capacitación en pedagogía para posteriormente ejercer como docente",
+    "desafiolatam3": "• Como instructor (2022), dicté cursos a profesionales y emprendedores de forma online",
+    "desafiolatamMetrics": "Certificación Fullstack • Capacitación pedagógica • Instructor online",
 
     "compilando1": "• Desarrollé múltiples aplicaciones: red social para pegas pequeñas (Flask + React + PostgreSQL)",
     "compilando2": "• Creé aplicación para ventas de productos artesanales fullstack con React, Node.js y PostgreSQL",
@@ -267,27 +267,78 @@
     ],
     "techStack": {
       "frontend": [
-        { "name": "React", "description": "Desarrollo de interfaces modernas y componentes reutilizables" },
-        { "name": "TypeScript", "description": "Código más robusto y mantenible con tipado estático" },
-        { "name": "Next.js", "description": "Aplicaciones full-stack con SSR y optimización automática" },
-        { "name": "Tailwind CSS", "description": "Diseños responsive y sistemas de diseño escalables" },
-        { "name": "Vue.js", "description": "Desarrollo ágil de SPAs con arquitectura reactiva" }
+        {
+          "name": "React",
+          "description": "Desarrollo de interfaces modernas y componentes reutilizables"
+        },
+        {
+          "name": "TypeScript",
+          "description": "Código más robusto y mantenible con tipado estático"
+        },
+        {
+          "name": "Next.js",
+          "description": "Aplicaciones full-stack con SSR y optimización automática"
+        },
+        {
+          "name": "Tailwind CSS",
+          "description": "Diseños responsive y sistemas de diseño escalables"
+        },
+        {
+          "name": "Vue.js",
+          "description": "Desarrollo ágil de SPAs con arquitectura reactiva"
+        }
       ],
       "backend": [
-        { "name": "Python", "description": "Desarrollo backend robusto y APIs de alto rendimiento" },
-        { "name": "FastAPI", "description": "APIs modernas con documentación automática y validación" },
-        { "name": "Flask", "description": "Microservicios y aplicaciones web ligeras y flexibles" },
-        { "name": "PostgreSQL", "description": "Bases de datos relacionales optimizadas para producción" },
-        { "name": "MongoDB", "description": "Almacenamiento NoSQL para datos no estructurados" },
-        { "name": "Ruby on Rails", "description": "Desarrollo backend robusto y APIs de alto rendimiento" },
-        { "name": "Redis", "description": "Caché y almacenamiento en memoria para aplicaciones web" }
+        {
+          "name": "Python",
+          "description": "Desarrollo backend robusto y APIs de alto rendimiento"
+        },
+        {
+          "name": "FastAPI",
+          "description": "APIs modernas con documentación automática y validación"
+        },
+        {
+          "name": "Flask",
+          "description": "Microservicios y aplicaciones web ligeras y flexibles"
+        },
+        {
+          "name": "PostgreSQL",
+          "description": "Bases de datos relacionales optimizadas para producción"
+        },
+        {
+          "name": "MongoDB",
+          "description": "Almacenamiento NoSQL para datos no estructurados"
+        },
+        {
+          "name": "Ruby on Rails",
+          "description": "Desarrollo backend robusto y APIs de alto rendimiento"
+        },
+        {
+          "name": "Redis",
+          "description": "Caché y almacenamiento en memoria para aplicaciones web"
+        }
       ],
       "devops": [
-        { "name": "Docker", "description": "Containerización y despliegues consistentes" },
-        { "name": "Git", "description": "Control de versiones y colaboración en equipo" },
-        { "name": "Linux", "description": "Administración de servidores y automatización" },
-        { "name": "DigitalOcean", "description": "Infraestructura cloud escalable y confiable" },
-        { "name": "Nginx", "description": "Proxy reverso y optimización de performance" }
+        {
+          "name": "Docker",
+          "description": "Containerización y despliegues consistentes"
+        },
+        {
+          "name": "Git",
+          "description": "Control de versiones y colaboración en equipo"
+        },
+        {
+          "name": "Linux",
+          "description": "Administración de servidores y automatización"
+        },
+        {
+          "name": "DigitalOcean",
+          "description": "Infraestructura cloud escalable y confiable"
+        },
+        {
+          "name": "Nginx",
+          "description": "Proxy reverso y optimización de performance"
+        }
       ]
     },
     "sections": {
@@ -406,7 +457,7 @@
     "quickLinks": {
       "title": "Enlaces Rápidos",
       "home": "Inicio",
-      "blog": "Blog", 
+      "blog": "Blog",
       "tools": "Herramientas",
       "docs": "Documentación"
     },
@@ -437,7 +488,7 @@
     "subtitle": "Soluciones tecnológicas que transforman ideas en experiencias digitales excepcionales",
     "categories": {
       "all": "Todos",
-      "ecommerce": "E-commerce", 
+      "ecommerce": "E-commerce",
       "web": "Web Apps",
       "social": "Social",
       "saas": "SaaS"
@@ -458,7 +509,7 @@
       "users": "Usuarios",
       "performance": "Performance",
       "uptime": "Uptime",
-      "orders": "Pedidos", 
+      "orders": "Pedidos",
       "efficiency": "Eficiencia",
       "rating": "Rating",
       "artists": "Artistas",
@@ -506,45 +557,45 @@
     "impact": "Impacto",
     "features": "Características",
     "client": "Cliente",
-    
+
     "kefytoTitle": "Kefyto - Tienda Online de Kéfir Natural",
     "kefyto1": "• Plataforma e-commerce con React + Flask + PostgreSQL para venta de kéfir natural",
     "kefyto2": "• Carrito dinámico, botón 'Comprar Ahora' e integración directa con WhatsApp",
     "kefyto3": "• Branding kawaii personalizado con stickers propios y diseño único",
     "kefytoMetrics": "E-commerce funcional • Integración WhatsApp • Branding personalizado",
     "kefytoUrl": "https://www.kefytoabby.com/",
-    
+
     "hazukiTitle": "Hazuki Restaurant - Sistema de Gestión Integral",
     "hazuki1": "• Sistema web completo para gestión de reservas, pedidos y atención por áreas",
     "hazuki2": "• Arquitectura escalable con Python/Flask y despliegue en VPS usando Nginx y Gunicorn",
     "hazuki3": "• Sistema completo con frontend en JavaScript/HTML/CSS, menú digital y gestión multicanal",
     "hazukiMetrics": "Gestión completa • VPS deployment • Python + Flask + PostgreSQL",
     "hazukiUrl": "https://www.hazukisushi.cl/",
-    
+
     "netmuzTitle": "Netmuz - Red Social para Músicos",
     "netmuz1": "• Red social especializada para músicos y productores (LinkedIn musical)",
     "netmuz2": "• Desarrollo fullstack con React, Express y PostgreSQL para conectar artistas",
     "netmuz3": "• Gestión de eventos, convocatorias y marketplace musical para Latinoamérica",
     "netmuzMetrics": "React + Express + PostgreSQL • Red social funcional • Mercado musical",
     "netmuzUrl": "https://www.netmuz.com/",
-    
+
     "saasTitle": "SaaS Educativo - Plataforma de Formación",
     "saas1": "• Sistema completo para formación técnica con clases en vivo y calendario académico",
     "saas2": "• Rutas formativas personalizadas y sistema de certificación profesional",
     "saas3": "• Arquitectura SaaS escalable con gestión de usuarios y contenido multimedia",
     "saasMetrics": "SaaS educativo • Clases en vivo • Certificación digital",
-    
+
     "mineraTitle": "Sistema Minera Escondida - Gestión de Producción",
     "minera1": "• Desarrollo completo en C# y .NET Core para gestión de órdenes de producción",
     "minera2": "• Lógica empresarial segmentada y API REST para integración con sistemas existentes",
     "minera3": "• Sistema robusto para una de las mineras más importantes de Chile",
     "mineraMetrics": "C# .NET Core • API REST • Sistema empresarial robusto",
-    
+
     "coming": "Ver proyecto en vivo"
   },
   "nav": {
     "home": "Inicio",
-    "blog": "Blog", 
+    "blog": "Blog",
     "docs": "Docs",
     "tools": "Herramientas",
     "menu": {
@@ -552,7 +603,7 @@
       "descriptions": {
         "home": "Página principal",
         "blog": "Artículos técnicos",
-        "docs": "Documentación", 
+        "docs": "Documentación",
         "tools": "Herramientas útiles"
       },
       "closeInstruction": "Toca en cualquier lugar para cerrar"
@@ -585,7 +636,7 @@
         "options": [
           "Desarrollo Web Full-Stack",
           "API & Backend Services",
-          "Arquitectura de Software", 
+          "Arquitectura de Software",
           "Consultoría Técnica",
           "Mentoring & Training",
           "Otro (especificar en mensaje)"
@@ -597,7 +648,7 @@
         "options": [
           "Selecciona tu presupuesto",
           "$5,000 - $15,000 USD",
-          "$15,000 - $30,000 USD", 
+          "$15,000 - $30,000 USD",
           "$30,000 - $50,000 USD",
           "$50,000+ USD",
           "Consultoría/Mentoring"

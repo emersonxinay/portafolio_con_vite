@@ -48,59 +48,7 @@ const Experience = () => {
 
       <Title title={t('experience.title')} />
 
-      {/* Real Tech Stack Overview */}
-      <div className="mobile-card bg-gradient-to-r from-slate-900/60 to-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6">
-        <p className="text-center mb-4 xs:mb-6">
-          <span className='text-sky-400 font-semibold text-base xs:text-lg'>{t('experience.completeStack')}</span>
-        </p>
 
-        {/* Frontend */}
-        <div className="mb-4 xs:mb-6">
-          <p className="text-green-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.frontend')}</p>
-          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
-            <i className="fab fa-react text-cyan-400 hover:scale-125 transition-transform touch-target" title="React"></i>
-            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="TailwindCSS"></div>
-            <div className="text-purple-500 hover:scale-125 transition-transform touch-target" title="Bootstrap">🅱️</div>
-          </div>
-        </div>
-
-        {/* Backend */}
-        <div className="mb-4 xs:mb-6">
-          <p className="text-blue-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.backend')}</p>
-          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
-            <i className="fab fa-python text-yellow-400 hover:scale-125 transition-transform touch-target" title="Python"></i>
-            <i className="fas fa-flask text-green-500 hover:scale-125 transition-transform touch-target" title="Flask"></i>
-            <i className="fas fa-bolt text-teal-400 hover:scale-125 transition-transform touch-target" title="FastAPI"></i>
-            <i className="fab fa-node-js text-green-500 hover:scale-125 transition-transform touch-target" title="Node.js"></i>
-            <div className="text-red-600 hover:scale-125 transition-transform touch-target" title="Ruby on Rails">💎</div>
-            <i className="fas fa-code text-purple-600 hover:scale-125 transition-transform touch-target" title="C# .NET"></i>
-          </div>
-        </div>
-
-        {/* Bases de Datos */}
-        <div className="mb-4 xs:mb-6">
-          <p className="text-orange-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.databases')}</p>
-          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
-            <i className="fas fa-database text-blue-400 hover:scale-125 transition-transform touch-target" title="PostgreSQL"></i>
-            <div className="text-blue-600 hover:scale-125 transition-transform touch-target" title="MySQL">🐬</div>
-            <i className="fas fa-leaf text-green-500 hover:scale-125 transition-transform touch-target" title="MongoDB"></i>
-            <div className="text-gray-400 hover:scale-125 transition-transform touch-target" title="SQLite">🗃️</div>
-          </div>
-        </div>
-
-        {/* DevOps & Deploy */}
-        <div className="mb-3 xs:mb-4">
-          <p className="text-purple-400 font-semibold mb-2 xs:mb-3 text-center text-sm xs:text-base">{t('experience.devops')}</p>
-          <div className="flex flex-wrap justify-center gap-3 xs:gap-4 text-xl xs:text-2xl">
-            <i className="fab fa-docker text-blue-600 hover:scale-125 transition-transform touch-target" title="Docker"></i>
-            <i className="fas fa-server text-green-500 hover:scale-125 transition-transform touch-target" title="Nginx"></i>
-            <div className="text-blue-500 hover:scale-125 transition-transform touch-target" title="DigitalOcean">🌊</div>
-            <div className="text-orange-500 hover:scale-125 transition-transform touch-target" title="GitHub Actions">⚙️</div>
-          </div>
-        </div>
-
-        <p className="text-sm text-zinc-400 text-center">{t('experience.tech')}</p>
-      </div>
 
       <div className="mobile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
         {experiences.map((exp, index) => (

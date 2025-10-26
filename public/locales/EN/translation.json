@@ -12,7 +12,7 @@
     "value_proposition": "I combine strategic vision with exceptional technical execution to create solutions that don't just work, but transform businesses.",
     "metrics": {
       "experience": "Years of experience",
-      "countries": "Countries with projects", 
+      "countries": "Countries with projects",
       "focus": "Solutions delivered",
       "specialty": "Independent consultant",
       "team_size": "Developers mentored",
@@ -71,37 +71,37 @@
     "devops": "DevOps & Cloud Architecture",
     "ai_ml": "Artificial Intelligence & Machine Learning",
     "leadership": "Technical Leadership & Mentoring",
-    
+
     "hazuki": "Senior Software Engineer & Tech Lead",
-    "compilando": "Founder & CTO", 
+    "compilando": "Founder & CTO",
     "codigoFuturo": "Senior Technical Instructor & Curriculum Architect",
     "desafiolatam": "Lead Instructor & Technical Mentor",
-    
+
     "techCompilando": "React, Python, FastAPI, Django, PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Machine Learning, Data Analytics",
     "techHazuki": "Python, Flask, PostgreSQL, JavaScript, React, Docker, Nginx, Gunicorn, VPS, Microservices Architecture",
     "techDesafioLatam": "Python, Ruby on Rails, JavaScript, PostgreSQL, MongoDB, Git, AWS, REST APIs, GraphQL, Testing",
     "techCodigoFuturo": "Python, JavaScript, React, Git, HTML5, CSS3, Bootstrap, IoT, Raspberry Pi, Arduino",
-    
+
     "hazukiDate": "FEB 2018 - 2021",
-    "compilandoDate": "FEB 2022 - PRESENT", 
+    "compilandoDate": "FEB 2022 - PRESENT",
     "codigoFuturoDate": "AUGUST 2022 - PRESENT",
     "desafioLatamDate": "NOVEMBER 2021 - PRESENT",
-    
+
     "hazuki1": "• Led enterprise system development processing +50K transactions/month with 99.9% uptime",
     "hazuki2": "• Implemented microservices architecture reducing response time by 70%",
     "hazuki3": "• Optimized cloud infrastructure reducing operational costs by $15K/year",
     "hazukiMetrics": "99.9% uptime • 70% performance improvement • $15K annual savings",
-    
-    "desafioLatam1": "• Led technical training of 200+ developers with 95% employability rate",
-    "desafioLatam2": "• Designed enterprise curriculum adopted by 5+ educational institutions",
-    "desafioLatam3": "• Mentored teams that developed 50+ production applications",
-    "desafioLatamMetrics": "200+ developers trained • 95% employability • 50+ production apps",
-    
+
+    "desafiolatam1": "• Led technical training of 200+ developers with 95% employability rate",
+    "desafiolatam2": "• Designed enterprise curriculum adopted by 5+ educational institutions",
+    "desafiolatam3": "• Mentored teams that developed 50+ production applications",
+    "desafiolatamMetrics": "200+ developers trained • 95% employability • 50+ production apps",
+
     "compilando1": "• Founded and scaled EdTech platform reaching 10K+ active users",
     "compilando2": "• Developed AI-powered educational SaaS increasing student retention by 85%",
     "compilando3": "• Led digital transformation for 20+ companies with average 300% ROI",
     "compilandoMetrics": "10K+ active users • 85% retention • 300% average ROI",
-    
+
     "codigoFuturo1": "• Architected technical training program adopted by 15+ companies",
     "codigoFuturo2": "• Led upskilling of 500+ professionals in emerging technologies",
     "codigoFuturo3": "• Developed teaching methodology reducing learning time by 60%",
@@ -133,31 +133,31 @@
     "status": "Graduate with Honors",
     "gpa": "GPA: 16.5/20 (Top 10%)",
     "thesis": "Thesis: Enterprise Web Application for Educational Management with Microservices Architecture",
-    
+
     "certifications": "Professional Certifications",
     "aws": "• AWS Solutions Architect Associate - Cloud Infrastructure & DevOps",
     "gcp": "• Google Cloud Professional - Machine Learning & Data Engineering",
     "azure": "• Microsoft Azure Fundamentals - Enterprise Cloud Solutions",
     "python": "• Python Institute PCAP/PCPP - Advanced Programming & Data Science",
     "scrum": "• Certified Scrum Master (CSM) - Agile Project Management",
-    
+
     "specializations": "Technical Specializations",
     "aiml": "• Artificial Intelligence & Machine Learning Engineering",
     "datascience": "• Data Science & Advanced Analytics",
     "cloud": "• Cloud Architecture & DevOps Engineering",
     "leadership": "• Technical Leadership & Team Management",
     "education_tech": "• Educational Technology & Curriculum Development",
-    
+
     "bootcamp": "Ruby on Rails Fullstack Specialization",
     "bootcampSchool": "Desafío Latam, Chile",
     "youtube": "YouTube: Compilando Code",
     "courses": "Courses: Python, Flask, React, C# .NET, Data Analysis",
     "program": "Creator of the program 'Python with Flow Charts from Scratch'",
-    
+
     "languages": "Languages & Communication",
     "spanish": "Spanish (Native) - Technical documentation and presentations",
     "english": "English (Professional B2/C1) - International business and technical communication",
-    
+
     "continuousLearning": "Continuous Professional Development",
     "currentTopics": "Currently mastering: Advanced AI/ML, Kubernetes, Microservices, Cloud-Native Architecture, Technical Leadership",
     "learning_commitment": "Dedicated 10+ hours/week to emerging technologies and industry best practices"
@@ -258,27 +258,78 @@
     ],
     "techStack": {
       "frontend": [
-        { "name": "React", "description": "Modern interface development and reusable components" },
-        { "name": "TypeScript", "description": "More robust and maintainable code with static typing" },
-        { "name": "Next.js", "description": "Full-stack applications with SSR and automatic optimization" },
-        { "name": "Tailwind CSS", "description": "Responsive designs and scalable design systems" },
-        { "name": "Vue.js", "description": "Agile SPA development with reactive architecture" }
+        {
+          "name": "React",
+          "description": "Modern interface development and reusable components"
+        },
+        {
+          "name": "TypeScript",
+          "description": "More robust and maintainable code with static typing"
+        },
+        {
+          "name": "Next.js",
+          "description": "Full-stack applications with SSR and automatic optimization"
+        },
+        {
+          "name": "Tailwind CSS",
+          "description": "Responsive designs and scalable design systems"
+        },
+        {
+          "name": "Vue.js",
+          "description": "Agile SPA development with reactive architecture"
+        }
       ],
       "backend": [
-        { "name": "Python", "description": "Robust backend development and high-performance APIs" },
-        { "name": "FastAPI", "description": "Modern APIs with automatic documentation and validation" },
-        { "name": "Flask", "description": "Microservices and lightweight, flexible web applications" },
-        { "name": "PostgreSQL", "description": "Relational databases optimized for production" },
-        { "name": "MongoDB", "description": "NoSQL storage for unstructured data" },
-        { "name": "Ruby on Rails", "description": "Robust backend development and high-performance APIs" },
-        { "name": "Redis", "description": "Cache and in-memory storage for web applications" }
+        {
+          "name": "Python",
+          "description": "Robust backend development and high-performance APIs"
+        },
+        {
+          "name": "FastAPI",
+          "description": "Modern APIs with automatic documentation and validation"
+        },
+        {
+          "name": "Flask",
+          "description": "Microservices and lightweight, flexible web applications"
+        },
+        {
+          "name": "PostgreSQL",
+          "description": "Relational databases optimized for production"
+        },
+        {
+          "name": "MongoDB",
+          "description": "NoSQL storage for unstructured data"
+        },
+        {
+          "name": "Ruby on Rails",
+          "description": "Robust backend development and high-performance APIs"
+        },
+        {
+          "name": "Redis",
+          "description": "Cache and in-memory storage for web applications"
+        }
       ],
       "devops": [
-        { "name": "Docker", "description": "Containerization and consistent deployments" },
-        { "name": "Git", "description": "Version control and team collaboration" },
-        { "name": "Linux", "description": "Server administration and automation" },
-        { "name": "DigitalOcean", "description": "Scalable and reliable cloud infrastructure" },
-        { "name": "Nginx", "description": "Reverse proxy and performance optimization" }
+        {
+          "name": "Docker",
+          "description": "Containerization and consistent deployments"
+        },
+        {
+          "name": "Git",
+          "description": "Version control and team collaboration"
+        },
+        {
+          "name": "Linux",
+          "description": "Server administration and automation"
+        },
+        {
+          "name": "DigitalOcean",
+          "description": "Scalable and reliable cloud infrastructure"
+        },
+        {
+          "name": "Nginx",
+          "description": "Reverse proxy and performance optimization"
+        }
       ]
     },
     "sections": {
@@ -397,7 +448,7 @@
     "quickLinks": {
       "title": "Quick Links",
       "home": "Home",
-      "blog": "Blog", 
+      "blog": "Blog",
       "tools": "Tools",
       "docs": "Documentation"
     },
@@ -428,7 +479,7 @@
     "subtitle": "Technological solutions that transform ideas into exceptional digital experiences",
     "categories": {
       "all": "All",
-      "ecommerce": "E-commerce", 
+      "ecommerce": "E-commerce",
       "web": "Web Apps",
       "social": "Social",
       "saas": "SaaS"
@@ -449,7 +500,7 @@
       "users": "Users",
       "performance": "Performance",
       "uptime": "Uptime",
-      "orders": "Orders", 
+      "orders": "Orders",
       "efficiency": "Efficiency",
       "rating": "Rating",
       "artists": "Artists",
@@ -499,46 +550,46 @@
     "client": "Client",
     "loading": "Loading projects...",
     "description": "Here you will find my most outstanding projects and developments.",
-    
+
     "kefytoTitle": "Kefyto - Natural Kefir Online Store",
     "kefyto1": "• E-commerce platform with React + Flask + PostgreSQL for natural kefir sales",
     "kefyto2": "• Dynamic cart, 'Buy Now' button and direct WhatsApp integration",
     "kefyto3": "• Custom kawaii branding with own stickers and unique design",
     "kefytoMetrics": "Functional e-commerce • WhatsApp integration • Custom branding",
     "kefytoUrl": "https://www.kefytoabby.com/",
-    
+
     "hazukiTitle": "Hazuki Restaurant - Comprehensive Management System",
     "hazuki1": "• Complete web system for reservation, order and area service management",
     "hazuki2": "• Scalable architecture with Python/Flask and VPS deployment using Nginx and Gunicorn",
     "hazuki3": "• Complete system with JavaScript/HTML/CSS frontend, digital menu and multichannel management",
     "hazukiMetrics": "Complete management • VPS deployment • Python + Flask + PostgreSQL",
     "hazukiUrl": "https://www.hazukisushi.cl/",
-    
+
     "netmuzTitle": "Netmuz - Social Network for Musicians",
     "netmuz1": "• Specialized social network for musicians and producers (musical LinkedIn)",
     "netmuz2": "• Fullstack development with React, Express and PostgreSQL to connect artists",
     "netmuz3": "• Event management, calls and musical marketplace for Latin America",
     "netmuzMetrics": "React + Express + PostgreSQL • Functional social network • Musical market",
     "netmuzUrl": "https://www.netmuz.com/",
-    
+
     "saasTitle": "Educational SaaS - Training Platform",
     "saas1": "• Complete system for technical training with live classes and academic calendar",
     "saas2": "• Personalized training routes and professional certification system",
     "saas3": "• Scalable SaaS architecture with user management and multimedia content",
     "saasMetrics": "Educational SaaS • Live classes • Digital certification",
-    
+
     "mineraTitle": "Escondida Mine System - Production Management",
     "minera1": "• Complete development in C# and .NET Core for production order management",
     "minera2": "• Segmented business logic and REST API for integration with existing systems",
     "minera3": "• Robust system for one of Chile's most important mines",
     "mineraMetrics": "C# .NET Core • REST API • Robust enterprise system",
-    
+
     "coming": "View live project"
   },
   "nav": {
     "home": "Home",
     "blog": "Blog",
-    "docs": "Docs", 
+    "docs": "Docs",
     "tools": "Tools",
     "menu": {
       "title": "Navigation Menu",
@@ -546,7 +597,7 @@
         "home": "Main page",
         "blog": "Technical articles",
         "docs": "Documentation",
-        "tools": "Useful tools" 
+        "tools": "Useful tools"
       },
       "closeInstruction": "Tap anywhere to close"
     }
@@ -577,7 +628,7 @@
         "label": "Project type",
         "options": [
           "Full-Stack Web Development",
-          "API & Backend Services", 
+          "API & Backend Services",
           "Software Architecture",
           "Technical Consulting",
           "Mentoring & Training",
@@ -591,7 +642,7 @@
           "Select your budget",
           "$5,000 - $15,000 USD",
           "$15,000 - $30,000 USD",
-          "$30,000 - $50,000 USD", 
+          "$30,000 - $50,000 USD",
           "$50,000+ USD",
           "Consulting/Mentoring"
         ]
@@ -617,7 +668,7 @@
     },
     "info": {
       "responseTime": "⚡ Guaranteed response in 24h",
-      "consultation": "💬 Free initial consultation", 
+      "consultation": "💬 Free initial consultation",
       "nda": "🔒 Confidentiality guaranteed"
     }
   },

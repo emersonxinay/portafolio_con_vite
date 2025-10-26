@@ -15,16 +15,29 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      
-      // Show/hide navbar based on scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setVisible(false)
-      } else {
+
+      // Siempre visible en la parte superior
+      if (currentScrollY < 10) {
         setVisible(true)
+        setScrolled(false)
+      } else {
+        // Ocultar solo al hacer scroll hacia abajo rápido (más de 150px)
+        // En móvil, más tolerante para mejorar UX
+        const isMobile = window.innerWidth < 768
+        const scrollThreshold = isMobile ? 200 : 150
+        const scrollDelta = Math.abs(currentScrollY - lastScrollY)
+
+        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold && scrollDelta > 5) {
+          // Scrolling down - hide only if significant movement
+          setVisible(false)
+        } else if (currentScrollY < lastScrollY) {
+          // Scrolling up - show immediately
+          setVisible(true)
+        }
+
+        setScrolled(currentScrollY > 50)
       }
-      
-      // Change navbar style when scrolled
-      setScrolled(currentScrollY > 50)
+
       setLastScrollY(currentScrollY)
     }
 

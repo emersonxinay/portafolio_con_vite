@@ -480,13 +480,29 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     transition: all 0.3s ease;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(15, 23, 42, 0.85);
   }
 
   .mobile-nav-scrolled {
     @apply border-b;
-    background-color: rgba(15, 23, 42, 0.95);
+    background-color: rgba(15, 23, 42, 0.98);
     border-color: rgba(51, 65, 85, 0.5);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Navbar sólido sin transparencia para móviles */
+  @media (max-width: 768px) {
+    .mobile-nav {
+      background-color: rgb(15, 23, 42);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-nav-scrolled {
+      background-color: rgb(15, 23, 42);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
   }
 
   /* Mobile menu improvements */

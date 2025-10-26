@@ -14,6 +14,7 @@ import Home from './pages/Home/Home';
 import ProjectsPage from './pages/Projects/Projects';
 import CVHarvard from './pages/CV/CVHarvard';
 import CVCorporate from './pages/CV/CVCorporate';
+import CVGenerator from './pages/CVGenerator/CVGenerator';
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
           <Route path='/blog/:id' element={<Article />} />
           <Route path='/cv/harvard' element={<CVHarvard />} />
           <Route path='/cv/corporate' element={<CVCorporate />} />
+          <Route path='/cv/generator' element={<CVGenerator />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </AnimatePresence>

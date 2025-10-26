@@ -5,6 +5,7 @@ import { professionalAchievements } from '../../../data/experienceData';
 import { mainTechnologies } from '../../../data/techStackData';
 import { useScrollToSection } from '../../../hooks/useScrollToSection';
 import { buttonStyles } from '../../../constants/designSystem';
+import Code from './Code';
 
 const HeroSimple = () => {
   const { t } = useTranslation();
@@ -78,39 +79,39 @@ const HeroSimple = () => {
         }}
       />
 
-      <div className="text-center w-full max-w-6xl mx-auto relative z-10 px-4 py-20">
+      <div className="text-center w-full max-w-6xl mx-auto relative z-10 px-4 xs:px-6 sm:px-8 py-12 xs:py-16 sm:py-20">
         {/* Badge de disponibilidad mejorado */}
         <motion.div
-          className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-green-500/20 backdrop-blur-lg border border-emerald-400/40 rounded-full px-6 py-3 mb-8 shadow-2xl"
+          className="inline-flex items-center gap-2 xs:gap-3 bg-gradient-to-r from-emerald-500/20 to-green-500/20 backdrop-blur-lg border border-emerald-400/40 rounded-full px-4 xs:px-6 py-2 xs:py-3 mb-6 xs:mb-8 shadow-2xl"
           initial={{ opacity: 0, y: -30, scale: 0.8 }}
           animate={{ opacity: isLoaded ? 1 : 0, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="relative">
-            <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-            <div className="absolute inset-0 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
+            <div className="w-2.5 h-2.5 xs:w-3 xs:h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 w-2.5 h-2.5 xs:w-3 xs:h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
           </div>
-          <span className="text-emerald-300 font-semibold text-sm tracking-wide">
-            <i className="fas fa-check-circle mr-2"></i>
+          <span className="text-emerald-300 font-semibold text-xs xs:text-sm tracking-wide">
+            <i className="fas fa-check-circle mr-1.5 xs:mr-2"></i>
             {t('heroSimplePage.availability')}
           </span>
         </motion.div>
 
         {/* Presentación principal rediseñada */}
         <motion.div
-          className="mb-12"
+          className="mb-8 xs:mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isLoaded ? 1 : 0, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
           <motion.h1
-            className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 xs:mb-5 sm:mb-6 leading-tight px-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
             <motion.span
-              className="text-zinc-300 block mb-3"
+              className="text-zinc-300 block mb-2 xs:mb-3"
               initial={{ x: -50 }}
               animate={{ x: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -118,7 +119,7 @@ const HeroSimple = () => {
               {t('heroSimplePage.greeting')}
             </motion.span>
             <motion.span
-              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 block mb-4"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 block mb-3 xs:mb-4"
               initial={{ x: 50 }}
               animate={{ x: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
@@ -129,28 +130,28 @@ const HeroSimple = () => {
 
           {/* Ubicación y disponibilidad */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4 mb-8"
+            className="flex flex-wrap items-center justify-center gap-2 xs:gap-3 sm:gap-4 mb-6 xs:mb-7 sm:mb-8 px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-lg border border-slate-600/50 rounded-full px-4 py-2">
-              <i className="fas fa-map-marker-alt text-red-400"></i>
-              <span className="text-zinc-300 font-medium">{t('heroSimplePage.nationality')}</span>
+            <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 bg-slate-800/50 backdrop-blur-lg border border-slate-600/50 rounded-full px-3 xs:px-4 py-1.5 xs:py-2">
+              <i className="fas fa-map-marker-alt text-red-400 text-xs xs:text-sm"></i>
+              <span className="text-zinc-300 font-medium text-xs xs:text-sm">{t('heroSimplePage.nationality')}</span>
             </div>
-            <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-lg border border-slate-600/50 rounded-full px-4 py-2">
-              <i className="fas fa-home text-blue-400"></i>
-              <span className="text-zinc-300 font-medium">{t('heroSimplePage.residence')}</span>
+            <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 bg-slate-800/50 backdrop-blur-lg border border-slate-600/50 rounded-full px-3 xs:px-4 py-1.5 xs:py-2">
+              <i className="fas fa-home text-blue-400 text-xs xs:text-sm"></i>
+              <span className="text-zinc-300 font-medium text-xs xs:text-sm">{t('heroSimplePage.residence')}</span>
             </div>
-            <div className="flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-lg border border-blue-400/40 rounded-full px-4 py-2">
-              <i className="fas fa-globe text-cyan-400"></i>
-              <span className="text-blue-300 font-medium">{t('heroSimplePage.workType')}</span>
+            <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-lg border border-blue-400/40 rounded-full px-3 xs:px-4 py-1.5 xs:py-2">
+              <i className="fas fa-globe text-cyan-400 text-xs xs:text-sm"></i>
+              <span className="text-blue-300 font-medium text-xs xs:text-sm">{t('heroSimplePage.workType')}</span>
             </div>
           </motion.div>
 
           {/* Descripción principal */}
           <motion.p
-            className="text-xl md:text-2xl lg:text-3xl text-zinc-300 font-medium mb-12 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg xs:text-xl md:text-2xl lg:text-3xl text-zinc-300 font-medium mb-12 max-w-4xl mx-auto leading-relaxed px-4 xs:px-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
@@ -170,15 +171,25 @@ const HeroSimple = () => {
           </motion.p>
         </motion.div>
 
-        {/* Roles rotativos rediseñados */}
+        {/* Code snippet interactivo */}
         <motion.div
-          className="mb-16"
+          className="mb-16 flex justify-center items-center w-full"
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          animate={{ opacity: isLoaded ? 1 : 0, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 1.6 }}
+        >
+          <Code />
+        </motion.div>
+
+        {/* Roles rotativos rediseñados - Mobile First */}
+        <motion.div
+          className="mb-16 xs:mb-20 sm:mb-24"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
         >
           <motion.h2
-            className="text-2xl md:text-3xl font-bold text-zinc-400 mb-8"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-400 mb-8 xs:mb-10 sm:mb-12 px-4 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8 }}
@@ -186,7 +197,7 @@ const HeroSimple = () => {
             {t('heroSimplePage.experienceLabel')}
           </motion.h2>
 
-          <div className="relative">
+          <div className="relative px-4 xs:px-6 sm:px-8">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentRole}
@@ -197,28 +208,25 @@ const HeroSimple = () => {
                 transition={{ duration: 0.7, ease: "easeInOut" }}
               >
                 <div
-                  className={`relative p-8 md:p-12 rounded-3xl bg-gradient-to-br ${roles[currentRole].color}/10 backdrop-blur-lg border-2 shadow-2xl overflow-hidden`}
-                  style={{
-                    borderColor: `${roles[currentRole].color.split(' ')[3]}40`
-                  }}
+                  className="relative p-8 xs:p-10 sm:p-12 md:p-16 rounded-3xl xs:rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-blue-900/40 via-cyan-900/30 to-blue-800/40 backdrop-blur-lg border-2 border-cyan-500/30 shadow-2xl overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px]"
                 >
                   {/* Fondo decorativo */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${roles[currentRole].color}/5 opacity-50`}
+                    className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/10 to-blue-700/10 opacity-50"
                   />
 
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col items-center text-center">
                     <motion.div
-                      className="mb-6"
+                      className="mb-5 xs:mb-6 sm:mb-8"
                       initial={{ scale: 0, rotate: -180 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                      <i className={`${roles[currentRole].icon} text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r ${roles[currentRole].color}`}></i>
+                      <i className={`${roles[currentRole].icon} text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${roles[currentRole].color}`}></i>
                     </motion.div>
 
                     <motion.h3
-                      className={`text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${roles[currentRole].color}`}
+                      className={`text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 xs:mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r ${roles[currentRole].color} leading-tight drop-shadow-[0_2px_10px_rgba(6,182,212,0.5)]`}
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 0.4 }}
@@ -227,7 +235,7 @@ const HeroSimple = () => {
                     </motion.h3>
 
                     <motion.p
-                      className="text-xl md:text-2xl text-zinc-300 font-medium"
+                      className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-100 font-semibold leading-relaxed max-w-3xl drop-shadow-lg px-2"
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 0.6 }}
@@ -236,14 +244,14 @@ const HeroSimple = () => {
                     </motion.p>
                   </div>
 
-                  {/* Efectos decorativos */}
+                  {/* Efectos decorativos - Azul marino y celeste */}
                   <motion.div
-                    className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${roles[currentRole].color}/20 rounded-full blur-2xl`}
+                    className="absolute -top-20 -right-20 w-48 h-48 xs:w-56 xs:h-56 bg-gradient-to-br from-cyan-500/30 to-blue-600/30 rounded-full blur-3xl"
                     animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
                     transition={{ duration: 10, repeat: Infinity }}
                   />
                   <motion.div
-                    className={`absolute -bottom-16 -left-16 w-32 h-32 bg-gradient-to-br ${roles[currentRole].color}/15 rounded-full blur-xl`}
+                    className="absolute -bottom-16 -left-16 w-40 h-40 xs:w-48 xs:h-48 bg-gradient-to-br from-blue-700/25 to-cyan-600/25 rounded-full blur-2xl"
                     animate={{ scale: [1, 0.8, 1], opacity: [0.5, 0.8, 0.5] }}
                     transition={{ duration: 8, repeat: Infinity }}
                   />
@@ -251,17 +259,16 @@ const HeroSimple = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Indicadores mejorados */}
-            <div className="flex justify-center gap-3 mt-8">
+            {/* Indicadores mejorados - Mobile Optimized */}
+            <div className="flex justify-center gap-3 xs:gap-4 sm:gap-5 mt-8 xs:mt-10">
               {roles.map((role, index) => (
                 <motion.button
                   key={index}
                   onClick={() => setCurrentRole(index)}
-                  className={`relative w-4 h-4 rounded-full transition-all duration-500 ${
-                    index === currentRole
-                      ? `bg-gradient-to-r ${role.color} shadow-lg scale-125`
-                      : 'bg-zinc-600 hover:bg-zinc-500'
-                  }`}
+                  className={`relative w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 rounded-full transition-all duration-500 touch-target ${index === currentRole
+                    ? `bg-gradient-to-r ${role.color} shadow-lg scale-125`
+                    : 'bg-zinc-600 hover:bg-zinc-500'
+                    }`}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -278,9 +285,9 @@ const HeroSimple = () => {
           </div>
         </motion.div>
 
-        {/* Métricas rediseñadas */}
+        {/* Métricas rediseñadas - Mobile First */}
         <motion.div
-          className="grid grid-cols-3 gap-4 md:gap-8 mb-16"
+          className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 mb-16 xs:mb-20 sm:mb-24 px-4 xs:px-6 sm:px-8 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2 }}
@@ -307,38 +314,38 @@ const HeroSimple = () => {
           ].map((metric, index) => (
             <motion.div
               key={index}
-              className="relative group"
+              className="relative group xs:last:col-span-2 sm:last:col-span-1"
               initial={{ opacity: 0, y: 30, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 2 + index * 0.2 }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="relative p-6 rounded-2xl bg-slate-800/50 backdrop-blur-lg border border-slate-600/50 hover:border-slate-500/70 transition-all duration-300 group-hover:shadow-2xl">
-                <i className={`${metric.icon} text-3xl mb-3 text-transparent bg-clip-text bg-gradient-to-r ${metric.color}`}></i>
-                <div className={`text-3xl md:text-4xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r ${metric.color}`}>
+              <div className="relative p-5 xs:p-6 sm:p-8 md:p-10 rounded-2xl xs:rounded-3xl bg-slate-800/50 backdrop-blur-lg border-2 border-slate-600/50 hover:border-slate-500/70 transition-all duration-300 group-hover:shadow-2xl min-h-[140px] xs:min-h-[160px] sm:min-h-[180px] flex flex-col items-center justify-center text-center">
+                <i className={`${metric.icon} text-3xl xs:text-4xl sm:text-5xl md:text-6xl mb-3 xs:mb-4 sm:mb-5 text-transparent bg-clip-text bg-gradient-to-r ${metric.color} drop-shadow-[0_2px_8px_rgba(6,182,212,0.6)]`}></i>
+                <div className={`text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black mb-2 xs:mb-2.5 sm:mb-3 text-transparent bg-clip-text bg-gradient-to-r ${metric.color} drop-shadow-[0_2px_10px_rgba(6,182,212,0.7)]`}>
                   {metric.number}
                 </div>
-                <div className="text-sm md:text-base text-zinc-400 font-medium">
+                <div className="text-xs xs:text-sm sm:text-base md:text-lg text-cyan-100 font-bold leading-tight drop-shadow-lg">
                   {metric.label}
                 </div>
 
                 {/* Efecto de hover */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${metric.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 rounded-2xl xs:rounded-3xl bg-gradient-to-r ${metric.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* CTAs rediseñados */}
+        {/* CTAs rediseñados - Mobile First */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 xs:gap-5 sm:gap-6 justify-center items-stretch sm:items-center mb-16 xs:mb-20 sm:mb-24 px-4 xs:px-6 sm:px-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.6 }}
         >
           <motion.button
             onClick={scrollToContact}
-            className="group relative px-10 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold rounded-2xl overflow-hidden shadow-2xl w-full sm:w-auto"
+            className="group relative px-8 xs:px-10 sm:px-12 py-5 xs:py-6 sm:py-7 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold rounded-2xl xs:rounded-3xl overflow-hidden shadow-2xl w-full sm:w-auto touch-target"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, x: -30 }}
@@ -346,13 +353,13 @@ const HeroSimple = () => {
             transition={{ duration: 0.6, delay: 2.8 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative flex items-center gap-3 justify-center text-lg">
-              <i className="fas fa-comments"></i>
+            <span className="relative flex items-center gap-3 xs:gap-4 justify-center text-lg xs:text-xl sm:text-2xl">
+              <i className="fas fa-comments text-base xs:text-lg sm:text-xl"></i>
               Conversemos
               <motion.span
                 animate={{ x: [0, 8, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="text-xl"
+                className="text-xl xs:text-2xl"
               >
                 <i className="fas fa-arrow-right"></i>
               </motion.span>
@@ -361,66 +368,18 @@ const HeroSimple = () => {
 
           <motion.button
             onClick={scrollToProjects}
-            className="group relative px-10 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-2xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto shadow-lg hover:shadow-cyan-400/50"
+            className="group relative px-8 xs:px-10 sm:px-12 py-5 xs:py-6 sm:py-7 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-2xl xs:rounded-3xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto shadow-lg hover:shadow-cyan-400/50 touch-target"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 3 }}
           >
-            <span className="flex items-center gap-3 justify-center text-lg">
-              <i className="fas fa-rocket"></i>
+            <span className="flex items-center gap-3 xs:gap-4 justify-center text-lg xs:text-xl sm:text-2xl">
+              <i className="fas fa-rocket text-base xs:text-lg sm:text-xl"></i>
               Ver Proyectos
             </span>
           </motion.button>
-        </motion.div>
-
-        {/* Stack tecnológico completamente rediseñado */}
-        <motion.div
-          className="mt-16"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 3.2 }}
-        >
-          <motion.h3
-            className="text-xl md:text-2xl font-bold text-zinc-400 mb-8 text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3.4 }}
-          >
-            <i className="fas fa-code mr-3 text-blue-400"></i>
-            Tecnologías que domino
-          </motion.h3>
-
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            {[
-              { name: 'Python', color: 'from-yellow-500 to-yellow-600', icon: 'fab fa-python', bg: 'bg-yellow-500/10' },
-              { name: 'React', color: 'from-cyan-400 to-blue-500', icon: 'fab fa-react', bg: 'bg-cyan-500/10' },
-              { name: 'JavaScript', color: 'from-yellow-400 to-yellow-500', icon: 'fab fa-js-square', bg: 'bg-yellow-500/10' },
-              { name: 'Node.js', color: 'from-green-500 to-green-600', icon: 'fab fa-node-js', bg: 'bg-green-500/10' },
-              { name: 'Docker', color: 'from-blue-500 to-blue-600', icon: 'fab fa-docker', bg: 'bg-blue-500/10' },
-              { name: 'Git', color: 'from-orange-500 to-red-500', icon: 'fab fa-git-alt', bg: 'bg-orange-500/10' },
-              { name: 'PostgreSQL', color: 'from-blue-600 to-blue-700', icon: 'fas fa-database', bg: 'bg-blue-600/10' },
-              { name: 'Ruby', color: 'from-red-500 to-red-600', icon: 'far fa-gem', bg: 'bg-red-500/10' }
-            ].map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                className={`group relative flex items-center gap-3 px-4 py-3 ${tech.bg} backdrop-blur-lg border border-slate-600/30 rounded-full hover:border-slate-500/50 transition-all duration-300 cursor-pointer`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 3.6 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-              >
-                <i className={`${tech.icon} text-lg text-transparent bg-clip-text bg-gradient-to-r ${tech.color}`}></i>
-                <span className="text-zinc-300 font-medium text-sm md:text-base">
-                  {tech.name}
-                </span>
-
-                {/* Efecto de brillo al hover */}
-                <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${tech.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </div>
     </motion.section>

@@ -1324,39 +1324,39 @@ const CVGenerator = () => {
             )}
           </AnimatePresence>
 
-          {/* Selector de Plantilla Mejorado */}
+          {/* Selector de Plantilla Compacto */}
           <motion.div
-            className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 mb-8"
+            className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl p-3 sm:p-6 mb-4 sm:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <h3 className="text-xl font-bold mb-4 text-white flex items-center">
-              <i className="fas fa-palette mr-3 text-purple-400"></i>
-              Plantilla
+            <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-white flex items-center">
+              <i className="fas fa-palette mr-2 sm:mr-3 text-purple-400 text-sm sm:text-base"></i>
+              <span>Plantilla</span>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex gap-2 sm:grid sm:grid-cols-3 sm:gap-4">
               {Object.values(cvTemplates).map(template => (
                 <button
                   key={template.id}
                   onClick={() => setSelectedTemplate(template.id)}
-                  className={`p-6 rounded-xl border-2 transition-all transform hover:scale-105 ${
+                  className={`flex-1 sm:flex-none p-2 sm:p-6 rounded-lg sm:rounded-xl border-2 transition-all ${
                     selectedTemplate === template.id
-                      ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-purple-500/20 shadow-xl shadow-blue-500/20'
+                      ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-purple-500/20 shadow-lg sm:shadow-xl'
                       : 'border-slate-600 bg-slate-700/30 hover:border-slate-500'
                   }`}
                 >
                   <div className="text-center">
-                    <div className="text-4xl mb-3">
+                    <div className="text-lg sm:text-4xl mb-1 sm:mb-3">
                       {template.id === 'harvard' && <i className="fas fa-scroll text-amber-500"></i>}
                       {template.id === 'corporate' && <i className="fas fa-briefcase text-blue-500"></i>}
                       {template.id === 'minimal' && <i className="fas fa-bolt text-yellow-400"></i>}
                     </div>
-                    <h4 className="font-bold text-lg mb-2 text-white">{template.name}</h4>
-                    <p className="text-sm text-gray-400">{template.description}</p>
+                    <h4 className="font-bold text-xs sm:text-lg sm:mb-2 text-white leading-tight">{template.name}</h4>
+                    <p className="text-xs sm:text-sm text-gray-400 hidden md:block mt-1 sm:mt-0">{template.description}</p>
                     {selectedTemplate === template.id && (
-                      <div className="mt-4 text-blue-400 font-semibold flex items-center justify-center">
-                        <i className="fas fa-check-circle mr-2"></i>
-                        Seleccionada
+                      <div className="mt-1 sm:mt-4 text-blue-400 font-semibold flex items-center justify-center text-xs sm:text-base">
+                        <i className="fas fa-check-circle"></i>
+                        <span className="ml-1 sm:ml-2 hidden sm:inline">Seleccionada</span>
                       </div>
                     )}
                   </div>

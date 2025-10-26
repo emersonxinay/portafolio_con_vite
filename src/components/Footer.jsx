@@ -132,6 +132,8 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
+      role="contentinfo"
+      aria-label="Pie de página"
     >
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -200,7 +202,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Social Links */}
-            <div className="flex flex-wrap gap-2 xs:gap-3">
+            <nav aria-label="Redes sociales" className="flex flex-wrap gap-2 xs:gap-3">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon
                 return (
@@ -209,6 +211,7 @@ const Footer = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visitar perfil de ${social.name}`}
                     className={`mobile-btn p-2 xs:p-2.5 bg-slate-800/50 border border-slate-700/50 rounded-lg xs:rounded-xl text-zinc-400 transition-all duration-300 ${social.color} ${social.bgColor} hover:border-current touch-target`}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -216,17 +219,17 @@ const Footer = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <IconComponent className="text-xs xs:text-sm" />
+                    <IconComponent className="text-xs xs:text-sm" aria-hidden="true" />
                   </motion.a>
                 )
               })}
-            </div>
+            </nav>
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants}>
+          <motion.nav variants={itemVariants} aria-label="Enlaces rápidos">
             <h4 className="text-lg xs:text-xl font-bold text-white mb-4 xs:mb-6 flex items-center gap-2">
-              <div className="w-1 h-6 xs:h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full"></div>
+              <div className="w-1 h-6 xs:h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full" aria-hidden="true"></div>
               Enlaces Rápidos
             </h4>
             <ul className="space-y-2 xs:space-y-3">
@@ -246,12 +249,12 @@ const Footer = () => {
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </motion.nav>
 
           {/* Services */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg xs:text-xl font-bold text-white mb-4 xs:mb-6 flex items-center gap-2">
-              <div className="w-1 h-6 xs:h-8 bg-gradient-to-b from-purple-400 to-pink-500 rounded-full"></div>
+          <motion.section variants={itemVariants} aria-labelledby="services-heading">
+            <h4 id="services-heading" className="text-lg xs:text-xl font-bold text-white mb-4 xs:mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 xs:h-8 bg-gradient-to-b from-purple-400 to-pink-500 rounded-full" aria-hidden="true"></div>
               Servicios
             </h4>
             <ul className="space-y-2 xs:space-y-3">
@@ -267,7 +270,7 @@ const Footer = () => {
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </motion.section>
         </div>
 
         {/* Contact Info Bar */}
@@ -293,22 +296,22 @@ const Footer = () => {
             <div className="flex flex-wrap items-center justify-center gap-3 xs:gap-4">
               {contactInfo.map((contact, contactIndex) => {
                 const IconComponent = contact.icon
+                const contactType = contact.text.includes('@') ? 'Email' :
+                  contact.text.includes('+') ? 'WhatsApp' : 'Ubicación'
                 return (
                   <motion.a
                     key={contactIndex}
                     href={contact.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Contactar por ${contactType}: ${contact.text}`}
                     className={`mobile-btn flex items-center gap-2 xs:gap-3 px-3 xs:px-4 py-2 xs:py-2.5 bg-slate-800/50 border border-slate-700/50 rounded-xl xs:rounded-2xl text-zinc-300 hover:text-white transition-all duration-300 hover:border-current touch-target text-xs xs:text-sm`}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <IconComponent className={`${contact.color} text-sm xs:text-base`} />
+                    <IconComponent className={`${contact.color} text-sm xs:text-base`} aria-hidden="true" />
                     <span className="hidden xs:inline">{contact.text}</span>
-                    <span className="xs:hidden">
-                      {contact.text.includes('@') ? 'Email' :
-                        contact.text.includes('+') ? 'WhatsApp' : 'Ubicación'}
-                    </span>
+                    <span className="xs:hidden">{contactType}</span>
                   </motion.a>
                 )
               })}
@@ -316,11 +319,12 @@ const Footer = () => {
               {/* Contact Modal Trigger Button */}
               <motion.button
                 onClick={() => setIsContactModalOpen(true)}
+                aria-label="Abrir formulario de contacto"
                 className="mobile-btn flex items-center gap-2 xs:gap-3 px-4 xs:px-6 py-2.5 xs:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 touch-target text-xs xs:text-sm"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaEnvelope className="text-sm xs:text-base" />
+                <FaEnvelope className="text-sm xs:text-base" aria-hidden="true" />
                 <span>Contactar</span>
               </motion.button>
             </div>

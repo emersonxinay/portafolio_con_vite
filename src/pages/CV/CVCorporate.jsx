@@ -16,12 +16,12 @@ const CVCorporate = () => {
   };
 
   const keyMetrics = [
-    { label: currentLanguage === 'ES' ? 'Años de Experiencia' : 'Years of Experience', value: "6+", icon: "⏱️" },
-    { label: currentLanguage === 'ES' ? 'Proyectos Exitosos' : 'Successful Projects', value: "50+", icon: "" },
-    { label: currentLanguage === 'ES' ? 'Desarrolladores Mentoreados' : 'Developers Mentored', value: "200+", icon: "👥" },
-    { label: currentLanguage === 'ES' ? 'Mejora en Performance' : 'Performance Improvement', value: "70%", icon: "📈" },
-    { label: currentLanguage === 'ES' ? 'Reducción de Costos' : 'Cost Reduction', value: "$2M+", icon: "" },
-    { label: currentLanguage === 'ES' ? 'Uptime en Producción' : 'Production Uptime', value: "99.9%", icon: "" }
+    { label: currentLanguage === 'ES' ? 'Años de Experiencia' : 'Years of Experience', value: "6+", icon: "fas fa-clock" },
+    { label: currentLanguage === 'ES' ? 'Proyectos Exitosos' : 'Successful Projects', value: "50+", icon: "fas fa-project-diagram" },
+    { label: currentLanguage === 'ES' ? 'Desarrolladores Mentoreados' : 'Developers Mentored', value: "200+", icon: "fas fa-users" },
+    { label: currentLanguage === 'ES' ? 'Mejora en Performance' : 'Performance Improvement', value: "70%", icon: "fas fa-chart-line" },
+    { label: currentLanguage === 'ES' ? 'Reducción de Costos' : 'Cost Reduction', value: "$2M+", icon: "fas fa-dollar-sign" },
+    { label: currentLanguage === 'ES' ? 'Uptime en Producción' : 'Production Uptime', value: "99.9%", icon: "fas fa-server" }
   ];
 
   const coreCompetencies = [
@@ -399,7 +399,7 @@ const CVCorporate = () => {
             className="control-btn pdf-btn"
             aria-label={t('cv.common.download_pdf')}
           >
-            <span className="text-xs">📄</span>
+            <i className="fas fa-file-pdf text-xs"></i>
             <span className="hidden xs:inline text-xs">{currentLanguage === 'ES' ? 'PDF' : 'PDF'}</span>
           </button>
         </div>
@@ -425,18 +425,18 @@ const CVCorporate = () => {
               </div>
               <div className="text-center md:text-right">
                 <div className="space-y-1 md:space-y-2 text-blue-100 text-xs md:text-sm">
-                  <div>📧 {t('cv.harvard.email')}</div>
+                  <div><i className="fas fa-envelope mr-2"></i>{t('cv.harvard.email')}</div>
                   <div>
                     <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">
-                      {t('cv.harvard.linkedin')}
+                      <i className="fab fa-linkedin mr-2"></i>{t('cv.harvard.linkedin')}
                     </a>
                   </div>
                   <div>
                     <a href="http://github.com/emersonxinay" target="_blank" rel="noopener noreferrer">
-                      {t('cv.harvard.github')}
+                      <i className="fab fa-github mr-2"></i>{t('cv.harvard.github')}
                     </a>
                   </div>
-                  <div>📍{t('cv.harvard.location')}</div>
+                  <div><i className="fas fa-map-marker-alt mr-2"></i>{t('cv.harvard.location')}</div>
                 </div>
               </div>
             </div>
@@ -468,7 +468,9 @@ const CVCorporate = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="text-lg md:text-3xl mb-1 md:mb-2">{metric.icon}</div>
+                  <div className="text-lg md:text-3xl mb-1 md:mb-2 text-blue-500">
+                    <i className={metric.icon}></i>
+                  </div>
                   <div className="text-sm md:text-2xl font-bold text-blue-600 mb-1">{metric.value}</div>
                   <div className="text-xs md:text-sm text-gray-600">{metric.label}</div>
                 </motion.div>
@@ -489,19 +491,19 @@ const CVCorporate = () => {
                 <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">{currentLanguage === 'ES' ? '¿Por qué elegirme?' : 'Why choose me?'}</h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
+                    <i className="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                     <span className="responsive-text"><strong>{currentLanguage === 'ES' ? 'Visión Estratégica:' : 'Strategic Vision:'}</strong> {currentLanguage === 'ES' ? 'Combino expertise técnico con entendimiento del negocio' : 'I combine technical expertise with business understanding'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
+                    <i className="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                     <span className="responsive-text"><strong>{currentLanguage === 'ES' ? 'Liderazgo Probado:' : 'Proven Leadership:'}</strong> {currentLanguage === 'ES' ? 'He formado y liderado equipos técnicos de alto rendimiento' : 'I have formed and led high-performance technical teams'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
+                    <i className="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                     <span className="responsive-text"><strong>{currentLanguage === 'ES' ? 'Innovación Práctica:' : 'Practical Innovation:'}</strong> {currentLanguage === 'ES' ? 'Implemento tecnologías emergentes que generan valor real' : 'I implement emerging technologies that generate real value'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
+                    <i className="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                     <span className="responsive-text"><strong>{currentLanguage === 'ES' ? 'Resultados Medibles:' : 'Measurable Results:'}</strong> {currentLanguage === 'ES' ? 'Track record comprobado de ROI positivo en proyectos' : 'Proven track record of positive ROI in projects'}</span>
                   </li>
                 </ul>
@@ -527,7 +529,7 @@ const CVCorporate = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="responsive-title font-bold mb-3 md:mb-6">🛠️ {currentLanguage === 'ES' ? 'Competencias Clave' : 'Core Competencies'}</h2>
+            <h2 className="responsive-title font-bold mb-3 md:mb-6"><i className="fas fa-tools mr-2"></i>{currentLanguage === 'ES' ? 'Competencias Clave' : 'Core Competencies'}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
               {coreCompetencies.map((comp, index) => (
                 <motion.div
@@ -559,7 +561,7 @@ const CVCorporate = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <h2 className="responsive-title font-bold mb-3 md:mb-6">💼 {currentLanguage === 'ES' ? 'Experiencia Profesional' : 'Professional Experience'}</h2>
+            <h2 className="responsive-title font-bold mb-3 md:mb-6"><i className="fas fa-briefcase mr-2"></i>{currentLanguage === 'ES' ? 'Experiencia Profesional' : 'Professional Experience'}</h2>
             <div className="space-y-4 md:space-y-8">
               {professionalExperience.map((exp, index) => (
                 <motion.div
@@ -614,7 +616,7 @@ const CVCorporate = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <h2 className="responsive-title font-bold mb-3 md:mb-6">🎓 {currentLanguage === 'ES' ? 'Educación & Certificaciones' : 'Education & Certifications'}</h2>
+            <h2 className="responsive-title font-bold mb-3 md:mb-6"><i className="fas fa-graduation-cap mr-2"></i>{currentLanguage === 'ES' ? 'Educación & Certificaciones' : 'Education & Certifications'}</h2>
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               <div>
                 <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">{currentLanguage === 'ES' ? 'Educación Universitaria' : 'University Education'}</h3>
@@ -630,15 +632,15 @@ const CVCorporate = () => {
                 <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">{currentLanguage === 'ES' ? 'Certificaciones Profesionales' : 'Professional Certifications'}</h3>
                 <div className="space-y-2 md:space-y-3">
                   <div className="flex items-center">
-                    <span className="text-green-500 mr-2">🏆</span>
+                    <i className="fas fa-award text-green-500 mr-2"></i>
                     <span className="text-xs md:text-sm">Full Stack Web Development (2020)</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-500 mr-2">🏆</span>
+                    <i className="fas fa-award text-green-500 mr-2"></i>
                     <span className="text-xs md:text-sm">Python for Data Science & AI (2022)</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-500 mr-2">🏆</span>
+                    <i className="fas fa-award text-green-500 mr-2"></i>
                     <span className="text-xs md:text-sm">Docker & Kubernetes (2023)</span>
                   </div>
                 </div>
@@ -655,7 +657,7 @@ const CVCorporate = () => {
           >
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               <div>
-                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"> {currentLanguage === 'ES' ? 'Idiomas' : 'Languages'}</h3>
+                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"><i className="fas fa-language mr-2"></i>{currentLanguage === 'ES' ? 'Idiomas' : 'Languages'}</h3>
                 <div className="space-y-1 md:space-y-2">
                   <div>
                     <span className="font-semibold text-xs md:text-sm">{currentLanguage === 'ES' ? 'Español:' : 'Spanish:'}</span> <span className="text-xs md:text-sm">{currentLanguage === 'ES' ? 'Nativo' : 'Native'}</span>
@@ -666,21 +668,21 @@ const CVCorporate = () => {
                 </div>
               </div>
               <div>
-                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600">📍 {currentLanguage === 'ES' ? 'Disponibilidad' : 'Availability'}</h3>
+                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"><i className="fas fa-map-marker-alt mr-2"></i>{currentLanguage === 'ES' ? 'Disponibilidad' : 'Availability'}</h3>
                 <div className="space-y-1 md:space-y-2 text-gray-700">
-                  <p className="text-xs md:text-sm">✓ {currentLanguage === 'ES' ? 'Trabajo remoto' : 'Remote work'}</p>
-                  <p className="text-xs md:text-sm">✓ {currentLanguage === 'ES' ? 'Proyectos consultoría' : 'Consulting projects'}</p>
-                  <p className="text-xs md:text-sm">✓ {currentLanguage === 'ES' ? 'Liderazgo técnico' : 'Technical leadership'}</p>
-                  <p className="text-xs md:text-sm">✓ {currentLanguage === 'ES' ? 'Disponible inmediato' : 'Immediately available'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-check text-green-500 mr-2"></i>{currentLanguage === 'ES' ? 'Trabajo remoto' : 'Remote work'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-check text-green-500 mr-2"></i>{currentLanguage === 'ES' ? 'Proyectos consultoría' : 'Consulting projects'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-check text-green-500 mr-2"></i>{currentLanguage === 'ES' ? 'Liderazgo técnico' : 'Technical leadership'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-check text-green-500 mr-2"></i>{currentLanguage === 'ES' ? 'Disponible inmediato' : 'Immediately available'}</p>
                 </div>
               </div>
               <div>
-                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"> {currentLanguage === 'ES' ? 'Objetivos' : 'Goals'}</h3>
+                <h3 className="responsive-subtitle font-semibold mb-2 md:mb-4 text-blue-600"><i className="fas fa-target mr-2"></i>{currentLanguage === 'ES' ? 'Objetivos' : 'Goals'}</h3>
                 <div className="space-y-1 md:space-y-2 text-gray-700">
-                  <p className="text-xs md:text-sm">• CTO/Tech Lead roles</p>
-                  <p className="text-xs md:text-sm">• {currentLanguage === 'ES' ? 'Proyectos de alto impacto' : 'High-impact projects'}</p>
-                  <p className="text-xs md:text-sm">• {currentLanguage === 'ES' ? 'Transformación digital' : 'Digital transformation'}</p>
-                  <p className="text-xs md:text-sm">• {currentLanguage === 'ES' ? 'Innovación tecnológica' : 'Technological innovation'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-angle-right text-blue-500 mr-2"></i>CTO/Tech Lead roles</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-angle-right text-blue-500 mr-2"></i>{currentLanguage === 'ES' ? 'Proyectos de alto impacto' : 'High-impact projects'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-angle-right text-blue-500 mr-2"></i>{currentLanguage === 'ES' ? 'Transformación digital' : 'Digital transformation'}</p>
+                  <p className="text-xs md:text-sm"><i className="fas fa-angle-right text-blue-500 mr-2"></i>{currentLanguage === 'ES' ? 'Innovación tecnológica' : 'Technological innovation'}</p>
                 </div>
               </div>
             </div>

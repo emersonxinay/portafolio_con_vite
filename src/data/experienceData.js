@@ -6,7 +6,7 @@
 export const professionalAchievements = [
   {
     title: "Ingeniero de Sistemas",
-    description: "UNHEVAL Perú • Egresado 2018 • Título reconocido SUNEDU 2024",
+    description: "UNHEVAL Perú • Egresado 2018 • Título reconocido SUNEDU",
     icon: "fas fa-graduation-cap",
     color: "from-blue-400 to-cyan-500"
   },

@@ -45,16 +45,40 @@ const CVHarvard = () => {
 
   const projects = [
     {
+      title: t('cv.harvard.projects.kefyto_title'),
+      description: t('cv.harvard.projects.kefyto_description'),
+      year: t('cv.harvard.projects.kefyto_year'),
+      tech: t('cv.harvard.projects.kefyto_tech')
+    },
+    {
       title: t('cv.harvard.projects.hazuki_title'),
       description: t('cv.harvard.projects.hazuki_description'),
       year: t('cv.harvard.projects.hazuki_year'),
       tech: t('cv.harvard.projects.hazuki_tech')
     },
     {
+      title: t('cv.harvard.projects.netmuz_title'),
+      description: t('cv.harvard.projects.netmuz_description'),
+      year: t('cv.harvard.projects.netmuz_year'),
+      tech: t('cv.harvard.projects.netmuz_tech')
+    },
+    {
       title: t('cv.harvard.projects.compilando_title'),
       description: t('cv.harvard.projects.compilando_description'),
       year: t('cv.harvard.projects.compilando_year'),
       tech: t('cv.harvard.projects.compilando_tech')
+    },
+    {
+      title: t('cv.harvard.projects.escondida_title'),
+      description: t('cv.harvard.projects.escondida_description'),
+      year: t('cv.harvard.projects.escondida_year'),
+      tech: t('cv.harvard.projects.escondida_tech')
+    },
+    {
+      title: t('cv.harvard.projects.qr_title'),
+      description: t('cv.harvard.projects.qr_description'),
+      year: t('cv.harvard.projects.qr_year'),
+      tech: t('cv.harvard.projects.qr_tech')
     }
   ];
 
@@ -361,7 +385,7 @@ const CVHarvard = () => {
             className="control-btn pdf-btn"
             aria-label={t('cv.common.download_pdf')}
           >
-            <span className="text-xs">📄</span>
+            <i className="fas fa-file-pdf text-xs"></i>
             <span className="hidden xs:inline text-xs">PDF</span>
           </button>
         </div>
@@ -379,18 +403,18 @@ const CVHarvard = () => {
           <h1 className="responsive-title font-bold mb-2 md:mb-4">{t('cv.harvard.title')}</h1>
           <p className="responsive-subtitle text-gray-600 mb-4">{t('cv.harvard.subtitle')}</p>
           <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-700 px-4">
-            <span>📧 {t('cv.harvard.email')}</span>
+            <span><i className="fas fa-envelope mr-1"></i>{t('cv.harvard.email')}</span>
             <span>
               <a href="http://linkedin.com/in/emerson-espinoza-aguirre" target="_blank" rel="noopener noreferrer">
-                {t('cv.harvard.linkedin')}
+                <i className="fab fa-linkedin mr-1"></i>{t('cv.harvard.linkedin')}
               </a>
             </span>
             <span>
               <a href="http://github.com/emersonxinay" target="_blank" rel="noopener noreferrer">
-                {t('cv.harvard.github')}
+                <i className="fab fa-github mr-1"></i>{t('cv.harvard.github')}
               </a>
             </span>
-            <span>📍{t('cv.harvard.location')}</span>
+            <span><i className="fas fa-map-marker-alt mr-1"></i>{t('cv.harvard.location')}</span>
           </div>
 
           {/* Translation note */}

@@ -1226,6 +1226,35 @@
       "development": "In Development"
     }
   },
+  "cvGenerator": {
+    "instructions": {
+      "title": "How to Create Your Professional Resume",
+      "subtitle": "Create your resume in 3 simple steps",
+      "step1": {
+        "number": "1",
+        "title": "Fill out your information",
+        "description": "Complete the form with your personal data, work experience, projects, and skills"
+      },
+      "step2": {
+        "number": "2",
+        "title": "Choose a template",
+        "description": "Select from 3 professional formats: Corporate, Harvard, or Minimal"
+      },
+      "step3": {
+        "number": "3",
+        "title": "Download your PDF",
+        "description": "Generate your resume in PDF format with text or image. Save different versions for each position"
+      },
+      "tips": {
+        "title": "Professional Tips",
+        "tip1": "Adapt your resume for each job position",
+        "tip2": "Use the Harvard template for traditional companies",
+        "tip3": "The Corporate template is ideal for tech companies",
+        "tip4": "Save different versions for different industries"
+      },
+      "cta": "Start Creating Your Resume"
+    }
+  },
   "seo": {
     "home": {
       "description": "Peruvian Systems Engineer residing in Chile. 6+ years transforming ideas into scalable technological solutions. Specialist in tech education, fullstack development and collaborative work.",

@@ -145,7 +145,7 @@ const CVPreview = ({ cvData, template }) => {
           <h2 className="text-base font-bold uppercase border-b-2 border-gray-400 pb-2 mb-4 tracking-wide">
             Habilidades Técnicas
           </h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {cvData.skills.programming.length > 0 && (
               <div>
                 <p className="font-bold text-sm mb-2 text-gray-900">Lenguajes:</p>
@@ -179,7 +179,7 @@ const CVPreview = ({ cvData, template }) => {
               </div>
             )}
             {cvData.skills.other.length > 0 && (
-              <div className="col-span-2">
+              <div className="sm:col-span-2">
                 <p className="font-bold text-sm mb-2 text-gray-900">Otras Habilidades:</p>
                 <p className="text-xs text-gray-700" style={{ lineHeight: '1.6' }}>
                   {cvData.skills.other.join(', ')}
@@ -287,8 +287,8 @@ const CVPreview = ({ cvData, template }) => {
           </div>
         )}
 
-        {/* Education & Skills en 2 columnas */}
-        <div className="grid grid-cols-2 gap-6">
+        {/* Education & Skills */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Education */}
           {cvData.education.filter(e => e.enabled).length > 0 && (
             <div>
@@ -333,6 +333,26 @@ const CVPreview = ({ cvData, template }) => {
                 </div>
               </div>
             )}
+            {cvData.skills.cloud.length > 0 && (
+              <div className="mb-3">
+                <p className="font-semibold text-sm mb-1">Cloud & DevOps</p>
+                <div className="flex flex-wrap gap-1">
+                  {cvData.skills.cloud.map((skill, i) => (
+                    <span key={i} className="bg-gray-200 px-2 py-1 rounded text-xs">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {cvData.skills.databases.length > 0 && (
+              <div className="mb-3">
+                <p className="font-semibold text-sm mb-1">Bases de Datos</p>
+                <div className="flex flex-wrap gap-1">
+                  {cvData.skills.databases.map((skill, i) => (
+                    <span key={i} className="bg-gray-200 px-2 py-1 rounded text-xs">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -349,7 +369,7 @@ const CVPreview = ({ cvData, template }) => {
           <p className="text-sm text-gray-600">{cvData.personalInfo.title}</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 text-xs mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 text-xs mb-6">
           <div>
             <p className="font-bold mb-1">CONTACT</p>
             <p>{cvData.personalInfo.email}</p>

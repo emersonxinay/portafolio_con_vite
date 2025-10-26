@@ -1233,6 +1233,35 @@
       "development": "En desarrollo"
     }
   },
+  "cvGenerator": {
+    "instructions": {
+      "title": "Cómo Crear tu Currículum Profesional",
+      "subtitle": "Crea tu CV en 3 simples pasos",
+      "step1": {
+        "number": "1",
+        "title": "Completa tu información",
+        "description": "Rellena el formulario con tus datos personales, experiencia laboral, proyectos y habilidades"
+      },
+      "step2": {
+        "number": "2",
+        "title": "Elige una plantilla",
+        "description": "Selecciona entre 3 formatos profesionales: Corporativo, Harvard o Minimalista"
+      },
+      "step3": {
+        "number": "3",
+        "title": "Descarga tu PDF",
+        "description": "Genera tu CV en formato PDF con texto o imagen. Guarda diferentes versiones para cada puesto"
+      },
+      "tips": {
+        "title": "Consejos Profesionales",
+        "tip1": "Adapta tu CV para cada puesto de trabajo",
+        "tip2": "Usa la plantilla Harvard para empresas tradicionales",
+        "tip3": "La plantilla Corporativa es ideal para empresas tech",
+        "tip4": "Guarda diferentes versiones para distintas industrias"
+      },
+      "cta": "Comienza a Crear tu CV"
+    }
+  },
   "seo": {
     "home": {
       "description": "Ingeniero de Sistemas peruano con residencia en Chile. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en educación tecnológica, desarrollo fullstack y trabajo colaborativo.",

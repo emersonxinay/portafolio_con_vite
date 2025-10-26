@@ -4,11 +4,15 @@ import { defaultCVData, cvTemplates, jobPresets } from '../../data/cvTemplateDat
 import CVPreview from './CVPreview';
 import CVForm from './CVForm';
 import SEOHead from '../../components/SEO/SEOHead';
+import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from 'docx';
+import { saveAs } from 'file-saver';
 
 const CVGenerator = () => {
+  const { t } = useTranslation();
   const [cvData, setCvData] = useState(defaultCVData);
   const [selectedTemplate, setSelectedTemplate] = useState('harvard');
   const [savedVersions, setSavedVersions] = useState([]);
@@ -17,7 +21,7 @@ const CVGenerator = () => {
   const [activeTab, setActiveTab] = useState('personal');
   const [isSaving, setIsSaving] = useState(false);
   const [showVersions, setShowVersions] = useState(false);
-  const [showPdfMenu, setShowPdfMenu] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
   const formRef = useRef(null);
 
   // Cargar versiones guardadas del localStorage
@@ -526,6 +530,458 @@ const CVGenerator = () => {
     setTimeout(() => successToast.remove(), 3000);
   };
 
+  // Exportar a Word (formato editable) - Respeta cada plantilla
+  const downloadWord = async () => {
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-24 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-xl z-50';
+    toast.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Generando documento Word...';
+    document.body.appendChild(toast);
+
+    try {
+      const sections = [];
+
+      // Header según plantilla seleccionada
+      if (selectedTemplate === 'corporate') {
+        // CORPORATE: Header centrado con fondo azul (simulado con mayúsculas y bold)
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: cvData.personalInfo.fullName.toUpperCase(),
+                bold: true,
+                size: 36,
+                color: '2563EB' // Azul corporativo
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 150 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: cvData.personalInfo.title,
+                size: 22,
+                color: '2563EB'
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 150 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.email} | ${cvData.personalInfo.phone} | ${cvData.personalInfo.location}`,
+                size: 18
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 100 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.linkedin} | ${cvData.personalInfo.github}`,
+                size: 18
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 400 }
+          })
+        );
+      } else if (selectedTemplate === 'harvard') {
+        // HARVARD: Header centrado elegante con línea
+        sections.push(
+          new Paragraph({
+            text: cvData.personalInfo.fullName,
+            heading: HeadingLevel.HEADING_1,
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 150 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: cvData.personalInfo.title,
+                size: 22
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 150 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.email} • ${cvData.personalInfo.phone} • ${cvData.personalInfo.location}`,
+                size: 18
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 100 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.linkedin} • ${cvData.personalInfo.github}`,
+                size: 18
+              })
+            ],
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 300, before: 50 },
+            border: {
+              bottom: {
+                color: '999999',
+                space: 1,
+                style: 'single',
+                size: 6
+              }
+            }
+          }),
+          new Paragraph({
+            text: '',
+            spacing: { after: 200 }
+          })
+        );
+      } else if (selectedTemplate === 'minimal') {
+        // MINIMAL: Header simple alineado a la izquierda
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: cvData.personalInfo.fullName,
+                bold: true,
+                size: 32
+              })
+            ],
+            spacing: { after: 100 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: cvData.personalInfo.title,
+                size: 20
+              })
+            ],
+            spacing: { after: 150 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.email} | ${cvData.personalInfo.phone} | ${cvData.personalInfo.location}`,
+                size: 18
+              })
+            ],
+            spacing: { after: 50 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${cvData.personalInfo.linkedin} | ${cvData.personalInfo.github}`,
+                size: 18
+              })
+            ],
+            spacing: { after: 400 }
+          })
+        );
+      }
+
+      // Resumen profesional
+      if (cvData.personalInfo.summary) {
+        sections.push(
+          new Paragraph({
+            text: 'RESUMEN PROFESIONAL',
+            heading: HeadingLevel.HEADING_2,
+            spacing: { before: 200, after: 200 }
+          }),
+          new Paragraph({
+            text: cvData.personalInfo.summary,
+            spacing: { after: 400 }
+          })
+        );
+      }
+
+      // Experiencia
+      sections.push(
+        new Paragraph({
+          text: 'EXPERIENCIA LABORAL',
+          heading: HeadingLevel.HEADING_2,
+          spacing: { before: 200, after: 200 }
+        })
+      );
+
+      cvData.experience.filter(exp => exp.enabled).forEach(exp => {
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: exp.title,
+                bold: true,
+                size: 24
+              })
+            ],
+            spacing: { before: 200, after: 100 }
+          }),
+          new Paragraph({
+            text: `${exp.company} | ${exp.location}`,
+            spacing: { after: 100 }
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: exp.period,
+                italics: true
+              })
+            ],
+            spacing: { after: 150 }
+          })
+        );
+
+        exp.achievements.forEach(achievement => {
+          if (achievement) {
+            sections.push(
+              new Paragraph({
+                text: `• ${achievement}`,
+                spacing: { after: 100 }
+              })
+            );
+          }
+        });
+
+        if (exp.technologies && exp.technologies.length > 0) {
+          sections.push(
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: 'Tecnologías: ',
+                  bold: true,
+                  size: 18
+                }),
+                new TextRun({
+                  text: exp.technologies.join(', '),
+                  size: 18
+                })
+              ],
+              spacing: { after: 200 }
+            })
+          );
+        }
+      });
+
+      // Proyectos
+      const enabledProjects = cvData.projects.filter(proj => proj.enabled);
+      if (enabledProjects.length > 0) {
+        sections.push(
+          new Paragraph({
+            text: 'PROYECTOS DESTACADOS',
+            heading: HeadingLevel.HEADING_2,
+            spacing: { before: 400, after: 200 }
+          })
+        );
+
+        enabledProjects.forEach(project => {
+          sections.push(
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: project.title,
+                  bold: true,
+                  size: 24
+                })
+              ],
+              spacing: { before: 200, after: 100 }
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: project.year ? `${project.year} - ` : '',
+                  italics: true,
+                  size: 18
+                }),
+                new TextRun({
+                  text: project.description,
+                  size: 20
+                })
+              ],
+              spacing: { after: 100 }
+            })
+          );
+
+          if (project.technologies && project.technologies.length > 0) {
+            sections.push(
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: 'Tecnologías: ',
+                    bold: true,
+                    size: 18
+                  }),
+                  new TextRun({
+                    text: project.technologies.join(', '),
+                    italics: true,
+                    size: 18
+                  })
+                ],
+                spacing: { after: 150 }
+              })
+            );
+          }
+        });
+      }
+
+      // Educación
+      const enabledEducation = cvData.education.filter(e => e.enabled);
+      if (enabledEducation.length > 0) {
+        sections.push(
+          new Paragraph({
+            text: 'EDUCACIÓN',
+            heading: HeadingLevel.HEADING_2,
+            spacing: { before: 400, after: 200 }
+          })
+        );
+
+        enabledEducation.forEach(edu => {
+          sections.push(
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: edu.degree,
+                  bold: true,
+                  size: 24
+                })
+              ],
+              spacing: { before: 200, after: 100 }
+            }),
+            new Paragraph({
+              text: `${edu.institution} | ${edu.location}`,
+              spacing: { after: 100 }
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: edu.period,
+                  italics: true
+                })
+              ],
+              spacing: { after: edu.details ? 100 : 200 }
+            })
+          );
+
+          if (edu.details) {
+            sections.push(
+              new Paragraph({
+                text: edu.details,
+                spacing: { after: 200 }
+              })
+            );
+          }
+        });
+      }
+
+      // Habilidades
+      sections.push(
+        new Paragraph({
+          text: 'HABILIDADES TÉCNICAS',
+          heading: HeadingLevel.HEADING_2,
+          spacing: { before: 400, after: 200 }
+        })
+      );
+
+      if (cvData.skills.programming.length > 0) {
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: 'Lenguajes: ',
+                bold: true
+              }),
+              new TextRun({
+                text: cvData.skills.programming.join(', ')
+              })
+            ],
+            spacing: { after: 150 }
+          })
+        );
+      }
+
+      if (cvData.skills.frameworks.length > 0) {
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: 'Frameworks: ',
+                bold: true
+              }),
+              new TextRun({
+                text: cvData.skills.frameworks.join(', ')
+              })
+            ],
+            spacing: { after: 150 }
+          })
+        );
+      }
+
+      if (cvData.skills.cloud.length > 0) {
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: 'Cloud & DevOps: ',
+                bold: true
+              }),
+              new TextRun({
+                text: cvData.skills.cloud.join(', ')
+              })
+            ],
+            spacing: { after: 150 }
+          })
+        );
+      }
+
+      if (cvData.skills.databases.length > 0) {
+        sections.push(
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: 'Bases de Datos: ',
+                bold: true
+              }),
+              new TextRun({
+                text: cvData.skills.databases.join(', ')
+              })
+            ],
+            spacing: { after: 150 }
+          })
+        );
+      }
+
+      // Crear documento
+      const doc = new Document({
+        sections: [{
+          properties: {},
+          children: sections
+        }]
+      });
+
+      // Generar y descargar
+      const blob = await Packer.toBlob(doc);
+      const fileName = `${currentVersion.replace(/\s+/g, '-') || 'cv'}-${selectedTemplate}.docx`;
+      saveAs(blob, fileName);
+
+      toast.remove();
+      const successToast = document.createElement('div');
+      successToast.className = 'fixed top-24 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-xl z-50 animate-fade-in';
+      successToast.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Documento Word descargado! Ahora puedes editarlo.';
+      document.body.appendChild(successToast);
+      setTimeout(() => successToast.remove(), 3000);
+    } catch (error) {
+      console.error('Error generando Word:', error);
+      toast.remove();
+      const errorToast = document.createElement('div');
+      errorToast.className = 'fixed top-24 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-xl z-50';
+      errorToast.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Error al generar el documento Word';
+      document.body.appendChild(errorToast);
+      setTimeout(() => errorToast.remove(), 3000);
+    }
+  };
+
   const tabs = [
     { id: 'personal', name: 'Personal', icon: 'fas fa-user' },
     { id: 'experience', name: 'Experiencia', icon: 'fas fa-briefcase' },
@@ -587,106 +1043,215 @@ const CVGenerator = () => {
             )}
           </motion.div>
 
-          {/* Barra de Acciones Sticky */}
+          {/* Instrucciones - Colapsable */}
+          <AnimatePresence>
+            {showInstructions && (
+              <motion.div
+                className="mb-8 bg-gradient-to-br from-blue-900/30 via-cyan-900/20 to-blue-800/30 backdrop-blur-lg border border-cyan-500/30 rounded-3xl p-6 md:p-8 shadow-2xl"
+                initial={{ opacity: 0, y: -20, height: 0 }}
+                animate={{ opacity: 1, y: 0, height: 'auto' }}
+                exit={{ opacity: 0, y: -20, height: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-cyan-100 mb-2 flex items-center gap-3">
+                      <i className="fas fa-info-circle text-cyan-400"></i>
+                      {t('cvGenerator.instructions.title')}
+                    </h2>
+                    <p className="text-cyan-200/80 text-sm md:text-base">{t('cvGenerator.instructions.subtitle')}</p>
+                  </div>
+                  <button
+                    onClick={() => setShowInstructions(false)}
+                    className="text-cyan-300 hover:text-white transition-colors p-2"
+                  >
+                    <i className="fas fa-times text-xl"></i>
+                  </button>
+                </div>
+
+                {/* Pasos */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6">
+                  {/* Paso 1 */}
+                  <motion.div
+                    className="bg-slate-800/50 backdrop-blur rounded-2xl p-5 border border-slate-700/50 hover:border-cyan-500/50 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xl">
+                        {t('cvGenerator.instructions.step1.number')}
+                      </div>
+                      <h3 className="text-lg font-bold text-white">{t('cvGenerator.instructions.step1.title')}</h3>
+                    </div>
+                    <p className="text-cyan-100/70 text-sm leading-relaxed">{t('cvGenerator.instructions.step1.description')}</p>
+                  </motion.div>
+
+                  {/* Paso 2 */}
+                  <motion.div
+                    className="bg-slate-800/50 backdrop-blur rounded-2xl p-5 border border-slate-700/50 hover:border-cyan-500/50 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-green-500 flex items-center justify-center text-white font-black text-xl">
+                        {t('cvGenerator.instructions.step2.number')}
+                      </div>
+                      <h3 className="text-lg font-bold text-white">{t('cvGenerator.instructions.step2.title')}</h3>
+                    </div>
+                    <p className="text-cyan-100/70 text-sm leading-relaxed">{t('cvGenerator.instructions.step2.description')}</p>
+                  </motion.div>
+
+                  {/* Paso 3 */}
+                  <motion.div
+                    className="bg-slate-800/50 backdrop-blur rounded-2xl p-5 border border-slate-700/50 hover:border-cyan-500/50 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-black text-xl">
+                        {t('cvGenerator.instructions.step3.number')}
+                      </div>
+                      <h3 className="text-lg font-bold text-white">{t('cvGenerator.instructions.step3.title')}</h3>
+                    </div>
+                    <p className="text-cyan-100/70 text-sm leading-relaxed">{t('cvGenerator.instructions.step3.description')}</p>
+                  </motion.div>
+                </div>
+
+                {/* Tips profesionales */}
+                <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
+                  <h4 className="text-cyan-300 font-semibold mb-3 flex items-center gap-2">
+                    <i className="fas fa-lightbulb"></i>
+                    {t('cvGenerator.instructions.tips.title')}
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                    <div className="flex items-start gap-2 text-cyan-100/70">
+                      <i className="fas fa-check text-green-400 mt-1"></i>
+                      <span>{t('cvGenerator.instructions.tips.tip1')}</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-cyan-100/70">
+                      <i className="fas fa-check text-green-400 mt-1"></i>
+                      <span>{t('cvGenerator.instructions.tips.tip2')}</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-cyan-100/70">
+                      <i className="fas fa-check text-green-400 mt-1"></i>
+                      <span>{t('cvGenerator.instructions.tips.tip3')}</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-cyan-100/70">
+                      <i className="fas fa-check text-green-400 mt-1"></i>
+                      <span>{t('cvGenerator.instructions.tips.tip4')}</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Botón para mostrar instrucciones si están ocultas */}
+          {!showInstructions && (
+            <motion.button
+              onClick={() => setShowInstructions(true)}
+              className="mb-4 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 text-cyan-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center gap-2 mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <i className="fas fa-info-circle"></i>
+              {t('cvGenerator.instructions.title')}
+            </motion.button>
+          )}
+
+          {/* Barra de Acciones Sticky - Mobile First */}
           <motion.div
-            className="sticky top-20 z-40 bg-slate-800/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 mb-8 shadow-2xl"
+            className="sticky top-20 z-40 bg-slate-800/95 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-6 sm:mb-8 shadow-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <div className="flex flex-wrap gap-3 items-center justify-between">
+            <div className="flex flex-wrap gap-2 sm:gap-3 items-center justify-between">
 
               {/* Presets */}
-              <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-gray-400 self-center px-2">Presets:</span>
+              <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+                <span className="text-xs sm:text-sm text-gray-400 self-center px-1 sm:px-2 hidden sm:inline">Presets:</span>
                 {Object.entries(jobPresets).map(([key, preset]) => (
                   <button
                     key={key}
                     onClick={() => applyJobPreset(key)}
-                    className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all transform hover:scale-105 text-sm font-semibold shadow-lg"
+                    className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all transform hover:scale-105 text-xs sm:text-sm font-semibold shadow-lg"
                   >
-                    <i className="fas fa-bolt mr-2"></i>
-                    {preset.name}
+                    <i className="fas fa-bolt mr-1 sm:mr-2"></i>
+                    <span className="hidden sm:inline">{preset.name}</span>
+                    <span className="sm:hidden">{preset.name.split(' ')[0]}</span>
                   </button>
                 ))}
               </div>
 
               {/* Acciones */}
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2 w-full sm:w-auto">
                 <button
                   onClick={saveVersion}
                   disabled={isSaving}
-                  className="px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg disabled:opacity-50"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg disabled:opacity-50 text-xs sm:text-sm"
                 >
-                  <i className={`fas fa-${isSaving ? 'spinner fa-spin' : 'save'} mr-2`}></i>
-                  Guardar
+                  <i className={`fas fa-${isSaving ? 'spinner fa-spin' : 'save'} mr-1 sm:mr-2`}></i>
+                  <span className="hidden sm:inline">Guardar</span>
                 </button>
 
                 <button
                   onClick={() => setShowVersions(!showVersions)}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg relative"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg relative text-xs sm:text-sm"
                 >
-                  <i className="fas fa-folder-open mr-2"></i>
-                  Versiones
+                  <i className="fas fa-folder-open mr-1 sm:mr-2"></i>
+                  <span className="hidden md:inline">Versiones</span>
                   {savedVersions.length > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+                    <span className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center font-bold">
                       {savedVersions.length}
                     </span>
                   )}
                 </button>
 
-                <div className="relative">
-                  <button
-                    onClick={() => setShowPdfMenu(!showPdfMenu)}
-                    className="px-4 py-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
-                  >
-                    <i className="fas fa-file-pdf"></i>
-                    PDF
-                    <i className="fas fa-chevron-down text-xs"></i>
-                  </button>
+                {/* Botones de descarga separados */}
+                <button
+                  onClick={downloadWord}
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
+                  title="Descargar en formato Word editable"
+                >
+                  <i className="fas fa-file-word"></i>
+                  <span className="hidden lg:inline">Word</span>
+                  <span className="text-xs px-1 sm:px-1.5 py-0.5 bg-white/20 rounded hidden md:inline">Editable</span>
+                </button>
 
-                  {showPdfMenu && (
-                    <div className="absolute top-full mt-2 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl z-50 min-w-[250px]">
-                      <button
-                        onClick={() => { downloadPDFText(); setShowPdfMenu(false); }}
-                        className="w-full px-4 py-3 text-left hover:bg-slate-700 transition-colors flex items-start gap-3 border-b border-slate-700"
-                      >
-                        <i className="fas fa-file-alt text-green-400 mt-1"></i>
-                        <div>
-                          <div className="font-semibold text-white">PDF con Texto</div>
-                          <div className="text-xs text-gray-400">Texto seleccionable, profesional</div>
-                        </div>
-                      </button>
-                      <button
-                        onClick={() => { downloadPDFImage(); setShowPdfMenu(false); }}
-                        className="w-full px-4 py-3 text-left hover:bg-slate-700 transition-colors flex items-start gap-3 rounded-b-lg"
-                      >
-                        <i className="fas fa-image text-blue-400 mt-1"></i>
-                        <div>
-                          <div className="font-semibold text-white">PDF con Imagen</div>
-                          <div className="text-xs text-gray-400">Mantiene diseño exacto</div>
-                        </div>
-                      </button>
-                    </div>
-                  )}
-                </div>
+                <button
+                  onClick={downloadPDFText}
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
+                  title="Descargar PDF con texto seleccionable"
+                >
+                  <i className="fas fa-file-pdf"></i>
+                  <span className="hidden lg:inline">PDF</span>
+                </button>
+
+                <button
+                  onClick={downloadPDFImage}
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
+                  title="Descargar PDF como imagen (diseño exacto)"
+                >
+                  <i className="fas fa-image"></i>
+                  <span className="hidden lg:inline">IMG</span>
+                </button>
 
                 <button
                   onClick={exportToJSON}
-                  className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg text-xs sm:text-sm"
                 >
-                  <i className="fas fa-download mr-2"></i>
-                  JSON
+                  <i className="fas fa-download mr-1 sm:mr-2"></i>
+                  <span className="hidden md:inline">JSON</span>
                 </button>
 
-                <label className="px-4 py-2 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg cursor-pointer">
-                  <i className="fas fa-upload mr-2"></i>
-                  Importar
+                <label className="px-2 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg cursor-pointer text-xs sm:text-sm">
+                  <i className="fas fa-upload mr-1 sm:mr-2"></i>
+                  <span className="hidden md:inline">Importar</span>
                   <input type="file" accept=".json" onChange={importFromJSON} className="hidden" />
                 </label>
 
                 <button
                   onClick={() => setShowPreview(!showPreview)}
-                  className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-all shadow-lg"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-all shadow-lg text-xs sm:text-sm lg:hidden"
+                  title={showPreview ? 'Ocultar preview' : 'Mostrar preview'}
                 >
                   <i className={`fas fa-${showPreview ? 'eye-slash' : 'eye'}`}></i>
                 </button>
@@ -851,15 +1416,23 @@ const CVGenerator = () => {
                     </h3>
                     <div className="flex gap-2">
                       <button
+                        onClick={downloadWord}
+                        className="px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition text-sm flex items-center gap-1.5"
+                        title="Descargar en formato Word editable"
+                      >
+                        <i className="fas fa-file-word"></i>
+                        <span className="text-xs px-1 py-0.5 bg-white/20 rounded hidden sm:inline">Editable</span>
+                      </button>
+                      <button
                         onClick={downloadPDFText}
                         className="px-3 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition text-sm"
                         title="Descargar PDF con texto seleccionable"
                       >
-                        <i className="fas fa-file-alt"></i>
+                        <i className="fas fa-file-pdf"></i>
                       </button>
                       <button
                         onClick={downloadPDFImage}
-                        className="px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition text-sm"
+                        className="px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition text-sm"
                         title="Descargar PDF con imagen"
                       >
                         <i className="fas fa-image"></i>

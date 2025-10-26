@@ -28,13 +28,13 @@ const Tools = () => {
   }
 
   const categories = [
-    { id: 'all', name: 'Todas', icon: '🛠️', color: 'from-gray-500 to-gray-600' },
-    { id: 'development', name: 'Desarrollo', icon: '💻', color: 'from-blue-500 to-cyan-500' },
-    { id: 'devops', name: 'DevOps', icon: '⚙️', color: 'from-green-500 to-emerald-500' },
-    { id: 'design', name: 'Diseño', icon: '🎨', color: 'from-purple-500 to-pink-500' },
-    { id: 'productivity', name: 'Productividad', icon: '📈', color: 'from-orange-500 to-red-500' },
-    { id: 'testing', name: 'Testing', icon: '🧪', color: 'from-teal-500 to-cyan-500' },
-    { id: 'monitoring', name: 'Monitoreo', icon: '', color: 'from-indigo-500 to-purple-500' },
+    { id: 'all', name: 'Todas', icon: <i className="fas fa-th"></i>, color: 'from-gray-500 to-gray-600' },
+    { id: 'development', name: 'Desarrollo', icon: <i className="fas fa-code"></i>, color: 'from-blue-500 to-cyan-500' },
+    { id: 'devops', name: 'DevOps', icon: <i className="fas fa-cog"></i>, color: 'from-green-500 to-emerald-500' },
+    { id: 'design', name: 'Diseño', icon: <i className="fas fa-palette"></i>, color: 'from-purple-500 to-pink-500' },
+    { id: 'productivity', name: 'Productividad', icon: <i className="fas fa-chart-line"></i>, color: 'from-orange-500 to-red-500' },
+    { id: 'testing', name: 'Testing', icon: <i className="fas fa-vial"></i>, color: 'from-teal-500 to-cyan-500' },
+    { id: 'monitoring', name: 'Monitoreo', icon: <i className="fas fa-chart-area"></i>, color: 'from-indigo-500 to-purple-500' },
   ]
 
   const tools = [
@@ -351,8 +351,9 @@ const Tools = () => {
           </div>
 
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
-            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
-              🛠️ Enterprise-Grade Development Stack
+            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4 flex items-center justify-center gap-3">
+              <i className="fas fa-toolbox text-blue-400"></i>
+              Enterprise-Grade Development Stack
             </h2>
             <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
               Herramientas profesionales utilizadas en empresas FAANG y startups unicornio.
@@ -406,7 +407,7 @@ const Tools = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + i * 0.1 }}
             >
-              <span className="text-sm xs:text-base">{category.icon}</span>
+              <span className="text-sm xs:text-base flex items-center justify-center">{category.icon}</span>
               <span className="text-xs xs:text-sm font-bold text-center leading-tight">{category.name}</span>
               {query === category.id && (
                 <motion.div
@@ -535,7 +536,9 @@ const Tools = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-6 xs:p-8 md:p-12 mx-auto max-w-lg">
-            <div className="text-4xl xs:text-5xl md:text-6xl mb-4">🔍</div>
+            <div className="text-4xl xs:text-5xl md:text-6xl mb-4 text-blue-400">
+              <i className="fas fa-search"></i>
+            </div>
             <h3 className="text-xl xs:text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               No hay herramientas en esta categoría
             </h3>

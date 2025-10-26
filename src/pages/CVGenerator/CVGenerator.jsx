@@ -6,6 +6,7 @@ import CVForm from './CVForm';
 import SEOHead from '../../components/SEO/SEOHead';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 
 const CVGenerator = () => {
   const [cvData, setCvData] = useState(defaultCVData);
@@ -16,6 +17,7 @@ const CVGenerator = () => {
   const [activeTab, setActiveTab] = useState('personal');
   const [isSaving, setIsSaving] = useState(false);
   const [showVersions, setShowVersions] = useState(false);
+  const [showPdfMenu, setShowPdfMenu] = useState(false);
   const formRef = useRef(null);
 
   // Cargar versiones guardadas del localStorage
@@ -144,14 +146,14 @@ const CVGenerator = () => {
     reader.readAsText(file);
   };
 
-  // Exportar a PDF
-  const downloadPDF = async () => {
+  // Exportar a PDF con imagen (mejorado con paginación)
+  const downloadPDFImage = async () => {
     const element = document.getElementById('cv-preview');
     if (!element) return;
 
     const toast = document.createElement('div');
     toast.className = 'fixed top-24 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-xl z-50';
-    toast.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Generando PDF...';
+    toast.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Generando PDF con imagen...';
     document.body.appendChild(toast);
 
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -159,7 +161,9 @@ const CVGenerator = () => {
     const canvas = await html2canvas(element, {
       scale: 2,
       useCORS: true,
-      backgroundColor: '#ffffff'
+      backgroundColor: '#ffffff',
+      windowWidth: element.scrollWidth,
+      windowHeight: element.scrollHeight
     });
 
     const imgData = canvas.toDataURL('image/png');
@@ -167,18 +171,357 @@ const CVGenerator = () => {
 
     const pageWidth = 210;
     const pageHeight = 297;
-    const imgWidth = pageWidth - 20;
+    const margin = 10;
+    const imgWidth = pageWidth - (margin * 2);
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+    let heightLeft = imgHeight;
+    let position = margin;
 
-    const fileName = `${currentVersion.replace(/\s+/g, '-') || 'cv'}-${selectedTemplate}.pdf`;
+    // Primera página
+    pdf.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+    heightLeft -= (pageHeight - margin);
+
+    // Agregar páginas adicionales si es necesario
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight + margin;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
+
+    const fileName = `${currentVersion.replace(/\s+/g, '-') || 'cv'}-${selectedTemplate}-image.pdf`;
     pdf.save(fileName);
 
     toast.remove();
     const successToast = document.createElement('div');
     successToast.className = 'fixed top-24 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-xl z-50 animate-fade-in';
     successToast.innerHTML = '<i class="fas fa-check-circle mr-2"></i>PDF descargado!';
+    document.body.appendChild(successToast);
+    setTimeout(() => successToast.remove(), 3000);
+  };
+
+  // Exportar a PDF con texto seleccionable
+  const downloadPDFText = () => {
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-24 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-xl z-50';
+    toast.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Generando PDF con texto...';
+    document.body.appendChild(toast);
+
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const margin = 15;
+    const contentWidth = pageWidth - (margin * 2);
+    let yPos = margin;
+
+    // Función para agregar texto con word wrap
+    const addText = (text, fontSize, isBold = false, align = 'left') => {
+      pdf.setFontSize(fontSize);
+      pdf.setFont('helvetica', isBold ? 'bold' : 'normal');
+      const lines = pdf.splitTextToSize(text, contentWidth);
+
+      lines.forEach(line => {
+        if (yPos > 280) {
+          pdf.addPage();
+          yPos = margin;
+        }
+
+        let xPos = margin;
+        if (align === 'center') {
+          xPos = pageWidth / 2;
+        }
+
+        pdf.text(line, xPos, yPos, { align });
+        yPos += fontSize * 0.5;
+      });
+    };
+
+    // Función para agregar títulos de sección según template
+    const addSectionTitle = (title) => {
+      if (selectedTemplate === 'corporate') {
+        pdf.setTextColor(37, 99, 235);
+        addText(title, 13, true);
+        pdf.setTextColor(0, 0, 0);
+        yPos += 1;
+        pdf.setDrawColor(37, 99, 235);
+        pdf.setLineWidth(0.5);
+        pdf.line(margin, yPos, margin + 40, yPos);
+        yPos += 5;
+      } else if (selectedTemplate === 'harvard') {
+        pdf.setTextColor(0, 0, 0);
+        addText(title, 12, true);
+        yPos += 1;
+        pdf.setDrawColor(150, 150, 150);
+        pdf.setLineWidth(0.3);
+        pdf.line(margin, yPos, pageWidth - margin, yPos);
+        yPos += 5;
+      } else if (selectedTemplate === 'minimal') {
+        pdf.setTextColor(0, 0, 0);
+        pdf.setFontSize(10);
+        pdf.setFont('helvetica', 'bold');
+        pdf.text(title, margin, yPos);
+        yPos += 4;
+      }
+    };
+
+    // Header según template
+    if (selectedTemplate === 'corporate') {
+      // Header Corporate (con fondo azul)
+      pdf.setFillColor(37, 99, 235);
+      pdf.rect(0, 0, pageWidth, 45, 'F');
+      pdf.setTextColor(255, 255, 255);
+      addText(cvData.personalInfo.fullName, 20, true, 'center');
+      yPos += 2;
+      addText(cvData.personalInfo.title, 12, false, 'center');
+      yPos += 5;
+      addText(`${cvData.personalInfo.email} | ${cvData.personalInfo.phone} | ${cvData.personalInfo.location}`, 9, false, 'center');
+      yPos = 50;
+      pdf.setTextColor(0, 0, 0);
+    } else if (selectedTemplate === 'harvard') {
+      // Header Harvard (centrado con borde)
+      pdf.setTextColor(0, 0, 0);
+      addText(cvData.personalInfo.fullName, 18, true, 'center');
+      yPos += 2;
+      addText(cvData.personalInfo.title, 11, false, 'center');
+      yPos += 4;
+      addText(`${cvData.personalInfo.email} | ${cvData.personalInfo.phone} | ${cvData.personalInfo.location}`, 8, false, 'center');
+      yPos += 3;
+      pdf.setDrawColor(150, 150, 150);
+      pdf.setLineWidth(0.5);
+      pdf.line(margin, yPos, pageWidth - margin, yPos);
+      yPos += 8;
+    } else if (selectedTemplate === 'minimal') {
+      // Header Minimal (simple, izquierda)
+      pdf.setTextColor(0, 0, 0);
+      pdf.setFontSize(16);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text(cvData.personalInfo.fullName, margin, yPos);
+      yPos += 6;
+      pdf.setFontSize(9);
+      pdf.setFont('helvetica', 'normal');
+      pdf.setTextColor(100, 100, 100);
+      pdf.text(cvData.personalInfo.title, margin, yPos);
+      yPos += 5;
+      pdf.setDrawColor(0, 0, 0);
+      pdf.setLineWidth(0.8);
+      pdf.line(margin, yPos, pageWidth - margin, yPos);
+      yPos += 6;
+      pdf.setFontSize(8);
+      pdf.text(`CONTACT: ${cvData.personalInfo.email} | ${cvData.personalInfo.phone}`, margin, yPos);
+      yPos += 4;
+      pdf.text(`LOCATION: ${cvData.personalInfo.location}`, margin, yPos);
+      yPos += 8;
+      pdf.setTextColor(0, 0, 0);
+    }
+
+    // Summary
+    if (cvData.summary) {
+      yPos += 5;
+      addSectionTitle(selectedTemplate === 'minimal' ? 'ABOUT' : 'RESUMEN PROFESIONAL');
+      pdf.setTextColor(0, 0, 0);
+      addText(cvData.summary, 10);
+      yPos += 5;
+    }
+
+    // Experience
+    const enabledExperience = cvData.experience.filter(exp => exp.enabled);
+    if (enabledExperience.length > 0) {
+      yPos += 5;
+      addSectionTitle(selectedTemplate === 'minimal' ? 'EXPERIENCE' : 'EXPERIENCIA PROFESIONAL');
+
+      enabledExperience.forEach(exp => {
+        if (yPos > 250) {
+          pdf.addPage();
+          yPos = margin;
+        }
+
+        pdf.setTextColor(0, 0, 0);
+        addText(exp.title, 11, true);
+        yPos += 1;
+
+        // Color según template
+        if (selectedTemplate === 'corporate') {
+          pdf.setTextColor(37, 99, 235);
+        } else if (selectedTemplate === 'harvard') {
+          pdf.setTextColor(0, 0, 0);
+        } else {
+          pdf.setTextColor(60, 60, 60);
+        }
+
+        addText(`${exp.company} | ${exp.location}`, 9, false);
+        yPos += 1;
+        pdf.setTextColor(100, 100, 100);
+        addText(exp.period, 8);
+        pdf.setTextColor(0, 0, 0);
+        yPos += 3;
+
+        exp.achievements.forEach(achievement => {
+          if (achievement) {
+            if (yPos > 270) {
+              pdf.addPage();
+              yPos = margin;
+            }
+
+            // Bullet style según template
+            if (selectedTemplate === 'minimal') {
+              pdf.text('•', margin, yPos);
+              pdf.text(achievement, margin + 5, yPos);
+            } else {
+              pdf.circle(margin + 2, yPos - 1, 0.5, 'F');
+              pdf.text(`  ${achievement}`, margin + 5, yPos);
+            }
+
+            const lines = pdf.splitTextToSize(achievement, contentWidth - 5);
+            yPos += lines.length * 4;
+          }
+        });
+
+        if (exp.technologies.length > 0) {
+          yPos += 2;
+          pdf.setTextColor(100, 100, 100);
+          pdf.setFontSize(8);
+          pdf.setFont('helvetica', 'bold');
+          pdf.text('Tecnologías:', margin, yPos);
+          pdf.setFont('helvetica', 'normal');
+          const techText = exp.technologies.join(', ');
+          pdf.text(techText, margin + 25, yPos);
+          yPos += 4;
+          pdf.setTextColor(0, 0, 0);
+        }
+        yPos += 5;
+      });
+    }
+
+    // Projects
+    const enabledProjects = cvData.projects.filter(p => p.enabled);
+    if (enabledProjects.length > 0) {
+      yPos += 5;
+      if (yPos > 250) {
+        pdf.addPage();
+        yPos = margin;
+      }
+      addSectionTitle(selectedTemplate === 'minimal' ? 'PROJECTS' : 'PROYECTOS DESTACADOS');
+
+      enabledProjects.forEach(project => {
+        if (yPos > 260) {
+          pdf.addPage();
+          yPos = margin;
+        }
+
+        pdf.setTextColor(0, 0, 0);
+        addText(project.title, 11, true);
+        yPos += 1;
+        pdf.setTextColor(100, 100, 100);
+        addText(project.year, 8);
+        pdf.setTextColor(0, 0, 0);
+        yPos += 3;
+        addText(project.description, 9);
+        yPos += 2;
+        if (project.technologies.length > 0) {
+          pdf.setTextColor(100, 100, 100);
+          pdf.setFontSize(8);
+          pdf.setFont('helvetica', 'bold');
+          pdf.text('Stack:', margin, yPos);
+          pdf.setFont('helvetica', 'normal');
+          pdf.text(project.technologies.join(', '), margin + 15, yPos);
+          yPos += 4;
+          pdf.setTextColor(0, 0, 0);
+        }
+        yPos += 4;
+      });
+    }
+
+    // Education
+    const enabledEducation = cvData.education.filter(e => e.enabled);
+    if (enabledEducation.length > 0) {
+      yPos += 5;
+      if (yPos > 250) {
+        pdf.addPage();
+        yPos = margin;
+      }
+      addSectionTitle(selectedTemplate === 'minimal' ? 'EDUCATION' : 'EDUCACIÓN');
+
+      enabledEducation.forEach(edu => {
+        if (yPos > 270) {
+          pdf.addPage();
+          yPos = margin;
+        }
+
+        pdf.setTextColor(0, 0, 0);
+        addText(edu.degree, 11, true);
+        yPos += 1;
+        addText(`${edu.institution} | ${edu.location}`, 9);
+        yPos += 1;
+        pdf.setTextColor(100, 100, 100);
+        addText(edu.period, 8);
+        pdf.setTextColor(0, 0, 0);
+        if (edu.details) {
+          yPos += 2;
+          addText(edu.details, 8);
+        }
+        yPos += 4;
+      });
+    }
+
+    // Skills
+    yPos += 5;
+    if (yPos > 220) {
+      pdf.addPage();
+      yPos = margin;
+    }
+    addSectionTitle(selectedTemplate === 'minimal' ? 'SKILLS' : 'HABILIDADES TÉCNICAS');
+
+    if (cvData.skills.programming.length > 0) {
+      pdf.setTextColor(0, 0, 0);
+      pdf.setFontSize(10);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Lenguajes:', margin, yPos);
+      yPos += 4;
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(9);
+      pdf.text(cvData.skills.programming.join(', '), margin, yPos);
+      yPos += 5;
+    }
+
+    if (cvData.skills.frameworks.length > 0) {
+      pdf.setFontSize(10);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Frameworks:', margin, yPos);
+      yPos += 4;
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(9);
+      pdf.text(cvData.skills.frameworks.join(', '), margin, yPos);
+      yPos += 5;
+    }
+
+    if (cvData.skills.cloud.length > 0) {
+      pdf.setFontSize(10);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Cloud & DevOps:', margin, yPos);
+      yPos += 4;
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(9);
+      pdf.text(cvData.skills.cloud.join(', '), margin, yPos);
+      yPos += 5;
+    }
+
+    if (cvData.skills.databases.length > 0) {
+      pdf.setFontSize(10);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Bases de Datos:', margin, yPos);
+      yPos += 4;
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(9);
+      pdf.text(cvData.skills.databases.join(', '), margin, yPos);
+    }
+
+    const fileName = `${currentVersion.replace(/\s+/g, '-') || 'cv'}-${selectedTemplate}-text.pdf`;
+    pdf.save(fileName);
+
+    toast.remove();
+    const successToast = document.createElement('div');
+    successToast.className = 'fixed top-24 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-xl z-50 animate-fade-in';
+    successToast.innerHTML = '<i class="fas fa-check-circle mr-2"></i>PDF con texto seleccionable descargado!';
     document.body.appendChild(successToast);
     setTimeout(() => successToast.remove(), 3000);
   };
@@ -291,13 +634,41 @@ const CVGenerator = () => {
                   )}
                 </button>
 
-                <button
-                  onClick={downloadPDF}
-                  className="px-4 py-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                >
-                  <i className="fas fa-file-pdf mr-2"></i>
-                  PDF
-                </button>
+                <div className="relative">
+                  <button
+                    onClick={() => setShowPdfMenu(!showPdfMenu)}
+                    className="px-4 py-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
+                  >
+                    <i className="fas fa-file-pdf"></i>
+                    PDF
+                    <i className="fas fa-chevron-down text-xs"></i>
+                  </button>
+
+                  {showPdfMenu && (
+                    <div className="absolute top-full mt-2 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl z-50 min-w-[250px]">
+                      <button
+                        onClick={() => { downloadPDFText(); setShowPdfMenu(false); }}
+                        className="w-full px-4 py-3 text-left hover:bg-slate-700 transition-colors flex items-start gap-3 border-b border-slate-700"
+                      >
+                        <i className="fas fa-file-alt text-green-400 mt-1"></i>
+                        <div>
+                          <div className="font-semibold text-white">PDF con Texto</div>
+                          <div className="text-xs text-gray-400">Texto seleccionable, profesional</div>
+                        </div>
+                      </button>
+                      <button
+                        onClick={() => { downloadPDFImage(); setShowPdfMenu(false); }}
+                        className="w-full px-4 py-3 text-left hover:bg-slate-700 transition-colors flex items-start gap-3 rounded-b-lg"
+                      >
+                        <i className="fas fa-image text-blue-400 mt-1"></i>
+                        <div>
+                          <div className="font-semibold text-white">PDF con Imagen</div>
+                          <div className="text-xs text-gray-400">Mantiene diseño exacto</div>
+                        </div>
+                      </button>
+                    </div>
+                  )}
+                </div>
 
                 <button
                   onClick={exportToJSON}
@@ -411,9 +782,9 @@ const CVGenerator = () => {
                 >
                   <div className="text-center">
                     <div className="text-4xl mb-3">
-                      {template.id === 'harvard' && '📜'}
-                      {template.id === 'corporate' && '💼'}
-                      {template.id === 'minimal' && '⚡'}
+                      {template.id === 'harvard' && <i className="fas fa-scroll text-amber-500"></i>}
+                      {template.id === 'corporate' && <i className="fas fa-briefcase text-blue-500"></i>}
+                      {template.id === 'minimal' && <i className="fas fa-bolt text-yellow-400"></i>}
                     </div>
                     <h4 className="font-bold text-lg mb-2 text-white">{template.name}</h4>
                     <p className="text-sm text-gray-400">{template.description}</p>
@@ -480,11 +851,18 @@ const CVGenerator = () => {
                     </h3>
                     <div className="flex gap-2">
                       <button
-                        onClick={downloadPDF}
-                        className="px-3 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition text-sm"
-                        title="Descargar PDF"
+                        onClick={downloadPDFText}
+                        className="px-3 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition text-sm"
+                        title="Descargar PDF con texto seleccionable"
                       >
-                        <i className="fas fa-file-pdf"></i>
+                        <i className="fas fa-file-alt"></i>
+                      </button>
+                      <button
+                        onClick={downloadPDFImage}
+                        className="px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition text-sm"
+                        title="Descargar PDF con imagen"
+                      >
+                        <i className="fas fa-image"></i>
                       </button>
                     </div>
                   </div>

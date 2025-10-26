@@ -1,8 +1,34 @@
-import React from 'react';
+import { useCallback, memo } from 'react';
+
+// Componente de Input reutilizable FUERA del componente principal
+const InputField = memo(({ label, value, onChange, placeholder, type = "text", rows = null }) => (
+  <div className="mb-4">
+    <label className="block text-sm font-semibold mb-2 text-gray-200">{label}</label>
+    {rows ? (
+      <textarea
+        value={value || ''}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        rows={rows}
+        className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
+      />
+    ) : (
+      <input
+        type={type}
+        value={value || ''}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
+      />
+    )}
+  </div>
+));
+
+InputField.displayName = 'InputField';
 
 const CVForm = ({ activeTab, cvData, setCvData }) => {
 
-  const handleInputChange = (section, field, value) => {
+  const handleInputChange = useCallback((section, field, value) => {
     setCvData(prev => ({
       ...prev,
       [section]: {
@@ -10,63 +36,39 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
         [field]: value
       }
     }));
-  };
+  }, [setCvData]);
 
-  const handleArrayItemChange = (section, index, field, value) => {
+  const handleArrayItemChange = useCallback((section, index, field, value) => {
     setCvData(prev => ({
       ...prev,
       [section]: prev[section].map((item, i) =>
         i === index ? { ...item, [field]: value } : item
       )
     }));
-  };
+  }, [setCvData]);
 
-  const handleArrayAdd = (section, newItem) => {
+  const handleArrayAdd = useCallback((section, newItem) => {
     setCvData(prev => ({
       ...prev,
       [section]: [...prev[section], newItem]
     }));
-  };
+  }, [setCvData]);
 
-  const handleArrayRemove = (section, index) => {
+  const handleArrayRemove = useCallback((section, index) => {
     setCvData(prev => ({
       ...prev,
       [section]: prev[section].filter((_, i) => i !== index)
     }));
-  };
+  }, [setCvData]);
 
-  const toggleArrayItemEnabled = (section, index) => {
+  const toggleArrayItemEnabled = useCallback((section, index) => {
     setCvData(prev => ({
       ...prev,
       [section]: prev[section].map((item, i) =>
         i === index ? { ...item, enabled: !item.enabled } : item
       )
     }));
-  };
-
-  // Componente de Input reutilizable
-  const InputField = ({ label, value, onChange, placeholder, type = "text", rows = null }) => (
-    <div className="mb-4">
-      <label className="block text-sm font-semibold mb-2 text-gray-200">{label}</label>
-      {rows ? (
-        <textarea
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          rows={rows}
-          className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-        />
-      ) : (
-        <input
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-        />
-      )}
-    </div>
-  );
+  }, [setCvData]);
 
   // FORMULARIO: Información Personal
   if (activeTab === 'personal') {

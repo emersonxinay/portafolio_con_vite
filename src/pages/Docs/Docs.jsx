@@ -97,8 +97,9 @@ const Docs = () => {
           </div>
 
           <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-4 xs:p-6 md:p-8 mx-auto max-w-4xl">
-            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4">
-              📚 Guías Técnicas & Mejores Prácticas Empresariales
+            <h2 className="text-lg xs:text-xl md:text-2xl font-bold text-white mb-3 xs:mb-4 flex items-center justify-center gap-3">
+              <i className="fas fa-book text-blue-400"></i>
+              Guías Técnicas & Mejores Prácticas Empresariales
             </h2>
             <p className="text-sm xs:text-base md:text-xl text-zinc-300 leading-relaxed mb-4 xs:mb-6">
               Documentación completa sobre tecnologías modernas, arquitecturas escalables,
@@ -191,7 +192,9 @@ const Docs = () => {
             {activeTab === 'backend' && <BackDocs />}
             {activeTab === 'tools' && (
               <div className="text-center py-12 xs:py-16">
-                <div className="text-4xl xs:text-5xl md:text-6xl mb-4">🛠️</div>
+                <div className="text-4xl xs:text-5xl md:text-6xl mb-4 text-green-400">
+                  <i className="fas fa-tools"></i>
+                </div>
                 <h3 className="text-xl xs:text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
                   DevOps & Herramientas
                 </h3>
@@ -202,7 +205,9 @@ const Docs = () => {
             )}
             {activeTab === 'advanced' && (
               <div className="text-center py-12 xs:py-16">
-                <div className="text-4xl xs:text-5xl md:text-6xl mb-4"></div>
+                <div className="text-4xl xs:text-5xl md:text-6xl mb-4 text-orange-400">
+                  <i className="fas fa-rocket"></i>
+                </div>
                 <h3 className="text-xl xs:text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
                   Arquitecturas Avanzadas
                 </h3>

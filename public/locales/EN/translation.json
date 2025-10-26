@@ -37,7 +37,32 @@
   "blog": {
     "title": "Latest articles",
     "view": "View all articles",
-    "read": "Read article"
+    "read": "Read article",
+    "page": {
+      "title": "Technical Blog",
+      "subtitle": "Enterprise-Level Insights & Technical Deep Dives",
+      "description": "Explore articles about modern web development, scalable architectures, applied artificial intelligence, and the technologies driving the world's most innovative companies.",
+      "stats": {
+        "articles": "Technical Articles",
+        "lines": "Lines of Code",
+        "experience": "Years of Experience"
+      },
+      "search": "Search articles...",
+      "filter": "Filter:",
+      "allCategories": "All categories",
+      "resultsFound": "articles found",
+      "for": "for",
+      "in": "in",
+      "showing": "Showing",
+      "sortedBy": "Sorted by date",
+      "noResults": "No articles found",
+      "noResultsDesc": "We couldn't find articles matching your search. Try other terms or explore all categories.",
+      "showAll": "Show All Articles",
+      "clearSearch": "Clear Search",
+      "techArticle": "TECH ARTICLE",
+      "readArticle": "Read Article",
+      "updated": "Updated"
+    }
   },
   "experience1": {
     "title": "Professional experience",
@@ -163,7 +188,67 @@
     "learning_commitment": "Dedicated 10+ hours/week to emerging technologies and industry best practices"
   },
   "tools": {
-    "title": "Tools"
+    "title": "Tools",
+    "page": {
+      "title": "Professional Tools",
+      "subtitle": "Enterprise-Grade Development Stack",
+      "description": "Professional tools used in FAANG companies and unicorn startups. From development to deployment, monitoring and collaboration in high-performance teams.",
+      "stats": {
+        "tools": "Professional Tools",
+        "categories": "Categories",
+        "ready": "Enterprise Ready"
+      },
+      "showing": "Showing",
+      "professional": "professional tools",
+      "in": "in",
+      "noTools": "No tools in this category",
+      "noToolsDesc": "We are constantly adding more professional tools.",
+      "viewAll": "View All Tools",
+      "explore": "Explore tool",
+      "popularity": "Popularity"
+    },
+    "categories": {
+      "all": "All",
+      "development": "Development",
+      "devops": "DevOps",
+      "design": "Design",
+      "productivity": "Productivity",
+      "testing": "Testing",
+      "monitoring": "Monitoring"
+    }
+  },
+  "docs": {
+    "page": {
+      "title": "Technical Documentation",
+      "subtitle": "Technical Guides & Enterprise Best Practices",
+      "description": "Complete documentation on modern technologies, scalable architectures, and methodologies used in world-class companies like Google, Facebook, and Amazon.",
+      "stats": {
+        "technologies": "Technologies",
+        "examples": "Code Examples",
+        "practices": "Best Practices",
+        "updates": "Updates"
+      },
+      "tabs": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "DevOps",
+        "advanced": "Advanced"
+      },
+      "descriptions": {
+        "frontend": "Client-side technologies",
+        "backend": "Server-side technologies",
+        "tools": "Tools and deployment",
+        "advanced": "Architectures and patterns"
+      },
+      "devops": {
+        "title": "DevOps & Tools",
+        "description": "Documentation on Docker, Kubernetes, CI/CD and more. Coming soon..."
+      },
+      "architectures": {
+        "title": "Advanced Architectures",
+        "description": "Microservices, Event-Driven Architecture, System Design. Coming soon..."
+      }
+    }
   },
   "services": {
     "title": "Services",
@@ -592,6 +677,7 @@
     "blog": "Blog",
     "docs": "Docs",
     "tools": "Tools",
+    "cv": "CV Generator",
     "menu": {
       "title": "Navigation Menu",
       "descriptions": {
@@ -599,7 +685,8 @@
         "projects": "Project portfolio",
         "blog": "Technical articles",
         "docs": "Documentation",
-        "tools": "Useful tools"
+        "tools": "Useful tools",
+        "cv": "Create your resume"
       },
       "closeInstruction": "Tap anywhere to close"
     }

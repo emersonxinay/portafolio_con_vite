@@ -37,7 +37,32 @@
   "blog": {
     "title": "Ultimos articulos",
     "view": "Ver todos los articulos",
-    "read": "Leer articulo"
+    "read": "Leer articulo",
+    "page": {
+      "title": "Blog Técnico",
+      "subtitle": "Insights de Nivel Empresarial & Análisis Técnicos Profundos",
+      "description": "Explora artículos sobre desarrollo web moderno, arquitecturas escalables, inteligencia artificial aplicada, y las tecnologías que impulsan a las empresas más innovadoras del mundo.",
+      "stats": {
+        "articles": "Artículos Técnicos",
+        "lines": "Líneas de Código",
+        "experience": "Años de Experiencia"
+      },
+      "search": "Buscar artículos...",
+      "filter": "Filtrar:",
+      "allCategories": "Todas las categorías",
+      "resultsFound": "artículos encontrados",
+      "for": "para",
+      "in": "en",
+      "showing": "Mostrando",
+      "sortedBy": "Ordenado por fecha",
+      "noResults": "No se encontraron artículos",
+      "noResultsDesc": "No encontramos artículos que coincidan con tu búsqueda. Intenta con otros términos o explora todas las categorías.",
+      "showAll": "Mostrar Todos los Artículos",
+      "clearSearch": "Limpiar Búsqueda",
+      "techArticle": "ARTÍCULO TÉCNICO",
+      "readArticle": "Leer Artículo",
+      "updated": "Actualizado"
+    }
   },
   "experience1": {
     "title": "Experiencia profesional",
@@ -172,7 +197,67 @@
     "continuous_learning": "Aprendizaje continuo a través de plataformas como Platzi, Udemy, EDteam, Código Facilito, YouTube y documentación oficial de tecnologías"
   },
   "tools": {
-    "title": "Herramientas"
+    "title": "Herramientas",
+    "page": {
+      "title": "Herramientas Profesionales",
+      "subtitle": "Stack de Desarrollo de Nivel Empresarial",
+      "description": "Herramientas profesionales utilizadas en empresas FAANG y startups unicornio. Desde desarrollo hasta deployment, monitoreo y colaboración en equipos de alto rendimiento.",
+      "stats": {
+        "tools": "Tools Profesionales",
+        "categories": "Categorías",
+        "ready": "Enterprise Ready"
+      },
+      "showing": "Mostrando",
+      "professional": "herramientas profesionales",
+      "in": "en",
+      "noTools": "No hay herramientas en esta categoría",
+      "noToolsDesc": "Estamos agregando más herramientas profesionales constantemente.",
+      "viewAll": "Ver Todas las Herramientas",
+      "explore": "Explorar herramienta",
+      "popularity": "Popularidad"
+    },
+    "categories": {
+      "all": "Todas",
+      "development": "Desarrollo",
+      "devops": "DevOps",
+      "design": "Diseño",
+      "productivity": "Productividad",
+      "testing": "Testing",
+      "monitoring": "Monitoreo"
+    }
+  },
+  "docs": {
+    "page": {
+      "title": "Documentación Técnica",
+      "subtitle": "Guías Técnicas & Mejores Prácticas Empresariales",
+      "description": "Documentación completa sobre tecnologías modernas, arquitecturas escalables, y metodologías utilizadas en empresas de clase mundial como Google, Facebook, y Amazon.",
+      "stats": {
+        "technologies": "Tecnologías",
+        "examples": "Ejemplos de Código",
+        "practices": "Mejores Prácticas",
+        "updates": "Actualizaciones"
+      },
+      "tabs": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "DevOps",
+        "advanced": "Avanzado"
+      },
+      "descriptions": {
+        "frontend": "Tecnologías del lado del cliente",
+        "backend": "Tecnologías del lado del servidor",
+        "tools": "Herramientas y deployment",
+        "advanced": "Arquitecturas y patrones"
+      },
+      "devops": {
+        "title": "DevOps & Herramientas",
+        "description": "Documentación sobre Docker, Kubernetes, CI/CD y más. Próximamente..."
+      },
+      "architectures": {
+        "title": "Arquitecturas Avanzadas",
+        "description": "Microservicios, Event-Driven Architecture, System Design. Próximamente..."
+      }
+    }
   },
   "services": {
     "title": "Servicios",
@@ -599,6 +684,7 @@
     "blog": "Blog",
     "docs": "Docs",
     "tools": "Herramientas",
+    "cv": "Generador CV",
     "menu": {
       "title": "Menu de Navegación",
       "descriptions": {
@@ -606,7 +692,8 @@
         "projects": "Portfolio de proyectos",
         "blog": "Artículos técnicos",
         "docs": "Documentación",
-        "tools": "Herramientas útiles"
+        "tools": "Herramientas útiles",
+        "cv": "Crea tu currículum"
       },
       "closeInstruction": "Toca en cualquier lugar para cerrar"
     }

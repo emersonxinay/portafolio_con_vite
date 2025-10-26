@@ -12,7 +12,8 @@ const Links = ({ path, scrolled }) => {
     { id: 'projects', to: '/projects', label: t('nav.projects'), icon: 'fas fa-folder-open' },
     { id: 'blog', to: '/blog', label: t('nav.blog'), icon: 'fas fa-blog' },
     { id: 'docs', to: '/docs', label: t('nav.docs'), icon: 'fas fa-book' },
-    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: 'fas fa-tools' }
+    { id: 'tools', to: '/tools', label: t('nav.tools'), icon: 'fas fa-tools' },
+    { id: 'cv', to: '/cv/generator', label: t('nav.cv'), icon: 'fas fa-file-alt' }
   ]
 
   const getActiveIndex = () => {
@@ -21,6 +22,7 @@ const Links = ({ path, scrolled }) => {
     if (path.includes('/blog')) return 2
     if (path.includes('/docs')) return 3
     if (path.includes('/tools')) return 4
+    if (path.includes('/cv/generator')) return 5
     return 0
   }
 

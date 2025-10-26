@@ -19,6 +19,7 @@
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
     "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.5.2",
     "react-code-space": "^0.2.0",

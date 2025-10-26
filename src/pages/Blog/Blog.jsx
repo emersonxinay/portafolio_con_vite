@@ -179,7 +179,7 @@ const Blog = () => {
                 className='mobile-input w-full pr-8 appearance-none cursor-pointer'>
                 {categories.map(category => (
                   <option key={category} value={category} className='bg-slate-800'>
-                    {category === 'all' ? '📚 Todas las categorías' : `🔧 ${category.charAt(0).toUpperCase() + category.slice(1)}`}
+                    {category === 'all' ? 'Todas las categorías' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </option>
                 ))}
               </select>
@@ -256,7 +256,7 @@ const Blog = () => {
             transition={{ duration: 0.5 }}>
             <div className="mobile-card bg-gradient-to-br from-slate-900/60 to-slate-800/60 backdrop-blur-xl rounded-2xl xs:rounded-3xl border border-slate-700/50 p-6 xs:p-8 md:p-12 mx-auto max-w-lg">
               <motion.div
-                className='text-8xl mb-6'
+                className='text-8xl mb-6 text-blue-400'
                 animate={{
                   rotate: [0, 10, -10, 0],
                   scale: [1, 1.1, 1]
@@ -267,7 +267,7 @@ const Blog = () => {
                   repeatType: "reverse"
                 }}
               >
-                🔍
+                <i className="fas fa-search"></i>
               </motion.div>
               <h3 className='text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500'>
                 No se encontraron artículos
@@ -285,7 +285,8 @@ const Blog = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  🔄 Mostrar Todos los Artículos
+                  <i className="fas fa-redo mr-2"></i>
+                  Mostrar Todos los Artículos
                 </motion.button>
                 <motion.button
                   onClick={() => setSearchTerm('')}
@@ -293,7 +294,8 @@ const Blog = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  ✨ Limpiar Búsqueda
+                  <i className="fas fa-eraser mr-2"></i>
+                  Limpiar Búsqueda
                 </motion.button>
               </div>
             </div>

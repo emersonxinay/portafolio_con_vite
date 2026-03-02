@@ -5,31 +5,32 @@ import { professionalAchievements } from '../../../data/experienceData';
 import { techStack } from '../../../data/techStackData';
 import { useAnimationVariants } from '../../../hooks/useAnimationVariants';
 import SectionHeader from '../../../components/SectionHeader';
-import IconBadge from '../../../components/IconBadge';
 
 const About = () => {
   const { t } = useTranslation(['translation']);
   const { containerVariants, itemVariants } = useAnimationVariants();
 
   return (
-    <section id="about" className="py-16 md:py-24 w-full overflow-hidden">
+    <section id="about" className="py-24 w-full overflow-hidden relative">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-900/50 to-transparent pointer-events-none" />
+
       {/* Header */}
       <SectionHeader
-        icon="fas fa-user-circle"
+        icon="fas fa-user-tie"
         title={t('aboutPage.journey.title')}
         subtitle={
-          <>
-            {t('aboutPage.journey.subtitle1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold">{t('aboutPage.journey.yearsExperience')}</span> {t('aboutPage.journey.subtitle1End')}
-            {t('aboutPage.journey.subtitle2')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 font-bold">{t('aboutPage.journey.techEducation')}</span> {t('aboutPage.journey.subtitle2End')}
-            {t('aboutPage.journey.subtitle3')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">{t('aboutPage.journey.growingProjects')}</span>{t('aboutPage.journey.subtitle3End')}
-          </>
+          <span className="text-slate-400 font-light">
+            {t('aboutPage.journey.subtitle1')} <span className="text-white font-medium">{t('aboutPage.journey.yearsExperience')}</span> {t('aboutPage.journey.subtitle1End')}
+            {' '}{t('aboutPage.journey.subtitle2')} <span className="text-white font-medium">{t('aboutPage.journey.techEducation')}</span> {t('aboutPage.journey.subtitle2End')}
+            {' '}{t('aboutPage.journey.subtitle3')} <span className="text-white font-medium">{t('aboutPage.journey.growingProjects')}</span>{t('aboutPage.journey.subtitle3End')}
+          </span>
         }
-        gradient="from-blue-400 to-purple-500"
       />
 
-      {/* Experiencia Real */}
+      {/* Professional Achievements Grid */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24 max-w-7xl mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -39,127 +40,78 @@ const About = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="group relative p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-lg border border-slate-600/30 rounded-2xl hover:border-slate-500/50 transition-all duration-300 hover:shadow-2xl"
-            whileHover={{ scale: 1.05, y: -5 }}
+            className="group relative p-8 bg-slate-800/30 backdrop-blur-md border border-slate-700/50 rounded-2xl hover:border-accent/30 transition-all duration-500 hover:bg-slate-800/50"
+            whileHover={{ y: -5 }}
           >
-            <div className="text-center">
-              <i className={`${item.icon} text-4xl mb-4 text-transparent bg-clip-text bg-gradient-to-r ${item.color}`}></i>
-              <h3 className={`text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r ${item.color}`}>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 mb-6 rounded-full bg-slate-700/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <i className={`${item.icon} text-2xl text-accent`}></i>
+              </div>
+              <h3 className="text-lg font-bold mb-3 text-white group-hover:text-accent transition-colors">
                 {item.title}
               </h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <p className="text-sm text-slate-400 leading-relaxed">
                 {item.description}
               </p>
             </div>
-
-            {/* Efecto de hover */}
-            <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Tech Stack */}
-      <motion.div
-        className="mobile-card bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-xl border border-slate-700/50 max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <h3 className="text-xl xs:text-2xl md:text-3xl font-bold text-center mb-6 xs:mb-8 text-white flex items-center justify-center gap-3">
-          <i className="fas fa-cogs text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"></i>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-            {t('aboutPage.techStack.title')}
-          </span>
-        </h3>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xs:gap-8">
-          {/* Frontend */}
-          <div>
-            <h4 className="text-lg font-semibold text-green-400 mb-4 text-center flex items-center justify-center gap-2">
-              <i className="fas fa-palette"></i>
-              {t('aboutPage.techStack.frontend')}
-            </h4>
-            <div className="space-y-4">
-              {techStack.frontend.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  className="p-3 bg-slate-800/50 rounded-lg border border-slate-700/30 hover:border-green-400/50 transition-all duration-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <i className={`${tech.icon} text-green-400`}></i>
-                    <h5 className="text-sm font-semibold text-green-400">{tech.name}</h5>
-                  </div>
-                  <p className="text-xs text-zinc-400 leading-relaxed">{tech.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Backend */}
-          <div>
-            <h4 className="text-lg font-semibold text-blue-400 mb-4 text-center flex items-center justify-center gap-2">
-              <i className="fas fa-server"></i>
-              {t('aboutPage.techStack.backend')}
-            </h4>
-            <div className="space-y-4">
-              {techStack.backend.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  className="p-3 bg-slate-800/50 rounded-lg border border-slate-700/30 hover:border-blue-400/50 transition-all duration-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <i className={`${tech.icon} text-blue-400`}></i>
-                    <h5 className="text-sm font-semibold text-blue-400">{tech.name}</h5>
-                  </div>
-                  <p className="text-xs text-zinc-400 leading-relaxed">{tech.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tools & DevOps */}
-          <div>
-            <h4 className="text-lg font-semibold text-purple-400 mb-4 text-center flex items-center justify-center gap-2">
-              <i className="fas fa-tools"></i>
-              {t('aboutPage.techStack.tools')}
-            </h4>
-            <div className="space-y-4">
-              {techStack.tools.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  className="p-3 bg-slate-800/50 rounded-lg border border-slate-700/30 hover:border-purple-400/50 transition-all duration-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <i className={`${tech.icon} text-purple-400`}></i>
-                    <h5 className="text-sm font-semibold text-purple-400">{tech.name}</h5>
-                  </div>
-                  <p className="text-xs text-zinc-400 leading-relaxed">{tech.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+      {/* Tech Stack Section */}
+      <div className="relative max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h3 className="text-2xl font-bold text-white flex items-center justify-center gap-3 mb-4">
+            <span className="w-8 h-[1px] bg-slate-700"></span>
+            Technical Arsenal
+            <span className="w-8 h-[1px] bg-slate-700"></span>
+          </h3>
+          <p className="text-slate-400 max-w-2xl mx-auto">{t('aboutPage.techStack.title')}</p>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-8 pt-6 border-t border-slate-700/50 text-center">
-          <p className="text-zinc-300 leading-relaxed">
-            {t('about.bottomCta', 'Empresas de 3 países confían en mi experiencia para transformar sus ideas en soluciones digitales exitosas.')}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Stack Column Component */}
+          {[
+            { title: t('aboutPage.techStack.frontend'), icon: 'fas fa-layer-group', items: techStack.frontend },
+            { title: t('aboutPage.techStack.backend'), icon: 'fas fa-server', items: techStack.backend },
+            { title: t('aboutPage.techStack.tools'), icon: 'fas fa-tools', items: techStack.tools }
+          ].map((column, colIndex) => (
+            <div key={colIndex} className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-colors duration-300">
+              <h4 className="text-lg font-semibold text-white mb-6 flex items-center gap-3">
+                <i className={`${column.icon} text-slate-500`}></i>
+                {column.title}
+              </h4>
+              <div className="space-y-3">
+                {column.items.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-start gap-3 p-3 rounded-xl hover:bg-slate-800/50 transition-colors duration-200"
+                  >
+                    <i className={`${tech.icon} text-lg text-slate-500 group-hover:text-accent mt-0.5 transition-colors`}></i>
+                    <div>
+                      <h5 className="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">{tech.name}</h5>
+                      <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors mt-0.5">{tech.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Bottom Statement */}
+        <div className="mt-16 text-center border-t border-slate-800 pt-8">
+          <p className="text-lg text-slate-300 font-light italic">
+            "{t('about.bottomCta', 'Empowering businesses across the globe with scalable, high-performance digital solutions.')}"
           </p>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

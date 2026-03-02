@@ -355,7 +355,7 @@ const Article = () => {
             </div>
 
             {/* Enhanced Action Buttons */}
-              <div className='flex items-center gap-2 sm:gap-3'>
+            <div className='flex items-center gap-2 sm:gap-3'>
               <motion.button
                 onClick={handleShare}
                 className='flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold text-blue-400 hover:text-blue-300'
@@ -368,8 +368,8 @@ const Article = () => {
               <motion.button
                 onClick={handleLike}
                 className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold ${isLiked
-                    ? 'bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/50 text-red-400'
-                    : 'bg-gradient-to-r from-red-500/10 to-pink-500/10 hover:from-red-500/20 hover:to-pink-500/20 border border-red-500/30 hover:border-red-400/50 text-red-400 hover:text-red-300'
+                  ? 'bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/50 text-red-400'
+                  : 'bg-gradient-to-r from-red-500/10 to-pink-500/10 hover:from-red-500/20 hover:to-pink-500/20 border border-red-500/30 hover:border-red-400/50 text-red-400 hover:text-red-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
@@ -380,8 +380,8 @@ const Article = () => {
               <motion.button
                 onClick={handleBookmark}
                 className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl transition-all text-xs sm:text-sm font-semibold ${isBookmarked
-                    ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/50 text-yellow-400'
-                    : 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/30 hover:border-yellow-400/50 text-yellow-400 hover:text-yellow-300'
+                  ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/50 text-yellow-400'
+                  : 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/30 hover:border-yellow-400/50 text-yellow-400 hover:text-yellow-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}>
@@ -410,25 +410,25 @@ const Article = () => {
             <div className='relative p-8 lg:p-16'>
               <div className='max-w-4xl mx-auto'>
                 <div
-                  className='prose prose-invert prose-sm sm:prose-base lg:prose-xl max-w-none 
+                  className='prose prose-invert prose-sm sm:prose-base lg:prose-xl max-w-none article-content
                            prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight prose-headings:leading-tight
-                           prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:mb-6 sm:prose-h1:mb-8 prose-h1:bg-gradient-to-r prose-h1:from-white prose-h1:to-blue-200 prose-h1:bg-clip-text prose-h1:text-transparent
-                           prose-h2:text-xl sm:prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:mt-8 sm:prose-h2:mt-12 prose-h2:mb-4 sm:prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-slate-700/50 prose-h2:bg-gradient-to-r prose-h2:from-blue-400 prose-h2:to-purple-400 prose-h2:bg-clip-text prose-h2:text-transparent
-                           prose-h3:text-lg sm:prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:mt-6 sm:prose-h3:mt-8 prose-h3:mb-3 sm:prose-h3:mb-4 prose-h3:text-blue-300
-                           prose-p:text-zinc-200 prose-p:leading-relaxed sm:prose-p:leading-loose prose-p:text-sm sm:prose-p:text-base lg:prose-p:text-lg prose-p:mb-4 sm:prose-p:mb-6 prose-p:tracking-wide
-                           prose-a:text-blue-400 prose-a:no-underline prose-a:font-medium hover:prose-a:text-blue-300 hover:prose-a:underline prose-a:transition-all
-                           prose-strong:text-white prose-strong:font-semibold
-                           prose-code:text-blue-400 prose-code:bg-slate-800/80 prose-code:px-2 sm:prose-code:px-3 prose-code:py-0.5 sm:prose-code:py-1 prose-code:rounded-lg prose-code:text-xs sm:prose-code:text-sm prose-code:font-mono
-                           prose-pre:bg-slate-900/90 prose-pre:border prose-pre:border-slate-700/50 prose-pre:rounded-xl sm:prose-pre:rounded-2xl prose-pre:p-4 sm:prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:shadow-2xl
-                           prose-blockquote:border-l-4 prose-blockquote:border-l-blue-500 prose-blockquote:bg-slate-800/40 prose-blockquote:text-zinc-300 prose-blockquote:rounded-r-xl prose-blockquote:p-4 sm:prose-blockquote:p-6 prose-blockquote:my-6 sm:prose-blockquote:my-8 prose-blockquote:font-medium prose-blockquote:italic
-                           prose-ul:text-zinc-200 prose-ul:space-y-1 sm:prose-ul:space-y-2 prose-ul:my-4 sm:prose-ul:my-6
-                           prose-ol:text-zinc-200 prose-ol:space-y-1 sm:prose-ol:space-y-2 prose-ol:my-4 sm:prose-ol:my-6
-                           prose-li:text-zinc-200 prose-li:leading-normal sm:prose-li:leading-relaxed prose-li:pl-1 sm:prose-li:pl-2
-                           prose-li:marker:text-blue-400 prose-li:marker:font-bold
-                           prose-img:rounded-xl sm:prose-img:rounded-2xl prose-img:shadow-xl sm:prose-img:shadow-2xl prose-img:my-6 sm:prose-img:my-8 prose-img:mx-auto prose-img:border prose-img:border-slate-700/30
-                           prose-table:border prose-table:border-slate-700/50 prose-table:rounded-lg sm:prose-table:rounded-xl prose-table:overflow-hidden
-                           prose-th:bg-slate-800/50 prose-th:text-white prose-th:font-semibold prose-th:p-3 sm:prose-th:p-4 prose-th:border-b prose-th:border-slate-700/50
-                           prose-td:p-3 sm:prose-td:p-4 prose-td:border-b prose-td:border-slate-700/30 prose-td:text-zinc-300'
+                           prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:mb-8 prose-h1:bg-gradient-to-r prose-h1:from-white prose-h1:to-cyan-200 prose-h1:bg-clip-text prose-h1:text-transparent
+                           prose-h2:text-2xl sm:prose-h2:text-3xl lg:prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b prose-h2:border-slate-800 prose-h2:bg-gradient-to-r prose-h2:from-cyan-400 prose-h2:to-blue-500 prose-h2:bg-clip-text prose-h2:text-transparent
+                           prose-h3:text-xl sm:prose-h3:text-2xl lg:prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-6 prose-h3:text-cyan-300
+                           prose-p:text-slate-300 prose-p:leading-relaxed sm:prose-p:leading-loose prose-p:text-base lg:prose-p:text-lg prose-p:mb-8 prose-p:tracking-wide
+                           prose-a:text-cyan-400 prose-a:no-underline prose-a:font-semibold hover:prose-a:text-cyan-300 hover:prose-a:underline prose-a:transition-all
+                           prose-strong:text-white prose-strong:font-bold
+                           prose-code:text-cyan-400 prose-code:bg-slate-900/80 prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-code:text-sm prose-code:font-mono
+                           prose-pre:bg-slate-950 prose-pre:border prose-pre:border-slate-800 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:shadow-2xl
+                           prose-blockquote:border-l-4 prose-blockquote:border-l-cyan-500 prose-blockquote:bg-slate-900/40 prose-blockquote:text-slate-300 prose-blockquote:rounded-r-2xl prose-blockquote:p-8 prose-blockquote:my-10 prose-blockquote:font-medium prose-blockquote:italic
+                           prose-ul:text-slate-300 prose-ul:space-y-3 prose-ul:my-8
+                           prose-ol:text-slate-300 prose-ol:space-y-3 prose-ol:my-8
+                           prose-li:text-slate-300 prose-li:leading-relaxed prose-li:pl-2
+                           prose-li:marker:text-cyan-500 prose-li:marker:font-black
+                           prose-img:rounded-3xl prose-img:shadow-[0_20px_50px_rgba(0,0,0,0.5)] prose-img:my-12 prose-img:border prose-img:border-slate-800
+                           prose-table:border prose-table:border-slate-800 prose-table:rounded-2xl prose-table:overflow-hidden
+                           prose-th:bg-slate-900/80 prose-th:text-white prose-th:font-bold prose-th:p-4 prose-th:border-b prose-th:border-slate-800
+                           prose-td:p-4 prose-td:border-b prose-td:border-slate-900 prose-td:text-slate-400'
                   dangerouslySetInnerHTML={{ __html: article.content }}>
                 </div>
               </div>

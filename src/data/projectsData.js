@@ -1,6 +1,42 @@
 export const projectsData = [
   {
+    id: 0,
+    title: "Lenguaje de ProgramaciónÁguila",
+    description: "Lenguaje de alto nivel con sintaxis nativa en español, orientado a la seguridad y el rendimiento. Potenciado por Rust y WebAssembly.",
+    category: "saas",
+    tech: ["Rust", "LLVM", "WebAssembly", "TypeScript"],
+    image: "/images/proyectos/aguila.png",
+    liveUrl: "https://aguila.compilandocode.com",
+    githubUrl: "https://github.com/emersonxinay/aguila",
+    status: "live",
+    gradient: "from-amber-400 via-orange-500 to-red-600",
+    color: "from-amber-400 to-orange-500",
+    bgColor: "from-amber-900/20 to-orange-900/20",
+    featured: true
+  },
+  {
     id: 1,
+    title: "Jefry Studios",
+    description: "Plataforma de e-commerce profesional para productores musicales. Sistema de venta de beats y karaoke con descarga automática, licencias comerciales y pasarelas de pago integradas (Culqi, Izipay).",
+    category: "ecommerce",
+    tech: ["React", "Node.js", "Culqi V4", "Izipay", "Digital Products"],
+    image: "/images/proyectos/jefry_studios.png",
+    clientInfo: {
+      name: "SALAS YNGA JEFERSON",
+      ruc: "10473457887",
+      location: "Lima",
+      phone: "+51 927 866 705"
+    },
+    liveUrl: "https://yefrystudios.com/",
+    githubUrl: "#",
+    status: "live",
+    gradient: "from-purple-600 via-pink-600 to-red-600",
+    color: "from-purple-500 to-pink-500",
+    bgColor: "from-purple-900/20 to-pink-900/20",
+    featured: true
+  },
+  {
+    id: 2,
     title: "Kefyto E-commerce",
     description: "Plataforma completa de e-commerce para venta de kéfir natural con carrito dinámico e integración WhatsApp",
     category: "ecommerce",
@@ -15,7 +51,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "Hazuki Restaurant",
     description: "Sistema integral de gestión para restaurantes con reservas, menús digitales y administración por áreas",
     category: "web",
@@ -30,7 +66,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Hazuki Sushi",
     description: "Plataforma especializada para sushi bar con menú interactivo y sistema de pedidos optimizado",
     category: "web",
@@ -45,7 +81,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Netmuz Social",
     description: "Red social especializada para músicos - LinkedIn musical con gestión de eventos y marketplace",
     category: "social",
@@ -60,7 +96,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "CompilandoCode",
     description: "Plataforma educativa con cursos de programación, blog técnico y recursos para desarrolladores",
     category: "saas",
@@ -75,7 +111,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 6,
+    id: 7,
     title: "Sistema Registro QR",
     description: "Sistema de registro en tiempo real con códigos QR para control de asistencia en colegios",
     category: "web",
@@ -90,7 +126,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 7,
+    id: 8,
     title: "Escondida DesafioLab",
     description: "Plataforma educativa para Fundación Minera Escondida BHP con gestión de cursos y seguimiento estudiantil",
     category: "saas",
@@ -105,7 +141,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 8,
+    id: 9,
     title: "DRTC Huánuco",
     description: "Sistema web para registro y seguimiento de personal que postula a puestos de trabajo (Prácticas Preprofesionales)",
     category: "web",

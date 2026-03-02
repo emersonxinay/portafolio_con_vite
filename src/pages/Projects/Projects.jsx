@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '../../components/SEO/SEOHead';
-import ProjectsComponent from '../Home/Projects/Projects';
+import ProjectsComponent from '../Home/Projects/ProjectsSimple';
 
 const ProjectsPage = () => {
   const { t, i18n } = useTranslation();
@@ -45,7 +45,7 @@ const ProjectsPage = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="mobile-container space-y-12 xs:space-y-16 md:space-y-24 py-12 xs:py-16 md:py-20 safe-area-bottom w-full">
+        <div className="mobile-container safe-area-bottom w-full">
           <ProjectsComponent />
         </div>
 

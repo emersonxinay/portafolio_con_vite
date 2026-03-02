@@ -304,95 +304,90 @@ const Blog = () => {
           filteredArticles.map((a, i) => (
             <motion.div
               key={'f' + i}
-              className='w-full h-full'
+              className='w-full'
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 30 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}>
               <Link
                 to={'/blog/' + a.url}
-                key={a.url}
-                className='mobile-card bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl xs:rounded-3xl flex flex-col md:grid md:grid-cols-12 group relative overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 md:hover:-translate-y-2 w-full'>
-                <BottomContainer></BottomContainer>
+                className='mobile-card group relative flex flex-col md:grid md:grid-cols-12 bg-slate-900/40 backdrop-blur-md border border-slate-800/50 rounded-[2rem] overflow-hidden hover:border-cyan-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(6,182,212,0.15)] w-full'>
 
-                {/* Premium Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                {/* Decorative Gradient Glow */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[2.1rem] opacity-0 group-hover:opacity-20 blur transition duration-500"></div>
 
-                {/* Article Image */}
-                <div className='md:col-span-5 relative overflow-hidden rounded-t-2xl xs:rounded-t-3xl md:rounded-t-none md:rounded-l-3xl h-48 xs:h-56 md:h-auto'>
+                {/* Article Image Container */}
+                <div className='md:col-span-5 relative overflow-hidden h-56 md:h-full min-h-[240px]'>
                   <img
                     src={a.thumbnail}
                     alt={a.title}
-                    className='h-full w-full object-cover group-hover:scale-110 transition-transform duration-700'
+                    className='h-full w-full object-cover group-hover:scale-105 transition-transform duration-700'
                   />
-                  <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent'></div>
+                  <div className='absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60'></div>
 
-                  {/* Floating badge */}
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                    TECH ARTICLE
+                  {/* Category Badge */}
+                  <div className="absolute top-6 left-6 flex gap-2">
+                    <span className="bg-cyan-500/20 backdrop-blur-md border border-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                      {a.tags[0].replace('#', '')}
+                    </span>
                   </div>
 
-                  {/* Reading time overlay */}
-                  <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                    <BsClock className='text-xs' />
-                    5 min
+                  {/* Reading Time */}
+                  <div className="absolute bottom-6 right-6 bg-slate-900/80 backdrop-blur-md border border-slate-700/50 text-slate-300 px-4 py-1.5 rounded-full text-[11px] font-semibold flex items-center gap-2">
+                    <BsClock className='text-cyan-400' />
+                    <span>5 min read</span>
                   </div>
                 </div>
 
                 {/* Article Content */}
-                <div className='flex flex-col md:col-span-7 relative p-4 xs:p-6 md:p-8 justify-between gap-4 xs:gap-6'>
-                  <div className='space-y-3 xs:space-y-4 md:space-y-6'>
-                    {/* Enhanced Tags */}
-                    <div className='flex flex-wrap gap-2'>
-                      {a.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <motion.span
-                          key={tagIndex}
-                          className='px-4 py-2 text-xs font-bold bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full border border-blue-500/30 backdrop-blur-sm'
-                          whileHover={{ scale: 1.05 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {tag}
-                        </motion.span>
-                      ))}
-                      {a.tags.length > 3 && (
-                        <span className='px-4 py-2 text-xs font-bold bg-gradient-to-r from-zinc-700/50 to-zinc-600/50 text-zinc-300 rounded-full border border-zinc-600/30'>
-                          +{a.tags.length - 3} más
-                        </span>
-                      )}
+                <div className='md:col-span-7 flex flex-col p-6 xs:p-8 md:p-10 justify-between gap-6 relative z-10'>
+                  <div className='space-y-4 md:space-y-6'>
+                    <div className='flex items-center gap-4 text-xs font-semibold text-slate-500'>
+                      <div className='flex items-center gap-2'>
+                        <BsCalendar className='text-cyan-500/70' />
+                        <span>{a.date}</span>
+                      </div>
+                      <span className='w-1 h-1 bg-slate-700 rounded-full'></span>
+                      <span className='text-cyan-500/80'>Premium Article</span>
                     </div>
 
-                    {/* Enhanced Title */}
-                    <h3 className='font-black text-lg xs:text-xl md:text-2xl lg:text-3xl leading-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-500'>
+                    <h3 className='text-2xl xs:text-3xl md:text-3xl lg:text-4xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 leading-tight'>
                       {a.title}
                     </h3>
 
-                    {/* Enhanced Description */}
-                    <p className='text-zinc-300 text-sm xs:text-base md:text-lg leading-relaxed line-clamp-2 xs:line-clamp-3 group-hover:text-zinc-200 transition-colors duration-300'>
+                    <p className='text-slate-400 text-base md:text-lg leading-relaxed line-clamp-2 md:line-clamp-3'>
                       {a.description}
                     </p>
+
+                    <div className='flex flex-wrap gap-2 pt-2'>
+                      {a.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className='text-[11px] font-bold text-slate-500 border border-slate-800 px-3 py-1 rounded-lg uppercase tracking-wider group-hover:border-cyan-500/20 group-hover:text-cyan-500/60 transition-colors duration-300'
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Enhanced Footer */}
-                  <div className='flex flex-col xs:flex-row justify-between items-start xs:items-center gap-3 xs:gap-0 pt-4 xs:pt-6 border-t border-slate-600/50'>
-                    <div className='flex items-center gap-3 xs:gap-6 text-xs xs:text-sm text-zinc-400'>
-                      <div className='flex items-center gap-2 bg-slate-800/50 px-3 py-2 rounded-xl'>
-                        <BsCalendar className='text-blue-400' />
-                        <span className='font-medium'>{a.date}</span>
+                  <div className='flex items-center justify-between pt-8 border-t border-slate-800/50'>
+                    <div className='flex items-center gap-3'>
+                      <div className='w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-[1px]'>
+                        <div className='w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-cyan-400 font-bold text-xs'>
+                          EE
+                        </div>
                       </div>
-                      <div className='flex items-center gap-2 bg-slate-800/50 px-3 py-2 rounded-xl'>
-                        <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
-                        <span className='font-medium'>Actualizado</span>
+                      <div className='flex flex-col'>
+                        <span className='text-sm font-bold text-slate-200'>Emerson Espinoza</span>
+                        <span className='text-[10px] text-slate-500 uppercase tracking-tighter'>Full Stack Architect</span>
                       </div>
                     </div>
 
-                    <motion.div
-                      className='flex items-center gap-2 xs:gap-3 text-blue-400 group-hover:text-blue-300 transition-all duration-300 font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-3 xs:px-6 py-2 xs:py-3 rounded-xl xs:rounded-2xl border border-blue-500/20 group-hover:border-blue-400/40 text-sm xs:text-base touch-target'
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span>Leer Artículo</span>
-                      <BsArrowRight className='group-hover:translate-x-2 transition-transform duration-300' />
-                    </motion.div>
+                    <div className='flex items-center gap-2 text-cyan-400 font-bold group/btn'>
+                      <span className='group-hover/btn:mr-2 transition-all duration-300'>Read More</span>
+                      <BsArrowRight className='text-xl group-hover/btn:translate-x-1 transition-transform' />
+                    </div>
                   </div>
                 </div>
               </Link>

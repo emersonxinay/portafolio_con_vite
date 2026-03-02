@@ -5,7 +5,7 @@ import { getArticleImage } from '../../assets/articles/index.js';
 const articles = [
   {
     thumbnail: getArticleImage('ia_webb'),
-    url: 'inteligencia+artificial+en+el+desarrollo+web+moderno',
+    url: 'inteligencia-artificial-en-el-desarrollo-web-moderno',
     title: 'Inteligencia Artificial en el Desarrollo Web Moderno',
     description:
       'Explora cómo la IA está revolucionando el desarrollo web, desde herramientas de código asistido hasta optimización automática de rendimiento y experiencias de usuario personalizadas.',
@@ -55,7 +55,7 @@ const articles = [
       </div>
     </div>
 
-    <h3>🛠️ Beneficios Principales de la IA en Desarrollo</h3>
+    <h3> Beneficios Principales de la IA en Desarrollo</h3>
     
     <div class="benefits-grid">
       <div class="benefit-card">
@@ -64,12 +64,12 @@ const articles = [
         <p>Código predictivo que entiende el contexto y sugiere implementaciones completas</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">📖</div>
+        <div class="benefit-icon"></div>
         <h4>Documentación Automática</h4>
         <p>Generación de comentarios y documentación técnica de forma automatizada</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🐛</div>
+        <div class="benefit-icon"></div>
         <h4>Detección de Bugs</h4>
         <p>Identificación temprana de errores y vulnerabilidades de seguridad</p>
       </div>
@@ -80,7 +80,7 @@ const articles = [
       </div>
     </div>
 
-    <h2>🧠 Machine Learning en Frontend</h2>
+    <h2> Machine Learning en Frontend</h2>
 
     <p>La integración de modelos de ML directamente en aplicaciones web ha abierto un mundo de posibilidades para crear experiencias más personalizadas e inteligentes:</p>
 
@@ -100,7 +100,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">💬</span>
+          <span class="tech-icon"></span>
           <h4>Análisis de Sentimientos</h4>
         </div>
         <p>Procesamiento de texto para entender emociones y opiniones en comentarios y reseñas</p>
@@ -108,7 +108,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">👁️</span>
+          <span class="tech-icon"></span>
           <h4>Reconocimiento Visual</h4>
         </div>
         <p>Identificación de imágenes, objetos y texto usando modelos de visión computacional</p>
@@ -123,7 +123,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>🛠️ Herramientas y Frameworks Esenciales</h2>
+    <h2> Herramientas y Frameworks Esenciales</h2>
 
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1200/1*cG6U1qstYDijh9bPL42e-Q.png" alt="TensorFlow.js" class="article-image" />
@@ -134,8 +134,8 @@ const predictions = model.predict(userFeatures);</code>
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>🛠️ Herramienta</th>
-            <th>💼 Uso Principal</th>
+            <th> Herramienta</th>
+            <th> Uso Principal</th>
             <th> Ventaja Clave</th>
             <th> Dificultad</th>
           </tr>
@@ -169,7 +169,7 @@ const predictions = model.predict(userFeatures);</code>
       </table>
     </div>
 
-    <h2>💼 Casos de Uso Prácticos Reales</h2>
+    <h2> Casos de Uso Prácticos Reales</h2>
 
     <div class="callout callout-success">
       <div class="callout-icon"></div>
@@ -182,7 +182,7 @@ const predictions = model.predict(userFeatures);</code>
     <div class="use-cases">
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">📄</span>
+          <span class="use-case-icon"></span>
           <h4>Sistema de RRHH Inteligente</h4>
           <span class="use-case-badge">Reducción 80% tiempo</span>
         </div>
@@ -196,7 +196,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">✍️</span>
+          <span class="use-case-icon"></span>
           <h4>Generador de Contenido</h4>
           <span class="use-case-badge">300% más engagement</span>
         </div>
@@ -210,7 +210,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🔍</span>
+          <span class="use-case-icon"></span>
           <h4>SEO Automático</h4>
           <span class="use-case-badge">+150% tráfico orgánico</span>
         </div>
@@ -224,7 +224,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🛡️</span>
+          <span class="use-case-icon"></span>
           <h4>Detección de Fraude</h4>
           <span class="use-case-badge">99.8% precisión</span>
         </div>
@@ -237,7 +237,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>🔮 El Futuro de la IA en Web Development</h2>
+    <h2> El Futuro de la IA en Web Development</h2>
 
     <div class="callout callout-warning">
       <div class="callout-icon"></div>
@@ -264,7 +264,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">2024</span>
-          <h4>🎨 Interfaces Adaptativas</h4>
+          <h4> Interfaces Adaptativas</h4>
         </div>
         <p>UIs que se modifican automáticamente basándose en el comportamiento y preferencias del usuario</p>
       </div>
@@ -280,7 +280,7 @@ const predictions = model.predict(userFeatures);</code>
       <div class="trend-item">
         <div class="trend-header">
           <span class="trend-year">2025</span>
-          <h4>🧪 Testing Automático Inteligente</h4>
+          <h4> Testing Automático Inteligente</h4>
         </div>
         <p>Generación automática de tests que cubren edge cases y escenarios complejos</p>
       </div>
@@ -290,7 +290,7 @@ const predictions = model.predict(userFeatures);</code>
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
-        <div class="callout-icon">💎</div>
+        <div class="callout-icon"></div>
         <div class="callout-content">
           <h3>La Revolución ya Comenzó</h3>
           <p>Como desarrollador con experiencia en proyectos reales, puedo afirmar que integrar IA en nuestros proyectos <strong>ya no es opcional, es una necesidad competitiva</strong>. La clave está en entender cómo estas tecnologías pueden mejorar tanto nuestro proceso de desarrollo como la experiencia del usuario final.</p>
@@ -298,7 +298,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
 
       <div class="key-takeaways">
-        <h3>📋 Puntos Clave para Recordar:</h3>
+        <h3> Puntos Clave para Recordar:</h3>
         <ul class="takeaway-list">
           <li><strong>Adopción Gradual:</strong> Comienza con herramientas simples como GitHub Copilot</li>
           <li><strong>Experimenta Constantemente:</strong> Prueba nuevas APIs y modelos regularmente</li>
@@ -694,7 +694,7 @@ const predictions = model.predict(userFeatures);</code>
 
   {
     thumbnail: getArticleImage('ciencia_datos'),
-    url: 'ciencia+de+datos+para+desarrolladores+web',
+    url: 'ciencia-de-datos-para-desarrolladores-web',
     title: 'Ciencia de Datos para Desarrolladores Web',
     description:
       'Descubre cómo aplicar técnicas de ciencia de datos en aplicaciones web para crear dashboards interactivos, análisis de usuarios y sistemas de recomendación.',
@@ -737,7 +737,7 @@ const predictions = model.predict(userFeatures);</code>
     </div>
 
     <div class="callout callout-info">
-      <div class="callout-icon">🔥</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Los Datos son el Nuevo Petróleo</h3>
         <p>En el desarrollo web actual, cada interacción del usuario genera información valiosa que puede transformar completamente nuestras aplicaciones. Como desarrollador, he visto cómo los datos correctamente analizados pueden <strong>multiplicar el valor de una aplicación por 10</strong>.</p>
@@ -756,18 +756,18 @@ const predictions = model.predict(userFeatures);</code>
         <p>Identificar puntos de fricción y mejorar las tasas de conversión basado en datos reales</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🎨</div>
+        <div class="benefit-icon"></div>
         <h4>Personalización Inteligente</h4>
         <p>Crear experiencias únicas para cada usuario basadas en sus patrones de uso</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">📈</div>
+        <div class="benefit-icon"></div>
         <h4>Detección de Tendencias</h4>
         <p>Anticiparse a las necesidades del mercado y usuarios mediante análisis predictivo</p>
       </div>
     </div>
 
-    <h2>🛠️ Stack Tecnológico Esencial</h2>
+    <h2> Stack Tecnológico Esencial</h2>
 
     <div class="callout callout-warning">
       <div class="callout-icon"></div>
@@ -780,7 +780,7 @@ const predictions = model.predict(userFeatures);</code>
     <div class="tech-showcase">
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🐍</span>
+          <span class="tech-icon"></span>
           <h4>Backend - Ecosistema Python</h4>
         </div>
         <p>Python sigue siendo el lenguaje dominante para ciencia de datos por su versatilidad y ecosistema maduro</p>
@@ -807,7 +807,7 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>💼 Casos de Uso Reales que he Desarrollado</h2>
+    <h2> Casos de Uso Reales que he Desarrollado</h2>
 
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1200/1*9I6QTqIXi-6oJ-X8t6HgMg.png" alt="Dashboard Analytics" class="article-image" />
@@ -840,7 +840,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🛒</span>
+          <span class="use-case-icon"></span>
           <h4>Motor de Recomendaciones E-commerce</h4>
           <span class="use-case-badge">+180% incremento en ventas</span>
         </div>
@@ -855,7 +855,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">📈</span>
+          <span class="use-case-icon"></span>
           <h4>Predicción de Ventas con IA</h4>
           <span class="use-case-badge">95% precisión en forecasting</span>
         </div>
@@ -869,10 +869,10 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>🏗️ Arquitectura de Datos Moderna</h2>
+    <h2> Arquitectura de Datos Moderna</h2>
 
     <div class="callout callout-primary">
-      <div class="callout-icon">🏛️</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>Arquitectura que Escala</h3>
         <p>Esta es la arquitectura que uso para manejar millones de puntos de datos diarios, garantizando rendimiento y escalabilidad.</p>
@@ -882,8 +882,8 @@ const predictions = model.predict(userFeatures);</code>
     <div class="future-trends">
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">1️⃣</span>
-          <h4>📥 Recolección de Datos</h4>
+          <span class="trend-year">1⃣</span>
+          <h4> Recolección de Datos</h4>
         </div>
         <p>Event tracking con Google Analytics 4, Mixpanel y eventos personalizados que capturan cada interacción significativa del usuario</p>
         <div class="trend-examples">
@@ -895,8 +895,8 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">2️⃣</span>
-          <h4>💾 Almacenamiento Híbrido</h4>
+          <span class="trend-year">2⃣</span>
+          <h4> Almacenamiento Híbrido</h4>
         </div>
         <p>PostgreSQL para datos estructurados y relacionales, MongoDB para datos semi-estructurados, Redis para cache de alta velocidad</p>
         <div class="trend-examples">
@@ -908,8 +908,8 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">3️⃣</span>
-          <h4>⚙️ Procesamiento Inteligente</h4>
+          <span class="trend-year">3⃣</span>
+          <h4> Procesamiento Inteligente</h4>
         </div>
         <p>Pipelines automatizados con Python, Pandas y NumPy que procesan datos en tiempo real y por lotes</p>
         <div class="trend-examples">
@@ -921,7 +921,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">4️⃣</span>
+          <span class="trend-year">4⃣</span>
           <h4> Visualización Interactiva</h4>
         </div>
         <p>Dashboards en React con D3.js que permiten exploración de datos en tiempo real y generación de insights accionables</p>
@@ -934,7 +934,7 @@ const predictions = model.predict(userFeatures);</code>
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">5️⃣</span>
+          <span class="trend-year">5⃣</span>
           <h4> APIs Inteligentes</h4>
         </div>
         <p>FastAPI endpoints que sirven insights, predicciones y recomendaciones con latencia ultra-baja y alta disponibilidad</p>
@@ -946,10 +946,10 @@ const predictions = model.predict(userFeatures);</code>
       </div>
     </div>
 
-    <h2>✨ Mejores Prácticas Aprendidas</h2>
+    <h2> Mejores Prácticas Aprendidas</h2>
 
     <div class="key-takeaways">
-      <h3>📋 Lecciones de 6+ Años en Data Science:</h3>
+      <h3> Lecciones de 6+ Años en Data Science:</h3>
       <ul class="takeaway-list">
         <li><strong>Comienza Simple:</strong> Análisis descriptivo antes que predictivo - entiende qué pasó antes de predecir qué pasará</li>
         <li><strong>Automatiza Todo:</strong> Pipelines de datos automatizados son críticos para mantener consistencia y reducir errores</li>
@@ -963,7 +963,7 @@ const predictions = model.predict(userFeatures);</code>
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
-        <div class="callout-icon">💎</div>
+        <div class="callout-icon"></div>
         <div class="callout-content">
           <h3>El Futuro es Data-Driven</h3>
           <p>La ciencia de datos <strong>no es solo para científicos de datos</strong>. Como desarrolladores web, tenemos una oportunidad única de crear aplicaciones que no solo funcionen bien, sino que <strong>aprendan, evolucionen y se mejoren automáticamente</strong> basándose en datos reales de usuarios.</p>
@@ -993,7 +993,7 @@ const predictions = model.predict(userFeatures);</code>
 
   {
     thumbnail: getArticleImage('frontend_moderno'),
-    url: 'frontend+moderno+2024+react+nextjs+typescript',
+    url: 'frontend-moderno-2024-react-nextjs-typescript',
     title: 'Frontend Moderno 2024: React, Next.js y TypeScript',
     description:
       'Guía completa sobre las mejores prácticas de desarrollo frontend en 2024, incluyendo React 18, Next.js 14, TypeScript, y las últimas tendencias en UI/UX.',
@@ -1047,8 +1047,8 @@ const predictions = model.predict(userFeatures);</code>
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>🛠️ Tecnología</th>
-            <th>💼 Propósito</th>
+            <th> Tecnología</th>
+            <th> Propósito</th>
             <th> Ventaja Clave</th>
             <th> Adopción 2024</th>
           </tr>
@@ -1088,7 +1088,7 @@ const predictions = model.predict(userFeatures);</code>
       </table>
     </div>
 
-    <h2>⚛️ React 18: Las Características que Cambian Todo</h2>
+    <h2> React 18: Las Características que Cambian Todo</h2>
 
     <div class="callout callout-warning">
       <div class="callout-icon"></div>
@@ -1101,7 +1101,7 @@ const predictions = model.predict(userFeatures);</code>
     <div class="tech-showcase">
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🔄</span>
+          <span class="tech-icon"></span>
           <h4>Concurrent Rendering</h4>
         </div>
         <p>React puede pausar, reanudar o abandonar renders para mantener la UI responsive bajo cualquier carga</p>
@@ -1117,7 +1117,7 @@ const handleClick = () => {
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">⏸️</span>
+          <span class="tech-icon">⏸</span>
           <h4>Suspense for Data Fetching</h4>
         </div>
         <p>Manejo declarativo de estados de carga que simplifica enormemente la UX de aplicaciones complejas</p>
@@ -1149,7 +1149,7 @@ const handleSearch = (query) => {
       </div>
     </div>
 
-    <h2>🚄 Next.js 14: La Revolución del App Router</h2>
+    <h2> Next.js 14: La Revolución del App Router</h2>
 
     <div class="image-container">
       <img src="https://miro.medium.com/v2/resize:fit:1200/1*8-lnKUbLz4gZyZqjGqZQxA.png" alt="Next.js App Router" class="article-image" />
@@ -1166,31 +1166,31 @@ const handleSearch = (query) => {
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <div class="benefit-icon">🖥️</div>
+        <div class="benefit-icon"></div>
         <h4>Server Components</h4>
         <p>Rendering en el servidor por defecto, reduciendo bundle size y mejorando performance dramáticamente</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">📱</div>
+        <div class="benefit-icon"></div>
         <h4>Layouts Anidados</h4>
         <p>Estructura de layouts intuitiva que comparte estado y evita re-renders innecesarios</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🌊</div>
+        <div class="benefit-icon"></div>
         <h4>Streaming SSR</h4>
         <p>Contenido se renderiza progresivamente, mejorando perceived performance</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">📂</div>
+        <div class="benefit-icon"></div>
         <h4>File-based Routing</h4>
         <p>Routing basado en el sistema de archivos más potente y flexible que nunca</p>
       </div>
     </div>
 
-    <h2>🔷 TypeScript: Más Allá de Types Básicos</h2>
+    <h2> TypeScript: Más Allá de Types Básicos</h2>
 
     <div class="callout callout-primary">
-      <div class="callout-icon">💎</div>
+      <div class="callout-icon"></div>
       <div class="callout-content">
         <h3>TypeScript Avanzado para Equipos</h3>
         <p>Después de liderar equipos usando TypeScript en producción, estas son las técnicas avanzadas que <strong>realmente marcan la diferencia</strong> en codebases grandes.</p>
@@ -1200,7 +1200,7 @@ const handleSearch = (query) => {
     <div class="tech-showcase">
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🧩</span>
+          <span class="tech-icon"></span>
           <h4>Utility Types Avanzados</h4>
         </div>
         <p>Manipulación de tipos que hace el código más flexible y mantenible</p>
@@ -1219,7 +1219,7 @@ type PartialUser = Partial&lt;Pick&lt;User, 'name' | 'email'&gt;&gt;;</code>
 
       <div class="tech-item">
         <div class="tech-header">
-          <span class="tech-icon">🔧</span>
+          <span class="tech-icon"></span>
           <h4>Generic Components</h4>
         </div>
         <p>Componentes reutilizables con type safety completa</p>
@@ -1238,7 +1238,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
     </div>
 
-    <h2>🎨 Tailwind CSS: Productividad Máxima</h2>
+    <h2> Tailwind CSS: Productividad Máxima</h2>
 
     <div class="use-cases">
       <div class="use-case">
@@ -1289,7 +1289,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <div class="future-trends">
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">🔄</span>
+          <span class="trend-year"></span>
           <h4>Code Splitting Inteligente</h4>
         </div>
         <p>Lazy loading de componentes basado en patrones de uso real, no solo rutas</p>
@@ -1302,7 +1302,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">🧠</span>
+          <span class="trend-year"></span>
           <h4>Memoization Estratégica</h4>
         </div>
         <p>React.memo, useMemo y useCallback usados correctamente para evitar re-renders innecesarios</p>
@@ -1328,7 +1328,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="trend-item">
         <div class="trend-header">
-          <span class="trend-year">🖼️</span>
+          <span class="trend-year"></span>
           <h4>Image Optimization</h4>
         </div>
         <p>Next.js Image component con lazy loading, responsive images y formatos modernos</p>
@@ -1340,7 +1340,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
     </div>
 
-    <h2>🧪 Testing: Calidad Asegurada</h2>
+    <h2> Testing: Calidad Asegurada</h2>
 
     <div class="callout callout-success">
       <div class="callout-icon"></div>
@@ -1352,12 +1352,12 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <div class="benefit-icon">🔬</div>
+        <div class="benefit-icon"></div>
         <h4>Unit Tests Focalizados</h4>
         <p>Jest + React Testing Library para lógica de negocio y comportamientos críticos</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🔗</div>
+        <div class="benefit-icon"></div>
         <h4>Integration Tests</h4>
         <p>Testing de user flows completos que validan la experiencia real del usuario</p>
       </div>
@@ -1367,13 +1367,13 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
         <p>Tests end-to-end para casos críticos de negocio en múltiples navegadores</p>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">👁️</div>
+        <div class="benefit-icon"></div>
         <h4>Visual Regression</h4>
         <p>Chromatic para detectar cambios visuales no intencionados automáticamente</p>
       </div>
     </div>
 
-    <h2>🔮 Tendencias Frontend 2024-2025</h2>
+    <h2> Tendencias Frontend 2024-2025</h2>
 
     <div class="callout callout-primary">
       <div class="callout-icon"></div>
@@ -1386,7 +1386,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
     <div class="use-cases">
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🖥️</span>
+          <span class="use-case-icon"></span>
           <h4>Server Components Mainstream</h4>
           <span class="use-case-badge">Adopción masiva</span>
         </div>
@@ -1414,7 +1414,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
       <div class="use-case">
         <div class="use-case-header">
-          <span class="use-case-icon">🧩</span>
+          <span class="use-case-icon"></span>
           <h4>Micro-frontends Evolution</h4>
           <span class="use-case-badge">Escalabilidad</span>
         </div>
@@ -1445,7 +1445,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
     <div class="conclusion-section">
       <div class="callout callout-primary">
-        <div class="callout-icon">💎</div>
+        <div class="callout-icon"></div>
         <div class="callout-content">
           <h3>Balance Entre Innovación y Estabilidad</h3>
           <p>El frontend moderno requiere un <strong>balance cuidadoso</strong> entre adoptar nuevas tecnologías que mejoran la experiencia de desarrollo y mantener la estabilidad que los usuarios y equipos necesitan.</p>
@@ -1453,7 +1453,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       </div>
 
       <div class="key-takeaways">
-        <h3>📋 Principios Fundamentales para 2024:</h3>
+        <h3> Principios Fundamentales para 2024:</h3>
         <ul class="takeaway-list">
           <li><strong>TypeScript First:</strong> Type safety no es negociable en aplicaciones serias</li>
           <li><strong>Performance Conscious:</strong> Cada decisión técnica debe considerar el impacto en UX</li>
@@ -1486,7 +1486,7 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
 
   {
     thumbnail: getArticleImage('backend'),
-    url: 'backend+escalable+python+nodejs+microservicios',
+    url: 'backend-escalable-python-nodejs-microservicios',
     title: 'Backend Escalable: Python, Node.js y Microservicios',
     description:
       'Arquitecturas backend modernas usando Python, Node.js, Docker y Kubernetes. Aprende a diseñar sistemas escalables y resilientes para aplicaciones de alto tráfico.',
@@ -1502,83 +1502,162 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       '#Scalability'
     ],
     content: `
-    <p>Después de años desarrollando sistemas backend para aplicaciones de alto tráfico, he aprendido que la escalabilidad no es solo sobre tecnología, sino sobre arquitectura inteligente. Te comparto mi experiencia construyendo backends robustos.</p>
-    <h2>Arquitectura de Microservicios</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*M1K0Ef1t3dqHHBfa2tAzNQ.png" alt="Microservices Architecture">
-    <p>En mis proyectos, he migrado de monolitos a microservicios siguiendo estos principios:</p>
-    <ul>
-      <li><strong>Single Responsibility</strong> - Cada servicio tiene una función específica</li>
-      <li><strong>Database per Service</strong> - Aislamiento de datos</li>
-      <li><strong>API Gateway</strong> - Punto único de entrada</li>
-      <li><strong>Event-Driven Communication</strong> - Desacoplamiento mediante eventos</li>
-    </ul>
-    <h2>Python para Backend: FastAPI y Django</h2>
-    <p>Python sigue siendo mi elección principal para backend debido a su versatilidad con FastAPI para APIs modernas y Django para aplicaciones complejas.</p>
-    <h2>Node.js: Performance y Concurrencia</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*BC1nBKrTLp8Qw5l5o_ojPQ.png" alt="Node.js Performance">
-    <p>Para aplicaciones que requieren alta concurrencia, Node.js es imbatible con Express.js optimizado y NestJS para arquitecturas empresariales.</p>
-    <h2>Bases de Datos: SQL vs NoSQL</h2>
-    <p>La elección de base de datos depende del caso de uso:</p>
-    <h3>PostgreSQL para Consistencia</h3>
-    <ul>
-      <li>Transacciones ACID</li>
-      <li>Relaciones complejas</li>
-      <li>Consultas analíticas</li>
-      <li>JSON nativo para flexibilidad</li>
-    </ul>
-    <h3>MongoDB para Escalabilidad</h3>
-    <ul>
-      <li>Esquemas flexibles</li>
-      <li>Sharding horizontal</li>
-      <li>Agregaciones complejas</li>
-      <li>Replicación automática</li>
-    </ul>
-    <h2>Containerización con Docker</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*p8k1b2DZTQEW_yf0hYniXw.png" alt="Docker Containers">
-    <p>Docker ha transformado cómo despliego aplicaciones con multi-stage Dockerfiles y Docker Compose para desarrollo.</p>
-    <h2>Orquestación con Kubernetes</h2>
-    <p>Para producción, Kubernetes proporciona:</p>
-    <ul>
-      <li><strong>Auto-scaling</strong> - Escalado automático basado en métricas</li>
-      <li><strong>Load Balancing</strong> - Distribución inteligente de tráfico</li>
-      <li><strong>Health Checks</strong> - Monitoreo y recuperación automática</li>
-      <li><strong>Rolling Updates</strong> - Despliegues sin downtime</li>
-    </ul>
-    <h2>Monitoreo y Observabilidad</h2>
-    <p>Stack de monitoreo que uso:</p>
-    <ul>
-      <li><strong>Prometheus + Grafana</strong> - Métricas y dashboards</li>
-      <li><strong>ELK Stack</strong> - Logs centralizados</li>
-      <li><strong>Jaeger</strong> - Distributed tracing</li>
-      <li><strong>Sentry</strong> - Error tracking</li>
-    </ul>
-    <h2>Seguridad Backend</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*5QyOe8ql_JGAFZgqJgJfJw.png" alt="Backend Security">
-    <p>Medidas de seguridad esenciales:</p>
-    <ul>
-      <li>JWT con refresh tokens</li>
-      <li>Rate limiting y throttling</li>
-      <li>Input validation y sanitization</li>
-      <li>HTTPS everywhere</li>
-      <li>Secrets management con Vault</li>
-    </ul>
-    <h2>Performance y Optimización</h2>
-    <p>Técnicas para optimizar rendimiento:</p>
-    <ul>
-      <li><strong>Caching</strong> - Redis para datos frecuentes</li>
-      <li><strong>Database Indexing</strong> - Optimización de queries</li>
-      <li><strong>Connection Pooling</strong> - Reutilización de conexiones</li>
-      <li><strong>CDN</strong> - Distribución global de contenido</li>
-    </ul>
-    <h2>Conclusión</h2>
-    <p>Construir backends escalables requiere una combinación de buenas prácticas arquitecturales, herramientas modernas y monitoreo constante. La clave está en diseñar para el crecimiento desde el día uno.</p>
-    <p>Python y Node.js, combinados con containerización y orquestación, proporcionan una base sólida para cualquier aplicación moderna.</p>
+    <div class="article-intro">
+      <p class="lead-paragraph">Después de años desarrollando sistemas backend para aplicaciones de alto tráfico, he aprendido que la <strong>escalabilidad</strong> no es solo sobre tecnología, sino sobre arquitectura inteligente. Te comparto mi experiencia directa construyendo backends robustos y resilientes.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Uptime en producción</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10x</div>
+          <div class="stat-label">Escalado horizontal</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">&lt;100ms</div>
+          <div class="stat-label">Latencia de respuesta</div>
+        </div>
+      </div>
+    </div>
+
+    <h2> Arquitectura de Microservicios</h2>
+    
+    <div class="image-container">
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*M1K0Ef1t3dqHHBfa2tAzNQ.png" alt="Microservices Architecture" class="article-image" />
+      <p class="image-caption">Migración exitosa de monolitos a arquitecturas desacopladas</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Principios de Diseño</h3>
+        <p>En mis proyectos, he implementado microservicios siguiendo principios de <strong>Single Responsibility</strong> y <strong>Database per Service</strong> para garantizar que el fallo de un componente no afecte a todo el sistema.</p>
+      </div>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Desacoplamiento</h4>
+        <p>Servicios independientes que se comunican mediante eventos asíncronos</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Escalabilidad</h4>
+        <p>Capacidad de escalar componentes específicos según la demanda real</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Resiliencia</h4>
+        <p>Aislamiento de fallos que previene caídas en cascada</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Agilidad</h4>
+        <p>Implementación y despliegue independiente para cada equipo de desarrollo</p>
+      </div>
+    </div>
+
+    <h2> Tecnologías de Alto Rendimiento</h2>
+
+    <div class="tech-showcase">
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Python: FastAPI y Django</h4>
+        </div>
+        <p>Versatilidad extrema para APIs modernas y aplicaciones empresariales complejas</p>
+        <div class="tech-example">
+          <code>// FastAPI Performance
+@app.get("/users/{id}")
+async def get_user(id: int):
+    return await db.users.find(id)</code>
+        </div>
+      </div>
+
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Node.js: Concurrencia</h4>
+        </div>
+        <p>Ideal para aplicaciones en tiempo real que requieren manejar miles de conexiones simultáneas</p>
+      </div>
+    </div>
+
+    <h2> Gestión de Datos y Persistencia</h2>
+
+    <div class="tools-comparison">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th> Tecnología</th>
+            <th> Caso de Uso</th>
+            <th> Ventaja</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>PostgreSQL</strong></td>
+            <td>Datos estructurados</td>
+            <td>Consistencia ACID absoluta</td>
+          </tr>
+          <tr>
+            <td><strong>MongoDB</strong></td>
+            <td>Datos semi-estructurados</td>
+            <td>Escalabilidad horizontal</td>
+          </tr>
+          <tr>
+            <td><strong>Redis</strong></td>
+            <td>Caching de alta velocidad</td>
+            <td>Latencia sub-milisegundo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2> Infraestructura y DevOps</h2>
+
+    <div class="image-container">
+      <img src="https://miro.medium.com/v2/resize:fit:1200/1*p8k1b2DZTQEW_yf0hYniXw.png" alt="Docker y Kubernetes" class="article-image" />
+      <p class="image-caption">Containerización y orquestación para despliegues ininterrumpidos</p>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Infraestructura como Código</h3>
+        <p>El uso de <strong>Docker</strong> y <strong>Kubernetes</strong> permite que nuestros backends sean portables y autogestionables mediante auto-scaling y health checks automáticos.</p>
+      </div>
+    </div>
+
+    <h2> Conclusión</h2>
+
+    <div class="conclusion-section">
+      <div class="callout callout-primary">
+        <div class="callout-icon"></div>
+        <div class="callout-content">
+          <h3>Diseñar para el Mañana</h3>
+          <p>La clave de un backend exitoso no es solo el lenguaje, sino cómo manejas la <strong>observabilidad</strong>, el <strong>monitoreo</strong> (Grafana/Prometheus) y la <strong>seguridad</strong> desde el día uno.</p>
+        </div>
+      </div>
+
+      <div class="next-steps">
+        <h3> Pasos para un Backend Pro:</h3>
+        <ol>
+          <li>Implementa monitoreo centralizado (ELK Stack)</li>
+          <li>Optimiza tus índices de base de datos</li>
+          <li>Añade capas de seguridad JWT y Rate Limiting</li>
+          <li>Automatiza tus rollouts con Kubernetes</li>
+        </ol>
+      </div>
+    </div>
     `
   },
 
   {
     thumbnail: getArticleImage('fullstack'),
-    url: 'desarrollo+fullstack+2024+guia+completa',
+    url: 'desarrollo-fullstack-2024-guia-completa',
     title: 'Desarrollo Full Stack 2024: Guía Completa',
     description:
       'Roadmap actualizado para convertirse en desarrollador full stack en 2024. Desde fundamentos hasta arquitecturas avanzadas, incluyendo IA y cloud computing.',
@@ -1594,141 +1673,144 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       '#Roadmap2024'
     ],
     content: `
-    <p>Como desarrollador full stack con más de 5 años de experiencia, he visto cómo la industria ha evolucionado. En 2024, ser full stack significa mucho más que conocer frontend y backend: requiere entender ecosistemas completos.</p>
-    <h2>¿Qué Significa Ser Full Stack en 2024?</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*SLbTQqF8p8Ks7P8Ql_XQEQ.png" alt="Full Stack Developer 2024">
-    <p>El desarrollador full stack moderno debe dominar:</p>
-    <ul>
-      <li><strong>Frontend</strong> - UI/UX, frameworks modernos, performance</li>
-      <li><strong>Backend</strong> - APIs, bases de datos, arquitectura</li>
-      <li><strong>DevOps</strong> - CI/CD, containerización, cloud</li>
-      <li><strong>Soft Skills</strong> - Comunicación, liderazgo técnico</li>
-    </ul>
-    <h2>Roadmap Frontend 2024</h2>
-    <h3>Fundamentos Sólidos</h3>
-    <ul>
-      <li><strong>HTML5 Semántico</strong> - Accesibilidad y SEO</li>
-      <li><strong>CSS3 Avanzado</strong> - Grid, Flexbox, Custom Properties</li>
-      <li><strong>JavaScript ES2024</strong> - Async/await, modules, destructuring</li>
-    </ul>
-    <h3>Frameworks y Librerías</h3>
-    <p>React con Hooks modernos, Next.js con App Router, TypeScript para type safety.</p>
-    <h3>Herramientas de Desarrollo</h3>
-    <ul>
-      <li><strong>Vite</strong> - Build tool ultrarrápido</li>
-      <li><strong>TypeScript</strong> - Type safety</li>
-      <li><strong>Tailwind CSS</strong> - Utility-first styling</li>
-      <li><strong>Storybook</strong> - Component development</li>
-    </ul>
-    <h2>Roadmap Backend 2024</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*0G5zu7CnL7CoIbqGYSIaCA.png" alt="Backend Technologies">
-    <h3>Lenguajes y Frameworks</h3>
-    <p>Mi stack preferido para diferentes casos:</p>
-    <h4>Python Ecosystem</h4>
-    <ul>
-      <li><strong>FastAPI</strong> - APIs modernas y rápidas</li>
-      <li><strong>Django</strong> - Aplicaciones complejas</li>
-      <li><strong>SQLAlchemy</strong> - ORM potente</li>
-      <li><strong>Celery</strong> - Tareas asíncronas</li>
-    </ul>
-    <h4>Node.js Ecosystem</h4>
-    <ul>
-      <li><strong>Express.js</strong> - APIs ligeras</li>
-      <li><strong>NestJS</strong> - Arquitecturas empresariales</li>
-      <li><strong>Prisma</strong> - ORM type-safe</li>
-      <li><strong>Bull</strong> - Job queues</li>
-    </ul>
-    <h2>DevOps y Cloud Computing</h2>
-    <p>En 2024, el conocimiento de DevOps es esencial con containerización, CI/CD pipelines y cloud platforms.</p>
-    <h2>Arquitecturas Modernas</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*qRQH5R-P2rUdeQqDBsxw1w.png" alt="Modern Architecture">
-    <h3>Microservicios</h3>
-    <p>Patrón que uso para aplicaciones escalables:</p>
-    <ul>
-      <li><strong>API Gateway</strong> - Kong o AWS API Gateway</li>
-      <li><strong>Service Mesh</strong> - Istio para comunicación</li>
-      <li><strong>Event Streaming</strong> - Apache Kafka</li>
-      <li><strong>Service Discovery</strong> - Consul o Kubernetes</li>
-    </ul>
-    <h3>Serverless</h3>
-    <p>Para funciones específicas y escalado automático:</p>
-    <ul>
-      <li><strong>AWS Lambda</strong> - Funciones serverless</li>
-      <li><strong>Vercel Functions</strong> - Edge computing</li>
-      <li><strong>Cloudflare Workers</strong> - Global distribution</li>
-    </ul>
-    <h2>Inteligencia Artificial Integrada</h2>
-    <p>En 2024, la IA es parte integral del desarrollo:</p>
-    <h3>Herramientas de Desarrollo</h3>
-    <ul>
-      <li><strong>GitHub Copilot</strong> - Asistente de código</li>
-      <li><strong>ChatGPT/Claude</strong> - Resolución de problemas</li>
-      <li><strong>Cursor</strong> - IDE con IA integrada</li>
-    </ul>
-    <h2>Soft Skills Esenciales</h2>
-    <p>Habilidades no técnicas que marcan la diferencia:</p>
-    <ul>
-      <li><strong>Comunicación</strong> - Explicar conceptos técnicos</li>
-      <li><strong>Problem Solving</strong> - Pensamiento analítico</li>
-      <li><strong>Adaptabilidad</strong> - Aprender tecnologías nuevas</li>
-      <li><strong>Liderazgo Técnico</strong> - Mentoring y code reviews</li>
-    </ul>
-    <h2>Plan de Aprendizaje 2024</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*9I6QTqIXi-6oJ-X8t6HgMg.png" alt="Learning Path">
-    <h3>Meses 1-3: Fundamentos</h3>
-    <ul>
-      <li>JavaScript/TypeScript avanzado</li>
-      <li>React con hooks y context</li>
-      <li>Node.js y Express</li>
-      <li>PostgreSQL básico</li>
-    </ul>
-    <h3>Meses 4-6: Frameworks Avanzados</h3>
-    <ul>
-      <li>Next.js con App Router</li>
-      <li>FastAPI o NestJS</li>
-      <li>Docker y containerización</li>
-      <li>Testing automatizado</li>
-    </ul>
-    <h3>Meses 7-9: DevOps y Cloud</h3>
-    <ul>
-      <li>AWS/Azure/GCP basics</li>
-      <li>CI/CD pipelines</li>
-      <li>Kubernetes fundamentals</li>
-      <li>Monitoring y logging</li>
-    </ul>
-    <h3>Meses 10-12: Especialización</h3>
-    <ul>
-      <li>Microservicios architecture</li>
-      <li>Performance optimization</li>
-      <li>Security best practices</li>
-      <li>AI/ML integration</li>
-    </ul>
-    <h2>Proyectos Prácticos</h2>
-    <p>Proyectos que recomiendo construir:</p>
-    <ol>
-      <li><strong>E-commerce Full Stack</strong> - React + Node.js + PostgreSQL</li>
-      <li><strong>Real-time Chat App</strong> - WebSockets + Redis</li>
-      <li><strong>Task Management System</strong> - Next.js + FastAPI</li>
-      <li><strong>Analytics Dashboard</strong> - Data visualization</li>
-      <li><strong>Microservices Blog</strong> - Docker + Kubernetes</li>
-    </ol>
-    <h2>Recursos de Aprendizaje</h2>
-    <ul>
-      <li><strong>Documentación Oficial</strong> - Siempre la fuente primaria</li>
-      <li><strong>FreeCodeCamp</strong> - Cursos estructurados</li>
-      <li><strong>The Odin Project</strong> - Roadmap completo</li>
-      <li><strong>YouTube Channels</strong> - Traversy Media, Net Ninja</li>
-      <li><strong>Práctica</strong> - LeetCode, HackerRank</li>
-    </ul>
-    <h2>Conclusión</h2>
-    <p>Ser desarrollador full stack en 2024 es emocionante pero desafiante. La clave está en construir fundamentos sólidos, mantenerse actualizado con las tendencias, y nunca dejar de practicar.</p>
-    <p>Recuerda: no necesitas saberlo todo, pero sí necesitas saber cómo aprender rápidamente y adaptarte a nuevas tecnologías.</p>
-    <p>El futuro pertenece a los desarrolladores que pueden conectar todas las piezas del puzzle tecnológico.</p>
+    <div class="article-intro">
+      <p class="lead-paragraph">Como desarrollador full stack con más de 5 años de experiencia, he visto cómo la industria ha evolucionado. En 2024, ser <strong>full stack</strong> significa mucho más que conocer frontend y backend: requiere entender ecosistemas completos, desde la IA hasta el cloud computing.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2024</div>
+          <div class="stat-label">Año de la consolidación IA</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Full</div>
+          <div class="stat-label">Dominio del stack completo</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Cloud</div>
+          <div class="stat-label">Despliegue sin fronteras</div>
+        </div>
+      </div>
+    </div>
+
+    <h2> ¿Qué Significa Ser Full Stack Hoy?</h2>
+    
+    <div class="image-container">
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*SLbTQqF8p8Ks7P8Ql_XQEQ.png" alt="Full Stack Developer 2024" class="article-image" />
+      <p class="image-caption">Dominando el ciclo completo de vida de una aplicación moderna</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Visión 360°</h3>
+        <p>Un desarrollador full stack moderno debe ser capaz de diseñar una interfaz intuitiva, optimizar una base de datos compleja y configurar un pipeline de CI/CD, todo mientras integra herramientas de IA para potenciar su productividad.</p>
+      </div>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Frontend Moderno</h4>
+        <p>UIs dinámicas con React 18, Next.js y Tailwind CSS</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>Backend Inteligente</h4>
+        <p>APIs robustas con Python/FastAPI y Node.js/NestJS</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>DevOps & Cloud</h4>
+        <p>Containerización con Docker y despliegue en AWS/Vercel</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"></div>
+        <h4>IA Integrada</h4>
+        <p>Uso de Copilot, GPT-4 y modelos locales para acelerar el desarrollo</p>
+      </div>
+    </div>
+
+    <h2> El Stack Definitivo: Mi Recomendación</h2>
+
+    <div class="tech-showcase">
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Next.js: El Centro del Ecosistema</h4>
+        </div>
+        <p>Server Components y streaming para un rendimiento inigualable</p>
+      </div>
+
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Prisma & PostgreSQL</h4>
+        </div>
+        <p>La combinación perfecta para gestión de bases de datos con type-safety</p>
+      </div>
+    </div>
+
+    <h2> Hoja de Ruta: De Cero a Arquitecto</h2>
+
+    <div class="tools-comparison">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th> Fase</th>
+            <th> Tecnologías Clave</th>
+            <th> Objetivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mes 1-3</strong></td>
+            <td>TS, React, Tailwind</td>
+            <td>UIs modernas y escalables</td>
+          </tr>
+          <tr>
+            <td><strong>Mes 4-6</strong></td>
+            <td>Node, Python, SQL</td>
+            <td>Bases de datos y lógica de negocio</td>
+          </tr>
+          <tr>
+            <td><strong>Mes 7-12</strong></td>
+            <td>AWS, Docker, K8s</td>
+            <td>DevOps y Arquitectura Cloud</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Proyectos que Marcan la Diferencia</h3>
+        <p>Aprender por tutoriales tiene un límite. Construye un <strong>E-commerce real</strong>, un <strong>Dashboard de Analytics</strong> o una <strong>App de Chat en tiempo real</strong> para consolidar tus conocimientos.</p>
+      </div>
+    </div>
+
+    <h2> Conclusión</h2>
+
+    <div class="conclusion-section">
+      <div class="callout callout-primary">
+        <div class="callout-icon"></div>
+        <div class="callout-content">
+          <h3>La Curiosidad como Motor</h3>
+          <p>El futuro pertenece a quienes pueden conectar todas las piezas del puzzle tecnológico. Mantente curioso, nunca dejes de practicar y adapta las nuevas herramientas de IA a tu flujo de trabajo.</p>
+        </div>
+      </div>
+
+      <div class="final-quote">
+        <blockquote>
+          "El desarrollador full stack no lo sabe todo, pero sabe exactamente dónde encontrar la respuesta y cómo integrarla."
+        </blockquote>
+      </div>
+    </div>
     `
   },
   {
     thumbnail: getArticleImage('ruta_fullstack'),
-    url: 'ruta+de+aprendizaje+para+ser+un+programador+full+stack',
+    url: 'ruta-de-aprendizaje-para-ser-un-programador-full-stack',
     title: 'Ruta de aprendizaje para ser un programador full stack',
     description:
       'Descubre el camino completo para convertirte en un desarrollador full stack desde cero. Aprende las tecnologías esenciales, mejores prácticas y cómo estructurar tu aprendizaje de manera efectiva.',
@@ -1743,198 +1825,120 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       '#Aprendizaje'
     ],
     content: `
-    <p>Convertirse en un desarrollador full stack es uno de los objetivos más ambiciosos y gratificantes en el mundo de la programación. En esta guía completa, te mostraré el camino que he seguido y recomiendo para dominar tanto el frontend como el backend.</p>
-    <h2>¿Qué es un Desarrollador Full Stack?</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*SLbTQqF8p8Ks7P8Ql_XQEQ.png" alt="Full Stack Developer">
-    <p>Un desarrollador full stack es un profesional capaz de trabajar en todas las capas de una aplicación web:</p>
-    <ul>
-      <li><strong>Frontend:</strong> La interfaz de usuario que ven los usuarios</li>
-      <li><strong>Backend:</strong> La lógica del servidor y bases de datos</li>
-      <li><strong>DevOps:</strong> Despliegue y mantenimiento de aplicaciones</li>
-    </ul>
-    <h2>Fase 1: Fundamentos Web (2-3 meses)</h2>
-    <h3>HTML5 y CSS3</h3>
-    <p>Comienza con los pilares fundamentales:</p>
-    <ul>
-      <li>Estructura semántica HTML5</li>
-      <li>CSS Grid y Flexbox</li>
-      <li>Responsive Design</li>
-      <li>Animaciones CSS</li>
-    </ul>
-    <h3>JavaScript Vanilla</h3>
-    <p>Domina JavaScript antes de usar frameworks:</p>
-    <ul>
-      <li>Sintaxis y tipos de datos</li>
-      <li>DOM manipulation</li>
-      <li>Eventos y callbacks</li>
-      <li>Promises y async/await</li>
-      <li>ES6+ features</li>
-    </ul>
-    <h2>Fase 2: Frontend Moderno (3-4 meses)</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png" alt="Frontend Technologies">
-    <h3>React.js</h3>
-    <p>El framework frontend más demandado:</p>
-    <ul>
-      <li>Componentes y JSX</li>
-      <li>State y Props</li>
-      <li>Hooks (useState, useEffect, useContext)</li>
-      <li>React Router</li>
-      <li>State Management (Redux/Zustand)</li>
-    </ul>
-    <h3>Herramientas de Desarrollo</h3>
-    <ul>
-      <li><strong>Vite:</strong> Build tool moderno</li>
-      <li><strong>TypeScript:</strong> Tipado estático</li>
-      <li><strong>Tailwind CSS:</strong> Framework CSS utility-first</li>
-    </ul>
-    <h2>Fase 3: Backend Development (4-5 meses)</h2>
-    <h3>Node.js y Express</h3>
-    <p>Servidor JavaScript:</p>
-    <ul>
-      <li>Fundamentos de Node.js</li>
-      <li>Express.js framework</li>
-      <li>Middleware y routing</li>
-      <li>RESTful APIs</li>
-      <li>Authentication (JWT)</li>
-    </ul>
-    <h3>Bases de Datos</h3>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*2yAHuJ-VaOGVcs9rGJUvZg.png" alt="Database Technologies">
-    <p>Aprende tanto SQL como NoSQL:</p>
-    <ul>
-      <li><strong>PostgreSQL:</strong> Base de datos relacional</li>
-      <li><strong>MongoDB:</strong> Base de datos NoSQL</li>
-      <li><strong>Prisma/Mongoose:</strong> ORMs modernos</li>
-    </ul>
-    <h2>Fase 4: DevOps Básico (2-3 meses)</h2>
-    <h3>Control de Versiones</h3>
-    <ul>
-      <li>Git y GitHub</li>
-      <li>Branching strategies</li>
-      <li>Pull requests y code reviews</li>
-    </ul>
-    <h3>Deployment</h3>
-    <ul>
-      <li><strong>Vercel/Netlify:</strong> Frontend deployment</li>
-      <li><strong>Railway/Render:</strong> Backend deployment</li>
-      <li><strong>Docker:</strong> Containerización</li>
-    </ul>
-    <h2>Proyectos Prácticos Recomendados</h2>
-    <p>La práctica es fundamental. Construye estos proyectos:</p>
-    <h3>1. Todo App (Beginner)</h3>
-    <ul>
-      <li>CRUD operations</li>
-      <li>Local storage</li>
-      <li>React hooks</li>
-    </ul>
-    <h3>2. E-commerce (Intermediate)</h3>
-    <ul>
-      <li>Product catalog</li>
-      <li>Shopping cart</li>
-      <li>User authentication</li>
-      <li>Payment integration</li>
-    </ul>
-    <h3>3. Social Media App (Advanced)</h3>
-    <ul>
-      <li>Real-time messaging</li>
-      <li>File uploads</li>
-      <li>Complex state management</li>
-      <li>Microservices architecture</li>
-    </ul>
-    <h2>Stack Tecnológico Recomendado</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*0G5zu7CnL7CoIbqGYSIaCA.png" alt="Tech Stack">
-    <h3>Frontend</h3>
-    <ul>
-      <li>React + TypeScript</li>
-      <li>Next.js (para SSR/SSG)</li>
-      <li>Tailwind CSS</li>
-      <li>React Query (data fetching)</li>
-    </ul>
-    <h3>Backend</h3>
-    <ul>
-      <li>Node.js + Express</li>
-      <li>PostgreSQL + Prisma</li>
-      <li>Redis (caching)</li>
-      <li>JWT (authentication)</li>
-    </ul>
-    <h2>Recursos de Aprendizaje</h2>
-    <h3>Cursos Online</h3>
-    <ul>
-      <li><strong>FreeCodeCamp:</strong> Curriculum completo gratuito</li>
-      <li><strong>The Odin Project:</strong> Ruta estructurada</li>
-      <li><strong>Platzi:</strong> Cursos en español</li>
-    </ul>
-    <h3>Documentación</h3>
-    <ul>
-      <li>MDN Web Docs (JavaScript)</li>
-      <li>React Documentation</li>
-      <li>Node.js Documentation</li>
-    </ul>
-    <h3>Práctica</h3>
-    <ul>
-      <li><strong>LeetCode:</strong> Algoritmos y estructuras de datos</li>
-      <li><strong>Frontend Mentor:</strong> Proyectos de UI</li>
-      <li><strong>GitHub:</strong> Contribuye a proyectos open source</li>
-    </ul>
-    <h2>Consejos para el Éxito</h2>
-    <h3>1. Consistencia sobre Intensidad</h3>
-    <p>Es mejor estudiar 1-2 horas diarias que 10 horas un día y nada el resto de la semana.</p>
-    <h3>2. Construye Proyectos Reales</h3>
-    <p>No te quedes solo en tutoriales. Construye aplicaciones que resuelvan problemas reales.</p>
-    <h3>3. Únete a la Comunidad</h3>
-    <ul>
-      <li>Discord de programación</li>
-      <li>Twitter tech community</li>
-      <li>Meetups locales</li>
-    </ul>
-    <h3>4. Documenta tu Progreso</h3>
-    <ul>
-      <li>Mantén un blog técnico</li>
-      <li>Comparte en redes sociales</li>
-      <li>Contribuye a GitHub</li>
-    </ul>
-    <h2>Roadmap de Especialización</h2>
-    <p>Una vez domines los fundamentos, puedes especializarte:</p>
-    <h3>Frontend Avanzado</h3>
-    <ul>
-      <li>React Native (mobile)</li>
-      <li>Three.js (3D graphics)</li>
-      <li>WebGL y Canvas</li>
-    </ul>
-    <h3>Backend Avanzado</h3>
-    <ul>
-      <li>Microservices</li>
-      <li>GraphQL</li>
-      <li>Message queues (Redis, RabbitMQ)</li>
-    </ul>
-    <h3>DevOps Avanzado</h3>
-    <ul>
-      <li>Kubernetes</li>
-      <li>CI/CD pipelines</li>
-      <li>Monitoring y logging</li>
-    </ul>
-    <h2>Preparación para Entrevistas</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*9I6QTqIXi-6oJ-X8t6HgMg.png" alt="Interview Preparation">
-    <h3>Conocimientos Técnicos</h3>
-    <ul>
-      <li>Algoritmos y estructuras de datos</li>
-      <li>System design básico</li>
-      <li>Patrones de diseño</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Comunicación efectiva</li>
-      <li>Resolución de problemas</li>
-      <li>Trabajo en equipo</li>
-    </ul>
-    <h2>Conclusión</h2>
-    <p>Convertirse en desarrollador full stack es un viaje que requiere dedicación, práctica constante y paciencia. No hay atajos, pero siguiendo esta ruta estructurada y manteniéndote consistente, puedes lograr tus objetivos.</p>
-    <p>Recuerda que el aprendizaje nunca termina en tecnología. Mantente curioso, sigue las tendencias y nunca dejes de construir proyectos.</p>
-    <p>¡El mundo del desarrollo full stack te está esperando!</p>
+    <div class="article-intro">
+      <p class="lead-paragraph">Convertirse en un desarrollador <strong>full stack</strong> es uno de los objetivos más ambiciosos y gratificantes en el mundo tecnológico. En esta guía completa, te muestro el mapa detallado para dominar el stack moderno desde cero hasta la producción.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Meses de preparación</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Enfoque práctico</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Pro</div>
+          <div class="stat-label">Nivel alcanzado</div>
+        </div>
+      </div>
+    </div>
+
+    <h2> El Mapa del Tesoro: Fases de Aprendizaje</h2>
+    
+    <div class="image-container">
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*SLbTQqF8p8Ks7P8Ql_XQEQ.png" alt="Full Stack Roadmap" class="article-image" />
+      <p class="image-caption">De los fundamentos a la arquitectura de sistemas complejos</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Fase 1: El Cimiento Web</h3>
+        <p>No saltes a los frameworks sin entender <strong>HTML5 semántico</strong>, <strong>CSS3 avanzado</strong> (Flexbox/Grid) y, sobre todo, <strong>JavaScript Vanilla</strong>. Es la base de todo lo que vendrá después.</p>
+      </div>
+    </div>
+
+    <div class="tech-showcase">
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Frontend Moderno (Mes 3-6)</h4>
+        </div>
+        <p>Domina React, TypeScript y herramientas de estilado como Tailwind para interfaces profesionales.</p>
+      </div>
+
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Backend & APIs (Mes 6-9)</h4>
+        </div>
+        <p>Aprende Node.js o Python para construir la lógica, gestión de bases de datos y autenticación segura.</p>
+      </div>
+    </div>
+
+    <h2> Proyectos Reales para tu Portafolio</h2>
+
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-header">
+          <span class="use-case-icon"></span>
+          <h4>E-commerce Completo</h4>
+          <span class="use-case-badge">Nivel Intermedio</span>
+        </div>
+        <p>Implementa catálogo de productos, carrito de compras, pasarela de pagos y panel de administración.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Stripe</span>
+        </div>
+      </div>
+
+      <div class="use-case">
+        <div class="use-case-header">
+          <span class="use-case-icon"></span>
+          <h4>App de Chat en Tiempo Real</h4>
+          <span class="use-case-badge">Nivel Avanzado</span>
+        </div>
+        <p>Uso de WebSockets para comunicación instantánea, gestión de estados complejos y persistencia NoSQL.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Socket.io</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Redis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>Consejo de Oro: Consistencia</h3>
+        <p>Es mejor programar <strong>1 hora cada día</strong> que 10 horas un solo domingo. La memoria muscular y la lógica se construyen con la repetición diaria.</p>
+      </div>
+    </div>
+
+    <h2> Conclusión</h2>
+
+    <div class="conclusion-section">
+      <div class="callout callout-primary">
+        <div class="callout-icon"></div>
+        <div class="callout-content">
+          <h3>Tu Carrera Comienza Aquí</h3>
+          <p>El camino es largo pero gratificante. No te abrumes por la cantidad de tecnologías: enfócate en entender los <strong>fundamentos</strong> y el resto vendrá por añadidura.</p>
+        </div>
+      </div>
+
+      <div class="final-quote">
+        <blockquote>
+          "El aprendizaje nunca termina en tecnología. El éxito pertenece a quienes nunca dejan de ser estudiantes."
+        </blockquote>
+      </div>
+    </div>
     `
   },
   {
     thumbnail: getArticleImage('practica_programming'),
-    url: 'las+mejores+paginas+para+practicar+programacion',
+    url: 'las-mejores-paginas-para-practicar-programacion',
     title: 'Las mejores páginas para practicar programación',
     description:
       'Descubre las plataformas más efectivas para mejorar tus habilidades de programación. Desde algoritmos hasta proyectos reales, encuentra el recurso perfecto para tu nivel.',
@@ -1949,202 +1953,136 @@ function Table&lt;T&gt;({ data, columns, onRowClick }: TableProps&lt;T&gt;) {
       '#Recursos'
     ],
     content: `
-    <p>La práctica constante es la clave para convertirse en un programador exitoso. En mi experiencia, he utilizado numerosas plataformas para mejorar mis habilidades, y hoy quiero compartir contigo las mejores opciones disponibles.</p>
-    <h2>Plataformas para Algoritmos y Estructuras de Datos</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*F8ckYRLNNqWU1VrOhqGJCg.png" alt="Coding Practice Platforms">
-    <h3>1. LeetCode</h3>
-    <p><strong>Ideal para:</strong> Preparación de entrevistas técnicas</p>
-    <ul>
-      <li>Más de 2000 problemas clasificados por dificultad</li>
-      <li>Problemas de empresas reales (Google, Facebook, Amazon)</li>
-      <li>Contests semanales y biweekly</li>
-      <li>Soluciones de la comunidad</li>
-      <li>Mock interviews</li>
-    </ul>
-    <p><strong>Precio:</strong> Freemium (Premium $35/mes)</p>
-    <h3>2. HackerRank</h3>
-    <p><strong>Ideal para:</strong> Principiantes y certificaciones</p>
-    <ul>
-      <li>Tracks organizados por temas</li>
-      <li>Certificaciones reconocidas por empresas</li>
-      <li>Challenges de múltiples lenguajes</li>
-      <li>Preparación para entrevistas</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h3>3. CodeWars</h3>
-    <p><strong>Ideal para:</strong> Práctica divertida y gamificada</p>
-    <ul>
-      <li>Sistema de ranking tipo martial arts</li>
-      <li>Problemas llamados "kata"</li>
-      <li>Múltiples soluciones por problema</li>
-      <li>Comunidad muy activa</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h2>Plataformas para Desarrollo Web</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png" alt="Web Development Practice">
-    <h3>4. Frontend Mentor</h3>
-    <p><strong>Ideal para:</strong> Práctica de UI/UX y frontend</p>
-    <ul>
-      <li>Challenges reales de diseño</li>
-      <li>Designs en Figma incluidos</li>
-      <li>Feedback de la comunidad</li>
-      <li>Proyectos de diferentes niveles</li>
-    </ul>
-    <p><strong>Precio:</strong> Freemium (Pro $8/mes)</p>
-    <h3>5. Codepen</h3>
-    <p><strong>Ideal para:</strong> Experimentación y prototipado</p>
-    <ul>
-      <li>Editor online para HTML, CSS, JS</li>
-      <li>Galería de inspiración</li>
-      <li>Challenges semanales</li>
-      <li>Comunidad creativa</li>
-    </ul>
-    <p><strong>Precio:</strong> Freemium (Pro $12/mes)</p>
-    <h3>6. CSS Battle</h3>
-    <p><strong>Ideal para:</strong> Maestría en CSS</p>
-    <ul>
-      <li>Challenges diarios de CSS</li>
-      <li>Recrear diseños con menos código</li>
-      <li>Ranking global</li>
-      <li>Técnicas avanzadas de CSS</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h2>Plataformas de Aprendizaje Integral</h2>
-    <h3>7. FreeCodeCamp</h3>
-    <p><strong>Ideal para:</strong> Curriculum completo gratuito</p>
-    <ul>
-      <li>Certificaciones en desarrollo web</li>
-      <li>Proyectos prácticos reales</li>
-      <li>Comunidad global</li>
-      <li>Completamente gratuito</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h3>8. The Odin Project</h3>
-    <p><strong>Ideal para:</strong> Ruta estructurada full-stack</p>
-    <ul>
-      <li>Curriculum open-source</li>
-      <li>Proyectos del mundo real</li>
-      <li>Enfoque en fundamentos</li>
-      <li>Comunidad de Discord activa</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h2>Plataformas para Proyectos Reales</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*0G5zu7CnL7CoIbqGYSIaCA.png" alt="Real Projects">
-    <h3>9. GitHub</h3>
-    <p><strong>Ideal para:</strong> Contribuciones open source</p>
-    <ul>
-      <li>Proyectos reales de código abierto</li>
-      <li>Colaboración con otros desarrolladores</li>
-      <li>Portfolio profesional</li>
-      <li>Issues para principiantes</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h3>10. DevChallenges</h3>
-    <p><strong>Ideal para:</strong> Challenges full-stack</p>
-    <ul>
-      <li>Proyectos frontend y backend</li>
-      <li>Designs profesionales</li>
-      <li>Portfolio automático</li>
-      <li>Certificados de completion</li>
-    </ul>
-    <p><strong>Precio:</strong> Freemium</p>
-    <h2>Plataformas Especializadas</h2>
-    <h3>11. Exercism</h3>
-    <p><strong>Ideal para:</strong> Mentorship y múltiples lenguajes</p>
-    <ul>
-      <li>Mentores reales</li>
-      <li>50+ lenguajes de programación</li>
-      <li>Feedback personalizado</li>
-      <li>Tracks estructurados</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h3>12. Advent of Code</h3>
-    <p><strong>Ideal para:</strong> Challenges navideños anuales</p>
-    <ul>
-      <li>25 días de problemas en diciembre</li>
-      <li>Problemas creativos y únicos</li>
-      <li>Cualquier lenguaje de programación</li>
-      <li>Comunidad global competitiva</li>
-    </ul>
-    <p><strong>Precio:</strong> Gratuito</p>
-    <h2>Mi Rutina de Práctica Recomendada</h2>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*9I6QTqIXi-6oJ-X8t6HgMg.png" alt="Practice Routine">
-    <h3>Rutina Diaria (30-60 minutos)</h3>
-    <ul>
-      <li><strong>10 min:</strong> 1 problema de LeetCode (Easy/Medium)</li>
-      <li><strong>20 min:</strong> Trabajo en proyecto personal</li>
-      <li><strong>10 min:</strong> CSS Battle o Codepen experiment</li>
-    </ul>
-    <h3>Rutina Semanal</h3>
-    <ul>
-      <li><strong>Lunes:</strong> Algoritmos (LeetCode/HackerRank)</li>
-      <li><strong>Martes:</strong> Frontend (Frontend Mentor)</li>
-      <li><strong>Miércoles:</strong> Backend (DevChallenges)</li>
-      <li><strong>Jueves:</strong> Open Source (GitHub)</li>
-      <li><strong>Viernes:</strong> Proyecto personal</li>
-      <li><strong>Fin de semana:</strong> Aprendizaje nuevo (cursos/docs)</li>
-    </ul>
-    <h2>Consejos para Maximizar tu Práctica</h2>
-    <h3>1. Establece Objetivos Claros</h3>
-    <ul>
-      <li>Define qué quieres lograr cada semana</li>
-      <li>Trackea tu progreso</li>
-      <li>Celebra pequeños wins</li>
-    </ul>
-    <h3>2. Varía tu Práctica</h3>
-    <ul>
-      <li>No te quedes solo en algoritmos</li>
-      <li>Practica diferentes aspectos del desarrollo</li>
-      <li>Experimenta con nuevas tecnologías</li>
-    </ul>
-    <h3>3. Únete a Comunidades</h3>
-    <ul>
-      <li>Discord servers de programación</li>
-      <li>Reddit communities (r/programming, r/webdev)</li>
-      <li>Twitter tech community</li>
-    </ul>
-    <h3>4. Documenta tu Aprendizaje</h3>
-    <ul>
-      <li>Escribe sobre lo que aprendes</li>
-      <li>Comparte tus soluciones</li>
-      <li>Ayuda a otros desarrolladores</li>
-    </ul>
-    <h2>Plataformas por Nivel</h2>
-    <h3>Principiante</h3>
-    <ol>
-      <li>FreeCodeCamp</li>
-      <li>HackerRank</li>
-      <li>Codepen</li>
-    </ol>
-    <h3>Intermedio</h3>
-    <ol>
-      <li>LeetCode</li>
-      <li>Frontend Mentor</li>
-      <li>DevChallenges</li>
-    </ol>
-    <h3>Avanzado</h3>
-    <ol>
-      <li>GitHub (Open Source)</li>
-      <li>Competitive Programming</li>
-      <li>System Design Practice</li>
-    </ol>
-    <h2>Recursos Adicionales</h2>
-    <h3>YouTube Channels</h3>
-    <ul>
-      <li><strong>Traversy Media:</strong> Tutoriales prácticos</li>
-      <li><strong>The Net Ninja:</strong> Cursos completos</li>
-      <li><strong>Coding Train:</strong> Programación creativa</li>
-    </ul>
-    <h3>Podcasts</h3>
-    <ul>
-      <li><strong>Syntax:</strong> Web development</li>
-      <li><strong>CodeNewbie:</strong> Para principiantes</li>
-      <li><strong>Software Engineering Daily:</strong> Temas avanzados</li>
-    </ul>
-    <h2>Conclusión</h2>
-    <p>La clave del éxito en programación es la práctica consistente y variada. No existe una sola plataforma perfecta, sino que la combinación de varias te dará la experiencia más completa.</p>
-    <p>Mi recomendación es comenzar con FreeCodeCamp para fundamentos, luego agregar LeetCode para algoritmos y Frontend Mentor para proyectos prácticos. A medida que avances, incorpora GitHub para contribuciones open source.</p>
-    <p>Recuerda: la programación se aprende programando. ¡Elige una plataforma y comienza hoy mismo!</p>
+    <div class="article-intro">
+      <p class="lead-paragraph">La práctica constante es la única forma de dominar el arte del código. Como desarrollador, he probado decenas de plataformas y hoy te presento mi <strong>selección definitiva</strong> de las mejores páginas para elevar tu nivel técnico.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Plataformas top</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Pro</div>
+          <div class="stat-label">Niveles cubiertos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Recursos gratuitos</div>
+        </div>
+      </div>
+    </div>
+
+    <h2> Algoritmos y Lógica de Programación</h2>
+    
+    <div class="image-container">
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*F8ckYRLNNqWU1VrOhqGJCg.png" alt="Coding Practice Platforms" class="article-image" />
+      <p class="image-caption">Plataformas esenciales para dominar estructuras de datos y algoritmos</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-icon">⭐</div>
+      <div class="callout-content">
+        <h3>LeetCode: El Estándar de la Industria</h3>
+        <p>Es la plataforma por excelencia para prepararse para entrevistas en empresas como Google o Meta. Con más de 2000 problemas, es el gimnasio mental perfecto para cualquier programador.</p>
+      </div>
+    </div>
+
+    <div class="tech-showcase">
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>HackerRank</h4>
+        </div>
+        <p>Ideal para principiantes con rutas de aprendizaje estructuradas y certificaciones de habilidades.</p>
+      </div>
+
+      <div class="tech-item">
+        <div class="tech-header">
+          <span class="tech-icon"></span>
+          <h4>Codewars</h4>
+        </div>
+        <p>Gamificación pura: resuelve "katas" para subir de nivel y compararte con otros programadores.</p>
+      </div>
+    </div>
+
+    <h2> Desarrollo Frontend y UI/UX</h2>
+
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-header">
+          <span class="use-case-icon"></span>
+          <h4>Frontend Mentor</h4>
+          <span class="use-case-badge">Altamente recomendado</span>
+        </div>
+        <p>Te dan un diseño profesional en Figma y tú debes construirlo. Perfecto para crear un portafolio visual impactante.</p>
+      </div>
+
+      <div class="use-case">
+        <div class="use-case-header">
+          <span class="use-case-icon"></span>
+          <h4>CSS Battle</h4>
+          <span class="use-case-badge">Para maestros del CSS</span>
+        </div>
+        <p>Aprende las profundidades de CSS recreando figuras complejas con la menor cantidad de código posible.</p>
+      </div>
+    </div>
+
+    <h2> Proyectos y Código Abierto</h2>
+
+    <div class="callout callout-success">
+      <div class="callout-icon"></div>
+      <div class="callout-content">
+        <h3>GitHub: Tu Mejor Carta de Presentación</h3>
+        <p>Más allá de practicar solo, contribuir a proyectos <strong>Open Source</strong> en GitHub demuestra que sabes trabajar en equipo y manejar bases de código reales.</p>
+      </div>
+    </div>
+
+    <div class="tools-comparison">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th> Plataforma</th>
+            <th> Enfoque</th>
+            <th> Acceso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FreeCodeCamp</strong></td>
+            <td>Full Stack Integral</td>
+            <td><span class="difficulty easy">Gratis</span></td>
+          </tr>
+          <tr>
+            <td><strong>The Odin Project</strong></td>
+            <td>Roadmap Senior</td>
+            <td><span class="difficulty easy">Gratis</span></td>
+          </tr>
+          <tr>
+            <td><strong>Exercism</strong></td>
+            <td>Mentoria Real</td>
+            <td><span class="difficulty medium">Gratis</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2> Conclusión</h2>
+
+    <div class="conclusion-section">
+      <div class="callout callout-primary">
+        <div class="callout-icon"></div>
+        <div class="callout-content">
+          <h3>La Clave es la Disciplina</h3>
+          <p>No intentes usarlas todas a la vez. Elige una que se adapte a tu nivel actual y sé constante. La maestría técnica viene de la acumulación de horas de vuelo frente al editor.</p>
+        </div>
+      </div>
+
+      <div class="final-quote">
+        <blockquote>
+          "El código se aprende escribiendo código. No hay atajos, solo mejores formas de practicar."
+        </blockquote>
+      </div>
+    </div>
     `
   }
 ];

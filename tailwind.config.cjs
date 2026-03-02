@@ -31,6 +31,27 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Premium "Founder" Color Palette
+      colors: {
+        primary: {
+          DEFAULT: '#0f172a', // Slate 900
+          light: '#1e293b',   // Slate 800
+          dark: '#020617',    // Slate 950
+        },
+        accent: {
+          DEFAULT: '#38bdf8', // Sky 400
+          glow: '#0ea5e9',    // Sky 500
+        },
+        gold: {
+          DEFAULT: '#fbbf24', // Amber 400
+          light: '#fcd34d',   // Amber 300
+          dark: '#d97706',    // Amber 600
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       // Mobile-first spacing system
       spacing: {
         '18': '4.5rem',

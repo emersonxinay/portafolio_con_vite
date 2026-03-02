@@ -78,15 +78,7 @@ const Home = () => {
         </div>
 
 
-        <motion.div
-          className="fixed bottom-0 right-0 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl pointer-events-none"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -15, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse' }}
-        />
+
       </motion.main>
     </>
   );

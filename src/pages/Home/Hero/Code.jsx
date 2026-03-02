@@ -34,33 +34,33 @@ const Code = () => {
       </AnimatePresence>}
 
       {/* Code snippet */}
-      <div className='bg-slate-900 bg-opacity-50 backdrop-blur-lg grid p-3 xs:p-4 rounded-xl w-full divide-y-[1px] divide-zinc-600 gap-2 mobile-shadow border border-slate-700/30'>
+      <div className='bg-slate-900/80 backdrop-blur-xl grid p-3 xs:p-4 rounded-xl w-full divide-y-[1px] divide-slate-700/50 gap-2 border border-slate-700/50 shadow-2xl'>
         <div className='flex justify-between items-center'>
           <div className='flex gap-1 xs:gap-1.5'>
-            <div className='p-1 xs:p-1.5 rounded-full bg-zinc-600 hover:bg-red-400 transition-colors touch-target'></div>
-            <div className='p-1 xs:p-1.5 rounded-full bg-zinc-600 hover:bg-amber-400 transition-colors touch-target'></div>
-            <div className='p-1 xs:p-1.5 rounded-full bg-zinc-600 hover:bg-green-400 transition-colors touch-target'></div>
+            <div className='w-3 h-3 rounded-full bg-slate-600/50'></div>
+            <div className='w-3 h-3 rounded-full bg-slate-600/50'></div>
+            <div className='w-3 h-3 rounded-full bg-slate-600/50'></div>
           </div>
-          <span className='text-zinc-400 text-xs xs:text-sm font-mono'>/index.js</span>
-          <MdFileCopy fill='#52525b' className='cursorClick w-4 h-4 xs:w-5 xs:h-5 hover:fill-cyan-400 transition-colors touch-target' onClick={copyHandler}></MdFileCopy>
+          <span className='text-zinc-500 text-xs font-mono'>index.js</span>
+          <MdFileCopy className='text-zinc-500 hover:text-accent transition-colors cursor-pointer' onClick={copyHandler} />
         </div>
         <div className='w-full'>
           {/* escribir un code snippet de javascript */}
-          <pre className='text-zinc-400 text-xs xs:text-sm py-2 xs:py-3 w-full relative overflow-x-auto mobile-scroll'>
-            <div className='absolute shadow-[0px_0px_200px_40px_#0ea5e9] xs:shadow-[0px_0px_300px_70px_#0ea5e9] opacity-50 xs:opacity-100'></div>
+          <pre className='text-slate-300 text-xs xs:text-sm py-2 xs:py-3 w-full relative overflow-x-auto mobile-scroll font-mono leading-relaxed'>
+            {/* Removed neon shadow blob */}
             <code id='code'>
-              <span className="text-blue-400">const</span> {t('code.welcome')} <span className="text-blue-400">=</span> <span className='text-yellow-100'>()</span> <span className="text-blue-400">=&gt;</span> <span className='text-yellow-100'>&#123;</span> <br></br><br></br>
-              {'  '}<span className="text-blue-400">const</span> {t('code.about')} <span className="text-blue-400">=</span> <span className='text-yellow-100'>&#123;</span> <br></br>
-              {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.name')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Emerson </span>' <br></br>
-              {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.lastname')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Espinoza</span>' <br></br>
-              {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.image')} <span className="text-blue-400">=</span> <span className="text-yellow-100 underline cursor-pointer cursorClick" onClick={() => setshowImage(true)} >emerson.jpg</span><br></br>
-              {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.country')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">Perú y Chile</span>' <br></br>
-              {'  '}{'  '}<span className="text-blue-400">const</span> {t('code.spanish')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">{t('code.spanishValue')}</span>' <br></br>
-              {'  '}{'  '}<span className="text-blue-400">let</span> {t('code.english')} <span className="text-blue-400">=</span> '<span className="text-yellow-100">{t('code.englishValue')}</span>' <br></br>
-              {'  '}<span className='text-yellow-100'>&#125;</span> <br></br><br></br>
-              {'  '}<span className="text-blue-400">return</span> {t('code.about')} <br></br>
-              <span className='text-yellow-100'>&#125;</span> <br></br> <br></br>
-              {t('code.welcome')}<span className='text-yellow-100'>()</span>
+              <span className="text-purple-400">const</span> {t('code.welcome')} <span className="text-purple-400">=</span> <span className='text-slate-500'>()</span> <span className="text-purple-400">=&gt;</span> <span className='text-slate-500'>&#123;</span> <br></br><br></br>
+              {'  '}<span className="text-purple-400">const</span> {t('code.about')} <span className="text-purple-400">=</span> <span className='text-slate-500'>&#123;</span> <br></br>
+              {'  '}{'  '}<span className="text-purple-400">const</span> {t('code.name')} <span className="text-purple-400">=</span> '<span className="text-emerald-400">Emerson </span>' <br></br>
+              {'  '}{'  '}<span className="text-purple-400">const</span> {t('code.lastname')} <span className="text-purple-400">=</span> '<span className="text-emerald-400">Espinoza</span>' <br></br>
+              {'  '}{'  '}<span className="text-purple-400">const</span> {t('code.image')} <span className="text-purple-400">=</span> <span className="text-blue-400 underline cursor-pointer hover:text-blue-300 transition-colors" onClick={() => setshowImage(true)} >emerson.jpg</span><br></br>
+              {'  '}{'  '}<span className="text-purple-400">const</span> {t('code.country')} <span className="text-purple-400">=</span> '<span className="text-emerald-400">Perú y Chile</span>' <br></br>
+              {'  '}{'  '}<span className="text-purple-400">const</span> {t('code.spanish')} <span className="text-purple-400">=</span> '<span className="text-emerald-400">{t('code.spanishValue')}</span>' <br></br>
+              {'  '}{'  '}<span className="text-purple-400">let</span> {t('code.english')} <span className="text-purple-400">=</span> '<span className="text-emerald-400">{t('code.englishValue')}</span>' <br></br>
+              {'  '}<span className='text-slate-500'>&#125;</span> <br></br><br></br>
+              {'  '}<span className="text-purple-400">return</span> {t('code.about')} <br></br>
+              <span className='text-slate-500'>&#125;</span> <br></br> <br></br>
+              {t('code.welcome')}<span className='text-slate-500'>()</span>
             </code>
           </pre>
         </div>

@@ -46,11 +46,13 @@ html {
 
 /* Mobile-first body styles */
 body {
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background-color: #020617; /* Slate 950 - Deep and Premium */
+  color: #e2e8f0; /* Slate 200 - High legibility */
+  /* Subtle mesh gradient for depth, but very dark and professional */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(251, 191, 36, 0.05) 0%, transparent 25%);
+  
   /* Use scroll instead of fixed on mobile for better performance */
   background-attachment: scroll;
   min-height: 100vh;
@@ -129,38 +131,9 @@ body {
   color: #ffffff;
 }
 
-/* Animated gradient backgrounds */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+/* Animated gradient backgrounds - REMOVED for professional look */
 
-.animated-gradient {
-  background: linear-gradient(-45deg, #0ea5e9, #3b82f6, #8b5cf6, #ec4899);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-/* Matrix-like effect for code sections */
-@keyframes matrix-rain {
-  0% { transform: translateY(-100vh); opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
-}
-
-.matrix-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-}
+/* Matrix-like effect - REMOVED for professional look */
 
 /* Enhanced button effects */
 .btn-glow {

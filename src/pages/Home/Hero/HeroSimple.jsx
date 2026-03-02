@@ -39,7 +39,7 @@ const HeroSimple = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
-            <span className="text-emerald-400 font-mono text-xs tracking-wider uppercase">Sistema Operativo</span>
+            <span className="text-emerald-400 font-mono text-xs tracking-wider uppercase">Innovando hasta levantar capital</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">

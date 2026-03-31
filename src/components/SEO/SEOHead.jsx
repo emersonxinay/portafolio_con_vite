@@ -12,10 +12,10 @@ const SEOHead = ({
   canonical,
   noindex = false
 }) => {
-  const defaultTitle = "Emerson Espinoza - Senior Software Engineer | Tech Lead | Consultor IA & ML";
-  const defaultDescription = "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise.";
+  const defaultTitle = "Emerson Espinoza - Senior Backend Engineer | Azure & AI Solutions Architect";
+  const defaultDescription = "Senior Backend Engineer con 6+ años de experiencia. Especialista en Azure, Node.js e infraestructuras críticas con integración de IA empresarial.";
   const defaultImage = "https://emersonespinoza.com/assets/emerson-espinoza-social-card.jpg";
-  const defaultKeywords = "Emerson Espinoza, Senior Software Engineer, Tech Lead, CTO, Python Developer, React Developer, Machine Learning Engineer, AI Specialist, Santiago Chile";
+  const defaultKeywords = "Emerson Espinoza, Senior Backend Engineer, Azure, Node.js, TypeScript, AI Architect, Cloud Infrastructure, Santiago Chile";
 
   const seoTitle = title || defaultTitle;
   const seoDescription = description || defaultDescription;

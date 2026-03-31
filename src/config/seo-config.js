@@ -4,33 +4,29 @@ export const seoConfig = {
   // Primary keywords for positioning
   primaryKeywords: [
     "Emerson Espinoza",
-    "Senior Software Engineer Santiago Chile",
-    "Tech Lead CTO Chile",
-    "Python Developer Chile",
-    "React Developer Santiago",
-    "Machine Learning Engineer Chile",
-    "AI Specialist Chile",
-    "Ingeniero Sistemas Chile",
-    "Consultor IA ML",
-    "Technical Leadership",
-    "Software Architecture Chile",
-    "Startup CTO Santiago",
-    "EdTech Founder",
-    "Full Stack Developer Santiago"
+    "Senior Backend Engineer Azure",
+    "Azure Solutions Architect Chile",
+    "Node.js Expert Santiago",
+    "Senior Software Engineer Microsoft Azure",
+    "Enterprise AI Solutions Chile",
+    "Arquitecto de Sistemas Cloud",
+    "Technical Leadership Azure",
+    "Software Architecture Node.js",
+    "Cloud Infrastructure Specialist",
+    "CI/CD DevOps Expert Chile"
   ],
 
   // Long tail keywords for organic traffic
   longTailKeywords: [
-    "senior software engineer python react chile",
-    "tech lead cto startups santiago",
-    "machine learning engineer ai specialist chile",
-    "consultor inteligencia artificial machine learning",
-    "arquitecto software microservicios chile",
-    "lider tecnico desarrollo software santiago",
-    "ingeniero sistemas python fastapi chile",
-    "founder cto edtech educacion tecnologia",
-    "desarrollador fullstack python react chile",
-    "consultor transformacion digital chile"
+    "senior backend engineer azure nodejs chile",
+    "azure solutions architect enterprise systems",
+    "senior software engineer cloud infrastructure",
+    "architecting ai powered backend services",
+    "lider tecnico arquitectura distribuida santiago",
+    "ingeniero sistemas azure devops nodejs",
+    "technical leadership cloud transformation",
+    "scalable microservices architecture azure",
+    "senior development lead santiago chile"
   ],
 
   // Geographic keywords for local SEO
@@ -47,42 +43,39 @@ export const seoConfig = {
 
   // Industry-specific keywords
   industryKeywords: [
-    "EdTech",
-    "FinTech",
-    "SaaS",
-    "Enterprise Software",
-    "Startup Technology",
-    "Digital Transformation",
-    "Cloud Architecture",
-    "DevOps",
-    "Agile Development",
-    "Technical Leadership"
+    "BHP Industrial Systems",
+    "FinTech Core Banking",
+    "Cloud Native SaaS",
+    "Enterprise Infrastructure",
+    "Azure Cloud Transformation",
+    "Distributed Systems",
+    "Event-Driven Architecture",
+    "DevOps & CI/CD",
+    "Engineering Leadership"
   ],
 
   // Technical skills keywords
   technicalKeywords: [
-    "Python",
-    "React",
-    "FastAPI",
-    "PostgreSQL",
-    "Docker",
-    "Kubernetes",
-    "Machine Learning",
-    "Artificial Intelligence",
+    "Node.js",
+    "Azure",
+    "TypeScript",
+    "Azure Functions",
+    "Azure DevOps",
+    "Redis",
+    "PM2",
     "Microservices",
     "Cloud Computing",
-    "AWS",
+    "GCP",
     "DigitalOcean",
-    "Git",
     "CI/CD",
-    "TensorFlow",
-    "Data Science"
+    "Enterprise AI",
+    "System Monitoring"
   ],
 
   // Default meta configurations
   defaultMeta: {
-    title: "Emerson Espinoza - Senior Software Engineer | Tech Lead | Consultor IA & ML",
-    description: "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise. CTO & Founder en EdTech.",
+    title: "Emerson Espinoza - Senior Backend Engineer | Azure & AI Solutions Architect",
+    description: "Senior Backend Engineer con 6+ años construyendo infraestructuras críticas y sistemas distribuidos en Azure. Especialista en Node.js, arquitecturas de IA y optimización de servicios de misión crítica.",
     image: "https://emersonespinoza.com/assets/emerson-espinoza-social-card.jpg",
     url: "https://emersonespinoza.com",
     siteName: "Emerson Espinoza Portfolio",
@@ -94,9 +87,9 @@ export const seoConfig = {
   // Page-specific SEO configurations
   pages: {
     home: {
-      title: "Emerson Espinoza - Senior Software Engineer | Tech Lead | Consultor IA & ML",
-      description: "Senior Software Engineer peruano 🇵🇪 con residencia en Chile 🇨🇱. 6+ años transformando ideas en soluciones tecnológicas escalables. Especialista en IA/ML, Python, React, arquitecturas enterprise. CTO & Founder. 99.9% uptime, $2M+ ahorros generados.",
-      keywords: "Emerson Espinoza, Senior Software Engineer Santiago Chile, Tech Lead CTO, Python Developer Chile, React Developer, Machine Learning Engineer, AI Specialist, Ingeniero Sistemas Chile, Consultor IA ML, Technical Leadership, Software Architecture, Startup CTO, EdTech Founder, Full Stack Developer Santiago"
+      title: "Emerson Espinoza - Senior Backend Engineer | Azure & AI Specialist",
+      description: "Senior Backend Engineer con 6+ años de experiencia. Especialista en Azure, Node.js y soluciones de IA integradas. Lideré sistemas críticos en BHP y Fintech con 99.9% uptime y 60% mejora operativa.",
+      keywords: "Emerson Espinoza, Senior Backend Engineer Azure, Node.js Expert, Azure Solutions Architect, Enterprise AI, Technical Leadership, Distributed Systems, Cloud Infrastructure"
     },
     cvHarvard: {
       title: "CV Emerson Espinoza - Ingeniero de Sistemas | Currículum Harvard Style",
@@ -104,9 +97,9 @@ export const seoConfig = {
       keywords: "Emerson Espinoza CV, Currículum Vitae, Harvard Style Resume, Ingeniero Sistemas, Senior Software Engineer, Python Developer, React Developer, Tech Lead CTO, Machine Learning Engineer, Santiago Chile, CV Download PDF"
     },
     cvCorporate: {
-      title: "CV Empresarial Emerson Espinoza - CTO & Tech Lead | Consultor IA/ML",
-      description: "CV empresarial de Emerson Espinoza, Senior Software Engineer & CTO con 6+ años liderando transformación digital. Especialista en IA/ML, Python, React. Track record: $2M+ ahorros, 99.9% uptime, 200+ desarrolladores formados. Consultor técnico para startups y empresas Fortune 500.",
-      keywords: "Emerson Espinoza CTO, Corporate Resume, Tech Lead, Senior Software Engineer, AI ML Consultant, Python Expert, React Developer, Technical Leadership, Software Architecture, Startup CTO, Enterprise Solutions, Digital Transformation Santiago Chile"
+      title: "CV Emerson Espinoza - Senior Backend Engineer | Azure & AI Architect",
+      description: "CV profesional de Emerson Espinoza, Senior Backend Engineer con 6+ años liderando infraestructuras críticas. Especialista en Azure, Node.js e IA. Track record: 800+ desarrolladores formados, 60% mejora operativa en BHP, integridad transaccional en Fintech.",
+      keywords: "Emerson Espinoza CV, Senior Backend Engineer, Azure Architect, Node.js Specialist, Enterprise AI, Technical Leadership, Cloud Infrastructure, Santiago Chile"
     }
   },
 

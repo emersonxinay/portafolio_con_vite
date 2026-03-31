@@ -33,8 +33,8 @@ const ProfessionalImpact = () => {
         },
         {
           title: "Technical Mentoring",
-          description: "Mentoreo a desarrolladores junior y mid-level en tecnologías modernas, arquitectura de software y mejores prácticas de desarrollo.",
-          impact: "15+ desarrolladores",
+          description: "Mentoría avanzada a desarrolladores sobre arquitectura de software, patrones de diseño y mejores prácticas en entornos cloud.",
+          impact: "800+ desarrolladores",
           badge: "Mentoring"
         },
         {
@@ -46,15 +46,15 @@ const ProfessionalImpact = () => {
       ]
     },
     innovation: {
-      title: "Innovación & Soluciones Técnicas",
-      icon: "",
+      title: "Arquitectura & Soluciones de IA",
+      icon: "🤖",
       gradient: "from-purple-500 to-pink-600",
       highlights: [
         {
-          title: "AI Integration",
-          description: "Integro soluciones de IA y Machine Learning en sistemas empresariales, automatizando procesos que antes requerían intervención manual.",
+          title: "AI-Powered Systems",
+          description: "Diseño y despliegue de microservicios que integran IA para automatización de procesos críticos y optimización de flujos empresariales.",
           impact: "70% automatización",
-          badge: "AI/ML"
+          badge: "AI/Backend"
         },
         {
           title: "Performance Optimization",
@@ -127,7 +127,7 @@ const ProfessionalImpact = () => {
       'Leadership': 'bg-blue-500',
       'Mentoring': 'bg-indigo-500',
       'Quality': 'bg-cyan-500',
-      'AI/ML': 'bg-purple-500',
+      'AI/Backend': 'bg-purple-500',
       'Performance': 'bg-pink-500',
       'Architecture': 'bg-violet-500',
       'Cost Saving': 'bg-green-500',

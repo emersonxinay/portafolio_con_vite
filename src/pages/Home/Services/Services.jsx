@@ -22,7 +22,7 @@ const Services = () => {
         {/* Header */}
         <SectionHeader
           title={t('services.title')}
-          highlightText="Transforman"
+          highlightText="Experticia"
           subtitle={t('services.subtitle')}
           gradient="from-blue-400 to-purple-500"
         />
@@ -104,7 +104,7 @@ const Services = () => {
           className="text-center mb-10 xs:mb-12 md:mb-16"
         >
           <h3 className="text-xl xs:text-2xl md:text-3xl font-bold text-white mb-8 xs:mb-10 md:mb-12">
-            Mi Proceso de <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Trabajo</span>
+            Metodología de <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Ingeniería</span>
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-6 md:gap-8">

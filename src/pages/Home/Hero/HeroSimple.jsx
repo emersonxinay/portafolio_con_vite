@@ -34,63 +34,62 @@ const HeroSimple = () => {
           className="flex flex-col text-left"
         >
           {/* Live Status Badge */}
-          <div className="inline-flex items-center gap-3 self-start mb-6 px-4 py-2 bg-slate-900/80 border border-emerald-500/30 rounded-lg backdrop-blur-md">
+          <div className="inline-flex items-center gap-3 self-start mb-6 px-4 py-2 bg-slate-900/80 border border-blue-500/30 rounded-lg backdrop-blur-md">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
             </span>
-            <span className="text-emerald-400 font-mono text-xs tracking-wider uppercase">Innovando hasta levantar capital</span>
+            <span className="text-blue-400 font-mono text-xs tracking-wider uppercase">{t('footer.availabilityBadge')}</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Arquitecto del <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Futuro Digital.</span>
+            Arquitecto de <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-500">Sistemas Backend.</span>
           </h1>
 
           <div className="flex items-start gap-4 mb-8 max-w-lg">
-            <img src="/images/logo_aguila.png" alt="Logo Águila" className="w-12 h-12 object-contain mt-1" />
+            <div className="bg-blue-500/10 p-3 rounded-xl border border-blue-500/20 mt-1">
+              <i className="fas fa-server text-blue-400 text-xl"></i>
+            </div>
             <p className="text-xl text-slate-400 leading-relaxed font-light">
-              Fundador del <span className="text-amber-400 font-medium">Lenguaje Águila</span>. <br />
-              El lenguaje profesional en español diseñado para formar a los próximos <span className="text-white font-medium">arquitectos de software</span>.
+              {t('heroSimple.description')}
             </p>
           </div>
 
           {/* Production Stats Dashboard */}
           <div className="grid grid-cols-2 gap-4 mb-10 w-full max-w-md">
             <div className="p-4 bg-slate-800/30 border border-slate-700/50 rounded-lg">
-              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Rol Actual</div>
-              <div className="text-white font-bold">Fundador & CTO</div>
+              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Multi-Cloud Stack</div>
+              <div className="text-white font-bold">Azure / GCP / DO</div>
             </div>
             <div className="p-4 bg-slate-800/30 border border-slate-700/50 rounded-lg">
-              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Enfoque</div>
-              <div className="text-blue-400 font-bold">LLVM / Compiladores</div>
+              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Infraestructura</div>
+              <div className="text-emerald-400 font-bold">PM2 & Redis Ops</div>
             </div>
             <div className="p-4 bg-slate-800/30 border border-slate-700/50 rounded-lg col-span-2">
-              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Estado del Proyecto</div>
+              <div className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-mono">Disponibilidad de Sistemas (SLA)</div>
               <div className="flex items-center gap-2">
-                <span className="text-amber-400 font-bold">Águila v2.6.8</span>
+                <span className="text-blue-400 font-bold">99.9% Uptime</span>
                 <div className="h-1 flex-1 bg-slate-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-amber-500 w-3/4 animate-pulse"></div>
+                  <div className="h-full bg-blue-500 w-[99.9%] animate-pulse"></div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a
-              href="https://aguila.compilandocode.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToContact}
               className="px-8 py-3 bg-white text-slate-900 font-bold rounded-lg shadow-lg hover:bg-slate-200 transition-all flex items-center gap-2"
             >
-              <i className="fas fa-terminal mb-0.5"></i>
-              Explorar Águila
-            </a>
+              <i className="fas fa-envelope mb-0.5"></i>
+              {t('heroSimple.ctaSecondary', 'Contact Now')}
+            </button>
             <button
               onClick={scrollToProjects}
               className="px-8 py-3 bg-transparent border border-slate-600 text-white font-medium rounded-lg hover:border-white transition-all"
             >
-              Ver proyectos
+              {t('heroSimple.ctaPrimary', 'View Projects')}
             </button>
           </div>
         </motion.div>
@@ -122,8 +121,8 @@ const HeroSimple = () => {
                 <i className="fas fa-check-circle text-blue-400 text-xl"></i>
               </div>
               <div>
-                <div className="text-xs text-slate-400 font-mono">Compilación Exitosa</div>
-                <div className="text-sm font-bold text-white">Listo para Producción</div>
+                <div className="text-xs text-slate-400 font-mono">CI/CD & Live Monitoring</div>
+                <div className="text-sm font-bold text-white">Sistemas Resilientes</div>
               </div>
             </motion.div>
           </div>

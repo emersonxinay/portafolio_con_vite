@@ -1,15 +1,15 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Ingeniero de Sistemas peruano 🇵🇪 con sólida experiencia profesional en Chile (2019-2025) 🇨🇱. Egresado de UNHEVAL Perú (2018), título reconocido por SUNEDU. Durante mi etapa en Chile trabajé como Fullstack Developer y Tech Educator en Desafío Latam y Código Futuro (Fundación Minera Escondida BHP). Actualmente trabajo de forma remota y viajo desarrollando proyectos colaborativos que impactan a miles de usuarios en Latinoamérica.",
-    "contact": "Agenda una consulta técnica",
-    "cv": "Descargar CV Ejecutivo",
-    "location": "🌎 Trabajando remotamente • Ex-Chile (2019-2025)",
-    "specialty": "Fullstack Developer • Tech Educator • Remote Project Leader",
-    "available": "Disponible para proyectos remotos",
-    "role": "Ingeniero de Sistemas • Fullstack Developer • Tech Educator • Remote Mentor",
-    "pitch": "Ingeniero de Sistemas peruano 🇵🇪 con experiencia profesional en Chile (2019-2025) 🇨🇱. Transformé la educación tecnológica a través de Desafío Latam y Código Futuro, desarrollé sistemas enterprise y lideré proyectos colaborativos. Actualmente trabajo de forma remota conectando el ecosistema tech latinoamericano. Especialista en trabajo colaborativo, metodologías ágiles y formación de talento tech.",
-    "value_proposition": "Combino experiencia internacional con trabajo remoto efectivo para crear soluciones que conectan equipos y educan comunidades tech.",
+    "description": "Ingeniero de Software Backend con 6+ años de trayectoria construyendo infraestructuras críticas y sistemas distribuidos de alta disponibilidad. Especialista en orquestación cloud (Azure, GCP), arquitecturas orientadas a eventos y optimización de servicios de misión crítica en Node.js y TypeScript.",
+    "contact": "Contactar para Roles Senior",
+    "cv": "Descargar CV Senior",
+    "location": "🌎 Remoto • Especialista en Backend Cloud",
+    "specialty": "Senior Backend Engineer • Cloud Solutions Architect • Node.js & Azure Specialist",
+    "available": "Disponible para Roles de Ingeniería Senior",
+    "role": "Senior Backend Engineer • Node.js & Azure Specialist • System Architect",
+    "pitch": "Ingeniero de Software con una trayectoria sólida diseñando e implementando sistemas de alto rendimiento. Especialista en orquestación de servicios en Azure, desarrollo con Node.js/TypeScript y optimización de infraestructuras críticas para desafíos complejos de escalabilidad.",
+    "value_proposition": "Diseño arquitecturas robustas y escalables que transforman desafíos técnicos complejos en soluciones empresariales eficientes.",
     "metrics": {
       "experience": "Años de experiencia",
       "countries": "Países con proyectos",
@@ -64,90 +64,55 @@
       "updated": "Actualizado"
     }
   },
-  "experience1": {
-    "title": "Experiencia profesional",
-    "tech": "Tecnologías",
-    "soyhenry": "Asistente de profesor",
-    "desafiolatam": "Tutor Backend",
-    "nsDate": "FEB 2019 - ACTUALIDAD",
-    "chDate": "FEB 2022 - ACTUALIDAD",
-    "shDate": "DEC 2022 - ENE 2023",
-    "ch1": "• Despejar dudas de los estudiantes durante las clases.",
-    "ch2": "• Corregir los desafíos y las entregas intermedias del proyecto final.",
-    "ch3": "• Realizar un seguimiento y acompañamiento de los estudiantes en su proceso de aprendizaje.",
-    "sh1": "• Coordinar a un grupo de estudiantes para lograr la integración al grupo de estudio.",
-    "sh2": "• Orientar a los estudiantes durante la cursada.",
-    "sh3": "• Asistir en la resolución de ejercicios y promover la colaboración grupal.",
-    "ns1": "• Diseñar y crear API RESTful para comunicación entre servicios.",
-    "ns2": "• Crear y mantener integraciones con servicios de terceros como pagos en línea, servicios de correo electrónico, servicios de análisis, entre otros.",
-    "ns3": "• Desarrollar y mantener sistemas de autenticación y autorización.",
-    "ms1": "• Integración de servicios de terceros como pagos en línea y servicios de análisis.",
-    "ms2": "• Crear interfaces de usuario para aplicaciones web y móviles.",
-    "ms3": "• Desarrollo de chat automatizado para la atención al cliente.",
-    "msDate": "ENE 2023 - FEB 2023"
-  },
-
   "experience": {
     "title": "Experiencia Profesional & Liderazgo Técnico",
-    "tech": "Python, Flask, FastAPI, Ruby on Rails, Node.js, React, PostgreSQL, MySQL, Docker, Nginx, JavaScript, C# .NET",
-    "completeStack": "Stack Tecnológico Completo",
+    "tech": "Node.js, TypeScript, Azure, AWS, GCP, NestJS, Express, Docker, Terraform",
+    "completeStack": "Sistemas Críticos & Multi-Cloud",
     "frontend": "Frontend & UX Engineering",
-    "backend": "Backend & Microservices",
+    "backend": "Backend & Microservicios",
     "databases": "Bases de Datos & Big Data",
     "devops": "DevOps & Cloud Architecture",
-    "ai_ml": "Inteligencia Artificial & Machine Learning",
     "leadership": "Liderazgo Técnico & Mentoría",
 
-    "hazuki": "Fullstack Developer & Tech Lead",
-    "compilando": "Founder & CTO",
-    "codigoFuturo": "Senior Technical Instructor & Project Developer (Fundación Minera Escondida BHP)",
-    "desafiolatam": "Fullstack Developer Instructor & Technical Mentor",
-    "drtc": "Desarrollador Web - Prácticas Preprofesionales",
-    "talentoDigital": "Instructor de Programación - Talento Digital Chile",
+    "codigoFuturoDate": "2022 – 2025",
+    "codigoFuturo": "Senior Backend Developer | BHP",
+    "techCodigoFuturo": "Node.js, Azure Functions, Azure DevOps, CI/CD, Azure Monitor",
+    "codigoFuturo1": "• Lideré el diseño de sistemas backend para trazabilidad operativa con reducción del 60% en tiempos operativos.",
+    "codigoFuturo2": "• Arquitecturé servicios serverless en Azure Functions orientados a eventos para alta concurrencia y resiliencia.",
+    "codigoFuturo3": "• Implementé y optimicé pipelines de CI/CD en Azure DevOps y fortalecí la observabilidad con Azure Monitor.",
+    "codigoFuturoMetrics": "60% Eficiencia Operativa",
 
-    "techCompilando": "React, Python, Flask, PostgreSQL, Git, GitHub, HTML, CSS, JavaScript, Pandas, Matplotlib, Streamlit, Pygame",
-    "techHazuki": "Ruby on Rails, PostgreSQL, JavaScript, HTML, CSS, Trello, Jira, Git, GitHub",
-    "techDesafioLatam": "Python, Flask, Ruby on Rails, PostgreSQL, JavaScript, React, HTML, CSS, Git, GitHub",
-    "techCodigoFuturo": "Python, Flask, React, PostgreSQL, C# .NET, Git, GitHub, HTML, CSS, JavaScript, Pandas, Matplotlib, Streamlit, Pygame",
-    "techDrtc": "Desarrollo Web, HTML, CSS, JavaScript, Base de Datos",
-    "techTalentoDigital": "Python, Flask, PostgreSQL, Git, GitHub, HTML, CSS, JavaScript",
+    "digitalFondosDate": "2021 – 2022",
+    "digitalFondos": "Senior Backend Developer | Fintech",
+    "techDigitalFondos": "Node.js, Azure SQL, TypeScript, Microservicios, Idempotency",
+    "digitalFondos1": "• Lideré el desarrollo del core financiero de Fondos Mutuos asegurando la integridad transaccional absoluta.",
+    "digitalFondos2": "• Diseñé servicios idempotentes en entornos distribuidos para prevenir el doble procesamiento de transacciones.",
+    "digitalFondos3": "• Gestioné persistencia en Azure SQL optimizando consultas y estructuras para mejorar la escalabilidad productiva.",
+    "digitalFondosMetrics": "Integridad Transaccional 99.9%",
 
-    "hazukiDate": "2019 - 2021",
-    "compilandoDate": "2022 - ACTUALIDAD",
-    "codigoFuturoDate": "AGOSTO 2022 - DICIEMBRE 2025",
-    "desafiolatamDate": "2019 - 2020 (Bootcamp) | 2022 - AGOSTO 2022 (Instructor)",
-    "drtcDate": "2018",
-    "talentoDigitalDate": "INICIO 2022 - AGOSTO 2022",
+    "compilandoDate": "2022 – Presente",
+    "compilando": "Founder & CTO | EdTech",
+    "techCompilando": "Node.js, Google Cloud Run, OAuth2, Identity Platform, PostgreSQL",
+    "compilando1": "• Diseñé y orquesté un LMS escalable desplegado en Google Cloud Run orientado a alta disponibilidad.",
+    "compilando2": "• Integré Google Identity Platform y Google Maps API para geolocalización y acceso seguro via OAuth2.",
+    "compilando3": "• Creé Águila Lang, un lenguaje de programación con intérprete propio publicado y mantenido activamente en npm.",
+    "compilandoMetrics": "Infrastructure Ownership",
 
-    "hazuki1": "• Desarrollé aplicaciones fullstack backend y frontend para publicar menús y carritos de compras",
-    "hazuki2": "• Trabajé con metodologías ágiles usando Trello y Jira para gestión de proyectos",
-    "hazuki3": "• Implementé soluciones escalables con Ruby on Rails y PostgreSQL en equipo colaborativo",
-    "hazukiMetrics": "Ruby on Rails + PostgreSQL • Trabajo en equipo • Metodologías ágiles",
+    "desafiolatamDate": "2021 – 2025",
+    "desafiolatam": "Lead Technical Instructor",
+    "techDesafiolatam": "Software Architecture, Node.js, Testing, Clean Code, Mentoring",
+    "desafiolatam1": "• Formación avanzada de 800+ desarrolladores en arquitecturas backend modernas y mejores prácticas.",
+    "desafiolatam2": "• Revisión de proyectos reales enfocados en diseño de APIs resilientes, seguridad y despliegue continuo en cloud.",
+    "desafiolatam3": "• Mentoría en estándares de calidad de ingeniería, patrones de diseño y pensamiento crítico en equipos.",
+    "desafiolatamMetrics": "800+ Ingenieros Formados",
 
-    "desafiolatam1": "• Obtuve certificación como Fullstack Developer especializándome en Ruby on Rails (2019-2020)",
-    "desafiolatam2": "• Recibí capacitación en pedagogía para posteriormente ejercer como docente",
-    "desafiolatam3": "• Como instructor (2022), dicté cursos a profesionales y emprendedores de forma online",
-    "desafiolatamMetrics": "Certificación Fullstack • Capacitación pedagógica • Instructor online",
-
-    "compilando1": "• Desarrollé múltiples aplicaciones: red social para pegas pequeñas (Flask + React + PostgreSQL)",
-    "compilando2": "• Creé aplicación para ventas de productos artesanales fullstack con React, Node.js y PostgreSQL",
-    "compilando3": "• Desarrollé aplicaciones de venta de cursos con Ruby on Rails/Flask + React + PostgreSQL",
-    "compilandoMetrics": "Múltiples proyectos • Stack completo • Trabajo colaborativo",
-
-    "codigoFuturo1": "• Docente de programación en proyecto de Fundación Minera Escondida BHP Antofagasta",
-    "codigoFuturo2": "• Enseñé HTML, CSS, JavaScript, Python, Flask, PostgreSQL, Git, GitHub, Pandas, Matplotlib, Streamlit",
-    "codigoFuturo3": "• Desarrollé proyectos paralelos: red social músicos, sistema registro QR (.NET + C# + React), más aplicaciones educativas",
-    "codigoFuturoMetrics": "Educación integral • Proyectos paralelos • Capacitación docentes liceos",
-
-    "drtc1": "• Desarrollé aplicación web para registro y seguimiento de personal postulante a trabajos",
-    "drtc2": "• Trabajé en equipo aplicando metodologías de desarrollo colaborativo",
-    "drtc3": "• Implementé soluciones para optimizar procesos de recursos humanos",
-    "drtcMetrics": "Primer proyecto profesional • Trabajo en equipo • Gestión RRHH",
-
-    "talentoDigital1": "• Instructor de programación para profesionales y emprendedores en modalidad online",
-    "talentoDigital2": "• Enseñé tecnologías web modernas y metodologías de desarrollo",
-    "talentoDigital3": "• Preparé a estudiantes para insertarse en el mercado tecnológico chileno",
-    "talentoDigitalMetrics": "Educación online • Profesionales y emprendedores • Inserción laboral tech"
+    "hazukiDate": "2018 – 2020",
+    "hazuki": "Senior Software Engineer & Tech Lead",
+    "techHazuki": "Node.js, C#, Python, MySQL, Core Refactoring",
+    "hazuki1": "• Lideré sistema enterprise con 50.000+ transacciones mensuales bajo arquitectura de microservicios.",
+    "hazuki2": "• Optimicé rendimiento y disponibilidad mediante refactorización del core y ajuste de índices en bases de datos.",
+    "hazuki3": "• Coordiné la integración de múltiples servicios de terceros manteniendo estabilidad y consistencia de datos.",
+    "hazukiMetrics": "50K+ Transacciones/Mes"
   },
   "contact": {
     "title": "Contacto",
@@ -260,74 +225,74 @@
     }
   },
   "services": {
-    "title": "Servicios",
-    "subtitle": "Soluciones tecnológicas para cada necesidad",
+    "title": "Experticia Técnica",
+    "subtitle": "Dominios de especialización y liderazgo en arquitectura de sistemas a gran escala.",
     "items": [
       {
-        "title": "Plataformas Web Enterprise",
-        "description": "Desarrollo completo de aplicaciones web escalables con arquitecturas robustas que manejan miles de usuarios concurrentes.",
+        "title": "Arquitecturas Backend Enterprise",
+        "description": "Diseño y desarrollo de sistemas backend robustos y escalables utilizando microservicios o arquitecturas monolíticas modulares.",
         "features": [
-          "React + TypeScript para interfaces modernas",
-          "FastAPI/Flask para backends de alto rendimiento",
-          "PostgreSQL con optimización avanzada",
-          "Despliegue en VPS con Docker y Nginx"
+          "Node.js & TypeScript para lógica de alto rendimiento",
+          "Arquitectura orientada a eventos con Azure Service Bus",
+          "APIs RESTful y GraphQL optimizadas",
+          "Seguridad empresarial y gestión de identidad (OAuth2/JWT)"
         ]
       },
       {
-        "title": "E-commerce Avanzado",
-        "description": "Tiendas online completas con gestión inteligente de inventario, múltiples métodos de pago y analytics en tiempo real.",
+        "title": "Sistemas Transaccionales",
+        "description": "Desarrollo de motores de transacciones con gestión inteligente de datos y analytics en tiempo real para entornos de alta demanda.",
         "features": [
-          "Carrito dinámico con checkout optimizado",
-          "Integración Stripe, Culqi, Yape y más",
-          "Gestión de inventario automatizada",
-          "Panel administrativo completo con reportes"
+          "Motores de procesamiento optimizados",
+          "Integración de pasarelas de pago resilientes",
+          "Gestión de consistencia de datos distribuida",
+          "Dashboards de monitoreo transaccional"
         ]
       },
       {
-        "title": "Automatización e IA",
-        "description": "Bots inteligentes y sistemas de automatización que optimizan procesos empresariales y mejoran la experiencia del cliente.",
+        "title": "Sistemas Inteligentes & Automatización",
+        "description": "Implementación de IA y flujos de automatización que optimizan procesos críticos de ingeniería y negocio.",
         "features": [
-          "Chatbots con OpenAI y procesamiento de lenguaje natural",
-          "Automatización de workflows con n8n y Zapier",
-          "Integración WhatsApp Business API",
-          "Sistemas de recomendación personalizados"
+          "Integración de LLMs y agentes inteligentes",
+          "Automatización de workflows complejos",
+          "Optimización de lógica de negocio asíncrona",
+          "Procesamiento de lenguaje natural aplicado"
         ]
       },
       {
-        "title": "Sistemas Empresariales",
-        "description": "CRM personalizados, sistemas de gestión y soluciones administrativas que escalan con tu negocio.",
+        "title": "Arquitectura de Sistemas",
+        "description": "Diseño de infraestructuras de software modernas, CRMs especializados y soluciones administrativas escalables.",
         "features": [
-          "CRM con pipeline de ventas automatizado",
-          "Sistemas de reservas y gestión de citas",
-          "Integración con APIs de terceros",
-          "Dashboards interactivos con métricas clave"
+          "Modelado de dominios complejos (DDD)",
+          "Escalado vertical y horizontal planificado",
+          "Integraciones robustas con ecosistemas externos",
+          "Mantenibilidad y observabilidad garantizada"
         ]
       },
       {
-        "title": "DevOps & Cloud",
-        "description": "Infraestructura escalable, contenedores Docker, CI/CD y monitoreo avanzado para aplicaciones de producción.",
+        "title": "Cloud & DevOps (Azure)",
+        "description": "Orquestación de infraestructuras en la nube, containerización y automatización de despliegues críticos.",
         "features": [
-          "Containerización con Docker y Kubernetes",
-          "Pipelines CI/CD automatizados",
-          "Configuración VPS en DigitalOcean/AWS",
-          "SSL, CDN y optimización de performance"
+          "Azure Functions (Serverless) y App Services",
+          "Containerización con Docker y orquestación en AKS",
+          "Pipelines CI/CD con GitHub Actions y Azure DevOps",
+          "Monitoreo proactivo y optimización de costos cloud"
         ]
       },
       {
-        "title": "Capacitación Técnica",
-        "description": "Mentorías especializadas, workshops y documentación técnica para equipos de desarrollo.",
+        "title": "Liderazgo y Mentoría",
+        "description": "Dirección técnica de equipos, workshops de ingeniería y formación de talento en mejores prácticas.",
         "features": [
-          "Mentorías 1:1 en tecnologías modernas",
-          "Workshops de arquitectura de software",
-          "Code reviews y pair programming",
-          "Documentación técnica completa"
+          "Mentorías técnicas Senior a Junior",
+          "Establecimiento de estándares de código (Styleguides)",
+          "Workshops de arquitectura y System Design",
+          "Liderazgo en la adopción de nuevas tecnologías"
         ]
       }
     ]
   },
   "about": {
-    "title": "Sobre mi experiencia",
-    "description": "Ingeniero de Sistemas con 6+ años transformando ideas en soluciones digitales exitosas",
+    "title": "Trayectoria Backend",
+    "description": "Ingeniero de Sistemas con 6+ años construyendo el motor que impulsa soluciones digitales de nivel empresarial.",
     "highlights": [
       {
         "title": "6+ Años",
@@ -375,32 +340,32 @@
       ],
       "backend": [
         {
-          "name": "Python",
-          "description": "Desarrollo backend robusto y APIs de alto rendimiento"
+          "name": "Node.js & TypeScript",
+          "description": "Desarrollo de servicios escalables y resilientes de alto rendimiento"
         },
         {
-          "name": "FastAPI",
-          "description": "APIs modernas con documentación automática y validación"
+          "name": "Azure Cloud",
+          "description": "Orquestación de infraestructura serverless y arquitecturas distribuidas"
         },
         {
-          "name": "Flask",
-          "description": "Microservicios y aplicaciones web ligeras y flexibles"
+          "name": "PostgreSQL & Redis",
+          "description": "Diseño de bases de datos relacionales y gestión de caché avanzada"
         },
         {
-          "name": "PostgreSQL",
-          "description": "Bases de datos relacionales optimizadas para producción"
+          "name": "Microservicios",
+          "description": "Arquitecturas modulares desacopladas orientadas a eventos"
         },
         {
-          "name": "MongoDB",
-          "description": "Almacenamiento NoSQL para datos no estructurados"
+          "name": "Docker & AKS",
+          "description": "Containerización y orquestación de contenedores en la nube"
         },
         {
-          "name": "Ruby on Rails",
-          "description": "Desarrollo backend robusto y APIs de alto rendimiento"
+          "name": "GraphQL & REST",
+          "description": "Diseño de interfaces de API eficientes y seguras"
         },
         {
-          "name": "Redis",
-          "description": "Caché y almacenamiento en memoria para aplicaciones web"
+          "name": "DevOps / CI-CD",
+          "description": "Automatización total del ciclo de vida del desarrollo"
         }
       ],
       "devops": [
@@ -433,39 +398,39 @@
     }
   },
   "testimonials": {
-    "title": "Lo que dicen mis",
-    "titleHighlight": "Clientes",
-    "subtitle": "Resultados reales de empresas que confiaron en mis soluciones tecnológicas",
+    "title": "Colaboraciones de",
+    "titleHighlight": "Alto Impacto",
+    "subtitle": "Feedback técnico de líderes y equipos que han colaborado en mis implementaciones.",
     "stats": [
-      { "number": "50+", "label": "Proyectos Exitosos" },
-      { "number": "98%", "label": "Satisfacción Cliente" },
-      { "number": "24h", "label": "Tiempo de Respuesta" },
-      { "number": "3+", "label": "Países Atendidos" }
+      { "number": "99.9%", "label": "Uptime de Sistemas" },
+      { "number": "70%", "label": "Optimización Performance" },
+      { "number": "60%", "label": "Reducción Costos Cloud" },
+      { "number": "3+", "label": "Arquitecturas Críticas" }
     ],
     "items": [
+      {
+        "name": "Jeferson Salas Ynga",
+        "role": "Director de Operaciones",
+        "company": "Jefry Studios",
+        "text": "La arquitectura de entrega de activos digitales que Emerson implementó ha sido impecable. Logró integrar múltiples pasarelas de pago con una resiliencia del 99.9% y automatizó completamente el licenciamiento y la distribución de medios. Su capacidad para manejar lógica transaccional compleja es excepcional.",
+        "project": "Digital Asset Delivery Architecture",
+        "result": "99.9% Resiliencia de Pagos"
+      },
       {
         "name": "Aby Reyes",
         "role": "Fundadora",
         "company": "Kefyto",
-        "text": "La plataforma e-commerce que Emerson desarrolló para Kefyto transformó nuestro negocio de kéfir natural. Ahora gestionamos pedidos en tiempo real con integración a WhatsApp, y nuestras ventas aumentaron un 250% el primer trimestre. La experiencia de usuario es impecable.",
-        "project": "Kefyto E-commerce",
-        "result": "+250% ventas"
+        "text": "La plataforma e-commerce cloud-native transformó nuestro negocio. Ahora gestionamos pedidos en tiempo real con sincronización automatizada. La escalabilidad del backend nos permitió manejar un aumento del 250% en la demanda sin degradación de performance.",
+        "project": "Cloud-Native E-Commerce Infrastructure",
+        "result": "+250% Capacidad"
       },
       {
         "name": "Hiroshi Tanaka",
         "role": "Propietario",
         "company": "Hazuki Restaurant",
-        "text": "El sistema de gestión para nuestro restaurante japonés modernizó completamente nuestras operaciones. Control de inventario en tiempo real, gestión de mesas y reservas online. Reducimos errores en un 85% y mejoramos la experiencia de nuestros clientes notablemente.",
-        "project": "Hazuki Restaurant",
-        "result": "85% menos errores"
-      },
-      {
-        "name": "Yuki Nakamura",
-        "role": "Gerente",
-        "company": "Hazuki Sushi",
-        "text": "La plataforma de delivery que construyó para Hazuki Sushi integra pedidos online, seguimiento en tiempo real y sistema de puntos. Nuestros clientes están encantados con la facilidad de uso y nosotros con el aumento del 180% en pedidos online.",
-        "project": "Hazuki Sushi Delivery",
-        "result": "+180% pedidos online"
+        "text": "El motor transaccional modernizó nuestras operaciones. Procesamos 50K+ transacciones mensuales con una latencia mínima. El sistema es robusto, seguro y escalable, superando todas nuestras expectativas técnicas.",
+        "project": "Transactional POS Engine",
+        "result": "50K+ ops/mes"
       },
       {
         "name": "Eisten Mendoza",
@@ -510,35 +475,35 @@
     ]
   },
   "heroSimple": {
-    "availability": "✅ Disponible para nuevos proyectos",
+    "availability": "✅ Disponible para Desafíos Senior Backend",
     "greeting": "¡Hola! Soy",
-    "subtitle": "Senior Software Engineer",
-    "description": "Ingeniero de Sistemas peruano con 6+ años transformando ideas en soluciones tecnológicas exitosas. Especialista en desarrollo web, IA y automatización.",
-    "ctaPrimary": "Ver Proyectos",
-    "ctaSecondary": "Contactar",
+    "subtitle": "Senior Backend Engineer | Azure Solutions Architect",
+    "description": "Especialista en orquestación de sistemas distribuidos y arquitecturas de alto rendimiento sobre Azure, GCP y Digital Ocean. Experto en optimización de backend con Redis, gestión de procesos con PM2 y flujos CI/CD con GitHub y Vercel.",
+    "ctaPrimary": "Ver Trayectoria",
+    "ctaSecondary": "Conectar",
     "services": [
       {
-        "title": "Desarrollo Web",
-        "subtitle": "Páginas y aplicaciones web modernas"
+        "title": "Arquitectura Backend",
+        "subtitle": "Sistemas distribuidos y escalables"
       },
       {
-        "title": "Inteligencia Artificial",
-        "subtitle": "Automatización inteligente para tu negocio"
+        "title": "Soluciones Cloud",
+        "subtitle": "Orquestación avanzada en Azure"
       },
       {
-        "title": "Análisis de Datos",
-        "subtitle": "Insights que impulsan decisiones"
+        "title": "Liderazgo Técnico",
+        "subtitle": "Mentoring y mejores prácticas"
       },
       {
-        "title": "Consultoría Digital",
-        "subtitle": "Estrategia tecnológica personalizada"
+        "title": "Optimización",
+        "subtitle": "Performance y eficiencia de costos"
       }
     ]
   },
   "footer": {
-    "subtitle": "Full-Stack Developer & Tech Architect",
-    "description": "Especialista en desarrollo web moderno, arquitecturas escalables y tecnologías enterprise. Construyendo el futuro digital con código limpio y soluciones innovadoras.",
-    "availabilityBadge": "Disponible para proyectos enterprise",
+    "subtitle": "Senior Backend Engineer | Cloud Solutions Architect",
+    "description": "Especialista en arquitecturas backend de alto rendimiento, orquestación cloud en Azure y sistemas distribuidos. Construyendo infraestructuras escalables con Node.js y las mejores prácticas de ingeniería.",
+    "availabilityBadge": "Disponible para Oportunidades Senior",
     "quickLinks": {
       "title": "Enlaces Rápidos",
       "home": "Inicio",
@@ -547,21 +512,21 @@
       "docs": "Documentación"
     },
     "services": {
-      "title": "Servicios",
+      "title": "Dominios Técnicos",
       "items": [
-        "Desarrollo Full-Stack",
-        "Arquitectura de Software",
-        "Consultoría Tech",
-        "Mentoring & Training"
+        "Sistemas Distribuidos",
+        "Arquitectura de Nube",
+        "Liderazgo de Ingeniería",
+        "Node.js & Azure Expert"
       ]
     },
     "contact": {
-      "readyTitle": "¿Listo para colaborar?",
-      "readySubtitle": "Construyamos algo increíble juntos",
-      "contactButton": "Contactar",
-      "email": "Email",
-      "whatsapp": "WhatsApp",
-      "location": "Ubicación"
+      "readyTitle": "¿Buscas un Talento Senior?",
+      "readySubtitle": "Conversemos sobre cómo puedo aportar valor a tu equipo de ingeniería.",
+      "contactButton": "Iniciar Conversación",
+      "email": "Email Profesional",
+      "whatsapp": "Contacto Directo",
+      "location": "Disponibilidad"
     },
     "copyright": "Todos los derechos reservados.",
     "madeWith": "Hecho con",
@@ -587,8 +552,8 @@
     "viewProject": "Ver Proyecto",
     "startProject": "Iniciar Proyecto",
     "cta": {
-      "title": "¿Tienes un proyecto en mente?",
-      "description": "Transformemos tu visión en una realidad digital extraordinaria"
+      "title": "¿Interesado en mi Perfil Técnico?",
+      "description": "Conectemos para discutir oportunidades de colaboración en desafíos de ingeniería de alta escala."
     },
     "metrics": {
       "users": "Usuarios",
@@ -605,37 +570,41 @@
       "completion": "Completado"
     },
     "items": {
+      "0": {
+        "title": "Eagle Lang: Compilador en Rust",
+        "description": "Lenguaje de alto nivel para seguridad de memoria y ejecución determinista mediante WebAssembly y LLVM."
+      },
       "1": {
-        "title": "Kefyto E-commerce",
-        "description": "Plataforma completa de e-commerce para venta de kéfir natural con carrito dinámico e integración WhatsApp"
+        "title": "Digital Asset Delivery Architecture",
+        "description": "Orquestación de backend de alta disponibilidad para marketplace de activos digitales con integración de pagos resilientes."
       },
       "2": {
-        "title": "Hazuki Restaurant",
-        "description": "Sistema integral de gestión para restaurantes con reservas, menús digitales y administración por áreas"
+        "title": "Cloud-Native E-Commerce Engine",
+        "description": "Arquitectura modular con Flask y PostgreSQL, implementando sincronización de inventario en tiempo real y webhooks."
       },
       "3": {
-        "title": "Hazuki Sushi",
-        "description": "Plataforma especializada para sushi bar con menú interactivo y sistema de pedidos optimizado"
+        "title": "Transactional POS & Inventory Engine",
+        "description": "Sistema de misión crítica procesando 50K+ ops/mes, optimizado para baja latencia en entornos de alta demanda."
       },
       "4": {
-        "title": "Netmuz Social",
-        "description": "Red social especializada para músicos - LinkedIn musical con gestión de eventos y marketplace"
+        "title": "Hazuki POS Delivery Logic",
+        "description": "Motor de delivery distribuido con seguimiento en tiempo real y lógica de negocio para multi-sucursales."
       },
       "5": {
-        "title": "CompilandoCode",
-        "description": "Plataforma educativa con cursos de programación, blog técnico y recursos para desarrolladores"
+        "title": "Distributed Social Graph Engine",
+        "description": "Infraestructura social escalable con Express y PostgreSQL, implementando mensajería en tiempo real vía WebSockets."
       },
       "6": {
-        "title": "Sistema Registro QR",
-        "description": "Sistema de registro en tiempo real con códigos QR para control de asistencia en colegios"
+        "title": "SaaS EdTech Learning Core",
+        "description": "Plataforma educativa cloud-native para 500+ usuarios concurrentes con evaluación técnica automatizada."
       },
       "7": {
-        "title": "Escondida DesafioLab",
-        "description": "Plataforma educativa para Fundación Minera Escondida BHP con gestión de cursos y seguimiento estudiantil"
+        "title": "Real-Time Identity Orchestrator",
+        "description": "Backend de alto rendimiento en C#/.NET para validación de identidad en tiempo real mediante QR distribuidos."
       },
       "8": {
-        "title": "DRTC Huánuco",
-        "description": "Sistema web para registro y seguimiento de personal que postula a puestos de trabajo (Prácticas Preprofesionales)"
+        "title": "Enterprise Innovation SaaS (BHP Foundation)",
+        "description": "Plataforma robusta para la gestión de ciclos de innovación corporativa con auditoría técnica y seguimiento de KPIs."
       }
     },
     "tech": "Stack Tecnológico",
@@ -643,38 +612,38 @@
     "features": "Características",
     "client": "Cliente",
 
-    "kefytoTitle": "Kefyto - Tienda Online de Kéfir Natural",
-    "kefyto1": "• Plataforma e-commerce con React + Flask + PostgreSQL para venta de kéfir natural",
-    "kefyto2": "• Carrito dinámico, botón 'Comprar Ahora' e integración directa con WhatsApp",
-    "kefyto3": "• Branding kawaii personalizado con stickers propios y diseño único",
-    "kefytoMetrics": "E-commerce funcional • Integración WhatsApp • Branding personalizado",
-    "kefytoUrl": "https://www.kefytoabby.com/",
+    "kefytoTitle": "Kefyto - Cloud-Native E-Commerce Infrastructure",
+    "kefyto1": "• Arquitectura distribuida con React, Flask y PostgreSQL optimizada para alta disponibilidad",
+    "kefyto2": "• Sincronización de pedidos en tiempo real e integración resiliente con WhatsApp API",
+    "kefyto3": "• Motor de checkout optimizado con sistemas de notificación automatizados",
+    "kefytoMetrics": "Infraestructura escalable • Real-time Sync • Python + Flask Backend",
+    "kefytoUrl": "https://www.kefytotubulgarito.com/",
 
-    "hazukiTitle": "Hazuki Restaurant - Sistema de Gestión Integral",
-    "hazuki1": "• Sistema web completo para gestión de reservas, pedidos y atención por áreas",
-    "hazuki2": "• Arquitectura escalable con Python/Flask y despliegue en VPS usando Nginx y Gunicorn",
-    "hazuki3": "• Sistema completo con frontend en JavaScript/HTML/CSS, menú digital y gestión multicanal",
-    "hazukiMetrics": "Gestión completa • VPS deployment • Python + Flask + PostgreSQL",
-    "hazukiUrl": "https://www.hazukisushi.cl/",
+    "hazukiTitle": "Hazuki Enterprise - Transactional POS Engine",
+    "hazuki1": "• Sistema distribuido para procesamiento de alta demanda (50K+ transacciones/mes)",
+    "hazuki2": "• Arquitectura de grado empresarial con despliegue en infraestructuras VPS de alto rendimiento",
+    "hazuki3": "• Optimización de latencia en consultas y consistencia de datos en entornos multicanal",
+    "hazukiMetrics": "Baja Latencia • 99.9% Uptime • Arquitectura Robusta",
+    "hazukiUrl": "https://hazukirestaurant.com/",
 
-    "netmuzTitle": "Netmuz - Red Social para Músicos",
-    "netmuz1": "• Red social especializada para músicos y productores (LinkedIn musical)",
-    "netmuz2": "• Desarrollo fullstack con React, Express y PostgreSQL para conectar artistas",
-    "netmuz3": "• Gestión de eventos, convocatorias y marketplace musical para Latinoamérica",
-    "netmuzMetrics": "React + Express + PostgreSQL • Red social funcional • Mercado musical",
+    "netmuzTitle": "Netmuz Social Graph - Distributed Infrastructure",
+    "netmuz1": "• Motor de red social escalable diseñado para conectar artistas en Latinoamérica",
+    "netmuz2": "• Stack fullstack reactivo con React, Express y PostgreSQL para gestión de datos masivos",
+    "netmuz3": "• Implementación de WebSockets para comunicación en tiempo real y eventos distribuidos",
+    "netmuzMetrics": "Event-Driven • WebSockets • Escalamiento Horizontal",
     "netmuzUrl": "https://www.netmuz.com/",
 
-    "saasTitle": "SaaS Educativo - Plataforma de Formación",
-    "saas1": "• Sistema completo para formación técnica con clases en vivo y calendario académico",
-    "saas2": "• Rutas formativas personalizadas y sistema de certificación profesional",
-    "saas3": "• Arquitectura SaaS escalable con gestión de usuarios y contenido multimedia",
-    "saasMetrics": "SaaS educativo • Clases en vivo • Certificación digital",
+    "saasTitle": "EdTech SaaS Infrastructure - Scalable LMS Core",
+    "saas1": "• Orquestación de clases en tiempo real y sistema distribuido de calendario académico",
+    "saas2": "• Arquitectura de micro-servicios para gestión de rutas formativas y certificación",
+    "saas3": "• Infraestructura resiliente soportando 500+ usuarios concurrentes en producción",
+    "saasMetrics": "Cloud-Native SaaS • Alta Concurrencia • Microservicios",
 
-    "mineraTitle": "Sistema Minera Escondida - Gestión de Producción",
-    "minera1": "• Desarrollo completo en C# y .NET Core para gestión de órdenes de producción",
-    "minera2": "• Lógica empresarial segmentada y API REST para integración con sistemas existentes",
-    "minera3": "• Sistema robusto para una de las mineras más importantes de Chile",
-    "mineraMetrics": "C# .NET Core • API REST • Sistema empresarial robusto",
+    "mineraTitle": "Enterprise Innovation Engine - BHP Foundation Lab",
+    "minera1": "• Desarrollo de lógica empresarial compleja en C#/.NET Core para auditoría técnica",
+    "minera2": "• API REST de alta seguridad para integración con ecosistemas de innovación corporativa",
+    "minera3": "• Sistema de grado minero diseñado para robustez y seguimiento de KPIs críticos",
+    "mineraMetrics": "Enterprise Security • .NET Core Web API • Robusto",
 
     "coming": "Ver proyecto en vivo"
   },
@@ -704,70 +673,7 @@
     "spanish": "Español",
     "english": "English"
   },
-  "contactModal": {
-    "title": "Iniciemos tu Proyecto",
-    "subtitle": "Cuéntame sobre tu visión y hagámosla realidad",
-    "form": {
-      "name": {
-        "label": "Nombre completo",
-        "placeholder": "Tu nombre"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "tu@email.com"
-      },
-      "company": {
-        "label": "Empresa (opcional)",
-        "placeholder": "Nombre de tu empresa"
-      },
-      "subject": {
-        "label": "Tipo de proyecto",
-        "options": [
-          "Desarrollo Web Full-Stack",
-          "API & Backend Services",
-          "Arquitectura de Software",
-          "Consultoría Técnica",
-          "Mentoring & Training",
-          "Otro (especificar en mensaje)"
-        ]
-      },
-      "budget": {
-        "label": "Presupuesto estimado",
-        "placeholder": "Selecciona tu presupuesto",
-        "options": [
-          "Selecciona tu presupuesto",
-          "$5,000 - $15,000 USD",
-          "$15,000 - $30,000 USD",
-          "$30,000 - $50,000 USD",
-          "$50,000+ USD",
-          "Consultoría/Mentoring"
-        ]
-      },
-      "message": {
-        "label": "Mensaje",
-        "placeholder": "Describe tu proyecto, objetivos, timeline y cualquier detalle relevante..."
-      }
-    },
-    "buttons": {
-      "send": "Enviar Mensaje",
-      "sending": "Enviando...",
-      "close": "Cerrar"
-    },
-    "success": {
-      "title": "¡Mensaje Enviado!",
-      "message": "Gracias por contactarme. Te responderé en menos de 24 horas.",
-      "closeAutomatically": "Esta ventana se cerrará automáticamente"
-    },
-    "toast": {
-      "success": "¡Mensaje enviado con éxito! Te contactaré pronto.",
-      "error": "Error al enviar el mensaje. Inténtalo de nuevo."
-    },
-    "info": {
-      "responseTime": "⚡ Respuesta garantizada en 24h",
-      "consultation": "💬 Consulta inicial gratuita",
-      "nda": "🔒 Confidencialidad garantizada"
-    }
-  },
+
   "error": {
     "button": "Volver al inicio",
     "title": "Ups! No hay nada aquí..."
@@ -782,7 +688,7 @@
       "location": "Chile y Perú",
       "summary": {
         "title": "RESUMEN EJECUTIVO",
-        "content": "Ingeniero de Sistemas peruano con 6+ años de experiencia liderando innovación técnica en entornos empresariales. Historial comprobado arquitecturando soluciones escalables que procesan millones de transacciones mientras reducen costos operativos en 60%. Experto en implementación IA/ML, arquitectura de microservicios y liderazgo técnico. Exitosamente mentoré 200+ desarrolladores con 95% tasa de colocación en empresas tecnológicas de primer nivel."
+        "content": "Ingeniero de Sistemas con 6+ años de experiencia técnica arquitecturando soluciones backend escalables y resilientes sobre la nube de Azure. Experto en el ecosistema Node.js y arquitecturas orientadas a eventos que procesan volúmenes críticos de datos. Trayectoria comprobada liderando la transformación de infraestructuras complejas, optimizando el rendimiento en un 70% y reduciendo costos operativos mediante orquestación serverless. Mentor técnico con enfoque en la excelencia en ingeniería y calidad de código."
       },
       "education": {
         "title": "EDUCACIÓN",
@@ -1011,33 +917,52 @@
     "errors": {
       "sendFailed": "Error al enviar el mensaje. Inténtalo de nuevo.",
       "notConfigured": "El servicio de email no está configurado. Por favor contacta al administrador."
-    },
-    "labels": {
-      "fullName": "Nombre completo *",
-      "email": "Email *",
-      "phone": "Teléfono (opcional)",
-      "subject": "Asunto *",
-      "message": "Mensaje *"
-    },
-    "placeholders": {
-      "fullName": "Tu nombre completo",
-      "email": "tu.email@ejemplo.com",
-      "phone": "+51 999 999 999",
-      "subject": "¿En qué puedo ayudarte?",
-      "message": "Cuéntame sobre tu proyecto o consulta..."
-    },
-    "helpers": {
-      "minCharacters": "Mínimo 10 caracteres"
+    }
+  },
+  "contactModal": {
+    "title": "Conectar para Oportunidades",
+    "subtitle": "Completa el formulario para discutir roles de ingeniería o colaboraciones técnicas.",
+    "form": {
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre completo"
+      },
+      "email": {
+        "label": "Email profesional",
+        "placeholder": "tu.email@empresa.com"
+      },
+      "company": {
+        "label": "Empresa / Organización",
+        "placeholder": "Nombre de tu empresa"
+      },
+      "subject": {
+        "label": "Tipo de Colaboración / Rol",
+        "placeholder": "Selecciona una opción",
+        "options": [
+          "Senior Backend Engineer (Full-time)",
+          "Azure / Cloud Architect Role",
+          "Consultoría Técnica Especializada",
+          "Entrevista Técnica / Introducción",
+          "Otros Desafíos Profesionales"
+        ]
+      },
+      "message": {
+        "label": "Mensaje / Detalles",
+        "placeholder": "Cuéntame sobre la oportunidad o desafío en el que te gustaría que colaboremos..."
+      }
     },
     "buttons": {
-      "sending": "Enviando mensaje...",
-      "limitReached": "Límite alcanzado",
-      "send": "Enviar Mensaje"
+      "send": "Enviar Mensaje",
+      "sending": "Enviando..."
     },
-    "privacy": "Tus datos están protegidos. No compartimos información con terceros.",
-    "formStatus": "Estado del formulario",
-    "title": "Envíame un Mensaje",
-    "subtitle": "Completa el formulario y te responderé lo antes posible"
+    "success": {
+      "title": "¡Mensaje Recibido!",
+      "message": "Gracias por contactar. Revisaré la propuesta y te responderé a la brevedad."
+    },
+    "toast": {
+      "success": "Mensaje enviado exitosamente",
+      "error": "Error al enviar el mensaje. Por favor intenta vía email directo."
+    }
   },
   "emailLimit": {
     "canSend": "Puedes enviar hasta {{maxEmails}} mensajes cada 24 horas",
@@ -1076,8 +1001,8 @@
     }
   },
   "servicesSimple": {
-    "title": "¿Cómo puedo ayudar a tu negocio?",
-    "subtitle": "Ofrezco soluciones digitales completas para impulsar el crecimiento de tu empresa.",
+    "title": "Áreas de Dominio Técnico",
+    "subtitle": "Experiencia especializada en la construcción de infraestructuras digitales para la próxima generación de productos.",
     "services": [
       {
         "title": "Desarrollo Web",
@@ -1129,10 +1054,10 @@
     "benefitsTitle": "Lo que obtienes:",
     "moreInfo": "Más información",
     "cta": {
-      "title": "¿Tienes un proyecto en mente?",
-      "description": "Conversemos sobre cómo puedo ayudarte a hacer realidad tu idea digital.",
-      "talkButton": "💬 Hablemos de tu proyecto",
-      "examplesButton": "👁️ Ver ejemplos"
+      "title": "¿Evaluando Talento Senior?",
+      "description": "Conversemos sobre cómo mi experiencia en sistemas distribuidos y Azure puede fortalecer tu equipo.",
+      "talkButton": "💬 Conectar Ahora",
+      "examplesButton": "👁️ Ver Proyectos"
     }
   },
   "aboutPage": {

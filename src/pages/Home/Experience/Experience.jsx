@@ -10,32 +10,39 @@ const Experience = () => {
 
   const experiences = [
     {
-      id: 'hazuki',
-      icon: 'fas fa-server',
-      color: 'from-blue-500 to-cyan-600',
-      bgColor: 'from-blue-900/20 to-cyan-900/20',
-      borderColor: 'border-blue-500/30'
+      id: 'codigoFuturo',
+      icon: 'fas fa-hard-hat',
+      color: 'from-orange-500 to-red-600',
+      bgColor: 'from-orange-900/20 to-red-900/20',
+      borderColor: 'border-orange-500/30'
     },
     {
-      id: 'desafiolatam',
-      icon: 'fas fa-users',
-      color: 'from-purple-500 to-pink-600',
-      bgColor: 'from-purple-900/20 to-pink-900/20',
-      borderColor: 'border-purple-500/30'
+      id: 'digitalFondos',
+      icon: 'fas fa-university',
+      color: 'from-indigo-500 to-blue-600',
+      bgColor: 'from-indigo-900/20 to-blue-900/20',
+      borderColor: 'border-indigo-500/30'
     },
     {
       id: 'compilando',
-      icon: 'fas fa-rocket',
+      icon: 'fas fa-code',
       color: 'from-green-500 to-emerald-600',
       bgColor: 'from-green-900/20 to-emerald-900/20',
       borderColor: 'border-green-500/30'
     },
     {
-      id: 'codigoFuturo',
-      icon: 'fas fa-chart-line',
-      color: 'from-orange-500 to-red-600',
-      bgColor: 'from-orange-900/20 to-red-900/20',
-      borderColor: 'border-orange-500/30'
+      id: 'desafiolatam',
+      icon: 'fas fa-chalkboard-teacher',
+      color: 'from-purple-500 to-pink-600',
+      bgColor: 'from-purple-900/20 to-pink-900/20',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      id: 'hazuki',
+      icon: 'fas fa-utensils',
+      color: 'from-blue-500 to-cyan-600',
+      bgColor: 'from-blue-900/20 to-cyan-900/20',
+      borderColor: 'border-blue-500/30'
     }
   ]
 
@@ -78,6 +85,7 @@ const Experience = () => {
               {exp.id === 'desafiolatam' && 'Desafío Latam'}
               {exp.id === 'compilando' && 'CompilandoCode'}
               {exp.id === 'codigoFuturo' && 'Código Futuro'}
+              {exp.id === 'digitalFondos' && 'Digital Fondos'}
               <br />
               <span className={`text-transparent bg-clip-text bg-gradient-to-r ${exp.color} text-sm xs:text-base`}>
                 {t(`experience.${exp.id}`)}
@@ -88,7 +96,7 @@ const Experience = () => {
             <div className="mb-3 xs:mb-4">
               <p className="text-xs text-zinc-500 mb-1 xs:mb-2">Stack:</p>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                {t(`experience.tech${exp.id === 'hazuki' ? 'Hazuki' : exp.id === 'desafiolatam' ? 'DesafioLatam' : exp.id === 'compilando' ? 'Compilando' : 'CodigoFuturo'}`)}
+                {t(`experience.tech${exp.id.charAt(0).toUpperCase() + exp.id.slice(1)}`)}
               </p>
             </div>
 

@@ -19,18 +19,12 @@ const ContactModal = ({ isOpen, onClose }) => {
     email: '',
     company: '',
     subject: '',
-    message: '',
-    budget: ''
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  const budgetOptions = t('contactModal.form.budget.options', { returnObjects: true }).map((label, index) => {
-    const values = ['', '5k-15k', '15k-30k', '30k-50k', '50k+', 'consulting']
-    return { value: values[index], label }
-  })
-
-  const projectTypes = t('contactModal.form.subject.options', { returnObjects: true })
+  const connectionTypes = t('contactModal.form.subject.options', { returnObjects: true })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -58,8 +52,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           email: '',
           company: '',
           subject: '',
-          message: '',
-          budget: ''
+          message: ''
         })
         setIsSuccess(false)
         onClose()
@@ -205,39 +198,20 @@ const ContactModal = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Company and Budget Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-6">
-              <div>
-                <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                  <FaBuilding className="inline mr-2 text-purple-400" />
-                  {t('contactModal.form.company.label')}
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300"
-                  placeholder={t('contactModal.form.company.placeholder')}
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
-                  {t('contactModal.form.budget.label')}
-                </label>
-                <select
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500/50 transition-all duration-300 cursor-pointer"
-                >
-                  {budgetOptions.map(option => (
-                    <option key={option.value} value={option.value} className="bg-slate-800">
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            {/* Company Row */}
+            <div>
+              <label className="block text-sm font-bold text-white mb-2 xs:mb-3">
+                <FaBuilding className="inline mr-2 text-purple-400" />
+                {t('contactModal.form.company.label')}
+              </label>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500/50 transition-all duration-300"
+                placeholder={t('contactModal.form.company.placeholder')}
+              />
             </div>
 
             {/* Project Type */}
@@ -252,8 +226,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                 required
                 className="mobile-btn w-full px-4 xs:px-6 py-3 xs:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl xs:rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 cursor-pointer"
               >
-                <option value="" className="bg-slate-800">{t('contactModal.form.subject.placeholder', 'Selecciona el tipo de proyecto')}</option>
-                {projectTypes.map(type => (
+                <option value="" className="bg-slate-800">{t('contactModal.form.subject.placeholder', 'Select an option')}</option>
+                {connectionTypes.map(type => (
                   <option key={type} value={type} className="bg-slate-800">
                     {type}
                   </option>

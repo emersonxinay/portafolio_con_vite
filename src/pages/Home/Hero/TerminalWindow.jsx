@@ -3,28 +3,27 @@ import { motion } from 'framer-motion';
 
 const TerminalWindow = () => {
     const [lines, setLines] = useState([
-        { type: 'command', text: 'cat demo.ag' },
+        { type: 'command', text: 'npm run health-check' },
     ]);
 
     const containerRef = useRef(null);
 
     useEffect(() => {
         const sequence = [
-            { text: '# Tu Lógica, Tu Poder v2.6.8', delay: 500, type: 'comment' },
-            { text: '# Por Emerson Espinoza', delay: 1000, type: 'comment' },
+            { text: '# Initializing Infrastructure Multi-Cloud Monitor...', delay: 500, type: 'comment' },
+            { text: '# Cluster: production-main | Node: v20.x', delay: 1000, type: 'comment' },
             { text: '', delay: 1200, type: 'code' },
-            { text: 'funcion evaluar(puntos) {', delay: 1500, type: 'code' },
-            { text: '  si puntos > 100 {', delay: 2000, type: 'code' },
-            { text: '    imprimir("Nivel Experto")', delay: 2500, type: 'code' },
-            { text: '  } sino {', delay: 3000, type: 'code' },
-            { text: '    imprimir("Sigue practicando")', delay: 3500, type: 'code' },
-            { text: '  }', delay: 4000, type: 'code' },
-            { text: '}', delay: 4500, type: 'code' },
-            { text: '', delay: 4800, type: 'code' },
-            { text: 'evaluar(150)', delay: 5000, type: 'code' },
-            { text: 'aguila ejecutar demo.ag', delay: 6000, type: 'command' },
-            { text: '> Nivel Experto', delay: 7000, type: 'success' },
-            { text: 'Programa finalizado con código 0', delay: 8000, type: 'info' }
+            { text: 'pm2 list', delay: 1500, type: 'command' },
+            { text: '> 🟢 bhp-traceability: [online] [cpu: 2%] [mem: 45MB]', delay: 2200, type: 'success' },
+            { text: '> 🟢 digital-fondos-core: [online] [cpu: 5%] [mem: 120MB]', delay: 2800, type: 'success' },
+            { text: '> 🟢 compilandocode-lms: [online] [cpu: 3%] [mem: 88MB]', delay: 3200, type: 'success' },
+            { text: 'redis-cli ping', delay: 4000, type: 'command' },
+            { text: '> PONG (Connected: redis://127.0.0.1:6379)', delay: 4600, type: 'success' },
+            { text: 'infra-cloud --status', delay: 5200, type: 'command' },
+            { text: '> Azure (BHP): Functions [Running]', delay: 6000, type: 'info' },
+            { text: '> GCP (LMS): Cloud Run [Healthy]', delay: 6800, type: 'info' },
+            { text: '> DigitalOcean: Droplets [Active]', delay: 7600, type: 'info' },
+            { text: '> Vercel: CI/CD Pipeline [Success]', delay: 8400, type: 'info' }
         ];
 
         let timeouts = [];
@@ -33,8 +32,8 @@ const TerminalWindow = () => {
             const timeout = setTimeout(() => {
                 setLines(prev => {
                     const newLines = [...prev, { type, text }];
-                    // Keep only last 8 lines to prevent overflow if running long
-                    return newLines.slice(-8);
+                    // Keep only last 10 lines for better visibility
+                    return newLines.slice(-10);
                 });
             }, delay);
             timeouts.push(timeout);
@@ -65,8 +64,8 @@ const TerminalWindow = () => {
                     <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 </div>
                 <div className="text-slate-400 text-xs font-medium flex items-center gap-1.5">
-                    <i className="fas fa-code text-blue-400"></i>
-                    compiler.ag
+                    <i className="fas fa-terminal text-blue-400"></i>
+                    azure-cli
                 </div>
                 <div className="w-10" /> {/* Spacer for centering */}
             </div>
@@ -100,8 +99,8 @@ const TerminalWindow = () => {
 
             {/* Footer Status */}
             <div className="bg-slate-900/50 px-3 py-1 text-[10px] text-slate-500 flex justify-between border-t border-slate-800/50 uppercase tracking-wider">
-                <span>Águila v1.0.0</span>
-                <span className="text-emerald-500">● Online</span>
+                <span>Production Environment</span>
+                <span className="text-emerald-500">● Systems Active</span>
             </div>
         </motion.div>
     );

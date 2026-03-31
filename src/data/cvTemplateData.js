@@ -2,61 +2,91 @@
 export const defaultCVData = {
   personalInfo: {
     fullName: "Emerson Espinoza Aguirre",
-    title: "Senior Software Engineer & Tech Lead",
+    title: "Senior Backend Engineer | Cloud Solutions Architect",
     email: "emerson@emersonespinoza.com",
     phone: "+51 974361728",
-    location: "Santiago, Chile",
+    location: "Remoto / LATAM",
     linkedin: "linkedin.com/in/emerson-espinoza-aguirre",
     github: "github.com/emersonxinay",
     website: "emersonespinoza.com"
   },
 
-  summary: "Ingeniero de Sistemas con 6+ años de experiencia liderando innovación técnica en entornos empresariales. Historial comprobado arquitecturando soluciones escalables que procesan millones de transacciones. Experto en IA/ML, arquitectura de microservicios y liderazgo técnico.",
+  summary: "Ingeniero de Software Backend con 6+ años de trayectoria construyendo infraestructuras críticas y sistemas distribuidos de alta disponibilidad. Especialista en orquestación cloud (Azure, GCP), arquitecturas orientadas a eventos y optimización de servicios de misión crítica en Node.js y TypeScript. Mentor de más de 800 desarrolladores y líder técnico enfocado en excelencia de ingeniería y entrega continua.",
 
   experience: [
     {
       id: 1,
-      title: "Founder & Chief Technology Officer",
-      company: "CompilandoCode",
-      location: "Santiago, Chile",
-      period: "Feb 2022 - Presente",
+      title: "Senior Backend Developer",
+      company: "Codigo Futuro - BHP",
+      location: "Antofagasta, Chile",
+      period: "2022 – 2025",
       achievements: [
-        "Fundé empresa tecnología educativa sirviendo 500+ estudiantes en Latinoamérica",
-        "Desarrollé sistema LMS con personalización potenciada por IA",
-        "Construí arquitectura plataforma escalable soportando 1000+ usuarios concurrentes",
-        "Logré 40% mejora retención estudiantil a través optimización curriculum"
+        "Lideré el diseño de sistemas backend enterprise para trazabilidad operativa, reduciendo tiempos operativos en un 60%",
+        "Arquitecturé servicios serverless en Azure Functions y AWS Lambda con Node.js/TypeScript orientados a eventos",
+        "Implementé y optimicé pipelines de CI/CD en Azure DevOps reduciendo significativamente los riesgos en releases",
+        "Fortalecí la observabilidad mediante logging estructurado y alertas críticas en Azure Monitor y CloudWatch"
       ],
-      technologies: ["React", "Python", "FastAPI", "PostgreSQL", "AWS", "Docker", "Machine Learning"],
+      technologies: ["Node.js", "Azure Functions", "Azure DevOps", "Serverless", "TypeScript", "Observability"],
       enabled: true
     },
     {
       id: 2,
-      title: "Lead Technical Instructor",
-      company: "Desafío Latam",
+      title: "Senior Backend Developer",
+      company: "Digital Fondos (Fintech)",
       location: "Santiago, Chile",
-      period: "Nov 2021 - Presente",
+      period: "2021 – 2022",
       achievements: [
-        "Lideré entrenamiento técnico para 200+ desarrolladores con 95% tasa colocación laboral",
-        "Diseñé curriculum enterprise adoptado por 5+ instituciones educativas",
-        "Mentoré equipos desarrollando 50+ aplicaciones producción",
-        "Establecí partnerships industria resultando en pipeline directo contratación"
+        "Lideré el desarrollo del core financiero de fondos mutuos asegurando integridad transaccional absoluta",
+        "Diseñé servicios idempotentes en entornos distribuidos para prevenir doble procesamiento de transacciones",
+        "Construí APIs REST resilientes optimizadas para operar bajo altas cargas concurrentes con manejo de errores robusto",
+        "Gestioné la persistencia en Azure SQL, optimizando consultas y estructuras para mejorar la escalabilidad del core"
       ],
-      technologies: ["Python", "Ruby on Rails", "JavaScript", "PostgreSQL", "AWS", "Teaching"],
+      technologies: ["Node.js", "Azure SQL", "Fintech API", "Idempotency", "TypeScript", "Transactional Systems"],
       enabled: true
     },
     {
       id: 3,
+      title: "Founder & CTO",
+      company: "CompilandoCode (EdTech)",
+      location: "Chile / Peru",
+      period: "Feb 2022 – Presente",
+      achievements: [
+        "Diseñé un LMS escalable desplegado en Google Cloud Run con enfoque en alta disponibilidad y experiencia de usuario",
+        "Integré Google Identity Platform (OAuth2) y Google Maps API para geolocalización y acceso seguro",
+        "Administré la infraestructura cloud completa: configuración de proyectos, control de cuotas y monitoreo en producción",
+        "Creé Águila Lang, un lenguaje de programación con intérprete propio publicado y mantenido en npm"
+      ],
+      technologies: ["Node.js", "Google Cloud Run", "OAuth2", "Identity Platform", "Maps API", "Systems Design"],
+      enabled: true
+    },
+    {
+      id: 4,
+      title: "Lead Technical Instructor",
+      company: "Desafio Latam",
+      location: "Santiago, Chile",
+      period: "Nov 2021 – 2025",
+      achievements: [
+        "Lideré la formación técnica de 800+ desarrolladores en arquitecturas backend, testing y mejores prácticas",
+        "Guié la revisión de proyectos reales enfocados en diseño de APIs resilientes, seguridad y despliegue continuo",
+        "Promoví estándares de calidad de ingeniería y pensamiento crítico en equipos multidisciplinarios",
+        "Desarrollé currículos técnicos avanzados alineados con las demandas de la industria tecnológica"
+      ],
+      technologies: ["Backend Architecture", "Technical Leadership", "Testing", "Clean Code", "Mentoring"],
+      enabled: true
+    },
+    {
+      id: 5,
       title: "Senior Software Engineer & Tech Lead",
       company: "Hazuki Restaurant Systems",
-      location: "Santiago, Chile",
-      period: "Feb 2018 - 2021",
+      location: "Peru",
+      period: "2018 – 2020",
       achievements: [
-        "Lideré desarrollo de sistema enterprise procesando 50K+ transacciones/mes con 99.9% uptime",
-        "Implementé arquitectura microservicios reduciendo tiempo respuesta 70%",
-        "Optimicé infraestructura cloud resultando en $15K reducción costo anual",
-        "Mentoré desarrolladores junior y establecí mejores prácticas code review"
+        "Lideré sistema enterprise procesando 50.000+ transacciones mensuales bajo arquitectura de microservicios",
+        "Optimicé rendimiento y disponibilidad mediante refactorización del core y ajuste de índices en bases de datos",
+        "Integré múltiples servicios de terceros manteniendo la consistencia de datos y estabilidad del sistema",
+        "Coordiné equipos técnicos para la entrega de features críticas bajo presión de negocio"
       ],
-      technologies: ["Python", "Flask", "PostgreSQL", "JavaScript", "Docker", "Nginx"],
+      technologies: ["Node.js", "C#", "Python", "MySQL", "Scalability", "Microservices"],
       enabled: true
     }
   ],
@@ -64,34 +94,34 @@ export const defaultCVData = {
   projects: [
     {
       id: 1,
-      title: "Kefyto E-commerce",
-      description: "Plataforma completa de e-commerce con carrito dinámico, integración WhatsApp y gestión de inventario en tiempo real",
-      year: "2024",
-      technologies: ["React", "Flask", "PostgreSQL", "WhatsApp API", "Stripe"],
+      title: "LMS CompilandoCode Architecture",
+      description: "Plataforma educativa cloud-native con autenticación OAuth2 y escalado automático",
+      year: "2022-Presente",
+      technologies: ["Node.js", "Google Cloud Run", "Identity Platform", "PostgreSQL"],
       enabled: true
     },
     {
       id: 2,
-      title: "Hazuki Restaurant - Sistema de Gestión Integral",
-      description: "Sistema enterprise para manejo de pedidos, inventario, reservas y reportes procesando 50K+ transacciones/mes",
-      year: "2019-2021",
-      technologies: ["Python", "Flask", "PostgreSQL", "JavaScript", "Docker", "Nginx"],
+      title: "BHP Traceability Engine",
+      description: "Sistema enterprise serverless para trazabilidad operativa con QR y despliegue automatizado",
+      year: "2022-2025",
+      technologies: ["Azure Functions", "Azure DevOps", "TypeScript", "Azure Monitor"],
       enabled: true
     },
     {
       id: 3,
-      title: "Netmuz Social - Red Social para Músicos",
-      description: "Plataforma social especializada con gestión de eventos, marketplace y networking profesional",
-      year: "2023",
-      technologies: ["React", "Express", "Node.js", "PostgreSQL", "WebSockets"],
+      title: "Digital Fondos Core",
+      description: "Motor transaccional financiero con patrones de idempotencia y alta concurrencia",
+      year: "2021-2022",
+      technologies: ["Node.js", "Azure SQL", "Transactional Logic", "Resilience"],
       enabled: true
     },
     {
       id: 4,
-      title: "CompilandoCode - Plataforma Educativa Tech",
-      description: "LMS con 500+ estudiantes activos, cursos de programación y sistema de evaluación automática",
-      year: "2022-Presente",
-      technologies: ["React", "Python", "Flask", "PostgreSQL", "Docker", "ML"],
+      title: "Aguila Programming Language",
+      description: "Diseño e implementación de intérprete propio enfocado en educación técnica",
+      year: "2022",
+      technologies: ["Interpreter Design", "npm", "System Architecture", "Node.js"],
       enabled: true
     }
   ],
@@ -103,64 +133,50 @@ export const defaultCVData = {
       institution: "Universidad Nacional Hermilio Valdizán",
       location: "Huánuco, Perú",
       period: "2013-2018",
-      details: "Título reconocido por SUNEDU",
-      enabled: true
-    },
-    {
-      id: 2,
-      degree: "Full Stack Web Development",
-      institution: "Desafío Latam",
-      location: "Santiago, Chile",
-      period: "2019-2020",
-      details: "Especialización en Ruby on Rails y React",
+      details: "Egresado. Título reconocido por SUNEDU",
       enabled: true
     }
   ],
 
   skills: {
-    programming: ["Python", "JavaScript", "TypeScript", "Ruby", "C#", "SQL"],
-    frameworks: ["React", "Next.js", "Flask", "FastAPI", "Django", "Ruby on Rails"],
-    cloud: ["AWS", "DigitalOcean", "Docker", "Kubernetes", "Nginx", "Git", "CI/CD"],
-    databases: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
-    other: ["Machine Learning", "Data Science", "Software Architecture", "Technical Leadership"]
+    principal: ["Node.js", "TypeScript", "JavaScript ES2022+", "Software Architecture"],
+    frameworks: ["NestJS", "Express.js", "Fastify", "C#/.NET", "Python/FastAPI"],
+    azure: ["Functions", "App Service", "DevOps", "Service Bus", "Azure SQL", "Cosmos DB", "Monitor"],
+    googleCloud: ["Cloud Run", "Maps Platform", "Identity Platform", "Cloud Build", "Cloud Console"],
+    aws: ["Lambda", "S3", "RDS", "CloudWatch", "IAM"],
+    databases: ["PostgreSQL", "Azure SQL", "Redis", "Cosmos DB", "DynamoDB", "MongoDB"],
+    devops: ["Docker", "GitHub Actions", "Azure Pipelines", "Nginx", "CI/CD", "DigitalOcean"]
   },
 
   certifications: [
     {
       id: 1,
-      title: "Full Stack Web Development",
-      organization: "Desafío Latam",
-      year: "2020",
+      title: "Azure Solutions Architect Expert (Training)",
+      organization: "Microsoft",
+      year: "2024",
       enabled: true
     },
     {
       id: 2,
-      title: "Python for Data Science & AI",
-      organization: "Platzi",
-      year: "2022",
-      enabled: true
-    },
-    {
-      id: 3,
-      title: "Docker & Kubernetes",
-      organization: "Udemy",
-      year: "2023",
+      title: "Full Stack Web Development",
+      organization: "Desafio Latam",
+      year: "2021",
       enabled: true
     }
   ],
 
   languages: [
     { name: "Español", level: "Nativo" },
-    { name: "Inglés", level: "Intermedio (B2)" }
+    { name: "Inglés", level: "Profesional / Técnico" }
   ],
 
   metrics: {
     yearsExperience: "6+",
     successfulProjects: "50+",
-    developersMentored: "200+",
-    performanceImprovement: "70%",
-    costReduction: "$2M+",
-    uptime: "99.9%"
+    developersMentored: "800+",
+    performanceImprovement: "60% Tiempos Op",
+    costReduction: "40%",
+    uptime: "99.9% Production"
   }
 };
 
@@ -188,19 +204,19 @@ export const cvTemplates = {
 
 // Presets por tipo de puesto
 export const jobPresets = {
-  fullstack: {
-    name: "Full Stack Developer",
-    focusSkills: ["React", "Python", "FastAPI", "PostgreSQL", "Docker"],
-    enabledSections: {
-      projects: [1, 2, 4], // Kefyto, Hazuki, CompilandoCode
-      experience: [1, 3]    // CTO, Hazuki
-    }
-  },
-  backend: {
-    name: "Backend Engineer",
-    focusSkills: ["Python", "FastAPI", "PostgreSQL", "Docker", "Microservices"],
+  senior_backend: {
+    name: "Senior Backend Engineer",
+    focusSkills: ["Node.js", "Azure", "PostgreSQL", "Docker", "Microservices", "System Design"],
     enabledSections: {
       projects: [2, 3, 4],
+      experience: [1, 3]
+    }
+  },
+  cloud_architect: {
+    name: "Cloud Solutions Architect",
+    focusSkills: ["Azure", "Cloud Architecture", "Docker", "AKS", "CI/CD", "Security"],
+    enabledSections: {
+      projects: [1, 2, 4],
       experience: [1, 3]
     }
   },

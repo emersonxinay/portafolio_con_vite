@@ -110,11 +110,7 @@ const Testimonials = () => {
                     </div>
 
                     <div className="text-right">
-                      <div className="flex text-yellow-400 mb-2">
-                        {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
-                          <span key={i}></span>
-                        ))}
-                      </div>
+                      <div className="text-xs xs:text-sm text-blue-400 font-mono mb-1">{t('portfolio.metrics.impact', 'Engineering Impact')}</div>
                       <div className="text-xs xs:text-sm text-gray-400">{testimonials[activeTestimonial].project}</div>
                       <div className="text-sm xs:text-base sm:text-lg font-bold text-green-400">{testimonials[activeTestimonial].result}</div>
                     </div>

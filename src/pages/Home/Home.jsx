@@ -20,25 +20,24 @@ const Home = () => {
       "@type": "Person",
       "name": "Emerson Espinoza Aguirre",
       "alternateName": "Emerson Espinoza",
-      "jobTitle": "Ingeniero de Sistemas & Fullstack Developer",
+      "jobTitle": "Senior Backend Engineer | Cloud Solutions Architect",
       "description": t('seo.home.description'),
       "url": "https://emersonespinoza.com",
       "image": "https://emersonespinoza.com/assets/emerson-espinoza-5579c795.jpeg",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Santiago",
-        "addressRegion": "Región Metropolitana",
+        "addressLocality": "Remote",
         "addressCountry": "CL"
       },
       "nationality": "Peruvian",
       "hasOccupation": {
         "@type": "Occupation",
-        "name": "Senior Software Engineer",
+        "name": "Senior Backend Engineer",
         "occupationLocation": {
           "@type": "City",
-          "name": "Santiago, Chile"
+          "name": "Remote / LATAM"
         },
-        "skills": "Python, React, Flask, Ruby on Rails, PostgreSQL, JavaScript, HTML, CSS, Git, GitHub, C# .NET, Docker, Liderazgo de Proyectos, Educación Tecnológica"
+        "skills": "Node.js, Azure, TypeScript, Microservices, PostgreSQL, Docker, Kubernetes, CI/CD, GitHub Actions, Backend Architecture"
       },
       "award": t('seo.home.achievements', { returnObjects: true })
     }
@@ -48,11 +47,11 @@ const Home = () => {
     <>
       <SEOHead
         title={i18n.language === 'ES'
-          ? "Emerson Espinoza - Senior Software Engineer | Tech Lead | Consultor IA & ML"
-          : "Emerson Espinoza - Senior Software Engineer | Tech Lead | AI & ML Consultant"
+          ? "Emerson Espinoza - Senior Backend Engineer | Azure Solutions Architect"
+          : "Emerson Espinoza - Senior Backend Engineer | Azure Solutions Architect"
         }
         description={t('seo.home.twitterDescription')}
-        keywords="Emerson Espinoza, Senior Software Engineer Santiago Chile, Tech Lead CTO, Python Developer Chile, React Developer, Machine Learning Engineer, AI Specialist, Ingeniero Sistemas Chile, Consultor IA ML, Technical Leadership, Software Architecture, Startup CTO, EdTech Founder, Full Stack Developer Santiago"
+        keywords="Emerson Espinoza, Senior Backend Engineer, Azure Solutions Architect, Node.js Expert, Backend Developer, Cloud Engineer, System Design, Microservices, TypeScript, PostgreSQL, Docker, Kubernetes, Remote Backend Engineer, LATAM Tech, Software Architecture"
         url="https://emersonespinoza.com"
         canonical="https://emersonespinoza.com"
         structuredData={homeStructuredData}

@@ -568,7 +568,7 @@
     "availability": "✅ Disponible para Desafíos Senior Backend",
     "greeting": "¡Hola! Soy",
     "subtitle": "Senior Backend Engineer | Azure Solutions Architect",
-    "description": "Especialista en orquestación de sistemas distribuidos y arquitecturas de alto rendimiento sobre Azure, GCP y Digital Ocean. Experto en optimización de backend con Redis, gestión de procesos con PM2 y flujos CI/CD con GitHub y Vercel.",
+    "description": "Especialista en orquestación de sistemas distribuidos y arquitecturas de alto rendimiento (Azure, Google Cloud, Digital Ocean). Experto en optimización de backend con Redis, diseño de servicios resilientes y pipelines industriales de CI/CD orientados a la escalabilidad elástica y observabilidad.",
     "ctaPrimary": "Ver Trayectoria",
     "ctaSecondary": "Conectar",
     "services": [

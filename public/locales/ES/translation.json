@@ -114,6 +114,96 @@
     "hazuki3": "• Coordiné la integración de múltiples servicios de terceros manteniendo estabilidad y consistencia de datos.",
     "hazukiMetrics": "50K+ Transacciones/Mes"
   },
+  "professionalImpact": {
+    "title": "Impacto Profesional",
+    "subtitle": "Más que código: <1>liderazgo técnico, innovación empresarial y crecimiento de equipos</1> que generan resultados medibles.",
+    "areas": {
+      "leadership": {
+        "title": "Liderazgo Técnico & Mentoría",
+        "highlights": {
+          "leadership": {
+            "title": "Team Leadership",
+            "desc": "Lidero equipos de desarrollo multidisciplinarios, mejorando la productividad del equipo en un 40% mediante metodologías ágiles y pair programming.",
+            "impact": "+40% productividad"
+          },
+          "mentoring": {
+            "title": "Technical Mentoring",
+            "desc": "Mentoría avanzada a desarrolladores sobre arquitectura de software, patrones de diseño y mejores prácticas en entornos cloud.",
+            "impact": "800+ desarrolladores"
+          },
+          "quality": {
+            "title": "Code Reviews & Quality",
+            "desc": "Implemento procesos de code review rigurosos que han reducido bugs en producción en un 85% y mejorado la calidad del código.",
+            "impact": "-85% bugs"
+          }
+        }
+      },
+      "innovation": {
+        "title": "Arquitectura & Soluciones de IA",
+        "highlights": {
+          "audio": {
+            "title": "Generative Audio & MIDI",
+            "desc": "Dominio de IA para la separación de capas de audio (stems), procesamiento de formatos MIDI y generación automatizada de composiciones musicales en producción.",
+            "impact": "Audio Mastering AI"
+          },
+          "chatbot": {
+            "title": "Conversational Sales Agents",
+            "desc": "Diseño y despliegue de chatbots inteligentes con LLMs para la automatización de ventas y soporte al cliente, incrementando la conversión en e-commerce.",
+            "impact": "Sales Automation"
+          },
+          "solutions": {
+            "title": "Intelligent Problem Solving",
+            "desc": "Resolución de problemas críticos de negocio mediante modelos predictivos y automatización de procesos complejos para sistemas industriales.",
+            "impact": "70% automatización"
+          }
+        }
+      },
+      "impact": {
+        "title": "Impacto Empresarial & ROI",
+        "highlights": {
+          "cost": {
+            "title": "Cost Reduction",
+            "desc": "Reduzco costos de infraestructura mediante optimización de recursos cloud y implementación de prácticas DevOps eficientes.",
+            "impact": "-45% costos"
+          },
+          "time": {
+            "title": "Time to Market",
+            "desc": "Acelero el time-to-market de nuevas funcionalidades mediante CI/CD pipelines y metodologías de desarrollo eficientes.",
+            "impact": "50% más rápido"
+          },
+          "bi": {
+            "title": "Business Intelligence",
+            "desc": "Desarrollo dashboards y sistemas de análisis que proporcionan insights accionables para la toma de decisiones estratégicas.",
+            "impact": "Real-time insights"
+          }
+        }
+      },
+      "teaching": {
+        "title": "Educación & Transferencia de Conocimiento",
+        "highlights": {
+          "training": {
+            "title": "Corporate Training",
+            "desc": "Diseño y ejecuto programas de capacitación técnica para equipos empresariales, elevando el nivel técnico organizacional.",
+            "impact": "100+ profesionales"
+          },
+          "docs": {
+            "title": "Technical Documentation",
+            "desc": "Creo documentación técnica comprehensiva que facilita la onboarding y reduce el tiempo de incorporación de nuevos desarrolladores.",
+            "impact": "60% menos onboarding"
+          },
+          "sharing": {
+            "title": "Knowledge Sharing",
+            "desc": "Organizo workshops internos sobre nuevas tecnologías y mejores prácticas, mantiendo al equipo actualizado con las últimas tendencias.",
+            "impact": "Continuous learning"
+          }
+        }
+      }
+    },
+    "cta": {
+      "question": "¿Buscas un líder técnico que impulse la innovación en tu organización?",
+      "button": "Conversemos sobre tu próximo proyecto 💼"
+    }
+  },
   "contact": {
     "title": "Contacto",
     "subtitle": "¿Listo para desarrollar tu proyecto de forma colaborativa?",

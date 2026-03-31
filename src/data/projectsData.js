@@ -1,10 +1,10 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Digital Asset Delivery Architecture",
-    description: "Orquestación de backend de alta disponibilidad para marketplace de activos digitales con integración de pagos resilientes y licenciamiento automatizado.",
+    title: "AI-Powered Audio & Asset Architecture",
+    description: "Orquestación de backend con IA para separación de audios por capas (stems), procesamiento de formato MIDI y generación automatizada de composiciones musicales.",
     category: "ecommerce",
-    tech: ["Node.js", "Express", "Culqi V4", "Izipay", "PostgreSQL", "Cloud Storage"],
+    tech: ["Node.js", "Python (AI Audio)", "MIDI Engine", "OpenAI", "PostgreSQL", "Cloud Storage"],
     image: "/images/proyectos/jefry_studios.png",
     clientInfo: {
       name: "SALAS YNGA JEFERSON",
@@ -37,10 +37,10 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Cloud-Native E-Commerce Engine",
-    description: "Arquitectura modular con Flask y PostgreSQL, implementando sincronización de inventario en tiempo real y webhooks de notificación.",
+    title: "AI-Enhanced E-Commerce Engine",
+    description: "E-commerce cloud-native con chatbot de ventas inteligente (LLM) integrado para automatización de conversiones y soporte al cliente en tiempo real.",
     category: "ecommerce",
-    tech: ["React", "Python", "Flask", "PostgreSQL", "WhatsApp API", "Stripe"],
+    tech: ["React", "Python", "OpenAI API", "Conversational AI", "PostgreSQL", "WhatsApp API"],
     image: "/images/kefyto-preview.png",
     liveUrl: "https://www.kefytotubulgarito.com/",
     githubUrl: "#",

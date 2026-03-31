@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation, Trans } from 'react-i18next';
 
 const ProfessionalImpact = () => {
+    const { t } = useTranslation();
   const [activeArea, setActiveArea] = useState('leadership');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,126 +21,126 @@ const ProfessionalImpact = () => {
     };
   }, []);
 
-  const professionalAreas = {
-    leadership: {
-      title: "Liderazgo Técnico & Mentoría",
-      icon: "👥",
-      gradient: "from-blue-500 to-indigo-600",
-      highlights: [
-        {
-          title: "Team Leadership",
-          description: "Lidero equipos de desarrollo multidisciplinarios, mejorando la productividad del equipo en un 40% mediante metodologías ágiles y pair programming.",
-          impact: "+40% productividad",
-          badge: "Leadership"
+    const professionalAreas = {
+        leadership: {
+            title: t('professionalImpact.areas.leadership.title'),
+            icon: "👥",
+            gradient: "from-blue-500 to-indigo-600",
+            highlights: [
+                {
+                    title: t('professionalImpact.areas.leadership.highlights.leadership.title'),
+                    description: t('professionalImpact.areas.leadership.highlights.leadership.desc'),
+                    impact: t('professionalImpact.areas.leadership.highlights.leadership.impact'),
+                    badge: "Leadership"
+                },
+                {
+                    title: t('professionalImpact.areas.leadership.highlights.mentoring.title'),
+                    description: t('professionalImpact.areas.leadership.highlights.mentoring.desc'),
+                    impact: t('professionalImpact.areas.leadership.highlights.mentoring.impact'),
+                    badge: "Mentoring"
+                },
+                {
+                    title: t('professionalImpact.areas.leadership.highlights.quality.title'),
+                    description: t('professionalImpact.areas.leadership.highlights.quality.desc'),
+                    impact: t('professionalImpact.areas.leadership.highlights.quality.impact'),
+                    badge: "Quality"
+                }
+            ]
         },
-        {
-          title: "Technical Mentoring",
-          description: "Mentoría avanzada a desarrolladores sobre arquitectura de software, patrones de diseño y mejores prácticas en entornos cloud.",
-          impact: "800+ desarrolladores",
-          badge: "Mentoring"
+        innovation: {
+            title: t('professionalImpact.areas.innovation.title'),
+            icon: "🤖",
+            gradient: "from-purple-500 to-pink-600",
+            highlights: [
+                {
+                    title: t('professionalImpact.areas.innovation.highlights.audio.title'),
+                    description: t('professionalImpact.areas.innovation.highlights.audio.desc'),
+                    impact: t('professionalImpact.areas.innovation.highlights.audio.impact'),
+                    badge: "AI/Backend"
+                },
+                {
+                    title: t('professionalImpact.areas.innovation.highlights.chatbot.title'),
+                    description: t('professionalImpact.areas.innovation.highlights.chatbot.desc'),
+                    impact: t('professionalImpact.areas.innovation.highlights.chatbot.impact'),
+                    badge: "AI/LLM"
+                },
+                {
+                    title: t('professionalImpact.areas.innovation.highlights.solutions.title'),
+                    description: t('professionalImpact.areas.innovation.highlights.solutions.desc'),
+                    impact: t('professionalImpact.areas.innovation.highlights.solutions.impact'),
+                    badge: "Solutions"
+                }
+            ]
         },
-        {
-          title: "Code Reviews & Quality",
-          description: "Implemento procesos de code review rigurosos que han reducido bugs en producción en un 85% y mejorado la calidad del código.",
-          impact: "-85% bugs",
-          badge: "Quality"
+        impact: {
+            title: t('professionalImpact.areas.impact.title'),
+            icon: "📈",
+            gradient: "from-green-500 to-teal-600",
+            highlights: [
+                {
+                    title: t('professionalImpact.areas.impact.highlights.cost.title'),
+                    description: t('professionalImpact.areas.impact.highlights.cost.desc'),
+                    impact: t('professionalImpact.areas.impact.highlights.cost.impact'),
+                    badge: "Cost Saving"
+                },
+                {
+                    title: t('professionalImpact.areas.impact.highlights.time.title'),
+                    description: t('professionalImpact.areas.impact.highlights.time.desc'),
+                    impact: t('professionalImpact.areas.impact.highlights.time.impact'),
+                    badge: "Efficiency"
+                },
+                {
+                    title: t('professionalImpact.areas.impact.highlights.bi.title'),
+                    description: t('professionalImpact.areas.impact.highlights.bi.desc'),
+                    impact: t('professionalImpact.areas.impact.highlights.bi.impact'),
+                    badge: "Analytics"
+                }
+            ]
+        },
+        teaching: {
+            title: t('professionalImpact.areas.teaching.title'),
+            icon: "🎓",
+            gradient: "from-orange-500 to-red-600",
+            highlights: [
+                {
+                    title: t('professionalImpact.areas.teaching.highlights.training.title'),
+                    description: t('professionalImpact.areas.teaching.highlights.training.desc'),
+                    impact: t('professionalImpact.areas.teaching.highlights.training.impact'),
+                    badge: "Training"
+                },
+                {
+                    title: t('professionalImpact.areas.teaching.highlights.docs.title'),
+                    description: t('professionalImpact.areas.teaching.highlights.docs.desc'),
+                    impact: t('professionalImpact.areas.teaching.highlights.docs.impact'),
+                    badge: "Documentation"
+                },
+                {
+                    title: t('professionalImpact.areas.teaching.highlights.sharing.title'),
+                    description: t('professionalImpact.areas.teaching.highlights.sharing.desc'),
+                    impact: t('professionalImpact.areas.teaching.highlights.sharing.impact'),
+                    badge: "Workshops"
+                }
+            ]
         }
-      ]
-    },
-    innovation: {
-      title: "Arquitectura & Soluciones de IA",
-      icon: "🤖",
-      gradient: "from-purple-500 to-pink-600",
-      highlights: [
-        {
-          title: "AI-Powered Systems",
-          description: "Diseño y despliegue de microservicios que integran IA para automatización de procesos críticos y optimización de flujos empresariales.",
-          impact: "70% automatización",
-          badge: "AI/Backend"
-        },
-        {
-          title: "Performance Optimization",
-          description: "Optimizo sistemas existentes mediante técnicas avanzadas de caching, indexación y arquitectura, logrando mejoras significativas.",
-          impact: "60% más rápido",
-          badge: "Performance"
-        },
-        {
-          title: "Scalable Architecture",
-          description: "Diseño arquitecturas escalables que soportan crecimiento exponencial sin necesidad de reescritura completa del sistema.",
-          impact: "10x escalabilidad",
-          badge: "Architecture"
-        }
-      ]
-    },
-    impact: {
-      title: "Impacto Empresarial & ROI",
-      icon: "📈",
-      gradient: "from-green-500 to-teal-600",
-      highlights: [
-        {
-          title: "Cost Reduction",
-          description: "Reduzco costos de infraestructura mediante optimización de recursos cloud y implementación de prácticas DevOps eficientes.",
-          impact: "-45% costos",
-          badge: "Cost Saving"
-        },
-        {
-          title: "Time to Market",
-          description: "Acelero el time-to-market de nuevas funcionalidades mediante CI/CD pipelines y metodologías de desarrollo eficientes.",
-          impact: "50% más rápido",
-          badge: "Efficiency"
-        },
-        {
-          title: "Business Intelligence",
-          description: "Desarrollo dashboards y sistemas de análisis que proporcionan insights accionables para la toma de decisiones estratégicas.",
-          impact: "Real-time insights",
-          badge: "Analytics"
-        }
-      ]
-    },
-    teaching: {
-      title: "Educación & Transferencia de Conocimiento",
-      icon: "🎓",
-      gradient: "from-orange-500 to-red-600",
-      highlights: [
-        {
-          title: "Corporate Training",
-          description: "Diseño y ejecuto programas de capacitación técnica para equipos empresariales, elevando el nivel técnico organizacional.",
-          impact: "100+ profesionales",
-          badge: "Training"
-        },
-        {
-          title: "Technical Documentation",
-          description: "Creo documentación técnica comprehensiva que facilita la onboarding y reduce el tiempo de incorporación de nuevos desarrolladores.",
-          impact: "60% menos onboarding",
-          badge: "Documentation"
-        },
-        {
-          title: "Knowledge Sharing",
-          description: "Organizo workshops internos sobre nuevas tecnologías y mejores prácticas, mantiendo al equipo actualizado con las últimas tendencias.",
-          impact: "Continuous learning",
-          badge: "Workshops"
-        }
-      ]
-    }
-  };
-
-  const getBadgeColor = (badge) => {
-    const colors = {
-      'Leadership': 'bg-blue-500',
-      'Mentoring': 'bg-indigo-500',
-      'Quality': 'bg-cyan-500',
-      'AI/Backend': 'bg-purple-500',
-      'Performance': 'bg-pink-500',
-      'Architecture': 'bg-violet-500',
-      'Cost Saving': 'bg-green-500',
-      'Efficiency': 'bg-teal-500',
-      'Analytics': 'bg-emerald-500',
-      'Training': 'bg-orange-500',
-      'Documentation': 'bg-red-500',
-      'Workshops': 'bg-amber-500'
     };
-    return colors[badge] || 'bg-gray-500';
-  };
+
+    const getBadgeColor = (badge) => {
+        const colors = {
+            'Leadership': 'bg-blue-500',
+            'Mentoring': 'bg-indigo-500',
+            'Quality': 'bg-cyan-500',
+            'AI/Backend': 'bg-purple-500',
+            'AI/LLM': 'bg-pink-500',
+            'Solutions': 'bg-violet-500',
+            'Cost Saving': 'bg-green-500',
+            'Efficiency': 'bg-teal-500',
+            'Analytics': 'bg-emerald-500',
+            'Training': 'bg-orange-500',
+            'Documentation': 'bg-red-500',
+            'Workshops': 'bg-amber-500'
+        };
+        return colors[badge] || 'bg-gray-500';
+    };
 
   return (
     <section id="professional-impact" className="py-20">
@@ -151,15 +153,17 @@ const ProfessionalImpact = () => {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
             <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Impacto Profesional
+              {t('professionalImpact.title')}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full"></div>
           </div>
 
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-            Más que código: <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold">
-              liderazgo técnico, innovación empresarial y crecimiento de equipos
-            </span> que generan resultados medibles.
+            <Trans i18nKey="professionalImpact.subtitle">
+              Más que código: <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold">
+                liderazgo técnico, innovación empresarial y crecimiento de equipos
+              </span> que generan resultados medibles.
+            </Trans>
           </p>
         </motion.div>
       </div>
@@ -258,7 +262,7 @@ const ProfessionalImpact = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <p className="text-zinc-300 text-lg mb-4">
-              ¿Buscas un líder técnico que impulse la innovación en tu organización?
+              {t('professionalImpact.cta.question')}
             </p>
             <motion.button
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -268,7 +272,7 @@ const ProfessionalImpact = () => {
                 document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
             >
-              Conversemos sobre tu próximo proyecto 💼
+              {t('professionalImpact.cta.button')}
             </motion.button>
           </motion.div>
         </motion.div>

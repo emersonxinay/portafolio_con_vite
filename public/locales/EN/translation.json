@@ -114,6 +114,96 @@
     "hazuki3": "• Coordinated multi-third-party service integration maintaining stability and data consistency.",
     "hazukiMetrics": "50K+ Transactions/Month"
   },
+  "professionalImpact": {
+    "title": "Professional Impact",
+    "subtitle": "More than code: <1>technical leadership, business innovation, and team growth</1> that generate measurable results.",
+    "areas": {
+      "leadership": {
+        "title": "Technical Leadership & Mentoring",
+        "highlights": {
+          "leadership": {
+            "title": "Team Leadership",
+            "desc": "Lead multidisciplinary development teams, improving productivity by 40% through agile methodologies and pair programming.",
+            "impact": "+40% productivity"
+          },
+          "mentoring": {
+            "title": "Technical Mentoring",
+            "desc": "Advanced mentoring to developers on software architecture, design patterns, and cloud best practices.",
+            "impact": "800+ developers"
+          },
+          "quality": {
+            "title": "Code Reviews & Quality",
+            "desc": "Implement rigorous code review processes that reduced production bugs by 85% and improved code quality.",
+            "impact": "-85% bugs"
+          }
+        }
+      },
+      "innovation": {
+        "title": "AI Architecture & Solutions",
+        "highlights": {
+          "audio": {
+            "title": "Generative Audio & MIDI",
+            "desc": "AI mastery for audio source separation (stems), MIDI format processing, and automated music composition generation in production.",
+            "impact": "Audio Mastering AI"
+          },
+          "chatbot": {
+            "title": "Conversational Sales Agents",
+            "desc": "Design and deployment of intelligent chatbots with LLMs for sales automation and customer support, increasing conversion in e-commerce.",
+            "impact": "Sales Automation"
+          },
+          "solutions": {
+            "title": "Intelligent Problem Solving",
+            "desc": "Resolution of critical business problems through predictive models and automation of complex processes for industrial systems.",
+            "impact": "70% automation"
+          }
+        }
+      },
+      "impact": {
+        "title": "Business Impact & ROI",
+        "highlights": {
+          "cost": {
+            "title": "Cost Reduction",
+            "desc": "Reduce infrastructure costs through cloud resource optimization and efficient DevOps practices.",
+            "impact": "-45% costs"
+          },
+          "time": {
+            "title": "Time to Market",
+            "desc": "Accelerate time-to-market for new features through CI/CD pipelines and efficient development methodologies.",
+            "impact": "50% faster"
+          },
+          "bi": {
+            "title": "Business Intelligence",
+            "desc": "Develop dashboards and analytics systems providing actionable insights for strategic decision making.",
+            "impact": "Real-time insights"
+          }
+        }
+      },
+      "teaching": {
+        "title": "Education & Knowledge Transfer",
+        "highlights": {
+          "training": {
+            "title": "Corporate Training",
+            "desc": "Design and execute technical training programs for corporate teams, raising the organizational technical level.",
+            "impact": "100+ professionals"
+          },
+          "docs": {
+            "title": "Technical Documentation",
+            "desc": "Create comprehensive technical documentation that facilitates onboarding and reduces developer integration time.",
+            "impact": "60% less onboarding"
+          },
+          "sharing": {
+            "title": "Knowledge Sharing",
+            "desc": "Organize internal workshops on new technologies and best practices, keeping the team updated with the latest trends.",
+            "impact": "Continuous learning"
+          }
+        }
+      }
+    },
+    "cta": {
+      "question": "Looking for a technical leader to drive innovation in your organization?",
+      "button": "Let's talk about your next project 💼"
+    }
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Ready to transform your idea into digital reality?",

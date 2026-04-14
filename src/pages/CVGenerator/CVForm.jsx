@@ -1,26 +1,33 @@
 import { useCallback, memo } from 'react';
+import { motion } from 'framer-motion';
 
-// Componente de Input reutilizable FUERA del componente principal
-const InputField = memo(({ label, value, onChange, placeholder, type = "text", rows = null }) => (
-  <div className="mb-4">
-    <label className="block text-sm font-semibold mb-2 text-gray-200">{label}</label>
-    {rows ? (
-      <textarea
-        value={value || ''}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        rows={rows}
-        className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
-      />
-    ) : (
-      <input
-        type={type}
-        value={value || ''}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
-      />
-    )}
+// Componente de Input Premium reutilizable
+const InputField = memo(({ label, value, onChange, placeholder, type = "text", rows = null, icon }) => (
+  <div className="mb-6 group">
+    <label className="flex items-center gap-2 text-sm font-bold mb-2 text-slate-300 group-focus-within:text-blue-400 transition-colors">
+      {icon && <i className={`${icon} text-xs text-blue-500/70 group-focus-within:text-blue-400`}></i>}
+      {label}
+    </label>
+    <div className="relative">
+      {rows ? (
+        <textarea
+          value={value || ''}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+          rows={rows}
+          className="w-full px-4 py-3 bg-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-4 focus:ring-blue-500/10 transition-all resize-none shadow-inner"
+        />
+      ) : (
+        <input
+          type={type}
+          value={value || ''}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+          className="w-full px-4 py-3 bg-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-4 focus:ring-blue-500/10 transition-all shadow-inner"
+        />
+      )}
+      <div className="absolute inset-0 rounded-xl pointer-events-none group-focus-within:border-blue-500/20 transition-all"></div>
+    </div>
   </div>
 ));
 
@@ -70,86 +77,114 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
     }));
   }, [setCvData]);
 
+  const containerVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } }
+  };
+
   // FORMULARIO: Información Personal
   if (activeTab === 'personal') {
     return (
-      <div className="space-y-4">
-        <h3 className="text-xl font-bold mb-4 text-cyan-400">Información Personal</h3>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-2">
+        <header className="mb-8 p-4 bg-blue-500/10 border border-blue-500/20 rounded-2xl">
+          <h3 className="text-xl font-black text-white flex items-center gap-3">
+            <i className="fas fa-user-circle text-blue-400"></i>
+            Información de Contacto
+          </h3>
+          <p className="text-blue-200/60 text-sm mt-1">Estos datos aparecerán en el encabezado de tu CV.</p>
+        </header>
 
-        <InputField
-          label="Nombre Completo"
-          value={cvData.personalInfo.fullName}
-          onChange={(val) => handleInputChange('personalInfo', 'fullName', val)}
-          placeholder="Ej: Emerson Espinoza Aguirre"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+          <InputField
+            label="Nombre Completo"
+            value={cvData.personalInfo.fullName}
+            onChange={(val) => handleInputChange('personalInfo', 'fullName', val)}
+            placeholder="Ej: Emerson Espinoza Aguirre"
+            icon="fas fa-user"
+          />
 
-        <InputField
-          label="Título Profesional"
-          value={cvData.personalInfo.title}
-          onChange={(val) => handleInputChange('personalInfo', 'title', val)}
-          placeholder="Ej: Senior Software Engineer & Tech Lead"
-        />
+          <InputField
+            label="Título Profesional"
+            value={cvData.personalInfo.title}
+            onChange={(val) => handleInputChange('personalInfo', 'title', val)}
+            placeholder="Ej: Senior Software Engineer & Tech Lead"
+            icon="fas fa-briefcase"
+          />
 
-        <InputField
-          label="Email"
-          type="email"
-          value={cvData.personalInfo.email}
-          onChange={(val) => handleInputChange('personalInfo', 'email', val)}
-          placeholder="tu@email.com"
-        />
+          <InputField
+            label="Email"
+            type="email"
+            value={cvData.personalInfo.email}
+            onChange={(val) => handleInputChange('personalInfo', 'email', val)}
+            placeholder="tu@email.com"
+            icon="fas fa-envelope"
+          />
 
-        <InputField
-          label="Teléfono"
-          value={cvData.personalInfo.phone}
-          onChange={(val) => handleInputChange('personalInfo', 'phone', val)}
-          placeholder="+51 999 999 999"
-        />
+          <InputField
+            label="Teléfono"
+            value={cvData.personalInfo.phone}
+            onChange={(val) => handleInputChange('personalInfo', 'phone', val)}
+            placeholder="+51 999 999 999"
+            icon="fas fa-phone"
+          />
 
-        <InputField
-          label="Ubicación"
-          value={cvData.personalInfo.location}
-          onChange={(val) => handleInputChange('personalInfo', 'location', val)}
-          placeholder="Santiago, Chile"
-        />
+          <InputField
+            label="Ubicación"
+            value={cvData.personalInfo.location}
+            onChange={(val) => handleInputChange('personalInfo', 'location', val)}
+            placeholder="Santiago, Chile"
+            icon="fas fa-map-marker-alt"
+          />
 
-        <InputField
-          label="LinkedIn"
-          value={cvData.personalInfo.linkedin}
-          onChange={(val) => handleInputChange('personalInfo', 'linkedin', val)}
-          placeholder="linkedin.com/in/tu-perfil"
-        />
+          <InputField
+            label="LinkedIn (URL)"
+            value={cvData.personalInfo.linkedin}
+            onChange={(val) => handleInputChange('personalInfo', 'linkedin', val)}
+            placeholder="linkedin.com/in/tu-perfil"
+            icon="fab fa-linkedin"
+          />
 
-        <InputField
-          label="GitHub"
-          value={cvData.personalInfo.github}
-          onChange={(val) => handleInputChange('personalInfo', 'github', val)}
-          placeholder="github.com/tu-usuario"
-        />
+          <InputField
+            label="GitHub (URL)"
+            value={cvData.personalInfo.github}
+            onChange={(val) => handleInputChange('personalInfo', 'github', val)}
+            placeholder="github.com/tu-usuario"
+            icon="fab fa-github"
+          />
 
-        <InputField
-          label="Website"
-          value={cvData.personalInfo.website}
-          onChange={(val) => handleInputChange('personalInfo', 'website', val)}
-          placeholder="tuweb.com"
-        />
+          <InputField
+            label="Website (URL)"
+            value={cvData.personalInfo.website}
+            onChange={(val) => handleInputChange('personalInfo', 'website', val)}
+            placeholder="tuweb.com"
+            icon="fas fa-globe"
+          />
+        </div>
 
         <InputField
           label="Resumen Profesional"
           value={cvData.summary}
           onChange={(val) => setCvData(prev => ({ ...prev, summary: val }))}
-          placeholder="Describe tu experiencia y especialización..."
-          rows={5}
+          placeholder="Describe tu experiencia, logros clave y especialización técnica..."
+          rows={6}
+          icon="fas fa-quote-left"
         />
-      </div>
+      </motion.div>
     );
   }
 
   // FORMULARIO: Experiencia
   if (activeTab === 'experience') {
     return (
-      <div className="space-y-6">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-cyan-400">Experiencia Laboral</h3>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
+        <header className="flex justify-between items-center mb-4 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl">
+          <div>
+            <h3 className="text-xl font-black text-white flex items-center gap-3">
+              <i className="fas fa-history text-emerald-400"></i>
+              Experiencia Laboral
+            </h3>
+            <p className="text-emerald-200/60 text-sm mt-1">Gestiona tus roles y logros profesionales.</p>
+          </div>
           <button
             onClick={() => handleArrayAdd('experience', {
               id: Date.now(),
@@ -161,103 +196,128 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
               technologies: [],
               enabled: true
             })}
-            className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition"
+            className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-emerald-900/20 transition-all hover:scale-105 active:scale-95"
           >
-            <i className="fas fa-plus mr-2"></i>
-            Agregar Experiencia
+            <i className="fas fa-plus"></i>
+            Añadir
           </button>
-        </div>
+        </header>
 
-        {cvData.experience.map((exp, index) => (
-          <div
-            key={exp.id}
-            className={`p-4 rounded-lg border-2 ${
-              exp.enabled ? 'border-green-500 bg-slate-700/30' : 'border-gray-600 bg-slate-800/30 opacity-50'
-            }`}
-          >
-            <div className="flex justify-between mb-4">
-              <h4 className="font-bold">Experiencia {index + 1}</h4>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => toggleArrayItemEnabled('experience', index)}
-                  className={`px-3 py-1 rounded text-sm ${
-                    exp.enabled ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-600 hover:bg-gray-700'
-                  }`}
-                >
-                  <i className={`fas fa-${exp.enabled ? 'eye' : 'eye-slash'} mr-1`}></i>
-                  {exp.enabled ? 'Visible' : 'Oculto'}
-                </button>
-                <button
-                  onClick={() => handleArrayRemove('experience', index)}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm"
-                >
-                  <i className="fas fa-trash"></i>
-                </button>
+        <div className="space-y-6">
+          {cvData.experience.map((exp, index) => (
+            <motion.div
+              layout
+              key={exp.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className={`group p-6 rounded-3xl border transition-all ${
+                exp.enabled
+                  ? 'border-slate-700/50 bg-slate-800/20 focus-within:border-emerald-500/30'
+                  : 'border-slate-800 bg-slate-900/40 grayscale opacity-60'
+              }`}
+            >
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-slate-700/50 flex items-center justify-center text-emerald-400 font-black">
+                    {index + 1}
+                  </div>
+                  <h4 className="font-bold text-white text-lg">{exp.company || 'Nueva Empresa'}</h4>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => toggleArrayItemEnabled('experience', index)}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                      exp.enabled ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/20' : 'bg-slate-700/50 text-slate-400 border border-slate-600/30'
+                    }`}
+                  >
+                    <i className={`fas fa-${exp.enabled ? 'eye' : 'eye-slash'}`}></i>
+                    {exp.enabled ? 'Visible' : 'Oculto'}
+                  </button>
+                  <button
+                    onClick={() => handleArrayRemove('experience', index)}
+                    className="p-3 bg-red-500/10 text-red-400 border border-red-500/20 rounded-xl hover:bg-red-500 hover:text-white transition-all"
+                  >
+                    <i className="fas fa-trash-alt"></i>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <InputField
-              label="Cargo"
-              value={exp.title}
-              onChange={(val) => handleArrayItemChange('experience', index, 'title', val)}
-              placeholder="Senior Software Engineer"
-            />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+                <InputField
+                  label="Cargo / Posición"
+                  value={exp.title}
+                  onChange={(val) => handleArrayItemChange('experience', index, 'title', val)}
+                  placeholder="Senior Software Engineer"
+                  icon="fas fa-id-badge"
+                />
+                <InputField
+                  label="Empresa"
+                  value={exp.company}
+                  onChange={(val) => handleArrayItemChange('experience', index, 'company', val)}
+                  placeholder="Nombre de la Compañía"
+                  icon="fas fa-building"
+                />
+                <InputField
+                  label="Ubicación"
+                  value={exp.location}
+                  onChange={(val) => handleArrayItemChange('experience', index, 'location', val)}
+                  placeholder="Remoto / Ciudad"
+                  icon="fas fa-map-pin"
+                />
+                <InputField
+                  label="Período"
+                  value={exp.period}
+                  onChange={(val) => handleArrayItemChange('experience', index, 'period', val)}
+                  placeholder="Ene 2020 - Dic 2023"
+                  icon="fas fa-calendar"
+                />
+              </div>
 
-            <InputField
-              label="Empresa"
-              value={exp.company}
-              onChange={(val) => handleArrayItemChange('experience', index, 'company', val)}
-              placeholder="Nombre de la Empresa"
-            />
+              <div className="mb-6">
+                <label className="flex items-center gap-2 text-sm font-bold mb-2 text-slate-300">
+                  <i className="fas fa-list-ul text-xs text-emerald-500/70"></i>
+                  Logros y Responsabilidades (uno por línea)
+                </label>
+                <textarea
+                  value={exp.achievements.join('\n')}
+                  onChange={(e) => handleArrayItemChange('experience', index, 'achievements', e.target.value.split('\n'))}
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 transition-all resize-none shadow-inner text-sm leading-relaxed"
+                  placeholder="Lideré el equipo de backend...&#10;Reduje los costos de infraestructura en un 40%..."
+                />
+              </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <InputField
-                label="Ubicación"
-                value={exp.location}
-                onChange={(val) => handleArrayItemChange('experience', index, 'location', val)}
-                placeholder="Santiago, Chile"
-              />
-
-              <InputField
-                label="Período"
-                value={exp.period}
-                onChange={(val) => handleArrayItemChange('experience', index, 'period', val)}
-                placeholder="Ene 2020 - Presente"
-              />
-            </div>
-
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-2 text-gray-200">Logros (uno por línea)</label>
-              <textarea
-                value={exp.achievements.join('\n')}
-                onChange={(e) => handleArrayItemChange('experience', index, 'achievements', e.target.value.split('\n'))}
-                rows={5}
-                className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="Logré X resultado&#10;Lideré Y equipo&#10;Implementé Z sistema"
-              />
-            </div>
-
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-2 text-gray-200">Tecnologías (separadas por coma)</label>
-              <input
-                value={exp.technologies.join(', ')}
-                onChange={(e) => handleArrayItemChange('experience', index, 'technologies', e.target.value.split(',').map(t => t.trim()))}
-                className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="React, Python, Docker"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+              <div>
+                <label className="flex items-center gap-2 text-sm font-bold mb-2 text-slate-300">
+                  <i className="fas fa-tags text-xs text-emerald-500/70"></i>
+                  Tecnologías clave (separadas por coma)
+                </label>
+                <input
+                  value={exp.technologies.join(', ')}
+                  onChange={(e) => handleArrayItemChange('experience', index, 'technologies', e.target.value.split(',').map(t => t.trim()))}
+                  className="w-full px-4 py-3 bg-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 transition-all shadow-inner text-sm"
+                  placeholder="Node.js, AWS, PostgreSQL, Terraform"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     );
   }
 
   // FORMULARIO: Proyectos
   if (activeTab === 'projects') {
     return (
-      <div className="space-y-6">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-cyan-400">Proyectos Destacados</h3>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
+        <header className="flex justify-between items-center mb-4 p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl">
+          <div>
+            <h3 className="text-xl font-black text-white flex items-center gap-3">
+              <i className="fas fa-rocket text-indigo-400"></i>
+              Proyectos Destacados
+            </h3>
+            <p className="text-indigo-200/60 text-sm mt-1">Muestra tus mejores trabajos personales.</p>
+          </div>
           <button
             onClick={() => handleArrayAdd('projects', {
               id: Date.now(),
@@ -267,84 +327,89 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
               technologies: [],
               enabled: true
             })}
-            className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition"
+            className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-indigo-900/20 transition-all hover:scale-105 active:scale-95"
           >
-            <i className="fas fa-plus mr-2"></i>
-            Agregar Proyecto
+            <i className="fas fa-plus"></i>
+            Añadir
           </button>
-        </div>
+        </header>
 
-        {cvData.projects.map((project, index) => (
-          <div
-            key={project.id}
-            className={`p-4 rounded-lg border-2 ${
-              project.enabled ? 'border-green-500 bg-slate-700/30' : 'border-gray-600 bg-slate-800/30 opacity-50'
-            }`}
-          >
-            <div className="flex justify-between mb-4">
-              <h4 className="font-bold">Proyecto {index + 1}</h4>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => toggleArrayItemEnabled('projects', index)}
-                  className={`px-3 py-1 rounded text-sm ${
-                    project.enabled ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-600 hover:bg-gray-700'
-                  }`}
-                >
-                  <i className={`fas fa-${project.enabled ? 'eye' : 'eye-slash'} mr-1`}></i>
-                  {project.enabled ? 'Visible' : 'Oculto'}
-                </button>
-                <button
-                  onClick={() => handleArrayRemove('projects', index)}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm"
-                >
-                  <i className="fas fa-trash"></i>
-                </button>
+        <div className="grid grid-cols-1 gap-6">
+          {cvData.projects.map((project, index) => (
+            <motion.div
+              layout
+              key={project.id}
+              className={`p-6 rounded-3xl border transition-all ${
+                project.enabled ? 'border-slate-700/50 bg-slate-800/20 shadow-xl' : 'border-slate-800 bg-slate-900/40 opacity-60 grayscale'
+              }`}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <input
+                  value={project.title}
+                  onChange={(e) => handleArrayItemChange('projects', index, 'title', e.target.value)}
+                  className="bg-transparent text-xl font-black text-white focus:outline-none focus:text-indigo-400 transition-colors w-2/3"
+                  placeholder="Nombre del Proyecto"
+                />
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => toggleArrayItemEnabled('projects', index)}
+                    className={`p-2 rounded-lg transition-all ${project.enabled ? 'text-emerald-400 bg-emerald-400/10 border border-emerald-400/20' : 'text-slate-500 bg-slate-800/50 border border-slate-700'}`}
+                  >
+                    <i className={`fas fa-${project.enabled ? 'eye' : 'eye-slash'}`}></i>
+                  </button>
+                  <button
+                    onClick={() => handleArrayRemove('projects', index)}
+                    className="p-2 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg hover:bg-red-500 hover:text-white transition-all"
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <InputField
-              label="Nombre del Proyecto"
-              value={project.title}
-              onChange={(val) => handleArrayItemChange('projects', index, 'title', val)}
-              placeholder="Mi Proyecto Increíble"
-            />
-
-            <InputField
-              label="Descripción"
-              value={project.description}
-              onChange={(val) => handleArrayItemChange('projects', index, 'description', val)}
-              rows={3}
-              placeholder="Descripción detallada del proyecto..."
-            />
-
-            <InputField
-              label="Año/Período"
-              value={project.year}
-              onChange={(val) => handleArrayItemChange('projects', index, 'year', val)}
-              placeholder="2024 o 2022-2024"
-            />
-
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-2 text-gray-200">Tecnologías (separadas por coma)</label>
-              <input
-                value={project.technologies.join(', ')}
-                onChange={(e) => handleArrayItemChange('projects', index, 'technologies', e.target.value.split(',').map(t => t.trim()))}
-                className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="React, Python, PostgreSQL"
+              <InputField
+                label="Descripción Breve"
+                value={project.description}
+                onChange={(val) => handleArrayItemChange('projects', index, 'description', val)}
+                rows={3}
+                placeholder="Describe el impacto y el stack tecnológico..."
+                icon="fas fa-align-left"
               />
-            </div>
-          </div>
-        ))}
-      </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+                <InputField
+                  label="Año / Período"
+                  value={project.year}
+                  onChange={(val) => handleArrayItemChange('projects', index, 'year', val)}
+                  placeholder="Ej: 2023"
+                  icon="fas fa-clock"
+                />
+                <InputField
+                  label="Tecnologías (separadas por coma)"
+                  value={project.technologies.join(', ')}
+                  onChange={(val) => handleArrayItemChange('projects', index, 'technologies', val.split(',').map(t => t.trim()))}
+                  placeholder="Rust, WebAssembly, AWS"
+                  icon="fas fa-microchip"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     );
   }
 
   // FORMULARIO: Educación
   if (activeTab === 'education') {
     return (
-      <div className="space-y-6">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-cyan-400">Educación y Certificaciones</h3>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
+        <header className="flex justify-between items-center mb-4 p-4 bg-purple-500/10 border border-purple-500/20 rounded-2xl">
+          <div>
+            <h3 className="text-xl font-black text-white flex items-center gap-3">
+              <i className="fas fa-graduation-cap text-purple-400"></i>
+              Formación Académica
+            </h3>
+            <p className="text-purple-200/60 text-sm mt-1">Títulos, cursos y certificaciones.</p>
+          </div>
           <button
             onClick={() => handleArrayAdd('education', {
               id: Date.now(),
@@ -355,153 +420,151 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
               details: '',
               enabled: true
             })}
-            className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition"
+            className="px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-purple-900/20 transition-all hover:scale-105 active:scale-95"
           >
-            <i className="fas fa-plus mr-2"></i>
-            Agregar Educación
+            <i className="fas fa-plus"></i>
+            Añadir
           </button>
-        </div>
+        </header>
 
-        {cvData.education.map((edu, index) => (
-          <div
-            key={edu.id}
-            className={`p-4 rounded-lg border-2 ${
-              edu.enabled ? 'border-green-500 bg-slate-700/30' : 'border-gray-600 bg-slate-800/30 opacity-50'
-            }`}
-          >
-            <div className="flex justify-between mb-4">
-              <h4 className="font-bold">Educación {index + 1}</h4>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => toggleArrayItemEnabled('education', index)}
-                  className={`px-3 py-1 rounded text-sm ${
-                    edu.enabled ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-600 hover:bg-gray-700'
-                  }`}
-                >
-                  <i className={`fas fa-${edu.enabled ? 'eye' : 'eye-slash'} mr-1`}></i>
-                </button>
-                <button
-                  onClick={() => handleArrayRemove('education', index)}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm"
-                >
-                  <i className="fas fa-trash"></i>
-                </button>
+        <div className="space-y-6">
+          {cvData.education.map((edu, index) => (
+            <motion.div
+              layout
+              key={edu.id}
+              className={`p-6 rounded-3xl border transition-all ${
+                edu.enabled ? 'border-slate-700/50 bg-slate-800/20' : 'border-slate-800 bg-slate-900/40 grayscale opacity-60'
+              }`}
+            >
+              <div className="flex justify-between items-center mb-6">
+                <h4 className="font-bold text-white text-lg">Educación {index + 1}</h4>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => toggleArrayItemEnabled('education', index)}
+                    className={`p-2 rounded-lg ${edu.enabled ? 'text-purple-400 bg-purple-400/10' : 'text-slate-500 bg-slate-800'}`}
+                  >
+                    <i className={`fas fa-${edu.enabled ? 'eye' : 'eye-slash'}`}></i>
+                  </button>
+                  <button
+                    onClick={() => handleArrayRemove('education', index)}
+                    className="p-2 bg-red-400/10 text-red-400 rounded-lg hover:bg-red-400 transition-colors"
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <InputField
-              label="Título/Grado"
-              value={edu.degree}
-              onChange={(val) => handleArrayItemChange('education', index, 'degree', val)}
-              placeholder="Ingeniero de Sistemas"
-            />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+                <InputField
+                  label="Título o Grado"
+                  value={edu.degree}
+                  onChange={(val) => handleArrayItemChange('education', index, 'degree', val)}
+                  placeholder="Ej: Ingeniero de Sistemas"
+                />
+                <InputField
+                  label="Institución"
+                  value={edu.institution}
+                  onChange={(val) => handleArrayItemChange('education', index, 'institution', val)}
+                  placeholder="Ej: Universidad Nacional"
+                />
+                <InputField
+                  label="Ubicación"
+                  value={edu.location}
+                  onChange={(val) => handleArrayItemChange('education', index, 'location', val)}
+                  placeholder="Huánuco, Perú"
+                />
+                <InputField
+                  label="Período"
+                  value={edu.period}
+                  onChange={(val) => handleArrayItemChange('education', index, 'period', val)}
+                  placeholder="2013-2018"
+                />
+              </div>
 
-            <InputField
-              label="Institución"
-              value={edu.institution}
-              onChange={(val) => handleArrayItemChange('education', index, 'institution', val)}
-              placeholder="Universidad Nacional"
-            />
-
-            <div className="grid grid-cols-2 gap-4">
               <InputField
-                label="Ubicación"
-                value={edu.location}
-                onChange={(val) => handleArrayItemChange('education', index, 'location', val)}
-                placeholder="Lima, Perú"
+                label="Detalles adicionales (opcional)"
+                value={edu.details}
+                onChange={(val) => handleArrayItemChange('education', index, 'details', val)}
+                placeholder="Egresado, Mención honrosa..."
+                rows={2}
               />
-
-              <InputField
-                label="Período"
-                value={edu.period}
-                onChange={(val) => handleArrayItemChange('education', index, 'period', val)}
-                placeholder="2013-2018"
-              />
-            </div>
-
-            <InputField
-              label="Detalles adicionales"
-              value={edu.details}
-              onChange={(val) => handleArrayItemChange('education', index, 'details', val)}
-              placeholder="Título reconocido por SUNEDU"
-            />
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     );
   }
 
   // FORMULARIO: Habilidades
   if (activeTab === 'skills') {
     return (
-      <div className="space-y-4">
-        <h3 className="text-xl font-bold mb-4 text-cyan-400">Habilidades Técnicas</h3>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
+        <header className="mb-6 p-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl">
+          <h3 className="text-xl font-black text-white flex items-center gap-3">
+            <i className="fas fa-code text-amber-400"></i>
+            Habilidades Técnicas
+          </h3>
+          <p className="text-amber-200/60 text-sm mt-1">Organiza tu stack tecnológico para cada perfil.</p>
+        </header>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2 text-gray-200">Lenguajes de Programación (separados por coma)</label>
-          <input
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+          <InputField
+            label="Lenguajes de Programación"
             value={cvData.skills.programming.join(', ')}
-            onChange={(e) => setCvData(prev => ({
+            onChange={(val) => setCvData(prev => ({
               ...prev,
-              skills: { ...prev.skills, programming: e.target.value.split(',').map(s => s.trim()) }
+              skills: { ...prev.skills, programming: val.split(',').map(s => s.trim()) }
             }))}
-            className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-            placeholder="Python, JavaScript, TypeScript"
+            placeholder="Node.js, TypeScript, Rust, Python"
+            icon="fas fa-laptop-code"
           />
-        </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2 text-gray-200">Frameworks (separados por coma)</label>
-          <input
+          <InputField
+            label="Frameworks / Librerías"
             value={cvData.skills.frameworks.join(', ')}
-            onChange={(e) => setCvData(prev => ({
+            onChange={(val) => setCvData(prev => ({
               ...prev,
-              skills: { ...prev.skills, frameworks: e.target.value.split(',').map(s => s.trim()) }
+              skills: { ...prev.skills, frameworks: val.split(',').map(s => s.trim()) }
             }))}
-            className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-            placeholder="React, Flask, FastAPI"
+            placeholder="React, NestJS, Express, FastAPI"
+            icon="fas fa-cubes"
           />
-        </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2 text-gray-200">Cloud & DevOps (separados por coma)</label>
-          <input
+          <InputField
+            label="Cloud / DevOps"
             value={cvData.skills.cloud.join(', ')}
-            onChange={(e) => setCvData(prev => ({
+            onChange={(val) => setCvData(prev => ({
               ...prev,
-              skills: { ...prev.skills, cloud: e.target.value.split(',').map(s => s.trim()) }
+              skills: { ...prev.skills, cloud: val.split(',').map(s => s.trim()) }
             }))}
-            className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-            placeholder="Docker, AWS, Kubernetes"
+            placeholder="Azure, GCP, Docker, Kubernetes, CI/CD"
+            icon="fas fa-cloud-upload-alt"
           />
-        </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2 text-gray-200">Bases de Datos (separadas por coma)</label>
-          <input
+          <InputField
+            label="Bases de Datos"
             value={cvData.skills.databases.join(', ')}
-            onChange={(e) => setCvData(prev => ({
+            onChange={(val) => setCvData(prev => ({
               ...prev,
-              skills: { ...prev.skills, databases: e.target.value.split(',').map(s => s.trim()) }
+              skills: { ...prev.skills, databases: val.split(',').map(s => s.trim()) }
             }))}
-            className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-            placeholder="PostgreSQL, MongoDB, MySQL"
+            placeholder="PostgreSQL, Redis, MongoDB, SQL Server"
+            icon="fas fa-database"
           />
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2 text-gray-200">Otras Habilidades (separadas por coma)</label>
-          <input
-            value={cvData.skills.other.join(', ')}
-            onChange={(e) => setCvData(prev => ({
-              ...prev,
-              skills: { ...prev.skills, other: e.target.value.split(',').map(s => s.trim()) }
-            }))}
-            className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-            placeholder="Machine Learning, Data Science, Leadership"
-          />
-        </div>
-      </div>
+        <InputField
+          label="Otras Habilidades / Soft Skills"
+          value={cvData.skills.other.join(', ')}
+          onChange={(val) => setCvData(prev => ({
+            ...prev,
+            skills: { ...prev.skills, other: val.split(',').map(s => s.trim()) }
+          }))}
+          placeholder="Liderazgo técnico, Agile, Mentoring, Inglés Técnico"
+          icon="fas fa-brain"
+          rows={3}
+        />
+      </motion.div>
     );
   }
 

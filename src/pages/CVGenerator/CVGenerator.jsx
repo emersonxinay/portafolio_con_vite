@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { defaultCVData, cvTemplates, jobPresets } from '../../data/cvTemplateData';
+import { cvTemplates, jobPresets } from '../../data/cvTemplateData';
 import CVPreview from './CVPreview';
 import CVForm from './CVForm';
 import SEOHead from '../../components/SEO/SEOHead';
@@ -10,10 +10,11 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from 'docx';
 import { saveAs } from 'file-saver';
+import { useCVData } from '../../hooks/useCVData';
 
 const CVGenerator = () => {
   const { t } = useTranslation();
-  const [cvData, setCvData] = useState(defaultCVData);
+  const { cvData, setCvData, resetData } = useCVData();
   const [selectedTemplate, setSelectedTemplate] = useState('harvard');
   const [savedVersions, setSavedVersions] = useState([]);
   const [currentVersion, setCurrentVersion] = useState('');
@@ -21,7 +22,7 @@ const CVGenerator = () => {
   const [activeTab, setActiveTab] = useState('personal');
   const [isSaving, setIsSaving] = useState(false);
   const [showVersions, setShowVersions] = useState(false);
-  const [showInstructions, setShowInstructions] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false); // Por defecto ocultas para diseño premium
   const formRef = useRef(null);
 
   // Cargar versiones guardadas del localStorage
@@ -684,7 +685,7 @@ const CVGenerator = () => {
       }
 
       // Resumen profesional
-      if (cvData.personalInfo.summary) {
+      if (cvData.summary) {
         sections.push(
           new Paragraph({
             text: 'RESUMEN PROFESIONAL',
@@ -692,7 +693,7 @@ const CVGenerator = () => {
             spacing: { before: 200, after: 200 }
           }),
           new Paragraph({
-            text: cvData.personalInfo.summary,
+            text: cvData.summary,
             spacing: { after: 400 }
           })
         );
@@ -999,15 +1000,6 @@ const CVGenerator = () => {
         url="https://emersonespinoza.com/cv/generator"
       />
 
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-      `}</style>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20 pb-12">
         <div className="max-w-[1800px] mx-auto px-4">
@@ -1453,24 +1445,6 @@ const CVGenerator = () => {
         </div>
       </div>
 
-      {/* Custom Scrollbar Styles */}
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(15, 23, 42, 0.3);
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(59, 130, 246, 0.5);
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(59, 130, 246, 0.7);
-        }
-      `}</style>
     </>
   );
 };

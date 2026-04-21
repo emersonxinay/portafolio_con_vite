@@ -22,8 +22,8 @@ export const projectsData = [
   },
   {
     id: 0,
-    title: "Eagle Lang: Rust-Based Compiler",
-    description: "Lenguaje de alto nivel diseñado para seguridad de memoria y ejecución determinista mediante Rust, WebAssembly y LLVM.",
+    title: "Aguila Lang – Lenguaje de Programación en Español",
+    description: "Herramienta educativa de código abierto diseñada para la enseñanza de lógica computacional y ciencia de datos aplicada en entornos de formación corporativa. Intérprete propio publicado en npm.",
     category: "saas",
     tech: ["Rust", "LLVM", "WebAssembly", "TypeScript", "Systems Programming"],
     image: "/images/proyectos/aguila.png",
@@ -37,10 +37,10 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "AI-Enhanced E-Commerce Engine",
-    description: "E-commerce cloud-native con chatbot de ventas inteligente (LLM) integrado para automatización de conversiones y soporte al cliente en tiempo real.",
+    title: "E-Commerce con Forecasting de Demanda",
+    description: "E-commerce cloud-native con modelo de predicción de demanda e inventario. Series de tiempo (ARIMA, Prophet) implementadas sobre datos históricos de ventas reales, con sincronización en tiempo real y chatbot de ventas inteligente (LLM).",
     category: "ecommerce",
-    tech: ["React", "Python", "OpenAI API", "Conversational AI", "PostgreSQL", "WhatsApp API"],
+    tech: ["React", "Python", "ARIMA", "Prophet", "Pandas", "PostgreSQL", "WhatsApp API"],
     image: "/images/kefyto-preview.png",
     liveUrl: "https://www.kefytotubulgarito.com/",
     githubUrl: "#",
@@ -52,10 +52,10 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Transactional POS & Inventory Engine",
-    description: "Sistema de misión crítica procesando 50K+ ops/mes, optimizado para baja latencia y consistencia de datos en entornos de alta demanda.",
+    title: "Hazuki – Analítica de Demanda y Gestión de Inventario",
+    description: "Sistema enterprise procesando 50K+ transacciones mensuales. Modelos predictivos de demanda y consumo (Python, Pandas, SQL) para optimización de inventarios en tiempo real, generando el historial de datos base para los modelos de forecasting.",
     category: "web",
-    tech: ["Python", "Flask", "PostgreSQL", "JavaScript", "Docker", "Nginx"],
+    tech: ["Python", "Pandas", "SQL", "Flask", "PostgreSQL", "JavaScript", "Docker", "Nginx"],
     image: "/images/hazuki-preview.png",
     liveUrl: "https://hazukirestaurant.com/",
     githubUrl: "#",
@@ -82,10 +82,10 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: "Distributed Social Graph Engine",
-    description: "Infraestructura social escalable con Express y PostgreSQL, implementando mensajería bidireccional mediante WebSockets y gestión de eventos.",
+    title: "Netmuz Social – Pipeline de Recomendación en Tiempo Real",
+    description: "Red social con arquitectura orientada a eventos (WebSockets, Node.js). Pipeline de datos en tiempo real diseñado para alimentar modelos de recomendación de contenido basados en el comportamiento del usuario.",
     category: "social",
-    tech: ["React", "Express", "Node.js", "PostgreSQL", "WebSockets", "Redis"],
+    tech: ["React", "Express", "Node.js", "PostgreSQL", "WebSockets", "Redis", "Python"],
     image: "/images/netmuz-preview.png",
     liveUrl: "https://www.netmuz.com/",
     githubUrl: "#",
@@ -97,10 +97,10 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: "EdTech SaaS Architecture",
-    description: "Plataforma educativa cloud-native para 500+ usuarios concurrentes, con evaluación técnica automatizada y gestión de contenido dinámico.",
+    title: "Aguilab – SaaS B2B con Motor de Recomendación e IA",
+    description: "Plataforma educativa SaaS B2B para 500+ usuarios. Motor de recomendación de contenidos formativos (Scikit-learn) y modelo predictivo de abandono estudiantil con 78% de precisión, entrenado con datos reales y desplegado en producción vía FastAPI.",
     category: "saas",
-    tech: ["React", "Python", "Flask", "PostgreSQL", "Docker", "Azure"],
+    tech: ["Python", "Scikit-learn", "PyTorch", "FastAPI", "Pandas", "Node.js", "PostgreSQL", "Docker"],
     image: "/images/compilando-preview.png",
     liveUrl: "https://www.compilandocode.com/",
     githubUrl: "#",
@@ -127,10 +127,10 @@ export const projectsData = [
   },
   {
     id: 8,
-    title: "Enterprise Innovation SaaS (BHP Foundation)",
-    description: "Plataforma robusta para la gestión de ciclos de innovación corporativa con auditoría técnica y seguimiento de KPIs estratégicos.",
+    title: "BHP Foundation – Modelos Predictivos Operativos",
+    description: "Plataforma de gestión de innovación corporativa con pipelines de datos en AWS y modelos predictivos (Scikit-learn, Python) para trazabilidad operativa. Reducción del 60% en tiempos operativos mediante reglas predictivas derivadas del análisis histórico del sistema.",
     category: "saas",
-    tech: ["Python", "Flask", "React", "PostgreSQL", "Cloud Identity", "Analytics"],
+    tech: ["Python", "Scikit-learn", "AWS Lambda", "S3", "CloudWatch", "Flask", "React", "PostgreSQL"],
     image: "/images/escondida-preview.png",
     liveUrl: "https://escondida.desafiolab.com/",
     githubUrl: "#",
@@ -165,7 +165,6 @@ export const projectCategories = [
   { id: 'saas', name: 'SaaS', icon: 'fas fa-cloud' }
 ];
 
-// Función helper para abrir proyectos
 export const openProject = (url) => {
   if (url && url !== '#') {
     const finalUrl = url.startsWith('http') ? url : `https://${url}`;
@@ -173,10 +172,8 @@ export const openProject = (url) => {
   }
 };
 
-// Filtrar solo proyectos destacados
 export const getFeaturedProjects = () => projectsData.filter(project => project.featured);
 
-// Obtener proyectos por categoría
 export const getProjectsByCategory = (category) => {
   return category === 'all' ? projectsData : projectsData.filter(project => project.category === category);
 };

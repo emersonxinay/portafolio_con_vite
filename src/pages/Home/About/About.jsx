@@ -70,7 +70,7 @@ const About = () => {
         </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -80,6 +80,7 @@ const About = () => {
           {[
             { title: t('aboutPage.techStack.frontend'), icon: 'fas fa-layer-group', items: techStack.frontend },
             { title: t('aboutPage.techStack.backend'), icon: 'fas fa-server', items: techStack.backend },
+            { title: 'Data Science & ML', icon: 'fas fa-brain', items: techStack.datascience },
             { title: t('aboutPage.techStack.tools'), icon: 'fas fa-tools', items: techStack.tools }
           ].map((column, colIndex) => (
             <div key={colIndex} className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-colors duration-300">
@@ -108,7 +109,7 @@ const About = () => {
         {/* Bottom Statement */}
         <div className="mt-16 text-center border-t border-slate-800 pt-8">
           <p className="text-lg text-slate-300 font-light italic">
-            "{t('about.bottomCta', 'Empowering businesses across the globe with scalable, high-performance digital solutions.')}"
+            "{t('about.bottomCta', 'Transforming data into insights and code into scalable, intelligent systems that drive business impact.')}"
           </p>
         </div>
       </div>

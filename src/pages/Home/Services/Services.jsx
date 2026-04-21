@@ -35,18 +35,30 @@ const Services = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 md:gap-8 mb-10 xs:mb-12 md:mb-16"
         >
-          {services.map((service, index) => (
+        {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative"
+              className={`group relative ${index === 0 ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               <div className={`
-                relative p-8 rounded-2xl border border-white/10 backdrop-blur-sm
+                relative p-8 rounded-2xl border backdrop-blur-sm
                 bg-gradient-to-br ${service.bgColor}
-                hover:border-white/20 transition-all duration-500
-                hover:scale-[1.02] hover:shadow-2xl
+                hover:scale-[1.02] hover:shadow-2xl transition-all duration-500
+                ${index === 0
+                  ? 'border-purple-400/40 hover:border-purple-300/60 shadow-purple-500/10 shadow-lg'
+                  : 'border-white/10 hover:border-white/20'
+                }
               `}>
+                {/* Featured badge for DS/ML service */}
+                {index === 0 && (
+                  <div className="absolute -top-3 left-6">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/30">
+                      ⭐ {t('services.featured', 'Servicio Destacado')}
+                    </span>
+                  </div>
+                )}
+
                 {/* Glow Effect */}
                 <div className={`
                   absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20

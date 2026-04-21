@@ -1,79 +1,95 @@
 /**
  * Professional experience and achievements data
- * Used in About and Experience sections
+ * Alineado al CV: Consultor en Ciencia de Datos, Machine Learning e Inteligencia Artificial
  */
 
 export const professionalAchievements = [
   {
-    title: "Ingeniero de Sistemas",
-    description: "UNHEVAL Perú • Egresado 2018 • Título reconocido SUNEDU",
-    icon: "fas fa-graduation-cap",
-    color: "from-blue-400 to-cyan-500"
+    title: "Consultor en IA & Data Science",
+    description: "Modelos de recomendación, predicción de comportamiento y analítica en plataformas SaaS B2B",
+    icon: "fas fa-brain",
+    color: "from-purple-400 to-pink-600"
+  },
+  {
+    title: "ML en Producción",
+    description: "Churn prediction 78% accuracy · Modelos predictivos BHP · Recomendación financiera Fintech",
+    icon: "fas fa-robot",
+    color: "from-indigo-400 to-violet-500"
   },
   {
     title: "6+ Años de Experiencia",
-    description: "Sistemas distribuidos y arquitectura cloud en producción",
+    description: "Ciencia de datos, arquitectura orientada a datos y sistemas backend distribuidos",
     icon: "fas fa-calendar-alt",
     color: "from-green-400 to-emerald-500"
   },
   {
-    title: "800+ Desarrolladores",
-    description: "Mentorados en arquitecturas backend modernas",
+    title: "800+ Profesionales Formados",
+    description: "Instructor principal de Machine Learning y Data Science en Desafío Latam",
     icon: "fas fa-user-graduate",
-    color: "from-purple-400 to-pink-500"
+    color: "from-orange-400 to-amber-500"
   },
   {
-    title: "Sistemas Críticos",
-    description: "BHP (Minería) y Digital Fondos (Fintech)",
-    icon: "fas fa-rocket",
-    color: "from-orange-400 to-red-500"
+    title: "Ingeniero de Sistemas",
+    description: "UNHEVAL Perú · Título reconocido por SUNEDU · Especialización en Data Science",
+    icon: "fas fa-graduation-cap",
+    color: "from-blue-400 to-cyan-500"
   }
 ];
 
 export const workExperience = [
   {
     id: 1,
-    position: "Senior Backend Developer",
-    company: "Codigo Futuro - BHP",
+    position: "Consultor de Datos y Machine Learning Aplicado",
+    company: "Codigo Futuro – Cliente: BHP",
+    location: "Antofagasta, Chile",
     period: "2022 – 2025",
-    description: "Liderazgo técnico en sistemas backend enterprise para trazabilidad operativa. Implementación de arquitecturas serverless en Azure Functions con enfoque en resiliencia y escalabilidad.",
-    technologies: ["Node.js", "Azure Functions", "Azure DevOps", "CI/CD", "Azure Monitor", "TypeScript"],
+    description: "Consultoría de Machine Learning para plataforma de trazabilidad industrial de BHP (minería). Diseño colaborativo de pipelines de ingesta en AWS y modelos predictivos de incidencias operativas (Scikit-learn, Python) que redujeron en 60% los tiempos operativos. Monitoreo de modelos en producción vía CloudWatch.",
+    technologies: ["Python", "Scikit-learn", "AWS Lambda", "API Gateway", "S3", "DynamoDB", "CloudWatch", "PostgreSQL", "Node.js", "TypeScript"],
+    highlight: "60% reducción en tiempos operativos",
     icon: "fas fa-hard-hat"
   },
   {
     id: 2,
-    position: "Senior Backend Developer",
+    position: "Consultor de Datos Financieros y Modelos Predictivos",
     company: "Digital Fondos (Fintech)",
+    location: "Santiago, Chile",
     period: "2021 – 2022",
-    description: "Desarrollo del core financiero para Fondos Mutuos. Diseño de servicios idempotentes y resilientes para procesamiento transaccional de alta concurrencia.",
-    technologies: ["Node.js", "Azure SQL", "Transactional Integrity", "TypeScript", "Microservices"],
-    icon: "fas fa-university"
+    description: "Consultoría de datos para plataforma SaaS B2B de Fondos Mutuos. Modelos de recomendación financiera (Scikit-learn) basados en perfil del inversionista y comportamiento transaccional. Pipelines ETL con Python y Pandas sobre PostgreSQL y Redis. Definición de lineamientos técnicos para evolución de modelos de riesgo.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "PostgreSQL", "Redis", "Node.js", "TypeScript"],
+    highlight: "Recomendación personalizada por perfil de inversión",
+    icon: "fas fa-chart-line"
   },
   {
     id: 3,
-    position: "Founder & CTO",
-    company: "CompilandoCode (EdTech)",
-    period: "2022 – Presente",
-    description: "Diseño y orquestación de un LMS escalable desplegado en Google Cloud Run. Gestión de infraestructura cloud, OAuth2 y APIs de geolocalización.",
-    technologies: ["Node.js", "Google Cloud Run", "OAuth2", "Identity Platform", "PostgreSQL"],
-    icon: "fas fa-code"
+    position: "Fundador y Director de Tecnología",
+    company: "CompilandoCode (EdTech SaaS B2B)",
+    location: "Santiago, Chile",
+    period: "Feb 2022 – Presente",
+    description: "Motor de recomendación de contenidos formativos (Python, Scikit-learn) basado en datos reales de uso y perfil del colaborador. Modelo predictivo de abandono estudiantil con 78% de precisión, entrenado con datos de 500+ usuarios y desplegado en producción vía FastAPI. Liderazgo de equipo multidisciplinario.",
+    technologies: ["Python", "Scikit-learn", "PyTorch", "FastAPI", "Pandas", "PostgreSQL", "Node.js", "Docker", "DigitalOcean"],
+    highlight: "78% accuracy en modelo de churn · 500+ usuarios",
+    icon: "fas fa-brain"
   },
   {
     id: 4,
-    position: "Lead Technical Instructor",
-    company: "Desafio Latam",
-    period: "2021 – 2025",
-    description: "Formación avanzada de ingenieros en backend, testing y arquitectura. Mentoreo de 800+ desarrolladores en buenas prácticas corporativas.",
-    technologies: ["Software Architecture", "Node.js", "Backend Testing", "Clean Code", "Leadership"],
+    position: "Instructor Técnico Principal – Data Science & Machine Learning",
+    company: "Desafío Latam",
+    location: "Santiago, Chile",
+    period: "Nov 2021 – 2025",
+    description: "Liderazgo de módulos de machine learning aplicado (Python, Scikit-learn, PyTorch): sistemas de recomendación, clasificación de comportamiento, series de tiempo y evaluación con métricas de negocio. Mentoría técnica a 800+ profesionales en transición hacia roles de Data Scientist y ML Engineer.",
+    technologies: ["Python", "Scikit-learn", "PyTorch", "SQL", "FastAPI", "Pandas", "Matplotlib", "Data Visualization"],
+    highlight: "800+ profesionales formados en DS & ML",
     icon: "fas fa-chalkboard-teacher"
   },
   {
     id: 5,
-    position: "Senior Software Engineer & Tech Lead",
+    position: "Ingeniero de Software y Líder Técnico",
     company: "Hazuki Restaurant Systems",
-    period: "2018 – 2020",
-    description: "Liderazgo de sistema enterprise con 50K+ transacciones mensuales. Optimización de core y bases de datos para alto rendimiento.",
-    technologies: ["Node.js", "C#", "Python", "MySQL", "Core Refactoring"],
+    location: "Chile",
+    period: "Feb 2018 – 2020",
+    description: "Liderazgo de un equipo sobre arquitectura de microservicios (C#, Python) procesando 50K+ transacciones mensuales. Modelos predictivos de demanda y consumo (Python, Pandas, SQL) para optimización de inventarios en tiempo real. Generación del historial de datos base para los modelos predictivos.",
+    technologies: ["Python", "Pandas", "SQL", "C#", "PostgreSQL", "Microservices", "MySQL"],
+    highlight: "50K+ transacciones/mes · Demand Forecasting",
     icon: "fas fa-utensils"
   }
 ];

@@ -12,6 +12,12 @@ export const techStack = {
       color: 'from-green-400 to-emerald-600'
     },
     {
+      name: 'Python & FastAPI',
+      description: 'APIs de alto rendimiento y scripting de automatización',
+      icon: 'fab fa-python',
+      color: 'from-yellow-400 to-blue-500'
+    },
+    {
       name: 'Azure Cloud',
       description: 'Sistemas distribuidos y arquitectura serverless',
       icon: 'fab fa-microsoft',
@@ -56,6 +62,38 @@ export const techStack = {
       color: 'from-cyan-400 to-teal-500'
     }
   ],
+  datascience: [
+    {
+      name: 'Machine Learning',
+      description: 'Modelos predictivos con Scikit-learn y TensorFlow',
+      icon: 'fas fa-robot',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      name: 'Pandas & NumPy',
+      description: 'Análisis y procesamiento de datos a gran escala',
+      icon: 'fas fa-table',
+      color: 'from-blue-400 to-indigo-500'
+    },
+    {
+      name: 'Deep Learning',
+      description: 'Redes neuronales con TensorFlow y PyTorch',
+      icon: 'fas fa-brain',
+      color: 'from-orange-400 to-red-500'
+    },
+    {
+      name: 'LLMs & GenAI',
+      description: 'Integración de modelos de lenguaje y RAG systems',
+      icon: 'fas fa-microchip',
+      color: 'from-green-400 to-teal-500'
+    },
+    {
+      name: 'Data Visualization',
+      description: 'Dashboards interactivos con Plotly y D3.js',
+      icon: 'fas fa-chart-line',
+      color: 'from-cyan-400 to-blue-500'
+    }
+  ],
   tools: [
     {
       name: 'Docker & Kubernetes',
@@ -80,9 +118,12 @@ export const techStack = {
 
 // Simplified array for hero section
 export const mainTechnologies = [
+  { name: 'Python', icon: 'fab fa-python', color: 'from-yellow-400 to-blue-500' },
+  { name: 'Machine Learning', icon: 'fas fa-robot', color: 'from-purple-500 to-pink-600' },
   { name: 'Node.js', icon: 'fab fa-node-js', color: 'from-green-400 to-emerald-600' },
   { name: 'Azure', icon: 'fab fa-microsoft', color: 'from-blue-500 to-cyan-600' },
   { name: 'TypeScript', icon: 'fas fa-code', color: 'from-blue-400 to-blue-600' },
   { name: 'Docker', icon: 'fab fa-docker', color: 'from-blue-400 to-cyan-500' },
+  { name: 'TensorFlow', icon: 'fas fa-brain', color: 'from-orange-400 to-red-500' },
   { name: 'PostgreSQL', icon: 'fas fa-database', color: 'from-blue-500 to-indigo-600' }
 ];

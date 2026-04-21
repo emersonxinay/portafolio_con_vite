@@ -324,8 +324,20 @@
   },
   "services": {
     "title": "Technical Expertise",
-    "subtitle": "Specialized domains and leadership in large-scale system architecture.",
+    "subtitle": "Specialized domains and leadership in large-scale systems, data science, and AI.",
     "items": [
+      {
+        "title": "Data Science & Machine Learning Consulting",
+        "description": "Design and implementation of Data Science and Machine Learning solutions oriented to generate real business value through predictive models, advanced analytics, and production-ready data pipelines.",
+        "features": [
+          "Supervised and unsupervised ML models (Scikit-learn, XGBoost)",
+          "Deep Learning and neural networks with TensorFlow & PyTorch",
+          "LLMs, RAG systems and enterprise generative AI integration",
+          "MLOps pipelines: training, versioning and model deployment",
+          "Exploratory analysis and interactive dashboards with Pandas, Plotly",
+          "Big Data processing and feature engineering at scale"
+        ]
+      },
       {
         "title": "Enterprise Backend Architectures",
         "description": "Design and development of robust and scalable backend systems using microservices or modular monolithic architectures.",
@@ -357,16 +369,6 @@
         ]
       },
       {
-        "title": "System Architecture",
-        "description": "Design of modern software infrastructures, specialized CRMs, and scalable administrative solutions.",
-        "features": [
-          "Complex domain modeling (DDD)",
-          "Planned vertical and horizontal scaling",
-          "Robust integrations with external ecosystems",
-          "Guaranteed maintainability and observability"
-        ]
-      },
-      {
         "title": "Cloud & DevOps (Azure)",
         "description": "Orchestration of cloud infrastructures, containerization, and automation of critical deployments.",
         "features": [
@@ -382,8 +384,8 @@
         "features": [
           "Senior to Junior technical mentoring",
           "Establishing code standards (Styleguides)",
-          "Architecture and System Design workshops",
-          "Leadership in adopting new technologies"
+          "Architecture, System Design and Data Science workshops",
+          "Leadership in adopting new technologies and AI"
         ]
       }
     ]
@@ -573,13 +575,17 @@
     ]
   },
   "heroSimple": {
-    "availability": "✅ Available for Senior Backend Challenges",
+    "availability": "✅ Available for DS/ML Consulting & Senior Backend Roles",
     "greeting": "Hello! I'm",
-    "subtitle": "Senior Backend Engineer | Azure Solutions Architect",
-    "description": "Specialist in distributed systems orchestration and high-performance cloud architectures (Azure, Google Cloud, Digital Ocean). Expert in backend optimization with Redis, resilient service design, and industrial CI/CD pipelines focused on elastic scalability and observability.",
+    "subtitle": "Artificial Intelligence | Data Science | Senior Backend Engineer",
+    "description": "Consultant in Artificial Intelligence and Data Science: predictive models, Deep Learning, LLMs, and intelligent systems in production. Also architect of high-performance distributed backends with Python, Node.js, and Azure.",
     "ctaPrimary": "View Career Path",
     "ctaSecondary": "Connect",
     "services": [
+      {
+        "title": "Data Science & ML",
+        "subtitle": "Predictive models and MLOps pipelines"
+      },
       {
         "title": "Backend Architecture",
         "subtitle": "Distributed and scalable systems"
@@ -591,10 +597,6 @@
       {
         "title": "Tech Leadership",
         "subtitle": "Mentoring and best practices"
-      },
-      {
-        "title": "Optimization",
-        "subtitle": "Performance and cost efficiency"
       }
     ]
   },
@@ -612,10 +614,11 @@
     "services": {
       "title": "Technical Domains",
       "items": [
+        "Data Science & ML",
         "Distributed Systems",
         "Cloud Architecture",
         "Engineering Leadership",
-        "Node.js & Azure Expert"
+        "Node.js & Python Expert"
       ]
     },
     "contact": {

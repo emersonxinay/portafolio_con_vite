@@ -240,8 +240,8 @@ const HeroFAANG = () => {
           >
             {[
               { text: "Senior Software Engineer", icon: "💻", color: "from-blue-400 to-cyan-500" },
-              { text: "AI Expert", icon: "", color: "from-purple-400 to-pink-500" },
-              { text: "Data Scientist", icon: "", color: "from-green-400 to-emerald-500" },
+              { text: "Data Scientist", icon: "📊", color: "from-purple-400 to-pink-500" },
+              { text: "ML Engineer", icon: "🤖", color: "from-green-400 to-emerald-500" },
               { text: "Tech Educator", icon: "🎓", color: "from-orange-400 to-red-500" }
             ].map((role, index) => (
               <motion.div
@@ -296,13 +296,13 @@ const HeroFAANG = () => {
 
             <div className="mobile-card bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl lg:rounded-2xl border border-purple-500/20">
               <h3 className="text-purple-400 font-bold text-sm xs:text-base lg:text-lg mb-2 xs:mb-3 flex items-center gap-1 xs:gap-2">
-                Data Science & Analytics
+                🤖 Data Science & Machine Learning
               </h3>
               <ul className="text-zinc-300 text-xs xs:text-sm space-y-1 xs:space-y-2">
-                <li>• Análisis predictivo y Machine Learning</li>
-                <li>• Dashboards interactivos con D3.js/Plotly</li>
-                <li>• Procesamiento de Big Data con Pandas/NumPy</li>
-                <li>• Sistemas de recomendación personalizados</li>
+                <li>• Modelos ML con Scikit-learn & TensorFlow</li>
+                <li>• Deep Learning y redes neuronales (PyTorch)</li>
+                <li>• LLMs, RAG systems e integración de GenAI</li>
+                <li>• Pipelines MLOps y model serving en prod.</li>
               </ul>
             </div>
 
@@ -368,13 +368,15 @@ const HeroFAANG = () => {
           <div className="flex flex-wrap gap-1 xs:gap-2 sm:gap-3">
             {[
               { name: 'Python', color: 'from-yellow-400 to-blue-500' },
-              { name: 'React', color: 'from-cyan-400 to-blue-500' },
+              { name: 'Machine Learning', color: 'from-purple-500 to-pink-500' },
+              { name: 'TensorFlow', color: 'from-orange-400 to-red-500' },
               { name: 'FastAPI', color: 'from-green-400 to-teal-500' },
               { name: 'PostgreSQL', color: 'from-blue-600 to-purple-600' },
               { name: 'Docker', color: 'from-blue-400 to-cyan-600' },
-              { name: 'Machine Learning', color: 'from-purple-500 to-pink-500' },
+              { name: 'LLMs & GenAI', color: 'from-violet-500 to-indigo-600' },
+              { name: 'React', color: 'from-cyan-400 to-blue-500' },
               { name: 'TypeScript', color: 'from-blue-500 to-indigo-600' },
-              { name: 'Next.js', color: 'from-gray-700 to-gray-900' }
+              { name: 'Scikit-learn', color: 'from-amber-400 to-orange-500' }
             ].map((tech, index) => (
               <motion.span
                 key={tech.name}
@@ -398,16 +400,18 @@ const HeroFAANG = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <h3 className="text-base sm:text-lg font-semibold text-zinc-300 mb-3 sm:mb-4 text-center lg:text-left">
-            💻 Enterprise Technologies
+            💻 Enterprise Technologies & ML Stack
           </h3>
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
             {[
               { name: 'Python', level: 95, color: 'from-yellow-400 to-yellow-600' },
+              { name: 'Machine Learning', level: 90, color: 'from-purple-400 to-purple-600' },
+              { name: 'TensorFlow', level: 85, color: 'from-orange-400 to-red-600' },
               { name: 'React', level: 90, color: 'from-blue-400 to-blue-600' },
               { name: 'PostgreSQL', level: 88, color: 'from-indigo-400 to-indigo-600' },
               { name: 'Docker', level: 85, color: 'from-cyan-400 to-cyan-600' },
-              { name: 'AWS', level: 80, color: 'from-orange-400 to-orange-600' },
-              { name: 'Flask/FastAPI', level: 92, color: 'from-green-400 to-green-600' }
+              { name: 'FastAPI', level: 92, color: 'from-green-400 to-green-600' },
+              { name: 'PyTorch', level: 80, color: 'from-red-400 to-rose-600' }
             ].map((tech, index) => (
               <motion.div
                 key={tech.name}
@@ -788,7 +792,7 @@ const HeroFAANG = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                ~/enterprise-ai-system.py
+              ~/ml-data-pipeline.py
               </motion.span>
             </div>
             <motion.div
@@ -811,7 +815,7 @@ const HeroFAANG = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
               >
-                # Enterprise-grade AI-powered microservices
+                # ML Pipeline & Data Science in Production
               </motion.div>
 
               <motion.div
@@ -820,12 +824,12 @@ const HeroFAANG = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
               >
-                <div className="text-purple-400 text-sm sm:text-base lg:text-lg">class <span className="text-yellow-400 font-bold">EnterpriseAISystem</span>:</div>
-                <div className="ml-2 sm:ml-4 text-blue-400 mt-1 sm:mt-2">def <span className="text-green-400 font-semibold">handle_millions_requests</span>(self):</div>
-                <div className="ml-4 sm:ml-8 text-zinc-300 mt-1">redis_cache = <span className="text-orange-400">RedisCluster</span>(nodes=50)</div>
-                <div className="ml-4 sm:ml-8 text-zinc-300">db_pool = <span className="text-orange-400">PostgreSQLPool</span>(max_conn=1000)</div>
-                <div className="ml-4 sm:ml-8 text-zinc-300">ai_engine = <span className="text-pink-400">TensorFlowServing</span>()</div>
-                <div className="ml-4 sm:ml-8 text-zinc-300">return self.<span className="text-cyan-400">optimize_performance</span>()</div>
+                <div className="text-purple-400 text-sm sm:text-base lg:text-lg">class <span className="text-yellow-400 font-bold">MLDataPipeline</span>:</div>
+                <div className="ml-2 sm:ml-4 text-blue-400 mt-1 sm:mt-2">def <span className="text-green-400 font-semibold">train_production_model</span>(self):</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300 mt-1">df = <span className="text-orange-400">pd.read_parquet</span>('data/training')</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">model = <span className="text-orange-400">XGBClassifier</span>(n_estimators=500)</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">model.<span className="text-pink-400">fit</span>(X_train, y_train)</div>
+                <div className="ml-4 sm:ml-8 text-zinc-300">return self.<span className="text-cyan-400">deploy_to_production</span>(model)</div>
               </motion.div>
 
               <motion.div
@@ -836,13 +840,13 @@ const HeroFAANG = () => {
               >
                 <div className="flex items-center gap-1 sm:gap-2 text-green-400 font-semibold mb-1 sm:mb-2">
                   <span className="text-base sm:text-lg lg:text-xl">✅</span>
-                  Production Results:
+                  ML Model Results:
                 </div>
                 <div className="ml-3 sm:ml-6 space-y-1 text-xs sm:text-sm">
-                  <div>• 99.9% uptime across 3 regions</div>
-                  <div>• &lt;50ms response time at scale</div>
-                  <div>• 10M+ daily active users</div>
-                  <div>• $2M+ cost savings annually</div>
+                  <div>• Accuracy 97.3% on test set</div>
+                  <div>• &lt;80ms inference latency at scale</div>
+                  <div>• 500K+ predictions/day in production</div>
+                  <div>• $2M+ business value generated</div>
                 </div>
               </motion.div>
 

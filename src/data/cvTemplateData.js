@@ -2,7 +2,7 @@
 export const defaultCVData = {
   personalInfo: {
     fullName: "Emerson Espinoza Aguirre",
-    title: "Senior Backend Engineer | Cloud Solutions Architect",
+    title: "Senior Backend Engineer | Data Scientist | ML Engineer",
     email: "emerson@emersonespinoza.com",
     phone: "+51 974361728",
     location: "Remoto / LATAM",
@@ -11,7 +11,7 @@ export const defaultCVData = {
     website: "emersonespinoza.com"
   },
 
-  summary: "Ingeniero de Software Backend con 6+ años de trayectoria construyendo infraestructuras críticas y sistemas distribuidos de alta disponibilidad. Especialista en orquestación cloud (Azure, GCP), arquitecturas orientadas a eventos y optimización de servicios de misión crítica en Node.js y TypeScript. Mentor de más de 800 desarrolladores y líder técnico enfocado en excelencia de ingeniería y entrega continua.",
+  summary: "Ingeniero de Sistemas y Científico de Datos con 6+ años construyendo infraestructuras críticas, sistemas distribuidos y modelos de Machine Learning en producción. Especialista en Python & FastAPI, orquestación cloud (Azure, GCP), arquitecturas orientadas a eventos y pipelines de ML/IA aplicados a problemas empresariales reales. Mentor de más de 800 desarrolladores y líder técnico enfocado en excelencia de ingeniería y análisis de datos para la toma de decisiones.",
 
   experience: [
     {
@@ -139,11 +139,13 @@ export const defaultCVData = {
   ],
 
   skills: {
-    principal: ["Node.js", "TypeScript", "JavaScript ES2022+", "Software Architecture"],
-    frameworks: ["NestJS", "Express.js", "Fastify", "C#/.NET", "Python/FastAPI"],
-    azure: ["Functions", "App Service", "DevOps", "Service Bus", "Azure SQL", "Cosmos DB", "Monitor"],
-    googleCloud: ["Cloud Run", "Maps Platform", "Identity Platform", "Cloud Build", "Cloud Console"],
-    aws: ["Lambda", "S3", "RDS", "CloudWatch", "IAM"],
+    principal: ["Python", "Node.js", "TypeScript", "JavaScript ES2022+", "Software Architecture", "Machine Learning"],
+    datascience: ["Scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly"],
+    mlops: ["MLflow", "FastAPI", "Docker for ML", "Model Serving", "Feature Engineering", "RAG Systems", "LLMs"],
+    frameworks: ["NestJS", "Express.js", "Fastify", "C#/.NET", "Flask", "FastAPI"],
+    azure: ["Functions", "App Service", "DevOps", "Service Bus", "Azure SQL", "Cosmos DB", "Monitor", "ML Studio"],
+    googleCloud: ["Cloud Run", "Maps Platform", "Identity Platform", "Cloud Build", "Cloud Console", "Vertex AI"],
+    aws: ["Lambda", "S3", "RDS", "CloudWatch", "IAM", "SageMaker"],
     databases: ["PostgreSQL", "Azure SQL", "Redis", "Cosmos DB", "DynamoDB", "MongoDB"],
     devops: ["Docker", "GitHub Actions", "Azure Pipelines", "Nginx", "CI/CD", "DigitalOcean"]
   },
@@ -158,6 +160,13 @@ export const defaultCVData = {
     },
     {
       id: 2,
+      title: "Machine Learning & Data Science Specialization",
+      organization: "Coursera / DeepLearning.AI",
+      year: "2023",
+      enabled: true
+    },
+    {
+      id: 3,
       title: "Full Stack Web Development",
       organization: "Desafio Latam",
       year: "2021",
@@ -210,6 +219,14 @@ export const jobPresets = {
     enabledSections: {
       projects: [2, 3, 4],
       experience: [1, 3]
+    }
+  },
+  data_scientist: {
+    name: "Data Scientist / ML Engineer",
+    focusSkills: ["Python", "Machine Learning", "TensorFlow", "Pandas", "Scikit-learn", "MLOps", "LLMs"],
+    enabledSections: {
+      projects: [1, 2, 3, 4],
+      experience: [1, 2, 3]
     }
   },
   cloud_architect: {

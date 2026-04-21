@@ -1,15 +1,15 @@
 {
   "hero": {
     "title": "Hola! Soy ",
-    "description": "Ingeniero de Software Backend con 6+ años de trayectoria construyendo infraestructuras críticas y sistemas distribuidos de alta disponibilidad. Especialista en orquestación cloud (Azure, GCP), arquitecturas orientadas a eventos y optimización de servicios de misión crítica en Node.js y TypeScript.",
-    "contact": "Contactar para Roles Senior",
-    "cv": "Descargar CV Senior",
-    "location": "🌎 Remoto • Especialista en Backend Cloud",
-    "specialty": "Senior Backend Engineer • Cloud Solutions Architect • Node.js & Azure Specialist",
-    "available": "Disponible para Roles de Ingeniería Senior",
-    "role": "Senior Backend Engineer • Node.js & Azure Specialist • System Architect",
-    "pitch": "Ingeniero de Software con una trayectoria sólida diseñando e implementando sistemas de alto rendimiento. Especialista en orquestación de servicios en Azure, desarrollo con Node.js/TypeScript y optimización de infraestructuras críticas para desafíos complejos de escalabilidad.",
-    "value_proposition": "Diseño arquitecturas robustas y escalables que transforman desafíos técnicos complejos en soluciones empresariales eficientes.",
+    "description": "Consultor en Inteligencia Artificial, Ciencia de Datos y Machine Learning con más de 6 años de experiencia. Especializado en el diseño y despliegue de modelos de recomendación, predicción de comportamiento y analítica de plataformas SaaS B2B en sectores educativo y fintech.",
+    "contact": "Contactar — Consultoría Inicial Gratuita",
+    "cv": "Descargar CV",
+    "location": "Lima, Perú  •  Consultor Remoto Internacional",
+    "specialty": "Consultor en IA, Data Science & Machine Learning  •  Backend Engineer",
+    "available": "Disponible para Consultorías y Proyectos de IA",
+    "role": "Consultor en Inteligencia Artificial  •  Data Science  •  Machine Learning",
+    "pitch": "Ingeniero de Sistemas con más de 6 años en ciencia de datos, machine learning aplicado y arquitectura de sistemas orientada a datos. Especializado en modelos de recomendación, predicción de comportamiento y analítica de plataformas digitales SaaS B2B en sectores educativo y fintech.",
+    "value_proposition": "Transformo datos en valor empresarial real: modelos inteligentes, escalables y medibles que mejoran decisiones y resultados.",
     "metrics": {
       "experience": "Años de experiencia",
       "countries": "Países con proyectos",
@@ -65,54 +65,54 @@
     }
   },
   "experience": {
-    "title": "Experiencia Profesional & Liderazgo Técnico",
-    "tech": "Node.js, TypeScript, Azure, AWS, GCP, NestJS, Express, Docker, Terraform",
-    "completeStack": "Sistemas Críticos & Multi-Cloud",
-    "frontend": "Frontend & UX Engineering",
-    "backend": "Backend & Microservicios",
+    "title": "Experiencia Profesional en IA, Data Science & Machine Learning",
+    "tech": "Python, Scikit-learn, PyTorch, Pandas, FastAPI, AWS, PostgreSQL, Node.js, TypeScript",
+    "completeStack": "ML en Producción & Sistemas Orientados a Datos",
+    "frontend": "Visualización & Dashboards",
+    "backend": "Backend & Ingeniería de Datos",
     "databases": "Bases de Datos & Big Data",
-    "devops": "DevOps & Cloud Architecture",
-    "leadership": "Liderazgo Técnico & Mentoría",
+    "devops": "MLOps & Cloud Infrastructure",
+    "leadership": "Liderazgo Técnico & Mentoría DS/ML",
 
     "codigoFuturoDate": "2022 – 2025",
-    "codigoFuturo": "Senior Backend Developer | BHP",
-    "techCodigoFuturo": "Node.js, Azure Functions, Azure DevOps, CI/CD, Azure Monitor",
-    "codigoFuturo1": "• Lideré el diseño de sistemas backend para trazabilidad operativa con reducción del 60% en tiempos operativos.",
-    "codigoFuturo2": "• Arquitecturé servicios serverless en Azure Functions orientados a eventos para alta concurrencia y resiliencia.",
-    "codigoFuturo3": "• Implementé y optimicé pipelines de CI/CD en Azure DevOps y fortalecí la observabilidad con Azure Monitor.",
-    "codigoFuturoMetrics": "60% Eficiencia Operativa",
+    "codigoFuturo": "Consultor de Datos y ML Aplicado | BHP (Minería)",
+    "techCodigoFuturo": "Python, Scikit-learn, AWS Lambda, API Gateway, S3, DynamoDB, CloudWatch, PostgreSQL, Node.js",
+    "codigoFuturo1": "• Diseño de pipelines de ingesta en AWS (Lambda, S3) para estructurar la base de datos histórica que alimentaría los modelos predictivos de incidencias operativas.",
+    "codigoFuturo2": "• Implementación de modelos predictivos (Scikit-learn, Python) derivados del análisis histórico del comportamiento del sistema, con monitorización en producción vía CloudWatch.",
+    "codigoFuturo3": "• Reducción del 60% en tiempos operativos, alcanzada en coordinación con el equipo de operaciones al aplicar reglas predictivas sobre datos reales del sistema productivo.",
+    "codigoFuturoMetrics": "60% eficiencia operativa • ML en producción • AWS Serverless",
 
     "digitalFondosDate": "2021 – 2022",
-    "digitalFondos": "Senior Backend Developer | Fintech",
-    "techDigitalFondos": "Node.js, Azure SQL, TypeScript, Microservicios, Idempotency",
-    "digitalFondos1": "• Lideré el desarrollo del core financiero de Fondos Mutuos asegurando la integridad transaccional absoluta.",
-    "digitalFondos2": "• Diseñé servicios idempotentes en entornos distribuidos para prevenir el doble procesamiento de transacciones.",
-    "digitalFondos3": "• Gestioné persistencia en Azure SQL optimizando consultas y estructuras para mejorar la escalabilidad productiva.",
-    "digitalFondosMetrics": "Integridad Transaccional 99.9%",
+    "digitalFondos": "Consultor de Datos Financieros y Modelos Predictivos | Fintech",
+    "techDigitalFondos": "Python, Scikit-learn, Pandas, PostgreSQL, Redis, Node.js, TypeScript",
+    "digitalFondos1": "• Modelos de recomendación financiera (Scikit-learn) basados en perfil del inversionista y comportamiento transaccional real en la plataforma SaaS B2B.",
+    "digitalFondos2": "• Pipelines ETL con Python y Pandas sobre datos de usuarios, transacciones y progreso financiero en PostgreSQL y Redis, orientados al entrenamiento de modelos.",
+    "digitalFondos3": "• Definición de lineamientos para la evolución y reentrenamiento progresivo de los modelos de riesgo y predicción, incluyendo estrategia de features y despliegue continuo.",
+    "digitalFondosMetrics": "Recomendación personalizada por perfil • Fintech SaaS B2B",
 
-    "compilandoDate": "2022 – Presente",
-    "compilando": "Founder & CTO | EdTech",
-    "techCompilando": "Node.js, Google Cloud Run, OAuth2, Identity Platform, PostgreSQL",
-    "compilando1": "• Diseñé y orquesté un LMS escalable desplegado en Google Cloud Run orientado a alta disponibilidad.",
-    "compilando2": "• Integré Google Identity Platform y Google Maps API para geolocalización y acceso seguro via OAuth2.",
-    "compilando3": "• Creé Águila Lang, un lenguaje de programación con intérprete propio publicado y mantenido activamente en npm.",
-    "compilandoMetrics": "Infrastructure Ownership",
+    "compilandoDate": "Feb 2022 – Presente",
+    "compilando": "Fundador y Director de Tecnología | CompilandoCode (EdTech SaaS B2B)",
+    "techCompilando": "Python, Scikit-learn, PyTorch, FastAPI, Pandas, PostgreSQL, Node.js, Docker, DigitalOcean",
+    "compilando1": "• Motor de recomendación de contenidos formativos (Python, Scikit-learn) basado en datos reales de uso, perfil del colaborador y progreso dentro de la plataforma.",
+    "compilando2": "• Modelo predictivo de abandono estudiantil (PyTorch) con precisión del 78%, entrenado con datos reales de 500+ usuarios y desplegado en producción vía FastAPI.",
+    "compilando3": "• Presentación de informe técnico al equipo directivo con métricas de precisión, relevancia y lineamientos para la escalabilidad progresiva de los modelos en infraestructura cloud.",
+    "compilandoMetrics": "78% accuracy • Churn Prediction • 500+ usuarios reales",
 
-    "desafiolatamDate": "2021 – 2025",
-    "desafiolatam": "Lead Technical Instructor",
-    "techDesafiolatam": "Software Architecture, Node.js, Testing, Clean Code, Mentoring",
-    "desafiolatam1": "• Formación avanzada de 800+ desarrolladores en arquitecturas backend modernas y mejores prácticas.",
-    "desafiolatam2": "• Revisión de proyectos reales enfocados en diseño de APIs resilientes, seguridad y despliegue continuo en cloud.",
-    "desafiolatam3": "• Mentoría en estándares de calidad de ingeniería, patrones de diseño y pensamiento crítico en equipos.",
-    "desafiolatamMetrics": "800+ Ingenieros Formados",
+    "desafiolatamDate": "Nov 2021 – 2025",
+    "desafiolatam": "Instructor Técnico Principal – Data Science & Machine Learning",
+    "techDesafiolatam": "Python, Scikit-learn, PyTorch, SQL, FastAPI, Pandas, Matplotlib, Data Visualization",
+    "desafiolatam1": "• Liderazgo de módulos de ML aplicado: sistemas de recomendación, clasificación de comportamiento de usuario, series de tiempo (ARIMA, Prophet) y evaluación con métricas de negocio.",
+    "desafiolatam2": "• Mentoría técnica a 800+ profesionales en transición hacia roles de Data Scientist y ML Engineer, con proyectos sobre datos reales de plataformas digitales.",
+    "desafiolatam3": "• Revisión colaborativa de proyectos de analítica de uso y recomendación de contenidos, con retroalimentación sobre métricas de precisión, relevancia y desempeño real.",
+    "desafiolatamMetrics": "800+ ingenieros formados • ML & Data Science",
 
-    "hazukiDate": "2018 – 2020",
-    "hazuki": "Senior Software Engineer & Tech Lead",
-    "techHazuki": "Node.js, C#, Python, MySQL, Core Refactoring",
-    "hazuki1": "• Lideré sistema enterprise con 50.000+ transacciones mensuales bajo arquitectura de microservicios.",
-    "hazuki2": "• Optimicé rendimiento y disponibilidad mediante refactorización del core y ajuste de índices en bases de datos.",
-    "hazuki3": "• Coordiné la integración de múltiples servicios de terceros manteniendo estabilidad y consistencia de datos.",
-    "hazukiMetrics": "50K+ Transacciones/Mes"
+    "hazukiDate": "Feb 2018 – 2020",
+    "hazuki": "Ingeniero de Software y Líder Técnico | Hazuki Restaurant Systems",
+    "techHazuki": "Python, Pandas, SQL, C#, PostgreSQL, Microservices, MySQL",
+    "hazuki1": "• Liderazgo técnico de una arquitectura de microservicios (C#, Python) procesando más de 50.000 transacciones mensuales, generando el historial de datos base para los modelos predictivos.",
+    "hazuki2": "• Modelos predictivos de demanda y consumo (Python, Pandas, SQL) para optimización de inventarios en tiempo real en entornos de alta demanda.",
+    "hazuki3": "• Coordinación con equipos de operaciones y negocio para modelar flujos de datos transaccionales y construir reglas predictivas de comportamiento del sistema.",
+    "hazukiMetrics": "50K+ transacciones/mes • Demand Forecasting"
   },
   "professionalImpact": {
     "title": "Impacto Profesional",
@@ -316,11 +316,23 @@
   },
   "services": {
     "title": "Experticia Técnica",
-    "subtitle": "Dominios de especialización y liderazgo en arquitectura de sistemas a gran escala.",
+    "subtitle": "Dominios de especialización y liderazgo en arquitectura de sistemas, datos e inteligencia artificial.",
     "items": [
       {
+        "title": "Consultoría en Ciencia de Datos & Machine Learning",
+        "description": "Diseño e implementación de soluciones de Ciencia de Datos y Machine Learning orientadas a generar valor empresarial real con modelos predictivos, analítica avanzada y pipelines de datos en producción.",
+        "features": [
+          "Modelos de ML supervisado y no supervisado (Scikit-learn, XGBoost)",
+          "Deep Learning y redes neuronales con TensorFlow & PyTorch",
+          "LLMs, RAG systems e integración de IA generativa empresarial",
+          "Pipelines MLOps: entrenamiento, versionado y despliegue de modelos",
+          "Análisis exploratorio y dashboards interactivos con Pandas, Plotly",
+          "Procesamiento de Big Data y feature engineering a gran escala"
+        ]
+      },
+      {
         "title": "Arquitecturas Backend Enterprise",
-        "description": "Diseño y desarrollo de sistemas backend robustos y escalables utilizando microservicios o arquitecturas monolíticas modulares.",
+        "description": "Diseño y desarrollo de sistemas backend robustos y escalables utilizando microservicios o arquitecturas monomódficas modulares.",
         "features": [
           "Node.js & TypeScript para lógica de alto rendimiento",
           "Arquitectura orientada a eventos con Azure Service Bus",
@@ -349,16 +361,6 @@
         ]
       },
       {
-        "title": "Arquitectura de Sistemas",
-        "description": "Diseño de infraestructuras de software modernas, CRMs especializados y soluciones administrativas escalables.",
-        "features": [
-          "Modelado de dominios complejos (DDD)",
-          "Escalado vertical y horizontal planificado",
-          "Integraciones robustas con ecosistemas externos",
-          "Mantenibilidad y observabilidad garantizada"
-        ]
-      },
-      {
         "title": "Cloud & DevOps (Azure)",
         "description": "Orquestación de infraestructuras en la nube, containerización y automatización de despliegues críticos.",
         "features": [
@@ -374,8 +376,8 @@
         "features": [
           "Mentorías técnicas Senior a Junior",
           "Establecimiento de estándares de código (Styleguides)",
-          "Workshops de arquitectura y System Design",
-          "Liderazgo en la adopción de nuevas tecnologías"
+          "Workshops de arquitectura, System Design y Data Science",
+          "Liderazgo en la adopción de nuevas tecnologías e IA"
         ]
       }
     ]
@@ -565,13 +567,17 @@
     ]
   },
   "heroSimple": {
-    "availability": "✅ Disponible para Desafíos Senior Backend",
+    "availability": "✅ Disponible para Consultoría DS/ML & Roles Senior Backend",
     "greeting": "¡Hola! Soy",
-    "subtitle": "Senior Backend Engineer | Azure Solutions Architect",
-    "description": "Especialista en orquestación de sistemas distribuidos y arquitecturas de alto rendimiento (Azure, Google Cloud, Digital Ocean). Experto en optimización de backend con Redis, diseño de servicios resilientes y pipelines industriales de CI/CD orientados a la escalabilidad elástica y observabilidad.",
+    "subtitle": "Inteligencia Artificial | Data Science | Senior Backend Engineer",
+    "description": "Consultor en Inteligencia Artificial y Ciencia de Datos: modelos predictivos, Deep Learning, LLMs y sistemas inteligentes en producción. También arquitecto de backends distribuidos de alto rendimiento con Python, Node.js y Azure.",
     "ctaPrimary": "Ver Trayectoria",
     "ctaSecondary": "Conectar",
     "services": [
+      {
+        "title": "Ciencia de Datos & ML",
+        "subtitle": "Modelos predictivos y pipelines MLOps"
+      },
       {
         "title": "Arquitectura Backend",
         "subtitle": "Sistemas distribuidos y escalables"
@@ -583,10 +589,6 @@
       {
         "title": "Liderazgo Técnico",
         "subtitle": "Mentoring y mejores prácticas"
-      },
-      {
-        "title": "Optimización",
-        "subtitle": "Performance y eficiencia de costos"
       }
     ]
   },
@@ -604,10 +606,11 @@
     "services": {
       "title": "Dominios Técnicos",
       "items": [
+        "Ciencia de Datos & ML",
         "Sistemas Distribuidos",
         "Arquitectura de Nube",
         "Liderazgo de Ingeniería",
-        "Node.js & Azure Expert"
+        "Node.js & Python Expert"
       ]
     },
     "contact": {
@@ -625,7 +628,7 @@
   "portfolio": "Portfolio",
   "projects": {
     "title": "Proyectos Destacados",
-    "subtitle": "Soluciones tecnológicas que transforman ideas en experiencias digitales excepcionales",
+    "subtitle": "Soluciones tecnológicas con Inteligencia Artificial, Machine Learning y arquitecturas de alto rendimiento",
     "categories": {
       "all": "Todos",
       "ecommerce": "E-commerce",
@@ -642,8 +645,8 @@
     "viewProject": "Ver Proyecto",
     "startProject": "Iniciar Proyecto",
     "cta": {
-      "title": "¿Interesado en mi Perfil Técnico?",
-      "description": "Conectemos para discutir oportunidades de colaboración en desafíos de ingeniería de alta escala."
+      "title": "¿Necesitas un Consultor en IA o Data Science?",
+      "description": "Conversemos sobre cómo implementar modelos de Machine Learning, sistemas de recomendación o análisis predictivo en tu plataforma."
     },
     "metrics": {
       "users": "Usuarios",
@@ -661,40 +664,40 @@
     },
     "items": {
       "0": {
-        "title": "Eagle Lang: Compilador en Rust",
-        "description": "Lenguaje de alto nivel para seguridad de memoria y ejecución determinista mediante WebAssembly y LLVM."
+        "title": "Aguila Lang: Lenguaje de Programación en Español",
+        "description": "Herramienta educativa de código abierto para la enseñanza de lógica computacional y ciencia de datos aplicada en entornos corporativos. Intérprete propio publicado en npm."
       },
       "1": {
-        "title": "Digital Asset Delivery Architecture",
-        "description": "Orquestación de backend de alta disponibilidad para marketplace de activos digitales con integración de pagos resilientes."
+        "title": "AI-Powered Audio & Asset Architecture",
+        "description": "Orquestación de backend con IA para separación de audios por capas (stems), procesamiento MIDI y generación automatizada de composiciones musicales."
       },
       "2": {
-        "title": "Cloud-Native E-Commerce Engine",
-        "description": "Arquitectura modular con Flask y PostgreSQL, implementando sincronización de inventario en tiempo real y webhooks."
+        "title": "E-Commerce con Forecasting de Demanda",
+        "description": "E-commerce cloud-native con modelo de predicción de demanda (ARIMA, Prophet) sobre datos históricos de ventas reales, sincronización de inventario en tiempo real y chatbot LLM."
       },
       "3": {
-        "title": "Transactional POS & Inventory Engine",
-        "description": "Sistema de misión crítica procesando 50K+ ops/mes, optimizado para baja latencia en entornos de alta demanda."
+        "title": "Hazuki – Analítica de Demanda y Gestión de Inventario",
+        "description": "Sistema enterprise con 50K+ transacciones mensuales. Modelos predictivos de demanda y consumo (Python, Pandas) para optimización de inventarios en tiempo real."
       },
       "4": {
         "title": "Hazuki POS Delivery Logic",
         "description": "Motor de delivery distribuido con seguimiento en tiempo real y lógica de negocio para multi-sucursales."
       },
       "5": {
-        "title": "Distributed Social Graph Engine",
-        "description": "Infraestructura social escalable con Express y PostgreSQL, implementando mensajería en tiempo real vía WebSockets."
+        "title": "Netmuz Social – Pipeline de Recomendación en Tiempo Real",
+        "description": "Red social orientada a eventos con pipeline de datos en tiempo real (WebSockets) diseñado para alimentar modelos de recomendación de contenido basados en comportamiento del usuario."
       },
       "6": {
-        "title": "SaaS EdTech Learning Core",
-        "description": "Plataforma educativa cloud-native para 500+ usuarios concurrentes con evaluación técnica automatizada."
+        "title": "Aguilab – SaaS EdTech con Motor de Recomendación e IA",
+        "description": "Plataforma educativa SaaS B2B con motor de recomendación de contenidos (Scikit-learn) y modelo predictivo de abandono estudiantil con 78% de precisión sobre 500+ usuarios reales, desplegado vía FastAPI."
       },
       "7": {
         "title": "Real-Time Identity Orchestrator",
         "description": "Backend de alto rendimiento en C#/.NET para validación de identidad en tiempo real mediante QR distribuidos."
       },
       "8": {
-        "title": "Enterprise Innovation SaaS (BHP Foundation)",
-        "description": "Plataforma robusta para la gestión de ciclos de innovación corporativa con auditoría técnica y seguimiento de KPIs."
+        "title": "BHP Foundation – Modelos Predictivos Operativos",
+        "description": "Gestión de innovación corporativa con pipelines AWS y modelos predictivos (Scikit-learn) para trazabilidad operativa. Reducción del 60% en tiempos mediante reglas predictivas sobre datos históricos reales."
       }
     },
     "tech": "Stack Tecnológico",

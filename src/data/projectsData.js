@@ -18,6 +18,11 @@ export const projectsData = [
     gradient: "from-purple-600 via-pink-600 to-red-600",
     color: "from-purple-500 to-pink-500",
     bgColor: "from-purple-900/20 to-pink-900/20",
+    metrics: {
+      performance: "+300%",
+      automation: "100%",
+      uptime: "99.9%"
+    },
     featured: true
   },
   {
@@ -33,6 +38,11 @@ export const projectsData = [
     gradient: "from-amber-400 via-orange-500 to-red-600",
     color: "from-amber-400 to-orange-500",
     bgColor: "from-amber-900/20 to-orange-900/20",
+    metrics: {
+      users: "800+",
+      uptime: "Open Source",
+      performance: "npm"
+    },
     featured: true
   },
   {
@@ -48,6 +58,11 @@ export const projectsData = [
     gradient: "from-blue-500 via-purple-500 to-pink-500",
     color: "from-green-400 to-emerald-500",
     bgColor: "from-green-900/10 to-emerald-900/10",
+    metrics: {
+      accuracy: "92%",
+      conversion: "+35%",
+      automation: "ML/AI"
+    },
     featured: true
   },
   {
@@ -63,6 +78,11 @@ export const projectsData = [
     gradient: "from-green-500 via-teal-500 to-blue-500",
     color: "from-blue-400 to-cyan-500",
     bgColor: "from-blue-900/10 to-cyan-900/10",
+    metrics: {
+      users: "50K+",
+      efficiency: "+45%",
+      uptime: "99.9%"
+    },
     featured: true
   },
   {
@@ -78,6 +98,11 @@ export const projectsData = [
     gradient: "from-red-500 via-orange-500 to-yellow-500",
     color: "from-red-400 to-orange-500",
     bgColor: "from-red-900/10 to-orange-900/10",
+    metrics: {
+      users: "Multi-sucursal",
+      response: "<200ms",
+      uptime: "99.8%"
+    },
     featured: true
   },
   {
@@ -93,12 +118,37 @@ export const projectsData = [
     gradient: "from-purple-500 via-pink-500 to-red-500",
     color: "from-purple-400 to-pink-500",
     bgColor: "from-purple-900/10 to-pink-900/10",
+    metrics: {
+      users: "Real-time",
+      engagement: "+60%",
+      retention: "78%"
+    },
     featured: true
   },
   {
     id: 6,
-    title: "Aguilab – SaaS B2B con Motor de Recomendación e IA",
-    description: "Plataforma educativa SaaS B2B para 500+ usuarios. Motor de recomendación de contenidos formativos (Scikit-learn) y modelo predictivo de abandono estudiantil con 78% de precisión, entrenado con datos reales y desplegado en producción vía FastAPI.",
+    title: "Aguilab – Laboratorio Interactivo del Lenguaje Águila",
+    description: "Entorno de ejecución online del lenguaje de programación Águila. Motor de interpretación en el navegador (WebAssembly) con editor de código interactivo, validación semántica en tiempo real y ambiente de sandboxing para aprendizaje de lógica computacional en español.",
+    category: "saas",
+    tech: ["Rust", "WebAssembly", "TypeScript", "Node.js", "FastAPI", "Python", "PostgreSQL", "Docker"],
+    image: "/images/proyectos/aguila.png",
+    liveUrl: "https://aguila.compilandocode.com",
+    githubUrl: "https://github.com/emersonxinay/aguila",
+    status: "live",
+    gradient: "from-amber-400 via-orange-500 to-red-600",
+    color: "from-amber-400 to-orange-500",
+    bgColor: "from-amber-900/20 to-orange-900/20",
+    metrics: {
+      users: "800+",
+      performance: "WASM",
+      uptime: "Open Source"
+    },
+    featured: true
+  },
+  {
+    id: 10,
+    title: "CompilandoCode – LMS SaaS B2B con Motor de Recomendación IA",
+    description: "Plataforma educativa SaaS B2B para 500+ usuarios activos. Motor de recomendación de contenidos formativos (Scikit-learn) y modelo predictivo de abandono estudiantil con 78% de precisión, entrenado con datos reales y desplegado en producción vía FastAPI.",
     category: "saas",
     tech: ["Python", "Scikit-learn", "PyTorch", "FastAPI", "Pandas", "Node.js", "PostgreSQL", "Docker"],
     image: "/images/compilando-preview.png",
@@ -108,6 +158,11 @@ export const projectsData = [
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
     color: "from-blue-400 to-cyan-500",
     bgColor: "from-blue-900/10 to-cyan-900/10",
+    metrics: {
+      students: "500+",
+      accuracy: "78%",
+      courses: "SaaS B2B"
+    },
     featured: true
   },
   {
@@ -123,6 +178,11 @@ export const projectsData = [
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
     color: "from-indigo-400 to-purple-500",
     bgColor: "from-indigo-900/10 to-purple-900/10",
+    metrics: {
+      response: "<100ms",
+      uptime: "99.9%",
+      automation: "QR"
+    },
     featured: true
   },
   {
@@ -138,6 +198,11 @@ export const projectsData = [
     gradient: "from-orange-500 via-red-500 to-pink-500",
     color: "from-orange-400 to-red-500",
     bgColor: "from-orange-900/10 to-red-900/10",
+    metrics: {
+      efficiency: "-60%",
+      savings: "AWS",
+      accuracy: "ML Prod"
+    },
     featured: true
   },
   {

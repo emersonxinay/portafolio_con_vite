@@ -10,12 +10,15 @@ export const useCVData = () => {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Mezclar con defaultCVData para asegurar que existan todas las propiedades (ej: skills)
+        // Detectar esquema viejo (claves: principal, datascience, mlops, azure...) y descartarlo
+        const savedSkills = parsed.skills || {};
+        const isOldSchema = 'principal' in savedSkills || 'datascience' in savedSkills || 'mlops' in savedSkills || 'azure' in savedSkills;
+        const mergedSkills = isOldSchema ? defaultCVData.skills : { ...defaultCVData.skills, ...savedSkills };
         return {
           ...defaultCVData,
           ...parsed,
           personalInfo: { ...defaultCVData.personalInfo, ...(parsed.personalInfo || {}) },
-          skills: { ...defaultCVData.skills, ...(parsed.skills || {}) }
+          skills: mergedSkills
         };
       } catch (e) {
         console.error("Error parsing saved CV data", e);
@@ -40,6 +43,7 @@ export const useCVData = () => {
         description: proj.description,
         year: proj.year || "",
         technologies: proj.tech || [],
+        liveUrl: proj.liveUrl || "",
         enabled: true
       }))
     };
@@ -70,6 +74,7 @@ export const useCVData = () => {
           description: proj.description,
           year: proj.year || "",
           technologies: proj.tech || [],
+          liveUrl: proj.liveUrl || "",
           enabled: true
         }))
       };

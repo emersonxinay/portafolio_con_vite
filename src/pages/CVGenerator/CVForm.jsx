@@ -325,6 +325,7 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
               description: '',
               year: '',
               technologies: [],
+              liveUrl: '',
               enabled: true
             })}
             className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-indigo-900/20 transition-all hover:scale-105 active:scale-95"
@@ -391,6 +392,13 @@ const CVForm = ({ activeTab, cvData, setCvData }) => {
                   icon="fas fa-microchip"
                 />
               </div>
+              <InputField
+                label="URL del Proyecto (opcional)"
+                value={project.liveUrl || ''}
+                onChange={(val) => handleArrayItemChange('projects', index, 'liveUrl', val)}
+                placeholder="https://miproyecto.com"
+                icon="fas fa-link"
+              />
             </motion.div>
           ))}
         </div>

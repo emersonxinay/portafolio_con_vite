@@ -94,10 +94,11 @@ export const defaultCVData = {
   projects: [
     {
       id: 1,
-      title: "LMS CompilandoCode Architecture",
-      description: "Plataforma educativa cloud-native con autenticación OAuth2 y escalado automático",
+      title: "CompilandoCode – LMS SaaS B2B con Motor de Recomendación IA",
+      description: "Plataforma educativa SaaS B2B para 500+ usuarios activos. Motor de recomendación de contenidos formativos (Scikit-learn) y modelo predictivo de abandono estudiantil con 78% de precisión, desplegado en producción vía FastAPI.",
       year: "2022-Presente",
-      technologies: ["Node.js", "Google Cloud Run", "Identity Platform", "PostgreSQL"],
+      technologies: ["Python", "Scikit-learn", "PyTorch", "FastAPI", "Node.js", "Google Cloud Run", "PostgreSQL", "Docker"],
+      liveUrl: "https://www.compilandocode.com/",
       enabled: true
     },
     {
@@ -118,10 +119,11 @@ export const defaultCVData = {
     },
     {
       id: 4,
-      title: "Aguila Programming Language",
-      description: "Diseño e implementación de intérprete propio enfocado en educación técnica",
-      year: "2022",
-      technologies: ["Interpreter Design", "npm", "System Architecture", "Node.js"],
+      title: "Aguilab – Lenguaje Águila & Laboratorio Online",
+      description: "Diseño e implementación de intérprete propio publicado en npm. Laboratorio interactivo online con ejecución en el navegador vía WebAssembly para enseñanza de lógica computacional en español.",
+      year: "2022-Presente",
+      technologies: ["Rust", "WebAssembly", "TypeScript", "npm", "Node.js", "FastAPI"],
+      liveUrl: "https://aguila.compilandocode.com",
       enabled: true
     }
   ],
@@ -139,15 +141,11 @@ export const defaultCVData = {
   ],
 
   skills: {
-    principal: ["Python", "Node.js", "TypeScript", "JavaScript ES2022+", "Software Architecture", "Machine Learning"],
-    datascience: ["Scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly"],
-    mlops: ["MLflow", "FastAPI", "Docker for ML", "Model Serving", "Feature Engineering", "RAG Systems", "LLMs"],
-    frameworks: ["NestJS", "Express.js", "Fastify", "C#/.NET", "Flask", "FastAPI"],
-    azure: ["Functions", "App Service", "DevOps", "Service Bus", "Azure SQL", "Cosmos DB", "Monitor", "ML Studio"],
-    googleCloud: ["Cloud Run", "Maps Platform", "Identity Platform", "Cloud Build", "Cloud Console", "Vertex AI"],
-    aws: ["Lambda", "S3", "RDS", "CloudWatch", "IAM", "SageMaker"],
-    databases: ["PostgreSQL", "Azure SQL", "Redis", "Cosmos DB", "DynamoDB", "MongoDB"],
-    devops: ["Docker", "GitHub Actions", "Azure Pipelines", "Nginx", "CI/CD", "DigitalOcean"]
+    programming: ["Python", "Node.js", "TypeScript", "JavaScript ES2022+", "Rust", "C#", "SQL"],
+    frameworks: ["FastAPI", "NestJS", "Express.js", "Flask", "Scikit-learn", "PyTorch", "TensorFlow", "React"],
+    cloud: ["Azure Functions", "Azure DevOps", "Google Cloud Run", "AWS Lambda", "S3", "Docker", "CI/CD", "Nginx"],
+    databases: ["PostgreSQL", "Azure SQL", "Redis", "MongoDB", "Cosmos DB", "DynamoDB"],
+    other: ["Machine Learning", "MLOps", "LLMs", "RAG Systems", "Software Architecture", "Technical Leadership", "Mentoring"]
   },
 
   certifications: [

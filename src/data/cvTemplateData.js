@@ -123,7 +123,7 @@ export const defaultCVData = {
       description: "Diseño e implementación de intérprete propio publicado en npm. Laboratorio interactivo online con ejecución en el navegador vía WebAssembly para enseñanza de lógica computacional en español.",
       year: "2022-Presente",
       technologies: ["Rust", "WebAssembly", "TypeScript", "npm", "Node.js", "FastAPI"],
-      liveUrl: "https://aguila.compilandocode.com",
+      liveUrl: "https://aguila.compilandocode.com/laboratorio",
       enabled: true
     }
   ],

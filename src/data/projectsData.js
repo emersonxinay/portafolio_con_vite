@@ -132,7 +132,7 @@ export const projectsData = [
     category: "saas",
     tech: ["Rust", "WebAssembly", "TypeScript", "Node.js", "FastAPI", "Python", "PostgreSQL", "Docker"],
     image: "/images/proyectos/aguila.png",
-    liveUrl: "https://aguila.compilandocode.com",
+    liveUrl: "https://aguila.compilandocode.com/laboratorio",
     githubUrl: "https://github.com/emersonxinay/aguila",
     status: "live",
     gradient: "from-amber-400 via-orange-500 to-red-600",

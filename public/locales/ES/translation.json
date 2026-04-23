@@ -73,7 +73,6 @@
     "databases": "Bases de Datos & Big Data",
     "devops": "MLOps & Cloud Infrastructure",
     "leadership": "Liderazgo Técnico & Mentoría DS/ML",
-
     "codigoFuturoDate": "2022 – 2025",
     "codigoFuturo": "Consultor de Datos y ML Aplicado | BHP (Minería)",
     "techCodigoFuturo": "Python, Scikit-learn, AWS Lambda, API Gateway, S3, DynamoDB, CloudWatch, PostgreSQL, Node.js",
@@ -81,7 +80,6 @@
     "codigoFuturo2": "• Implementación de modelos predictivos (Scikit-learn, Python) derivados del análisis histórico del comportamiento del sistema, con monitorización en producción vía CloudWatch.",
     "codigoFuturo3": "• Reducción del 60% en tiempos operativos, alcanzada en coordinación con el equipo de operaciones al aplicar reglas predictivas sobre datos reales del sistema productivo.",
     "codigoFuturoMetrics": "60% eficiencia operativa • ML en producción • AWS Serverless",
-
     "digitalFondosDate": "2021 – 2022",
     "digitalFondos": "Consultor de Datos Financieros y Modelos Predictivos | Fintech",
     "techDigitalFondos": "Python, Scikit-learn, Pandas, PostgreSQL, Redis, Node.js, TypeScript",
@@ -89,7 +87,6 @@
     "digitalFondos2": "• Pipelines ETL con Python y Pandas sobre datos de usuarios, transacciones y progreso financiero en PostgreSQL y Redis, orientados al entrenamiento de modelos.",
     "digitalFondos3": "• Definición de lineamientos para la evolución y reentrenamiento progresivo de los modelos de riesgo y predicción, incluyendo estrategia de features y despliegue continuo.",
     "digitalFondosMetrics": "Recomendación personalizada por perfil • Fintech SaaS B2B",
-
     "compilandoDate": "Feb 2022 – Presente",
     "compilando": "Fundador y Director de Tecnología | CompilandoCode (EdTech SaaS B2B)",
     "techCompilando": "Python, Scikit-learn, PyTorch, FastAPI, Pandas, PostgreSQL, Node.js, Docker, DigitalOcean",
@@ -97,7 +94,6 @@
     "compilando2": "• Modelo predictivo de abandono estudiantil (PyTorch) con precisión del 78%, entrenado con datos reales de 500+ usuarios y desplegado en producción vía FastAPI.",
     "compilando3": "• Presentación de informe técnico al equipo directivo con métricas de precisión, relevancia y lineamientos para la escalabilidad progresiva de los modelos en infraestructura cloud.",
     "compilandoMetrics": "78% accuracy • Churn Prediction • 500+ usuarios reales",
-
     "desafiolatamDate": "Nov 2021 – 2025",
     "desafiolatam": "Instructor Técnico Principal – Data Science & Machine Learning",
     "techDesafiolatam": "Python, Scikit-learn, PyTorch, SQL, FastAPI, Pandas, Matplotlib, Data Visualization",
@@ -105,7 +101,6 @@
     "desafiolatam2": "• Mentoría técnica a 800+ profesionales en transición hacia roles de Data Scientist y ML Engineer, con proyectos sobre datos reales de plataformas digitales.",
     "desafiolatam3": "• Revisión colaborativa de proyectos de analítica de uso y recomendación de contenidos, con retroalimentación sobre métricas de precisión, relevancia y desempeño real.",
     "desafiolatamMetrics": "800+ ingenieros formados • ML & Data Science",
-
     "hazukiDate": "Feb 2018 – 2020",
     "hazuki": "Ingeniero de Software y Líder Técnico | Hazuki Restaurant Systems",
     "techHazuki": "Python, Pandas, SQL, C#, PostgreSQL, Microservices, MySQL",
@@ -494,10 +489,22 @@
     "titleHighlight": "Alto Impacto",
     "subtitle": "Feedback técnico de líderes y equipos que han colaborado en mis implementaciones.",
     "stats": [
-      { "number": "99.9%", "label": "Uptime de Sistemas" },
-      { "number": "70%", "label": "Optimización Performance" },
-      { "number": "60%", "label": "Reducción Costos Cloud" },
-      { "number": "3+", "label": "Arquitecturas Críticas" }
+      {
+        "number": "99.9%",
+        "label": "Uptime de Sistemas"
+      },
+      {
+        "number": "70%",
+        "label": "Optimización Performance"
+      },
+      {
+        "number": "60%",
+        "label": "Reducción Costos Cloud"
+      },
+      {
+        "number": "3+",
+        "label": "Arquitecturas Críticas"
+      }
     ],
     "items": [
       {
@@ -595,7 +602,7 @@
   "footer": {
     "subtitle": "Senior Backend Engineer | Cloud Solutions Architect",
     "description": "Especialista en arquitecturas backend de alto rendimiento, orquestación cloud en Azure y sistemas distribuidos. Construyendo infraestructuras escalables con Node.js y las mejores prácticas de ingeniería.",
-    "availabilityBadge": "Disponible para Oportunidades Senior",
+    "availabilityBadge": "Disponible para Oportunidades de IA y soluciones Cloud",
     "quickLinks": {
       "title": "Enlaces Rápidos",
       "home": "Inicio",
@@ -704,40 +711,34 @@
     "impact": "Impacto",
     "features": "Características",
     "client": "Cliente",
-
     "kefytoTitle": "Kefyto - Cloud-Native E-Commerce Infrastructure",
     "kefyto1": "• Arquitectura distribuida con React, Flask y PostgreSQL optimizada para alta disponibilidad",
     "kefyto2": "• Sincronización de pedidos en tiempo real e integración resiliente con WhatsApp API",
     "kefyto3": "• Motor de checkout optimizado con sistemas de notificación automatizados",
     "kefytoMetrics": "Infraestructura escalable • Real-time Sync • Python + Flask Backend",
     "kefytoUrl": "https://www.kefytotubulgarito.com/",
-
     "hazukiTitle": "Hazuki Enterprise - Transactional POS Engine",
     "hazuki1": "• Sistema distribuido para procesamiento de alta demanda (50K+ transacciones/mes)",
     "hazuki2": "• Arquitectura de grado empresarial con despliegue en infraestructuras VPS de alto rendimiento",
     "hazuki3": "• Optimización de latencia en consultas y consistencia de datos en entornos multicanal",
     "hazukiMetrics": "Baja Latencia • 99.9% Uptime • Arquitectura Robusta",
     "hazukiUrl": "https://hazukirestaurant.com/",
-
     "netmuzTitle": "Netmuz Social Graph - Distributed Infrastructure",
     "netmuz1": "• Motor de red social escalable diseñado para conectar artistas en Latinoamérica",
     "netmuz2": "• Stack fullstack reactivo con React, Express y PostgreSQL para gestión de datos masivos",
     "netmuz3": "• Implementación de WebSockets para comunicación en tiempo real y eventos distribuidos",
     "netmuzMetrics": "Event-Driven • WebSockets • Escalamiento Horizontal",
     "netmuzUrl": "https://www.netmuz.com/",
-
     "saasTitle": "EdTech SaaS Infrastructure - Scalable LMS Core",
     "saas1": "• Orquestación de clases en tiempo real y sistema distribuido de calendario académico",
     "saas2": "• Arquitectura de micro-servicios para gestión de rutas formativas y certificación",
     "saas3": "• Infraestructura resiliente soportando 500+ usuarios concurrentes en producción",
     "saasMetrics": "Cloud-Native SaaS • Alta Concurrencia • Microservicios",
-
     "mineraTitle": "Enterprise Innovation Engine - BHP Foundation Lab",
     "minera1": "• Desarrollo de lógica empresarial compleja en C#/.NET Core para auditoría técnica",
     "minera2": "• API REST de alta seguridad para integración con ecosistemas de innovación corporativa",
     "minera3": "• Sistema de grado minero diseñado para robustez y seguimiento de KPIs críticos",
     "mineraMetrics": "Enterprise Security • .NET Core Web API • Robusto",
-
     "coming": "Ver proyecto en vivo"
   },
   "nav": {
@@ -766,7 +767,6 @@
     "spanish": "Español",
     "english": "English"
   },
-
   "error": {
     "button": "Volver al inicio",
     "title": "Ups! No hay nada aquí..."
